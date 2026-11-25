@@ -160,17 +160,72 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero" aria-label="Welcome to Sri Lanka">
-      <div class="hero__media">
+      <div class="hero__media" id="hero-media">
         <img
           src="./assets/images/hero-sigiriya.jpg"
           alt="Sunlit pathway through royal water gardens toward Sigiriya Lion Rock under bright blue sky"
+          class="hero__slide is-active"
+          data-hero-slide="0"
+          data-hero-id="sigiriya"
+          style="object-position: center 46%;"
           fetchpriority="high"
+        />
+        <img
+          src="./assets/images/ella-train.jpg"
+          alt="Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest"
+          class="hero__slide"
+          data-hero-slide="1"
+          data-hero-id="ella"
+          style="object-position: center 48%;"
+          decoding="async"
+        />
+        <img
+          src="./assets/images/mirissa-coast.jpg"
+          alt="Sun-drenched Coconut Tree Hill headland in Mirissa lined with swaying palms above turquoise surf"
+          class="hero__slide"
+          data-hero-slide="2"
+          data-hero-id="mirissa"
+          style="object-position: center 42%;"
+          decoding="async"
+        />
+        <img
+          src="./assets/images/tea-highlands.jpg"
+          alt="Sunlit terraced emerald Ceylon tea plantations rolling across high mountain ridges"
+          class="hero__slide"
+          data-hero-slide="3"
+          data-hero-id="nuwara-eliya"
+          style="object-position: center 50%;"
+          decoding="async"
+        />
+        <img
+          src="./assets/images/minneriya-gathering.jpg"
+          alt="Herd of wild Sri Lankan elephants and calf grazing across lush green Minneriya grasslands"
+          class="hero__slide"
+          data-hero-slide="4"
+          data-hero-id="minneriya"
+          style="object-position: center 45%;"
+          decoding="async"
+        />
+        <img
+          src="./assets/images/east-coast-trinco.jpg"
+          alt="Crystal clear turquoise reef water, sandy shoreline, and boat along Sri Lanka calm bay"
+          class="hero__slide"
+          data-hero-slide="5"
+          data-hero-id="trinco-jaffna"
+          style="object-position: center 52%;"
+          decoding="async"
         />
       </div>
       <div class="hero__scrim" aria-hidden="true"></div>
 
       <div class="container hero__content">
-        <div>
+        <div class="hero__lead">
+          <div class="hero__live-pill" aria-live="polite">
+            <span class="hero__live-dot" aria-hidden="true"></span>
+            <span id="hero-active-name">Sigiriya</span>
+            <span class="hero__live-count" id="hero-active-count">1 / 6</span>
+          </div>
+
           <h1 class="display-serif hero__title">
             <span data-i18n="hero.titleStart">Discover</span>
             <em data-i18n="hero.titleEm">Sri Lanka.</em>
@@ -187,6 +242,39 @@
               Browse Places
             </a>
           </div>
+        </div>
+
+        <div class="hero__showcase" id="hero-showcase" role="group" aria-label="Sri Lanka scenic highlights">
+          <button type="button" class="hero-thumb is-active" data-hero-pick="0" data-hero-id="sigiriya" aria-label="Sigiriya" aria-pressed="true">
+            <img src="./assets/images/hero-sigiriya.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Sigiriya</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="hero-thumb" data-hero-pick="1" data-hero-id="ella" aria-label="Ella" aria-pressed="false">
+            <img src="./assets/images/ella-train.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Ella</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="hero-thumb" data-hero-pick="2" data-hero-id="mirissa" aria-label="Mirissa" aria-pressed="false">
+            <img src="./assets/images/mirissa-coast.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Mirissa</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="hero-thumb" data-hero-pick="3" data-hero-id="nuwara-eliya" aria-label="Hatton" aria-pressed="false">
+            <img src="./assets/images/tea-highlands.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Hatton</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="hero-thumb" data-hero-pick="4" data-hero-id="minneriya" aria-label="Minneriya" aria-pressed="false">
+            <img src="./assets/images/minneriya-gathering.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Minneriya</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="hero-thumb" data-hero-pick="5" data-hero-id="trinco-jaffna" aria-label="Trincomalee" aria-pressed="false">
+            <img src="./assets/images/east-coast-trinco.jpg" alt="" loading="eager" decoding="async" />
+            <span class="hero-thumb__label">Trincomalee</span>
+            <span class="hero-thumb__bar" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </section>
