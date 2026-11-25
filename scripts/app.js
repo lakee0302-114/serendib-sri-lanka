@@ -164,6 +164,8 @@
     plannerBackBtn: document.getElementById('planner-back-btn'),
     plannerNextBtn: document.getElementById('planner-next-btn'),
     plannerNextLabel: document.getElementById('planner-next-label'),
+    floatingBar: document.getElementById('floating-trip-bar'),
+    floatingCount: document.getElementById('floating-trip-count'),
     toast: document.getElementById('toast')
   };
 
@@ -348,6 +350,7 @@
   }
 
   function renderFinderSelects() {
+    if (!dom.finderMonth || !dom.finderFocus || !dom.finderPace) return;
     var finder = state.locale.ui.finder;
     var prevMonth = dom.finderMonth.value || state.activeMonth;
     var prevFocus = dom.finderFocus.value || state.activeRegion;
@@ -612,6 +615,11 @@
       dom.conciergeStopsPill.textContent = savedObjects.length + ' ' + r.stopsLabel + ' · ' + nights + state.locale.ui.atlas.nightsUnit;
     }
 
+    if (dom.floatingBar && dom.floatingCount) {
+      dom.floatingBar.classList.toggle('is-visible', savedObjects.length > 0);
+      dom.floatingCount.textContent = savedObjects.length + ' ' + r.stopsLabel;
+    }
+
     if (state.activeDossierId) updateDossierFooter(state.activeDossierId);
     if (!dom.routeSheet.hidden) renderRouteSheet();
     if (state.planner.open) renderPlannerModal();
@@ -748,7 +756,7 @@
       persistSavedStops();
       syncRouteUI();
       showToast(state.locale.ui.toasts.loadedRoute.replace('{title}', active.title));
-      openRouteSheet();
+      openPlannerModal(1);
     });
   }
 
@@ -1442,23 +1450,25 @@
       submitPlannerBrief();
     });
 
-    dom.quickFinder.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var monthCode = dom.finderMonth.value;
-      var focus = dom.finderFocus.value;
-      var pace = dom.finderPace.value;
+    if (dom.quickFinder) {
+      dom.quickFinder.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var monthCode = dom.finderMonth.value;
+        var focus = dom.finderFocus.value;
+        var pace = dom.finderPace.value;
 
-      setActiveMonth(monthCode);
-      state.planner.month = monthCode;
-      setRegionFilter(focus);
-      state.activeItineraryId = pace;
-      renderItineraries();
+        setActiveMonth(monthCode);
+        state.planner.month = monthCode;
+        setRegionFilter(focus);
+        state.activeItineraryId = pace;
+        renderItineraries();
 
-      var target = focus === 'all' ? document.getElementById('compass') : document.getElementById('atlas');
-      target.scrollIntoView({ behavior: 'smooth' });
-      var monthName = state.locale.months[monthCode].fullName;
-      showToast(state.locale.ui.toasts.matched.replace('{month}', monthName));
-    });
+        var target = focus === 'all' ? document.getElementById('compass') : document.getElementById('atlas');
+        target.scrollIntoView({ behavior: 'smooth' });
+        var monthName = state.locale.months[monthCode].fullName;
+        showToast(state.locale.ui.toasts.matched.replace('{month}', monthName));
+      });
+    }
 
     dom.copyBriefBtn.addEventListener('click', function () {
       var text = buildBlueprintText(null);

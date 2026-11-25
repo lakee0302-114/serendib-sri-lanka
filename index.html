@@ -50,9 +50,8 @@
 
       <nav class="header-nav" aria-label="Primary Navigation">
         <a href="#atlas" data-i18n="nav.atlas">Places</a>
-        <a href="#compass" data-i18n="nav.compass">Seasons</a>
-        <a href="#itineraries" data-i18n="nav.itineraries">Routes</a>
-        <a href="#field-notes" data-i18n="nav.fieldNotes">Tips</a>
+        <a href="#compass" data-i18n="nav.compass">When to Go</a>
+        <a href="#itineraries" data-i18n="nav.itineraries">Sample Trips</a>
       </nav>
 
       <div class="header-actions">
@@ -142,10 +141,9 @@
 
     <nav class="mobile-nav__links" aria-label="Mobile sections">
       <a href="#atlas"><em style="font-style:normal;" data-i18n="nav.atlas">Places</em> <span>01</span></a>
-      <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">Seasons</em> <span>02</span></a>
-      <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Routes</em> <span>03</span></a>
-      <a href="#field-notes"><em style="font-style:normal;" data-i18n="nav.fieldNotes">Tips</em> <span>04</span></a>
-      <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>05</span></a>
+      <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">When to Go</em> <span>02</span></a>
+      <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Sample Trips</em> <span>03</span></a>
+      <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>04</span></a>
     </nav>
 
     <div class="mobile-nav__footer">
@@ -178,47 +176,18 @@
             <em data-i18n="hero.titleEm">Sri Lanka.</em>
           </h1>
           <p class="hero__subtitle" data-i18n="hero.subtitle">
-            Golden citadels, misty highlands &amp; wild coasts.
+            Pick your places and plan your dream trip in minutes.
           </p>
           <div class="hero__actions">
-            <a href="#atlas" class="btn btn--primary">
-              <span data-i18n="hero.ctaPrimary">Explore Places</span>
+            <button type="button" class="btn btn--primary" data-open-planner>
+              <span data-i18n="nav.planJourney">Plan My Trip</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-            <button type="button" class="btn btn--ghost-light" data-open-planner data-i18n="nav.planJourney">
-              Plan Trip
             </button>
+            <a href="#atlas" class="btn btn--ghost-light" data-i18n="hero.ctaPrimary">
+              Browse Places
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Instant Journey Finder Strip -->
-    <section class="finder-strip" aria-label="Quick journey matcher">
-      <div class="container">
-        <form class="finder-form" id="quick-finder">
-          <div class="finder-field">
-            <label for="finder-month" data-i18n="finder.monthLabel">Travel Month</label>
-            <select id="finder-month" name="month"></select>
-          </div>
-
-          <div class="finder-field">
-            <label for="finder-focus" data-i18n="finder.focusLabel">Primary Focus</label>
-            <select id="finder-focus" name="focus"></select>
-          </div>
-
-          <div class="finder-field">
-            <label for="finder-pace" data-i18n="finder.paceLabel">Journey Rhythm</label>
-            <select id="finder-pace" name="pace"></select>
-          </div>
-
-          <div class="finder-submit-wrap">
-            <button type="submit" class="btn btn--dark">
-              <span data-i18n="finder.submit">Match Season &amp; Places</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </button>
-          </div>
-        </form>
       </div>
     </section>
 
@@ -645,6 +614,14 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Simple Floating Trip Action Bar -->
+  <div class="floating-trip-bar" id="floating-trip-bar" aria-live="polite">
+    <span class="floating-trip-bar__count" id="floating-trip-count">3 places picked</span>
+    <button type="button" class="btn btn--primary floating-trip-bar__cta" id="floating-plan-btn" data-open-planner>
+      <span data-i18n="nav.planJourney">Plan Trip</span> &rarr;
+    </button>
+  </div>
 
   <script defer src="./scripts/data.js"></script>
   <script defer src="./scripts/locales/index.js"></script>

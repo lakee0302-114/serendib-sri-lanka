@@ -66,13 +66,13 @@
   --vt-x: 90%;
   --vt-y: 36px;
 
-  /* Soft Comfortable Radii & Gentle Elevation */
-  --radius-sharp: 10px;
-  --radius-card: 14px;
-  --radius-soft: 16px;
+  /* Soft Friendly Radii & Clean Elevation */
+  --radius-sharp: 12px;
+  --radius-card: 18px;
+  --radius-soft: 20px;
   --radius-pill: 999px;
-  --shadow-card: 0 2px 12px rgba(24, 34, 28, 0.045), 0 1px 3px rgba(24, 34, 28, 0.04);
-  --shadow-card-hover: 0 14px 32px rgba(24, 34, 28, 0.09);
+  --shadow-card: 0 4px 18px rgba(8, 34, 46, 0.055), 0 1px 3px rgba(8, 34, 46, 0.04);
+  --shadow-card-hover: 0 16px 36px rgba(8, 34, 46, 0.11);
   --shadow-drawer: -12px 0 44px rgba(14, 22, 18, 0.16);
   --shadow-sheet: 0 -10px 36px rgba(14, 22, 18, 0.18);
   --shadow-popover: 0 16px 40px rgba(14, 22, 18, 0.14);
