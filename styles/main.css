@@ -159,6 +159,10 @@
     color: var(--ink-compass);
   }
 
+  .section--forest .section-subcopy {
+    color: var(--ink-compass-muted);
+  }
+
   .eyebrow {
     display: inline-flex;
     align-items: center;
