@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['nl'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Zestien toplocaties',
+      titleStart: 'Twintig toplocaties',
       titleEm: 'op het eiland.',
       subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (16)',
+        all: 'Alles (20)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['nl'] = {
       dossierBtn: 'Dossier',
       addStop: '+ Route',
       savedStop: '✓ Bewaard',
-      nightsUnit: 'N'
+      nightsUnit: 'N',
+      showAllBtn: 'Bekijk alle {count} locaties',
+      showLessBtn: 'Minder tonen'
     },
     compass: {
       eyebrow: '03 / Moessonkompas',
@@ -353,7 +355,11 @@ window.SERENDIB_LOCALES['nl'] = {
       summary: 'Levendige kusthoofdstad met musea, rode moskeeën en boulevard.',
       highlights: ['Rode bakstenen Jami Ul-Alfar-moskee en Pettah-markt verkennen.', 'Historische zalen bewonderen in het Nationaal Museum.', 'Pittige garnalenkoekjes eten op Galle Face Green bij schemer.'],
       culinaryNote: 'Zwartpeper-krab of pittige Pettah kottu van de plaat.', etiquette: 'Gebruik tuk-tuks met meter en drink goed water.'
-    }
+    },
+    'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hooglanden', tagline: 'Heilige nachtbeklimming langs lantaarns & driehoekige zonsopgang', elevation: '2.243 m', driveFromColombo: '4u 15', bestTime: 'Dec–Mei', daylightWindow: '05:30 – 07:30', summary: 'Iconische heilige bergtop die voor zonsopgang over verlichte trappen wordt beklommen.', highlights: ['Start rond 02:00 uur vanuit Nallathanniya met warme theepauzes.', 'Zie de beroemde scherpe bergschaduw over het wolkendek.', 'Luid de tempelbel op de top naast pelgrims uit het hele land.'], culinaryNote: 'Warme gemberthee en krokante linzenbeignets onderweg.', etiquette: 'Neem een warme jas mee voor de 8°C koude ochtendwind.' },
+    minneriya: { name: 'Minneriya Olifantenverzameling', region: 'Wildernis', tagline: 'Honderden wilde olifanten langs het oude stuwmeer', elevation: '110 m', driveFromColombo: '4u 30', bestTime: 'Jul–Okt', daylightWindow: '15:00 – 18:15', summary: 'In het droge seizoen komen hier reusachtige kuddes wilde olifanten bijeen aan de oever.', highlights: ['Zie tientallen kuddes samen grazen aan het water na 16:00 uur.', 'Ideaal te combineren met een ochtendbeklimming van Sigiriya.', 'Spot pelikanen en nimmersatten langs het groene meer.'], culinaryNote: 'Koele koningskokosnoot en geroosterde mais bij Habarana.', etiquette: 'Kies een rustige safarichauffeur die ruim afstand houdt.' },
+    wilpattu: { name: 'Wilpattu Nationaal Park', region: 'Wildernis', tagline: 'Stille zandmeren in de jungle, luipaarden & lippenberen', elevation: '65 m', driveFromColombo: '3u 45', bestTime: 'Feb–Okt', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Het grootste natuurpark van Sri Lanka met natuurlijke villu-meren en kalme bospaden.', highlights: ['Speur rustig naar luipaarden op schaduwrijke zandwegen.', 'Bezoek stille villu-meren vol herten, krokodillen en watervogels.', 'Spot zeldzame lippenberen van mei tot juli onder bloeiende bomen.'], culinaryNote: 'In kleipot bereide meervis-curry bij Nochchiyagama.', etiquette: 'Blijf stil zitten zodra wilde dieren dicht bij de weg lopen.' },
+    knuckles: { name: 'Knuckles-gebergte', region: 'Hooglanden', tagline: 'UNESCO-neveltoppen & verborgen kardemomvalleien', elevation: '1.863 m', driveFromColombo: '4u 30', bestTime: 'Feb–Mei · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Ruig vijf-toppige bergketen vol rijstterrassen, watervallen en nevelbossen.', highlights: ['Wandel naar Mini World’s End met uitzicht over de Meemure-vallei.', 'Koel af bij de Sera Ella-waterval langs schaduwrijke bergpaden.', 'Zie endemische boomhagedissen en langoeren in het mistige bos.'], culinaryNote: 'Dorpstraktatie van gierstkoekjes met palmsiroop en curries.', etiquette: 'Loop met een erkende berggids en draag bloedzuigersokken.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januari', headline: 'Droogseizoen — West, Zuid & Heuvels', summary: 'Frisse ochtenden in de bergen en kalme zuidzee.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Zonnig', note: 'Vlak water en walvissen bij Mirissa.' }, highlands: { status: 'Helder', note: 'Strakke uitzichten en koele avonden.' }, cultural: { status: 'Droog', note: 'Aangenaam licht over oude steden.' }, northeast: { status: 'Buien', note: 'Ruwe oostzee; Jaffna meestal droog.' } } },

@@ -163,6 +163,46 @@
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
       imageAlt: 'Historic white colonnaded facade of the Colombo National Museum framed by landscaped lawns'
+    },
+    {
+      id: 'sri-pada',
+      number: '17',
+      sinhala: 'ශ්‍රී පාදය',
+      regionKey: 'highlands',
+      coords: "06°48'34\"N · 80°29'59\"E",
+      idealNights: 1,
+      image: './assets/images/sri-pada.jpg',
+      imageAlt: 'Golden amber sunrise glowing above a sea of highland clouds seen from the sacred summit of Sri Pada'
+    },
+    {
+      id: 'minneriya',
+      number: '18',
+      sinhala: 'මින්නේරිය',
+      regionKey: 'wildlife',
+      coords: "08°01'15\"N · 80°53'10\"E",
+      idealNights: 1,
+      image: './assets/images/minneriya-gathering.jpg',
+      imageAlt: 'Wild Sri Lankan elephant mother and calf grazing beside calm Minneriya Reservoir water'
+    },
+    {
+      id: 'wilpattu',
+      number: '19',
+      sinhala: 'විල්පත්තුව',
+      regionKey: 'wildlife',
+      coords: "08°27'15\"N · 80°02'30\"E",
+      idealNights: 2,
+      image: './assets/images/wilpattu-leopard.jpg',
+      imageAlt: 'Wild Sri Lankan leopard walking along a quiet sandy forest track in Wilpattu National Park'
+    },
+    {
+      id: 'knuckles',
+      number: '20',
+      sinhala: 'නකල්ස් කඳු වැටිය',
+      regionKey: 'highlands',
+      coords: "07°27'30\"N · 80°46'50\"E",
+      idealNights: 2,
+      image: './assets/images/knuckles-range.jpg',
+      imageAlt: 'Misty emerald mountain peaks and grassy ridges across the Knuckles Wilderness at sunset'
     }
   ];
 

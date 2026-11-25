@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['fr'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Seize sites',
+      titleStart: 'Vingt sites',
       titleEm: 'incontournables.',
       subcopy: 'Touchez une étape pour la lumière idéale, la table ou votre circuit.',
       filters: {
-        all: 'Tous (16)',
+        all: 'Tous (20)',
         cultural: 'Culture',
         highlands: 'Montagnes',
         south: 'Sud',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['fr'] = {
       dossierBtn: 'Fiche',
       addStop: '+ Ajouter',
       savedStop: '✓ Ajouté',
-      nightsUnit: 'N'
+      nightsUnit: 'N',
+      showAllBtn: 'Voir les {count} destinations',
+      showLessBtn: 'Réduire la liste'
     },
     compass: {
       eyebrow: '03 / Boussole Mousson',
@@ -441,7 +443,11 @@ window.SERENDIB_LOCALES['fr'] = {
       summary: 'Capitale maritime mêlant musées historiques, mosquée rouge et océan.',
       highlights: ['Explorer les marchés colorés de Pettah et Jami Ul-Alfar.', 'Visiter les galeries anciennes du Musée National.', 'Déguster des beignets épicés sur Galle Face Green au crépuscule.'],
       culinaryNote: 'Crabe au poivre noir ou kottu brûlant du quartier Pettah.', etiquette: 'Utiliser des tuk-tuks à compteur et rester hydraté.'
-    }
+    },
+    'sri-pada': { name: 'Sri Pada (Pic d’Adam)', region: 'Hauts Plateaux', tagline: 'Ascension nocturne aux lanternes et ombre sacrée à l’aube', elevation: '2 243 m', driveFromColombo: '4h 15', bestTime: 'Déc–Mai', daylightWindow: '05:30 – 07:30', summary: 'Montagne sacrée gravie de nuit sous des guirlandes lumineuses jusqu’au lever du soleil.', highlights: ['Départ à 02h00 depuis Nallathanniya entre deux tasses de thé chaud.', 'Observer l’ombre pyramidale parfaite sur la mer de nuages.', 'Sonner la cloche du sommet au milieu des pèlerins.'], culinaryNote: 'Thé au gingembre brûlant et beignets vadais le long des marches.', etiquette: 'Prévoir une couche chaude contre le vent à 8°C au sommet.' },
+    minneriya: { name: 'Rassemblement de Minneriya', region: 'Faune', tagline: 'Des centaines d’éléphants sauvages sur les berges du réservoir', elevation: '110 m', driveFromColombo: '4h 30', bestTime: 'Juil–Oct', daylightWindow: '15:00 – 18:15', summary: 'La décrue saisonnière révèle des prairies attirant le plus grand rassemblement d’éléphants d’Asie.', highlights: ['Observer des dizaines de troupeaux au bord de l’eau après 16h00.', 'Idéal l’après-midi après la visite matinale de Sigiriya.', 'Guetter pélicans et tantales autour de la digue antique.'], culinaryNote: 'Noix de coco royale fraîche et maïs grillé près de Habarana.', etiquette: 'Choisir un chauffeur respectueux gardant ses distances avec les petits.' },
+    wilpattu: { name: 'Parc National de Wilpattu', region: 'Faune', tagline: 'Lacs forestiers bordés de sable, léopards et ours lippus', elevation: '65 m', driveFromColombo: '3h 45', bestTime: 'Fév–Oct', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Le plus vaste sanctuaire du pays, réputé pour ses pistes sableuses calmes et ses bassins naturels.', highlights: ['Suivre la trace des léopards discrets sur les pistes ombragées.', 'Explorer les lacs villus paisibles fréquentés par cerfs et crocodiles.', 'Apercevoir les ours lippus entre mai et juillet sous les arbres en fleurs.'], culinaryNote: 'Curry de poisson d’eau douce en pot d’argile vers Nochchiyagama.', etiquette: 'Rester silencieux en 4x4 près des points d’observation.' },
+    knuckles: { name: 'Chaîne des Knuckles', region: 'Hauts Plateaux', tagline: 'Sommets brumeux UNESCO et sentiers de cardamome', elevation: '1 863 m', driveFromColombo: '4h 30', bestTime: 'Fév–Mai · Juil–Sep', daylightWindow: '07:00 – 11:00', summary: 'Massif sauvage abritant rizières en terrasses, cascades cristallines et forêts de nuages.', highlights: ['Randonner jusqu’à Mini World’s End au-dessus du village de Meemure.', 'Se rafraîchir au pied de la cascade Sera Ella.', 'Observer lézards pygmées endémiques et semnopithèques dans la brume.'], culinaryNote: 'Gâteau de millet au sirop de palme et currys paysans.', etiquette: 'Partir avec un guide agréé et prévoir des chaussettes anti-sangsues.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Janvier', headline: 'Saison Sèche — Ouest, Sud & Montagnes', summary: 'Matins frais en altitude, mer calme au sud et safaris clairs.', festival: 'Perahera de Duruthu · Thai Pongal.', verdicts: { south: { status: 'Plein Soleil', note: 'Mer plate et baleines vers Mirissa.' }, highlands: { status: 'Clair & Frais', note: 'Cols dégagés et soirées fraîches.' }, cultural: { status: 'Sec & Doux', note: 'Matinées agréables dans les cités.' }, northeast: { status: 'Averses', note: 'Mer agitée à l’est ; Jaffna reste sec.' } } },

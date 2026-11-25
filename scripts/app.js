@@ -31,6 +31,7 @@
     theme: document.documentElement.getAttribute('data-theme') || 'light',
     locale: null,
     activeRegion: 'all',
+    atlasExpanded: false,
     activeMonth: 'FEB',
     activeItineraryId: 'classic-arc',
     savedStopIds: loadSavedStops(),
@@ -100,6 +101,9 @@
     introDatums: document.getElementById('intro-datums'),
     atlasFilterRail: document.getElementById('atlas-filter-rail'),
     atlasGrid: document.getElementById('atlas-grid'),
+    atlasExpandWrap: document.getElementById('atlas-expand-wrap'),
+    atlasExpandBtn: document.getElementById('atlas-expand-btn'),
+    atlasExpandLabel: document.getElementById('atlas-expand-label'),
     atlasPrev: document.getElementById('atlas-prev'),
     atlasNext: document.getElementById('atlas-next'),
     monthGrid: document.getElementById('month-grid'),
@@ -446,9 +450,25 @@
 
   function setRegionFilter(regionKey) {
     state.activeRegion = regionKey;
+    state.atlasExpanded = false;
     renderAtlasFilterRail();
     renderDestinations();
     dom.atlasGrid.scrollTo({ left: 0, behavior: 'smooth' });
+  }
+
+  function updateAtlasExpandUI(totalCount) {
+    if (!dom.atlasExpandWrap || !dom.atlasExpandBtn || !dom.atlasExpandLabel || !state.locale) return;
+    var rowCap = window.innerWidth >= 1120 ? 4 : 2;
+    var needsExpand = totalCount > rowCap;
+    dom.atlasGrid.classList.toggle('is-expanded', state.atlasExpanded || !needsExpand);
+    dom.atlasExpandWrap.hidden = !needsExpand;
+    if (!needsExpand) return;
+
+    var t = state.locale.ui.atlas;
+    dom.atlasExpandBtn.setAttribute('aria-expanded', String(state.atlasExpanded));
+    dom.atlasExpandLabel.textContent = state.atlasExpanded
+      ? t.showLessBtn
+      : t.showAllBtn.replace('{count}', String(totalCount));
   }
 
   function renderDestinations() {
@@ -477,6 +497,8 @@
         '</div></div></article>'
       );
     }).join('');
+
+    updateAtlasExpandUI(filtered.length);
 
     dom.atlasGrid.querySelectorAll('[data-open-dossier]').forEach(function (el) {
       el.addEventListener('click', function () {
@@ -517,6 +539,23 @@
     dom.atlasNext.addEventListener('click', function () {
       var dirFactor = document.documentElement.dir === 'rtl' ? -1 : 1;
       dom.atlasGrid.scrollBy({ left: dirFactor * window.innerWidth * 0.82, behavior: 'smooth' });
+    });
+
+    if (dom.atlasExpandBtn) {
+      dom.atlasExpandBtn.addEventListener('click', function () {
+        state.atlasExpanded = !state.atlasExpanded;
+        var count = dom.atlasGrid.querySelectorAll('.dest-card').length;
+        updateAtlasExpandUI(count);
+        if (!state.atlasExpanded) {
+          document.getElementById('atlas').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      if (dom.atlasGrid) {
+        updateAtlasExpandUI(dom.atlasGrid.querySelectorAll('.dest-card').length);
+      }
     });
   }
 

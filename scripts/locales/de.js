@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['de'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Sechzehn prägende',
+      titleStart: 'Zwanzig prägende',
       titleEm: 'Reiseziele.',
       subcopy: 'Tippen Sie auf Bild oder Titel für Zeiten, Küche und Planung.',
       filters: {
-        all: 'Alle (16)',
+        all: 'Alle (20)',
         cultural: 'Kultur',
         highlands: 'Hochland',
         south: 'Süden',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['de'] = {
       dossierBtn: 'Dossier',
       addStop: '+ Route',
       savedStop: '✓ Gespeichert',
-      nightsUnit: 'N'
+      nightsUnit: 'N',
+      showAllBtn: 'Alle {count} Ziele ansehen',
+      showLessBtn: 'Weniger anzeigen'
     },
     compass: {
       eyebrow: '03 / Monsun-Kompass',
@@ -441,7 +443,11 @@ window.SERENDIB_LOCALES['de'] = {
       summary: 'Lebendige Hafenmetropole voller Kontraste aus Kolonialzeit und Moderne.',
       highlights: ['Rot-weiße Jami-Ul-Alfar-Moschee und Pettah-Markt erleben.', 'Im historischen Nationalmuseum von Colombo stöbern.', 'Abends würzige Garnelen-Snacks an der Galle Face Green kosten.'],
       culinaryNote: 'Pfefferkrabbe oder heißes Kottu direkt aus Pettah.', etiquette: 'Tuk-Tuk-Taxameter nutzen und tagsüber genug trinken.'
-    }
+    },
+    'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hochland', tagline: 'Heiliger Laternenaufstieg & dreieckiger Gipfelschatten', elevation: '2.243 m', driveFromColombo: '4 Std. 15 Min.', bestTime: 'Dez–Mai', daylightWindow: '05:30 – 07:30', summary: 'Der heilige Kegelberg wird nachts entlang beleuchteter Stufen bis zum Sonnenaufgang bestiegen.', highlights: ['Um 02:00 Uhr bei Nallathanniya starten und an Teeständen pausieren.', 'Das perfekte Schattendreieck über den Nebeltälern sehen.', 'Die Tempelglocke auf dem friedlichen Gipfel läuten.'], culinaryNote: 'Heißer Ingwertee und knusprige Vadais an den Wegständen.', etiquette: 'Warme Kleidung für 8°C Gipfelwind mitbringen.' },
+    minneriya: { name: 'Minneriya Elefantentreffen', region: 'Wildnis', tagline: 'Hunderte wilde Elefanten am Ufer des alten Stausees', elevation: '110 m', driveFromColombo: '4 Std. 30 Min.', bestTime: 'Jul–Okt', daylightWindow: '15:00 – 18:15', summary: 'In der Trockenzeit versammeln sich hier riesige Elefantenherden am grünen Seeufer.', highlights: ['Ab 16:00 Uhr Dutzende Familienherden beim Grasen beobachten.', 'Perfekt mit dem Morgenaufstieg auf Sigiriya kombinierbar.', 'Nimmersatte Pelikane und Störche entlang des Wassers sehen.'], culinaryNote: 'Kühle King Coconut und gerösteter Mais bei Habarana.', etiquette: 'Leise Jeeps wählen, die respektvoll am Uferrand warten.' },
+    wilpattu: { name: 'Wilpattu-Nationalpark', region: 'Wildnis', tagline: 'Versteckte Dschungelseen, Leoparden & Lippenbären', elevation: '65 m', driveFromColombo: '3 Std. 45 Min.', bestTime: 'Feb–Okt', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Sri Lankas größter Nationalpark bietet ruhige Sandpisten rund um natürliche Waldseen.', highlights: ['Leoparden auf schattigen Waldpfaden behutsam verfolgen.', 'Die stillen Villu-Seen mit Krokodilen und Hirschen erkunden.', 'Zwischen Mai und Juli seltene Lippenbären erspähen.'], culinaryNote: 'Hausgemachtes Seefisch-Curry im Tontopf nahe Nochchiyagama.', etiquette: 'Im Jeep ruhig bleiben und Sichtungen nicht bedrängen.' },
+    knuckles: { name: 'Knuckles Mountain Range', region: 'Hochland', tagline: 'UNESCO-Nebelgipfel & urige Bergdörfer', elevation: '1.863 m', driveFromColombo: '4 Std. 30 Min.', bestTime: 'Feb–Mai · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Wildes fünfzackiges Gebirge voller Terrassenfelder, Wasserfälle und Nebelwälder.', highlights: ['Zum Mini World’s End über dem grünen Tal von Meemure wandern.', 'Im klaren Wasser des Wasserfalls Sera Ella erfrischen.', 'Endemische Agamen und Languren auf Moospfaden entdecken.'], culinaryNote: 'Süßer Hirse-Snack in Blättern und Gemüsec-Curry vom Dorf.', etiquette: 'Mit zertifiziertem Guide wandern und Blutegelsocken tragen.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januar', headline: 'Trockenzeit — West, Süd & Berge', summary: 'Klare Bergmorgen, ruhiges Südmeer und beste Safari-Sicht.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Sonne', note: 'Ruhige See & Blauwale vor Mirissa.' }, highlands: { status: 'Klar & Kühl', note: 'Klare Pässe und frische Abende.' }, cultural: { status: 'Trocken', note: 'Angenehme Morgen in Königsstädten.' }, northeast: { status: 'Schauer', note: 'Ostküste wellig; Jaffna meist trocken.' } } },

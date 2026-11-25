@@ -70,10 +70,10 @@ window.SERENDIB_LOCALES['zh'] = {
     atlas: {
       eyebrow: '02 / 目的地图册',
       titleStart: '定义海岛的',
-      titleEm: '十六大风景。',
+      titleEm: '二十大风景。',
       subcopy: '点击任一站查看最佳采光时段、风味美食或加入行程。',
       filters: {
-        all: '全部 (16)',
+        all: '全部 (20)',
         cultural: '文化三角',
         highlands: '高山茶园',
         south: '南岸海湾',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['zh'] = {
       dossierBtn: '详情',
       addStop: '+ 加入',
       savedStop: '✓ 已存',
-      nightsUnit: '晚'
+      nightsUnit: '晚',
+      showAllBtn: '展开全部 {count} 个目的地',
+      showLessBtn: '收起仅看首行'
     },
     compass: {
       eyebrow: '03 / 季风罗盘',
@@ -273,7 +275,11 @@ window.SERENDIB_LOCALES['zh'] = {
     mirissa: { name: '美蕊沙与韦利格默湾', region: '南与西岸', tagline: '椰林岬角、冲浪浅湾与深海蓝鲸', elevation: '海平面', driveFromColombo: '车程2小时15分', bestTime: '11–4月', daylightWindow: '06:30 与 17:30', summary: '比邻而居的南岸双湾，以远海观鲸、柔和浪点与金色椰林海湾闻名。', highlights: ['十二月至三月乘环保船出海观赏蓝鲸与飞旋海豚。', '赶在中午人潮前日出漫步椰树山岬角。', '在平缓的韦利格默沙滩体验轻松入门冲浪课。'], culinaryNote: '海边炭烤新鲜红鲷鱼配青柠与椰丝烤饼。', etiquette: '请选用保持安全距离的合规生态观鲸船只。' },
     udawalawe: { name: '乌达瓦拉维象群公园', region: '野生动物', tagline: '开阔稀树草原与成群野生亚洲象', elevation: '118米', driveFromColombo: '车程3小时45分', bestTime: '全年皆宜（5–9月尤佳）', daylightWindow: '06:00 与 15:30', summary: '水库旁的开阔旱区草原，使这里全年都有极高概率见到野生象群。', highlights: ['四季皆可近距离观察顽皮幼象依偎象群家族。', '在乌达瓦拉维小象救护站观看定时喂奶场景。', '留意枯木枝头停歇的蛇雕与色彩艳丽的孔雀。'], culinaryNote: '路边现砍清甜黄金椰子配棕榈糖薄饼。', etiquette: '切勿在敞篷越野车上呼喊或向野生动物投食。' },
     'arugam-bay': { name: '阿鲁甘湾与帕西库达', region: '北与东岸', tagline: '印度洋经典右跑道浪点与玻璃般浅水潟湖', elevation: '海平面', driveFromColombo: '车程6小时30分', bestTime: '5–9月', daylightWindow: '06:00 晨浪', summary: '当西南海岸步入雨季，东海岸正迎来纯净海浪与平缓清澈的珊瑚湾。', highlights: ['在主浪点与威士忌浪点畅享长距离右手海浪冲浪。', '于帕西库达及腰深的平静珊瑚礁潟湖悠然畅游。', '清晨划独木舟穿梭波图维勒静谧红树林间寻翠鸟。'], culinaryNote: '烘焙芫荽炖煮的东岸风味鱼咖喱饭。', etiquette: '离开沙滩进入宁静村落巷道时请保持着装得体。' },
-    colombo: { name: '科伦坡与加勒菲斯绿地', region: '南与西岸', tagline: '殖民拱廊建筑、贝塔香料巷与海滨落日', elevation: '海平面', driveFromColombo: '国际门户', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: '温润热闹的海滨首府，交融古典博物长廊、红白清真寺与海岸长堤。', highlights: ['探访红白砖砌的加米乌尔阿尔法清真寺与贝塔市集老巷。', '步入科伦坡国家博物馆欣赏斯里兰卡历代珍藏展厅。', '傍晚在加勒菲斯绿地品尝酥香鲜虾炸饼观海霞。'], culinaryNote: '招牌黑胡椒螃蟹或贝塔夜市火热铁板炒饼。', etiquette: '午后湿热注意补水，搭乘突突车请优先要求打表计费。' }
+    colombo: { name: '科伦坡与加勒菲斯绿地', region: '南与西岸', tagline: '殖民拱廊建筑、贝塔香料巷与海滨落日', elevation: '海平面', driveFromColombo: '国际门户', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: '温润热闹的海滨首府，交融古典博物长廊、红白清真寺与海岸长堤。', highlights: ['探访红白砖砌的加米乌尔阿尔法清真寺与贝塔市集老巷。', '步入科伦坡国家博物馆欣赏斯里兰卡历代珍藏展厅。', '傍晚在加勒菲斯绿地品尝酥香鲜虾炸饼观海霞。'], culinaryNote: '招牌黑胡椒螃蟹或贝塔夜市火热铁板炒饼。', etiquette: '午后湿热注意补水，搭乘突突车请优先要求打表计费。' },
+    'sri-pada': { name: '圣足山（亚当峰）', region: '高地茶园', tagline: '星夜灯火朝圣阶梯与日出三角山影', elevation: '2,243米', driveFromColombo: '车程4小时15分', bestTime: '12–5月（朝圣季）', daylightWindow: '05:30 – 07:30 峰顶', summary: '沿着灯火通明的千年山阶黎明前登顶，俯瞰云海之上清晰的金字塔形山影。', highlights: ['凌晨两点从纳拉塔尼亚出发，沿途在茶棚歇脚取暖。', '日出瞬间见证投射在晨雾云海上的完美三角山影。', '在多信仰共仰的山顶圣殿敲响平安钟声。'], culinaryNote: '夜间山路茶摊供应的滚烫姜茶与香脆扁豆酥饼。', etiquette: '山顶黎明气温仅约8°C且海风劲吹，务必随身携带保暖外套。' },
+    minneriya: { name: '明内里耶（群象大聚集）', region: '野生动物', tagline: '上百头野生亚洲象齐聚古水库湖畔草滩', elevation: '110米', driveFromColombo: '车程4小时30分', bestTime: '7–10月（旱季奇观）', daylightWindow: '15:00 – 18:15', summary: '旱季湖水退去露出的丰美草滩，吸引着亚洲最壮观的野生象群大聚会。', highlights: ['下午四点后观看数十个野象家族齐聚水滨嬉戏觅食。', '清晨攀登狮子岩、午后转赴明内里耶越野吉普恰到好处。', '在古堤岸沿线寻觅白鹈鹕、彩鹳与猕猴群。'], culinaryNote: '哈伯勒内路边清冽金椰搭配炭烤鲜甜玉米棒。', etiquette: '请选择不包围象群、在岸边保持敬意距离的生态越野车。' },
+    wilpattu: { name: '维勒珀图国家公园', region: '野生动物', tagline: '森林沙岸天然湖泊、锡兰豹与懒熊秘境', elevation: '65米', driveFromColombo: '车程3小时45分', bestTime: '2–10月', daylightWindow: '06:00 – 09:30 与 15:30', summary: '斯里兰卡面积最大的国家公园，以静谧林间沙道和数十座天然沙盆湖闻名。', highlights: ['沿林荫沙道静静追踪优雅独行的锡兰金钱豹。', '探访鹿群与沼泽鳄栖息的宁静天然“维卢”湖泊群。', '五至七月果熟季在花树林下寻访稀有的斯里兰卡懒熊。'], culinaryNote: '诺奇亚加马附近瓦罐慢炖的湖鱼咖喱配香糯红米饭。', etiquette: '遇豹子等野生动物经过小道时请在车内保持静默观赏。' },
+    knuckles: { name: '指关节山脉（诺克勒斯）', region: '高地茶园', tagline: '世界遗产云雾五指峰与豆蔻山谷秘径', elevation: '1,863米', driveFromColombo: '车程4小时30分', bestTime: '2–5月 · 7–9月', daylightWindow: '07:00 – 11:00', summary: '隐匿着古老梯田村落、清冽飞瀑与原生云雾林的联合国生态保护山脉。', highlights: ['徒步小世界尽头观景台俯瞰翠绿米姆雷梯田谷地。', '穿过豆蔻密林在晶莹的塞拉埃拉瀑布旁掬水洗尘。', '在青苔林岭间邂逅当地特有的侏儒蜥蜴与紫面叶猴。'], culinaryNote: '村落自制棕榈蜜粟米糕配鲜蔬乡野咖喱。', etiquette: '请聘请注册山林向导同行，潮湿季节穿着防蚂蟥长袜。' }
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '干季巅峰 — 西南岸与茶山', summary: '山地清晨干爽、南部海水澄澈、国家公园易见猎豹。', festival: '杜鲁图游行 · 泰米尔丰收节', verdicts: { south: { status: '晴空艳阳', note: '海平如镜，美蕊沙蓝鲸活跃。' }, highlands: { status: '晴朗微凉', note: '山口明净，夜间添衣保暖。' }, cultural: { status: '干爽宜人', note: '古城正午少雨适合漫游。' }, northeast: { status: '阵雨', note: '东海多浪，贾夫纳大部晴干。' } } },

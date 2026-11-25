@@ -70,10 +70,10 @@ window.SERENDIB_LOCALES['ja'] = {
     atlas: {
       eyebrow: '02 / 名所アトラス',
       titleStart: '島を象徴する',
-      titleEm: '16の風景。',
+      titleEm: '20の風景。',
       subcopy: '各地域をタップしてベストな時間帯、郷土料理、保存を確認。',
       filters: {
-        all: 'すべて (16)',
+        all: 'すべて (20)',
         cultural: '文化三角地帯',
         highlands: '高原',
         south: '南海岸',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['ja'] = {
       dossierBtn: '詳細',
       addStop: '+ 追加',
       savedStop: '✓ 保存済',
-      nightsUnit: '泊'
+      nightsUnit: '泊',
+      showAllBtn: '全{count}カ所を見る',
+      showLessBtn: '最初の行に戻す'
     },
     compass: {
       eyebrow: '03 / モンスーン羅針盤',
@@ -273,7 +275,11 @@ window.SERENDIB_LOCALES['ja'] = {
     mirissa: { name: 'ミリッサ＆ウェリガマ湾', region: '南海岸・西海岸', tagline: '椰子の岬、穏やかなサーフ湾と外洋のシロナガスクジラ', elevation: '海抜0m', driveFromColombo: '車で2時間15分', bestTime: '11–4月', daylightWindow: '06:30 & 17:30', summary: 'ホエールウォッチングと柔らかな波、黄金色の入り江が魅力の双子の南湾。', highlights: ['12〜3月の朝、沖合でシロナガスクジラやハシナガイルカを観賞。', '混雑前の日の出にココナッツ・ツリー・ヒルを歩く。', '遠浅のウェリガマ・ビーチで初心者向けサーフィンを楽しむ。'], culinaryNote: '浜辺で焼く新鮮なフエダイのグリルとライム、ココナッツロティ。', etiquette: 'クジラと適正距離を保つ環境配慮認定の船をお選びください。' },
     udawalawe: { name: 'ウダワラウェ国立公園', region: '野生動物', tagline: '野生の象の群れが集う広大なサバンナ平原', elevation: '118m', driveFromColombo: '車で3時間45分', bestTime: '通年（5–9月が最適）', daylightWindow: '06:00 & 15:30', summary: 'ウダワラウェ貯水池の畔に広がる草原で、一年中高い確率で象に出会えます。', highlights: ['季節を問わず家族の群れで遊ぶ愛らしい子象を観察する。', '象の孤児院トランジットホームでミルクやりの時間を見学。', '枯れ木に止まるカンムリワシや孔雀をサファリ中に探す。'], culinaryNote: '道端で割ってもらう甘いキングココナッツとジャガリークレープ。', etiquette: 'サファリ車から動物を呼んだり餌を与えたりしないでください。' },
     'arugam-bay': { name: 'アルガム・ベイ＆パシクダ', region: '北・東海岸', tagline: 'インド洋の極上ポイントブレイクと遠浅の透明ラグーン', elevation: '海抜0m', driveFromColombo: '車で6時間30分', bestTime: '5–9月', daylightWindow: '06:00 夜明け', summary: '南西が雨季の間、乾季の澄んだ波と穏やかなラグーンが広がる東海岸の聖地。', highlights: ['メインポイントやウィスキーポイントで綺麗なライトブレイクに乗る。', 'パシクダの腰の深さほどしかない珊瑚のラグーンでゆったり泳ぐ。', '日の出のポットゥビル・マングローブをカヤックで静かに進む。'], culinaryNote: '焙煎コリアンダーが香る東海岸の魚カレーとライス。', etiquette: 'ビーチを離れる町中では肩を覆う軽装で穏やかな村の雰囲気を大切に。' },
-    colombo: { name: 'コロンボ＆ゴール・フェイス', region: '南海岸・西海岸', tagline: '歴史的アーチ建築、ペター市場とインド洋の夕陽', elevation: '海抜0m', driveFromColombo: '玄関口', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: 'コロニアル建築の博物館、赤いモスク、海辺の遊歩道が交差する温暖な玄関口。', highlights: ['赤白模様のジャミ・ウル・アルファー・モスクとペターのスパイス通りを散策。', 'コロンボ国立博物館で歴史的な王室ギャラリーを鑑賞。', '夕暮れのゴール・フェイス・グリーンでピリ辛の海老ワデを味わう。'], culinaryNote: '黒胡椒クラブの名店料理やペターの熱いコットゥ・ロティ。', etiquette: '午後の湿気に備えて水分を補給し、トゥクトゥクはメーター制を利用しましょう。' }
+    colombo: { name: 'コロンボ＆ゴール・フェイス', region: '南海岸・西海岸', tagline: '歴史的アーチ建築、ペター市場とインド洋の夕陽', elevation: '海抜0m', driveFromColombo: '玄関口', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: 'コロニアル建築の博物館、赤いモスク、海辺の遊歩道が交差する温暖な玄関口。', highlights: ['赤白模様のジャミ・ウル・アルファー・モスクとペターのスパイス通りを散策。', 'コロンボ国立博物館で歴史的な王室ギャラリーを鑑賞。', '夕暮れのゴール・フェイス・グリーンでピリ辛の海老ワデを味わう。'], culinaryNote: '黒胡椒クラブの名店料理やペターの熱いコットゥ・ロティ。', etiquette: '午後の湿気に備えて水分を補給し、トゥクトゥクはメーター制を利用しましょう。' },
+    'sri-pada': { name: 'スリー・パーダ（アダムスピーク）', region: '高原地帯', tagline: '灯火に照らされた夜明け前登山と神秘的な三角影', elevation: '2,243m', driveFromColombo: '車で4時間15分', bestTime: '12–5月（巡礼期）', daylightWindow: '05:30 – 07:30', summary: '明かりが連なる石段を夜間に登り、雲海のご来光を拝むスリランカ最古の霊峰。', highlights: ['ナラタニヤから午前2時に出発し茶屋で休憩しながら登る。', '雲海にくっきりと浮かぶ三角形の山の影を望む。', '多宗教の巡礼者とともに山頂の鐘を鳴らす。'], culinaryNote: '参道茶屋で味わう熱いジンジャーティーと揚げたてワデ。', etiquette: '山頂の朝は8°C前後に冷え込むため防寒着が必須です。' },
+    minneriya: { name: 'ミンネリヤ（象の大集結）', region: '野生動物', tagline: '古代貯水池の草原に数百頭の野生アジア象が集う', elevation: '110m', driveFromColombo: '車で4時間30分', bestTime: '7–10月（乾季）', daylightWindow: '15:00 – 18:15', summary: '乾季に水面が引いた緑の湖畔へ、アジア最大規模の野生象の群れが集結します。', highlights: ['16時以降に水辺へ集まる数十家族の象の群れを観察。', '朝のシーギリヤ登頂と午後のサファリを無理なく組み合わせ。', '湖畔でペリカンやコウノトリ、猿の群れを探す。'], culinaryNote: 'ハバラナ郊外で味わう冷たいキングココナッツと焼きトウモロコシ。', etiquette: '子象の進行を遮らない静かな自然配慮ジープを選びましょう。' },
+    wilpattu: { name: 'ウィルパットゥ国立公園', region: '野生動物', tagline: '森に抱かれた砂湖、ヒョウとナマケグマが棲む秘境', elevation: '65m', driveFromColombo: '車で3時間45分', bestTime: '2–10月', daylightWindow: '06:00 – 09:30 & 15:30', summary: '静かな砂の林道と天然の砂湖ウィルが点在する、国内最大の野生保護区。', highlights: ['木漏れ日の砂道を進む優雅なスリランカヒョウを探す。', '鹿やワニが憩う静謐な天然湖ウィルを巡る。', '5〜7月の実りの季節に希少なナマケグマとの遭遇を狙う。'], culinaryNote: 'ノッチヤガマ近郊の素朴な淡水魚土鍋カレーと赤米。', etiquette: '動物が近い際は車内で声を潜め、静かに見守りましょう。' },
+    knuckles: { name: 'ナックルズ山脈', region: '高原地帯', tagline: 'UNESCO雲霧の連峰とカルダモン香る秘境トレイル', elevation: '1,863m', driveFromColombo: '車で4時間30分', bestTime: '2–5月 · 7–9月', daylightWindow: '07:00 – 11:00', summary: '棚田の村ミームレや清らかな滝、太古の雲霧林を抱える世界遺産の連山。', highlights: ['ミームレ村を見下ろすミニ・ワールズエンドへトレッキング。', 'カルダモン林を抜けて澄んだセラ・エラ滝で涼む。', '苔むす尾根道で固有種のトカゲやサルに出会う。'], culinaryNote: 'キトゥル椰子蜜を使った素朴な雑穀菓子ハラペと山菜カレー。', etiquette: '登録ガイドと同行し、霧の季節はヒル対策ソックスを着用してください。' }
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '西海岸・南海岸・高原のベスト乾季', summary: '高原の澄んだ朝と穏やかな南の海、サファリ日和。', festival: 'ドゥルトゥ・ペラヘラ・タイ・ポンガル', verdicts: { south: { status: '快晴', note: '穏やかな海とミリッサのクジラ季節。' }, highlands: { status: '快晴涼風', note: '峠の見晴らし良好、夜は涼しい。' }, cultural: { status: '乾燥', note: '午前中の遺跡巡りが快適。' }, northeast: { status: '時雨', note: '東海岸は高波。ジャフナは晴れ中心。' } } },

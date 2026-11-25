@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['en'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Sixteen iconic',
+      titleStart: 'Twenty iconic',
       titleEm: 'destinations.',
       subcopy: 'Tap any photo or card for highlights, timing, and route saving.',
       filters: {
-        all: 'All (16)',
+        all: 'All (20)',
         cultural: 'Cultural',
         highlands: 'Highlands',
         south: 'South & West',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['en'] = {
       dossierBtn: 'Dossier',
       addStop: '+ Route',
       savedStop: '✓ Saved',
-      nightsUnit: 'N'
+      nightsUnit: 'N',
+      showAllBtn: 'See all {count} destinations',
+      showLessBtn: 'Show first row'
     },
     compass: {
       eyebrow: '03 / Monsoon Compass',
@@ -529,6 +531,74 @@ window.SERENDIB_LOCALES['en'] = {
       ],
       culinaryNote: 'Ministry-style black pepper crab or fiery Pettah kottu.',
       etiquette: 'Hydrate in humid afternoons and negotiate tuk fares by meter.'
+    },
+    'sri-pada': {
+      name: 'Sri Pada (Adam’s Peak)',
+      region: 'Highlands',
+      tagline: 'Sacred lantern ascent & sunrise shadow triangle',
+      elevation: '2,243m',
+      driveFromColombo: '4h 15m',
+      bestTime: 'Dec–May (Pilgrimage)',
+      daylightWindow: '05:30 – 07:30 Summit',
+      summary: 'Sri Lanka’s sacred conical mountain climbed before dawn beneath glowing ridge staircases.',
+      highlights: [
+        'Begin climbing Nallathanniya steps at 02:00 with sweet ginger tea stops.',
+        'Watch the famous pyramid mountain shadow cast across morning mist.',
+        'Ring the summit shrine bell beside multi-faith highland pilgrims.'
+      ],
+      culinaryNote: 'Hot tea and crispy vadais served by candlelit trailside tea stalls.',
+      etiquette: 'Pack warm layers for 8°C ridge winds and climb slowly in silent queues.'
+    },
+    minneriya: {
+      name: 'Minneriya Elephant Gathering',
+      region: 'Wildlife',
+      tagline: 'Hundreds of wild Asian elephants on grassy tank shores',
+      elevation: '110m',
+      driveFromColombo: '4h 30m',
+      bestTime: 'Jul–Oct (Dry Peak)',
+      daylightWindow: '15:00 – 18:15',
+      summary: 'Ancient reservoir receding greens draw one of Earth’s largest wild Asian elephant congregations.',
+      highlights: [
+        'Watch dozens of elephant herds converge beside lakeside grasses after 16:00.',
+        'Combine morning Sigiriya climbs cleanly with an afternoon Minneriya 4x4.',
+        'Track painted storks, pelicans, and toque macaques near the bund.'
+      ],
+      culinaryNote: 'Cool king coconut paired with warm roadside corn cobs outside Habarana.',
+      etiquette: 'Use quiet naturalist jeeps that pause along tank fringes without boxing herds.'
+    },
+    wilpattu: {
+      name: 'Wilpattu National Park',
+      region: 'Wildlife',
+      tagline: 'Sand-rimmed forest lakes, leopards & sloth bears',
+      elevation: '65m',
+      driveFromColombo: '3h 45m',
+      bestTime: 'Feb–Oct',
+      daylightWindow: '06:00 – 09:30 & 15:30',
+      summary: 'Sri Lanka’s largest wilderness sanctuary known for quiet jungle trails and natural sand-basin lakes.',
+      highlights: [
+        'Track elusive Ceylon leopards striding down shaded sandy forest tracks.',
+        'Visit serene villu water basins dotted with mugger crocodiles and deer.',
+        'Spot rare Sri Lankan sloth bears foraging under flowering palu trees (May–Jul).'
+      ],
+      culinaryNote: 'Home-cooked clay-pot lake fish and red rice near Nochchiyagama.',
+      etiquette: 'Stay seated and keep jeeps whisper-quiet around shaded leopard sightings.'
+    },
+    knuckles: {
+      name: 'Knuckles Mountain Range',
+      region: 'Highlands',
+      tagline: 'UNESCO jagged cloud peaks & cardamom valley trails',
+      elevation: '1,863m',
+      driveFromColombo: '4h 30m',
+      bestTime: 'Feb–May · Jul–Sep',
+      daylightWindow: '07:00 – 11:00',
+      summary: 'Wild five-peak conservation massif holding terraced paddy villages, waterfalls, and cloud forests.',
+      highlights: [
+        'Trek to Mini World’s End overlooking terraced green Meemure valleys.',
+        'Bathe below crystal Sera Ella cascades after shaded cardamom-forest trails.',
+        'Spot endemic pygmy lizards and purple-faced langurs along mossy ridges.'
+      ],
+      culinaryNote: 'Village kithul-sweetened kurakkan halape and garden vegetable curries.',
+      etiquette: 'Hire a registered Knuckles trail guide and wear leech socks in misty seasons.'
     }
   },
   months: {

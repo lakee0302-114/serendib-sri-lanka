@@ -70,10 +70,10 @@ window.SERENDIB_LOCALES['ko'] = {
     atlas: {
       eyebrow: '02 / 아틀라스',
       titleStart: '섬을 대표하는',
-      titleEm: '열여섯 풍경.',
+      titleEm: '스무 풍경.',
       subcopy: '장소를 눌러 최적의 빛 시간, 현지 음식, 루트 저장을 확인하세요.',
       filters: {
-        all: '전체 (16)',
+        all: '전체 (20)',
         cultural: '문화유적',
         highlands: '고원',
         south: '남부',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['ko'] = {
       dossierBtn: '상세',
       addStop: '+ 담기',
       savedStop: '✓ 담김',
-      nightsUnit: '박'
+      nightsUnit: '박',
+      showAllBtn: '{count}곳 모두 보기',
+      showLessBtn: '첫 줄만 보기'
     },
     compass: {
       eyebrow: '03 / 몬순 나침반',
@@ -273,7 +275,11 @@ window.SERENDIB_LOCALES['ko'] = {
     mirissa: { name: '미리사 & 웰리가마 베이', region: '남·서부', tagline: '야자수 곶, 서핑 만 그리고 푸른 대양의 고래들', elevation: '해수면', driveFromColombo: '차량 2시간 15분', bestTime: '11–4월', daylightWindow: '06:30 & 17:30', summary: '고래 관찰 보트와 부드러운 파도, 금빛 야자수 해변으로 사랑받는 남부의 쌍둥이 만.', highlights: ['12~3월 외해에서 대왕고래와 긴부리돌고래 관측.', '인파가 몰리기 전 이른 일출 시간에 코코넛 트리 힐 산책.', '초보자도 안전하게 타기 좋은 웰리가마 해변 서핑 강습.'], culinaryNote: '해변에서 갓 구운 홍돔 구이와 라임, 폴 로티.', etiquette: '고래와 적정 거리를 유지하는 친환경 인증 투어 보트를 선택하세요.' },
     udawalawe: { name: '우다왈라웨 코끼리 공원', region: '야생동물', tagline: '야생 코끼리 무리가 뛰노는 드넓은 사바나 초원', elevation: '118m', driveFromColombo: '차량 3시간 45분', bestTime: '연중 무휴 (5–9월 추천)', daylightWindow: '06:00 & 15:30', summary: '우다왈라웨 저수지 옆 탁 트인 초원 덕분에 사계절 내내 야생 코끼리를 쉽게 볼 수 있습니다.', highlights: ['가족 무리와 함께 어울리는 장난기 가득한 아기 코끼리 관찰.', '우다왈라웨 코끼리 보호소 수유 시간 관람.', '마른 고목 위에 앉은 관수리 등 야생 맹금류 포착.'], culinaryNote: '길가에서 갓 잘라 마시는 달콤한 킹 코코넛과 재거리 팬케이크.', etiquette: '오픈 지프 위에서 야생동물을 부르거나 먹이를 주지 마세요.' },
     'arugam-bay': { name: '아루감 베이 & 파시쿠다', region: '북·동부', tagline: '인도양의 명품 포인트 브레이크와 잔잔한 얕은 라군', elevation: '해수면', driveFromColombo: '차량 6시간 30분', bestTime: '5–9월', daylightWindow: '06:00 새벽 서핑', summary: '남서부에 비가 내리는 계절에도 맑은 파도와 고요한 라군을 선물하는 동부 해안.', highlights: ['메인 포인트와 위스키 포인트에서 이어지는 매끄러운 라이트 핸드 파도 서핑.', '파시쿠다의 허리 깊이 맑은 산호초 라군에서 여유로운 수영.', '해 뜰 녘 물총새를 따라 고요한 포투빌 맹그로브 카약 투어.'], culinaryNote: '구운 고수를 넣고 끓인 동해안 스타일 생선 커리와 라이스.', etiquette: '해변 밖 마을 골목에서는 가벼운 단정한 복장으로 현지 문화를 존중해 주세요.' },
-    colombo: { name: '콜롬보 & 갈 페이스', region: '남·서부', tagline: '고풍스러운 아치 건축, 페타 향신료 골목과 바다 노을', elevation: '해수면', driveFromColombo: '관문 도시', bestTime: '12–4월', daylightWindow: '17:00 – 19:00', summary: '식민지 시대 박물관과 붉은 모스크, 해변 산책로가 공존하는 활기찬 관문 도시.', highlights: ['붉고 흰 줄무늬의 자미 울 알파르 모스크와 페타 시장 골목 탐험.', '콜롬보 국립 박물관에서 스리랑카 왕실 유물과 예술 감상.', '해질녘 갈 페이스 그린 산책로에서 바삭한 새우 와데이 맛보기.'], culinaryNote: '블랙 페퍼 크랩 요리 또는 페타 야시장의 매콤한 코투 로티.', etiquette: '습한 오후에는 충분히 수분을 섭취하고 툭툭 이용 시 미터기 요금을 확인하세요.' }
+    colombo: { name: '콜롬보 & 갈 페이스', region: '남·서부', tagline: '고풍스러운 아치 건축, 페타 향신료 골목과 바다 노을', elevation: '해수면', driveFromColombo: '관문 도시', bestTime: '12–4월', daylightWindow: '17:00 – 19:00', summary: '식민지 시대 박물관과 붉은 모스크, 해변 산책로가 공존하는 활기찬 관문 도시.', highlights: ['붉고 흰 줄무늬의 자미 울 알파르 모스크와 페타 시장 골목 탐험.', '콜롬보 국립 박물관에서 스리랑카 왕실 유물과 예술 감상.', '해질녘 갈 페이스 그린 산책로에서 바삭한 새우 와데이 맛보기.'], culinaryNote: '블랙 페퍼 크랩 요리 또는 페타 야시장의 매콤한 코투 로티.', etiquette: '습한 오후에는 충분히 수분을 섭취하고 툭툭 이용 시 미터기 요금을 확인하세요.' },
+    'sri-pada': { name: '스리 파다 (아담스 피크)', region: '고원지대', tagline: '새벽 등불 산행과 구름 위 삼각형 그림자', elevation: '2,243m', driveFromColombo: '차량 4시간 15분', bestTime: '12–5월 (순례 시즌)', daylightWindow: '05:30 – 07:30', summary: '불빛이 이어진 계단을 따라 새벽 전에 올라 일출을 맞이하는 신성한 원뿔형 영산.', highlights: ['오전 2시 날라타니야에서 출발해 따뜻한 차를 마시며 등반.', '아침 안개 위로 선명히 드리우는 산의 삼각 그림자 감상.', '정상 사원에서 현지 순례자들과 함께 종을 울려 보기.'], culinaryNote: '산길 찻집에서 마시는 뜨거운 생강차와 바삭한 와다이.', etiquette: '정상 일출 무렵 기온이 8°C까지 떨어지므로 따뜻한 겉옷을 챙기세요.' },
+    minneriya: { name: '민네리야 코끼리 대이동', region: '야생동물', tagline: '고대 저수지 풀밭에 모이는 수백 마리 야생 코끼리', elevation: '110m', driveFromColombo: '차량 4시간 30분', bestTime: '7–10월 (건기 성수기)', daylightWindow: '15:00 – 18:15', summary: '건기에 드러난 호숫가 초원으로 아시아 최대 규모의 야생 코끼리 무리가 모여듭니다.', highlights: ['오후 4시 이후 호숫가로 모여드는 수십 가족의 코끼리 떼 관찰.', '오전 시기리야 등반과 오후 사파리를 하루에 매끄럽게 연계.', '저수지 둑 주변 펠리컨과 황새, 마카크 원숭이 포착.'], culinaryNote: '하바라나 길가의 시원한 킹 코코넛과 구운 옥수수.', etiquette: '아기 코끼리 무리의 길을 막지 않는 차분한 사파리 차량을 이용하세요.' },
+    wilpattu: { name: '윌파투 국립공원', region: '야생동물', tagline: '정글 속 고요한 모래 호수, 표범과 느림보곰의 낙원', elevation: '65m', driveFromColombo: '차량 3시간 45분', bestTime: '2–10월', daylightWindow: '06:00 – 09:30 & 15:30', summary: '자연 모래 호수(윌루)와 한적한 숲길이 어우러진 스리랑카 최대 면적의 야생 보호구.', highlights: ['그늘진 숲속 모래 트랙을 거니는 실론 표범 탐사.', '사슴과 악어가 쉬는 평온한 윌루 호수 풍경 감상.', '5~7월 열매 철을 맞아 희귀 느림보곰 발견 기회.'], culinaryNote: '노치야가마 인근 토기 솥에 끓인 민물고기 커리와 홍미밥.', etiquette: '야생동물 포착 시 차량 내에서 조용히 속삭이며 거리를 유지하세요.' },
+    knuckles: { name: '너클즈 산맥', region: '고원지대', tagline: '유네스코 안개 봉우리와 카다멈 계곡 트레킹', elevation: '1,863m', driveFromColombo: '차량 4시간 30분', bestTime: '2–5월 · 7–9월', daylightWindow: '07:00 – 11:00', summary: '계단식 논 마을과 폭포, 원시 운무림이 보존된 야생 다섯 봉우리 산악 지대.', highlights: ['푸른 미무레 계곡을 내려다보는 미니 세상의 끝 전망대 트레킹.', '카다멈 숲길을 지나 시원한 세라 엘라 폭포에서 휴식.', '이끼 낀 능선에서 스리랑카 고유종 도마뱀과 원숭이 관찰.'], culinaryNote: '야자 시럽을 넣은 기장 전통 떡(할라페)과 시골 채소 커리.', etiquette: '공인 산악 가이드를 동반하고 우기에는 거머리 방지 양말을 착용하세요.' }
   },
   months: {
     JAN: { short: '1월', fullName: '1월', headline: '건기 절정 — 서·남부 & 산악', summary: '맑은 고원 아침, 잔잔한 남쪽 바다, 뛰어난 사파리 시야.', festival: '두루투 페라헤라 · 타이 퐁갈', verdicts: { south: { status: '쾌청', note: '잔잔한 바다와 미리사 고래 시즌.' }, highlands: { status: '맑음', note: '시원한 산악 패스와 상쾌한 밤.' }, cultural: { status: '건조', note: '유적 산책하기 좋은 온화한 아침.' }, northeast: { status: '소나기', note: '동해안 파도 높음; 자프나는 대체로 맑음.' } } },

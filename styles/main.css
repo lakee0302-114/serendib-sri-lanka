@@ -1176,11 +1176,51 @@
     }
   }
 
+  @media (min-width: 768px) and (max-width: 1119px) {
+    .atlas-grid:not(.is-expanded) .dest-card:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
   @media (min-width: 1120px) {
     .atlas-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 2.25rem 1.5rem;
     }
+    .atlas-grid:not(.is-expanded) .dest-card:nth-child(n + 5) {
+      display: none;
+    }
+  }
+
+  .atlas-expand-wrap {
+    display: none;
+  }
+
+  .atlas-expand-wrap[hidden] {
+    display: none !important;
+  }
+
+  @media (min-width: 768px) {
+    .atlas-expand-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  }
+
+  .atlas-expand-btn {
+    min-width: 220px;
+    gap: 0.65rem;
+    background-color: var(--bg-cream);
+  }
+
+  .atlas-expand-arrow {
+    display: inline-block;
+    transition: transform var(--transition-fast);
+  }
+
+  .atlas-expand-btn[aria-expanded="true"] .atlas-expand-arrow {
+    transform: rotate(180deg);
   }
 
   .dest-card:hover {

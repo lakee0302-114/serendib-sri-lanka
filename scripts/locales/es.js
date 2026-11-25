@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['es'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Dieciséis paisajes',
+      titleStart: 'Veinte paisajes',
       titleEm: 'imprescindibles.',
       subcopy: 'Toca foto o título para ver horarios, comida o añadir a tu ruta.',
       filters: {
-        all: 'Todos (16)',
+        all: 'Todos (20)',
         cultural: 'Cultura',
         highlands: 'Montañas',
         south: 'Sur',
@@ -83,7 +83,9 @@ window.SERENDIB_LOCALES['es'] = {
       dossierBtn: 'Ficha',
       addStop: '+ Ruta',
       savedStop: '✓ Guardado',
-      nightsUnit: 'N'
+      nightsUnit: 'N',
+      showAllBtn: 'Ver los {count} destinos',
+      showLessBtn: 'Mostrar menos'
     },
     compass: {
       eyebrow: '03 / Brújula del Monzón',
@@ -441,7 +443,11 @@ window.SERENDIB_LOCALES['es'] = {
       summary: 'Metrópoli costera que combina museos blancos, mezquita roja y paseo marítimo.',
       highlights: ['Recorrer el bazar de Pettah y la mezquita Jami Ul-Alfar.', 'Visitar las salas históricas del Museo Nacional de Colombo.', 'Probar buñuelos de camarón frente al mar en Galle Face Green.'],
       culinaryNote: 'Cangrejo a la pimienta negra o kottu caliente de Pettah.', etiquette: 'Usar tuk-tuks con taxímetro e hidratarse por la tarde.'
-    }
+    },
+    'sri-pada': { name: 'Sri Pada (Pico de Adán)', region: 'Montañas', tagline: 'Ascenso nocturno con faroles y sombra triangular al alba', elevation: '2.243 m', driveFromColombo: '4h 15m', bestTime: 'Dic–May', daylightWindow: '05:30 – 07:30', summary: 'La montaña sagrada más venerada se sube antes del amanecer por senderos iluminados.', highlights: ['Empezar en Nallathanniya a las 02:00 con pausas de té caliente.', 'Contemplar la sombra piramidal perfecta sobre el mar de nubes.', 'Tocar la campana sagrada de la cima junto a peregrinos locales.'], culinaryNote: 'Té especiado y vadais crujientes en puestos nocturnos.', etiquette: 'Llevar ropa de abrigo para los 8°C de la cumbre.' },
+    minneriya: { name: 'Gran Reunión de Minneriya', region: 'Fauna', tagline: 'Cientos de elefantes asiáticos junto al antiguo embalse', elevation: '110 m', driveFromColombo: '4h 30m', bestTime: 'Jul–Oct', daylightWindow: '15:00 – 18:15', summary: 'En la estación seca, enormes manadas acuden a pastar a orillas del gran lago.', highlights: ['Observar decenas de familias de elefantes tras las 16:00.', 'Combinar perfectamente con la subida matinal a Sigiriya.', 'Ver pelícanos y cigüeñas junto al agua tranquila.'], culinaryNote: 'Coco rey fresco y mazorcas asadas camino a Habarana.', etiquette: 'Elegir vehículos tranquilos que no bloqueen el paso de las crías.' },
+    wilpattu: { name: 'Parque Nacional de Wilpattu', region: 'Fauna', tagline: 'Lagunas de arena en la selva, leopardos y osos perezosos', elevation: '65 m', driveFromColombo: '3h 45m', bestTime: 'Feb–Oct', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'El parque más extenso de la isla, célebre por sus rutas silenciosas y lagos naturales villu.', highlights: ['Rastrear leopardos de Ceilán por pistas arenosas sombreadas.', 'Descubrir los lagos villu rodeados de ciervos y aves.', 'Avistar osos perezosos entre mayo y julio bajo árboles en flor.'], culinaryNote: 'Curry de pescado de lago en olla de barro y arroz rojo.', etiquette: 'Mantener absoluto silencio durante los avistamientos de fauna.' },
+    knuckles: { name: 'Cordillera de los Knuckles', region: 'Montañas', tagline: 'Cumbres brumosas UNESCO y aldeas entre cardamomo', elevation: '1.863 m', driveFromColombo: '4h 30m', bestTime: 'Feb–May · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Macizo montañoso de cinco picos con terrazas de arroz, cascadas y bosque nuboso.', highlights: ['Caminar hasta Mini World’s End sobre el valle de Meemure.', 'Refrescarse en la cascada Sera Ella tras cruzar cardamomos.', 'Observar especies endémicas en senderos cubiertos de musgo.'], culinaryNote: 'Dulces de mijo con miel de palma y curries caseros de montaña.', etiquette: 'Contratar guía acreditado y usar calcetines antissanguijuelas.' }
   },
   months: {
     JAN: { short: 'ENE', fullName: 'Enero', headline: 'Estación Seca — Oeste, Sur y Montañas', summary: 'Mañanas frescas, mar calmo al sur y safaris despejados.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Sol Pleno', note: 'Mar en calma y ballenas cerca de Mirissa.' }, highlands: { status: 'Claro', note: 'Pasos despejados y tardes frescas.' }, cultural: { status: 'Seco', note: 'Mañanas suaves en ruinas históricas.' }, northeast: { status: 'Lluvias', note: 'Mar movido al este; Jaffna seco.' } } },
