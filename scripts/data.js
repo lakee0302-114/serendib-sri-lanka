@@ -42,7 +42,7 @@
       coords: "08°27'15\"N · 80°02'30\"E",
       idealNights: 2,
       image: './assets/images/wilpattu-elephants.jpg',
-      imageAlt: 'Herd of Sri Lankan elephants with calves bathing together in shallow clear water'
+      imageAlt: 'Wild Sri Lankan elephant raising its trunk high to spray cooling bath water in sunlight'
     },
     {
       id: 'galle',
