@@ -10,16 +10,15 @@
     content="An editorial travel atlas and monsoon-aware journey planner for Sri Lanka—spanning fifth-century citadels, highland tea railways, wild leopard sanctuaries, and southern coral ramparts."
   />
 
-  <!-- Zero-flash initial Theme & Language/RTL hydration -->
+  <!-- Zero-flash initial Theme (soft Daylight default) & Language/RTL hydration -->
   <script>
     (function () {
       try {
         var savedTheme = localStorage.getItem('serendib_theme_v1');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (prefersDark ? 'dark' : 'light');
+        var theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
         document.documentElement.setAttribute('data-theme', theme);
         var meta = document.getElementById('meta-theme-color');
-        if (meta) meta.setAttribute('content', theme === 'dark' ? '#0D1511' : '#F6F2EA');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#121614' : '#F8F6F1');
 
         var savedLang = localStorage.getItem('serendib_lang_v1');
         var allowed = ['en', 'ta', 'hi', 'fr', 'de', 'es', 'it', 'nl', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar'];
@@ -34,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles/tokens.css" />
@@ -100,8 +99,13 @@
           id="open-route-drawer"
           aria-haspopup="dialog"
           aria-controls="route-sheet"
+          aria-label="Open saved route"
         >
-          <span class="route-trigger__label" data-i18n="nav.myRoute">My Route</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"></path>
+            <circle cx="12" cy="11" r="2.2"></circle>
+          </svg>
+          <span class="route-trigger__label" data-i18n="nav.myRoute">Route</span>
           <span class="route-count" id="route-count">0</span>
         </button>
 
@@ -506,8 +510,9 @@
               <input id="inq-guests" name="guests" type="text" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="e.g. 2 guests · 10 nights" />
             </div>
 
-            <div class="form-group field-full">
-              <label for="inq-notes" data-i18n="contact.notesLabel">Interests, Stops &amp; Stay Preferences</label>
+          <div class="form-group field-full">
+              <label for="inq-notes" data-i18n="contact.notesLabel">Notes</label>
+              <div class="quick-tags" id="inquiry-quick-tags" aria-label="Quick trip interests"></div>
               <textarea id="inq-notes" name="notes" data-i18n-placeholder="contact.notesPlaceholder"></textarea>
             </div>
 

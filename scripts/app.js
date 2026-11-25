@@ -114,6 +114,7 @@
     inquiryForm: document.getElementById('inquiry-form'),
     inqMonth: document.getElementById('inq-month'),
     inqNotes: document.getElementById('inq-notes'),
+    inquiryQuickTags: document.getElementById('inquiry-quick-tags'),
     inquiryPreview: document.getElementById('inquiry-shortlist-preview'),
     inquiryStatus: document.getElementById('inquiry-status'),
     copyBriefBtn: document.getElementById('copy-brief-btn'),
@@ -155,7 +156,7 @@
     var isDark = state.theme === 'dark';
     document.documentElement.setAttribute('data-theme', state.theme);
     if (dom.metaThemeColor) {
-      dom.metaThemeColor.setAttribute('content', isDark ? '#0D1511' : '#F6F2EA');
+      dom.metaThemeColor.setAttribute('content', isDark ? '#121715' : '#F8F6F1');
     }
 
     dom.themeIcon.innerHTML = isDark ? SVG_ICONS.sun : SVG_ICONS.moon;
@@ -274,6 +275,7 @@
       }).join('');
 
       renderFinderSelects();
+      renderQuickInterestTags();
       renderAtlasFilterRail();
       renderMonthButtons();
       setActiveMonth(state.activeMonth);
@@ -317,6 +319,34 @@
     dom.finderPace.innerHTML = Object.keys(finder.paceOptions).map(function (val) {
       return '<option value="' + val + '"' + (val === prevPace ? ' selected' : '') + '>' + finder.paceOptions[val] + '</option>';
     }).join('');
+  }
+
+  function renderQuickInterestTags() {
+    if (!dom.inquiryQuickTags || !dom.inqNotes) return;
+    var opts = state.locale.ui.finder.focusOptions;
+    var keys = Object.keys(opts).filter(function (k) { return k !== 'all'; });
+    dom.inquiryQuickTags.innerHTML = keys.map(function (k) {
+      var label = opts[k];
+      var picked = dom.inqNotes.value.indexOf(label) !== -1;
+      return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-quick-tag="' + label.replace(/"/g, '&quot;') + '">+ ' + label + '</button>';
+    }).join('');
+
+    dom.inquiryQuickTags.querySelectorAll('[data-quick-tag]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var tag = btn.dataset.quickTag;
+        var current = dom.inqNotes.value.trim();
+        var parts = current ? current.split(',').map(function (s) { return s.trim(); }).filter(Boolean) : [];
+        var idx = parts.indexOf(tag);
+        if (idx !== -1) {
+          parts.splice(idx, 1);
+          btn.classList.remove('is-picked');
+        } else {
+          parts.push(tag);
+          btn.classList.add('is-picked');
+        }
+        dom.inqNotes.value = parts.join(', ');
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -423,13 +453,13 @@
       var saved = state.savedStopIds.indexOf(dest.id) !== -1;
       return (
         '<article class="dest-card" data-dest-id="' + dest.id + '">' +
-        '<div class="dest-card__media"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
+        '<div class="dest-card__media" data-open-dossier="' + dest.id + '" role="button" tabindex="0" aria-label="' + dest.name + '"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
         '<div class="dest-card__body">' +
         '<div class="dest-card__meta">' +
         '<span class="mono-label">' + dest.number + ' · ' + dest.region + '</span>' +
         '<span class="mono-label" style="opacity:0.75;">' + dest.idealNights + t.nightsUnit + '</span>' +
         '</div>' +
-        '<h3 class="dest-card__title">' + dest.name + '</h3>' +
+        '<h3 class="dest-card__title" data-open-dossier="' + dest.id + '">' + dest.name + '</h3>' +
         '<p class="dest-card__tagline">' + dest.tagline + '</p>' +
         '<div class="dest-card__footer">' +
         '<button type="button" class="text-link-btn" data-open-dossier="' + dest.id + '">' + t.dossierBtn + ' &rarr;</button>' +
@@ -439,10 +469,18 @@
       );
     }).join('');
 
-    dom.atlasGrid.querySelectorAll('[data-open-dossier]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        openDossierSheet(btn.dataset.openDossier);
+    dom.atlasGrid.querySelectorAll('[data-open-dossier]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        openDossierSheet(el.dataset.openDossier);
       });
+      if (el.tagName !== 'BUTTON') {
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openDossierSheet(el.dataset.openDossier);
+          }
+        });
+      }
     });
 
     dom.atlasGrid.querySelectorAll('[data-toggle-stop]').forEach(function (btn) {
@@ -570,13 +608,27 @@
       );
     }).join('');
 
+    var bestZone = Object.keys(levels).filter(function (z) { return levels[z] === 'optimal'; })[0] ||
+      Object.keys(levels).filter(function (z) { return levels[z] === 'good'; })[0] || 'cultural';
+    var bestZoneLabel = state.locale.ui.atlas.filters[bestZone] || ui.zones[bestZone];
+
     dom.compassReadout.innerHTML =
-      '<span class="mono-label" style="color: var(--accent-brass); display:block; margin-bottom:0.4rem;">' +
-      m.fullName.toUpperCase() + ' · ' + ui.verdictSuffix + '</span>' +
+      '<span class="mono-label" style="color: var(--accent-tea); display:block; margin-bottom:0.35rem;">' +
+      m.fullName + ' · ' + ui.verdictSuffix + '</span>' +
       '<h3 class="compass-readout__headline">' + m.headline + '</h3>' +
       '<p class="compass-readout__summary">' + m.summary + '</p>' +
       '<div class="verdict-grid">' + verdictsHtml + '</div>' +
-      '<div class="festival-banner"><span class="mono-label">' + ui.culturalCalendar + '</span>' + m.festival + '</div>';
+      '<div class="festival-banner"><span class="mono-label">' + ui.culturalCalendar + '</span>' + m.festival + '</div>' +
+      '<button type="button" class="compass-jump-btn" data-compass-jump="' + bestZone + '">' +
+      bestZoneLabel + ' — ' + state.locale.ui.nav.atlas + ' &rarr;</button>';
+
+    var jumpBtn = dom.compassReadout.querySelector('[data-compass-jump]');
+    if (jumpBtn) {
+      jumpBtn.addEventListener('click', function () {
+        setRegionFilter(jumpBtn.dataset.compassJump);
+        document.getElementById('atlas').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
   }
 
   /* ------------------------------------------------------------------------
@@ -719,6 +771,7 @@
     dom.backdrop.hidden = false;
     dom.dossierSheet.hidden = false;
     requestAnimationFrame(function () {
+      if (state.activeDossierId !== destId) return;
       dom.backdrop.classList.add('is-open');
       dom.dossierSheet.classList.add('is-open');
       document.body.classList.add('drawer-open');
