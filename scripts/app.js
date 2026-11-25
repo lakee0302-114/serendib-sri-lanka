@@ -34,7 +34,18 @@
     activeMonth: 'FEB',
     activeItineraryId: 'classic-arc',
     savedStopIds: loadSavedStops(),
-    activeDossierId: null
+    activeDossierId: null,
+    planner: {
+      open: false,
+      step: 1,
+      month: 'FEB',
+      travelers: 2,
+      nights: null,
+      stayTier: 'boutique',
+      transport: 'chauffeur',
+      interests: [],
+      confirmed: null
+    }
   };
 
   function getInitialLang() {
@@ -111,13 +122,42 @@
     closeRouteBtn: document.getElementById('close-route'),
     clearRouteBtn: document.getElementById('clear-route-btn'),
     applyRouteBtn: document.getElementById('apply-route-to-form'),
-    inquiryForm: document.getElementById('inquiry-form'),
-    inqMonth: document.getElementById('inq-month'),
-    inqNotes: document.getElementById('inq-notes'),
-    inquiryQuickTags: document.getElementById('inquiry-quick-tags'),
+    conciergeMonthPill: document.getElementById('concierge-month-pill'),
+    conciergeStopsPill: document.getElementById('concierge-stops-pill'),
     inquiryPreview: document.getElementById('inquiry-shortlist-preview'),
-    inquiryStatus: document.getElementById('inquiry-status'),
     copyBriefBtn: document.getElementById('copy-brief-btn'),
+    plannerModal: document.getElementById('planner-modal'),
+    plannerBackdrop: document.getElementById('planner-backdrop'),
+    closePlannerBtn: document.getElementById('close-planner'),
+    plannerSteps: document.getElementById('planner-steps'),
+    plannerPane1: document.getElementById('planner-pane-1'),
+    plannerPane2: document.getElementById('planner-pane-2'),
+    plannerPane3: document.getElementById('planner-pane-3'),
+    plannerConfirmed: document.getElementById('planner-confirmed'),
+    plannerMonthPills: document.getElementById('planner-month-pills'),
+    plannerMonsoonFit: document.getElementById('planner-monsoon-fit'),
+    plannerDestHeading: document.getElementById('planner-dest-heading'),
+    plannerPresets: document.getElementById('planner-presets'),
+    plannerDestGrid: document.getElementById('planner-dest-grid'),
+    plannerTravelersVal: document.getElementById('planner-travelers-val'),
+    plannerNightsVal: document.getElementById('planner-nights-val'),
+    plannerNightsHint: document.getElementById('planner-nights-hint'),
+    plannerStayGrid: document.getElementById('planner-stay-grid'),
+    plannerTransportPills: document.getElementById('planner-transport-pills'),
+    plannerInterestTags: document.getElementById('planner-interest-tags'),
+    plannerMobileReview: document.getElementById('planner-mobile-review'),
+    plannerForm: document.getElementById('planner-form'),
+    plannerAside: document.getElementById('planner-aside'),
+    plannerAsideCount: document.getElementById('planner-aside-count'),
+    plannerAsideMonsoon: document.getElementById('planner-aside-monsoon'),
+    plannerAsideSpecs: document.getElementById('planner-aside-specs'),
+    plannerAsideStops: document.getElementById('planner-aside-stops'),
+    plannerFooter: document.getElementById('planner-footer'),
+    plannerStepMeta: document.getElementById('planner-step-meta'),
+    plannerMobileSummary: document.getElementById('planner-mobile-summary'),
+    plannerBackBtn: document.getElementById('planner-back-btn'),
+    plannerNextBtn: document.getElementById('planner-next-btn'),
+    plannerNextLabel: document.getElementById('planner-next-label'),
     toast: document.getElementById('toast')
   };
 
@@ -275,7 +315,6 @@
       }).join('');
 
       renderFinderSelects();
-      renderQuickInterestTags();
       renderAtlasFilterRail();
       renderMonthButtons();
       setActiveMonth(state.activeMonth);
@@ -287,6 +326,9 @@
 
       if (state.activeDossierId && !dom.dossierSheet.hidden) {
         openDossierSheet(state.activeDossierId);
+      }
+      if (state.planner.open) {
+        renderPlannerModal();
       }
     };
 
@@ -302,14 +344,9 @@
     var prevMonth = dom.finderMonth.value || state.activeMonth;
     var prevFocus = dom.finderFocus.value || state.activeRegion;
     var prevPace = dom.finderPace.value || state.activeItineraryId;
-    var prevInqMonth = dom.inqMonth.value || state.activeMonth;
 
     dom.finderMonth.innerHTML = MONTH_CODES.map(function (code) {
       return '<option value="' + code + '"' + (code === prevMonth ? ' selected' : '') + '>' + state.locale.months[code].fullName + '</option>';
-    }).join('');
-
-    dom.inqMonth.innerHTML = MONTH_CODES.map(function (code) {
-      return '<option value="' + code + '"' + (code === prevInqMonth ? ' selected' : '') + '>' + state.locale.months[code].fullName + '</option>';
     }).join('');
 
     dom.finderFocus.innerHTML = Object.keys(finder.focusOptions).map(function (val) {
@@ -319,34 +356,6 @@
     dom.finderPace.innerHTML = Object.keys(finder.paceOptions).map(function (val) {
       return '<option value="' + val + '"' + (val === prevPace ? ' selected' : '') + '>' + finder.paceOptions[val] + '</option>';
     }).join('');
-  }
-
-  function renderQuickInterestTags() {
-    if (!dom.inquiryQuickTags || !dom.inqNotes) return;
-    var opts = state.locale.ui.finder.focusOptions;
-    var keys = Object.keys(opts).filter(function (k) { return k !== 'all'; });
-    dom.inquiryQuickTags.innerHTML = keys.map(function (k) {
-      var label = opts[k];
-      var picked = dom.inqNotes.value.indexOf(label) !== -1;
-      return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-quick-tag="' + label.replace(/"/g, '&quot;') + '">+ ' + label + '</button>';
-    }).join('');
-
-    dom.inquiryQuickTags.querySelectorAll('[data-quick-tag]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var tag = btn.dataset.quickTag;
-        var current = dom.inqNotes.value.trim();
-        var parts = current ? current.split(',').map(function (s) { return s.trim(); }).filter(Boolean) : [];
-        var idx = parts.indexOf(tag);
-        if (idx !== -1) {
-          parts.splice(idx, 1);
-          btn.classList.remove('is-picked');
-        } else {
-          parts.push(tag);
-          btn.classList.add('is-picked');
-        }
-        dom.inqNotes.value = parts.join(', ');
-      });
-    });
   }
 
   /* ------------------------------------------------------------------------
@@ -539,25 +548,41 @@
     dom.routeCount.textContent = String(state.savedStopIds.length);
     renderDestinations();
 
+    var savedObjects = getSavedStopObjects();
+    var nights = savedObjects.reduce(function (sum, d) { return sum + d.idealNights; }, 0);
+    var c = state.locale.ui.contact;
+    var r = state.locale.ui.routeSheet;
+
+    if (dom.inquiryPreview) {
+      if (savedObjects.length === 0) {
+        dom.inquiryPreview.textContent = c.emptyShortlist;
+      } else {
+        var names = savedObjects.map(function (d) { return d.name; }).join(' → ');
+        dom.inquiryPreview.textContent = names + ' (' + nights + ' ' + c.nightsSuggested + ')';
+      }
+    }
+
+    if (dom.conciergeMonthPill) {
+      var mObj = state.locale.months[state.activeMonth];
+      dom.conciergeMonthPill.textContent = mObj ? mObj.fullName : state.activeMonth;
+    }
+    if (dom.conciergeStopsPill) {
+      dom.conciergeStopsPill.textContent = savedObjects.length + ' ' + r.stopsLabel + ' · ' + nights + state.locale.ui.atlas.nightsUnit;
+    }
+
+    if (state.activeDossierId) updateDossierFooter(state.activeDossierId);
+    if (!dom.routeSheet.hidden) renderRouteSheet();
+    if (state.planner.open) renderPlannerModal();
+  }
+
+  function getSavedStopObjects() {
     var all = getMergedDestinations();
-    var savedObjects = state.savedStopIds.map(function (id) {
+    return state.savedStopIds.map(function (id) {
       for (var i = 0; i < all.length; i++) {
         if (all[i].id === id) return all[i];
       }
       return null;
     }).filter(Boolean);
-
-    var c = state.locale.ui.contact;
-    if (savedObjects.length === 0) {
-      dom.inquiryPreview.textContent = c.emptyShortlist;
-    } else {
-      var nights = savedObjects.reduce(function (sum, d) { return sum + d.idealNights; }, 0);
-      var names = savedObjects.map(function (d) { return d.name; }).join(' → ');
-      dom.inquiryPreview.textContent = names + ' (' + nights + ' ' + c.nightsSuggested + ')';
-    }
-
-    if (state.activeDossierId) updateDossierFooter(state.activeDossierId);
-    if (!dom.routeSheet.hidden) renderRouteSheet();
   }
 
   /* ------------------------------------------------------------------------
@@ -870,6 +895,7 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         closeLangPopover();
+        closePlannerModal();
         closeAllSheets();
         dom.mobileNav.classList.remove('is-open');
         dom.mobileNav.setAttribute('aria-hidden', 'true');
@@ -890,25 +916,424 @@
     });
 
     dom.applyRouteBtn.addEventListener('click', function () {
-      var all = getMergedDestinations();
-      var stops = state.savedStopIds.map(function (id) {
-        for (var i = 0; i < all.length; i++) {
-          if (all[i].id === id) return all[i].name;
-        }
-        return null;
-      }).filter(Boolean);
-      if (stops.length > 0 && !dom.inqNotes.value.trim()) {
-        dom.inqNotes.value = stops.join(', ');
-      }
       closeAllSheets();
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      openPlannerModal(2);
     });
   }
 
   /* ------------------------------------------------------------------------
-     Quick Finder & Inquiry Desk
+     Dedicated Interactive Trip Planner Studio Modal
+     ------------------------------------------------------------------------ */
+  function getRecommendedNights() {
+    var stops = getSavedStopObjects();
+    if (!stops.length) return 8;
+    return stops.reduce(function (sum, d) { return sum + d.idealNights; }, 0);
+  }
+
+  function getActivePlannerNights() {
+    return state.planner.nights !== null ? state.planner.nights : getRecommendedNights();
+  }
+
+  function getMonsoonHighlightText(monthCode) {
+    var levels = MONSOON_LEVELS[monthCode] || MONSOON_LEVELS.FEB;
+    var zones = state.locale.ui.compass.zones;
+    var optimal = Object.keys(levels).filter(function (z) { return levels[z] === 'optimal'; });
+    var pick = optimal.length ? optimal : Object.keys(levels).filter(function (z) { return levels[z] === 'good'; });
+    var names = pick.map(function (z) { return zones[z]; }).filter(Boolean);
+    return names.length ? state.locale.ui.compass.legendOptimal + ': ' + names.join(' · ') : state.locale.months[monthCode].headline;
+  }
+
+  function buildBlueprintText(refCode) {
+    var stops = getSavedStopObjects();
+    var m = state.locale.months[state.planner.month] || state.locale.months.FEB;
+    var p = state.locale.ui.planner;
+    var nights = getActivePlannerNights();
+    var stayObj = p.stays[state.planner.stayTier] || p.stays.boutique;
+    var transLabel = p.transports[state.planner.transport] || p.transports.chauffeur;
+    var lines = [
+      'SERENDIB SRI LANKA — TRIP BLUEPRINT' + (refCode ? ' (' + refCode + ')' : ''),
+      'Month: ' + m.fullName + ' (' + m.headline + ')',
+      'Guests & Pace: ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + nights + ' ' + p.summaryMetaNights,
+      'Stay Style: ' + stayObj.title + ' · ' + transLabel,
+      'Route: ' + (stops.length ? stops.map(function (d) { return d.name; }).join(' -> ') : 'Open Custom Loop')
+    ];
+    if (state.planner.interests.length) {
+      lines.push('Focus: ' + state.planner.interests.join(', '));
+    }
+    return lines.join('\n');
+  }
+
+  function openPlannerModal(startStep) {
+    state.planner.open = true;
+    state.planner.confirmed = null;
+    state.planner.step = startStep || 1;
+    state.planner.month = state.activeMonth;
+    if (state.planner.nights === null) state.planner.nights = getRecommendedNights();
+
+    dom.dossierSheet.classList.remove('is-open');
+    dom.routeSheet.classList.remove('is-open');
+    dom.dossierSheet.hidden = true;
+    dom.routeSheet.hidden = true;
+    dom.backdrop.classList.remove('is-open');
+    dom.backdrop.hidden = true;
+
+    renderPlannerModal();
+    dom.plannerModal.hidden = false;
+    requestAnimationFrame(function () {
+      dom.plannerModal.classList.add('is-open');
+      document.body.classList.add('drawer-open');
+    });
+  }
+
+  function closePlannerModal() {
+    if (!dom.plannerModal || dom.plannerModal.hidden) return;
+    state.planner.open = false;
+    dom.plannerModal.classList.remove('is-open');
+    document.body.classList.remove('drawer-open');
+    setTimeout(function () {
+      if (!state.planner.open) {
+        dom.plannerModal.hidden = true;
+      }
+    }, 280);
+  }
+
+  function setPlannerStep(step) {
+    state.planner.confirmed = null;
+    state.planner.step = Math.min(3, Math.max(1, step));
+    renderPlannerModal();
+    var stage = document.getElementById('planner-stage');
+    if (stage) stage.scrollTop = 0;
+  }
+
+  function renderPlannerModal() {
+    if (!dom.plannerModal) return;
+    var p = state.locale.ui.planner;
+    var r = state.locale.ui.routeSheet;
+    var stops = getSavedStopObjects();
+    var recNights = getRecommendedNights();
+    var activeNights = getActivePlannerNights();
+    var nightsUnit = state.locale.ui.atlas.nightsUnit;
+    var monthObj = state.locale.months[state.planner.month] || state.locale.months.FEB;
+
+    dom.closePlannerBtn.setAttribute('aria-label', p.closeLabel || 'Close');
+
+    // Stepper header tabs
+    dom.plannerSteps.hidden = Boolean(state.planner.confirmed);
+    dom.plannerSteps.querySelectorAll('[data-planner-nav]').forEach(function (btn) {
+      var n = Number(btn.dataset.plannerNav);
+      btn.classList.toggle('is-active', !state.planner.confirmed && state.planner.step === n);
+      btn.classList.toggle('is-done', !state.planner.confirmed && state.planner.step > n);
+    });
+
+    // Show active pane or confirmed card
+    dom.plannerPane1.hidden = Boolean(state.planner.confirmed) || state.planner.step !== 1;
+    dom.plannerPane2.hidden = Boolean(state.planner.confirmed) || state.planner.step !== 2;
+    dom.plannerPane3.hidden = Boolean(state.planner.confirmed) || state.planner.step !== 3;
+    dom.plannerConfirmed.hidden = !state.planner.confirmed;
+    dom.plannerFooter.hidden = Boolean(state.planner.confirmed);
+
+    // Render Month Pills & Monsoon Fit Banner
+    dom.plannerMonsoonFit.textContent = getMonsoonHighlightText(state.planner.month);
+    dom.plannerMonthPills.innerHTML = MONTH_CODES.map(function (code) {
+      var active = code === state.planner.month;
+      return '<button type="button" class="planner-month-chip ' + (active ? 'is-active' : '') + '" data-pln-month="' + code + '">' +
+        state.locale.months[code].short + '</button>';
+    }).join('');
+    dom.plannerMonthPills.querySelectorAll('[data-pln-month]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.planner.month = btn.dataset.plnMonth;
+        setActiveMonth(state.planner.month);
+        renderPlannerModal();
+      });
+    });
+
+    // Render Presets & 16-Stop Visual Destination Selector
+    dom.plannerDestHeading.textContent = p.destinationsHeading.replace('{count}', String(stops.length));
+    var presetKeys = Object.keys(state.locale.itineraries);
+    dom.plannerPresets.innerHTML = presetKeys.map(function (key) {
+      var rt = state.locale.itineraries[key];
+      return '<button type="button" class="planner-preset-btn" data-pln-preset="' + key + '">' + rt.duration + ' · ' + rt.title + '</button>';
+    }).join('') + (stops.length ? '<button type="button" class="planner-preset-btn" data-pln-clear="1">' + p.clearStops + '</button>' : '');
+
+    dom.plannerPresets.querySelectorAll('[data-pln-preset]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.savedStopIds = (ITINERARY_PRESETS[btn.dataset.plnPreset] || ['sigiriya', 'ella', 'galle']).slice();
+        state.planner.nights = getRecommendedNights();
+        persistSavedStops();
+        syncRouteUI();
+      });
+    });
+    var clearBtn = dom.plannerPresets.querySelector('[data-pln-clear]');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        state.savedStopIds = [];
+        persistSavedStops();
+        syncRouteUI();
+      });
+    }
+
+    var allDest = getMergedDestinations();
+    dom.plannerDestGrid.innerHTML = allDest.map(function (dest) {
+      var selected = state.savedStopIds.indexOf(dest.id) !== -1;
+      return (
+        '<button type="button" class="planner-dest-card ' + (selected ? 'is-selected' : '') + '" data-pln-stop="' + dest.id + '" aria-pressed="' + selected + '">' +
+        '<div class="planner-dest-card__thumb">' +
+        '<img src="' + dest.image + '" alt="' + dest.imageAlt + '" loading="lazy" />' +
+        '<span class="planner-dest-card__check" aria-hidden="true">' + (selected ? '&#10003;' : '+') + '</span>' +
+        '</div>' +
+        '<div class="planner-dest-card__info">' +
+        '<div class="planner-dest-card__meta"><span>' + dest.number + ' · ' + dest.region + '</span><span>' + dest.idealNights + nightsUnit + '</span></div>' +
+        '<span class="planner-dest-card__name">' + dest.name + '</span>' +
+        '</div></button>'
+      );
+    }).join('');
+    dom.plannerDestGrid.querySelectorAll('[data-pln-stop]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        toggleSavedStop(btn.dataset.plnStop);
+        state.planner.nights = getRecommendedNights();
+        renderPlannerModal();
+      });
+    });
+
+    // Step 2 Controls
+    dom.plannerTravelersVal.textContent = String(state.planner.travelers);
+    dom.plannerNightsVal.textContent = String(activeNights);
+    dom.plannerNightsHint.textContent = stops.length ? p.nightsAutoHint.replace('{nights}', String(recNights)) : '';
+
+    var stayOrder = ['boutique', 'teaSanctuary', 'honest'];
+    dom.plannerStayGrid.innerHTML = stayOrder.map(function (key) {
+      var item = p.stays[key];
+      var active = state.planner.stayTier === key;
+      return (
+        '<button type="button" class="stay-card ' + (active ? 'is-active' : '') + '" data-pln-stay="' + key + '" aria-pressed="' + active + '">' +
+        '<span class="stay-card__title">' + item.title + '</span>' +
+        '<span class="stay-card__sub">' + item.sub + '</span>' +
+        '</button>'
+      );
+    }).join('');
+    dom.plannerStayGrid.querySelectorAll('[data-pln-stay]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.planner.stayTier = btn.dataset.plnStay;
+        renderPlannerModal();
+      });
+    });
+
+    var transportOrder = ['chauffeur', 'rail', 'suv'];
+    dom.plannerTransportPills.innerHTML = transportOrder.map(function (key) {
+      var active = state.planner.transport === key;
+      return '<button type="button" class="transport-pill ' + (active ? 'is-active' : '') + '" data-pln-transport="' + key + '">' +
+        p.transports[key] + '</button>';
+    }).join('');
+    dom.plannerTransportPills.querySelectorAll('[data-pln-transport]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.planner.transport = btn.dataset.plnTransport;
+        renderPlannerModal();
+      });
+    });
+
+    var focusOpts = state.locale.ui.finder.focusOptions;
+    var focusKeys = Object.keys(focusOpts).filter(function (k) { return k !== 'all'; });
+    dom.plannerInterestTags.innerHTML = focusKeys.map(function (k) {
+      var label = focusOpts[k];
+      var picked = state.planner.interests.indexOf(label) !== -1;
+      return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-pln-interest="' + label.replace(/"/g, '&quot;') + '">' +
+        (picked ? '&#10003; ' : '+ ') + label + '</button>';
+    }).join('');
+    dom.plannerInterestTags.querySelectorAll('[data-pln-interest]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var tag = btn.dataset.plnInterest;
+        var idx = state.planner.interests.indexOf(tag);
+        if (idx !== -1) state.planner.interests.splice(idx, 1);
+        else state.planner.interests.push(tag);
+        renderPlannerModal();
+      });
+    });
+
+    // Mobile Summary Review inside Step 3 & Footer
+    var routeLine = stops.length ? stops.map(function (s) { return s.name; }).join(' → ') : p.summaryNoStops;
+    var stayTitle = (p.stays[state.planner.stayTier] || p.stays.boutique).title;
+    dom.plannerMobileReview.innerHTML =
+      '<strong>' + monthObj.fullName + ' · ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + activeNights + nightsUnit + '</strong>' +
+      '<div style="margin-top:0.25rem; color:var(--accent-tea);">' + stayTitle + '</div>' +
+      '<div style="margin-top:0.2rem;">' + routeLine + '</div>';
+
+    // Right Blueprint Sidebar
+    dom.plannerAsideCount.textContent = stops.length + ' ' + r.stopsLabel + ' · ' + activeNights + nightsUnit;
+    dom.plannerAsideMonsoon.innerHTML =
+      '<span class="mono-label" style="display:block; color:var(--ink-muted); margin-bottom:0.2rem;">' + p.summaryMonsoon + ' · ' + monthObj.fullName + '</span>' +
+      '<strong>' + monthObj.headline + '</strong>';
+    dom.plannerAsideSpecs.innerHTML =
+      '<div><span>' + p.summaryMetaTravelers + '</span><strong>' + state.planner.travelers + '</strong></div>' +
+      '<div><span>' + p.summaryMetaNights + '</span><strong>' + activeNights + nightsUnit + '</strong></div>' +
+      '<div style="grid-column:1 / -1;"><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>';
+
+    if (!stops.length) {
+      dom.plannerAsideStops.innerHTML = '<p style="font-size:0.84rem; color:var(--ink-muted); margin:0;">' + p.summaryNoStops + '</p>';
+    } else {
+      dom.plannerAsideStops.innerHTML = stops.map(function (stop, idx) {
+        return (
+          '<div class="aside-stop-row">' +
+          '<div class="aside-stop-row__main">' +
+          '<img src="' + stop.image + '" alt="' + stop.name + '" />' +
+          '<div style="min-width:0;">' +
+          '<div class="mono-label" style="font-size:0.62rem; color:var(--ink-muted);">0' + (idx + 1) + ' · ' + stop.idealNights + nightsUnit + '</div>' +
+          '<div class="aside-stop-row__title">' + stop.name + '</div>' +
+          '</div></div>' +
+          '<button type="button" class="aside-stop-row__rm" data-aside-rm="' + stop.id + '" aria-label="' + r.removeStop + '">&times;</button>' +
+          '</div>'
+        );
+      }).join('');
+      dom.plannerAsideStops.querySelectorAll('[data-aside-rm]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          toggleSavedStop(btn.dataset.asideRm);
+          state.planner.nights = getRecommendedNights();
+          renderPlannerModal();
+        });
+      });
+    }
+
+    // Footer Buttons & Counter
+    dom.plannerStepMeta.textContent = p.stepCounter.replace('{step}', String(state.planner.step));
+    dom.plannerMobileSummary.textContent = stops.length + ' ' + r.stopsLabel + ' · ' + activeNights + nightsUnit + ' · ' + monthObj.short;
+    dom.plannerBackBtn.hidden = state.planner.step === 1;
+    dom.plannerNextLabel.textContent = state.planner.step === 3 ? p.submitBtn : p.nextBtn;
+
+    // Confirmation View
+    if (state.planner.confirmed) {
+      var conf = state.planner.confirmed;
+      dom.plannerConfirmed.innerHTML =
+        '<div class="confirmed-card">' +
+        '<span class="mono-label" style="color:var(--accent-tea);">' + p.confirmedBadge + ' · ' + conf.refCode +
+        (conf.cloudSynced ? ' [FIREBASE SYNCED]' : '') + '</span>' +
+        '<h3 class="display-serif" style="margin:0.45rem 0 0.35rem; font-size:clamp(1.45rem, 1.2rem + 0.9vw, 1.95rem);">' +
+        p.confirmedHeading.replace('{name}', conf.name) + '</h3>' +
+        '<p style="margin:0; color:var(--ink-secondary); font-size:0.92rem;">' + p.confirmedSub.replace('{ref}', conf.refCode) + '</p>' +
+        '<div class="confirmed-meta-grid">' +
+        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + '</strong></div>' +
+        '<div><span>' + p.summaryMetaTravelers + ' &amp; ' + p.summaryMetaNights + '</span><strong>' + state.planner.travelers + ' · ' + activeNights + nightsUnit + '</strong></div>' +
+        '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>' +
+        '<div><span>' + p.transportHeading + '</span><strong>' + p.transports[state.planner.transport] + '</strong></div>' +
+        '<div style="grid-column:1 / -1;"><span>' + p.summaryStops + '</span><strong>' + routeLine + '</strong></div>' +
+        '</div>' +
+        '<div style="display:flex; flex-wrap:wrap; gap:0.6rem;">' +
+        '<button type="button" class="btn btn--primary" id="pln-copy-confirmed">' + p.copySummaryBtn + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-print-confirmed">' + p.printBtn + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-edit-confirmed">' + p.editBtn + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-done-confirmed">' + p.doneBtn + '</button>' +
+        '</div></div>';
+
+      document.getElementById('pln-copy-confirmed').addEventListener('click', function () {
+        var text = buildBlueprintText(conf.refCode);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { showToast(state.locale.ui.toasts.copied); });
+        }
+      });
+      document.getElementById('pln-print-confirmed').addEventListener('click', function () { window.print(); });
+      document.getElementById('pln-edit-confirmed').addEventListener('click', function () { setPlannerStep(1); });
+      document.getElementById('pln-done-confirmed').addEventListener('click', closePlannerModal);
+    }
+  }
+
+  function submitPlannerBrief() {
+    var nameInput = document.getElementById('pln-name');
+    var emailInput = document.getElementById('pln-email');
+    if (dom.plannerForm && !dom.plannerForm.reportValidity()) return;
+
+    var name = nameInput ? nameInput.value.trim() : '';
+    var email = emailInput ? emailInput.value.trim() : '';
+    var origin = document.getElementById('pln-origin') ? document.getElementById('pln-origin').value.trim() : '';
+    var notes = document.getElementById('pln-notes') ? document.getElementById('pln-notes').value.trim() : '';
+    var stops = getSavedStopObjects().map(function (d) { return d.name; });
+    var activeNights = getActivePlannerNights();
+    var suffix = Math.random().toString(36).slice(2, 6).toUpperCase() + Math.floor(10 + Math.random() * 89);
+    var refCode = 'SRD-' + suffix;
+
+    dom.plannerNextBtn.disabled = true;
+    dom.plannerNextLabel.textContent = state.locale.ui.planner.submittingBtn;
+
+    var finish = function (cloudSynced) {
+      dom.plannerNextBtn.disabled = false;
+      state.planner.confirmed = { refCode: refCode, name: name, cloudSynced: cloudSynced };
+      renderPlannerModal();
+      showToast(state.locale.ui.toasts.compiled.replace('{ref}', refCode));
+    };
+
+    if (window.SERENDIB_FIREBASE && typeof window.SERENDIB_FIREBASE.saveInquiry === 'function') {
+      window.SERENDIB_FIREBASE.saveInquiry({
+        refCode: refCode,
+        name: name,
+        email: email,
+        month: state.planner.month,
+        guests: state.planner.travelers + ' guests · ' + activeNights + ' nights',
+        travelers: state.planner.travelers,
+        nights: activeNights,
+        stayTier: state.planner.stayTier,
+        transport: state.planner.transport,
+        interests: state.planner.interests.slice(),
+        origin: origin,
+        notes: notes,
+        stops: stops,
+        lang: state.lang,
+        createdAt: new Date().toISOString()
+      }).then(function () { finish(true); }).catch(function () { finish(false); });
+    } else {
+      finish(false);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     Quick Finder, Copy & Planner Triggers
      ------------------------------------------------------------------------ */
   function initForms() {
+    document.querySelectorAll('[data-open-planner]').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        dom.mobileNav.classList.remove('is-open');
+        dom.mobileNav.setAttribute('aria-hidden', 'true');
+        dom.mobileMenuOpen.setAttribute('aria-expanded', 'false');
+        openPlannerModal(1);
+      });
+    });
+
+    dom.closePlannerBtn.addEventListener('click', closePlannerModal);
+    dom.plannerBackdrop.addEventListener('click', closePlannerModal);
+
+    dom.plannerSteps.querySelectorAll('[data-planner-nav]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setPlannerStep(Number(btn.dataset.plannerNav));
+      });
+    });
+
+    document.querySelectorAll('[data-step-field]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var field = btn.dataset.stepField;
+        var delta = Number(btn.dataset.stepDelta);
+        if (field === 'travelers') {
+          state.planner.travelers = Math.min(12, Math.max(1, state.planner.travelers + delta));
+        } else if (field === 'nights') {
+          state.planner.nights = Math.min(28, Math.max(2, getActivePlannerNights() + delta));
+        }
+        renderPlannerModal();
+      });
+    });
+
+    dom.plannerBackBtn.addEventListener('click', function () {
+      setPlannerStep(state.planner.step - 1);
+    });
+
+    dom.plannerNextBtn.addEventListener('click', function () {
+      if (state.planner.step < 3) {
+        setPlannerStep(state.planner.step + 1);
+      } else {
+        submitPlannerBrief();
+      }
+    });
+
+    dom.plannerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitPlannerBrief();
+    });
+
     dom.quickFinder.addEventListener('submit', function (e) {
       e.preventDefault();
       var monthCode = dom.finderMonth.value;
@@ -916,10 +1341,10 @@
       var pace = dom.finderPace.value;
 
       setActiveMonth(monthCode);
+      state.planner.month = monthCode;
       setRegionFilter(focus);
       state.activeItineraryId = pace;
       renderItineraries();
-      dom.inqMonth.value = monthCode;
 
       var target = focus === 'all' ? document.getElementById('compass') : document.getElementById('atlas');
       target.scrollIntoView({ behavior: 'smooth' });
@@ -928,21 +1353,7 @@
     });
 
     dom.copyBriefBtn.addEventListener('click', function () {
-      var all = getMergedDestinations();
-      var stops = state.savedStopIds.map(function (id) {
-        for (var i = 0; i < all.length; i++) {
-          if (all[i].id === id) return all[i];
-        }
-        return null;
-      }).filter(Boolean);
-      var totalNights = stops.reduce(function (sum, d) { return sum + d.idealNights; }, 0);
-      var monthObj = state.locale.months[dom.inqMonth.value];
-      var monthName = monthObj ? monthObj.fullName : dom.inqMonth.value;
-      var text = stops.length > 0
-        ? 'SERENDIB SRI LANKA (' + state.lang.toUpperCase() + ')\n' + monthName + '\n' +
-          stops.map(function (d) { return d.name; }).join(' -> ') + ' (' + totalNights + 'N)'
-        : 'SERENDIB SRI LANKA — ' + monthName;
-
+      var text = buildBlueprintText(null);
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () {
           showToast(state.locale.ui.toasts.copied);
@@ -951,61 +1362,6 @@
         });
       } else {
         showToast(state.locale.ui.toasts.copyFallback);
-      }
-    });
-
-    dom.inquiryForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = document.getElementById('inq-name').value.trim();
-      var email = document.getElementById('inq-email').value.trim();
-      var guests = document.getElementById('inq-guests').value.trim();
-      var notes = dom.inqNotes.value.trim();
-      var monthCode = dom.inqMonth.value;
-      var monthObj = state.locale.months[monthCode];
-      var monthName = monthObj ? monthObj.fullName : monthCode;
-      var all = getMergedDestinations();
-      var stops = state.savedStopIds.map(function (id) {
-        for (var i = 0; i < all.length; i++) {
-          if (all[i].id === id) return all[i].name;
-        }
-        return null;
-      }).filter(Boolean);
-      var suffix = Math.random().toString(36).slice(2, 6).toUpperCase() + Math.floor(10 + Math.random() * 89);
-      var refCode = 'SRD-' + suffix;
-      var c = state.locale.ui.contact;
-      var submitBtn = dom.inquiryForm.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
-
-      var renderSuccess = function (cloudSynced) {
-        if (submitBtn) submitBtn.disabled = false;
-        dom.inquiryStatus.hidden = false;
-        dom.inquiryStatus.innerHTML =
-          '<strong>' + c.briefReady + ' (' + refCode + ')</strong> — ' + c.briefPrefix + ', ' + name + '. ' +
-          c.briefBody + ' ' + monthName + ' ' +
-          (stops.length ? c.briefMid + ' <em>' + stops.join(' → ') + '</em> ' : '') +
-          c.briefSuffix +
-          (cloudSynced ? ' <span class="mono-label" style="display:inline-block; margin-inline-start:0.4rem; color:var(--accent-tea);">[FIREBASE SYNCED]</span>' : '');
-        showToast(state.locale.ui.toasts.compiled.replace('{ref}', refCode));
-      };
-
-      if (window.SERENDIB_FIREBASE && typeof window.SERENDIB_FIREBASE.saveInquiry === 'function') {
-        window.SERENDIB_FIREBASE.saveInquiry({
-          refCode: refCode,
-          name: name,
-          email: email,
-          month: monthCode,
-          guests: guests,
-          notes: notes,
-          stops: stops,
-          lang: state.lang,
-          createdAt: new Date().toISOString()
-        }).then(function () {
-          renderSuccess(true);
-        }).catch(function () {
-          renderSuccess(false);
-        });
-      } else {
-        renderSuccess(false);
       }
     });
   }

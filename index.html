@@ -109,9 +109,9 @@
           <span class="route-count" id="route-count">0</span>
         </button>
 
-        <a href="#contact" class="btn btn--primary header-cta" data-i18n="nav.planJourney">
-          Plan Journey
-        </a>
+        <button type="button" class="btn btn--primary header-cta" id="header-plan-btn" data-open-planner data-i18n="nav.planJourney">
+          Plan Trip
+        </button>
 
         <button
           type="button"
@@ -147,7 +147,7 @@
       <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Itineraries</em> <span>03</span></a>
       <a href="#journal"><em style="font-style:normal;" data-i18n="nav.journal">Architecture &amp; Craft</em> <span>04</span></a>
       <a href="#field-notes"><em style="font-style:normal;" data-i18n="nav.fieldNotes">Field Notes</em> <span>05</span></a>
-      <a href="#contact"><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Journey</em> <span>06</span></a>
+      <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>06</span></a>
     </nav>
 
     <div class="mobile-nav__footer">
@@ -472,62 +472,38 @@
       </div>
     </section>
 
-    <!-- 07 — Bespoke Concierge & Route Submission -->
+    <!-- 07 — Bespoke Concierge Launchpad -->
     <section class="section section--sand" id="contact" aria-labelledby="contact-heading">
       <div class="container">
-        <div class="inquiry-card" data-reveal>
-          <div>
+        <div class="concierge-card" data-reveal>
+          <div class="concierge-card__copy">
             <span class="eyebrow" data-i18n="contact.eyebrow">07 / Concierge</span>
             <h2 class="display-serif section-heading" id="contact-heading">
               <span data-i18n="contact.titleStart">Shape your</span>
               <em data-i18n="contact.titleEm">Serendib route.</em>
             </h2>
             <p class="section-subcopy" style="margin-top:0.65rem;" data-i18n="contact.subcopy"></p>
-            <div style="margin-top:1.2rem; padding-top:0.9rem; border-top:1px solid var(--hairline);">
+            <div class="concierge-stops-bar">
               <p class="mono-label" style="color:var(--ink-muted); margin:0 0 0.35rem;" data-i18n="contact.shortlistLabel">SELECTED STOPS</p>
               <p id="inquiry-shortlist-preview" style="margin:0; font-weight:500; color:var(--accent-tea); font-size:0.92rem;"></p>
             </div>
           </div>
 
-          <form class="inquiry-form" id="inquiry-form">
-            <div class="form-group">
-              <label for="inq-name" data-i18n="contact.nameLabel">Full Name</label>
-              <input id="inq-name" name="name" type="text" data-i18n-placeholder="contact.namePlaceholder" placeholder="e.g. Kavinda Perera" required />
+          <div class="concierge-card__panel">
+            <div class="concierge-card__badges">
+              <span class="concierge-pill" id="concierge-month-pill">February</span>
+              <span class="concierge-pill concierge-pill--subtle" id="concierge-stops-pill">3 Stops</span>
             </div>
-
-            <div class="form-group">
-              <label for="inq-email" data-i18n="contact.emailLabel">Email Address</label>
-              <input id="inq-email" name="email" type="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@domain.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="inq-month" data-i18n="contact.monthLabel">Preferred Month</label>
-              <select id="inq-month" name="month"></select>
-            </div>
-
-            <div class="form-group">
-              <label for="inq-guests" data-i18n="contact.guestsLabel">Travelers &amp; Duration</label>
-              <input id="inq-guests" name="guests" type="text" data-i18n-placeholder="contact.guestsPlaceholder" placeholder="e.g. 2 guests · 10 nights" />
-            </div>
-
-          <div class="form-group field-full">
-              <label for="inq-notes" data-i18n="contact.notesLabel">Notes</label>
-              <div class="quick-tags" id="inquiry-quick-tags" aria-label="Quick trip interests"></div>
-              <textarea id="inq-notes" name="notes" data-i18n-placeholder="contact.notesPlaceholder"></textarea>
-            </div>
-
-            <div class="field-full" style="display:flex; flex-wrap:wrap; gap:0.85rem; align-items:center;">
-              <button type="submit" class="btn btn--primary">
-                <span data-i18n="contact.submitBtn">Generate Journey Brief</span>
+            <div class="concierge-card__actions">
+              <button type="button" class="btn btn--primary" id="launch-planner-btn" data-open-planner>
+                <span data-i18n="contact.launchBtn">Launch Trip Planner</span>
                 <span class="arrow-icon" aria-hidden="true">&rarr;</span>
               </button>
               <button type="button" class="btn btn--outline" id="copy-brief-btn" data-i18n="contact.copyBtn">
-                Copy Saved Route Summary
+                Copy Route
               </button>
             </div>
-
-            <div class="field-full inquiry-status" id="inquiry-status" hidden aria-live="polite"></div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -570,7 +546,7 @@
           <h3 class="mono-label footer-heading" data-i18n="footer.colDesk">Travel Desk</h3>
           <ul class="footer-links">
             <li><a href="#field-notes" data-i18n="nav.fieldNotes">Field Notes</a></li>
-            <li><a href="#contact" data-i18n="nav.planJourney">Plan Journey</a></li>
+            <li><a href="#contact" data-open-planner data-i18n="nav.planJourney">Plan Trip</a></li>
             <li><span style="color:var(--ink-on-dark-muted); font-size:0.88rem;" data-i18n="footer.deskNote">Colombo · Galle · Kandy</span></li>
           </ul>
         </div>
@@ -622,6 +598,149 @@
       </div>
     </div>
   </aside>
+
+  <!-- Dedicated Interactive Trip Planner Studio -->
+  <div class="planner-overlay" id="planner-modal" role="dialog" aria-modal="true" aria-labelledby="planner-modal-title" hidden>
+    <div class="planner-backdrop" id="planner-backdrop"></div>
+    <div class="planner-dialog">
+      <header class="planner-header">
+        <div>
+          <span class="mono-label planner-eyebrow" data-i18n="planner.eyebrow">SERENDIB TRIP STUDIO</span>
+          <h2 class="display-serif planner-title" id="planner-modal-title" data-i18n="planner.title">
+            Design your Sri Lanka journey
+          </h2>
+        </div>
+        <button type="button" class="sheet-close" id="close-planner" aria-label="Close trip planner">
+          &times;
+        </button>
+      </header>
+
+      <nav class="planner-steps" id="planner-steps" aria-label="Trip planner steps">
+        <button type="button" class="planner-step-btn is-active" data-planner-nav="1" data-i18n="planner.step1Tab">01 · Route &amp; Month</button>
+        <button type="button" class="planner-step-btn" data-planner-nav="2" data-i18n="planner.step2Tab">02 · Style &amp; Pace</button>
+        <button type="button" class="planner-step-btn" data-planner-nav="3" data-i18n="planner.step3Tab">03 · Confirm Brief</button>
+      </nav>
+
+      <div class="planner-workspace" id="planner-workspace">
+        <div class="planner-stage" id="planner-stage">
+          <!-- Step 1: Travel Month & Visual Destination Picker -->
+          <div class="planner-step-pane" id="planner-pane-1">
+            <div class="planner-block">
+              <div class="planner-block__head">
+                <h3 class="planner-label" data-i18n="planner.monthHeading">Preferred Travel Month</h3>
+                <span class="planner-monsoon-fit" id="planner-monsoon-fit"></span>
+              </div>
+              <div class="planner-month-pills" id="planner-month-pills"></div>
+            </div>
+
+            <div class="planner-block">
+              <div class="planner-block__head">
+                <h3 class="planner-label" id="planner-dest-heading">Select Destinations</h3>
+                <div class="planner-presets" id="planner-presets"></div>
+              </div>
+              <div class="planner-dest-grid" id="planner-dest-grid"></div>
+            </div>
+          </div>
+
+          <!-- Step 2: Travelers, Nights, Stay Collection & Transport -->
+          <div class="planner-step-pane" id="planner-pane-2" hidden>
+            <div class="planner-steppers">
+              <div class="stepper-card">
+                <span class="mono-label stepper-card__label" data-i18n="planner.travelersLabel">Travelers</span>
+                <div class="stepper-ctrl">
+                  <button type="button" class="stepper-btn" data-step-field="travelers" data-step-delta="-1" aria-label="Decrease travelers">&minus;</button>
+                  <strong class="stepper-val" id="planner-travelers-val">2</strong>
+                  <button type="button" class="stepper-btn" data-step-field="travelers" data-step-delta="1" aria-label="Increase travelers">+</button>
+                </div>
+              </div>
+
+              <div class="stepper-card">
+                <span class="mono-label stepper-card__label" data-i18n="planner.nightsLabel">Target Nights</span>
+                <div class="stepper-ctrl">
+                  <button type="button" class="stepper-btn" data-step-field="nights" data-step-delta="-1" aria-label="Decrease nights">&minus;</button>
+                  <strong class="stepper-val" id="planner-nights-val">8</strong>
+                  <button type="button" class="stepper-btn" data-step-field="nights" data-step-delta="1" aria-label="Increase nights">+</button>
+                </div>
+                <span class="stepper-hint" id="planner-nights-hint"></span>
+              </div>
+            </div>
+
+            <div class="planner-block">
+              <h3 class="planner-label" data-i18n="planner.stayHeading">Stay Collection</h3>
+              <div class="stay-grid" id="planner-stay-grid"></div>
+            </div>
+
+            <div class="planner-block">
+              <h3 class="planner-label" data-i18n="planner.transportHeading">Getting Around</h3>
+              <div class="transport-pills" id="planner-transport-pills"></div>
+            </div>
+
+            <div class="planner-block">
+              <h3 class="planner-label" data-i18n="planner.interestsHeading">Trip Focus</h3>
+              <div class="quick-tags" id="planner-interest-tags"></div>
+            </div>
+          </div>
+
+          <!-- Step 3: Traveler Details -->
+          <div class="planner-step-pane" id="planner-pane-3" hidden>
+            <div class="planner-review-strip" id="planner-mobile-review"></div>
+            <form id="planner-form" class="planner-form">
+              <div class="form-group">
+                <label for="pln-name" data-i18n="planner.nameLabel">Full Name</label>
+                <input id="pln-name" name="name" type="text" data-i18n-placeholder="contact.namePlaceholder" placeholder="Kavinda Perera" required />
+              </div>
+
+              <div class="form-group">
+                <label for="pln-email" data-i18n="planner.emailLabel">Email Address</label>
+                <input id="pln-email" name="email" type="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@domain.com" required />
+              </div>
+
+              <div class="form-group field-full">
+                <label for="pln-origin" data-i18n="planner.originLabel">Flying From (Optional)</label>
+                <input id="pln-origin" name="origin" type="text" data-i18n-placeholder="planner.originPlaceholder" placeholder="London / Dubai / Singapore" />
+              </div>
+
+              <div class="form-group field-full">
+                <label for="pln-notes" data-i18n="planner.notesLabel">Special Notes</label>
+                <textarea id="pln-notes" name="notes" data-i18n-placeholder="planner.notesPlaceholder" placeholder="Honeymoon suites, wildlife focus, dietary notes..."></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Confirmed Blueprint View -->
+          <div class="planner-confirmed" id="planner-confirmed" hidden></div>
+        </div>
+
+        <!-- Right Live Blueprint Sidebar -->
+        <aside class="planner-aside" id="planner-aside" aria-label="Live Route Blueprint">
+          <div class="planner-aside__head">
+            <h3 class="display-serif" style="margin:0; font-size:1.3rem;" data-i18n="planner.summaryTitle">Route Blueprint</h3>
+            <span class="mono-label planner-aside__count" id="planner-aside-count"></span>
+          </div>
+
+          <div class="planner-aside__monsoon" id="planner-aside-monsoon"></div>
+          <div class="planner-aside__specs" id="planner-aside-specs"></div>
+
+          <p class="mono-label" style="color:var(--ink-muted); margin:1rem 0 0.45rem;" data-i18n="planner.summaryStops">Selected Stops</p>
+          <div class="planner-aside__stops" id="planner-aside-stops"></div>
+        </aside>
+      </div>
+
+      <footer class="planner-footer" id="planner-footer">
+        <div class="planner-footer__meta">
+          <span class="mono-label" id="planner-step-meta">Step 1 of 3</span>
+          <span class="planner-footer__mobile-summary" id="planner-mobile-summary"></span>
+        </div>
+        <div class="planner-footer__actions">
+          <button type="button" class="btn btn--outline" id="planner-back-btn" hidden data-i18n="planner.backBtn">Back</button>
+          <button type="button" class="btn btn--primary" id="planner-next-btn">
+            <span id="planner-next-label" data-i18n="planner.nextBtn">Continue</span>
+            <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

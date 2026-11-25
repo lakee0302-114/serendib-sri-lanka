@@ -1880,17 +1880,795 @@
   }
 
   /* ========================================================================
-     07 — Bespoke Inquiry Desk
+     07 — Bespoke Concierge Studio Launchpad
      ======================================================================== */
-  .inquiry-card {
+  .concierge-card {
     background-color: var(--bg-cream);
     border: 1px solid var(--hairline);
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
-    padding: clamp(1.25rem, 3.8vw, 3rem);
+    padding: clamp(1.35rem, 3.8vw, 3rem);
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1.65rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .concierge-card {
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 3rem;
+    }
+  }
+
+  .concierge-stops-bar {
+    margin-top: 1.1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .concierge-card__panel {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-card);
+    padding: clamp(1.15rem, 2.5vw, 1.85rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+
+  .concierge-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .concierge-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.78rem;
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in oklab, var(--accent-tea) 13%, transparent);
+    color: var(--accent-tea);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .concierge-pill--subtle {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline-strong);
+    color: var(--ink-secondary);
+  }
+
+  .concierge-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .concierge-card__actions .btn--primary {
+    flex: 1 1 auto;
+  }
+
+  /* ========================================================================
+     Trip Planner Studio Modal
+     ======================================================================== */
+  .planner-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms ease;
+  }
+
+  .planner-overlay[hidden] {
+    display: none;
+  }
+
+  .planner-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media (min-width: 900px) {
+    .planner-overlay {
+      padding: clamp(1rem, 3vw, 2.25rem);
+    }
+  }
+
+  .planner-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 18, 15, 0.72);
+    backdrop-filter: blur(8px);
+  }
+
+  .planner-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--bg-cream);
+    color: var(--ink-primary);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(18px) scale(0.985);
+    transition: transform 320ms var(--ease-editorial);
+  }
+
+  .planner-overlay.is-open .planner-dialog {
+    transform: translateY(0) scale(1);
+  }
+
+  @media (min-width: 900px) {
+    .planner-dialog {
+      width: min(1060px, 100%);
+      height: min(760px, 90dvh);
+      border-radius: 18px;
+      border: 1px solid var(--hairline);
+      box-shadow: 0 28px 72px rgba(10, 18, 14, 0.36);
+    }
+  }
+
+  .planner-header {
+    padding: 0.95rem 1.25rem;
+    border-bottom: 1px solid var(--hairline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 900px) {
+    .planner-header {
+      padding: 1.15rem 1.75rem;
+    }
+  }
+
+  .planner-eyebrow {
+    color: var(--accent-terracotta);
+    display: block;
+    margin-bottom: 0.18rem;
+  }
+
+  .planner-title {
+    margin: 0;
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.65rem);
+    line-height: 1.2;
+  }
+
+  .planner-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--hairline);
+    background-color: var(--bg-limestone);
+    flex-shrink: 0;
+  }
+
+  .planner-step-btn {
+    border: 0;
+    background: transparent;
+    padding: 0.72rem 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--ink-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .planner-step-btn:hover {
+    color: var(--ink-primary);
+  }
+
+  .planner-step-btn.is-active {
+    color: var(--accent-terracotta);
+    border-bottom-color: var(--accent-terracotta);
+    background-color: var(--bg-cream);
+    font-weight: 600;
+  }
+
+  .planner-step-btn.is-done {
+    color: var(--accent-tea);
+  }
+
+  .planner-workspace {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  @media (min-width: 920px) {
+    .planner-workspace {
+      grid-template-columns: 1.45fr 0.85fr;
+    }
+  }
+
+  .planner-stage {
+    overflow-y: auto;
+    padding: 1.15rem 1.2rem 1.65rem;
+    overscroll-behavior: contain;
+  }
+
+  @media (min-width: 900px) {
+    .planner-stage {
+      padding: 1.45rem 1.75rem 2rem;
+    }
+  }
+
+  .planner-block {
+    margin-bottom: 1.45rem;
+  }
+
+  .planner-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .planner-block__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 0.85rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .planner-label {
+    margin: 0;
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .planner-monsoon-fit {
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.24rem 0.65rem;
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in oklab, var(--accent-tea) 12%, transparent);
+    color: var(--accent-tea);
+  }
+
+  .planner-month-pills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.42rem;
+  }
+
+  @media (min-width: 640px) {
+    .planner-month-pills {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  .planner-month-chip {
+    min-height: 36px;
+    padding: 0.28rem 0.2rem;
+    border-radius: var(--radius-sharp);
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-sandstone);
+    color: var(--ink-primary);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .planner-month-chip.is-active {
+    background-color: var(--bg-forest);
+    border-color: var(--bg-forest);
+    color: #FAF8F3;
+    font-weight: 600;
+  }
+
+  [data-theme="dark"] .planner-month-chip.is-active {
+    background-color: var(--accent-terracotta);
+    border-color: var(--accent-terracotta);
+  }
+
+  .planner-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .planner-preset-btn {
+    min-height: 28px;
+    padding: 0.18rem 0.62rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--hairline-strong);
+    background-color: transparent;
+    color: var(--ink-secondary);
+    font-size: 0.73rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .planner-preset-btn:hover {
+    border-color: var(--accent-terracotta);
+    color: var(--accent-terracotta);
+  }
+
+  .planner-dest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  @media (min-width: 600px) {
+    .planner-dest-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .planner-dest-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: 1.5px solid var(--hairline);
+    border-radius: 12px;
+    background-color: var(--bg-limestone);
+    overflow: hidden;
+    text-align: start;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .planner-dest-card:hover {
+    border-color: var(--hairline-strong);
+    transform: translateY(-2px);
+  }
+
+  .planner-dest-card.is-selected {
+    border-color: var(--accent-tea);
+    background-color: color-mix(in oklab, var(--accent-tea) 6%, var(--bg-cream));
+    box-shadow: 0 6px 18px rgba(29, 79, 60, 0.12);
+  }
+
+  .planner-dest-card__thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-sandstone);
+  }
+
+  .planner-dest-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .planner-dest-card__check {
+    position: absolute;
+    top: 6px;
+    inset-inline-end: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(16, 24, 20, 0.56);
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .planner-dest-card.is-selected .planner-dest-card__check {
+    background-color: var(--accent-tea);
+    border-color: #FFFFFF;
+  }
+
+  .planner-dest-card__info {
+    padding: 0.52rem 0.62rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.16rem;
+  }
+
+  .planner-dest-card__meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--ink-muted);
+  }
+
+  .planner-dest-card__name {
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink-primary);
+  }
+
+  /* Step 2: Steppers, Stay Collection & Transport */
+  .planner-steppers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.4rem;
+  }
+
+  @media (min-width: 560px) {
+    .planner-steppers {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .stepper-card {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .stepper-card__label {
+    color: var(--ink-muted);
+  }
+
+  .stepper-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .stepper-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-cream);
+    color: var(--ink-primary);
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .stepper-btn:hover {
+    border-color: var(--accent-terracotta);
+    color: var(--accent-terracotta);
+  }
+
+  .stepper-val {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    min-width: 2ch;
+    text-align: center;
+  }
+
+  .stepper-hint {
+    font-size: 0.76rem;
+    color: var(--accent-tea);
+    font-weight: 500;
+  }
+
+  .stay-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-top: 0.55rem;
+  }
+
+  @media (min-width: 600px) {
+    .stay-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .stay-card {
+    border: 1.5px solid var(--hairline);
+    border-radius: 12px;
+    padding: 0.85rem 0.95rem;
+    background-color: var(--bg-limestone);
+    text-align: start;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .stay-card:hover {
+    border-color: var(--hairline-strong);
+  }
+
+  .stay-card.is-active {
+    border-color: var(--accent-terracotta);
+    background-color: color-mix(in oklab, var(--accent-terracotta) 7%, var(--bg-cream));
+  }
+
+  .stay-card__title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ink-primary);
+  }
+
+  .stay-card__sub {
+    font-size: 0.78rem;
+    line-height: 1.38;
+    color: var(--ink-secondary);
+  }
+
+  .transport-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.55rem;
+  }
+
+  .transport-pill {
+    min-height: 38px;
+    padding: 0.35rem 0.88rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-sandstone);
+    color: var(--ink-primary);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .transport-pill.is-active {
+    background-color: var(--bg-forest);
+    border-color: var(--bg-forest);
+    color: #FAF8F3;
+  }
+
+  [data-theme="dark"] .transport-pill.is-active {
+    background-color: var(--accent-terracotta);
+    border-color: var(--accent-terracotta);
+  }
+
+  /* Step 3: Form & Mobile Review Strip */
+  .planner-review-strip {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.84rem;
+    color: var(--ink-secondary);
+  }
+
+  @media (min-width: 920px) {
+    .planner-review-strip {
+      display: none;
+    }
+  }
+
+  .planner-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 560px) {
+    .planner-form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .planner-confirmed {
+    padding: 1rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .confirmed-card {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-inline-start: 4px solid var(--accent-tea);
+    border-radius: 14px;
+    padding: clamp(1.15rem, 3vw, 1.75rem);
+  }
+
+  .confirmed-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin-block: 1.15rem;
+    padding-block: 0.95rem;
+    border-block: 1px solid var(--hairline);
+  }
+
+  .confirmed-meta-grid span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  .confirmed-meta-grid strong {
+    font-size: 0.88rem;
+  }
+
+  /* Right Blueprint Sidebar */
+  .planner-aside {
+    display: none;
+  }
+
+  @media (min-width: 920px) {
+    .planner-aside {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-limestone);
+      border-inline-start: 1px solid var(--hairline);
+      padding: 1.35rem 1.4rem;
+      overflow-y: auto;
+    }
+  }
+
+  .planner-aside__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .planner-aside__count {
+    color: var(--accent-terracotta);
+  }
+
+  .planner-aside__monsoon {
+    margin-top: 0.85rem;
+    padding: 0.72rem 0.85rem;
+    border-radius: 10px;
+    background-color: var(--bg-compass);
+    font-size: 0.82rem;
+    color: var(--ink-compass);
+  }
+
+  .planner-aside__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 10px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline);
+    font-size: 0.8rem;
+  }
+
+  .planner-aside__specs div span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  .planner-aside__stops {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .aside-stop-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.45rem 0.55rem;
+    border-radius: 10px;
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline);
+  }
+
+  .aside-stop-row__main {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .aside-stop-row img {
+    width: 38px;
+    height: 38px;
+    border-radius: 7px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .aside-stop-row__title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .aside-stop-row__rm {
+    border: 0;
+    background: transparent;
+    color: var(--ink-muted);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+    line-height: 1;
+  }
+
+  .aside-stop-row__rm:hover {
+    color: var(--accent-terracotta);
+  }
+
+  .planner-footer {
+    padding: 0.85rem 1.25rem max(0.85rem, env(safe-area-inset-bottom));
+    border-top: 1px solid var(--hairline);
+    background-color: var(--bg-limestone);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 900px) {
+    .planner-footer {
+      padding: 0.95rem 1.75rem;
+    }
+  }
+
+  .planner-footer__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    min-width: 0;
+  }
+
+  .planner-footer__mobile-summary {
+    font-size: 0.76rem;
+    color: var(--ink-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 920px) {
+    .planner-footer__mobile-summary {
+      display: none;
+    }
+  }
+
+  .planner-footer__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-shrink: 0;
   }
 
   .quick-tags {
@@ -1924,32 +2702,16 @@
     color: #FFFFFF;
   }
 
-  @media (min-width: 940px) {
-    .inquiry-card {
-      grid-template-columns: 5fr 7fr;
-      gap: 4rem;
-    }
-  }
-
-  .inquiry-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
-  }
-
-  @media (min-width: 600px) {
-    .inquiry-form {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .field-full {
-      grid-column: 1 / -1;
-    }
-  }
-
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  @media (min-width: 600px) {
+    .field-full {
+      grid-column: 1 / -1;
+    }
   }
 
   .form-group label {
@@ -1985,11 +2747,29 @@
     border-color: var(--accent-terracotta);
   }
 
-  .inquiry-status {
-    padding: 1.25rem;
-    background-color: var(--status-info-bg);
-    border-inline-start: 3px solid var(--accent-tea);
-    font-size: 0.94rem;
+  @media print {
+    body > *:not(#planner-modal) {
+      display: none !important;
+    }
+    .planner-overlay {
+      position: static !important;
+      padding: 0 !important;
+    }
+    .planner-backdrop,
+    .planner-header .sheet-close,
+    .planner-steps,
+    .planner-footer,
+    .planner-aside {
+      display: none !important;
+    }
+    .planner-dialog {
+      height: auto !important;
+      box-shadow: none !important;
+      border: 0 !important;
+    }
+    .planner-stage {
+      overflow: visible !important;
+    }
   }
 
   /* ========================================================================
