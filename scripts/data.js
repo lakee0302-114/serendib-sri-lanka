@@ -41,7 +41,7 @@
       regionKey: 'wildlife',
       coords: "08°27'15\"N · 80°02'30\"E",
       idealNights: 2,
-      image: './assets/images/wilpattu-elephants.jpg',
+      image: './assets/images/wilpattu-trunk-spray.jpg',
       imageAlt: 'Wild Sri Lankan elephant raising its trunk high to spray cooling bath water in sunlight'
     },
     {
