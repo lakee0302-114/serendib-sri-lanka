@@ -12,7 +12,7 @@
       coords: "07°57'25\"N · 80°45'35\"E",
       idealNights: 2,
       image: './assets/images/hero-sigiriya.jpg',
-      imageAlt: 'Sunlit Sigiriya Lion Rock rising above emerald Sri Lankan rainforest and distant blue mountains'
+      imageAlt: 'Sunlit pathway through royal water gardens toward Sigiriya Lion Rock under bright blue sky'
     },
     {
       id: 'kandy',
@@ -32,7 +32,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Iconic blue highland train curving across misty stone Nine Arch Bridge in Ella jungle canopy'
+      imageAlt: 'Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest'
     },
     {
       id: 'wilpattu',
@@ -62,7 +62,7 @@
       coords: "05°56'54\"N · 80°27'31\"E",
       idealNights: 2,
       image: './assets/images/mirissa-coast.jpg',
-      imageAlt: 'Aerial view of Mirissa Coconut Tree Hill peninsula surrounded by turquoise Indian Ocean reefs'
+      imageAlt: 'Sun-drenched Coconut Tree Hill headland in Mirissa lined with swaying palms above turquoise surf'
     },
     {
       id: 'nuwara-eliya',
@@ -72,7 +72,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Misty emerald Ceylon tea slopes and shade trees beneath morning mountain clouds'
+      imageAlt: 'Sunlit terraced emerald Ceylon tea plantations rolling across high mountain ridges'
     },
     {
       id: 'yala',
@@ -82,7 +82,7 @@
       coords: "06°22'20\"N · 81°31'05\"E",
       idealNights: 2,
       image: './assets/images/yala-leopard.jpg',
-      imageAlt: 'Close-up portrait of a wild Sri Lankan leopard peering through lush sunlit forest leaves in Yala'
+      imageAlt: 'Wild Sri Lankan leopard drinking at a sunlit mirror waterhole inside Yala National Park'
     },
     {
       id: 'udawalawe',
@@ -92,7 +92,7 @@
       coords: "06°26'18\"N · 80°53'18\"E",
       idealNights: 1,
       image: './assets/images/udawalawe-elephants.jpg',
-      imageAlt: 'Wild Sri Lankan elephant mother and calf roaming green bushland in Udawalawe National Park'
+      imageAlt: 'Close-up of a wild Sri Lankan elephant curling its trunk in green savannah flora'
     },
     {
       id: 'anuradhapura',
@@ -152,7 +152,7 @@
       coords: "08°34'16\"N · 81°14'00\"E",
       idealNights: 3,
       image: './assets/images/east-coast-trinco.jpg',
-      imageAlt: 'Traditional wooden fishing boats resting on wide white sand at Nilaveli Beach in Trincomalee'
+      imageAlt: 'Crystal clear turquoise reef water, sandy shoreline, and boat along Sri Lanka calm bay'
     },
     {
       id: 'arugam-bay',
@@ -172,7 +172,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Vibrant violet and gold sunset glow above Indian Ocean waves off Galle Face in Colombo'
+      imageAlt: 'Illuminated Colombo skyline and lakeside pavilion reflecting golden twilight lights on Beira Lake'
     },
     {
       id: 'sri-pada',
@@ -192,7 +192,7 @@
       coords: "08°01'15\"N · 80°53'10\"E",
       idealNights: 1,
       image: './assets/images/minneriya-gathering.jpg',
-      imageAlt: 'Wild Sri Lankan elephant mother and calf grazing beside calm Minneriya Reservoir water'
+      imageAlt: 'Herd of wild Sri Lankan elephants and calf grazing across lush green Minneriya grasslands'
     },
     {
       id: 'knuckles',
