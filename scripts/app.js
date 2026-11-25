@@ -41,8 +41,8 @@
       step: 1,
       month: 'FEB',
       arrivalDate: '',
+      departureDate: '',
       travelers: 2,
-      nights: null,
       stayTier: 'boutique',
       transport: 'chauffeur',
       interests: [],
@@ -141,12 +141,12 @@
     plannerConfirmed: document.getElementById('planner-confirmed'),
     plannerMonthPills: document.getElementById('planner-month-pills'),
     plannerDateInput: document.getElementById('pln-date'),
+    plannerDepartureInput: document.getElementById('pln-departure-date'),
     plannerMonsoonFit: document.getElementById('planner-monsoon-fit'),
     plannerDestHeading: document.getElementById('planner-dest-heading'),
     plannerPresets: document.getElementById('planner-presets'),
     plannerDestGrid: document.getElementById('planner-dest-grid'),
     plannerTravelersVal: document.getElementById('planner-travelers-val'),
-    plannerNightsVal: document.getElementById('planner-nights-val'),
     plannerNightsHint: document.getElementById('planner-nights-hint'),
     plannerStayGrid: document.getElementById('planner-stay-grid'),
     plannerTransportPills: document.getElementById('planner-transport-pills'),
@@ -965,6 +965,19 @@
   /* ------------------------------------------------------------------------
      Dedicated Interactive Trip Planner Studio Modal
      ------------------------------------------------------------------------ */
+  function parseIsoDateUtc(isoStr) {
+    if (!isoStr || !/^\d{4}-\d{2}-\d{2}$/.test(isoStr)) return null;
+    var parts = isoStr.split('-');
+    return Date.UTC(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+  }
+
+  function getCalculatedDateNights() {
+    var arrMs = parseIsoDateUtc(state.planner.arrivalDate);
+    var depMs = parseIsoDateUtc(state.planner.departureDate);
+    if (arrMs === null || depMs === null || depMs < arrMs) return null;
+    return Math.round((depMs - arrMs) / 86400000);
+  }
+
   function getRecommendedNights() {
     var stops = getSavedStopObjects();
     if (!stops.length) return 8;
@@ -972,7 +985,8 @@
   }
 
   function getActivePlannerNights() {
-    return state.planner.nights !== null ? state.planner.nights : getRecommendedNights();
+    var dateNights = getCalculatedDateNights();
+    return dateNights !== null ? dateNights : getRecommendedNights();
   }
 
   function getMonsoonHighlightText(monthCode) {
@@ -991,9 +1005,12 @@
     var nights = getActivePlannerNights();
     var stayObj = p.stays[state.planner.stayTier] || p.stays.boutique;
     var transLabel = p.transports[state.planner.transport] || p.transports.chauffeur;
+    var dateParts = [];
+    if (state.planner.arrivalDate) dateParts.push('Arrival: ' + state.planner.arrivalDate);
+    if (state.planner.departureDate) dateParts.push('Departure: ' + state.planner.departureDate);
     var lines = [
       'SERENDIB SRI LANKA — TRIP BLUEPRINT' + (refCode ? ' (' + refCode + ')' : ''),
-      'Month: ' + m.fullName + ' (' + m.headline + ')' + (state.planner.arrivalDate ? ' · Arrival: ' + state.planner.arrivalDate : ''),
+      'Month: ' + m.fullName + ' (' + m.headline + ')' + (dateParts.length ? ' · ' + dateParts.join(' · ') : ''),
       'Guests & Pace: ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + nights + ' ' + p.summaryMetaNights,
       'Stay Style: ' + stayObj.title + ' · ' + transLabel,
       'Route: ' + (stops.length ? stops.map(function (d) { return d.name; }).join(' -> ') : 'Open Custom Loop')
@@ -1009,7 +1026,6 @@
     state.planner.confirmed = null;
     state.planner.step = startStep || 1;
     state.planner.month = state.activeMonth;
-    if (state.planner.nights === null) state.planner.nights = getRecommendedNights();
 
     dom.dossierSheet.classList.remove('is-open');
     dom.routeSheet.classList.remove('is-open');
@@ -1099,7 +1115,6 @@
     dom.plannerPresets.querySelectorAll('[data-pln-preset]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         state.savedStopIds = (ITINERARY_PRESETS[btn.dataset.plnPreset] || ['sigiriya', 'ella', 'galle']).slice();
-        state.planner.nights = getRecommendedNights();
         persistSavedStops();
         syncRouteUI();
       });
@@ -1131,15 +1146,20 @@
     dom.plannerDestGrid.querySelectorAll('[data-pln-stop]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         toggleSavedStop(btn.dataset.plnStop);
-        state.planner.nights = getRecommendedNights();
         renderPlannerModal();
       });
     });
 
-    // Step 2 Controls
+    // Step 1 Controls (Dates, Travelers, Stay, Transport, Focus)
     dom.plannerTravelersVal.textContent = String(state.planner.travelers);
-    dom.plannerNightsVal.textContent = String(activeNights);
-    dom.plannerNightsHint.textContent = stops.length ? p.nightsAutoHint.replace('{nights}', String(recNights)) : '';
+    var dateNights = getCalculatedDateNights();
+    if (dom.plannerNightsHint) {
+      if (dateNights !== null) {
+        dom.plannerNightsHint.textContent = dateNights + ' ' + r.nightsLabel;
+      } else {
+        dom.plannerNightsHint.textContent = stops.length ? p.nightsAutoHint.replace('{nights}', String(recNights)) : '';
+      }
+    }
 
     var stayOrder = ['boutique', 'teaSanctuary', 'honest'];
     dom.plannerStayGrid.innerHTML = stayOrder.map(function (key) {
@@ -1190,17 +1210,27 @@
       });
     });
 
-    // Sync Date input inside Step 1
+    // Sync Arrival & Departure Date inputs inside Step 1
+    var todayIso = new Date().toISOString().slice(0, 10);
     if (dom.plannerDateInput) {
+      dom.plannerDateInput.min = todayIso;
       dom.plannerDateInput.value = state.planner.arrivalDate || '';
+    }
+    if (dom.plannerDepartureInput) {
+      dom.plannerDepartureInput.min = state.planner.arrivalDate || todayIso;
+      dom.plannerDepartureInput.value = state.planner.departureDate || '';
     }
 
     // Mobile Summary Review inside Step 3 & Footer
     var routeLine = stops.length ? stops.map(function (s) { return s.name; }).join(' → ') : p.summaryNoStops;
     var stayTitle = (p.stays[state.planner.stayTier] || p.stays.boutique).title;
-    var dateDisplay = state.planner.arrivalDate || p.dateAny;
+    var arrivalDisplay = state.planner.arrivalDate || p.dateAny;
+    var departureDisplay = state.planner.departureDate || p.dateAny;
+    var datesSummary = state.planner.arrivalDate
+      ? state.planner.arrivalDate + (state.planner.departureDate ? ' → ' + state.planner.departureDate : '')
+      : departureDisplay;
     dom.plannerMobileReview.innerHTML =
-      '<strong>' + monthObj.fullName + ' · ' + dateDisplay + ' · ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + activeNights + nightsUnit + '</strong>' +
+      '<strong>' + monthObj.fullName + ' · ' + datesSummary + ' · ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + activeNights + nightsUnit + '</strong>' +
       '<div style="margin-top:0.25rem; color:var(--accent-tea);">' + stayTitle + '</div>' +
       '<div style="margin-top:0.2rem;">' + routeLine + '</div>';
 
@@ -1210,10 +1240,11 @@
       '<span class="mono-label" style="display:block; color:var(--ink-muted); margin-bottom:0.2rem;">' + p.summaryMonsoon + ' · ' + monthObj.fullName + '</span>' +
       '<strong>' + monthObj.headline + '</strong>';
     dom.plannerAsideSpecs.innerHTML =
-      '<div><span>' + p.dateLabel + '</span><strong>' + dateDisplay + '</strong></div>' +
+      '<div><span>' + p.dateLabel + '</span><strong>' + arrivalDisplay + '</strong></div>' +
+      '<div><span>' + p.departureDateLabel + '</span><strong>' + departureDisplay + '</strong></div>' +
       '<div><span>' + p.summaryMetaTravelers + '</span><strong>' + state.planner.travelers + '</strong></div>' +
       '<div><span>' + p.summaryMetaNights + '</span><strong>' + activeNights + nightsUnit + '</strong></div>' +
-      '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>';
+      '<div style="grid-column:1 / -1;"><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>';
 
     if (!stops.length) {
       dom.plannerAsideStops.innerHTML = '<p style="font-size:0.84rem; color:var(--ink-muted); margin:0;">' + p.summaryNoStops + '</p>';
@@ -1234,7 +1265,6 @@
       dom.plannerAsideStops.querySelectorAll('[data-aside-rm]').forEach(function (btn) {
         btn.addEventListener('click', function () {
           toggleSavedStop(btn.dataset.asideRm);
-          state.planner.nights = getRecommendedNights();
           renderPlannerModal();
         });
       });
@@ -1257,7 +1287,7 @@
         p.confirmedHeading.replace('{name}', conf.name) + '</h3>' +
         '<p style="margin:0; color:var(--ink-secondary); font-size:0.92rem;">' + p.confirmedSub.replace('{ref}', conf.refCode) + '</p>' +
         '<div class="confirmed-meta-grid">' +
-        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + (state.planner.arrivalDate ? ' (' + state.planner.arrivalDate + ')' : '') + '</strong></div>' +
+        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + ((state.planner.arrivalDate || state.planner.departureDate) ? ' (' + arrivalDisplay + ' → ' + departureDisplay + ')' : '') + '</strong></div>' +
         '<div><span>' + p.summaryMetaTravelers + ' &amp; ' + p.summaryMetaNights + '</span><strong>' + state.planner.travelers + ' · ' + activeNights + nightsUnit + '</strong></div>' +
         '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>' +
         '<div><span>' + p.transportHeading + '</span><strong>' + p.transports[state.planner.transport] + '</strong></div>' +
@@ -1313,6 +1343,7 @@
         email: email,
         month: state.planner.month,
         arrivalDate: state.planner.arrivalDate,
+        departureDate: state.planner.departureDate,
         guests: state.planner.travelers + ' guests · ' + activeNights + ' nights',
         travelers: state.planner.travelers,
         nights: activeNights,
@@ -1364,7 +1395,22 @@
             state.planner.month = MONTH_CODES[monthIndex];
             setActiveMonth(state.planner.month);
           }
+          if (state.planner.departureDate && state.planner.departureDate < state.planner.arrivalDate) {
+            state.planner.departureDate = '';
+          }
         }
+        renderPlannerModal();
+      });
+    }
+
+    if (dom.plannerDepartureInput) {
+      dom.plannerDepartureInput.min = state.planner.arrivalDate || new Date().toISOString().slice(0, 10);
+      dom.plannerDepartureInput.addEventListener('change', function () {
+        var val = dom.plannerDepartureInput.value;
+        if (state.planner.arrivalDate && val && val < state.planner.arrivalDate) {
+          val = '';
+        }
+        state.planner.departureDate = val;
         renderPlannerModal();
       });
     }
@@ -1375,8 +1421,6 @@
         var delta = Number(btn.dataset.stepDelta);
         if (field === 'travelers') {
           state.planner.travelers = Math.min(12, Math.max(1, state.planner.travelers + delta));
-        } else if (field === 'nights') {
-          state.planner.nights = Math.min(28, Math.max(2, getActivePlannerNights() + delta));
         }
         renderPlannerModal();
       });

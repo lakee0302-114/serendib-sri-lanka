@@ -630,7 +630,7 @@
 
       <div class="planner-workspace" id="planner-workspace">
         <div class="planner-stage" id="planner-stage">
-          <!-- Step 1: Month, Arrival Date, Travelers, Nights, Stay Collection & Focus -->
+          <!-- Step 1: Month, Arrival Date, Departure Date, Travelers, Stay Collection & Focus -->
           <div class="planner-step-pane" id="planner-pane-1">
             <div class="planner-block">
               <div class="planner-block__head">
@@ -647,22 +647,18 @@
               </div>
 
               <div class="stepper-card">
+                <label class="mono-label stepper-card__label" for="pln-departure-date" data-i18n="planner.departureDateLabel">Departure Date</label>
+                <input type="date" id="pln-departure-date" name="departureDate" class="planner-date-input" />
+                <span class="stepper-hint" id="planner-nights-hint"></span>
+              </div>
+
+              <div class="stepper-card">
                 <span class="mono-label stepper-card__label" data-i18n="planner.travelersLabel">Travelers</span>
                 <div class="stepper-ctrl">
                   <button type="button" class="stepper-btn" data-step-field="travelers" data-step-delta="-1" aria-label="Decrease travelers">&minus;</button>
                   <strong class="stepper-val" id="planner-travelers-val">2</strong>
                   <button type="button" class="stepper-btn" data-step-field="travelers" data-step-delta="1" aria-label="Increase travelers">+</button>
                 </div>
-              </div>
-
-              <div class="stepper-card">
-                <span class="mono-label stepper-card__label" data-i18n="planner.nightsLabel">Target Nights</span>
-                <div class="stepper-ctrl">
-                  <button type="button" class="stepper-btn" data-step-field="nights" data-step-delta="-1" aria-label="Decrease nights">&minus;</button>
-                  <strong class="stepper-val" id="planner-nights-val">8</strong>
-                  <button type="button" class="stepper-btn" data-step-field="nights" data-step-delta="1" aria-label="Increase nights">+</button>
-                </div>
-                <span class="stepper-hint" id="planner-nights-hint"></span>
               </div>
             </div>
 

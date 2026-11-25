@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['it'] = {
       step2Tab: '02 · Scegli Rotta',
       step3Tab: '03 · Conferma',
       dateLabel: 'Data di arrivo',
+      departureDateLabel: 'Data di partenza',
       dateAny: 'Flessibile',
       clearStops: 'Svuota',
       monthHeading: 'Mese di viaggio preferito',
       destinationsHeading: 'Seleziona destinazioni ({count} salvate)',
       travelersLabel: 'Viaggiatori',
-      nightsLabel: 'Notti previste',
       nightsAutoHint: 'Consigliate per queste tappe: {nights} notti',
       stayHeading: 'Collezione Soggiorni',
       stays: {

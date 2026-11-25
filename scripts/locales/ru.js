@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['ru'] = {
       step2Tab: '02 · Маршрут и точки',
       step3Tab: '03 · Подтверждение',
       dateLabel: 'Дата заезда',
+      departureDateLabel: 'Дата выезда',
       dateAny: 'Гибкие даты',
       clearStops: 'Очистить',
       monthHeading: 'Предпочтительный месяц',
       destinationsHeading: 'Выберите локации ({count} выбрано)',
       travelersLabel: 'Гостей',
-      nightsLabel: 'Ночей в поездке',
       nightsAutoHint: 'Рекомендуется для выбранных точек: {nights} ноч.',
       stayHeading: 'Категория отелей',
       stays: {

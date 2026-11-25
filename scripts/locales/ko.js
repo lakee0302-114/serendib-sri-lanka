@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['ko'] = {
       step2Tab: '02 · 여행지 선택',
       step3Tab: '03 · 확인 & 제출',
       dateLabel: '도착 날짜',
+      departureDateLabel: '출발 날짜',
       dateAny: '유연한 일정',
       clearStops: '비우기',
       monthHeading: '희망 여행 월',
       destinationsHeading: '여행지 선택 ({count}곳 선택됨)',
       travelersLabel: '인원',
-      nightsLabel: '예상 숙박일',
       nightsAutoHint: '선택 지역 권장 일정: {nights}박',
       stayHeading: '숙소 컬렉션',
       stays: {

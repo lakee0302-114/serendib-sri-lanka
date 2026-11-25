@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['ta'] = {
       step2Tab: '02 · இடங்களைத் தேர்',
       step3Tab: '03 · உறுதிப்படுத்து',
       dateLabel: 'வருகை தேதி',
+      departureDateLabel: 'புறப்படும் தேதி',
       dateAny: 'நெகிழ்வான தேதி',
       clearStops: 'அழி',
       monthHeading: 'விரும்பும் பயண மாதம்',
       destinationsHeading: 'இடங்களைத் தேர்ந்தெடுக்கவும் ({count} சேமிப்பு)',
       travelersLabel: 'பயணிகள்',
-      nightsLabel: 'மொத்த இரவுகள்',
       nightsAutoHint: 'தேர்ந்த இடங்களுக்குப் பரிந்துரை: {nights} இரவுகள்',
       stayHeading: 'தங்குமிடத் தரம்',
       stays: {

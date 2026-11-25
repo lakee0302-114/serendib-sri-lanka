@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['ar'] = {
       step2Tab: '02 · اختر المسار',
       step3Tab: '03 · التأكيد والإرسال',
       dateLabel: 'تاريخ الوصول',
+      departureDateLabel: 'تاريخ المغادرة',
       dateAny: 'تواريخ مرنة',
       clearStops: 'مسح',
       monthHeading: 'شهر السفر المفضل',
       destinationsHeading: 'اختر الوجهات ({count} محفوظة)',
       travelersLabel: 'المسافرون',
-      nightsLabel: 'عدد الليالي',
       nightsAutoHint: 'المقترح لمسارك المختار: {nights} ليالٍ',
       stayHeading: 'فئة الإقامة',
       stays: {

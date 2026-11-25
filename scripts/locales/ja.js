@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['ja'] = {
       step2Tab: '02 · 訪問地を選ぶ',
       step3Tab: '03 · 確認・送信',
       dateLabel: 'ご到着日',
+      departureDateLabel: 'ご出発日',
       dateAny: '日程未定',
       clearStops: 'クリア',
       monthHeading: 'ご希望の渡航月',
       destinationsHeading: '滞在先を選ぶ（{count}件選択）',
       travelersLabel: '人数',
-      nightsLabel: '予定泊数',
       nightsAutoHint: '選択地の目安：{nights}泊',
       stayHeading: '宿泊スタイル',
       stays: {

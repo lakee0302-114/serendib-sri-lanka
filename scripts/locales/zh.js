@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['zh'] = {
       step2Tab: '02 · 选择目的地',
       step3Tab: '03 · 确认提交',
       dateLabel: '抵达日期',
+      departureDateLabel: '离境日期',
       dateAny: '日期灵活',
       clearStops: '清空',
       monthHeading: '期望出行月份',
       destinationsHeading: '选择目的地（已选 {count} 站）',
       travelersLabel: '同行人数',
-      nightsLabel: '预计晚数',
       nightsAutoHint: '所选站点建议：{nights} 晚',
       stayHeading: '下榻风格',
       stays: {

@@ -2342,7 +2342,7 @@
     color: var(--ink-primary);
   }
 
-  /* Step 1: Date, Steppers, Stay Collection & Transport */
+  /* Step 1: Arrival Date, Departure Date, Travelers, Stay Collection & Transport */
   .planner-steppers {
     display: grid;
     grid-template-columns: 1fr;
@@ -2354,16 +2354,16 @@
     .planner-steppers {
       grid-template-columns: repeat(2, 1fr);
     }
-    .planner-steppers > .stepper-card:first-child {
+    .planner-steppers > .stepper-card:last-child {
       grid-column: 1 / -1;
     }
   }
 
   @media (min-width: 720px) {
     .planner-steppers {
-      grid-template-columns: 1.25fr 1fr 1fr;
+      grid-template-columns: 1.15fr 1.15fr 0.9fr;
     }
-    .planner-steppers > .stepper-card:first-child {
+    .planner-steppers > .stepper-card:last-child {
       grid-column: auto;
     }
   }

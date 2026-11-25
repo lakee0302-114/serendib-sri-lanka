@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['hi'] = {
       step2Tab: '02 · स्थान चुनें',
       step3Tab: '03 · पुष्टि करें',
       dateLabel: 'आगमन तिथि',
+      departureDateLabel: 'प्रस्थान तिथि',
       dateAny: 'लचीली तिथियां',
       clearStops: 'साफ करें',
       monthHeading: 'पसंदीदा यात्रा माह',
       destinationsHeading: 'स्थान चुनें ({count} चयनित)',
       travelersLabel: 'यात्री',
-      nightsLabel: 'कुल रातें',
       nightsAutoHint: 'चयनित स्थानों के लिए सुझाव: {nights} रातें',
       stayHeading: 'आवास श्रेणी',
       stays: {

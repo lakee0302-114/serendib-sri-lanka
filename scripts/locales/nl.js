@@ -167,12 +167,12 @@ window.SERENDIB_LOCALES['nl'] = {
       step2Tab: '02 · Kies Route',
       step3Tab: '03 · Bevestigen',
       dateLabel: 'Aankomstdatum',
+      departureDateLabel: 'Vertrekdatum',
       dateAny: 'Flexibel',
       clearStops: 'Wissen',
       monthHeading: 'Gewenste reismaand',
       destinationsHeading: 'Kies bestemmingen ({count} bewaard)',
       travelersLabel: 'Reizigers',
-      nightsLabel: 'Aantal nachten',
       nightsAutoHint: 'Aanbevolen voor deze route: {nights} nachten',
       stayHeading: 'Verblijfscollectie',
       stays: {
