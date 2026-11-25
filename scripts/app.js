@@ -423,7 +423,7 @@
       var saved = state.savedStopIds.indexOf(dest.id) !== -1;
       return (
         '<article class="dest-card" data-dest-id="' + dest.id + '">' +
-        '<div class="dest-card__media"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" loading="lazy" /></div>' +
+        '<div class="dest-card__media"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
         '<div class="dest-card__body">' +
         '<div class="dest-card__meta">' +
         '<span class="mono-label">' + dest.number + ' · ' + dest.region + '</span>' +
