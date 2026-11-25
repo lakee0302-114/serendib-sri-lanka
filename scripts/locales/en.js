@@ -69,14 +69,14 @@ window.SERENDIB_LOCALES['en'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Eight signature',
-      titleEm: 'landscapes.',
-      subcopy: 'Tap any stop for best daylight, local dishes, or route saving.',
+      titleStart: 'Sixteen iconic',
+      titleEm: 'destinations.',
+      subcopy: 'Tap any photo or card for highlights, timing, and route saving.',
       filters: {
-        all: 'All (8)',
+        all: 'All (16)',
         cultural: 'Cultural',
         highlands: 'Highlands',
-        south: 'South',
+        south: 'South & West',
         wildlife: 'Wildlife',
         northeast: 'North & East'
       },
@@ -340,6 +340,142 @@ window.SERENDIB_LOCALES['en'] = {
       ],
       culinaryNote: 'Jaffna spiced crab curry and palmyrah odiyal seafood broth.',
       etiquette: 'Men often remove shirts inside major northern Hindu kovils.'
+    },
+    kandy: {
+      name: 'Kandy & Temple of the Tooth',
+      region: 'Cultural',
+      tagline: 'Sacred hillside lake city & Perahera drums',
+      elevation: '500m',
+      driveFromColombo: '3h 30m',
+      bestTime: 'Jan–Apr · Jul–Sep',
+      daylightWindow: '06:30 & 18:30',
+      summary: 'Sri Lanka’s last royal kingdom guarding the Sacred Tooth Relic beside misty hills.',
+      highlights: [
+        'Attend evening drumming & offerings at Sri Dalada Maligawa.',
+        'Stroll beneath giant bamboo alleys inside Peradeniya Royal Gardens.',
+        'Catch sunset views above Kandy Lake from Arthur’s Seat.'
+      ],
+      culinaryNote: 'Spiced Kandyan rice & curry served on fresh lotus leaves.',
+      etiquette: 'White or covered modest attire required inside the Tooth Temple.'
+    },
+    anuradhapura: {
+      name: 'Anuradhapura Sacred City',
+      region: 'Cultural',
+      tagline: 'Towering white stupas & 2,300-year Bodhi tree',
+      elevation: '81m',
+      driveFromColombo: '4h 15m',
+      bestTime: 'Jan–Sep',
+      daylightWindow: '06:30–09:30 & Dusk',
+      summary: 'First ancient Sinhalese capital filled with monumental brick dagobas and stone ponds.',
+      highlights: [
+        'Offer jasmine at Jaya Sri Maha Bodhi, the oldest living tree.',
+        'Circle white Ruwanwelisaya Stupa lined with carved elephants.',
+        'Catch twilight climbs across Mihintale’s granite stairway.'
+      ],
+      culinaryNote: 'Traditional dry-zone kurakkan porridges and tank lotus seeds.',
+      etiquette: 'Walk clockwise around white stupas barefoot.'
+    },
+    dambulla: {
+      name: 'Dambulla Cave Temple',
+      region: 'Cultural',
+      tagline: 'Five painted cliff grottoes & golden statues',
+      elevation: '341m',
+      driveFromColombo: '3h 50m',
+      bestTime: 'Jan–Sep',
+      daylightWindow: '07:30 – 10:00',
+      summary: 'Cliffside monastery housing 153 gilded Buddhas beneath sweeping rock ceiling murals.',
+      highlights: [
+        'Explore the five main rock caves led by the Maharaja Viharaya.',
+        'Watch morning mist lift toward distant Sigiriya from the ridge.',
+        'Stop by Dambulla’s buzzing wholesale spice and produce market.'
+      ],
+      culinaryNote: 'Savory manioc chips and spicy Matale pineapple slices nearby.',
+      etiquette: 'Leave shoes with attendants at the terrace entrance.'
+    },
+    'horton-plains': {
+      name: 'Horton Plains & World’s End',
+      region: 'Highlands',
+      tagline: 'Mossy cloud forest ending at an 880m sheer cliff',
+      elevation: '2,100m',
+      driveFromColombo: '5h 30m',
+      bestTime: 'Jan–Apr · Aug',
+      daylightWindow: '06:00 – 09:00',
+      summary: 'Highest grassland plateau in Sri Lanka dropping abruptly toward southern tea plains.',
+      highlights: [
+        'Reach World’s End viewpoint before 09:00 before clouds rise.',
+        'Loop past Baker’s Falls framed by rhododendron groves.',
+        'Spot grazing Sambar deer through golden morning frost.'
+      ],
+      culinaryNote: 'Hot ginger tea and wood-fired toast at park gates.',
+      etiquette: 'Zero single-use plastics allowed — bags checked at entry.'
+    },
+    mirissa: {
+      name: 'Mirissa & Weligama Bay',
+      region: 'South & West',
+      tagline: 'Coconut headlands, surf bays & ocean giants',
+      elevation: 'Sea Level',
+      driveFromColombo: '2h 15m',
+      bestTime: 'Nov–Apr',
+      daylightWindow: '06:30 & 17:30',
+      summary: 'Twin southern bays prized for whale boats, reef breaks, and golden palm coves.',
+      highlights: [
+        'Spot blue whales and spinner dolphins offshore Dec–Mar.',
+        'Walk Coconut Tree Hill at sunrise before midday crowds.',
+        'Take gentle beginner surf lessons on Weligama beach.'
+      ],
+      culinaryNote: 'Fresh beachside grilled red snapper with lime and pol roti.',
+      etiquette: 'Pick eco-certified whale boats keeping fair distance.'
+    },
+    udawalawe: {
+      name: 'Udawalawe Elephant Park',
+      region: 'Wildlife',
+      tagline: 'Wide savannah plains full of wild elephant herds',
+      elevation: '118m',
+      driveFromColombo: '3h 45m',
+      bestTime: 'Year-round (May–Sep)',
+      daylightWindow: '06:00 & 15:30',
+      summary: 'Open dry grasslands beside Udawalawe Reservoir guaranteeing year-round wild elephants.',
+      highlights: [
+        'See playful baby elephants beside family herds all year.',
+        'Watch feeding hour at the Udawalawe Elephant Transit Home.',
+        'Spot serpent eagles perched along weathered deadwood trees.'
+      ],
+      culinaryNote: 'Fresh roadside king coconuts and sweet jaggery pancakes.',
+      etiquette: 'Avoid calling or touching wildlife from open safari jeeps.'
+    },
+    'arugam-bay': {
+      name: 'Arugam Bay & Passikudah',
+      region: 'North & East',
+      tagline: 'Indian Ocean point breaks & glassy shallow lagoons',
+      elevation: 'Sea Level',
+      driveFromColombo: '6h 30m',
+      bestTime: 'May–Sep',
+      daylightWindow: '06:00 Dawn Patrol',
+      summary: 'Laid-back eastern surf coast offering clean swells while the southwest rains.',
+      highlights: [
+        'Surf iconic right-hand point breaks at Main Point and Whiskey Point.',
+        'Swim effortlessly across Passikudah’s waist-deep reef lagoon.',
+        'Kayak quiet Pottuvil mangroves among kingfishers at sunrise.'
+      ],
+      culinaryNote: 'East-coast fish rice & curry simmered with roasted coriander.',
+      etiquette: 'Dress lightly on sandy lanes; respect calm village mosques.'
+    },
+    colombo: {
+      name: 'Colombo & Galle Face',
+      region: 'South & West',
+      tagline: 'Heritage arches, Pettah spice alleys & ocean sunsets',
+      elevation: 'Sea Level',
+      driveFromColombo: 'Gateway',
+      bestTime: 'Dec–Apr',
+      daylightWindow: '17:00 – 19:00',
+      summary: 'Warm gateway metropolis mixing colonial galleries, red mosques, and sea promenades.',
+      highlights: [
+        'Explore the red-brick Pettah market and Jami Ul-Alfar Mosque.',
+        'Admire historic galleries inside Colombo National Museum.',
+        'Snack on spiced prawn wadei along Galle Face Green at dusk.'
+      ],
+      culinaryNote: 'Ministry-style black pepper crab or fiery Pettah kottu.',
+      etiquette: 'Hydrate in humid afternoons and negotiate tuk fares by meter.'
     }
   },
   months: {

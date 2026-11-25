@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['nl'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Acht kenmerkende',
-      titleEm: 'landschappen.',
-      subcopy: 'Tik op een plek voor daglichturen, lokale keuken of om op te slaan.',
+      titleStart: 'Zestien toplocaties',
+      titleEm: 'op het eiland.',
+      subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (8)',
+        all: 'Alles (16)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -252,6 +252,54 @@ window.SERENDIB_LOCALES['nl'] = {
       summary: 'Als de zuidwestmoesson regent, stralen het noorden en oosten in droge zon.',
       highlights: ['Snorkel bij Pigeon Island en wandel over Nilaveli.', 'Bezoek Nallur Kovil in Jaffna en de pony’s van Delft.', 'Surf strakke golven bij Arugam Bay (Jun–Sep).'],
       culinaryNote: 'Pittige Jaffna-krabcurry en palmyrah-zeebouillon.', etiquette: 'Mannen doen binnen grote hindoetempels vaak hun hemd uit.'
+    },
+    kandy: {
+      name: 'Kandy & Tempel van de Tand', region: 'Cultuur', tagline: 'Heilige meerstad met oude trommels en paleistuinen', elevation: '500 m', driveFromColombo: '3u 30', bestTime: 'Jan–Apr · Jul–Sep', daylightWindow: '06:30 & 18:30',
+      summary: 'Laatste koningsstad van Ceylon met de heilige relikwie aan het meer.',
+      highlights: ['Avondceremonie en trommels bijwonen in Sri Dalada Maligawa.', 'Wandelen onder reuzenbamboe in de tuinen van Peradeniya.', 'Zonsondergang boven Kandy Lake bekijken vanaf Arthur’s Seat.'],
+      culinaryNote: 'Kruidige Kandy-rijst en curry geserveerd op lotusblad.', etiquette: 'Bedekte kleding verplicht in de Tempel van de Tand.'
+    },
+    anuradhapura: {
+      name: 'Heilige Stad Anuradhapura', region: 'Cultuur', tagline: 'Witte stoepa’s en 2.300 jaar oude heilige Bodhi-boom', elevation: '81 m', driveFromColombo: '4u 15', bestTime: 'Jan–Sep', daylightWindow: '06:30–09:30 & Avond',
+      summary: 'Eerste oude hoofdstad vol monumentale witte stoepa’s en vijvers.',
+      highlights: ['Jasmijn offeren bij de eeuwenoude Jaya Sri Maha Bodhi.', 'Langs de olifantenmuur om de Ruwanwelisaya-stoepa lopen.', 'In de schemer de granieten trappen van Mihintale beklimmen.'],
+      culinaryNote: 'Traditionele kurakkan-pap en lotuszaad uit oude meren.', etiquette: 'Loop blootsvoets met de klok mee om witte stoepa’s.'
+    },
+    dambulla: {
+      name: 'Rotstempel van Dambulla', region: 'Cultuur', tagline: 'Vijf beschilderde grotten met 153 gouden Boeddha’s', elevation: '341 m', driveFromColombo: '3u 50', bestTime: 'Jan–Sep', daylightWindow: '07:30 – 10:00',
+      summary: 'Rotsklooster hoog boven de vlakte vol antieke muurschilderingen.',
+      highlights: ['Alle vijf grotten bezoeken onder aanvoering van Maharaja Viharaya.', 'Ochtendnevel richting Sigiriya zien optrekken vanaf de rots.', 'De levendige specerijenmarkt in Dambulla bezoeken.'],
+      culinaryNote: 'Pittige Matale-ananas en krokante cassavechips langs de weg.', etiquette: 'Geef schoenen af bij de bewaker op het bovenste terras.'
+    },
+    'horton-plains': {
+      name: 'Horton Plains & World’s End', region: 'Hoogland', tagline: 'Nevelwoud op 2.100 m eindigend bij een afgrond', elevation: '2.100 m', driveFromColombo: '5u 30', bestTime: 'Jan–Apr · Aug', daylightWindow: '06:00 – 09:00',
+      summary: 'Hoogste grasplateau dat abrupt 880 meter naar het zuiden stort.',
+      highlights: ['World’s End bereiken vóór 09:00 voordat wolken opstijgen.', 'Langs Baker’s Falls wandelen tussen rododendrons.', 'Sambarherten spotten in de vroege ochtendrijp.'],
+      culinaryNote: 'Warme gemberthee bij de ingang voor de wandeling.', etiquette: 'Geen wegwerpplastic toegestaan — tassen worden gecontroleerd.'
+    },
+    mirissa: {
+      name: 'Mirissa & Weligama Baai', region: 'Zuid & West', tagline: 'Palmenheuvel, milde surf en blauwe vinvissen', elevation: 'Zeeniveau', driveFromColombo: '2u 15', bestTime: 'Nov–Apr', daylightWindow: '06:30 & 17:30',
+      summary: 'Zuidelijke baaien beroemd om walvistochten, paalvissers en surfen.',
+      highlights: ['Blauwe vinvissen spotten voor de kust tussen dec en mrt.', 'Bij zonsopkomst naar Coconut Tree Hill voor alle drukte.', 'Relaxte surflessen volgen op het brede strand van Weligama.'],
+      culinaryNote: 'Gegrilde red snapper aan zee met limoen en pol roti.', etiquette: 'Kies ecologische walvisboten op veilige afstand.'
+    },
+    udawalawe: {
+      name: 'Udawalawe Nationaal Park', region: 'Natuur', tagline: 'Open savannevlakten vol wilde olifantenkuddes', elevation: '118 m', driveFromColombo: '3u 45', bestTime: 'Hele jaar', daylightWindow: '06:00 & 15:30',
+      summary: 'Droge grasvlakten rond het stuwmeer waar olifanten altijd te zien zijn.',
+      highlights: ['Kuddes met speelse babyolifanten het hele jaar door zien.', 'Voedertijd bezoeken in het Udawalawe Elephant Transit Home.', 'Slangenarenden spotten langs verweerde bomen in het park.'],
+      culinaryNote: 'Verse koningskokosnoot langs de weg en zoete pannenkoeken.', etiquette: 'Roep of raak geen wilde dieren aan vanuit de open jeep.'
+    },
+    'arugam-bay': {
+      name: 'Arugam Bay & Passikudah', region: 'Noord & Oost', tagline: 'Topgolven in de Indische Oceaan & stille lagunes', elevation: 'Zeeniveau', driveFromColombo: '6u 30', bestTime: 'Mei–Sep', daylightWindow: '06:00 Ochtendgolf',
+      summary: 'Relaxte oostkust met perfecte golven tijdens het regenseizoen elders.',
+      highlights: ['Lange rechtse golven pakken bij Main Point en Whiskey Point.', 'Rustig zwemmen in de ondiepe lagune van Passikudah.', 'In de vroege ochtend kajakken op de lagune van Pottuvil.'],
+      culinaryNote: 'Viscurry aan de oostkust gestoofd met geroosterde koriander.', etiquette: 'Draag gepaste kleding in rustige vissersdorpen.'
+    },
+    colombo: {
+      name: 'Colombo & Galle Face', region: 'Zuid & West', tagline: 'Koloniale hallen, Pettah-steegjes & oceaanzonsondergang', elevation: 'Zeeniveau', driveFromColombo: 'Aankomst', bestTime: 'Dec–Apr', daylightWindow: '17:00 – 19:00',
+      summary: 'Levendige kusthoofdstad met musea, rode moskeeën en boulevard.',
+      highlights: ['Rode bakstenen Jami Ul-Alfar-moskee en Pettah-markt verkennen.', 'Historische zalen bewonderen in het Nationaal Museum.', 'Pittige garnalenkoekjes eten op Galle Face Green bij schemer.'],
+      culinaryNote: 'Zwartpeper-krab of pittige Pettah kottu van de plaat.', etiquette: 'Gebruik tuk-tuks met meter en drink goed water.'
     }
   },
   months: {

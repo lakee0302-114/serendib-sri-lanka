@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['it'] = {
     },
     atlas: {
       eyebrow: '02 / Atlante',
-      titleStart: 'Otto paesaggi',
-      titleEm: 'simbolo.',
-      subcopy: 'Tocca una tappa per luce migliore, cucina locale o per salvarla.',
+      titleStart: 'Sedici luoghi',
+      titleEm: 'imperdibili.',
+      subcopy: 'Tocca foto o titolo per luce migliore, cucina o per salvare la tappa.',
       filters: {
-        all: 'Tutti (8)',
+        all: 'Tutti (16)',
         cultural: 'Cultura',
         highlands: 'Montagne',
         south: 'Sud',
@@ -252,6 +252,54 @@ window.SERENDIB_LOCALES['it'] = {
       summary: 'Quando il monsone bagna il sud-ovest, nord ed est splendono sotto sole secco.',
       highlights: ['Fare snorkeling a Pigeon Island e passeggiare a Nilaveli.', 'Scoprire il tempio Nallur a Jaffna e i pony di Delft.', 'Surfare onde pulite ad Arugam Bay tra giugno e settembre.'],
       culinaryNote: 'Curry speziato di granchio alla maniera di Jaffna.', etiquette: 'Nei grandi templi indù del nord gli uomini spesso tolgono la camicia.'
+    },
+    kandy: {
+      name: 'Kandy & Tempio del Dente', region: 'Cultura', tagline: 'Città reale sul lago con riti e tamburi tradizionali', elevation: '500 m', driveFromColombo: '3h 30', bestTime: 'Gen–Apr · Lug–Set', daylightWindow: '06:30 & 18:30',
+      summary: 'Ultima capitale reale che custodisce la sacra reliquia accanto al lago.',
+      highlights: ['Seguire i riti serali con tamburi al Sri Dalada Maligawa.', 'Passeggiare tra i bambù giganti del Giardino di Peradeniya.', 'Ammirare il tramonto sul lago dal belvedere Arthur’s Seat.'],
+      culinaryNote: 'Riso e curry alla moda di Kandy su foglia di loto.', etiquette: 'Abbigliamento sobrio che copra spalle e ginocchia nel tempio.'
+    },
+    anuradhapura: {
+      name: 'Città Sacra di Anuradhapura', region: 'Cultura', tagline: 'Enormi stupa bianchi e l’antico albero sacro Bodhi', elevation: '81 m', driveFromColombo: '4h 15', bestTime: 'Gen–Set', daylightWindow: '06:30–09:30 & Sera',
+      summary: 'Prima capitale singalese costellata di monumentali dagoba e stagni sacri.',
+      highlights: ['Portare fiori di gelsomino al Jaya Sri Maha Bodhi.', 'Costeggiare il muro di elefanti intorno al Ruwanwelisaya.', 'Salire i gradini di granito di Mihintale al tramonto.'],
+      culinaryNote: 'Zuppa tradizionale di miglio kurakkan e semi di loto.', etiquette: 'Girare scalzi in senso orario intorno agli stupa.'
+    },
+    dambulla: {
+      name: 'Tempio nella Roccia di Dambulla', region: 'Cultura', tagline: 'Cinque grotte dipinte con oltre 150 Buddha dorati', elevation: '341 m', driveFromColombo: '3h 50', bestTime: 'Gen–Set', daylightWindow: '07:30 – 10:00',
+      summary: 'Santuario rupestre panoramico celebre per gli affreschi antichi sulle volte.',
+      highlights: ['Visitare tutte e cinque le grotte sacre sul crinale.', 'Osservare l’alba verso Sigiriya dall’altopiano roccioso.', 'Passare dal mercato vivace delle spezie a Dambulla.'],
+      culinaryNote: 'Fette di ananas dolce di Matale con spezie locali.', etiquette: 'Lasciare le scarpe all’ingresso della terrazza superiore.'
+    },
+    'horton-plains': {
+      name: 'Horton Plains & World’s End', region: 'Montagne', tagline: 'Altopiano nebbioso a picco su uno strapiombo di 880 m', elevation: '2.100 m', driveFromColombo: '5h 30', bestTime: 'Gen–Apr · Ago', daylightWindow: '06:00 – 09:00',
+      summary: 'Prateria d’alta quota che precipita all’improvviso verso le valli del sud.',
+      highlights: ['Raggiungere World’s End prima delle 09:00 prima delle nubi.', 'Toccare le cascate Baker’s Falls tra i rododendri.', 'Avvistare cervi Sambar nella brina dorata del mattino.'],
+      culinaryNote: 'Tè bollente allo zenzero all’ingresso della riserva.', etiquette: 'Vietata la plastica monouso — zaini controllati all’ingresso.'
+    },
+    mirissa: {
+      name: 'Mirissa & Baia di Weligama', region: 'Sud & Ovest', tagline: 'Collina delle palme, surf dolce e balenottere azzurre', elevation: 'Livello mare', driveFromColombo: '2h 15', bestTime: 'Nov–Apr', daylightWindow: '06:30 & 17:30',
+      summary: 'Due baie meridionali celebri per cetacei, pescatori sui pali e onde facili.',
+      highlights: ['Avvistare balenottere azzurre al largo da dicembre a marzo.', 'Salire all’alba a Coconut Tree Hill prima della folla.', 'Fare lezioni di surf sulle onde dolci di Weligama.'],
+      culinaryNote: 'Dentice grigliato al lime fresco con pane al cocco.', etiquette: 'Scegliere barche eco-certificate rispettose delle balene.'
+    },
+    udawalawe: {
+      name: 'Parco Nazionale Udawalawe', region: 'Natura', tagline: 'Pianure aperte popolate da branchi di elefanti', elevation: '118 m', driveFromColombo: '3h 45', bestTime: 'Tutto l’anno', daylightWindow: '06:00 & 15:30',
+      summary: 'Praterie intorno al bacino idrico con avvistamento certo tutto l’anno.',
+      highlights: ['Ammirare cuccioli e famiglie di elefanti liberi in savana.', 'Assistere al pasto all’Elephant Transit Home vicino al parco.', 'Scorgere aquile serpentarie tra i tronchi d’acqua.'],
+      culinaryNote: 'Noce di cocco reale fresca lungo la strada e frittelle dolci.', etiquette: 'Mai chiamare né toccare gli animali dalla jeep.'
+    },
+    'arugam-bay': {
+      name: 'Arugam Bay & Passikudah', region: 'Nord & Est', tagline: 'Onde famose nell’Oceano Indiano e lagune cristalline', elevation: 'Livello mare', driveFromColombo: '6h 30', bestTime: 'Mag–Set', daylightWindow: '06:00 Alba',
+      summary: 'Rilassata costa est dal clima secco estivo perfetta per surf e bagni calmi.',
+      highlights: ['Surfare lunghe onde destre a Main Point e Whiskey Point.', 'Nuotare nella bassa e limpidissima laguna di Passikudah.', 'Pagaiare in kayak all’alba nella laguna di Pottuvil.'],
+      culinaryNote: 'Riso e curry di pesce dell’est al coriandolo tostato.', etiquette: 'Abbigliamento rispettoso nelle vie dei villaggi costieri.'
+    },
+    colombo: {
+      name: 'Colombo & Galle Face', region: 'Sud & Ovest', tagline: 'Architetture coloniali, bazar di Pettah e mare al tramonto', elevation: 'Livello mare', driveFromColombo: 'Scelta iniziale', bestTime: 'Dic–Apr', daylightWindow: '17:00 – 19:00',
+      summary: 'Capitale vivace tra musei candidi, moschee rosse e lungomare.',
+      highlights: ['Scoprire il colorato mercato di Pettah e Jami Ul-Alfar.', 'Visitare le collezioni storiche al Museo Nazionale.', 'Assaggiare frittelle di gamberi al tramonto sul Galle Face.'],
+      culinaryNote: 'Granchio al pepe nero o kottu caldo nel cuore di Pettah.', etiquette: 'Preferire tuk-tuk con tassametro e bere molta acqua.'
     }
   },
   months: {

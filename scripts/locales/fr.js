@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['fr'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Huit paysages',
-      titleEm: 'essentiels.',
+      titleStart: 'Seize sites',
+      titleEm: 'incontournables.',
       subcopy: 'Touchez une étape pour la lumière idéale, la table ou votre circuit.',
       filters: {
-        all: 'Tous (8)',
+        all: 'Tous (16)',
         cultural: 'Culture',
         highlands: 'Montagnes',
         south: 'Sud',
@@ -340,6 +340,54 @@ window.SERENDIB_LOCALES['fr'] = {
       ],
       culinaryNote: 'Curry épicé de crabe de Jaffna et bouillon de palmyre.',
       etiquette: 'Les hommes retirent souvent leur chemise dans les grands kovils.'
+    },
+    kandy: {
+      name: 'Kandy & Temple de la Dent', region: 'Culture', tagline: 'Cité royale du lac sacré et tambours anciens', elevation: '500 m', driveFromColombo: '3h 30', bestTime: 'Jan–Avr · Juil–Sep', daylightWindow: '06:30 & 18:30',
+      summary: 'Dernier royaume ceylanais abritant la relique sacrée au bord du lac.',
+      highlights: ['Assister aux percussions du soir à Sri Dalada Maligawa.', 'Flâner sous les bambous géants du jardin de Peradeniya.', 'Admirer le lac au coucher du soleil depuis Arthur’s Seat.'],
+      culinaryNote: 'Riz et curry kandyan servis sur feuille de lotus.', etiquette: 'Tenue couvrante exigée à l’intérieur du Temple de la Dent.'
+    },
+    anuradhapura: {
+      name: 'Cité Sacrée d’Anuradhapura', region: 'Culture', tagline: 'Grands stupas blancs et figuier sacré millénaire', elevation: '81 m', driveFromColombo: '4h 15', bestTime: 'Jan–Sep', daylightWindow: '06:30–09:30 & Soir',
+      summary: 'Première capitale royale parsemée d’immenses dagobas blancs et bassins.',
+      highlights: ['Déposer du jasmin au Jaya Sri Maha Bodhi.', 'Longer le mur d’éléphants du stupa Ruwanwelisaya.', 'Gravir les marches de granit de Mihintale au crépuscule.'],
+      culinaryNote: 'Bouillie traditionnelle de kurakkan et graines de lotus.', etiquette: 'Tourner pieds nus dans le sens horaire autour des stupas.'
+    },
+    dambulla: {
+      name: 'Grottes de Dambulla', region: 'Culture', tagline: 'Cinq sanctuaires rupestres peints et statues d’or', elevation: '341 m', driveFromColombo: '3h 50', bestTime: 'Jan–Sep', daylightWindow: '07:30 – 10:00',
+      summary: 'Monastère en falaise abritant 153 Bouddhas dorés sous des voûtes peintes.',
+      highlights: ['Parcourir les cinq grottes dont le grand Maharaja Viharaya.', 'Contempler la brume matinale vers le rocher de Sigiriya.', 'Découvrir le marché d’épices et de fruits de Dambulla.'],
+      culinaryNote: 'Ananas épicés de Matale et chips de manioc croustillantes.', etiquette: 'Laisser vos chaussures à l’entrée de la terrasse haute.'
+    },
+    'horton-plains': {
+      name: 'Plaines d’Horton & World’s End', region: 'Montagnes', tagline: 'Forêt de nuages s’achevant sur une falaise de 880 m', elevation: '2 100 m', driveFromColombo: '5h 30', bestTime: 'Jan–Avr · Août', daylightWindow: '06:00 – 09:00',
+      summary: 'Plus haut plateau d’altitude plongeant d’un coup vers les plaines du sud.',
+      highlights: ['Atteindre World’s End avant 09h00 avant les nuages.', 'Passer les cascades de Baker’s Falls sous les rhododendrons.', 'Observer les cerfs sambars dans la rosée du matin.'],
+      culinaryNote: 'Thé au gingembre chaud servi aux portes du parc.', etiquette: 'Zéro plastique jetable autorisé — contrôle à l’entrée.'
+    },
+    mirissa: {
+      name: 'Mirissa & Baie de Weligama', region: 'Côte Sud', tagline: 'Colline aux cocotiers, surf doux et baleines bleues', elevation: 'Niveau mer', driveFromColombo: '2h 15', bestTime: 'Nov–Avr', daylightWindow: '06:30 & 17:30',
+      summary: 'Baies jumelles réputées pour les baleines, pêcheurs sur échasses et surf.',
+      highlights: ['Partir voir les baleines bleues au large de décembre à mars.', 'Monter à Coconut Tree Hill au lever du jour.', 'Prendre un cours de surf doux sur le sable de Weligama.'],
+      culinaryNote: 'Vivaneau grillé au citron vert et galettes de coco pol roti.', etiquette: 'Choisir des sorties cétacés éthiques à distance respectueuse.'
+    },
+    udawalawe: {
+      name: 'Parc National d’Udawalawe', region: 'Faune', tagline: 'Savanes dorées peuplées de troupeaux d’éléphants', elevation: '118 m', driveFromColombo: '3h 45', bestTime: 'Toute l’année', daylightWindow: '06:00 & 15:30',
+      summary: 'Grandes plaines ouvertes garantissant d’observer des éléphants toute l’année.',
+      highlights: ['Observer éléphanteaux et familles près du grand lac.', 'Assister à la tétée au centre de transit d’Udawalawe.', 'Repérer aigles serpents et paons dans la lumière d’or.'],
+      culinaryNote: 'Noix de coco royale fraîche et crêpes au sirop jaggery.', etiquette: 'Ne jamais appeler ni nourrir les animaux depuis le 4x4.'
+    },
+    'arugam-bay': {
+      name: 'Arugam Bay & Passikudah', region: 'Nord & Est', tagline: 'Vagues mythiques de l’océan Indien et lagons calmes', elevation: 'Niveau mer', driveFromColombo: '6h 30', bestTime: 'Mai–Sep', daylightWindow: '06:00 Lever du jour',
+      summary: 'Côte est décontractée combinant point breaks parfaits et lagons limpides.',
+      highlights: ['Surfer les longues droites de Main Point et Whiskey Point.', 'Nager sans vague dans le lagon peu profond de Passikudah.', 'Pagayer en kayak sur la lagune paisible de Pottuvil.'],
+      culinaryNote: 'Curry de poisson de la côte est à la coriandre grillée.', etiquette: 'Tenue légère mais respectueuse dans les villages côtiers.'
+    },
+    colombo: {
+      name: 'Colombo & Galle Face', region: 'Ouest & Sud', tagline: 'Halls coloniaux, ruelles de Pettah et coucher de soleil', elevation: 'Niveau mer', driveFromColombo: 'Point d’arrivée', bestTime: 'Déc–Avr', daylightWindow: '17:00 – 19:00',
+      summary: 'Capitale maritime mêlant musées historiques, mosquée rouge et océan.',
+      highlights: ['Explorer les marchés colorés de Pettah et Jami Ul-Alfar.', 'Visiter les galeries anciennes du Musée National.', 'Déguster des beignets épicés sur Galle Face Green au crépuscule.'],
+      culinaryNote: 'Crabe au poivre noir ou kottu brûlant du quartier Pettah.', etiquette: 'Utiliser des tuk-tuks à compteur et rester hydraté.'
     }
   },
   months: {

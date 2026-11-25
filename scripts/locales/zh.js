@@ -70,10 +70,10 @@ window.SERENDIB_LOCALES['zh'] = {
     atlas: {
       eyebrow: '02 / 目的地图册',
       titleStart: '定义海岛的',
-      titleEm: '八大风景。',
+      titleEm: '十六大风景。',
       subcopy: '点击任一站查看最佳采光时段、风味美食或加入行程。',
       filters: {
-        all: '全部 (8)',
+        all: '全部 (16)',
         cultural: '文化三角',
         highlands: '高山茶园',
         south: '南岸海湾',
@@ -212,7 +212,15 @@ window.SERENDIB_LOCALES['zh'] = {
     'nuwara-eliya': { name: '哈顿与高山茶区', region: '高山茶园', tagline: '翡翠茶谷、殖民茶园木屋与清晨薄雾', elevation: '1,868米', driveFromColombo: '车程4小时30分', bestTime: '1–4月 · 8月', daylightWindow: '06:15 – 09:30', summary: '卡斯尔雷水库周围高海拔冷凉山谷，出产清亮带柑橘花香的锡兰红茶。', highlights: ['随茶园顾问漫步茶垄学习“一芽两叶”传统工艺。', '清晨赴霍顿平原跨越世界尽头悬崖与贝克瀑布。', '在修复的百年茶园老屋壁炉旁品味高地午茶。'], culinaryNote: '丁布拉金毫白毫橙佩科红茶配豆蔻酥饼。', etiquette: '夜间常降至12°C，需备保暖针织衫；拍茶农前先征求同意。' },
     polonnaruwa: { name: '波隆纳鲁瓦与里蒂加拉', region: '文化三角', tagline: '内陆大湖畔十二世纪石雕佛寺与遗迹', elevation: '52米', driveFromColombo: '4小时50分', bestTime: '1–9月', daylightWindow: '07:00–10:00 (骑行)', summary: '相比吴哥更幽静的中世纪都城，花岗岩大佛与人工蓄水湖交相辉映。', highlights: ['林荫下骑行串联皇宫广场、圆形佛舍利塔与石雕寺。', '近观加尔寺整块花岗岩雕出的巨型立佛与卧佛。', '探访藏于林间青苔石阶上的里蒂加拉古修行院。'], culinaryNote: '淡水湖鱼配酸角、姜黄与鲜辣木荚焖煮。', etiquette: '踏入神圣石台前脱鞋脱帽，可穿厚棉袜防石面烫脚。' },
     bentota: { name: '本托塔与坦加勒海湾', region: '南岸海湾', tagline: '巴瓦热带极简美学与幽静新月湾', elevation: '海平面', driveFromColombo: '1小时30分', bestTime: '11–4月', daylightWindow: '07:00 与 17:15', summary: '消除室内外界线的热带现代主义庭院直面棕榈海滩与平静内河。', highlights: ['提前预约游览本托塔郊外巴瓦的私家园林卢努甘卡。', '12月至3月出海美蕊沙或唐德拉角追寻蓝鲸。', '退隐戈扬博卡与雷卡瓦空旷湾畔漫步护龟滩。'], culinaryNote: '黑胡椒咖喱叶与香兰叶焖炒泻湖泥蟹。', etiquette: '夜晚探访海龟产卵滩需持导游提供的暗红光手电。' },
-    'trinco-jaffna': { name: '亭可马里与贾夫纳', region: '北与东岸', tagline: '夏日玻璃海、珊瑚岛礁与北方泰米尔文化', elevation: '海平面', driveFromColombo: '车程5小时30分', bestTime: '5–10月', daylightWindow: '06:00 与 17:30', summary: '每当西南迎来季风雨季，北方与东海岸便放晴迎来绝佳潜水季。', highlights: ['鸽子岛珊瑚礁浮潜并沿开阔的尼拉韦利白沙晨步。', '往北参拜贾夫纳纳卢尔神庙，赴代尔夫特岛寻野马。', '6至9月在东岸阿鲁甘湾尽享稳定右跑道海浪冲浪。'], culinaryNote: '香料浓郁的贾夫纳螃蟹咖喱配棕榈根粉海鲜浓汤。', etiquette: '北方主要印度教神庙内男士常需依传统脱去上衣示敬。' }
+    'trinco-jaffna': { name: '亭可马里与贾夫纳', region: '北与东岸', tagline: '夏日玻璃海、珊瑚岛礁与北方泰米尔文化', elevation: '海平面', driveFromColombo: '车程5小时30分', bestTime: '5–10月', daylightWindow: '06:00 与 17:30', summary: '每当西南迎来季风雨季，北方与东海岸便放晴迎来绝佳潜水季。', highlights: ['鸽子岛珊瑚礁浮潜并沿开阔的尼拉韦利白沙晨步。', '往北参拜贾夫纳纳卢尔神庙，赴代尔夫特岛寻野马。', '6至9月在东岸阿鲁甘湾尽享稳定右跑道海浪冲浪。'], culinaryNote: '香料浓郁的贾夫纳螃蟹咖喱配棕榈根粉海鲜浓汤。', etiquette: '北方主要印度教神庙内男士常需依传统脱去上衣示敬。' },
+    kandy: { name: '康提与佛牙寺', region: '文化古城', tagline: '云雾山城圣湖畔与佛牙祭典鼓声', elevation: '500米', driveFromColombo: '车程3小时30分', bestTime: '1–4月 · 7–9月', daylightWindow: '06:30 与 18:30', summary: '斯里兰卡末代王朝古都，静谧康提湖畔供奉着珍贵的佛牙舍利。', highlights: ['傍晚前往佛牙寺聆听传统礼拜鼓乐与供奉仪式。', '漫步佩拉德尼亚皇家植物园参天巨竹大道。', '从亚瑟王座观景台俯瞰康提湖落日余晖。'], culinaryNote: '铺在新鲜荷叶上享用的香料康提咖喱饭。', etiquette: '进入佛牙寺需着洁白或遮盖肩膝的得体服装。' },
+    anuradhapura: { name: '阿努拉德普勒圣城', region: '文化古城', tagline: '巍峨白色佛塔与2,300年圣菩提树', elevation: '81米', driveFromColombo: '车程4小时15分', bestTime: '1–9月', daylightWindow: '06:30–09:30 与黄昏', summary: '僧伽罗最早的古代王都，遍布宏伟红砖舍利塔与古老蓄水池。', highlights: ['在现存最古老的历史圣树圣菩提树前敬献茉莉花。', '绕行雕刻大象环绕的洁白鲁万韦利萨亚大佛塔。', '黄昏时分攀登米欣塔莱花岗岩古石阶眺望平原。'], culinaryNote: '旱区传统粟米粥与古城湖塘莲子风味。', etiquette: '需赤足并按顺时针方向绕行白色佛塔。' },
+    dambulla: { name: '丹布勒石窟寺', region: '文化古城', tagline: '五座彩绘悬崖洞窟与百余尊贴金佛像', elevation: '341米', driveFromColombo: '车程3小时50分', bestTime: '1–9月', daylightWindow: '07:30 – 10:00', summary: '巨型岩壁洞穴群内穹顶壁画连绵，供奉着153尊金色佛像。', highlights: ['探访以玛哈拉贾寺为首的五大岩壁石窟群。', '晨雾散尽时从山脊遥望远处的狮子岩轮廓。', '顺路逛山脚下热闹的香料与蔬果批发集市。'], culinaryNote: '香脆木薯片与马塔莱微辣多汁菠萝块。', etiquette: '露台入口须寄存鞋履，拍照切勿背对佛像。' },
+    'horton-plains': { name: '霍顿平原与世界尽头', region: '高地茶园', tagline: '苔藓云雾森林尽头的880米垂直绝壁', elevation: '2,100米', driveFromColombo: '车程5小时30分', bestTime: '1–4月 · 8月', daylightWindow: '06:00 – 09:00', summary: '斯里兰卡地势最高的高原草甸，于南缘陡然坠向茶园平原。', highlights: ['趁上午九点云雾升腾前赶到世界尽头悬崖观景台。', '徒步穿行杜鹃花丛环绕的贝克瀑布环线步道。', '在清冽晨霜草地上偶遇漫步的野生水鹿。'], culinaryNote: '公园入口供应的热姜茶与柴烤吐司。', etiquette: '严禁携带一次性塑料制品入园，门口将检查背包。' },
+    mirissa: { name: '美蕊沙与韦利格默湾', region: '南与西岸', tagline: '椰林岬角、冲浪浅湾与深海蓝鲸', elevation: '海平面', driveFromColombo: '车程2小时15分', bestTime: '11–4月', daylightWindow: '06:30 与 17:30', summary: '比邻而居的南岸双湾，以远海观鲸、柔和浪点与金色椰林海湾闻名。', highlights: ['十二月至三月乘环保船出海观赏蓝鲸与飞旋海豚。', '赶在中午人潮前日出漫步椰树山岬角。', '在平缓的韦利格默沙滩体验轻松入门冲浪课。'], culinaryNote: '海边炭烤新鲜红鲷鱼配青柠与椰丝烤饼。', etiquette: '请选用保持安全距离的合规生态观鲸船只。' },
+    udawalawe: { name: '乌达瓦拉维象群公园', region: '野生动物', tagline: '开阔稀树草原与成群野生亚洲象', elevation: '118米', driveFromColombo: '车程3小时45分', bestTime: '全年皆宜（5–9月尤佳）', daylightWindow: '06:00 与 15:30', summary: '水库旁的开阔旱区草原，使这里全年都有极高概率见到野生象群。', highlights: ['四季皆可近距离观察顽皮幼象依偎象群家族。', '在乌达瓦拉维小象救护站观看定时喂奶场景。', '留意枯木枝头停歇的蛇雕与色彩艳丽的孔雀。'], culinaryNote: '路边现砍清甜黄金椰子配棕榈糖薄饼。', etiquette: '切勿在敞篷越野车上呼喊或向野生动物投食。' },
+    'arugam-bay': { name: '阿鲁甘湾与帕西库达', region: '北与东岸', tagline: '印度洋经典右跑道浪点与玻璃般浅水潟湖', elevation: '海平面', driveFromColombo: '车程6小时30分', bestTime: '5–9月', daylightWindow: '06:00 晨浪', summary: '当西南海岸步入雨季，东海岸正迎来纯净海浪与平缓清澈的珊瑚湾。', highlights: ['在主浪点与威士忌浪点畅享长距离右手海浪冲浪。', '于帕西库达及腰深的平静珊瑚礁潟湖悠然畅游。', '清晨划独木舟穿梭波图维勒静谧红树林间寻翠鸟。'], culinaryNote: '烘焙芫荽炖煮的东岸风味鱼咖喱饭。', etiquette: '离开沙滩进入宁静村落巷道时请保持着装得体。' },
+    colombo: { name: '科伦坡与加勒菲斯绿地', region: '南与西岸', tagline: '殖民拱廊建筑、贝塔香料巷与海滨落日', elevation: '海平面', driveFromColombo: '国际门户', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: '温润热闹的海滨首府，交融古典博物长廊、红白清真寺与海岸长堤。', highlights: ['探访红白砖砌的加米乌尔阿尔法清真寺与贝塔市集老巷。', '步入科伦坡国家博物馆欣赏斯里兰卡历代珍藏展厅。', '傍晚在加勒菲斯绿地品尝酥香鲜虾炸饼观海霞。'], culinaryNote: '招牌黑胡椒螃蟹或贝塔夜市火热铁板炒饼。', etiquette: '午后湿热注意补水，搭乘突突车请优先要求打表计费。' }
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '干季巅峰 — 西南岸与茶山', summary: '山地清晨干爽、南部海水澄澈、国家公园易见猎豹。', festival: '杜鲁图游行 · 泰米尔丰收节', verdicts: { south: { status: '晴空艳阳', note: '海平如镜，美蕊沙蓝鲸活跃。' }, highlands: { status: '晴朗微凉', note: '山口明净，夜间添衣保暖。' }, cultural: { status: '干爽宜人', note: '古城正午少雨适合漫游。' }, northeast: { status: '阵雨', note: '东海多浪，贾夫纳大部晴干。' } } },

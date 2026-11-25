@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['de'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Acht prägende',
-      titleEm: 'Landschaften.',
-      subcopy: 'Tippen Sie für beste Tageszeit, Küche oder Routenplanung.',
+      titleStart: 'Sechzehn prägende',
+      titleEm: 'Reiseziele.',
+      subcopy: 'Tippen Sie auf Bild oder Titel für Zeiten, Küche und Planung.',
       filters: {
-        all: 'Alle (8)',
+        all: 'Alle (16)',
         cultural: 'Kultur',
         highlands: 'Hochland',
         south: 'Süden',
@@ -340,6 +340,54 @@ window.SERENDIB_LOCALES['de'] = {
       ],
       culinaryNote: 'Würziges Jaffna-Krabbencurry mit Palmyrah-Sud.',
       etiquette: 'Männer legen in großen Hindutempeln oft das Hemd ab.'
+    },
+    kandy: {
+      name: 'Kandy & Zahntempel', region: 'Kultur', tagline: 'Königliche Seenstadt mit heiligem Tempel und Trommeln', elevation: '500 m', driveFromColombo: '3h 30', bestTime: 'Jan–Apr · Jul–Sep', daylightWindow: '06:30 & 18:30',
+      summary: 'Letzte Königsstadt der Insel rund um den See und den heiligen Zahntempel.',
+      highlights: ['Abendzeremonie mit Trommlern im Sri Dalada Maligawa erleben.', 'Durch den Botanischen Garten Peradeniya unter Bambus spazieren.', 'Sonnenuntergang über dem Kandy-See am Arthur’s Seat genießen.'],
+      culinaryNote: 'Würziges Kandy-Curry serviert auf frischem Lotosblatt.', etiquette: 'Bedeckte, helle Kleidung im Inneren des Zahntempels tragen.'
+    },
+    anuradhapura: {
+      name: 'Heilige Stadt Anuradhapura', region: 'Kultur', tagline: 'Weiße Riesen-Stupas und 2.300 Jahre alter Bodhi-Baum', elevation: '81 m', driveFromColombo: '4h 15', bestTime: 'Jan–Sep', daylightWindow: '06:30–09:30 & Abend',
+      summary: 'Erste Königsstadt voll monumentaler Backstein-Dagobas und stiller Klöster.',
+      highlights: ['Blütenopfer am heiligen Sri-Maha-Bodhi-Baum erleben.', 'Die weiße Ruwanwelisaya-Stupa entlang der Elefantenmauer umrunden.', 'Abends über die Granittreppen von Mihintale steigen.'],
+      culinaryNote: 'Traditioneller Kurakkan-Brei und Gerichte der Trockenzone.', etiquette: 'Stupas stets barfuß im Uhrzeigersinn umrunden.'
+    },
+    dambulla: {
+      name: 'Höhlentempel Dambulla', region: 'Kultur', tagline: 'Fünf bemalte Felsgrotten voller goldener Buddhas', elevation: '341 m', driveFromColombo: '3h 50', bestTime: 'Jan–Sep', daylightWindow: '07:30 – 10:00',
+      summary: 'Felskloster über der Ebene mit 153 Statuen und bunten Deckenmalereien.',
+      highlights: ['Alle fünf Haupthöhlen bis zum Maharaja-Schrein erkunden.', 'Morgens vom Felskamm Richtung Sigiriya blicken.', 'Den lebhaften Gewürz- und Obstmarkt in Dambulla besuchen.'],
+      culinaryNote: 'Würzige Matale-Ananas und knusprige Maniok-Chips.', etiquette: 'Schuhe oben an der Tempelterrasse abgeben.'
+    },
+    'horton-plains': {
+      name: 'Horton Plains & World’s End', region: 'Hochland', tagline: 'Nebelwald-Hochebene vor 880 m tiefem Steilabfall', elevation: '2.100 m', driveFromColombo: '5h 30', bestTime: 'Jan–Apr · Aug', daylightWindow: '06:00 – 09:00',
+      summary: 'Höchstes Hochplateau Sri Lankas mit dramatischem Panoramablick.',
+      highlights: ['World’s End vor 09:00 vor dem Aufsteigen der Wolken erreichen.', 'Vorbei an den Baker’s Falls unter Rhododendren wandern.', 'Sambarhirsche im kühlen Morgenfrost beobachten.'],
+      culinaryNote: 'Heißer Ingwertee am Parkeingang vor dem Marsch.', etiquette: 'Kein Einwegplastik — Taschenkontrolle am Eingang.'
+    },
+    mirissa: {
+      name: 'Mirissa & Weligama Bucht', region: 'Süd & West', tagline: 'Palmenhügel, sanfte Surfwellen & Blauwale', elevation: 'Meereshöhe', driveFromColombo: '2h 15', bestTime: 'Nov–Apr', daylightWindow: '06:30 & 17:30',
+      summary: 'Beliebte Doppelbucht für Walbeobachtung, Stelzenfischer und Strandcafés.',
+      highlights: ['Von Dez bis Mär Blauwale vor der Küste beobachten.', 'Bei Sonnenaufgang zum Coconut Tree Hill spazieren.', 'An den sanften Wellen in Weligama surfen lernen.'],
+      culinaryNote: 'Frisch gegrillter Red Snapper mit Limette und Pol Roti.', etiquette: 'Zertifizierte, tierfreundliche Wal-Touren wählen.'
+    },
+    udawalawe: {
+      name: 'Udawalawe-Nationalpark', region: 'Wildnis', tagline: 'Offene Savannen voller wilder Elefantenherden', elevation: '118 m', driveFromColombo: '3h 45', bestTime: 'Ganzjährig', daylightWindow: '06:00 & 15:30',
+      summary: 'Weite Graslandschaft am Stausee mit garantierter Elefantensichtung.',
+      highlights: ['Elefantenfamilien mit Jungtieren in freier Wildbahn sehen.', 'Fütterung im benachbarten Elephant Transit Home besuchen.', 'Schlangenadler und Seeadler entlang alter Bäume entdecken.'],
+      culinaryNote: 'Frische King-Coconut am Wegesrand und Jaggery-Crêpes.', etiquette: 'Keine Tiere aus dem offenen Jeep heraus anlocken.'
+    },
+    'arugam-bay': {
+      name: 'Arugam Bay & Passikudah', region: 'Nord & Ost', tagline: 'Weltklasse-Surfspots & ruhige türkise Lagunen', elevation: 'Meereshöhe', driveFromColombo: '6h 30', bestTime: 'Mai–Sep', daylightWindow: '06:00 Morgenwelle',
+      summary: 'Entspannte Ostküste mit langen Surfwellen während der Südwest-Regenzeit.',
+      highlights: ['Lange Rechtswellen am Main Point und Whiskey Point surfen.', 'Im hüfttiefen klaren Wasser von Passikudah entspannen.', 'Im Morgenlicht durch die Pottuvil-Lagune paddeln.'],
+      culinaryNote: 'Ostküsten-Fischcurry mit geröstetem Koriander.', etiquette: 'Ruhige Kleidung abseits des Strands in Küstendörfern tragen.'
+    },
+    colombo: {
+      name: 'Colombo & Galle Face', region: 'Süd & West', tagline: 'Kolonialbauten, Pettah-Basar & Meerpromenade', elevation: 'Meereshöhe', driveFromColombo: 'Ankunftstor', bestTime: 'Dez–Apr', daylightWindow: '17:00 – 19:00',
+      summary: 'Lebendige Hafenmetropole voller Kontraste aus Kolonialzeit und Moderne.',
+      highlights: ['Rot-weiße Jami-Ul-Alfar-Moschee und Pettah-Markt erleben.', 'Im historischen Nationalmuseum von Colombo stöbern.', 'Abends würzige Garnelen-Snacks an der Galle Face Green kosten.'],
+      culinaryNote: 'Pfefferkrabbe oder heißes Kottu direkt aus Pettah.', etiquette: 'Tuk-Tuk-Taxameter nutzen und tagsüber genug trinken.'
     }
   },
   months: {
