@@ -377,6 +377,9 @@
 
     var onScroll = function () {
       dom.header.classList.toggle('is-scrolled', window.scrollY > 40);
+      if (dom.floatingBar) {
+        dom.floatingBar.classList.toggle('is-visible', state.savedStopIds.length > 0 && window.scrollY > 360);
+      }
       if (!supportsScrollTimeline && dom.scrollProgress) {
         var max = document.documentElement.scrollHeight - window.innerHeight;
         var ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
@@ -616,7 +619,7 @@
     }
 
     if (dom.floatingBar && dom.floatingCount) {
-      dom.floatingBar.classList.toggle('is-visible', savedObjects.length > 0);
+      dom.floatingBar.classList.toggle('is-visible', savedObjects.length > 0 && window.scrollY > 360);
       dom.floatingCount.textContent = savedObjects.length + ' ' + r.stopsLabel;
     }
 
