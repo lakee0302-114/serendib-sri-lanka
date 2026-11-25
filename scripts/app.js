@@ -164,21 +164,12 @@
     plannerBackBtn: document.getElementById('planner-back-btn'),
     plannerNextBtn: document.getElementById('planner-next-btn'),
     plannerNextLabel: document.getElementById('planner-next-label'),
-    heroMedia: document.getElementById('hero-media'),
-    heroShowcase: document.getElementById('hero-showcase'),
-    heroActiveName: document.getElementById('hero-active-name'),
-    heroActiveCount: document.getElementById('hero-active-count'),
     floatingBar: document.getElementById('floating-trip-bar'),
     floatingCount: document.getElementById('floating-trip-count'),
     toast: document.getElementById('toast')
   };
 
   var toastTimer = null;
-  var heroState = {
-    index: 0,
-    timer: null,
-    paused: false
-  };
 
   function showToast(message) {
     dom.toast.textContent = message;
@@ -334,7 +325,6 @@
       }
 
       renderFinderSelects();
-      renderHeroLabels();
       renderAtlasFilterRail();
       renderMonthButtons();
       setActiveMonth(state.activeMonth);
@@ -1498,111 +1488,6 @@
   }
 
   /* ------------------------------------------------------------------------
-     Hero Island Showcase Slideshow
-     ------------------------------------------------------------------------ */
-  function getHeroShortName(id) {
-    var dest = state.locale && state.locale.destinations && state.locale.destinations[id];
-    if (!dest || !dest.name) return '';
-    var first = dest.name.split(/\s*[&·\/,()]\s*/)[0].trim();
-    if (id === 'minneriya') {
-      first = first.split(/\s+/)[0] || first;
-    }
-    return first;
-  }
-
-  function renderHeroLabels() {
-    if (!dom.heroShowcase) return;
-    var thumbs = dom.heroShowcase.querySelectorAll('.hero-thumb');
-    var activeId = '';
-
-    thumbs.forEach(function (thumb, idx) {
-      var id = thumb.dataset.heroId;
-      var label = getHeroShortName(id);
-      var dest = state.locale && state.locale.destinations && state.locale.destinations[id];
-      var span = thumb.querySelector('.hero-thumb__label');
-      if (span && label) span.textContent = label;
-      if (dest && dest.name) thumb.setAttribute('aria-label', dest.name);
-      if (idx === heroState.index) activeId = id;
-    });
-
-    if (dom.heroActiveName && activeId) {
-      var activeDest = state.locale && state.locale.destinations && state.locale.destinations[activeId];
-      if (activeDest && activeDest.name) {
-        dom.heroActiveName.textContent = activeDest.name;
-      }
-    }
-    if (dom.heroActiveCount && thumbs.length) {
-      dom.heroActiveCount.textContent = (heroState.index + 1) + ' / ' + thumbs.length;
-    }
-  }
-
-  function setHeroSlide(nextIdx) {
-    if (!dom.heroMedia || !dom.heroShowcase) return;
-    var slides = dom.heroMedia.querySelectorAll('.hero__slide');
-    var thumbs = dom.heroShowcase.querySelectorAll('.hero-thumb');
-    if (!slides.length || !thumbs.length) return;
-
-    var count = slides.length;
-    var target = ((nextIdx % count) + count) % count;
-    heroState.index = target;
-
-    slides.forEach(function (slide, idx) {
-      slide.classList.toggle('is-active', idx === target);
-    });
-
-    thumbs.forEach(function (thumb, idx) {
-      var active = idx === target;
-      thumb.classList.remove('is-active');
-      if (active) {
-        void thumb.offsetWidth;
-        thumb.classList.add('is-active');
-      }
-      thumb.setAttribute('aria-pressed', String(active));
-    });
-
-    renderHeroLabels();
-  }
-
-  function restartHeroTimer() {
-    if (heroState.timer) {
-      clearInterval(heroState.timer);
-      heroState.timer = null;
-    }
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
-    heroState.timer = setInterval(function () {
-      if (!heroState.paused && !document.hidden) {
-        setHeroSlide(heroState.index + 1);
-      }
-    }, 5000);
-  }
-
-  function initHeroSlideshow() {
-    if (!dom.heroMedia || !dom.heroShowcase) return;
-
-    dom.heroShowcase.querySelectorAll('.hero-thumb').forEach(function (thumb) {
-      thumb.addEventListener('click', function () {
-        setHeroSlide(Number(thumb.dataset.heroPick));
-        restartHeroTimer();
-      });
-    });
-
-    var setPaused = function (paused) {
-      heroState.paused = paused;
-      dom.heroShowcase.classList.toggle('is-paused', paused);
-    };
-
-    dom.heroShowcase.addEventListener('mouseenter', function () { setPaused(true); });
-    dom.heroShowcase.addEventListener('mouseleave', function () { setPaused(false); });
-    dom.heroShowcase.addEventListener('focusin', function () { setPaused(true); });
-    dom.heroShowcase.addEventListener('focusout', function () { setPaused(false); });
-
-    setHeroSlide(0);
-    restartHeroTimer();
-  }
-
-  /* ------------------------------------------------------------------------
      Scroll Reveal
      ------------------------------------------------------------------------ */
   function initReveals() {
@@ -1629,7 +1514,6 @@
      ------------------------------------------------------------------------ */
   function init() {
     initNavigation();
-    initHeroSlideshow();
     initAtlasControls();
     initSheets();
     initForms();
