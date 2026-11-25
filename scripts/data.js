@@ -12,7 +12,7 @@
       coords: "07°57'25\"N · 80°45'35\"E",
       idealNights: 2,
       image: './assets/images/hero-sigiriya.jpg',
-      imageAlt: 'Sigiriya Lion Rock rising through dawn mist above ancient stone water gardens in Sri Lanka'
+      imageAlt: 'Sunrise glow over Sigiriya Lion Rock surrounded by misty green Sri Lankan jungle canopy'
     },
     {
       id: 'ella',
@@ -22,7 +22,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Classic blue highland train crossing stone Nine Arches Bridge in misty green Ella hills'
+      imageAlt: 'Blue Sri Lankan highland train crossing Nine Arches Bridge near Ella amidst tea hills'
     },
     {
       id: 'galle',
@@ -32,7 +32,7 @@
       coords: "06°01'50\"N · 80°13'02\"E",
       idealNights: 2,
       image: './assets/images/galle-fort.jpg',
-      imageAlt: 'Galle Fort white lighthouse and weathered coral-stone ramparts beside Indian Ocean palms at dusk'
+      imageAlt: 'Galle Fort coral-stone sea ramparts, white lighthouse, and palms overlooking the Indian Ocean'
     },
     {
       id: 'yala',
@@ -42,7 +42,7 @@
       coords: "06°22'20\"N · 81°31'05\"E",
       idealNights: 2,
       image: './assets/images/yala-leopard.jpg',
-      imageAlt: 'Wild Sri Lankan leopard resting on a weathered granite boulder at golden morning light in Yala'
+      imageAlt: 'Wild Sri Lankan leopard walking across forest undergrowth in Yala National Park'
     },
     {
       id: 'nuwara-eliya',
@@ -52,7 +52,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Misty terraced Ceylon tea plantations at sunrise in Nuwara Eliya and Hatton hills'
+      imageAlt: 'Emerald green tea terraces stretching across Labukele and Nuwara Eliya highlands'
     },
     {
       id: 'polonnaruwa',
@@ -62,7 +62,7 @@
       coords: "07°56'40\"N · 81°00'08\"E",
       idealNights: 1,
       image: './assets/images/ancient-polonnaruwa.jpg',
-      imageAlt: 'Ancient carved stone Vatadage ruins in golden afternoon light at Polonnaruwa Sri Lanka'
+      imageAlt: 'Carved stone moonstone and guardian steps at the ancient Polonnaruwa Vatadage'
     },
     {
       id: 'bentota',
@@ -72,7 +72,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Tropical modernist Sri Lankan courtyard villa with reflection pool and palm horizon'
+      imageAlt: 'Golden evening light over Goyambokka cove boulders, palms, and Indian Ocean surf in Tangalle'
     },
     {
       id: 'trinco-jaffna',
@@ -82,7 +82,7 @@
       coords: "08°34'16\"N · 81°14'00\"E",
       idealNights: 3,
       image: './assets/images/east-coast-trinco.jpg',
-      imageAlt: 'Calm turquoise east coast bay in Trincomalee with wooden outrigger canoe and palmyrah palms'
+      imageAlt: 'Traditional wooden fishing boats resting on wide white sand at Nilaveli Beach in Trincomalee'
     }
   ];
 
