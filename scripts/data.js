@@ -12,7 +12,7 @@
       coords: "07°57'25\"N · 80°45'35\"E",
       idealNights: 2,
       image: './assets/images/hero-sigiriya.jpg',
-      imageAlt: 'Sunrise glow over Sigiriya Lion Rock surrounded by misty green Sri Lankan jungle canopy'
+      imageAlt: 'Sunlit Sigiriya Lion Rock rising above emerald Sri Lankan rainforest and distant blue mountains'
     },
     {
       id: 'kandy',
@@ -32,7 +32,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Blue Sri Lankan highland train crossing Nine Arches Bridge near Ella amidst tea hills'
+      imageAlt: 'Iconic blue highland train curving across misty stone Nine Arch Bridge in Ella jungle canopy'
     },
     {
       id: 'wilpattu',
@@ -62,7 +62,7 @@
       coords: "05°56'54\"N · 80°27'31\"E",
       idealNights: 2,
       image: './assets/images/mirissa-coast.jpg',
-      imageAlt: 'Traditional stilt fishermen balancing above shallow Indian Ocean swells along Sri Lanka southern coast'
+      imageAlt: 'Aerial view of Mirissa Coconut Tree Hill peninsula surrounded by turquoise Indian Ocean reefs'
     },
     {
       id: 'nuwara-eliya',
@@ -72,7 +72,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Emerald green tea terraces stretching across Labukele and Nuwara Eliya highlands'
+      imageAlt: 'Misty emerald Ceylon tea slopes and shade trees beneath morning mountain clouds'
     },
     {
       id: 'yala',
@@ -82,7 +82,7 @@
       coords: "06°22'20\"N · 81°31'05\"E",
       idealNights: 2,
       image: './assets/images/yala-leopard.jpg',
-      imageAlt: 'Wild Sri Lankan leopard walking across forest undergrowth in Yala National Park'
+      imageAlt: 'Close-up portrait of a wild Sri Lankan leopard peering through lush sunlit forest leaves in Yala'
     },
     {
       id: 'udawalawe',
@@ -122,7 +122,7 @@
       coords: "07°56'40\"N · 81°00'08\"E",
       idealNights: 1,
       image: './assets/images/ancient-polonnaruwa.jpg',
-      imageAlt: 'Carved stone moonstone and guardian steps at the ancient Polonnaruwa Vatadage'
+      imageAlt: 'Carved stone moonstone stairway leading up to serene granite Buddha at Polonnaruwa Vatadage'
     },
     {
       id: 'horton-plains',
@@ -132,7 +132,7 @@
       coords: "06°48'09\"N · 80°48'09\"E",
       idealNights: 1,
       image: './assets/images/horton-plains.jpg',
-      imageAlt: 'Cascading highland waterfall across dark mossy basalt rock inside Horton Plains cloud forest'
+      imageAlt: 'Natural highland rock infinity pool overlooking sunset valleys and Sri Lankan peaks'
     },
     {
       id: 'bentota',
@@ -142,7 +142,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Golden evening light over Goyambokka cove boulders, palms, and Indian Ocean surf in Tangalle'
+      imageAlt: 'Aerial cape resort with oceanfront pool overlooking twin crescent Sri Lankan beaches'
     },
     {
       id: 'trinco-jaffna',
@@ -162,7 +162,7 @@
       coords: "06°50'25\"N · 81°49'50\"E",
       idealNights: 3,
       image: './assets/images/arugam-passikudah.jpg',
-      imageAlt: 'Calm turquoise water and white sandy sweep along the sunny eastern shoreline of Sri Lanka'
+      imageAlt: 'Sweeping emerald coastal headland and foaming turquoise surf waves under bright clouds'
     },
     {
       id: 'colombo',
@@ -172,7 +172,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Historic white colonnaded facade of the Colombo National Museum framed by landscaped lawns'
+      imageAlt: 'Vibrant violet and gold sunset glow above Indian Ocean waves off Galle Face in Colombo'
     },
     {
       id: 'sri-pada',
@@ -202,7 +202,7 @@
       coords: "07°27'30\"N · 80°46'50\"E",
       idealNights: 2,
       image: './assets/images/knuckles-range.jpg',
-      imageAlt: 'Misty emerald mountain peaks and grassy ridges across the Knuckles Wilderness at sunset'
+      imageAlt: 'Lush emerald mountain ridge and sunlit valley under bright clouds in Knuckles Range'
     }
   ];
 

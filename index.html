@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#F6F2EA" id="meta-theme-color" />
+  <meta name="theme-color" content="#FFFFFF" id="meta-theme-color" />
   <title>SERENDIB — Sri Lanka Travel Atlas &amp; Bespoke Journeys</title>
   <meta
     name="description"
-    content="An editorial travel atlas and monsoon-aware journey planner for Sri Lanka—spanning fifth-century citadels, highland tea railways, wild leopard sanctuaries, and southern coral ramparts."
+    content="Handpicked Sri Lanka destinations, seasonal weather guide, and custom itinerary builder."
   />
 
-  <!-- Zero-flash initial Theme (soft Daylight default) & Language/RTL hydration -->
+  <!-- Zero-flash initial Theme (Crisp Pearl default) & Language/RTL hydration -->
   <script>
     (function () {
       try {
@@ -18,7 +18,7 @@
         var theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
         document.documentElement.setAttribute('data-theme', theme);
         var meta = document.getElementById('meta-theme-color');
-        if (meta) meta.setAttribute('content', theme === 'dark' ? '#121614' : '#F8F6F1');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#07151D' : '#FFFFFF');
 
         var savedLang = localStorage.getItem('serendib_lang_v1');
         var allowed = ['en', 'ta', 'hi', 'fr', 'de', 'es', 'it', 'nl', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar'];
@@ -49,11 +49,10 @@
       </a>
 
       <nav class="header-nav" aria-label="Primary Navigation">
-        <a href="#atlas" data-i18n="nav.atlas">Atlas</a>
-        <a href="#compass" data-i18n="nav.compass">Monsoon</a>
+        <a href="#atlas" data-i18n="nav.atlas">Places</a>
+        <a href="#compass" data-i18n="nav.compass">Seasons</a>
         <a href="#itineraries" data-i18n="nav.itineraries">Routes</a>
-        <a href="#journal" data-i18n="nav.journal">Craft</a>
-        <a href="#field-notes" data-i18n="nav.fieldNotes">Notes</a>
+        <a href="#field-notes" data-i18n="nav.fieldNotes">Tips</a>
       </nav>
 
       <div class="header-actions">
@@ -142,12 +141,11 @@
     </div>
 
     <nav class="mobile-nav__links" aria-label="Mobile sections">
-      <a href="#atlas"><em style="font-style:normal;" data-i18n="nav.atlas">Atlas</em> <span>01</span></a>
-      <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">Monsoon Compass</em> <span>02</span></a>
-      <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Itineraries</em> <span>03</span></a>
-      <a href="#journal"><em style="font-style:normal;" data-i18n="nav.journal">Architecture &amp; Craft</em> <span>04</span></a>
-      <a href="#field-notes"><em style="font-style:normal;" data-i18n="nav.fieldNotes">Field Notes</em> <span>05</span></a>
-      <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>06</span></a>
+      <a href="#atlas"><em style="font-style:normal;" data-i18n="nav.atlas">Places</em> <span>01</span></a>
+      <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">Seasons</em> <span>02</span></a>
+      <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Routes</em> <span>03</span></a>
+      <a href="#field-notes"><em style="font-style:normal;" data-i18n="nav.fieldNotes">Tips</em> <span>04</span></a>
+      <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>05</span></a>
     </nav>
 
     <div class="mobile-nav__footer">
@@ -167,7 +165,7 @@
       <div class="hero__media">
         <img
           src="./assets/images/hero-sigiriya.jpg"
-          alt="Sunrise glow over Sigiriya Lion Rock surrounded by misty green Sri Lankan jungle canopy"
+          alt="Sunlit Sigiriya Lion Rock rising above emerald forest canopy and distant blue hills"
           fetchpriority="high"
         />
       </div>
@@ -175,30 +173,23 @@
 
       <div class="container hero__content">
         <div>
-          <p class="mono-label hero__coord" data-i18n="hero.coord">07°57'25"N · 80°45'35"E — SERENDIB</p>
           <h1 class="display-serif hero__title">
-            <span data-i18n="hero.titleStart">Sri Lanka in</span>
-            <em data-i18n="hero.titleEm">granite, mist &amp; salt.</em>
+            <span data-i18n="hero.titleStart">Discover</span>
+            <em data-i18n="hero.titleEm">Sri Lanka.</em>
           </h1>
           <p class="hero__subtitle" data-i18n="hero.subtitle">
-            Monsoon-smart travel atlas from fifth-century sky citadels to southern reefs.
+            Golden citadels, misty highlands &amp; wild coasts.
           </p>
           <div class="hero__actions">
             <a href="#atlas" class="btn btn--primary">
-              <span data-i18n="hero.ctaPrimary">Explore Atlas</span>
+              <span data-i18n="hero.ctaPrimary">Explore Places</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span>
             </a>
-            <a href="#compass" class="btn btn--ghost-light" data-i18n="hero.ctaSecondary">
-              Monsoon Map
-            </a>
+            <button type="button" class="btn btn--ghost-light" data-open-planner data-i18n="nav.planJourney">
+              Plan Trip
+            </button>
           </div>
         </div>
-
-        <aside class="hero__meta-aside" aria-label="Island quick geography">
-          <span class="mono-label" style="color: var(--accent-brass);" data-i18n="hero.plate">PLATE 01 · SIGIRIYA DAWN</span>
-          <span class="mono-label" style="opacity:0.8;" data-i18n="hero.area">65,610 KM² INDIAN OCEAN</span>
-          <span class="mono-label" style="opacity:0.8;" data-i18n="hero.calendar">DUAL-MONSOON CALENDAR</span>
-        </aside>
       </div>
     </section>
 
@@ -231,40 +222,16 @@
       </div>
     </section>
 
-    <!-- 01 — Editorial Island Manifesto -->
-    <section class="section" aria-labelledby="intro-heading">
-      <div class="container intro-grid" data-reveal>
-        <div>
-          <span class="eyebrow" data-i18n="intro.eyebrow">01 / Contrast</span>
-          <h2 class="display-serif intro-title" id="intro-heading">
-            <span data-i18n="intro.titleStart">Cross climates</span>
-            <em data-i18n="intro.titleEm">before dusk.</em>
-          </h2>
-        </div>
-
-        <div>
-          <p class="intro-lead" data-i18n="intro.lead">
-            Leave cool 1,800m tea clouds at dawn and reach Indian Ocean ramparts by sunset.
-          </p>
-          <div class="datum-list" id="intro-datums"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 — Destination Atlas -->
+    <!-- Destination Gallery -->
     <section class="section section--sand" id="atlas" aria-labelledby="atlas-heading">
       <div class="container">
         <div class="section-header-split" data-reveal>
           <div>
-            <span class="eyebrow" data-i18n="atlas.eyebrow">02 / Atlas</span>
             <h2 class="display-serif section-heading" id="atlas-heading">
-              <span data-i18n="atlas.titleStart">Twenty iconic</span>
+              <span data-i18n="atlas.titleStart">Top 20</span>
               <em data-i18n="atlas.titleEm">destinations.</em>
             </h2>
           </div>
-          <p class="section-subcopy" data-i18n="atlas.subcopy">
-            Tap any stop for peak hours, food notes, or route saving.
-          </p>
         </div>
 
         <div class="atlas-controls">
@@ -289,20 +256,16 @@
       </div>
     </section>
 
-    <!-- 03 — Twin-Monsoon Compass -->
+    <!-- Twin-Monsoon Season Guide -->
     <section class="section section--forest" id="compass" aria-labelledby="compass-heading">
       <div class="container">
         <div class="section-header-split" data-reveal>
           <div>
-            <span class="eyebrow" data-i18n="compass.eyebrow">03 / Monsoon Compass</span>
             <h2 class="display-serif section-heading" id="compass-heading">
-              <span data-i18n="compass.titleStart">Match your coast</span>
-              <em data-i18n="compass.titleEm">to the wind.</em>
+              <span data-i18n="compass.titleStart">Best time</span>
+              <em data-i18n="compass.titleEm">to visit.</em>
             </h2>
           </div>
-          <p class="section-subcopy" data-i18n="compass.subcopy">
-            Pick your month below for dry coastlines and calm water.
-          </p>
         </div>
 
         <div class="compass-layout" data-reveal>
@@ -323,22 +286,22 @@
                 </defs>
 
                 <g clip-path="url(#sri-lanka-clip)">
-                  <path id="zone-northeast" class="map-zone" d="M0,0 L220,0 L220,250 L166.1,228.7 L131.7,197.9 L124.1,140.1 L89.0,97.7 L43.9,82.3 L0,82.3 Z" fill="#D4A857" opacity="0.86" />
-                  <path id="zone-cultural" class="map-zone" d="M0,82.3 L43.9,82.3 L89.0,97.7 L124.1,140.1 L131.7,197.9 L103.5,190.2 L76.0,184.8 L0,184.8 Z" fill="#D4A857" opacity="0.88" />
-                  <path id="zone-highlands" class="map-zone" d="M76.0,184.8 L103.5,190.2 L131.7,197.9 L142.0,224.0 L135.5,254.2 L91.3,261.9 L69.9,231.1 Z" fill="#6BA386" opacity="0.92" />
-                  <path id="zone-south" class="map-zone" d="M0,184.8 L76.0,184.8 L69.9,231.1 L91.3,261.9 L135.5,254.2 L142.0,224.0 L131.7,197.9 L166.1,228.7 L220,250 L220,330 L0,330 Z" fill="#D4A857" opacity="0.86" />
-                  <path d="M0,82.3 L43.9,82.3 L89.0,97.7 L124.1,140.1 L131.7,197.9 L166.1,228.7 L220,250 M0,184.8 L76.0,184.8 L103.5,190.2 L131.7,197.9 M76.0,184.8 L69.9,231.1 L91.3,261.9 L135.5,254.2 L142.0,224.0 L131.7,197.9" fill="none" stroke="rgba(20,33,26,0.52)" stroke-width="1.15" stroke-dasharray="3 2" />
+                  <path id="zone-northeast" class="map-zone" d="M0,0 L220,0 L220,250 L166.1,228.7 L131.7,197.9 L124.1,140.1 L89.0,97.7 L43.9,82.3 L0,82.3 Z" fill="#F4A933" opacity="0.9" />
+                  <path id="zone-cultural" class="map-zone" d="M0,82.3 L43.9,82.3 L89.0,97.7 L124.1,140.1 L131.7,197.9 L103.5,190.2 L76.0,184.8 L0,184.8 Z" fill="#F4A933" opacity="0.9" />
+                  <path id="zone-highlands" class="map-zone" d="M76.0,184.8 L103.5,190.2 L131.7,197.9 L142.0,224.0 L135.5,254.2 L91.3,261.9 L69.9,231.1 Z" fill="#18A999" opacity="0.94" />
+                  <path id="zone-south" class="map-zone" d="M0,184.8 L76.0,184.8 L69.9,231.1 L91.3,261.9 L135.5,254.2 L142.0,224.0 L131.7,197.9 L166.1,228.7 L220,250 L220,330 L0,330 Z" fill="#F4A933" opacity="0.9" />
+                  <path d="M0,82.3 L43.9,82.3 L89.0,97.7 L124.1,140.1 L131.7,197.9 L166.1,228.7 L220,250 M0,184.8 L76.0,184.8 L103.5,190.2 L131.7,197.9 M76.0,184.8 L69.9,231.1 L91.3,261.9 L135.5,254.2 L142.0,224.0 L131.7,197.9" fill="none" stroke="rgba(9,39,54,0.52)" stroke-width="1.15" stroke-dasharray="3 2" />
                 </g>
 
                 <path
                   d="M67.7,14.0 L53.6,15.0 L44.3,19.8 L47.4,25.3 L49.0,24.6 L53.4,28.5 L66.8,33.7 L64.8,27.9 L82.5,38.7 L75.0,44.4 L69.6,41.9 L72.8,41.8 L70.5,39.4 L68.6,37.2 L55.5,32.3 L65.8,41.0 L55.6,48.4 L56.4,52.9 L60.9,55.5 L55.3,76.1 L44.8,83.2 L46.6,86.1 L45.2,93.6 L48.5,99.7 L45.3,113.0 L41.5,114.7 L39.2,131.5 L35.5,137.5 L38.9,143.8 L35.5,149.7 L39.0,154.4 L38.0,157.1 L31.4,154.4 L32.9,150.6 L30.7,146.0 L35.2,125.9 L31.3,137.4 L28.1,139.3 L29.1,151.1 L36.2,179.0 L38.5,216.7 L42.0,223.8 L39.7,224.0 L41.7,234.3 L38.0,236.9 L56.4,295.0 L70.1,309.3 L96.9,315.9 L106.7,312.8 L113.2,306.8 L152.6,294.4 L180.8,272.2 L191.0,250.8 L195.0,230.9 L194.0,207.6 L185.6,181.6 L181.3,174.6 L172.3,167.5 L172.4,161.7 L170.2,159.9 L167.1,162.2 L170.1,156.2 L164.0,152.2 L154.8,117.2 L152.1,115.0 L146.1,120.5 L141.5,116.1 L137.5,117.3 L139.7,113.5 L144.2,116.3 L143.2,110.9 L146.6,113.6 L145.1,105.2 L125.5,79.7 L123.4,84.0 L120.7,82.4 L122.6,80.7 L121.9,77.6 L118.5,76.5 L119.7,74.8 L125.2,79.3 L113.5,55.9 L79.1,27.2 L70.9,15.0 Z M36.1,71.0 L31.0,70.1 L27.4,72.4 L35.8,74.9 L43.2,81.9 L45.9,80.3 L43.3,74.8 Z M41.2,24.4 L39.3,24.4 L40.6,27.5 L42.2,27.1 L41.8,29.5 L51.6,31.9 L51.1,28.3 L50.3,30.6 L45.7,27.5 L46.6,26.3 L44.4,26.7 L43.2,24.8 Z M44.1,19.3 L40.9,19.9 L40.1,23.5 L43.3,23.6 Z M37.6,30.5 L36.5,33.9 L41.0,34.4 L41.0,31.7 L40.4,31.9 L38.9,32.8 Z M25.7,35.7 L25.2,39.5 L30.2,41.9 L30.5,37.8 Z"
                   fill="none"
-                  stroke="rgba(244,239,230,0.68)"
+                  stroke="rgba(242,248,250,0.72)"
                   stroke-width="1.2"
                   stroke-linejoin="round"
                 />
 
-                <g fill="#FAF8F3" font-family="IBM Plex Mono, monospace" font-size="7.2" font-weight="500">
+                <g fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-size="7.2" font-weight="600">
                   <circle cx="53.5" cy="27.5" r="2.2" />
                   <text x="80" y="24">JAF</text>
                   <circle cx="144.3" cy="110.2" r="2.2" />
@@ -381,20 +344,16 @@
       </div>
     </section>
 
-    <!-- 04 — Curated Multi-Day Itineraries -->
+    <!-- Curated Multi-Day Itineraries -->
     <section class="section" id="itineraries" aria-labelledby="itineraries-heading">
       <div class="container">
         <div class="section-header-split" data-reveal>
           <div>
-            <span class="eyebrow" data-i18n="itineraries.eyebrow">04 / Curated Routes</span>
             <h2 class="display-serif section-heading" id="itineraries-heading">
-              <span data-i18n="itineraries.titleStart">Unhurried arcs at</span>
-              <em data-i18n="itineraries.titleEm">island pace.</em>
+              <span data-i18n="itineraries.titleStart">Curated</span>
+              <em data-i18n="itineraries.titleEm">routes.</em>
             </h2>
           </div>
-          <p class="section-subcopy" data-i18n="itineraries.subcopy">
-            2–3 nights per stop, shaped around scenic hill roads.
-          </p>
         </div>
 
         <div class="itinerary-tabs" id="itinerary-tabs" role="tablist" aria-label="Curated itineraries"></div>
@@ -402,94 +361,29 @@
       </div>
     </section>
 
-    <!-- 05 — Sensory Ceylon Editorial Journal -->
-    <section class="section section--sand" id="journal" aria-labelledby="journal-heading">
-      <div class="container">
-        <div class="section-header-split" data-reveal>
-          <div>
-            <span class="eyebrow" data-i18n="journal.eyebrow">05 / Craft</span>
-            <h2 class="display-serif section-heading" id="journal-heading">
-              <span data-i18n="journal.titleStart">Verandas, rails &amp;</span>
-              <em data-i18n="journal.titleEm">spice kitchens.</em>
-            </h2>
-          </div>
-          <p class="section-subcopy" data-i18n="journal.subcopy">
-            Open pavilions, hill trains, and clay-pot curries.
-          </p>
-        </div>
-
-        <div class="journal-grid" data-reveal>
-          <article class="journal-feature">
-            <div class="journal-feature__media">
-              <img
-                src="./assets/images/lunuganga-bawa.jpg"
-                alt="Geoffrey Bawa's Lunuganga estate bungalow veranda framed by sculptural frangipani trees in Bentota"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <span class="mono-label" style="color: var(--accent-terracotta);" data-i18n="journal.featureTag">BAWA MODERNISM · LUNUGANGA</span>
-              <h3 class="journal-title" style="margin-top:0.45rem;" data-i18n="journal.featureTitle">
-                Living rooms open to monsoon rain
-              </h3>
-              <p class="journal-copy" data-i18n="journal.featureCopy"></p>
-            </div>
-          </article>
-
-          <div class="journal-stack">
-            <article class="journal-subcard" style="padding-top:0; border-top:0;">
-              <div class="journal-subcard__img">
-                <img src="./assets/images/tea-highlands.jpg" alt="Lush green terraced Ceylon tea slopes in Nuwara Eliya" loading="lazy" />
-              </div>
-              <div>
-                <span class="mono-label" style="color: var(--accent-terracotta);" data-i18n="journal.sub1Tag">TEA HIGHLANDS</span>
-                <h3 class="journal-title" style="font-size:1.38rem; margin-top:0.3rem;" data-i18n="journal.sub1Title"></h3>
-                <p class="journal-copy" data-i18n="journal.sub1Copy"></p>
-              </div>
-            </article>
-
-            <article class="journal-subcard">
-              <div class="journal-subcard__img">
-                <img src="./assets/images/ancient-polonnaruwa.jpg" alt="Carved stone steps and moonstone at the ancient Polonnaruwa Vatadage" loading="lazy" />
-              </div>
-              <div>
-                <span class="mono-label" style="color: var(--accent-terracotta);" data-i18n="journal.sub2Tag">ANURADHAPURA &amp; POLONNARUWA</span>
-                <h3 class="journal-title" style="font-size:1.38rem; margin-top:0.3rem;" data-i18n="journal.sub2Title"></h3>
-                <p class="journal-copy" data-i18n="journal.sub2Copy"></p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 — Field Notes Accordion -->
-    <section class="section" id="field-notes" aria-labelledby="notes-heading">
+    <!-- Quick Travel Essentials Accordion -->
+    <section class="section section--sand" id="field-notes" aria-labelledby="notes-heading">
       <div class="container notes-layout" data-reveal>
         <div>
-          <span class="eyebrow" data-i18n="fieldNotes.eyebrow">06 / Field Notes</span>
           <h2 class="display-serif section-heading" id="notes-heading">
-            <span data-i18n="fieldNotes.titleStart">Before wheels</span>
-            <em data-i18n="fieldNotes.titleEm">touch tarmac.</em>
+            <span data-i18n="fieldNotes.titleStart">Quick</span>
+            <em data-i18n="fieldNotes.titleEm">essentials.</em>
           </h2>
-          <p class="section-subcopy" style="margin-top:0.65rem;" data-i18n="fieldNotes.subcopy"></p>
         </div>
 
         <div class="accordion-list" id="accordion-list"></div>
       </div>
     </section>
 
-    <!-- 07 — Bespoke Concierge Launchpad -->
-    <section class="section section--sand" id="contact" aria-labelledby="contact-heading">
+    <!-- Trip Planner Launchpad -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <div class="concierge-card" data-reveal>
           <div class="concierge-card__copy">
-            <span class="eyebrow" data-i18n="contact.eyebrow">07 / Concierge</span>
             <h2 class="display-serif section-heading" id="contact-heading">
-              <span data-i18n="contact.titleStart">Shape your</span>
-              <em data-i18n="contact.titleEm">Serendib route.</em>
+              <span data-i18n="contact.titleStart">Plan your</span>
+              <em data-i18n="contact.titleEm">journey.</em>
             </h2>
-            <p class="section-subcopy" style="margin-top:0.65rem;" data-i18n="contact.subcopy"></p>
             <div class="concierge-stops-bar">
               <p class="mono-label" style="color:var(--ink-muted); margin:0 0 0.35rem;" data-i18n="contact.shortlistLabel">SELECTED STOPS</p>
               <p id="inquiry-shortlist-preview" style="margin:0; font-weight:500; color:var(--accent-tea); font-size:0.92rem;"></p>
@@ -532,10 +426,10 @@
         <div>
           <h3 class="mono-label footer-heading" data-i18n="footer.colExplore">Explore</h3>
           <ul class="footer-links">
-            <li><a href="#atlas" data-i18n="nav.atlas">Atlas</a></li>
-            <li><a href="#compass" data-i18n="nav.compass">Monsoon Compass</a></li>
-            <li><a href="#itineraries" data-i18n="nav.itineraries">Itineraries</a></li>
-            <li><a href="#journal" data-i18n="nav.journal">Architecture &amp; Craft</a></li>
+            <li><a href="#atlas" data-i18n="nav.atlas">Places</a></li>
+            <li><a href="#compass" data-i18n="nav.compass">Seasons</a></li>
+            <li><a href="#itineraries" data-i18n="nav.itineraries">Routes</a></li>
+            <li><a href="#field-notes" data-i18n="nav.fieldNotes">Tips</a></li>
           </ul>
         </div>
 

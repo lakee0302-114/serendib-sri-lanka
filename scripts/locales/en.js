@@ -10,15 +10,15 @@ window.SERENDIB_LOCALES['en'] = {
   ui: {
     brandSub: 'ශ්‍රී ලංකා',
     nav: {
-      atlas: 'Atlas',
-      compass: 'Monsoon',
+      atlas: 'Places',
+      compass: 'Seasons',
       itineraries: 'Routes',
       journal: 'Craft',
-      fieldNotes: 'Notes',
+      fieldNotes: 'Tips',
       myRoute: 'Route',
       planJourney: 'Plan Trip',
       openRouteMobile: 'Open Saved Route',
-      deskCoord: "COLOMBO · 06°55'N 79°51'E"
+      deskCoord: "SRI LANKA · TRIP DESK"
     },
     theme: {
       toDark: 'Switch to night mode',
@@ -27,15 +27,15 @@ window.SERENDIB_LOCALES['en'] = {
       lightLabel: 'Day'
     },
     hero: {
-      coord: '07°57\'25"N · 80°45\'35"E — SERENDIB',
-      titleStart: 'Sri Lanka in',
-      titleEm: 'granite, mist & salt.',
-      subtitle: 'Monsoon-smart travel atlas from fifth-century sky citadels to southern reefs.',
-      ctaPrimary: 'Explore Atlas',
-      ctaSecondary: 'Monsoon Map',
-      plate: 'PLATE 01 · SIGIRIYA',
-      area: '65,610 KM² ISLAND',
-      calendar: 'TWIN MONSOONS'
+      coord: 'SERENDIB',
+      titleStart: 'Discover',
+      titleEm: 'Sri Lanka.',
+      subtitle: 'Golden citadels, misty highlands & wild coasts.',
+      ctaPrimary: 'Explore Places',
+      ctaSecondary: 'Seasons',
+      plate: 'SIGIRIYA',
+      area: 'ISLAND ATLAS',
+      calendar: 'YEAR-ROUND SUN'
     },
     finder: {
       monthLabel: 'Month',
@@ -68,10 +68,10 @@ window.SERENDIB_LOCALES['en'] = {
       ]
     },
     atlas: {
-      eyebrow: '02 / Atlas',
-      titleStart: 'Twenty iconic',
+      eyebrow: 'DESTINATIONS',
+      titleStart: 'Top 20',
       titleEm: 'destinations.',
-      subcopy: 'Tap any photo or card for highlights, timing, and route saving.',
+      subcopy: 'Tap any place for details or add to your route.',
       filters: {
         all: 'All (20)',
         cultural: 'Cultural',
@@ -80,21 +80,21 @@ window.SERENDIB_LOCALES['en'] = {
         wildlife: 'Wildlife',
         northeast: 'North & East'
       },
-      dossierBtn: 'Dossier',
-      addStop: '+ Route',
-      savedStop: '✓ Saved',
+      dossierBtn: 'Details',
+      addStop: '+ Add',
+      savedStop: '✓ Added',
       nightsUnit: 'N',
       showAllBtn: 'See all {count} destinations',
-      showLessBtn: 'Show first row'
+      showLessBtn: 'Show fewer'
     },
     compass: {
-      eyebrow: '03 / Monsoon Compass',
-      titleStart: 'Match your coast',
-      titleEm: 'to the wind.',
-      subcopy: 'Pick your month below for dry coastlines and calm water.',
-      seasonKey: 'KEY',
+      eyebrow: 'SEASONS',
+      titleStart: 'Best time',
+      titleEm: 'to visit.',
+      subcopy: 'Pick a month for sunny coasts.',
+      seasonKey: 'WEATHER KEY',
       legendOptimal: 'Sunny & Calm',
-      legendGood: 'Mild Breeze',
+      legendGood: 'Pleasant',
       legendCaution: 'Monsoon Winds',
       verdictSuffix: 'OUTLOOK',
       culturalCalendar: 'FESTIVALS',
@@ -106,11 +106,11 @@ window.SERENDIB_LOCALES['en'] = {
       }
     },
     itineraries: {
-      eyebrow: '04 / Curated Routes',
-      titleStart: 'Unhurried arcs at',
-      titleEm: 'island pace.',
-      subcopy: '2–3 nights per stop, shaped around scenic hill roads.',
-      adoptBtn: 'Load Stops into Route'
+      eyebrow: 'ROUTES',
+      titleStart: 'Curated',
+      titleEm: 'routes.',
+      subcopy: 'Ready-made island loops.',
+      adoptBtn: 'Use This Route'
     },
     journal: {
       eyebrow: '05 / Craft',
@@ -128,16 +128,16 @@ window.SERENDIB_LOCALES['en'] = {
       sub2Copy: 'Ancient reservoirs still feed emerald paddy plains across the dry zone.'
     },
     fieldNotes: {
-      eyebrow: '06 / Field Notes',
-      titleStart: 'Before wheels',
-      titleEm: 'touch tarmac.',
-      subcopy: 'Trains, visas, drivers, and temple etiquette.'
+      eyebrow: 'TRAVEL TIPS',
+      titleStart: 'Quick',
+      titleEm: 'essentials.',
+      subcopy: 'Trains, visas, transport & etiquette.'
     },
     contact: {
-      eyebrow: '07 / Concierge',
-      titleStart: 'Shape your',
-      titleEm: 'Serendib route.',
-      subcopy: 'Saved stops sync straight into the custom Trip Studio.',
+      eyebrow: 'PLANNER',
+      titleStart: 'Plan your',
+      titleEm: 'journey.',
+      subcopy: 'Customize dates, pace & stops.',
       shortlistLabel: 'SELECTED STOPS',
       emptyShortlist: 'No stops saved yet — pick places above.',
       nightsSuggested: 'nights',

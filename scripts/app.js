@@ -202,7 +202,7 @@
     var isDark = state.theme === 'dark';
     document.documentElement.setAttribute('data-theme', state.theme);
     if (dom.metaThemeColor) {
-      dom.metaThemeColor.setAttribute('content', isDark ? '#121715' : '#F8F6F1');
+      dom.metaThemeColor.setAttribute('content', isDark ? '#07151D' : '#FFFFFF');
     }
 
     dom.themeIcon.innerHTML = isDark ? SVG_ICONS.sun : SVG_ICONS.moon;
@@ -265,8 +265,8 @@
       return (
         '<button type="button" class="filter-chip ' + (active ? 'is-active' : '') + '" ' +
         'style="min-height:34px; padding:0.25rem 0.7rem; font-size:0.75rem; color:' +
-        (active ? '#FAF8F3' : 'rgba(244,239,230,0.85)') +
-        '; border-color:rgba(244,239,230,0.28);" data-mobile-lang="' + item.code + '">' +
+        (active ? '#FFFFFF' : 'rgba(242,248,250,0.85)') +
+        '; border-color:rgba(242,248,250,0.28);" data-mobile-lang="' + item.code + '">' +
         item.native +
         '</button>'
       );
@@ -311,14 +311,16 @@
         if (val !== undefined) el.setAttribute('placeholder', val);
       });
 
-      dom.introDatums.innerHTML = locale.ui.intro.datums.map(function (row) {
-        return (
-          '<div class="datum-row">' +
-          '<span class="mono-label datum-key">' + row.key + '</span>' +
-          '<span class="datum-val">' + row.val + '</span>' +
-          '</div>'
-        );
-      }).join('');
+      if (dom.introDatums) {
+        dom.introDatums.innerHTML = locale.ui.intro.datums.map(function (row) {
+          return (
+            '<div class="datum-row">' +
+            '<span class="mono-label datum-key">' + row.key + '</span>' +
+            '<span class="datum-val">' + row.val + '</span>' +
+            '</div>'
+          );
+        }).join('');
+      }
 
       renderFinderSelects();
       renderAtlasFilterRail();
@@ -487,11 +489,10 @@
         '<div class="dest-card__media" data-open-dossier="' + dest.id + '" role="button" tabindex="0" aria-label="' + dest.name + '"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
         '<div class="dest-card__body">' +
         '<div class="dest-card__meta">' +
-        '<span class="mono-label">' + dest.number + ' · ' + dest.region + '</span>' +
+        '<span class="mono-label">' + dest.region + '</span>' +
         '<span class="mono-label" style="opacity:0.75;">' + dest.idealNights + t.nightsUnit + '</span>' +
         '</div>' +
         '<h3 class="dest-card__title" data-open-dossier="' + dest.id + '">' + dest.name + '</h3>' +
-        '<p class="dest-card__tagline">' + dest.tagline + '</p>' +
         '<div class="dest-card__footer">' +
         '<button type="button" class="text-link-btn" data-open-dossier="' + dest.id + '">' + t.dossierBtn + ' &rarr;</button>' +
         '<button type="button" class="add-stop-btn ' + (saved ? 'is-saved' : '') + '" data-toggle-stop="' + dest.id + '" aria-pressed="' + saved + '">' +
@@ -629,7 +630,7 @@
   /* ------------------------------------------------------------------------
      Monsoon Compass & Cartographic SVG
      ------------------------------------------------------------------------ */
-  var ZONE_FILL = { optimal: '#D4A857', good: '#6BA386', caution: '#6C808B' };
+  var ZONE_FILL = { optimal: '#F4A933', good: '#18A999', caution: '#607D8B' };
 
   function renderMonthButtons() {
     dom.monthGrid.innerHTML = MONTH_CODES.map(function (code) {
@@ -679,12 +680,10 @@
     var bestZoneLabel = state.locale.ui.atlas.filters[bestZone] || ui.zones[bestZone];
 
     dom.compassReadout.innerHTML =
-      '<span class="mono-label" style="color: var(--accent-tea); display:block; margin-bottom:0.35rem;">' +
-      m.fullName + ' · ' + ui.verdictSuffix + '</span>' +
+      '<span class="mono-label" style="color: var(--accent-tea); display:block; margin-bottom:0.3rem;">' +
+      m.fullName + '</span>' +
       '<h3 class="compass-readout__headline">' + m.headline + '</h3>' +
-      '<p class="compass-readout__summary">' + m.summary + '</p>' +
       '<div class="verdict-grid">' + verdictsHtml + '</div>' +
-      '<div class="festival-banner"><span class="mono-label">' + ui.culturalCalendar + '</span>' + m.festival + '</div>' +
       '<button type="button" class="compass-jump-btn" data-compass-jump="' + bestZone + '">' +
       bestZoneLabel + ' — ' + state.locale.ui.nav.atlas + ' &rarr;</button>';
 
@@ -737,9 +736,8 @@
 
     dom.itineraryStage.innerHTML =
       '<div>' +
-      '<span class="mono-label" style="color:var(--accent-terracotta);">' + active.number + ' · ' + active.pace + '</span>' +
-      '<h3 class="display-serif" style="font-size:clamp(1.85rem, 1.5rem + 1.4vw, 2.65rem); margin:0.45rem 0 0.75rem;">' + active.title + '</h3>' +
-      '<p style="margin:0; color:var(--ink-secondary);">' + active.summary + '</p>' +
+      '<span class="mono-label" style="color:var(--accent-terracotta);">' + active.duration + ' · ' + active.pace + '</span>' +
+      '<h3 class="display-serif" style="font-size:clamp(1.75rem, 1.45rem + 1.2vw, 2.4rem); margin:0.35rem 0 0.55rem;">' + active.title + '</h3>' +
       '<div class="itinerary-stage__route">' + active.routeLine + '</div>' +
       '<button type="button" class="btn btn--primary" id="adopt-itinerary-btn">' + t.adoptBtn + ' &rarr;</button>' +
       '</div>' +
@@ -758,8 +756,9 @@
      Field Notes Accordion
      ------------------------------------------------------------------------ */
   function renderFieldNotes() {
+    if (!dom.accordionList) return;
     dom.accordionList.innerHTML = state.locale.fieldNotes.map(function (note, index) {
-      var expanded = index === 0;
+      var expanded = false;
       return (
         '<div class="accordion-item">' +
         '<button type="button" class="accordion-btn" aria-expanded="' + expanded + '" aria-controls="note-panel-' + index + '">' +

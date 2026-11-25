@@ -1,43 +1,43 @@
 /* ==========================================================================
-   SERENDIB — Eye-Comfortable Dual-Theme Design System Tokens
-   Light ("Warm Ivory & Sage") & Dark ("Restful Charcoal & Soft Sand")
+   SERENDIB — Ceylon Azure & Pearl Dual-Theme Design System Tokens
+   Light ("Crisp Pearl & Ocean Azure") & Dark ("Midnight Sapphire & Lagoon")
    ========================================================================== */
 
 :root {
   color-scheme: light;
 
-  /* Light Theme — Gentle on Eyes, High Readability, Low Glare */
-  --bg-limestone: #F8F6F1;
-  --bg-sandstone: #EFECE4;
-  --bg-compass: #EBF1EC;
+  /* Light Theme — Bright Airy Canvas, Ocean Azure & Tropical Turquoise */
+  --bg-limestone: #FFFFFF;
+  --bg-sandstone: #F2F7F9;
+  --bg-compass: #EAF3F6;
   --bg-compass-card: #FFFFFF;
-  --bg-map-frame: #182C24;
+  --bg-map-frame: #092736;
   --bg-cream: #FFFFFF;
   --bg-input: #FFFFFF;
-  --bg-forest: #172720;
-  --bg-forest-elevated: #21352C;
-  --bg-header-scrolled: color-mix(in oklab, #F8F6F1 92%, transparent);
+  --bg-forest: #08222E;
+  --bg-forest-elevated: #103445;
+  --bg-header-scrolled: color-mix(in oklab, #FFFFFF 94%, transparent);
 
-  --ink-primary: #1E2420;
-  --ink-secondary: #48534D;
-  --ink-muted: #5F6B64;
-  --ink-compass: #1E2420;
-  --ink-compass-muted: #48534D;
-  --ink-on-dark: #F4EFE6;
-  --ink-on-dark-muted: rgba(244, 239, 230, 0.8);
+  --ink-primary: #0B222D;
+  --ink-secondary: #47606D;
+  --ink-muted: #647D8A;
+  --ink-compass: #0B222D;
+  --ink-compass-muted: #47606D;
+  --ink-on-dark: #F2F8FA;
+  --ink-on-dark-muted: rgba(242, 248, 250, 0.78);
 
-  --accent-terracotta: #B84D2B;
-  --accent-terracotta-hover: #9C3E20;
-  --accent-tea: #1D4F3C;
-  --accent-brass: #B5883D;
+  --accent-terracotta: #0077B6;
+  --accent-terracotta-hover: #005E91;
+  --accent-tea: #0F9D8A;
+  --accent-brass: #E29D26;
 
-  --hairline: rgba(30, 36, 32, 0.1);
-  --hairline-strong: rgba(30, 36, 32, 0.2);
-  --hairline-compass: rgba(30, 36, 32, 0.11);
-  --hairline-on-dark: rgba(244, 239, 230, 0.16);
+  --hairline: rgba(11, 34, 45, 0.09);
+  --hairline-strong: rgba(11, 34, 45, 0.18);
+  --hairline-compass: rgba(11, 34, 45, 0.1);
+  --hairline-on-dark: rgba(242, 248, 250, 0.16);
 
-  --spotlight-color: rgba(29, 79, 60, 0.05);
-  --status-info-bg: rgba(29, 79, 60, 0.08);
+  --spotlight-color: rgba(0, 119, 182, 0.06);
+  --status-info-bg: rgba(15, 157, 138, 0.1);
 
   /* Typography — Optical Fraunces Display + Crisp Plus Jakarta Sans UI */
   --font-display: 'Fraunces', 'Noto Sans Tamil', 'Noto Sans Devanagari', 'Noto Naskh Arabic', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC', Georgia, serif;
@@ -78,41 +78,41 @@
   --shadow-popover: 0 16px 40px rgba(14, 22, 18, 0.14);
 }
 
-/* Dark Theme — Soft Slate Charcoal (Zero Halation, High Comfort Contrast) */
+/* Dark Theme — Deep Midnight Sapphire & Luminous Lagoon */
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --bg-limestone: #121715;
-  --bg-sandstone: #181E1B;
-  --bg-compass: #16201C;
-  --bg-compass-card: #1E2823;
-  --bg-map-frame: #121B17;
-  --bg-cream: #1C2420;
-  --bg-input: #151C19;
-  --bg-forest: #0C100E;
-  --bg-forest-elevated: #17201C;
-  --bg-header-scrolled: color-mix(in oklab, #121715 92%, transparent);
+  --bg-limestone: #07151D;
+  --bg-sandstone: #0C1F2A;
+  --bg-compass: #0A1B24;
+  --bg-compass-card: #112834;
+  --bg-map-frame: #06141B;
+  --bg-cream: #10242F;
+  --bg-input: #0B1D27;
+  --bg-forest: #040E14;
+  --bg-forest-elevated: #0E2734;
+  --bg-header-scrolled: color-mix(in oklab, #07151D 92%, transparent);
 
-  --ink-primary: #F0EFEA;
-  --ink-secondary: #C6CEC9;
-  --ink-muted: #A2ACA6;
-  --ink-compass: #F0EFEA;
-  --ink-compass-muted: #C6CEC9;
-  --ink-on-dark: #F0EFEA;
-  --ink-on-dark-muted: #C6CEC9;
+  --ink-primary: #EEF6F9;
+  --ink-secondary: #B9CED6;
+  --ink-muted: #8FAAB6;
+  --ink-compass: #EEF6F9;
+  --ink-compass-muted: #B9CED6;
+  --ink-on-dark: #EEF6F9;
+  --ink-on-dark-muted: #B9CED6;
 
-  --accent-terracotta: #DF7B56;
-  --accent-terracotta-hover: #EB8E6B;
-  --accent-tea: #5EB48D;
-  --accent-brass: #E0BA6F;
+  --accent-terracotta: #26B0E8;
+  --accent-terracotta-hover: #4DC4F5;
+  --accent-tea: #2DD4BF;
+  --accent-brass: #F4B852;
 
-  --hairline: rgba(240, 239, 234, 0.12);
-  --hairline-strong: rgba(240, 239, 234, 0.24);
-  --hairline-compass: rgba(240, 239, 234, 0.12);
-  --hairline-on-dark: rgba(240, 239, 234, 0.14);
+  --hairline: rgba(238, 246, 249, 0.12);
+  --hairline-strong: rgba(238, 246, 249, 0.24);
+  --hairline-compass: rgba(238, 246, 249, 0.12);
+  --hairline-on-dark: rgba(238, 246, 249, 0.14);
 
-  --spotlight-color: rgba(224, 186, 111, 0.07);
-  --status-info-bg: rgba(94, 180, 141, 0.14);
+  --spotlight-color: rgba(38, 176, 232, 0.08);
+  --status-info-bg: rgba(45, 212, 191, 0.14);
 
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.24);
   --shadow-card-hover: 0 14px 32px rgba(0, 0, 0, 0.36);
