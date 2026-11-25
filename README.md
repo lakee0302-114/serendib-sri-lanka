@@ -6,7 +6,7 @@ An editorial Sri Lanka tourism website designed for both mobile phones and lapto
 
 - **CSS Cascade Layers & Design Tokens**: `@layer reset, base, components, utilities` in [main.css](styles/main.css) backed by [tokens.css](styles/tokens.css) using `color-mix(in oklab, ...)`, `@container` card queries, scroll-driven reading progress (`animation-timeline: scroll()`), and logical properties (`margin-inline`, `inset-inline`) for seamless RTL mirroring.
 - **Dual Light & Dark Themes**: Daylight ("Limestone Dawn") and Night ("Obsidian Tea & Brass") modes with zero-flash initial hydration, `prefers-color-scheme` detection, `localStorage` persistence, and View Transitions API circular reveal.
-- **9 Dynamic Languages**: Modular ES locales under `scripts/locales/` (`en`, `si`, `ta`, `fr`, `de`, `es`, `ja`, `zh`, `ar` with automatic `dir="rtl"`), complete with script-matched Noto fonts.
+- **14 Dynamic Languages**: Modular script locales under `scripts/locales/` (`en`, `ta`, `hi`, `fr`, `de`, `es`, `it`, `nl`, `pt`, `ru`, `ja`, `ko`, `zh`, `ar` with automatic `dir="rtl"`), complete with script-matched Noto fonts.
 
 ## Local Preview
 

@@ -22,7 +22,7 @@
         if (meta) meta.setAttribute('content', theme === 'dark' ? '#0D1511' : '#F6F2EA');
 
         var savedLang = localStorage.getItem('serendib_lang_v1');
-        var allowed = ['en', 'si', 'ta', 'fr', 'de', 'es', 'ja', 'zh', 'ar'];
+        var allowed = ['en', 'ta', 'hi', 'fr', 'de', 'es', 'it', 'nl', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar'];
         if (savedLang && allowed.indexOf(savedLang) !== -1) {
           document.documentElement.setAttribute('lang', savedLang);
           document.documentElement.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Sans+Sinhala:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Serif+Sinhala:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles/tokens.css" />
@@ -628,12 +628,17 @@
   <script defer src="./scripts/data.js"></script>
   <script defer src="./scripts/locales/index.js"></script>
   <script defer src="./scripts/locales/en.js"></script>
-  <script defer src="./scripts/locales/si.js"></script>
   <script defer src="./scripts/locales/ta.js"></script>
+  <script defer src="./scripts/locales/hi.js"></script>
   <script defer src="./scripts/locales/fr.js"></script>
   <script defer src="./scripts/locales/de.js"></script>
   <script defer src="./scripts/locales/es.js"></script>
+  <script defer src="./scripts/locales/it.js"></script>
+  <script defer src="./scripts/locales/nl.js"></script>
+  <script defer src="./scripts/locales/pt.js"></script>
+  <script defer src="./scripts/locales/ru.js"></script>
   <script defer src="./scripts/locales/ja.js"></script>
+  <script defer src="./scripts/locales/ko.js"></script>
   <script defer src="./scripts/locales/zh.js"></script>
   <script defer src="./scripts/locales/ar.js"></script>
   <script defer src="./scripts/app.js"></script>
