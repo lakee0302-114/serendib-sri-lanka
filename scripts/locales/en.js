@@ -569,16 +569,16 @@ window.SERENDIB_LOCALES['en'] = {
     wilpattu: {
       name: 'Wilpattu National Park',
       region: 'Wildlife',
-      tagline: 'Sand-rimmed forest lakes, leopards & sloth bears',
+      tagline: 'Bathing elephants, sand-rimmed forest lakes & leopards',
       elevation: '65m',
       driveFromColombo: '3h 45m',
       bestTime: 'Feb–Oct',
       daylightWindow: '06:00 – 09:30 & 15:30',
-      summary: 'Sri Lanka’s largest wilderness sanctuary known for quiet jungle trails and natural sand-basin lakes.',
+      summary: 'Sri Lanka’s largest sanctuary famed for serene forest lakes where wild herds cool off beside shaded leopard trails.',
       highlights: [
-        'Track elusive Ceylon leopards striding down shaded sandy forest tracks.',
-        'Visit serene villu water basins dotted with mugger crocodiles and deer.',
-        'Spot rare Sri Lankan sloth bears foraging under flowering palu trees (May–Jul).'
+        'Watch elephant families wading and bathing across shallow villu waters.',
+        'Explore serene forest basins dotted with crocodiles, deer, and peacocks.',
+        'Track quiet Ceylon leopards and sloth bears under shady jungle canopy.'
       ],
       culinaryNote: 'Home-cooked clay-pot lake fish and red rice near Nochchiyagama.',
       etiquette: 'Stay seated and keep jeeps whisper-quiet around shaded leopard sightings.'

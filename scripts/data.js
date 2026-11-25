@@ -35,8 +35,18 @@
       imageAlt: 'Blue Sri Lankan highland train crossing Nine Arches Bridge near Ella amidst tea hills'
     },
     {
-      id: 'galle',
+      id: 'wilpattu',
       number: '04',
+      sinhala: 'විල්පත්තුව',
+      regionKey: 'wildlife',
+      coords: "08°27'15\"N · 80°02'30\"E",
+      idealNights: 2,
+      image: './assets/images/wilpattu-elephants.jpg',
+      imageAlt: 'Herd of Sri Lankan elephants with calves bathing together in shallow clear water'
+    },
+    {
+      id: 'galle',
+      number: '05',
       sinhala: 'ගාල්ල කොටුව',
       regionKey: 'south',
       coords: "06°01'50\"N · 80°13'02\"E",
@@ -46,7 +56,7 @@
     },
     {
       id: 'mirissa',
-      number: '05',
+      number: '06',
       sinhala: 'මිරිස්ස · වැලිගම',
       regionKey: 'south',
       coords: "05°56'54\"N · 80°27'31\"E",
@@ -56,7 +66,7 @@
     },
     {
       id: 'nuwara-eliya',
-      number: '06',
+      number: '07',
       sinhala: 'හැටන් / නුවරඑළිය',
       regionKey: 'highlands',
       coords: "06°56'57\"N · 80°46'58\"E",
@@ -66,7 +76,7 @@
     },
     {
       id: 'yala',
-      number: '07',
+      number: '08',
       sinhala: 'යාල',
       regionKey: 'wildlife',
       coords: "06°22'20\"N · 81°31'05\"E",
@@ -76,7 +86,7 @@
     },
     {
       id: 'udawalawe',
-      number: '08',
+      number: '09',
       sinhala: 'උඩවලව',
       regionKey: 'wildlife',
       coords: "06°26'18\"N · 80°53'18\"E",
@@ -86,7 +96,7 @@
     },
     {
       id: 'anuradhapura',
-      number: '09',
+      number: '10',
       sinhala: 'අනුරාධපුරය',
       regionKey: 'cultural',
       coords: "08°21'00\"N · 80°23'47\"E",
@@ -96,7 +106,7 @@
     },
     {
       id: 'dambulla',
-      number: '10',
+      number: '11',
       sinhala: 'දඹුල්ල',
       regionKey: 'cultural',
       coords: "07°51'24\"N · 80°38'57\"E",
@@ -106,7 +116,7 @@
     },
     {
       id: 'polonnaruwa',
-      number: '11',
+      number: '12',
       sinhala: 'පොළොන්නරුව',
       regionKey: 'cultural',
       coords: "07°56'40\"N · 81°00'08\"E",
@@ -116,7 +126,7 @@
     },
     {
       id: 'horton-plains',
-      number: '12',
+      number: '13',
       sinhala: 'හෝර්ටන් තැන්න',
       regionKey: 'highlands',
       coords: "06°48'09\"N · 80°48'09\"E",
@@ -126,7 +136,7 @@
     },
     {
       id: 'bentota',
-      number: '13',
+      number: '14',
       sinhala: 'බෙන්තොට / තංගල්ල',
       regionKey: 'south',
       coords: "06°25'16\"N · 79°59'45\"E",
@@ -136,7 +146,7 @@
     },
     {
       id: 'trinco-jaffna',
-      number: '14',
+      number: '15',
       sinhala: 'ත්‍රිකුණාමලය · யாழ்ப்பாணம்',
       regionKey: 'northeast',
       coords: "08°34'16\"N · 81°14'00\"E",
@@ -146,7 +156,7 @@
     },
     {
       id: 'arugam-bay',
-      number: '15',
+      number: '16',
       sinhala: 'ආරුගම් බොක්ක',
       regionKey: 'northeast',
       coords: "06°50'25\"N · 81°49'50\"E",
@@ -156,7 +166,7 @@
     },
     {
       id: 'colombo',
-      number: '16',
+      number: '17',
       sinhala: 'කොළඹ',
       regionKey: 'south',
       coords: "06°55'37\"N · 79°51'40\"E",
@@ -166,7 +176,7 @@
     },
     {
       id: 'sri-pada',
-      number: '17',
+      number: '18',
       sinhala: 'ශ්‍රී පාදය',
       regionKey: 'highlands',
       coords: "06°48'34\"N · 80°29'59\"E",
@@ -176,23 +186,13 @@
     },
     {
       id: 'minneriya',
-      number: '18',
+      number: '19',
       sinhala: 'මින්නේරිය',
       regionKey: 'wildlife',
       coords: "08°01'15\"N · 80°53'10\"E",
       idealNights: 1,
       image: './assets/images/minneriya-gathering.jpg',
       imageAlt: 'Wild Sri Lankan elephant mother and calf grazing beside calm Minneriya Reservoir water'
-    },
-    {
-      id: 'wilpattu',
-      number: '19',
-      sinhala: 'විල්පත්තුව',
-      regionKey: 'wildlife',
-      coords: "08°27'15\"N · 80°02'30\"E",
-      idealNights: 2,
-      image: './assets/images/wilpattu-leopard.jpg',
-      imageAlt: 'Wild Sri Lankan leopard walking along a quiet sandy forest track in Wilpattu National Park'
     },
     {
       id: 'knuckles',
