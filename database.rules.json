@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "inquiries": {
+      ".read": false,
+      ".indexOn": ["createdAt", "month"],
+      "$refId": {
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['refCode', 'name', 'email', 'month', 'createdAt']) && newData.child('refCode').isString() && newData.child('name').isString() && newData.child('email').isString()"
+      }
+    },
+    "routes": {
+      ".read": false,
+      "$shareId": {
+        ".read": true,
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['stops', 'createdAt'])"
+      }
+    }
+  }
+}

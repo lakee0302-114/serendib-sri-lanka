@@ -904,6 +904,9 @@
     dom.inquiryForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = document.getElementById('inq-name').value.trim();
+      var email = document.getElementById('inq-email').value.trim();
+      var guests = document.getElementById('inq-guests').value.trim();
+      var notes = dom.inqNotes.value.trim();
       var monthCode = dom.inqMonth.value;
       var monthObj = state.locale.months[monthCode];
       var monthName = monthObj ? monthObj.fullName : monthCode;
@@ -914,16 +917,43 @@
         }
         return null;
       }).filter(Boolean);
-      var refCode = 'SRD-' + Math.floor(1000 + Math.random() * 9000);
+      var suffix = Math.random().toString(36).slice(2, 6).toUpperCase() + Math.floor(10 + Math.random() * 89);
+      var refCode = 'SRD-' + suffix;
       var c = state.locale.ui.contact;
+      var submitBtn = dom.inquiryForm.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
 
-      dom.inquiryStatus.hidden = false;
-      dom.inquiryStatus.innerHTML =
-        '<strong>' + c.briefReady + ' (' + refCode + ')</strong> — ' + c.briefPrefix + ', ' + name + '. ' +
-        c.briefBody + ' ' + monthName + ' ' +
-        (stops.length ? c.briefMid + ' <em>' + stops.join(' → ') + '</em> ' : '') +
-        c.briefSuffix;
-      showToast(state.locale.ui.toasts.compiled.replace('{ref}', refCode));
+      var renderSuccess = function (cloudSynced) {
+        if (submitBtn) submitBtn.disabled = false;
+        dom.inquiryStatus.hidden = false;
+        dom.inquiryStatus.innerHTML =
+          '<strong>' + c.briefReady + ' (' + refCode + ')</strong> — ' + c.briefPrefix + ', ' + name + '. ' +
+          c.briefBody + ' ' + monthName + ' ' +
+          (stops.length ? c.briefMid + ' <em>' + stops.join(' → ') + '</em> ' : '') +
+          c.briefSuffix +
+          (cloudSynced ? ' <span class="mono-label" style="display:inline-block; margin-inline-start:0.4rem; color:var(--accent-tea);">[FIREBASE SYNCED]</span>' : '');
+        showToast(state.locale.ui.toasts.compiled.replace('{ref}', refCode));
+      };
+
+      if (window.SERENDIB_FIREBASE && typeof window.SERENDIB_FIREBASE.saveInquiry === 'function') {
+        window.SERENDIB_FIREBASE.saveInquiry({
+          refCode: refCode,
+          name: name,
+          email: email,
+          month: monthCode,
+          guests: guests,
+          notes: notes,
+          stops: stops,
+          lang: state.lang,
+          createdAt: new Date().toISOString()
+        }).then(function () {
+          renderSuccess(true);
+        }).catch(function () {
+          renderSuccess(false);
+        });
+      } else {
+        renderSuccess(false);
+      }
     });
   }
 
