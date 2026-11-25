@@ -482,7 +482,7 @@ window.SERENDIB_LOCALES['en'] = {
       etiquette: 'Pick eco-certified whale boats keeping fair distance.'
     },
     udawalawe: {
-      name: 'Udawalawe Elephant Park',
+      name: 'Udawalawe National Park',
       region: 'Wildlife',
       tagline: 'Wide savannah plains full of wild elephant herds',
       elevation: '118m',
