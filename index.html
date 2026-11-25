@@ -623,14 +623,14 @@
       </header>
 
       <nav class="planner-steps" id="planner-steps" aria-label="Trip planner steps">
-        <button type="button" class="planner-step-btn is-active" data-planner-nav="1" data-i18n="planner.step1Tab">01 · Route &amp; Month</button>
-        <button type="button" class="planner-step-btn" data-planner-nav="2" data-i18n="planner.step2Tab">02 · Style &amp; Pace</button>
+        <button type="button" class="planner-step-btn is-active" data-planner-nav="1" data-i18n="planner.step1Tab">01 · Month, Date &amp; Style</button>
+        <button type="button" class="planner-step-btn" data-planner-nav="2" data-i18n="planner.step2Tab">02 · Route &amp; Stops</button>
         <button type="button" class="planner-step-btn" data-planner-nav="3" data-i18n="planner.step3Tab">03 · Confirm Brief</button>
       </nav>
 
       <div class="planner-workspace" id="planner-workspace">
         <div class="planner-stage" id="planner-stage">
-          <!-- Step 1: Travel Month & Visual Destination Picker -->
+          <!-- Step 1: Month, Arrival Date, Travelers, Nights, Stay Collection & Focus -->
           <div class="planner-step-pane" id="planner-pane-1">
             <div class="planner-block">
               <div class="planner-block__head">
@@ -640,18 +640,12 @@
               <div class="planner-month-pills" id="planner-month-pills"></div>
             </div>
 
-            <div class="planner-block">
-              <div class="planner-block__head">
-                <h3 class="planner-label" id="planner-dest-heading">Select Destinations</h3>
-                <div class="planner-presets" id="planner-presets"></div>
-              </div>
-              <div class="planner-dest-grid" id="planner-dest-grid"></div>
-            </div>
-          </div>
-
-          <!-- Step 2: Travelers, Nights, Stay Collection & Transport -->
-          <div class="planner-step-pane" id="planner-pane-2" hidden>
             <div class="planner-steppers">
+              <div class="stepper-card">
+                <label class="mono-label stepper-card__label" for="pln-date" data-i18n="planner.dateLabel">Arrival Date</label>
+                <input type="date" id="pln-date" name="arrivalDate" class="planner-date-input" />
+              </div>
+
               <div class="stepper-card">
                 <span class="mono-label stepper-card__label" data-i18n="planner.travelersLabel">Travelers</span>
                 <div class="stepper-ctrl">
@@ -685,6 +679,17 @@
             <div class="planner-block">
               <h3 class="planner-label" data-i18n="planner.interestsHeading">Trip Focus</h3>
               <div class="quick-tags" id="planner-interest-tags"></div>
+            </div>
+          </div>
+
+          <!-- Step 2: Visual Route & Destination Selector -->
+          <div class="planner-step-pane" id="planner-pane-2" hidden>
+            <div class="planner-block">
+              <div class="planner-block__head">
+                <h3 class="planner-label" id="planner-dest-heading">Select Destinations</h3>
+                <div class="planner-presets" id="planner-presets"></div>
+              </div>
+              <div class="planner-dest-grid" id="planner-dest-grid"></div>
             </div>
           </div>
 

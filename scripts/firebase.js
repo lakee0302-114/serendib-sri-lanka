@@ -44,6 +44,7 @@
       name: payload.name,
       email: payload.email,
       month: payload.month,
+      arrivalDate: payload.arrivalDate || '',
       guests: payload.guests || '',
       travelers: typeof payload.travelers === 'number' ? payload.travelers : null,
       nights: typeof payload.nights === 'number' ? payload.nights : null,

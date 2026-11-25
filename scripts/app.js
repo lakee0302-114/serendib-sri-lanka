@@ -40,6 +40,7 @@
       open: false,
       step: 1,
       month: 'FEB',
+      arrivalDate: '',
       travelers: 2,
       nights: null,
       stayTier: 'boutique',
@@ -139,6 +140,7 @@
     plannerPane3: document.getElementById('planner-pane-3'),
     plannerConfirmed: document.getElementById('planner-confirmed'),
     plannerMonthPills: document.getElementById('planner-month-pills'),
+    plannerDateInput: document.getElementById('pln-date'),
     plannerMonsoonFit: document.getElementById('planner-monsoon-fit'),
     plannerDestHeading: document.getElementById('planner-dest-heading'),
     plannerPresets: document.getElementById('planner-presets'),
@@ -956,7 +958,7 @@
 
     dom.applyRouteBtn.addEventListener('click', function () {
       closeAllSheets();
-      openPlannerModal(2);
+      openPlannerModal(1);
     });
   }
 
@@ -991,7 +993,7 @@
     var transLabel = p.transports[state.planner.transport] || p.transports.chauffeur;
     var lines = [
       'SERENDIB SRI LANKA — TRIP BLUEPRINT' + (refCode ? ' (' + refCode + ')' : ''),
-      'Month: ' + m.fullName + ' (' + m.headline + ')',
+      'Month: ' + m.fullName + ' (' + m.headline + ')' + (state.planner.arrivalDate ? ' · Arrival: ' + state.planner.arrivalDate : ''),
       'Guests & Pace: ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + nights + ' ' + p.summaryMetaNights,
       'Stay Style: ' + stayObj.title + ' · ' + transLabel,
       'Route: ' + (stops.length ? stops.map(function (d) { return d.name; }).join(' -> ') : 'Open Custom Loop')
@@ -1188,11 +1190,17 @@
       });
     });
 
+    // Sync Date input inside Step 1
+    if (dom.plannerDateInput) {
+      dom.plannerDateInput.value = state.planner.arrivalDate || '';
+    }
+
     // Mobile Summary Review inside Step 3 & Footer
     var routeLine = stops.length ? stops.map(function (s) { return s.name; }).join(' → ') : p.summaryNoStops;
     var stayTitle = (p.stays[state.planner.stayTier] || p.stays.boutique).title;
+    var dateDisplay = state.planner.arrivalDate || p.dateAny;
     dom.plannerMobileReview.innerHTML =
-      '<strong>' + monthObj.fullName + ' · ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + activeNights + nightsUnit + '</strong>' +
+      '<strong>' + monthObj.fullName + ' · ' + dateDisplay + ' · ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + activeNights + nightsUnit + '</strong>' +
       '<div style="margin-top:0.25rem; color:var(--accent-tea);">' + stayTitle + '</div>' +
       '<div style="margin-top:0.2rem;">' + routeLine + '</div>';
 
@@ -1202,9 +1210,10 @@
       '<span class="mono-label" style="display:block; color:var(--ink-muted); margin-bottom:0.2rem;">' + p.summaryMonsoon + ' · ' + monthObj.fullName + '</span>' +
       '<strong>' + monthObj.headline + '</strong>';
     dom.plannerAsideSpecs.innerHTML =
+      '<div><span>' + p.dateLabel + '</span><strong>' + dateDisplay + '</strong></div>' +
       '<div><span>' + p.summaryMetaTravelers + '</span><strong>' + state.planner.travelers + '</strong></div>' +
       '<div><span>' + p.summaryMetaNights + '</span><strong>' + activeNights + nightsUnit + '</strong></div>' +
-      '<div style="grid-column:1 / -1;"><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>';
+      '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>';
 
     if (!stops.length) {
       dom.plannerAsideStops.innerHTML = '<p style="font-size:0.84rem; color:var(--ink-muted); margin:0;">' + p.summaryNoStops + '</p>';
@@ -1248,7 +1257,7 @@
         p.confirmedHeading.replace('{name}', conf.name) + '</h3>' +
         '<p style="margin:0; color:var(--ink-secondary); font-size:0.92rem;">' + p.confirmedSub.replace('{ref}', conf.refCode) + '</p>' +
         '<div class="confirmed-meta-grid">' +
-        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + '</strong></div>' +
+        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + (state.planner.arrivalDate ? ' (' + state.planner.arrivalDate + ')' : '') + '</strong></div>' +
         '<div><span>' + p.summaryMetaTravelers + ' &amp; ' + p.summaryMetaNights + '</span><strong>' + state.planner.travelers + ' · ' + activeNights + nightsUnit + '</strong></div>' +
         '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>' +
         '<div><span>' + p.transportHeading + '</span><strong>' + p.transports[state.planner.transport] + '</strong></div>' +
@@ -1303,6 +1312,7 @@
         name: name,
         email: email,
         month: state.planner.month,
+        arrivalDate: state.planner.arrivalDate,
         guests: state.planner.travelers + ' guests · ' + activeNights + ' nights',
         travelers: state.planner.travelers,
         nights: activeNights,
@@ -1342,6 +1352,22 @@
         setPlannerStep(Number(btn.dataset.plannerNav));
       });
     });
+
+    if (dom.plannerDateInput) {
+      dom.plannerDateInput.min = new Date().toISOString().slice(0, 10);
+      dom.plannerDateInput.addEventListener('change', function () {
+        state.planner.arrivalDate = dom.plannerDateInput.value;
+        if (state.planner.arrivalDate) {
+          var parts = state.planner.arrivalDate.split('-');
+          var monthIndex = parseInt(parts[1], 10) - 1;
+          if (!isNaN(monthIndex) && MONTH_CODES[monthIndex]) {
+            state.planner.month = MONTH_CODES[monthIndex];
+            setActiveMonth(state.planner.month);
+          }
+        }
+        renderPlannerModal();
+      });
+    }
 
     document.querySelectorAll('[data-step-field]').forEach(function (btn) {
       btn.addEventListener('click', function () {
