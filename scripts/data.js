@@ -72,7 +72,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Sunlit terraced emerald Ceylon tea plantations rolling across high mountain ridges'
+      imageAlt: 'Sculpted emerald terraced Ceylon tea waves and highland wildflowers across misty Sri Lankan slopes'
     },
     {
       id: 'yala',
