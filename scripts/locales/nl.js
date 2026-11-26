@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['nl'] = {
       titleEm: 'op het eiland.',
       subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (19)',
+        all: 'Alles (18)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['nl'] = {
         "seafood": "Verse vis",
         "cafe": "Cafés & Vega"
       },
-      "filterAll": "Alles (19)",
+      "filterAll": "Alles (18)",
       "routeOrderHeading": "Plekken, eten & vervoer",
       "seeLabel": "Zien",
       "eatLabel": "Eten",
@@ -329,12 +329,6 @@ window.SERENDIB_LOCALES['nl'] = {
       highlights: ['Leer traditioneel plukken tijdens een thee-wandeling.', 'Beleef zonsopgang bij World’s End op Horton Plains.', 'Ontspan bij het haardvuur in een gerestaureerde bungalow.'],
       culinaryNote: 'Gouden Dimbula Orange Pekoe met kardemomkoekjes.', etiquette: 'Neem een trui mee (12 °C ’s nachts); vraag toestemming voor foto’s.'
     },
-    polonnaruwa: {
-      name: 'Polonnaruwa & Ritigala', region: 'Cultuur', tagline: 'Twaalfde-eeuwse tempels langs uitgestrekte meren', elevation: '52 m', driveFromColombo: '4u 50', bestTime: 'Jan–Sep', daylightWindow: '07:00–10:00 (Fiets)',
-      summary: 'Middeleeuwse koningsstad vol enorme granieten Boeddha’s en irrigatiemeren.',
-      highlights: ['Fiets onder bomen van het Koninklijk Paleis naar de Vatadage.', 'Bewonder de uitgehouwen beelden van Gal Vihara.', 'Combineer met het bemoste bosklooster Ritigala.'],
-      culinaryNote: 'Zoetwatervis gestoofd met tamarinde en kurkuma.', etiquette: 'Schoenen uit bij tempels; dikke sokken tegen heet graniet.'
-    },
     bentota: {
       name: 'Bentota & Tangalle', region: 'Zuidkust', tagline: 'Bawa-architectuur, rivieren en stille baaien', elevation: 'Zeeniveau', driveFromColombo: '1u 30', bestTime: 'Nov–Apr', daylightWindow: '07:00 & 17:15',
       summary: 'Tropisch modernisme dat naadloos overgaat in kalme lagunes en palmstranden.',
@@ -401,10 +395,10 @@ window.SERENDIB_LOCALES['nl'] = {
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januari', headline: 'Droogseizoen — West, Zuid & Heuvels', summary: 'Frisse ochtenden in de bergen en kalme zuidzee.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Zonnig', note: 'Vlak water en walvissen bij Mirissa.' }, highlands: { status: 'Helder', note: 'Strakke uitzichten en koele avonden.' }, cultural: { status: 'Droog', note: 'Aangenaam licht over oude steden.' }, northeast: { status: 'Buien', note: 'Ruwe oostzee; Jaffna meestal droog.' } } },
-    FEB: { short: 'FEB', fullName: 'Februari', headline: 'Helder Weer op Bijna Het Hele Eiland', summary: 'Droogste maand — moeiteloos van noord naar zuid reizen.', festival: 'Navam Perahera · Onafhankelijkheidsdag.', verdicts: { south: { status: 'Zonnig', note: 'Spiegelgladde turquoise zwembaaien.' }, highlands: { status: 'Helder', note: 'Topweer voor Pekoe Trail en Adam’s Peak.' }, cultural: { status: 'Droog', note: 'Ideaal fietsweer in Polonnaruwa.' }, northeast: { status: 'Opklarend', note: 'Jaffna droog; Trinco komt tot rust.' } } },
+    FEB: { short: 'FEB', fullName: 'Februari', headline: 'Helder Weer op Bijna Het Hele Eiland', summary: 'Droogste maand — moeiteloos van noord naar zuid reizen.', festival: 'Navam Perahera · Onafhankelijkheidsdag.', verdicts: { south: { status: 'Zonnig', note: 'Spiegelgladde turquoise zwembaaien.' }, highlands: { status: 'Helder', note: 'Topweer voor Pekoe Trail en Adam’s Peak.' }, cultural: { status: 'Droog', note: 'Ideaal fietsweer rond oude meren.' }, northeast: { status: 'Opklarend', note: 'Jaffna droog; Trinco komt tot rust.' } } },
     MAR: { short: 'MRT', fullName: 'Maart', headline: 'Gouden Kusten & Dieren bij Water', summary: 'Lange zonnige stranddagen en veel wild rond waterpoelen.', festival: 'Maha Shivaratri in Trincomalee.', verdicts: { south: { status: 'Zonnig', note: 'Warm zeewater van Bentota tot Tangalle.' }, highlands: { status: 'Zonnig', note: 'Milde dagen tussen frisgroene theevelden.' }, cultural: { status: 'Warm', note: 'Beklimmingen vroeg in de ochtend plannen.' }, northeast: { status: 'Kalm', note: 'Oostkust begint lange droge periode.' } } },
     APR: { short: 'APR', fullName: 'April', headline: 'Nieuwjaarsfeest & Groene Heuvels', summary: 'Dorpsfeesten en kalme zee vóór de weersomslag in mei.', festival: 'Singalees & Tamil Nieuwjaar (13–14 apr).', verdicts: { south: { status: 'Warm', note: 'Goed zwemmen tot eind april.' }, highlands: { status: 'Bloeiend', note: 'Groene valleien met korte middagbuien.' }, cultural: { status: 'Feestelijk', note: 'Warme ochtenden en dorpsgastvrijheid.' }, northeast: { status: 'Topperiode', note: 'Ooststranden en riffen zijn glashelder.' } } },
-    MAY: { short: 'MEI', fullName: 'Mei', headline: 'Oostkust Opent; Zuidwest krijgt Regen', summary: 'Zuidwestmoesson brengt regen terwijl Trincomalee straalt.', festival: 'Vesak volle maan lantaarnfeest.', verdicts: { south: { status: 'Moesson', note: 'Hoge golven en buien; rustige resorts.' }, highlands: { status: 'Mistig', note: 'Heldere ochtenden, regen in de middag.' }, cultural: { status: 'Droog', note: 'Sigiriya en Polonnaruwa blijven droog.' }, northeast: { status: 'Zonnig', note: 'Kalme oostzee en surfstart in Arugam.' } } },
+    MAY: { short: 'MEI', fullName: 'Mei', headline: 'Oostkust Opent; Zuidwest krijgt Regen', summary: 'Zuidwestmoesson brengt regen terwijl Trincomalee straalt.', festival: 'Vesak volle maan lantaarnfeest.', verdicts: { south: { status: 'Moesson', note: 'Hoge golven en buien; rustige resorts.' }, highlands: { status: 'Mistig', note: 'Heldere ochtenden, regen in de middag.' }, cultural: { status: 'Droog', note: 'Sigiriya en Dambulla blijven droog.' }, northeast: { status: 'Zonnig', note: 'Kalme oostzee en surfstart in Arugam.' } } },
     JUN: { short: 'JUN', fullName: 'Juni', headline: 'Surfen in Arugam & Zonnig Oosten', summary: 'Droge zon aan de oostkust en olifanten naar de meren.', festival: 'Poson Poya bedevaart naar Mihintale.', verdicts: { south: { status: 'Winderig', note: 'Niet zwemmen in het zuiden; kies oost.' }, highlands: { status: 'Bries', note: 'Ella veel droger dan westelijke heuvels.' }, cultural: { status: 'Droog', note: 'Zonnige ruïnes en goede safari’s.' }, northeast: { status: 'Topseizoen', note: 'Vlak Nilaveli en topsurf in Arugam.' } } },
     JUL: { short: 'JUL', fullName: 'Juli', headline: 'Safari in de Droge Zone & Oostzon', summary: 'Wilde olifanten langs oude meren onder een stralende oostlucht.', festival: 'Voorbereidingen Esala-optochten.', verdicts: { south: { status: 'Wisselend', note: 'Zonmomenten tussen korte buien door.' }, highlands: { status: 'Helder Oost', note: 'Fijn wandelweer rond Ella en Knuckles.' }, cultural: { status: 'Topsafari', note: 'Grote kuddes langs eeuwenoude meren.' }, northeast: { status: 'Zon', note: 'Beste zicht voor snorkelen op riffen.' } } },
     AUG: { short: 'AUG', fullName: 'Augustus', headline: 'Kandy Esala Perahera & Nallur Festival', summary: 'Grote cultuurfeesten onder droge zomerse luchten.', festival: 'Esala Perahera Kandy · Nallur Jaffna.', verdicts: { south: { status: 'Beter', note: 'Droge periodes rond Galle Fort.' }, highlands: { status: 'Feestelijk', note: 'Koele avonden en optochten in Kandy.' }, cultural: { status: 'Droog', note: 'Heldere beklimming van Sigiriya.' }, northeast: { status: 'Hoogseizoen', note: 'Tempelfeest in Jaffna & kalme baaien.' } } },
@@ -418,7 +412,7 @@ window.SERENDIB_LOCALES['nl'] = {
       number: 'ROUTE 01', title: 'Klassieke Serendib-Ronde', duration: '09D / 08N', season: 'Dec–Apr · Eerste Keer', pace: 'Trein + Chauffeur', routeLine: 'Sigiriya → Kandy → Hatton → Ella → Galle Fort',
       summary: 'Verbindt oude rotspaleizen, bergtreinen en zuidelijke forten in rust.',
       days: [
-        { day: 'Dag 1–2', stop: 'Sigiriya & Polonnaruwa', note: 'Zonsopgang vanaf Pidurangala en fietstocht.' },
+        { day: 'Dag 1–2', stop: 'Sigiriya & Dambulla', note: 'Zonsopgang vanaf Pidurangala en grottempel.' },
         { day: 'Dag 3–4', stop: 'Kandy', note: 'Avondritueel in de Tandtempel en kruidentuinen.' },
         { day: 'Dag 5–6', stop: 'Hatton & Ella', note: 'Theeplantage en 3u bergtrein over Nine Arches.' },
         { day: 'Dag 7–9', stop: 'Galle Fort', note: 'Zonsondergang op stadswallen en zwemmen.' }
@@ -435,13 +429,13 @@ window.SERENDIB_LOCALES['nl'] = {
       ]
     },
     'east-north-sun': {
-      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Anuradhapura → Jaffna → Trinco → Sigiriya',
       summary: 'Volgt zomerzon langs Tamil-tempels, koraalriffen en koningssteden.',
       days: [
         { day: 'Dag 1–2', stop: 'Anuradhapura & Mihintale', note: 'Witte stoepa’s en eeuwenoude rotstrappen.' },
         { day: 'Dag 3–5', stop: 'Jaffna & Delft', note: 'Palmtuinen, Nallur-tempel en wilde pony’s.' },
         { day: 'Dag 6–8', stop: 'Trincomalee', note: 'Snorkelen bij Pigeon Island en Nilaveli.' },
-        { day: 'Dag 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Fietsen langs oude meren voor de beklimming van Sigiriya.' }
+        { day: 'Dag 9–10', stop: 'Dambulla & Sigiriya', note: 'Grottempels bezoeken voor de beklimming van Sigiriya.' }
       ]
     }
   },

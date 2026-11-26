@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['fr'] = {
       titleEm: 'incontournables.',
       subcopy: 'Touchez une étape pour la lumière idéale, la table ou votre circuit.',
       filters: {
-        all: 'Tous (19)',
+        all: 'Tous (18)',
         cultural: 'Culture',
         highlands: 'Montagnes',
         south: 'Sud',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['fr'] = {
         "seafood": "Fruits de mer",
         "cafe": "Cafés & Végé"
       },
-      "filterAll": "Tout (19)",
+      "filterAll": "Tout (18)",
       "routeOrderHeading": "Visites, tables & trajets",
       "seeLabel": "Visiter",
       "eatLabel": "Manger",
@@ -384,23 +384,6 @@ window.SERENDIB_LOCALES['fr'] = {
       culinaryNote: 'Thé doré de Dimbula servi avec sablés à la cardamome.',
       etiquette: 'Prévoir un pull (12 °C la nuit) ; demander avant photo.'
     },
-    polonnaruwa: {
-      name: 'Polonnaruwa & Ritigala',
-      region: 'Culture',
-      tagline: 'Sanctuaires de pierre du XIIe siècle au bord des lacs',
-      elevation: '52 m',
-      driveFromColombo: '4h 50',
-      bestTime: 'Jan–Sep',
-      daylightWindow: '07:00–10:00 (À vélo)',
-      summary: 'Capitale médiévale reliée à d’immenses lacs artificiels et Bouddhas sculptés dans le granit.',
-      highlights: [
-        'Circuler à vélo à l’ombre entre le Palais Royal et le Vatadage.',
-        'Contempler les Bouddhas monumentaux de Gal Vihara.',
-        'Découvrir le monastère forestier secret de Ritigala.'
-      ],
-      culinaryNote: 'Poisson d’eau douce mijoté au tamarin et curcuma.',
-      etiquette: 'Retirer chaussures aux sites sacrés ; prévoir chaussettes épaisses.'
-    },
     bentota: {
       name: 'Bentota & Tangalle',
       region: 'Côte Sud',
@@ -489,13 +472,13 @@ window.SERENDIB_LOCALES['fr'] = {
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Janvier', headline: 'Saison Sèche — Ouest, Sud & Montagnes', summary: 'Matins frais en altitude, mer calme au sud et safaris clairs.', festival: 'Perahera de Duruthu · Thai Pongal.', verdicts: { south: { status: 'Plein Soleil', note: 'Mer plate et baleines vers Mirissa.' }, highlands: { status: 'Clair & Frais', note: 'Cols dégagés et soirées fraîches.' }, cultural: { status: 'Sec & Doux', note: 'Matinées agréables dans les cités.' }, northeast: { status: 'Averses', note: 'Mer agitée à l’est ; Jaffna reste sec.' } } },
-    FEB: { short: 'FÉV', fullName: 'Février', headline: 'Clarté Optimale sur Presque Toute l’Île', summary: 'Mois le plus sec de l’île pour relier nord et sud sans pluie.', festival: 'Navam Perahera, Colombo · Fête Nationale.', verdicts: { south: { status: 'Plein Soleil', note: 'Eaux calmes idéales pour nager et plonger.' }, highlands: { status: 'Ciel Pur', note: 'Vues nettes sur Pekoe Trail et Pic d’Adam.' }, cultural: { status: 'Sec & Clair', note: 'Matins parfaits à vélo à Polonnaruwa.' }, northeast: { status: 'S’éclaircit', note: 'Jaffna sec ; Trinco se calme.' } } },
+    FEB: { short: 'FÉV', fullName: 'Février', headline: 'Clarté Optimale sur Presque Toute l’Île', summary: 'Mois le plus sec de l’île pour relier nord et sud sans pluie.', festival: 'Navam Perahera, Colombo · Fête Nationale.', verdicts: { south: { status: 'Plein Soleil', note: 'Eaux calmes idéales pour nager et plonger.' }, highlands: { status: 'Ciel Pur', note: 'Vues nettes sur Pekoe Trail et Pic d’Adam.' }, cultural: { status: 'Sec & Clair', note: 'Matins parfaits à vélo près des lacs.' }, northeast: { status: 'S’éclaircit', note: 'Jaffna sec ; Trinco se calme.' } } },
     MAR: { short: 'MAR', fullName: 'Mars', headline: 'Côtes Dorées & Faune Concentrée', summary: 'Longues journées ensoleillées au sud et animaux près des points d’eau.', festival: 'Nuit de Maha Shivaratri à Trincomalee.', verdicts: { south: { status: 'Plein Soleil', note: 'Eau chaude de Bentota à Tangalle.' }, highlands: { status: 'Ensoleillé', note: 'Matins clairs et pentes verdoyantes.' }, cultural: { status: 'Chaud', note: 'Gravir les sites tôt avant midi.' }, northeast: { status: 'Soleil & Calme', note: 'Début de la grande saison sèche à l’est.' } } },
     APR: { short: 'AVR', fullName: 'Avril', headline: 'Nouvel An Singhalais & Tamoul', summary: 'Fêtes villageoises et mers calmes avant les vents de mai.', festival: 'Nouvel An Avurudu / Puthandu (13–14 avr.).', verdicts: { south: { status: 'Chaud & Calme', note: 'Belles matinées avant la houle de fin avril.' }, highlands: { status: 'Fleurs', note: 'Vallées en fleurs avec pluies en soirée.' }, cultural: { status: 'Festif', note: 'Matinées lumineuses et accueil rural.' }, northeast: { status: 'Beau Temps', note: 'Plages de l’est et récifs limpides.' } } },
-    MAY: { short: 'MAI', fullName: 'Mai', headline: 'L’Est S’ouvre avec la Mousson du Sud', summary: 'Le sud reçoit les pluies tandis que Trincomalee rayonne au sec.', festival: 'Pleine lune de Vesak (lanternes).', verdicts: { south: { status: 'Mousson', note: 'Forte houle et averses ; tarifs doux.' }, highlands: { status: 'Brumeux', note: 'Matins clairs, pluies l’après-midi.' }, cultural: { status: 'Sec', note: 'Sigiriya et Polonnaruwa restent secs.' }, northeast: { status: 'Plein Soleil', note: 'Eaux calmes et début du surf à Arugam.' } } },
+    MAY: { short: 'MAI', fullName: 'Mai', headline: 'L’Est S’ouvre avec la Mousson du Sud', summary: 'Le sud reçoit les pluies tandis que Trincomalee rayonne au sec.', festival: 'Pleine lune de Vesak (lanternes).', verdicts: { south: { status: 'Mousson', note: 'Forte houle et averses ; tarifs doux.' }, highlands: { status: 'Brumeux', note: 'Matins clairs, pluies l’après-midi.' }, cultural: { status: 'Sec', note: 'Sigiriya et Dambulla restent secs.' }, northeast: { status: 'Plein Soleil', note: 'Eaux calmes et début du surf à Arugam.' } } },
     JUN: { short: 'JUN', fullName: 'Juin', headline: 'Surf à Arugam Bay & Ciel Pur à l’Est', summary: 'Soleil constant sur la côte est et éléphants vers les lacs.', festival: 'Pèlerinage de Poson Poya à Mihintale.', verdicts: { south: { status: 'Venteux', note: 'Baignade déconseillée au sud ; cap à l’est.' }, highlands: { status: 'Venteux', note: 'Ella reste plus sec que l’ouest.' }, cultural: { status: 'Sec & Ventilé', note: 'Visites ensoleillées dans les ruines.' }, northeast: { status: 'Haute Saison', note: 'Eaux plates à Nilaveli et vagues à Arugam.' } } },
     JUL: { short: 'JUL', fullName: 'Juillet', headline: 'Safaris en Zone Sèche & Soleil à l’Est', summary: 'Des troupeaux près des lacs secs sous le ciel pur de juillet à l’est.', festival: 'Fêtes d’Esala à Kandy et Kataragama.', verdicts: { south: { status: 'Variable', note: 'Éclaircies entre deux grains marins.' }, highlands: { status: 'Clair à l’Est', note: 'Idéal pour marcher vers Ella.' }, cultural: { status: 'Grand Safari', note: 'Troupeaux sauvages et ciel sec.' }, northeast: { status: 'Plein Soleil', note: 'Visibilité corallienne maximale.' } } },
-    AUG: { short: 'AOÛ', fullName: 'Août', headline: 'Esala Perahera de Kandy & Nallur', summary: 'Grands défilés traditionnels sous un soleil franc au nord et centre.', festival: 'Kandy Esala Perahera · Nallur à Jaffna.', verdicts: { south: { status: 'Éclaircies', note: 'Belles fenêtres sèches vers Galle.' }, highlands: { status: 'Festif', note: 'Soirées fraîches et parades à Kandy.' }, cultural: { status: 'Sec & Clair', note: 'Parfait pour Sigiriya et Polonnaruwa.' }, northeast: { status: 'Haute Saison', note: 'Fête de Nallur et lagon calme à Trinco.' } } },
+    AUG: { short: 'AOÛ', fullName: 'Août', headline: 'Esala Perahera de Kandy & Nallur', summary: 'Grands défilés traditionnels sous un soleil franc au nord et centre.', festival: 'Kandy Esala Perahera · Nallur à Jaffna.', verdicts: { south: { status: 'Éclaircies', note: 'Belles fenêtres sèches vers Galle.' }, highlands: { status: 'Festif', note: 'Soirées fraîches et parades à Kandy.' }, cultural: { status: 'Sec & Clair', note: 'Parfait pour Sigiriya et Dambulla.' }, northeast: { status: 'Haute Saison', note: 'Fête de Nallur et lagon calme à Trinco.' } } },
     SEP: { short: 'SEP', fullName: 'Septembre', headline: 'Équilibre Doux — Est & Triangle Culturel', summary: 'Moins de voyageurs, beau surf à l’est et parcs animaliers dégagés.', festival: 'Observances de Binara Poya.', verdicts: { south: { status: 'Changeant', note: 'Matins doux avec brise océanique.' }, highlands: { status: 'Frais & Net', note: 'Superbes trajets en train dans le thé.' }, cultural: { status: 'Calme & Sec', note: 'Sites antiques paisibles sous bon climat.' }, northeast: { status: 'Fin de Saison', note: 'Dernières semaines de mer très calme.' } } },
     OCT: { short: 'OCT', fullName: 'Octobre', headline: 'Inter-Mousson Verte & Matins Dorés', summary: 'Matinées lumineuses suivies de courtes pluies tropicales d’après-midi.', festival: 'Deepavali (fête des lumières).', verdicts: { south: { status: 'Averses', note: 'Atmosphère calme idéale pour l’Ayurveda.' }, highlands: { status: 'Cascades', note: 'Vallées d’un vert intense sous la brume.' }, cultural: { status: 'Matins Secs', note: 'Visiter tôt avant les averses de 14h.' }, northeast: { status: 'Transition', note: 'Les courants basculent vers la mousson.' } } },
     NOV: { short: 'NOV', fullName: 'Novembre', headline: 'Réveil Ensoleillé du Sud & de l’Ouest', summary: 'Le soleil revient à Galle et Bentota tandis que l’est se rafraîchit.', festival: 'Il Poya · Oiseaux migrateurs à Bundala.', verdicts: { south: { status: 'Réouverture', note: 'Le surf doux reprend à Weligama.' }, highlands: { status: 'Verdoyant', note: 'Belles éclaircies matinales sur le thé.' }, cultural: { status: 'Fleuri', note: 'Grands lacs remplis de lotus en fleurs.' }, northeast: { status: 'Mousson', note: 'Fortes pluies à l’est — choisir le sud.' } } },
@@ -511,7 +494,7 @@ window.SERENDIB_LOCALES['fr'] = {
       routeLine: 'Sigiriya → Kandy → Hatton → Ella → Fort de Galle',
       summary: 'Relie citadelles royales, trains du thé et remparts du sud sans précipitation.',
       days: [
-        { day: 'Jour 1–2', stop: 'Sigiriya & Polonnaruwa', note: 'Lever du soleil à Pidurangala et balade à vélo.' },
+        { day: 'Jour 1–2', stop: 'Sigiriya & Dambulla', note: 'Lever du soleil à Pidurangala et grottes sacrées.' },
         { day: 'Jour 3–4', stop: 'Kandy', note: 'Temple de la Dent le soir et jardins d’épices.' },
         { day: 'Jour 5–6', stop: 'Hatton & Ella', note: 'Nuit en plantation et train panoramique vers Ella.' },
         { day: 'Jour 7–9', stop: 'Fort de Galle', note: 'Couchers de soleil sur les remparts et récifs.' }
@@ -538,13 +521,13 @@ window.SERENDIB_LOCALES['fr'] = {
       duration: '10J / 09N',
       season: 'Mai–Sep · Soleil Garanti',
       pace: 'Récifs & Culture',
-      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Sigiriya',
       summary: 'Suit le soleil estival entre temples tamouls, lagons calmes et cités anciennes.',
       days: [
         { day: 'Jour 1–2', stop: 'Anuradhapura & Mihintale', note: 'Grands stupas blancs et escaliers rocheux sacrés.' },
         { day: 'Jour 3–5', stop: 'Jaffna & Delft', note: 'Palmeraies, temple Nallur et île aux chevaux sauvages.' },
         { day: 'Jour 6–8', stop: 'Trincomalee', note: 'Snorkeling à Pigeon Island et plages de Nilaveli.' },
-        { day: 'Jour 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Balade à vélo le long des lacs avant Sigiriya.' }
+        { day: 'Jour 9–10', stop: 'Dambulla & Sigiriya', note: 'Grottes peintes au matin avant l’ascension de Sigiriya.' }
       ]
     }
   },

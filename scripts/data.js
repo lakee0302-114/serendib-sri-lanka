@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SERENDIB — Structural Metadata (19 Top Attractions & Twin Monsoons)
+   SERENDIB — Structural Metadata (18 Top Attractions & Twin Monsoons)
    ========================================================================== */
 
 (function () {
@@ -115,18 +115,8 @@
       imageAlt: 'Ancient carved reclining Buddha and painted floral murals inside Dambulla Royal Cave Temple'
     },
     {
-      id: 'polonnaruwa',
-      number: '12',
-      sinhala: 'පොළොන්නරුව',
-      regionKey: 'cultural',
-      coords: "07°56'40\"N · 81°00'08\"E",
-      idealNights: 1,
-      image: './assets/images/ancient-polonnaruwa.jpg',
-      imageAlt: 'Monumental 12th-century Gal Vihara seated Buddha carved directly into Polonnaruwa granite rock'
-    },
-    {
       id: 'horton-plains',
-      number: '13',
+      number: '12',
       sinhala: 'හෝර්ටන් තැන්න',
       regionKey: 'highlands',
       coords: "06°48'09\"N · 80°48'09\"E",
@@ -136,7 +126,7 @@
     },
     {
       id: 'bentota',
-      number: '14',
+      number: '13',
       sinhala: 'බෙන්තොට / තංගල්ල',
       regionKey: 'south',
       coords: "06°25'16\"N · 79°59'45\"E",
@@ -146,7 +136,7 @@
     },
     {
       id: 'arugam-bay',
-      number: '15',
+      number: '14',
       sinhala: 'ආරුගම් බොක්ක',
       regionKey: 'northeast',
       coords: "06°50'25\"N · 81°49'50\"E",
@@ -156,7 +146,7 @@
     },
     {
       id: 'colombo',
-      number: '16',
+      number: '15',
       sinhala: 'කොළඹ',
       regionKey: 'south',
       coords: "06°55'37\"N · 79°51'40\"E",
@@ -166,7 +156,7 @@
     },
     {
       id: 'sri-pada',
-      number: '17',
+      number: '16',
       sinhala: 'ශ්‍රී පාදය',
       regionKey: 'highlands',
       coords: "06°48'34\"N · 80°29'59\"E",
@@ -176,7 +166,7 @@
     },
     {
       id: 'knuckles',
-      number: '18',
+      number: '17',
       sinhala: 'නකල්ස් කඳු වැටිය',
       regionKey: 'highlands',
       coords: "07°27'30\"N · 80°46'50\"E",
@@ -186,7 +176,7 @@
     },
     {
       id: 'pinnawala',
-      number: '19',
+      number: '18',
       sinhala: 'පින්නවල',
       regionKey: 'wildlife',
       coords: "07°18'04\"N · 80°23'13\"E",
@@ -239,7 +229,6 @@
     udawalawe: { coords: [6.4383, 80.8883], rail: false, highland: false },
     anuradhapura: { coords: [8.3114, 80.4037], rail: true, highland: false },
     dambulla: { coords: [7.8606, 80.6517], rail: false, highland: false },
-    polonnaruwa: { coords: [7.9403, 81.0188], rail: true, highland: false },
     'horton-plains': { coords: [6.8025, 80.8025], rail: true, highland: true },
     bentota: { coords: [6.4211, 79.9958], rail: true, highland: false },
     'arugam-bay': { coords: [6.8403, 81.8306], rail: false, highland: false },
@@ -289,10 +278,6 @@
     dambulla: [
       { style: 'street', spot: 'Matale Chili-Salt Pineapple & Spice Market', detail: 'Sun-ripened highland mango, jackfruit & roasted cashews' },
       { style: 'local', spot: 'Cliffside Vegetable & Tamarind Curry Table', detail: 'Bright home-style rice & pickled brinjal moju' }
-    ],
-    polonnaruwa: [
-      { style: 'seafood', spot: 'Parakrama Samudra Fresh Tank Fish', detail: 'Crispy golden lake fish fried with garlic, curry leaf & lime' },
-      { style: 'local', spot: 'Cycle-Trail Reservoir Veranda', detail: 'Restorative coconut water & rice after Vatadage ruins' }
     ],
     'horton-plains': [
       { style: 'street', spot: 'Ohiya / Park Gate Dawn Ginger Tea', detail: 'Steaming sweet ginger tea & hot toast at 2,100m chill' },

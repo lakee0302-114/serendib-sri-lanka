@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['ja'] = {
       titleEm: '厳選スポット。',
       subcopy: '各地域をタップしてベストな時間帯、郷土料理、保存を確認。',
       filters: {
-        all: 'すべて (19)',
+        all: 'すべて (18)',
         cultural: '文化三角地帯',
         highlands: '高原',
         south: '南海岸',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['ja'] = {
         "seafood": "新鮮シーフード",
         "cafe": "カフェ＆ベジ"
       },
-      "filterAll": "すべて (19)",
+      "filterAll": "すべて (18)",
       "routeOrderHeading": "観光・グルメ・移動ルート",
       "seeLabel": "見どころ",
       "eatLabel": "グルメ",
@@ -304,7 +304,6 @@ window.SERENDIB_LOCALES['ja'] = {
     galle: { name: 'ゴール旧市街＆ウナワトゥナ', region: '南海岸', tagline: '潮風と夕陽に染まる珊瑚石の城壁', elevation: '海抜0m', driveFromColombo: '高速道路2時間', bestTime: '12–4月', daylightWindow: '16:45 – 18:30', summary: 'オランダ時代の白壁建築、灯台、書店が生きづく海辺の世界遺産要塞。', highlights: ['夕刻にフラッグ・ロックから灯台まで城壁上を一周歩く。', 'ペドラー通りの古い中庭で陶器や手織りリネンを探す。', '朝は東隣のハバラドゥワやアハンガマの静かな海へ。'], culinaryNote: '黒タマリンド風味の魚カレーと焼きたてホッパー。', etiquette: '住民が暮らす街区のためビーチ外では露出を控えめに。' },
     yala: { name: 'ヤーラ＆クマナ国立公園', region: '野生保護区', tagline: '巨岩の海岸林に息づく野生のセイロンヒョウ', elevation: '45m', driveFromColombo: '車で4時間45分', bestTime: '2–7月', daylightWindow: '05:45–09:30 / 15:30', summary: '乾燥林と海岸砂丘が交わり、世界有数の密度で野生ヒョウが生息します。', highlights: ['車両渋滞を避けるならヤーラ第5区画またはクマナへ。', '早朝開門と同時に専任ナチュラリストと出発。', 'パタナンガラ砂丘裏の静かなテントロッジに宿泊。'], culinaryNote: 'ティッサマハラマ名産の土壺入り水牛ヨーグルトと野生蜂蜜。', etiquette: '動物から30m以上離れエンジン停止・フラッシュ厳禁。' },
     'nuwara-eliya': { name: 'ハットン＆紅茶高原', region: '高原', tagline: '翡翠色の茶畑、歴史ある茶園バンガロー', elevation: '1,868m', driveFromColombo: '車で4時間30分', bestTime: '1–4月・8月', daylightWindow: '06:15 – 09:30', summary: 'カッスルリー湖を囲む涼しい山あいで極上のオレンジ・ペコーが生まれます。', highlights: ['元茶園主の案内で一芯二葉の手摘み工程を見学。', '早朝のホートン・プレインズで断崖ワールズ・エンドへ。', '百年前の木造バンガローで暖炉とアフタヌーンティー。'], culinaryNote: '澄んだディンブラ紅茶とカルダモンのショートブレッド。', etiquette: '夜間は12°C前後まで冷えるため羽織物を必ず持参。' },
-    polonnaruwa: { name: 'ポロンナルワ＆リティガラ', region: '文化三角地帯', tagline: '大貯水湖のほとりに並ぶ12世紀の石造寺院', elevation: '52m', driveFromColombo: '車で4時間50分', bestTime: '1–9月', daylightWindow: '07:00–10:00 (自転車)', summary: '花崗岩を彫り抜いた大仏と広大な人工湖がつながる中世古都。', highlights: ['木陰の道を自転車で王宮跡から円形ワタダーゲへ巡る。', 'ガル・ヴィハーラの一枚岩に刻まれた仏像群を拝観。', 'バスツアーが来ない苔むしたリティガラ森林僧院も必見。'], culinaryNote: '湖で獲れた淡水魚のタマリンド煮込み。', etiquette: '聖域では裸足になり、熱い石畳用に厚手の靴下を持参。' },
     bentota: { name: 'ベントータ＆タンガッレ', region: '南海岸', tagline: 'バワの建築美学とヤシの木陰の静かな入り江', elevation: '海抜0m', driveFromColombo: '1時間30分', bestTime: '11–4月', daylightWindow: '07:00 & 17:15', summary: '内と外の境界を溶かす熱帯モダニズムと手つかずの白い弓なり海岸。', highlights: ['ベントータ郊外にあるバワの庭園邸宅ルヌガンガを予約見学。', '12〜3月はミリッサやドンドラ岬沖でシロナガスクジラ観察。', 'ゴヤンボッカやレカワの静かな入り江で過ごす。'], culinaryNote: '黒胡椒とパンダンリーフで煮込んだラグーン蟹カレー。', etiquette: 'ウミガメ産卵ビーチでは必ずガイド同伴・赤色灯のみ使用。' },
     'trinco-jaffna': { name: 'トリンコマリー＆ジャフナ', region: '北・東海岸', tagline: '夏の澄んだ東海岸と北部の深いタミル文化', elevation: '海抜0m', driveFromColombo: '車で5時間30分', bestTime: '5–10月', daylightWindow: '06:00 & 17:30', summary: '南西海岸に雨が降る夏、北と東は雲ひとつない晴天と穏やかな珊瑚礁に変わります。', highlights: ['ピジョン・アイランドでスノーケル、ニラヴェリの白砂を歩く。', 'ジャフナのナルール寺院や野生馬が駆けるデルフト島へ。', '6〜9月はアルガム・ベイの美しいライトブレイクを堪能。'], culinaryNote: '名物ジャフナ蟹カレーとオディヤル海鮮スープ。', etiquette: '北部の主要ヒンドゥー寺院では男性は上衣を脱ぐのが礼儀です。' },
     kandy: { name: 'キャンディ＆佛歯寺', region: '文化遺産', tagline: '聖なる湖畔の古都と伝統のペラヘラ太鼓', elevation: '500m', driveFromColombo: '車で3時間30分', bestTime: '1–4月 · 7–9月', daylightWindow: '06:30 & 18:30', summary: '霧の山並みに抱かれ、仏歯を祀るスリランカ最後の王都。', highlights: ['夕暮れの佛歯寺でテワヴァ（太鼓と礼拝）の儀式に立ち会う。', 'ペラデニヤ王立植物園の巨大な竹並木を散策する。', 'アーサーズ・シート展望台からキャンディ湖の夕景を望む。'], culinaryNote: '新鮮な蓮の葉に盛られた香り高いキャンディ風ライス＆カリー。', etiquette: '佛歯寺の境内では白または肩と膝が隠れる控えめな服装が必要です。' },
@@ -321,7 +320,7 @@ window.SERENDIB_LOCALES['ja'] = {
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '西海岸・南海岸・高原のベスト乾季', summary: '高原の澄んだ朝と穏やかな南の海、サファリ日和。', festival: 'ドゥルトゥ・ペラヘラ・タイ・ポンガル', verdicts: { south: { status: '快晴', note: '穏やかな海とミリッサのクジラ季節。' }, highlands: { status: '快晴涼風', note: '峠の見晴らし良好、夜は涼しい。' }, cultural: { status: '乾燥', note: '午前中の遺跡巡りが快適。' }, northeast: { status: '時雨', note: '東海岸は高波。ジャフナは晴れ中心。' } } },
-    FEB: { short: '2月', fullName: '2月', headline: '全島が晴天に包まれる最良の月', summary: '年間で最も雨が少なく南北縦断ルートに最適。', festival: 'ナヴァム・ペラヘラ・独立記念日', verdicts: { south: { status: '快晴', note: '透明度抜群の海水浴とダイビング。' }, highlands: { status: '青空', note: 'ペコー・トレイルやスリーパーダ登山日和。' }, cultural: { status: '晴天', note: 'ポロンナルワの自転車散策に最適。' }, northeast: { status: '回復', note: 'ジャフナ晴れ、トリンコの海も静まる。' } } },
+    FEB: { short: '2月', fullName: '2月', headline: '全島が晴天に包まれる最良の月', summary: '年間で最も雨が少なく南北縦断ルートに最適。', festival: 'ナヴァム・ペラヘラ・独立記念日', verdicts: { south: { status: '快晴', note: '透明度抜群の海水浴とダイビング。' }, highlands: { status: '青空', note: 'ペコー・トレイルやスリーパーダ登山日和。' }, cultural: { status: '晴天', note: '古代遺跡や湖畔の散策に最適。' }, northeast: { status: '回復', note: 'ジャフナ晴れ、トリンコの海も静まる。' } } },
     MAR: { short: '3月', fullName: '3月', headline: '輝く南岸と水場へ集まる野生動物', summary: '長い日照時間と水辺に集うゾウ・ヒョウの好機。', festival: 'コネスワラムのマハ・シヴァラートリ', verdicts: { south: { status: '快晴', note: 'ベントータ〜タンガッレで暖かい海。' }, highlands: { status: '晴れ', note: '朝露に光る茶畑と快適な午後。' }, cultural: { status: '温暖', note: '暑い午前に備え06:00登頂がおすすめ。' }, northeast: { status: '凪・晴れ', note: '東海岸の長い乾季が始まります。' } } },
     APR: { short: '4月', fullName: '4月', headline: '伝統新年祭と新緑の高原', summary: 'シンハラ・タミル新年で賑わう季節の変わり目。', festival: '伝統新年アウルドゥ（4月13–14日）', verdicts: { south: { status: '穏やか', note: '下旬まで海は穏やか。月末から波高まる。' }, highlands: { status: '新緑', note: '花開くヌワラエリヤ、夕方は時折雨。' }, cultural: { status: '祝祭', note: '朝の光が澄み、田舎の伝統菓子が並ぶ。' }, northeast: { status: '好機', note: '東海岸のビーチが鏡のように澄む。' } } },
     MAY: { short: '5月', fullName: '5月', headline: '東海岸が開き、南西に雨季到来', summary: '南西にスコールが降る頃、トリンコマリーが乾季入り。', festival: 'ウェサック満月のランタン祭り', verdicts: { south: { status: 'モンスーン', note: '高波と通り雨。落ち着いたオフ期滞在に。' }, highlands: { status: '朝晴れ', note: '午前は散策向き、午後は滝の水量増。' }, cultural: { status: '乾燥', note: 'シーギリヤ周辺は晴れ間が多い。' }, northeast: { status: '最高季', note: '穏やかな東岸とアルガム波乗り開幕。' } } },
@@ -334,9 +333,9 @@ window.SERENDIB_LOCALES['ja'] = {
     DEC: { short: '12月', fullName: '12月', headline: '南・西海岸と茶高原のハイシーズン', summary: '青い空、クジラの到来、活気づくゴールの石畳。', festival: '海辺のクリスマス・ウンドゥワプ・ポヤ', verdicts: { south: { status: '快晴', note: '穏やかな海とゴール城壁の夕暮れ。' }, highlands: { status: '冬晴れ', note: '冷たい澄んだ朝と茶園の暖炉。' }, cultural: { status: '穏やか', note: '瑞々しい緑と過ごしやすい朝。' }, northeast: { status: '雨期', note: '1月中旬まで雨多し。南部がベスト。' } } }
   },
   itineraries: {
-    'classic-arc': { number: 'ルート 01', title: '王道セレンディブ周遊', duration: '9日間 / 8泊', season: '12–4月・初めてに最適', pace: '鉄道＋専用車', routeLine: 'シーギリヤ → キャンディ → ハットン → エッラ → ゴール旧市街', summary: '王宮岩山、高原鉄道、南海岸の要塞を無理なくつなぐ定番ルート。', days: [{ day: '1–2日目', stop: 'シーギリヤ＆ポロンナルワ', note: 'ピドゥランガラ朝日鑑賞と自転車遺跡巡り。' }, { day: '3–4日目', stop: 'キャンディ', note: '夕暮れの仏歯寺参拝とスパイス庭園。' }, { day: '5–6日目', stop: 'ハットン＆エッラ', note: '茶園滞在と9連橋を渡る3時間の絶景列車。' }, { day: '7–9日目', stop: 'ゴール旧市街', note: '城壁サンセット散策と南の海辺滞在。' }] },
+    'classic-arc': { number: 'ルート 01', title: '王道セレンディブ周遊', duration: '9日間 / 8泊', season: '12–4月・初めてに最適', pace: '鉄道＋専用車', routeLine: 'シーギリヤ → キャンディ → ハットン → エッラ → ゴール旧市街', summary: '王宮岩山、高原鉄道、南海岸の要塞を無理なくつなぐ定番ルート。', days: [{ day: '1–2日目', stop: 'シーギリヤ＆ダンブッラ', note: 'ピドゥランガラ朝日鑑賞と黄金の石窟寺院。' }, { day: '3–4日目', stop: 'キャンディ', note: '夕暮れの仏歯寺参拝とスパイス庭園。' }, { day: '5–6日目', stop: 'ハットン＆エッラ', note: '茶園滞在と9連橋を渡る3時間の絶景列車。' }, { day: '7–9日目', stop: 'ゴール旧市街', note: '城壁サンセット散策と南の海辺滞在。' }] },
     'wild-south': { number: 'ルート 02', title: 'ヒョウ・紅茶と秘密の入江', duration: '11日間 / 10泊', season: '1–4月・建築と自然', pace: 'ゆったり上質旅', routeLine: 'コロンボ → ハットン → ヤーラ → タンガッレ → ゴール', summary: 'バワ建築、茶畑トレッキング、専用サファリ、人影少ないビーチを結ぶ。', days: [{ day: '1日目', stop: 'コロンボ', note: 'バワ自邸ナンバー11見学と海辺の夕暮れ。' }, { day: '2–4日目', stop: 'ハットン', note: '歴史ある茶園バンガローを歩く稜線旅。' }, { day: '5–7日目', stop: 'ヤーラ＆クマナ', note: '早朝専用4WDで野生ヒョウの痕跡を追う。' }, { day: '8–11日目', stop: 'タンガッレ＆ゴール', note: '静かな白砂の入江と旧市街邸宅ステイ。' }] },
-    'east-north-sun': { number: 'ルート 03', title: '夏の太陽：東海岸と北部', duration: '10日間 / 9泊', season: '5–9月・夏休み晴天保証', pace: '珊瑚礁とタミル文化', routeLine: 'アヌラーダプラ → ジャフナ → トリンコ → ポロンナルワ → シーギリヤ', summary: '夏に晴れる北部寺院と澄んだ東の珊瑚礁、古代王都を巡る。', days: [{ day: '1–2日目', stop: 'アヌラーダプラ＆ミヒンタレー', note: '白亜の仏塔と聖なる石段の朝風景。' }, { day: '3–5日目', stop: 'ジャフナ＆デルフト島', note: 'パルミラヤシ並木とナルール寺院、野生馬。' }, { day: '6–8日目', stop: 'トリンコマリー', note: 'ピジョン島スノーケルと朝の漁船風景。' }, { day: '9–10日目', stop: 'ポロンナルワ＆シーギリヤ', note: '湖畔の遺跡を自転車で巡り朝のシーギリヤ登頂へ。' }] }
+    'east-north-sun': { number: 'ルート 03', title: '夏の太陽：東海岸と北部', duration: '10日間 / 9泊', season: '5–9月・夏休み晴天保証', pace: '珊瑚礁とタミル文化', routeLine: 'アヌラーダプラ → ジャフナ → トリンコ → シーギリヤ', summary: '夏に晴れる北部寺院と澄んだ東の珊瑚礁、古代王都を巡る。', days: [{ day: '1–2日目', stop: 'アヌラーダプラ＆ミヒンタレー', note: '白亜の仏塔と聖なる石段の朝風景。' }, { day: '3–5日目', stop: 'ジャフナ＆デルフト島', note: 'パルミラヤシ並木とナルール寺院、野生馬。' }, { day: '6–8日目', stop: 'トリンコマリー', note: 'ピジョン島スノーケルと朝の漁船風景。' }, { day: '9–10日目', stop: 'ダンブッラ＆シーギリヤ', note: '壁画輝く石窟寺院と朝のシーギリヤ登頂へ。' }] }
   },
   fieldNotes: [
     { question: 'スリランカの二つのモンスーンはどう見分ける？', answer: '12〜4月は西・南・高原が乾季、5〜9月は東海岸と北部が晴天に変わります。' },

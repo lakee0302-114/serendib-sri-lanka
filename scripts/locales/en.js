@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['en'] = {
       titleEm: 'destinations.',
       subcopy: 'Tap any place for details or add to your route.',
       filters: {
-        all: 'All (19)',
+        all: 'All (18)',
         cultural: 'Cultural',
         highlands: 'Highlands',
         south: 'South & West',
@@ -183,7 +183,7 @@ window.SERENDIB_LOCALES['en'] = {
       clearStops: 'Clear',
       monthHeading: 'Travel Month',
       destinationsHeading: 'Pick places, reorder route & adjust nights ({count} picked)',
-      filterAll: 'All (19)',
+      filterAll: 'All (18)',
       travelersLabel: 'How many guests?',
       nightsAutoHint: 'Suggested length: {nights} nights',
       stayHeading: 'Where would you like to stay?',
@@ -374,23 +374,6 @@ window.SERENDIB_LOCALES['en'] = {
       ],
       culinaryNote: 'Golden Dimbula Orange Pekoe with crisp cardamom shortbread.',
       etiquette: 'Pack a warm sweater for 12°C nights; ask before portraits.'
-    },
-    polonnaruwa: {
-      name: 'Polonnaruwa & Ritigala',
-      region: 'Cultural',
-      tagline: 'Twelfth-century stone shrines beside vast inland seas',
-      elevation: '52m Plain',
-      driveFromColombo: '4h 50m',
-      bestTime: 'Jan–Sep',
-      daylightWindow: '07:00–10:00 (By Bike)',
-      summary: 'Medieval island capital linking monumental granite Buddha statues with man-made lakes.',
-      highlights: [
-        'Cycle shaded lanes from Royal Palace to circular Vatadage.',
-        'Admire standing granite figures carved at Gal Vihara.',
-        'Pair with Ritigala Monastery’s moss-clad forest steps.'
-      ],
-      culinaryNote: 'Fresh tank fish stewed with tamarind, turmeric, and rice.',
-      etiquette: 'Remove shoes at sacred platforms; wear thick socks on hot stone.'
     },
     bentota: {
       name: 'Bentota & Tangalle',
@@ -635,7 +618,7 @@ window.SERENDIB_LOCALES['en'] = {
       verdicts: {
         south: { status: 'Prime Sun', note: 'Flat turquoise water for swimming and diving.' },
         highlands: { status: 'Crisp Skies', note: 'Best views along Pekoe Trails and Adam’s Peak.' },
-        cultural: { status: 'Dry & Bright', note: 'Ideal morning bike rides in Polonnaruwa.' },
+        cultural: { status: 'Dry & Bright', note: 'Ideal morning bike rides around ancient tank ruins.' },
         northeast: { status: 'Clearing', note: 'Jaffna sunny; Trinco seas start calming.' }
       }
     },
@@ -671,7 +654,7 @@ window.SERENDIB_LOCALES['en'] = {
       verdicts: {
         south: { status: 'Monsoon', note: 'Rough seas and squalls; quiet hotel rates.' },
         highlands: { status: 'Misty', note: 'Clear mornings with afternoon rain.' },
-        cultural: { status: 'Dry', note: 'Sigiriya and Polonnaruwa stay dry and sunny.' },
+        cultural: { status: 'Dry', note: 'Sigiriya and Dambulla stay dry and sunny.' },
         northeast: { status: 'Prime Sun', note: 'Flat eastern seas and Arugam surf starts.' }
       }
     },
@@ -770,7 +753,7 @@ window.SERENDIB_LOCALES['en'] = {
       routeLine: 'Sigiriya → Kandy → Hatton → Ella → Galle Fort',
       summary: 'Links royal stone citadels, emerald rail ridges, and southern sea ramparts cleanly.',
       days: [
-        { day: 'Day 1–2', stop: 'Sigiriya & Polonnaruwa', note: 'Sunrise Pidurangala climb and bicycle loop through ancient ruins.' },
+        { day: 'Day 1–2', stop: 'Sigiriya & Dambulla', note: 'Sunrise Pidurangala climb and painted Royal Cave Temple.' },
         { day: 'Day 3–4', stop: 'Kandy Hills', note: 'Temple of the Tooth evening rituals and Matale spice walks.' },
         { day: 'Day 5–6', stop: 'Hatton & Ella', note: 'Estate tea stay plus the scenic 3h mountain train across Nine Arches.' },
         { day: 'Day 7–9', stop: 'Galle Fort', note: 'Rampart sunsets, quiet Fort courtyards, and southern reef swims.' }
@@ -797,13 +780,13 @@ window.SERENDIB_LOCALES['en'] = {
       duration: '10D / 09N',
       season: 'May–Sep · Dry Summer',
       pace: 'Reef & Culture',
-      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Sigiriya',
       summary: 'Follows northern summer sun across Tamil kovils, calm eastern reefs, and ancient capitals.',
       days: [
         { day: 'Day 1–2', stop: 'Anuradhapura & Mihintale', note: 'Sacred white dagobas and sunlit ancient rock stairways.' },
         { day: 'Day 3–5', stop: 'Jaffna & Delft', note: 'Palmyrah groves, Nallur kovils, and wild island ponies.' },
         { day: 'Day 6–8', stop: 'Trincomalee', note: 'Pigeon Island reef snorkeling and sunrise beach boats.' },
-        { day: 'Day 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Cycling lakeside ruins before a golden Lion Rock climb.' }
+        { day: 'Day 9–10', stop: 'Dambulla & Sigiriya', note: 'Morning cave murals before a golden Lion Rock climb.' }
       ]
     }
   },

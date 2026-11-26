@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['zh'] = {
       titleEm: '精选风景。',
       subcopy: '点击任一站查看最佳采光时段、风味美食或加入行程。',
       filters: {
-        all: '全部 (19)',
+        all: '全部 (18)',
         cultural: '文化三角',
         highlands: '高山茶园',
         south: '南岸海湾',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['zh'] = {
         "seafood": "现烤海鲜",
         "cafe": "精品咖啡与素食"
       },
-      "filterAll": "全部 (19)",
+      "filterAll": "全部 (18)",
       "routeOrderHeading": "景点、餐厅与交通接驳",
       "seeLabel": "游览",
       "eatLabel": "餐饮",
@@ -304,7 +304,6 @@ window.SERENDIB_LOCALES['zh'] = {
     galle: { name: '加勒古城与乌纳瓦图纳', region: '南岸海湾', tagline: '海风与落日染暖的百年珊瑚石城墙', elevation: '海平面', driveFromColombo: '高速2小时', bestTime: '12–4月', daylightWindow: '16:45 – 18:30', summary: '活态海滨要塞半岛，荷兰时期庭院、清真寺、灯塔与手艺小店并存。', highlights: ['日落时自旗岩沿城墙顺时针步行经灯塔至月亮堡垒。', '探访佩德勒街古宅里的陶瓷、手织麻布与古地图店。', '清晨向东前往阿杭伽马看清澈浅礁与高跷渔夫。'], culinaryNote: '黑酸角慢炖金枪鱼咖喱配酥脆鸡蛋碗糕。', etiquette: '城内为当地居民社区，离开沙滩请穿着得体。' },
     yala: { name: '雅拉与库马纳公园', region: '荒野猎游', tagline: '花岗岩巨石、咸水泻湖与野生锡兰花豹', elevation: '45米', driveFromColombo: '4小时45分', bestTime: '2–7月', daylightWindow: '05:45–09:30 / 15:30', summary: '旱林与印度洋沙丘交汇处，野生花豹密度冠绝全球，伴见懒熊与野象。', highlights: ['选择雅拉第5区或库马纳公园避开吉普车拥堵。', '开园清晨随专业生态向导追踪晨间巡逻的花豹。', '夜宿帕塔南加拉沙丘后方的帆布帐篷营地伴海声入眠。'], culinaryNote: '瓦罐水牛凝乳淋森林野蜂蜜。', etiquette: '坚持与动物保持30米距离、熄火观察并严禁开闪光灯。' },
     'nuwara-eliya': { name: '哈顿与高山茶区', region: '高山茶园', tagline: '翡翠茶谷、殖民茶园木屋与清晨薄雾', elevation: '1,868米', driveFromColombo: '车程4小时30分', bestTime: '1–4月 · 8月', daylightWindow: '06:15 – 09:30', summary: '卡斯尔雷水库周围高海拔冷凉山谷，出产清亮带柑橘花香的锡兰红茶。', highlights: ['随茶园顾问漫步茶垄学习“一芽两叶”传统工艺。', '清晨赴霍顿平原跨越世界尽头悬崖与贝克瀑布。', '在修复的百年茶园老屋壁炉旁品味高地午茶。'], culinaryNote: '丁布拉金毫白毫橙佩科红茶配豆蔻酥饼。', etiquette: '夜间常降至12°C，需备保暖针织衫；拍茶农前先征求同意。' },
-    polonnaruwa: { name: '波隆纳鲁瓦与里蒂加拉', region: '文化三角', tagline: '内陆大湖畔十二世纪石雕佛寺与遗迹', elevation: '52米', driveFromColombo: '4小时50分', bestTime: '1–9月', daylightWindow: '07:00–10:00 (骑行)', summary: '相比吴哥更幽静的中世纪都城，花岗岩大佛与人工蓄水湖交相辉映。', highlights: ['林荫下骑行串联皇宫广场、圆形佛舍利塔与石雕寺。', '近观加尔寺整块花岗岩雕出的巨型立佛与卧佛。', '探访藏于林间青苔石阶上的里蒂加拉古修行院。'], culinaryNote: '淡水湖鱼配酸角、姜黄与鲜辣木荚焖煮。', etiquette: '踏入神圣石台前脱鞋脱帽，可穿厚棉袜防石面烫脚。' },
     bentota: { name: '本托塔与坦加勒海湾', region: '南岸海湾', tagline: '巴瓦热带极简美学与幽静新月湾', elevation: '海平面', driveFromColombo: '1小时30分', bestTime: '11–4月', daylightWindow: '07:00 与 17:15', summary: '消除室内外界线的热带现代主义庭院直面棕榈海滩与平静内河。', highlights: ['提前预约游览本托塔郊外巴瓦的私家园林卢努甘卡。', '12月至3月出海美蕊沙或唐德拉角追寻蓝鲸。', '退隐戈扬博卡与雷卡瓦空旷湾畔漫步护龟滩。'], culinaryNote: '黑胡椒咖喱叶与香兰叶焖炒泻湖泥蟹。', etiquette: '夜晚探访海龟产卵滩需持导游提供的暗红光手电。' },
     'trinco-jaffna': { name: '亭可马里与贾夫纳', region: '北与东岸', tagline: '夏日玻璃海、珊瑚岛礁与北方泰米尔文化', elevation: '海平面', driveFromColombo: '车程5小时30分', bestTime: '5–10月', daylightWindow: '06:00 与 17:30', summary: '每当西南迎来季风雨季，北方与东海岸便放晴迎来绝佳潜水季。', highlights: ['鸽子岛珊瑚礁浮潜并沿开阔的尼拉韦利白沙晨步。', '往北参拜贾夫纳纳卢尔神庙，赴代尔夫特岛寻野马。', '6至9月在东岸阿鲁甘湾尽享稳定右跑道海浪冲浪。'], culinaryNote: '香料浓郁的贾夫纳螃蟹咖喱配棕榈根粉海鲜浓汤。', etiquette: '北方主要印度教神庙内男士常需依传统脱去上衣示敬。' },
     kandy: { name: '康提与佛牙寺', region: '文化古城', tagline: '云雾山城圣湖畔与佛牙祭典鼓声', elevation: '500米', driveFromColombo: '车程3小时30分', bestTime: '1–4月 · 7–9月', daylightWindow: '06:30 与 18:30', summary: '斯里兰卡末代王朝古都，静谧康提湖畔供奉着珍贵的佛牙舍利。', highlights: ['傍晚前往佛牙寺聆听传统礼拜鼓乐与供奉仪式。', '漫步佩拉德尼亚皇家植物园参天巨竹大道。', '从亚瑟王座观景台俯瞰康提湖落日余晖。'], culinaryNote: '铺在新鲜荷叶上享用的香料康提咖喱饭。', etiquette: '进入佛牙寺需着洁白或遮盖肩膝的得体服装。' },
@@ -321,7 +320,7 @@ window.SERENDIB_LOCALES['zh'] = {
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '干季巅峰 — 西南岸与茶山', summary: '山地清晨干爽、南部海水澄澈、国家公园易见猎豹。', festival: '杜鲁图游行 · 泰米尔丰收节', verdicts: { south: { status: '晴空艳阳', note: '海平如镜，美蕊沙蓝鲸活跃。' }, highlands: { status: '晴朗微凉', note: '山口明净，夜间添衣保暖。' }, cultural: { status: '干爽宜人', note: '古城正午少雨适合漫游。' }, northeast: { status: '阵雨', note: '东海多浪，贾夫纳大部晴干。' } } },
-    FEB: { short: '2月', fullName: '2月', headline: '几乎全岛万里无云', summary: '全岛最干燥月份 — 从北端古城一路顺游至加勒无雨困扰。', festival: '科伦坡纳瓦姆游行 · 国庆日', verdicts: { south: { status: '晴空艳阳', note: '蓝宝石海域最宜游泳潜水。' }, highlands: { status: '碧空如洗', note: '茶道徒步与亚当峰看日出最佳。' }, cultural: { status: '干爽明亮', note: '波隆纳鲁瓦清晨骑行绝佳。' }, northeast: { status: '转晴', note: '贾夫纳干爽，亭可马里渐趋平静。' } } },
+    FEB: { short: '2月', fullName: '2月', headline: '几乎全岛万里无云', summary: '全岛最干燥月份 — 从北端古城一路顺游至加勒无雨困扰。', festival: '科伦坡纳瓦姆游行 · 国庆日', verdicts: { south: { status: '晴空艳阳', note: '蓝宝石海域最宜游泳潜水。' }, highlands: { status: '碧空如洗', note: '茶道徒步与亚当峰看日出最佳。' }, cultural: { status: '干爽明亮', note: '古都湖区清晨骑行绝佳。' }, northeast: { status: '转晴', note: '贾夫纳干爽，亭可马里渐趋平静。' } } },
     MAR: { short: '3月', fullName: '3月', headline: '黄金海岸与旱季动物聚集', summary: '南部日照长且温暖，野生动物集中到萎缩的水塘饮水。', festival: '亭可马里崖庙湿婆夜', verdicts: { south: { status: '晴空艳阳', note: '本托塔至坦加勒水温舒适宜泳。' }, highlands: { status: '晴暖', note: '午后温和，晨露滋润绿茶垄。' }, cultural: { status: '偏热', note: '清晨6点登狮子岩避开午间酷暑。' }, northeast: { status: '海静天晴', note: '东海岸进入长段晴朗期。' } } },
     APR: { short: '4月', fullName: '4月', headline: '僧伽罗与泰米尔新年花季', summary: '全岛辞旧迎新欢庆，月中前南海岸依然平静舒适。', festival: '僧伽罗与泰米尔新年（4月13–14日）', verdicts: { south: { status: '暖静', note: '上旬海水极佳，月底渐起西南浪。' }, highlands: { status: '山花初绽', note: '茶山盎然，傍晚偶有阵雨降温。' }, cultural: { status: '喜庆', note: '早晨明净且满溢传统甜点待客礼。' }, northeast: { status: '最佳前奏', note: '东海岸与鸽子岛渐现玻璃海。' } } },
     MAY: { short: '5月', fullName: '5月', headline: '西南迎雨，东海岸全面放晴', summary: '季风反转：亭可马里与阿鲁甘湾迎来长达半年的明媚阳光。', festival: '卫塞节满月竹灯盛会', verdicts: { south: { status: '西南季风', note: '风浪加大且享淡季静谧别墅价。' }, highlands: { status: '山雾阵雨', note: '瀑布水丰，上午依然适合游玩。' }, cultural: { status: '晴干微风', note: '狮子岩一带大多晴干不受打扰。' }, northeast: { status: '东岸黄金期', note: '水清浪静，阿鲁甘湾浪季开板。' } } },
@@ -334,9 +333,9 @@ window.SERENDIB_LOCALES['zh'] = {
     DEC: { short: '12月', fullName: '12月', headline: '西、南海岸与高山全面回归旺季', summary: '西岸蓝天绵延，唐德拉角再现蓝鲸，百年茶屋炉火轻燃。', festival: '海滨圣诞长桌 · 十二月菩提节', verdicts: { south: { status: '晴空艳阳', note: '古城落日漫步、平海游泳与观鲸起步。' }, highlands: { status: '冬日清冷', note: '步道清透，山间木屋围炉品茶。' }, cultural: { status: '绿意温和', note: '雨后翠绿衬出狮子岩温柔晨光。' }, northeast: { status: '雨季延续', note: '一月中旬前北东偏湿；专攻南岸山海。' } } }
   },
   itineraries: {
-    'classic-arc': { number: '路线 01', title: '经典塞伦迪布环线', duration: '9天 / 8晚', season: '12–4月 · 初访首选', pace: '高山火车 + 专车向导', routeLine: '狮子岩 → 康提 → 哈顿 → 埃拉 → 加勒古城', summary: '稳健串联空中王宫、翡翠茶山铁道与南部海防石城，不赶路。', days: [{ day: '第1–2天', stop: '狮子岩与波隆纳鲁瓦', note: '登皮杜兰加拉看日出并骑行游古城。' }, { day: '第3–4天', stop: '康提山谷', note: '傍晚佛牙寺诵经与马特莱香料小径。' }, { day: '第5–6天', stop: '哈顿与埃拉', note: '百年茶园庄园下榻加3小时精华铁道跨九孔桥。' }, { day: '第7–9天', stop: '加勒古城', note: '城墙落日漫步与南岸珊瑚海湾闲适时光。' }] },
+    'classic-arc': { number: '路线 01', title: '经典塞伦迪布环线', duration: '9天 / 8晚', season: '12–4月 · 初访首选', pace: '高山火车 + 专车向导', routeLine: '狮子岩 → 康提 → 哈顿 → 埃拉 → 加勒古城', summary: '稳健串联空中王宫、翡翠茶山铁道与南部海防石城，不赶路。', days: [{ day: '第1–2天', stop: '狮子岩与丹布勒', note: '登皮杜兰加拉看日出并探访彩绘石窟寺。' }, { day: '第3–4天', stop: '康提山谷', note: '傍晚佛牙寺诵经与马特莱香料小径。' }, { day: '第5–6天', stop: '哈顿与埃拉', note: '百年茶园庄园下榻加3小时精华铁道跨九孔桥。' }, { day: '第7–9天', stop: '加勒古城', note: '城墙落日漫步与南岸珊瑚海湾闲适时光。' }] },
     'wild-south': { number: '路线 02', title: '花豹、红茶与隐世海湾', duration: '11天 / 10晚', season: '1–4月 · 设计与野趣', pace: '慢奢节奏', routeLine: '科伦坡 → 哈顿 → 雅拉 → 坦加勒 → 加勒', summary: '融合巴瓦热带建筑、高地徒步、私家猎豹游与幽静南岸海滩。', days: [{ day: '第1天', stop: '科伦坡建筑漫游', note: '拜访巴瓦故居11号及加勒菲斯海滨日落。' }, { day: '第2–4天', stop: '哈顿茶山步道', note: '连住高地庄园并在山脊瀑布间轻徒步。' }, { day: '第5–7天', stop: '雅拉与库马纳', note: '破晓吉普专车深入荒野追踪野生花豹。' }, { day: '第8–11天', stop: '坦加勒与加勒', note: '独享空旷新月海滩与加勒古宅院落。' }] },
-    'east-north-sun': { number: '路线 03', title: '夏日避雨：东海岸与北部', duration: '10天 / 9晚', season: '5–9月 · 暑假艳阳保证', pace: '珊瑚礁 + 文化探索', routeLine: '阿努拉德普勒 → 贾夫纳 → 亭可马里 → 波隆纳鲁瓦 → 狮子岩', summary: '专为北半球暑假定制，追随晴空遍访泰米尔圣殿、珊瑚礁与古都遗址。', days: [{ day: '第1–2天', stop: '阿努拉德普勒与米欣塔莱', note: '白塔月光朝圣与圣山花岗岩古阶。' }, { day: '第3–5天', stop: '贾夫纳与代尔夫特', note: '扇椰林海岛、纳卢尔神庙与岛上野马群。' }, { day: '第6–8天', stop: '亭可马里海湾', note: '鸽子岛礁盘浮潜与尼拉韦利朝霞渔船。' }, { day: '第9–10天', stop: '波隆纳鲁瓦与狮子岩', note: '骑行古湖遗迹再攀登金色狮子岩。' }] }
+    'east-north-sun': { number: '路线 03', title: '夏日避雨：东海岸与北部', duration: '10天 / 9晚', season: '5–9月 · 暑假艳阳保证', pace: '珊瑚礁 + 文化探索', routeLine: '阿努拉德普勒 → 贾夫纳 → 亭可马里 → 狮子岩', summary: '专为北半球暑假定制，追随晴空遍访泰米尔圣殿、珊瑚礁与古都遗址。', days: [{ day: '第1–2天', stop: '阿努拉德普勒与米欣塔莱', note: '白塔月光朝圣与圣山花岗岩古阶。' }, { day: '第3–5天', stop: '贾夫纳与代尔夫特', note: '扇椰林海岛、纳卢尔神庙与岛上野马群。' }, { day: '第6–8天', stop: '亭可马里海湾', note: '鸽子岛礁盘浮潜与尼拉韦利朝霞渔船。' }, { day: '第9–10天', stop: '丹布勒与狮子岩', note: '探秘古洞窟壁画再攀登金色狮子岩。' }] }
   },
   fieldNotes: [
     { question: '斯里兰卡双季风怎么区分才不踩雷？', answer: '12–4月西、南岸和茶山晴好；5–9月晴天干季切换到东海岸（亭可马里、阿鲁甘湾）和北方。' },

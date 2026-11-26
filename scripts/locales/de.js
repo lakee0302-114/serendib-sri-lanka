@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['de'] = {
       titleEm: 'Reiseziele.',
       subcopy: 'Tippen Sie auf Bild oder Titel für Zeiten, Küche und Planung.',
       filters: {
-        all: 'Alle (19)',
+        all: 'Alle (18)',
         cultural: 'Kultur',
         highlands: 'Hochland',
         south: 'Süden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['de'] = {
         "seafood": "Meeresfrüchte",
         "cafe": "Cafés & Veggie"
       },
-      "filterAll": "Alle (19)",
+      "filterAll": "Alle (18)",
       "routeOrderHeading": "Ziele, Essen & Transfers",
       "seeLabel": "Erleben",
       "eatLabel": "Essen",
@@ -384,23 +384,6 @@ window.SERENDIB_LOCALES['de'] = {
       culinaryNote: 'Goldener Dimbula Orange Pekoe mit Kardamomgebäck.',
       etiquette: 'Abends 12 °C — Pullover mitnehmen; vor Fotos stets fragen.'
     },
-    polonnaruwa: {
-      name: 'Polonnaruwa & Ritigala',
-      region: 'Kultur',
-      tagline: 'Steinkloster des 12. Jahrhunderts an riesigen Stauseen',
-      elevation: '52 m',
-      driveFromColombo: '4h 50',
-      bestTime: 'Jan–Sep',
-      daylightWindow: '07:00–10:00 (Rad)',
-      summary: 'Mittelalterliche Königsstadt voller monumentaler Granit-Buddhas und Binnenseen.',
-      highlights: [
-        'Per Rad vom Königspalast zum runden Vatadage fahren.',
-        'Die liegenden und stehenden Felsen-Buddhas von Gal Vihara sehen.',
-        'Mit dem bemoosten Waldkloster Ritigala verbinden.'
-      ],
-      culinaryNote: 'Süßwasserfisch aus dem Stausee mit Tamarinde und Kurkuma.',
-      etiquette: 'Schuhe ausziehen; dicke Socken gegen heißen Granit mitbringen.'
-    },
     bentota: {
       name: 'Bentota & Tangalle',
       region: 'Südküste',
@@ -489,10 +472,10 @@ window.SERENDIB_LOCALES['de'] = {
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januar', headline: 'Trockenzeit — West, Süd & Berge', summary: 'Klare Bergmorgen, ruhiges Südmeer und beste Safari-Sicht.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Sonne', note: 'Ruhige See & Blauwale vor Mirissa.' }, highlands: { status: 'Klar & Kühl', note: 'Klare Pässe und frische Abende.' }, cultural: { status: 'Trocken', note: 'Angenehme Morgen in Königsstädten.' }, northeast: { status: 'Schauer', note: 'Ostküste wellig; Jaffna meist trocken.' } } },
-    FEB: { short: 'FEB', fullName: 'Februar', headline: 'Klares Wetter Fast Inselweit', summary: 'Trockenster Monat der Insel für entspannte Rundreisen.', festival: 'Navam Perahera Colombo · Unabhängigkeitstag.', verdicts: { south: { status: 'Sonne', note: 'Glasklares Meer zum Schwimmen.' }, highlands: { status: 'Blauer Himmel', note: 'Bestes Wanderwetter für Pekoe Trail.' }, cultural: { status: 'Klar & Trocken', note: 'Ideal für Radtouren in Polonnaruwa.' }, northeast: { status: 'Aufklarend', note: 'Jaffna sonnig; Trinco beruhigt sich.' } } },
+    FEB: { short: 'FEB', fullName: 'Februar', headline: 'Klares Wetter Fast Inselweit', summary: 'Trockenster Monat der Insel für entspannte Rundreisen.', festival: 'Navam Perahera Colombo · Unabhängigkeitstag.', verdicts: { south: { status: 'Sonne', note: 'Glasklares Meer zum Schwimmen.' }, highlands: { status: 'Blauer Himmel', note: 'Bestes Wanderwetter für Pekoe Trail.' }, cultural: { status: 'Klar & Trocken', note: 'Ideal für Radtouren rund um antike Seen.' }, northeast: { status: 'Aufklarend', note: 'Jaffna sonnig; Trinco beruhigt sich.' } } },
     MAR: { short: 'MÄR', fullName: 'März', headline: 'Goldene Küsten & Wildtiere an Wasserlöchern', summary: 'Lange Sonnentage im Süden und gute Tierbeobachtung.', festival: 'Maha Shivaratri in Trincomalee.', verdicts: { south: { status: 'Sonne', note: 'Warmes Meer von Bentota bis Tangalle.' }, highlands: { status: 'Sonnig', note: 'Milde Tage in grünen Teeplantagen.' }, cultural: { status: 'Warm', note: 'Felsen morgens vor der Hitze besteigen.' }, northeast: { status: 'Ruhig', note: 'Beginn der trockenen Ost-Saison.' } } },
     APR: { short: 'APR', fullName: 'April', headline: 'Neujahrsfest & Blühendes Hochland', summary: 'Dorf-Feste und warme See vor dem Wetterwechsel im Mai.', festival: 'Sinhala & Tamil Neujahr (13.–14. Apr.).', verdicts: { south: { status: 'Warm & Ruhig', note: 'Gute Bedingungen bis Monatsende.' }, highlands: { status: 'Blühend', note: 'Grüne Hügel, gelegentlich Abendregen.' }, cultural: { status: 'Festlich', note: 'Klare Morgen und Dorfgastfreundschaft.' }, northeast: { status: 'Top-Zeit', note: 'Oststrände und Riffe werden spiegelglatt.' } } },
-    MAY: { short: 'MAI', fullName: 'Mai', headline: 'Ostküste Startet, Südwest-Monsun Beginnt', summary: 'Während es im Süden regnet, strahlen Trincomalee und Arugam Bay.', festival: 'Vesak Vollmondfest mit Laternen.', verdicts: { south: { status: 'Monsun', note: 'Starke Brandung; ruhige Nebensaison.' }, highlands: { status: 'Neblig', note: 'Morgens hell, nachmittags Schauer.' }, cultural: { status: 'Trocken', note: 'Sigiriya und Polonnaruwa meist sonnig.' }, northeast: { status: 'Top-Sonne', note: 'Ruhige Ostsee & Surfstart in Arugam.' } } },
+    MAY: { short: 'MAI', fullName: 'Mai', headline: 'Ostküste Startet, Südwest-Monsun Beginnt', summary: 'Während es im Süden regnet, strahlen Trincomalee und Arugam Bay.', festival: 'Vesak Vollmondfest mit Laternen.', verdicts: { south: { status: 'Monsun', note: 'Starke Brandung; ruhige Nebensaison.' }, highlands: { status: 'Neblig', note: 'Morgens hell, nachmittags Schauer.' }, cultural: { status: 'Trocken', note: 'Sigiriya und Dambulla bleiben meist sonnig.' }, northeast: { status: 'Top-Sonne', note: 'Ruhige Ostsee & Surfstart in Arugam.' } } },
     JUN: { short: 'JUN', fullName: 'Juni', headline: 'Surfzeit an der Ostküste', summary: 'Sonniger Nordosten und Elefantenwanderung im Trockengürtel.', festival: 'Poson Poya Pilgerfest in Mihintale.', verdicts: { south: { status: 'Windig', note: 'Kein Badewetter im Süden; Ostküste wählen.' }, highlands: { status: 'Windig', note: 'Ella deutlich trockener als der Westen.' }, cultural: { status: 'Trocken', note: 'Sonnige Ruinen und Safari-Parks.' }, northeast: { status: 'Hauptsaison', note: 'Ruhiges Nilaveli & beste Arugam-Wellen.' } } },
     JUL: { short: 'JUL', fullName: 'Juli', headline: 'Trockenzeit-Safaris & Ost-Sonne', summary: 'Wilde Elefanten an trockenen Stauseen unter wolkenfreiem Osthimmel.', festival: 'Beginn der Esala-Feste in Kandy.', verdicts: { south: { status: 'Wechselhaft', note: 'Sonnige Pausen zwischen Schauern.' }, highlands: { status: 'Klar im Ost', note: 'Schön für Ella und Knuckles-Trails.' }, cultural: { status: 'Top-Safari', note: 'Wilde Herden an alten Seen & Ruinen.' }, northeast: { status: 'Top-Sonne', note: 'Beste Sicht beim Schnorcheln.' } } },
     AUG: { short: 'AUG', fullName: 'August', headline: 'Kandy Esala Perahera & Nallur-Fest', summary: 'Höhepunkt des Kulturkalenders bei trockenem Sommer im Norden.', festival: 'Esala Perahera Kandy · Nallur Jaffna.', verdicts: { south: { status: 'Bessernd', note: 'Sonnige Abschnitte rund um Galle Fort.' }, highlands: { status: 'Festlich', note: 'Milde Abende und große Umzüge.' }, cultural: { status: 'Trocken', note: 'Klare Sicht auf Sigiriya und Safaris.' }, northeast: { status: 'Hauptsaison', note: 'Tempelfeste in Jaffna & ruhige Ostbuchten.' } } },
@@ -511,7 +494,7 @@ window.SERENDIB_LOCALES['de'] = {
       routeLine: 'Sigiriya → Kandy → Hatton → Ella → Galle Fort',
       summary: 'Verbindet Felsenfestungen, grüne Bahnstrecken und die historische Südküste.',
       days: [
-        { day: 'Tag 1–2', stop: 'Sigiriya & Polonnaruwa', note: 'Sonnenaufgang auf dem Pidurangala und Radtour.' },
+        { day: 'Tag 1–2', stop: 'Sigiriya & Dambulla', note: 'Sonnenaufgang auf dem Pidurangala und Höhlentempel.' },
         { day: 'Tag 3–4', stop: 'Kandy', note: 'Abendzeremonie im Zahntempel und Gewürzgärten.' },
         { day: 'Tag 5–6', stop: 'Hatton & Ella', note: 'Teegut und 3-Stunden-Zugfahrt über Nine Arches.' },
         { day: 'Tag 7–9', stop: 'Galle Fort', note: 'Sonnenuntergang auf den Bastionen und Korallenriffe.' }
@@ -538,13 +521,13 @@ window.SERENDIB_LOCALES['de'] = {
       duration: '10T / 09N',
       season: 'Mai–Sep · Sonnengarantie',
       pace: 'Riff & Kultur',
-      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Sigiriya',
       summary: 'Folgt der Sommersonne zu Hindutempeln, Riffen im Osten und Königsstädten.',
       days: [
         { day: 'Tag 1–2', stop: 'Anuradhapura & Mihintale', note: 'Weiße Stupas und heilige Granittreppen.' },
         { day: 'Tag 3–5', stop: 'Jaffna & Delft', note: 'Palmeninseln, Nallur-Kovil und Wildpferde.' },
         { day: 'Tag 6–8', stop: 'Trincomalee', note: 'Schnorcheln bei Pigeon Island und Nilaveli.' },
-        { day: 'Tag 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Radtour durch See-Ruinen vor dem Aufstieg auf Sigiriya.' }
+        { day: 'Tag 9–10', stop: 'Dambulla & Sigiriya', note: 'Höhlentempel am Morgen vor dem Aufstieg auf Sigiriya.' }
       ]
     }
   },
