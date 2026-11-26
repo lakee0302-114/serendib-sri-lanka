@@ -175,14 +175,14 @@
       imageAlt: 'Iconic conical Sri Pada summit rising sharply into deep blue mountain skies with lit pilgrimage trail'
     },
     {
-      id: 'knuckles',
+      id: 'riverston',
       number: '18',
-      sinhala: 'නකල්ස් කඳු වැටිය',
+      sinhala: 'රිවස්ටන්',
       regionKey: 'highlands',
-      coords: "07°27'30\"N · 80°46'50\"E",
+      coords: "07°31'42\"N · 80°44'19\"E",
       idealNights: 2,
-      image: './assets/images/knuckles-range.jpg',
-      imageAlt: 'Pastel twilight clouds drifting over lush misty Knuckles mountain valleys in central Sri Lanka'
+      image: './assets/images/riverston-ridge.jpg',
+      imageAlt: 'Sunlit emerald valley and terraced mountain ridges seen from Mini Worlds End cliff at Riverston, Sri Lanka'
     },
     {
       id: 'pinnawala',
@@ -245,7 +245,7 @@
     'arugam-bay': { coords: [6.8403, 81.8306], rail: false, highland: false },
     colombo: { coords: [6.9271, 79.8612], rail: true, highland: false },
     'sri-pada': { coords: [6.8096, 80.4994], rail: true, highland: true },
-    knuckles: { coords: [7.4583, 80.7806], rail: false, highland: true },
+    riverston: { coords: [7.5283, 80.7386], rail: false, highland: true },
     pinnawala: { coords: [7.3011, 80.3869], rail: true, highland: false }
   };
 
@@ -319,9 +319,9 @@
       { style: 'street', spot: 'Candlelit Trailside Ginger Tea & Vadai Stalls', detail: 'Hot sweet mountain tea & crispy lentil fritters on pilgrim steps' },
       { style: 'local', spot: 'Nallathanniya Morning Kiribath', detail: 'Spiced onion sambol & hot milk-rice after dawn descent' }
     ],
-    knuckles: [
-      { style: 'local', spot: 'Bamboo-Cooked Rice & Cardamom Estate Kitchen', detail: 'Fragrant mist-valley spices beside emerald waterfalls' },
-      { style: 'cafe', spot: 'Cloud-Ridge Eco Veranda Tea', detail: 'Estate-picked single-origin brew after canyon hikes' }
+    riverston: [
+      { style: 'local', spot: 'Illukkumbura & Pitawala Village Kitchen', detail: 'Wood-fired red rice, brinjal moju & highland spice curries after misty trails' },
+      { style: 'cafe', spot: 'Riverston Gap Tea & Ginger Veranda', detail: 'Hot sweet Ceylon tea overlooking cloud-swept Matale valleys' }
     ],
     pinnawala: [
       { style: 'local', spot: 'Maha Oya Riverside Veranda Rice & Curry', detail: 'Open-air river deck overlooking bathing elephants with clay-pot curries' },

@@ -596,22 +596,22 @@ window.SERENDIB_LOCALES['en'] = {
       culinaryNote: 'Traditional rice & clay-pot curries served overlooking the Maha Oya river terrace.',
       etiquette: 'Admire herds quietly from viewing platforms without touching or startling calves.'
     },
-    knuckles: {
-      name: 'Knuckles Mountain Range',
+    riverston: {
+      name: 'Riverston',
       region: 'Highlands',
-      tagline: 'UNESCO jagged cloud peaks & cardamom valley trails',
-      elevation: '1,863m',
-      driveFromColombo: '4h 30m',
+      tagline: 'Wind-swept cloud passes, Pitawala Plains & Mini World’s End',
+      elevation: '1,420m',
+      driveFromColombo: '4h 15m',
       bestTime: 'Feb–May · Jul–Sep',
-      daylightWindow: '07:00 – 11:00',
-      summary: 'Wild five-peak conservation massif holding terraced paddy villages, waterfalls, and cloud forests.',
+      daylightWindow: '06:30 – 11:00',
+      summary: 'Misty highland saddle in Matale famous for cliff-top Pitawala Pathana meadows, waterfall caves, and emerald valleys.',
       highlights: [
-        'Trek to Mini World’s End overlooking terraced green Meemure valleys.',
-        'Bathe below crystal Sera Ella cascades after shaded cardamom-forest trails.',
-        'Spot endemic pygmy lizards and purple-faced langurs along mossy ridges.'
+        'Walk to Mini World’s End cliff overlooking dramatic emerald valleys.',
+        'Wander behind cascading Sera Ella waterfalls and suspension bridges.',
+        'Feel cool monsoon gusts along the scenic Riverston Peak ridge.'
       ],
-      culinaryNote: 'Village kithul-sweetened kurakkan halape and garden vegetable curries.',
-      etiquette: 'Hire a registered Knuckles trail guide and wear leech socks in misty seasons.'
+      culinaryNote: 'Village kithul-sweetened kurakkan halape and warm mountain rice & curry.',
+      etiquette: 'Stay clear of sheer cliff drops during sudden clouds and hire a local guide.'
     }
   },
   months: {
@@ -694,7 +694,7 @@ window.SERENDIB_LOCALES['en'] = {
       festival: 'Esala pageant preparations in Kandy & Kataragama.',
       verdicts: {
         south: { status: 'Breezy Mix', note: 'Bright breaks between quick sea squalls.' },
-        highlands: { status: 'Clear East', note: 'Fine weather for Ella and Knuckles hikes.' },
+        highlands: { status: 'Clear East', note: 'Fine weather for Ella and Riverston hikes.' },
         cultural: { status: 'Peak Safari', note: 'Wild elephant herds and sunny ancient ruins.' },
         northeast: { status: 'Peak Sun', note: 'Prime reef visibility and calm waters.' }
       }
