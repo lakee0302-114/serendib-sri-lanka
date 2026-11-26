@@ -520,15 +520,26 @@
       </header>
 
       <nav class="planner-steps" id="planner-steps" aria-label="Trip planner steps">
-        <button type="button" class="planner-step-btn is-active" data-planner-nav="1" data-i18n="planner.step1Tab">01 · Month, Date &amp; Style</button>
-        <button type="button" class="planner-step-btn" data-planner-nav="2" data-i18n="planner.step2Tab">02 · Route &amp; Stops</button>
-        <button type="button" class="planner-step-btn" data-planner-nav="3" data-i18n="planner.step3Tab">03 · Confirm Brief</button>
+        <button type="button" class="planner-step-btn is-active" data-planner-nav="1" data-i18n="planner.step1Tab">1. Dates &amp; Style</button>
+        <button type="button" class="planner-step-btn" data-planner-nav="2" data-i18n="planner.step2Tab">2. Route &amp; Food</button>
+        <button type="button" class="planner-step-btn" data-planner-nav="3" data-i18n="planner.step3Tab">3. Your Plan</button>
       </nav>
 
       <div class="planner-workspace" id="planner-workspace">
         <div class="planner-stage" id="planner-stage">
-          <!-- Step 1: Month, Arrival Date, Departure Date, Travelers, Stay Collection & Focus -->
+          <!-- Step 1: Status, Start Hub, Dates, Travelers, Stay, Transport & Food Taste -->
           <div class="planner-step-pane" id="planner-pane-1">
+            <div class="planner-context-grid">
+              <div class="planner-block" style="margin-bottom:0;">
+                <h3 class="planner-label" data-i18n="planner.statusHeading" style="margin-bottom:0.55rem;">Your Arrival Status</h3>
+                <div class="planner-status-pills" id="planner-status-pills"></div>
+              </div>
+              <div class="planner-block" style="margin-bottom:0;">
+                <h3 class="planner-label" data-i18n="planner.startHubLabel" style="margin-bottom:0.55rem;">Starting From</h3>
+                <div class="planner-hub-pills" id="planner-hub-pills"></div>
+              </div>
+            </div>
+
             <div class="planner-block">
               <div class="planner-block__head">
                 <h3 class="planner-label" data-i18n="planner.monthHeading">Preferred Travel Month</h3>
@@ -565,30 +576,45 @@
             </div>
 
             <div class="planner-block">
-              <h3 class="planner-label" data-i18n="planner.transportHeading">Getting Around</h3>
+              <h3 class="planner-label" data-i18n="planner.transportHeading">How would you like to travel?</h3>
               <div class="transport-pills" id="planner-transport-pills"></div>
             </div>
 
             <div class="planner-block">
-              <h3 class="planner-label" data-i18n="planner.interestsHeading">Trip Focus</h3>
+              <h3 class="planner-label" data-i18n="planner.foodHeading">Where &amp; What to Eat</h3>
+              <div class="quick-tags" id="planner-food-tags"></div>
+            </div>
+
+            <div class="planner-block">
+              <h3 class="planner-label" data-i18n="planner.interestsHeading">What do you love most?</h3>
               <div class="quick-tags" id="planner-interest-tags"></div>
             </div>
           </div>
 
-          <!-- Step 2: Visual Route & Destination Selector -->
+          <!-- Step 2: Visual Route, Sights, Dining & Transfers Builder -->
           <div class="planner-step-pane" id="planner-pane-2" hidden>
             <div class="planner-block">
               <div class="planner-block__head">
                 <h3 class="planner-label" id="planner-dest-heading">Select Destinations</h3>
                 <div class="planner-presets" id="planner-presets"></div>
               </div>
+              <div class="planner-dest-filters" id="planner-dest-filters"></div>
               <div class="planner-dest-grid" id="planner-dest-grid"></div>
+            </div>
+
+            <div class="planner-route-builder" id="planner-route-builder">
+              <div class="planner-block__head">
+                <h3 class="planner-label" data-i18n="planner.routeOrderHeading">Places, Dining &amp; Transfers</h3>
+              </div>
+              <div class="planner-route-cards" id="planner-route-cards"></div>
             </div>
           </div>
 
-          <!-- Step 3: Traveler Details -->
+          <!-- Step 3: Day-by-Day Blueprint Review + Cloud Save / Concierge Form -->
           <div class="planner-step-pane" id="planner-pane-3" hidden>
-            <div class="planner-review-strip" id="planner-mobile-review"></div>
+            <div class="planner-day-review" id="planner-mobile-review"></div>
+
+            <h3 class="planner-label" data-i18n="planner.saveConciergeHeading" style="margin:1.25rem 0 0.75rem;">Save Cloud Copy &amp; Request Local Support (Optional)</h3>
             <form id="planner-form" class="planner-form">
               <div class="form-group">
                 <label for="pln-name" data-i18n="planner.nameLabel">Full Name</label>
@@ -622,6 +648,7 @@
             <h3 class="display-serif" style="margin:0; font-size:1.3rem;" data-i18n="planner.summaryTitle">Route Blueprint</h3>
             <span class="mono-label planner-aside__count" id="planner-aside-count"></span>
           </div>
+          <div class="planner-aside__transit-bar" id="planner-aside-transit"></div>
 
           <div class="planner-aside__monsoon" id="planner-aside-monsoon"></div>
           <div class="planner-aside__specs" id="planner-aside-specs"></div>

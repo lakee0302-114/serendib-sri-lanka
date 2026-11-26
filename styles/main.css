@@ -2368,6 +2368,233 @@
     color: var(--ink-primary);
   }
 
+  /* Step 1: Status, Start Hub, Arrival/Departure Dates & Tasting */
+  .planner-context-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+  }
+
+  @media (min-width: 680px) {
+    .planner-context-grid {
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 1.25rem;
+    }
+  }
+
+  .planner-status-pills,
+  .planner-hub-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .status-pill,
+  .hub-pill {
+    min-height: 34px;
+    padding: 0.25rem 0.78rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-cream);
+    color: var(--ink-secondary);
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .status-pill.is-active,
+  .hub-pill.is-active {
+    background-color: var(--bg-forest);
+    border-color: var(--bg-forest);
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  [data-theme="dark"] .status-pill.is-active,
+  [data-theme="dark"] .hub-pill.is-active {
+    background-color: var(--accent-terracotta);
+    border-color: var(--accent-terracotta);
+  }
+
+  .planner-dest-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .planner-filter-chip {
+    min-height: 30px;
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--hairline);
+    background-color: var(--bg-sandstone);
+    color: var(--ink-secondary);
+    font-size: 0.74rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .planner-filter-chip.is-active {
+    background-color: var(--accent-tea);
+    border-color: var(--accent-tea);
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  .planner-route-builder {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .planner-route-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .route-leg-connector {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    align-self: flex-start;
+    margin-inline-start: 0.85rem;
+    padding: 0.24rem 0.72rem;
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in oklab, var(--accent-terracotta) 10%, var(--bg-sandstone));
+    color: var(--accent-terracotta);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .itinerary-stop-card {
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    background-color: var(--bg-limestone);
+    padding: 0.85rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .itinerary-stop-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .itinerary-stop-card__id {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-width: 0;
+    flex: 1 1 200px;
+  }
+
+  .itinerary-stop-card__id img {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .itinerary-stop-card__title {
+    margin: 0.1rem 0 0;
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+
+  .itinerary-stop-card__ctrl {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .mini-ctrl-btn {
+    min-width: 30px;
+    height: 30px;
+    padding: 0 0.45rem;
+    border-radius: 8px;
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-cream);
+    color: var(--ink-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mini-ctrl-btn:hover:not(:disabled) {
+    border-color: var(--accent-terracotta);
+    color: var(--accent-terracotta);
+  }
+
+  .mini-ctrl-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .itinerary-stop-card__pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  @media (min-width: 640px) {
+    .itinerary-stop-card__pillars {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pillar-box {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 0.6rem 0.72rem;
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+
+  .pillar-box__kicker {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-terracotta);
+    margin-bottom: 0.25rem;
+  }
+
+  .pillar-box--eat .pillar-box__kicker {
+    color: var(--accent-tea);
+  }
+
+  .pillar-box strong {
+    display: block;
+    color: var(--ink-primary);
+    margin-bottom: 0.15rem;
+  }
+
+  .pillar-box span {
+    color: var(--ink-secondary);
+  }
+
   /* Step 1: Arrival Date, Departure Date, Travelers, Stay Collection & Transport */
   .planner-steppers {
     display: grid;
@@ -2545,21 +2772,69 @@
     border-color: var(--accent-terracotta);
   }
 
-  /* Step 3: Form & Mobile Review Strip */
-  .planner-review-strip {
+  /* Step 3: Executive Day-by-Day Blueprint & Concierge Form */
+  .planner-day-review {
     background-color: var(--bg-sandstone);
     border: 1px solid var(--hairline);
-    border-radius: 12px;
-    padding: 0.85rem 1rem;
-    margin-bottom: 1.1rem;
-    font-size: 0.84rem;
+    border-radius: 14px;
+    padding: 1rem 1.05rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .day-review-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 0.85rem;
+  }
+
+  .day-review-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .day-review-actions .btn {
+    min-height: 36px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  .day-review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .day-review-row {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 0.68rem 0.82rem;
+    font-size: 0.82rem;
+  }
+
+  .day-review-row__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .day-review-row__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
     color: var(--ink-secondary);
   }
 
-  @media (min-width: 920px) {
-    .planner-review-strip {
-      display: none;
-    }
+  .day-review-row__grid strong {
+    color: var(--ink-primary);
   }
 
   .planner-form {
@@ -2631,8 +2906,15 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 0.5rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.55rem;
     border-bottom: 1px solid var(--hairline);
+  }
+
+  .planner-aside__transit-bar {
+    margin-top: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-muted);
   }
 
   .planner-aside__count {
@@ -2640,7 +2922,7 @@
   }
 
   .planner-aside__monsoon {
-    margin-top: 0.85rem;
+    margin-top: 0.7rem;
     padding: 0.72rem 0.85rem;
     border-radius: 10px;
     background-color: var(--bg-compass);
@@ -2671,15 +2953,25 @@
   .planner-aside__stops {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .aside-stop-leg {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent-terracotta);
+    padding-inline-start: 0.65rem;
+    border-inline-start: 2px dashed color-mix(in oklab, var(--accent-terracotta) 42%, transparent);
+    margin-inline-start: 0.9rem;
+    line-height: 1.5;
   }
 
   .aside-stop-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.6rem;
-    padding: 0.45rem 0.55rem;
+    gap: 0.5rem;
+    padding: 0.48rem 0.55rem;
     border-radius: 10px;
     background-color: var(--bg-cream);
     border: 1px solid var(--hairline);
@@ -2688,24 +2980,40 @@
   .aside-stop-row__main {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.55rem;
     min-width: 0;
+    flex: 1;
   }
 
   .aside-stop-row img {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     border-radius: 7px;
     object-fit: cover;
     flex-shrink: 0;
   }
 
   .aside-stop-row__title {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .aside-stop-row__sub {
+    font-size: 0.7rem;
+    color: var(--accent-tea);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .aside-stop-row__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.12rem;
+    flex-shrink: 0;
   }
 
   .aside-stop-row__rm {
@@ -2713,8 +3021,8 @@
     background: transparent;
     color: var(--ink-muted);
     cursor: pointer;
-    font-size: 1rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 0.95rem;
+    padding: 0.16rem 0.3rem;
     line-height: 1;
   }
 
@@ -3156,6 +3464,16 @@
 
   .toast.is-shown {
     opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  body.drawer-open .toast {
+    top: auto;
+    bottom: max(5.1rem, calc(env(safe-area-inset-bottom) + 4.4rem));
+    transform: translate(-50%, 12px);
+  }
+
+  body.drawer-open .toast.is-shown {
     transform: translate(-50%, 0);
   }
 

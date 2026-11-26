@@ -229,10 +229,166 @@
     'east-north-sun': ['anuradhapura', 'trinco-jaffna', 'arugam-bay', 'sigiriya']
   };
 
+  var START_HUBS = [
+    { id: 'cmbAirport', coords: [7.1808, 79.8841], rail: false, highland: false },
+    { id: 'colombo', coords: [6.9271, 79.8612], rail: true, highland: false },
+    { id: 'negombo', coords: [7.2008, 79.8737], rail: false, highland: false },
+    { id: 'kandy', coords: [7.2906, 80.6337], rail: true, highland: true },
+    { id: 'galle', coords: [6.0329, 80.2170], rail: true, highland: false }
+  ];
+
+  var DEST_GEO = {
+    sigiriya: { coords: [7.9570, 80.7603], rail: false, highland: false },
+    kandy: { coords: [7.2906, 80.6337], rail: true, highland: true },
+    ella: { coords: [6.8667, 81.0466], rail: true, highland: true },
+    wilpattu: { coords: [8.4542, 80.0417], rail: false, highland: false },
+    galle: { coords: [6.0329, 80.2170], rail: true, highland: false },
+    mirissa: { coords: [5.9483, 80.4716], rail: true, highland: false },
+    'nuwara-eliya': { coords: [6.9497, 80.7891], rail: true, highland: true },
+    yala: { coords: [6.3722, 81.5181], rail: false, highland: false },
+    udawalawe: { coords: [6.4383, 80.8883], rail: false, highland: false },
+    anuradhapura: { coords: [8.3114, 80.4037], rail: true, highland: false },
+    dambulla: { coords: [7.8606, 80.6517], rail: false, highland: false },
+    polonnaruwa: { coords: [7.9403, 81.0188], rail: true, highland: false },
+    'horton-plains': { coords: [6.8025, 80.8025], rail: true, highland: true },
+    bentota: { coords: [6.4211, 79.9958], rail: true, highland: false },
+    'trinco-jaffna': { coords: [8.5711, 81.2335], rail: true, highland: false },
+    'arugam-bay': { coords: [6.8403, 81.8306], rail: false, highland: false },
+    colombo: { coords: [6.9271, 79.8612], rail: true, highland: false },
+    'sri-pada': { coords: [6.8096, 80.4994], rail: true, highland: true },
+    minneriya: { coords: [8.0208, 80.8861], rail: false, highland: false },
+    knuckles: { coords: [7.4583, 80.7806], rail: false, highland: true }
+  };
+
+  var DINING_GUIDE = {
+    sigiriya: [
+      { style: 'local', spot: 'Kamatha Village Rice & Curry · Habarana', detail: 'Heirloom clay-pot feast cooked over open wood fires' },
+      { style: 'cafe', spot: 'Priyamali Gedara Treehouse Lunch', detail: 'Lakeside lotus-root curries & fresh tropical fruits' }
+    ],
+    kandy: [
+      { style: 'local', spot: 'Hela Bojun Traditional Kitchen', detail: 'Women-run heritage stalls with fresh milk-rice & sweets' },
+      { style: 'cafe', spot: 'Empire Café Veranda', detail: 'Colonial courtyard spot beside the Sacred Temple' }
+    ],
+    ella: [
+      { style: 'street', spot: 'Ella Town Courtyards & Kurakkan Roti', detail: 'Wood-fired millet roti, kottu & scenic rail-view cafés' },
+      { style: 'cafe', spot: 'Halpewatte Tea Tasting Terrace', detail: 'High-grown Ceylon Orange Pekoe over mountain mist' }
+    ],
+    wilpattu: [
+      { style: 'local', spot: 'Lakeside Safari Picnic & Smoked Tank Fish', detail: 'Dry-zone village rice parcels packed fresh for game drives' },
+      { style: 'cafe', spot: 'Lantern Bush Camp Table', detail: 'Wild-pepper grilled skewers under dry-forest canopy' }
+    ],
+    galle: [
+      { style: 'seafood', spot: 'Fort Bastion Sea-Breeze Grills', detail: 'Black-pepper ambul thiyal tuna & crisp egg hoppers' },
+      { style: 'cafe', spot: "Pedlar's Inn Courtyard & Cafés", detail: 'Historic Fort cobblestones, cinnamon gelato & espresso' }
+    ],
+    mirissa: [
+      { style: 'seafood', spot: 'Mirissa Candlelit Sand Seafood Grills', detail: 'Fresh red snapper, calamari & tiger prawns on the beach' },
+      { style: 'cafe', spot: 'Coconut Hill & Weligama Brunch Shacks', detail: 'Cold Ceylon king coconut & ocean-view smoothie bowls' }
+    ],
+    'nuwara-eliya': [
+      { style: 'cafe', spot: 'Grand Hotel Veranda High Tea', detail: 'Crisp upland Dimbula tea, scones & colonial lawns' },
+      { style: 'local', spot: 'Planter Bungalow Fireside Dinner', detail: 'Warm pepper broth, roast paan & upland spice curries' }
+    ],
+    yala: [
+      { style: 'local', spot: 'Tissamaharama Clay-Pot Curd & Honey', detail: 'Chilled lake-side buffalo curd with wild forest honey' },
+      { style: 'seafood', spot: 'Safari Campfire & Dune Barbeque', detail: 'Open-fire coastal seafood served beneath southern stars' }
+    ],
+    udawalawe: [
+      { style: 'street', spot: 'Park-Gate Hot Hoppers & Thambili', detail: 'Early-morning egg hoppers & sweet king coconut stops' },
+      { style: 'local', spot: 'Reservoir Bank Rice & Jackfruit Curry', detail: 'Hearty rustic southern village buffet near safari exit' }
+    ],
+    anuradhapura: [
+      { style: 'local', spot: 'Nuwara Wewa Lotus-Leaf Lunch', detail: 'Traditional red rice & lotus-seed curry near sacred stupas' },
+      { style: 'street', spot: 'Morning Kurakkan & Mung Kiribath Stalls', detail: 'Authentic dry-zone temple town snacks & herbal porridge' }
+    ],
+    dambulla: [
+      { style: 'street', spot: 'Matale Chili-Salt Pineapple & Spice Market', detail: 'Sun-ripened highland mango, jackfruit & roasted cashews' },
+      { style: 'local', spot: 'Cliffside Vegetable & Tamarind Curry Table', detail: 'Bright home-style rice & pickled brinjal moju' }
+    ],
+    polonnaruwa: [
+      { style: 'seafood', spot: 'Parakrama Samudra Fresh Tank Fish', detail: 'Crispy golden lake fish fried with garlic, curry leaf & lime' },
+      { style: 'local', spot: 'Cycle-Trail Reservoir Veranda', detail: 'Restorative coconut water & rice after Vatadage ruins' }
+    ],
+    'horton-plains': [
+      { style: 'street', spot: 'Ohiya / Park Gate Dawn Ginger Tea', detail: 'Steaming sweet ginger tea & hot toast at 2,100m chill' },
+      { style: 'cafe', spot: 'Ambewela Upland Dairy Creamery', detail: 'Fresh mountain cheeses, hot chocolate & strawberry bowls' }
+    ],
+    bentota: [
+      { style: 'seafood', spot: 'Bentota Lagoon Mud Crab & Tiger Prawns', detail: 'Fresh lagoon-to-pan pepper crab overlooking mangroves' },
+      { style: 'cafe', spot: 'River Pavilion Sunset Terrace', detail: 'Sri Lankan hoppers, jaggery sweets & tropical fruit' }
+    ],
+    'trinco-jaffna': [
+      { style: 'seafood', spot: 'Jaffna Crab Curry & Uppuveli Beach Shacks', detail: 'Bold roasted eastern curry spices & Pigeon Island catch' },
+      { style: 'street', spot: 'Odiyal Seafood Kool & Rio Ice Cream', detail: 'Signature northern palmyrah broth & local dessert shops' }
+    ],
+    'arugam-bay': [
+      { style: 'seafood', spot: 'Main Point Flame-Grilled Surf-Coast Catch', detail: 'Line-caught seer fish & smoky sambol steps from the break' },
+      { style: 'cafe', spot: 'Sandy Lane Surfer Espresso & Fruit Bowls', detail: 'Laid-back morning smoothie cafés & wood-fired flatbreads' }
+    ],
+    colombo: [
+      { style: 'seafood', spot: 'Ministry of Crab (Dutch Hospital)', detail: 'Iconic garlic-pepper Sri Lankan lagoon crab in heritage square' },
+      { style: 'cafe', spot: "The Gallery Café (Geoffrey Bawa's Studio)", detail: 'Architectural candlelit courtyard & black-pork / kithul desserts' },
+      { style: 'street', spot: 'Galle Face Green Sunset Kottu & Isso Wadei', detail: 'Sizzling beach-promenade prawn fritters & ocean-breeze street food' }
+    ],
+    'sri-pada': [
+      { style: 'street', spot: 'Candlelit Trailside Ginger Tea & Vadai Stalls', detail: 'Hot sweet mountain tea & crispy lentil fritters on pilgrim steps' },
+      { style: 'local', spot: 'Nallathanniya Morning Kiribath', detail: 'Spiced onion sambol & hot milk-rice after dawn descent' }
+    ],
+    minneriya: [
+      { style: 'local', spot: 'Habarana Earthen-Stove Clay-Pot Feast', detail: 'Authentic dry-zone dishes served overlooking elephant tanks' },
+      { style: 'street', spot: 'Dambulla–Minneriya Curd & Wild Honey Huts', detail: 'Thick buffalo curd topped with raw palm treacle' }
+    ],
+    knuckles: [
+      { style: 'local', spot: 'Bamboo-Cooked Rice & Cardamom Estate Kitchen', detail: 'Fragrant mist-valley spices beside emerald waterfalls' },
+      { style: 'cafe', spot: 'Cloud-Ridge Eco Veranda Tea', detail: 'Estate-picked single-origin brew after canyon hikes' }
+    ]
+  };
+
+  function haversineKm(a, b) {
+    var R = 6371;
+    var toRad = function (deg) { return deg * Math.PI / 180; };
+    var dLat = toRad(b[0] - a[0]);
+    var dLng = toRad(b[1] - a[1]);
+    var s1 = Math.sin(dLat / 2);
+    var s2 = Math.sin(dLng / 2);
+    var h = s1 * s1 + Math.cos(toRad(a[0])) * Math.cos(toRad(b[0])) * s2 * s2;
+    return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+  }
+
+  function estimateRouteLeg(origin, targetId, transportMode) {
+    var fromMeta = typeof origin === 'string'
+      ? (DEST_GEO[origin] || START_HUBS.filter(function (h) { return h.id === origin; })[0])
+      : origin;
+    var toMeta = DEST_GEO[targetId];
+    if (!fromMeta || !toMeta) return null;
+
+    var crowKm = haversineKm(fromMeta.coords, toMeta.coords);
+    if (crowKm < 12) {
+      return { km: Math.round(crowKm * 1.2), mins: 25, railAvailable: false, mode: transportMode || 'chauffeur' };
+    }
+    var bendFactor = (fromMeta.highland || toMeta.highland) ? 1.38 : 1.20;
+    var roadKm = Math.round(crowKm * bendFactor);
+    var avgKmh = (fromMeta.highland || toMeta.highland) ? 31 : 46;
+    if (transportMode === 'suv') avgKmh = Math.max(29, avgKmh - 2);
+    var mins = Math.max(30, Math.round((roadKm / avgKmh) * 60 / 5) * 5);
+    var railAvailable = Boolean(fromMeta.rail && toMeta.rail);
+    return {
+      km: roadKm,
+      mins: mins,
+      railAvailable: railAvailable,
+      scenicHillRail: Boolean(railAvailable && fromMeta.highland && toMeta.highland),
+      mode: transportMode || 'chauffeur'
+    };
+  }
+
   window.SERENDIB_DATA = {
     DESTINATIONS_META: DESTINATIONS_META,
     MONSOON_LEVELS: MONSOON_LEVELS,
     MONTH_CODES: MONTH_CODES,
-    ITINERARY_PRESETS: ITINERARY_PRESETS
+    ITINERARY_PRESETS: ITINERARY_PRESETS,
+    START_HUBS: START_HUBS,
+    DEST_GEO: DEST_GEO,
+    DINING_GUIDE: DINING_GUIDE,
+    estimateRouteLeg: estimateRouteLeg
   };
 })();
