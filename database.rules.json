@@ -1,20 +1,19 @@
 {
   "rules": {
+    ".read": false,
+    ".write": false,
     "inquiries": {
       ".read": false,
       ".indexOn": ["createdAt", "month"],
       "$refId": {
-        ".write": "!data.exists()",
-        ".validate": "newData.hasChildren(['refCode', 'name', 'email', 'month', 'createdAt']) && newData.child('refCode').isString() && newData.child('name').isString() && newData.child('email').isString()"
+        ".read": false,
+        ".write": "!data.exists() && $refId.matches(/^SRD-[A-Z0-9]{6,10}$/)",
+        ".validate": "newData.hasChildren(['refCode', 'name', 'email', 'month', 'createdAt']) && newData.child('refCode').isString() && newData.child('refCode').val() === $refId && newData.child('name').isString() && newData.child('name').val().length >= 1 && newData.child('name').val().length <= 120 && newData.child('email').isString() && newData.child('email').val().length >= 5 && newData.child('email').val().length <= 160 && newData.child('email').val().matches(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/) && newData.child('month').isString() && newData.child('month').val().matches(/^(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)$/) && newData.child('createdAt').isString() && newData.child('createdAt').val().length <= 40 && (!newData.child('notes').exists() || (newData.child('notes').isString() && newData.child('notes').val().length <= 1000)) && (!newData.child('origin').exists() || (newData.child('origin').isString() && newData.child('origin').val().length <= 120)) && (!newData.child('travelers').exists() || (newData.child('travelers').isNumber() && newData.child('travelers').val() >= 1 && newData.child('travelers').val() <= 30)) && (!newData.child('nights').exists() || (newData.child('nights').isNumber() && newData.child('nights').val() >= 0 && newData.child('nights').val() <= 60))"
       }
     },
     "routes": {
       ".read": false,
-      "$shareId": {
-        ".read": true,
-        ".write": "!data.exists()",
-        ".validate": "newData.hasChildren(['stops', 'createdAt'])"
-      }
+      ".write": false
     }
   }
 }

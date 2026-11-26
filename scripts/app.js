@@ -55,6 +55,30 @@
     }
   };
 
+  function escapeHtml(val) {
+    return String(val == null ? '' : val)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function generateRefCode() {
+    var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    var out = '';
+    var bytes = new Uint8Array(6);
+    if (window.crypto && typeof window.crypto.getRandomValues === 'function') {
+      window.crypto.getRandomValues(bytes);
+    } else {
+      for (var i = 0; i < bytes.length; i++) bytes[i] = Math.floor(Math.random() * 256);
+    }
+    for (var j = 0; j < 6; j++) {
+      out += chars.charAt(bytes[j] % chars.length);
+    }
+    return 'SRD-' + out;
+  }
+
   function getInitialLang() {
     try {
       var saved = localStorage.getItem(STORAGE_KEYS.lang);
@@ -73,9 +97,17 @@
       var raw = localStorage.getItem(STORAGE_KEYS.route);
       if (!raw) return ['sigiriya', 'ella', 'galle'];
       var parsed = JSON.parse(raw);
-      return Array.isArray(parsed)
-        ? parsed.filter(function (id) { return validIds.indexOf(id) !== -1; })
-        : ['sigiriya', 'ella', 'galle'];
+      if (!Array.isArray(parsed)) return ['sigiriya', 'ella', 'galle'];
+      var seen = {};
+      var cleaned = [];
+      for (var i = 0; i < parsed.length && cleaned.length < validIds.length; i++) {
+        var id = parsed[i];
+        if (typeof id === 'string' && validIds.indexOf(id) !== -1 && !seen[id]) {
+          seen[id] = true;
+          cleaned.push(id);
+        }
+      }
+      return cleaned;
     } catch (e) {
       return ['sigiriya', 'ella', 'galle'];
     }
@@ -1624,31 +1656,50 @@
 
     if (state.planner.confirmed) {
       var conf = state.planner.confirmed;
+      var safeName = escapeHtml(conf.name);
+      var safeRef = escapeHtml(conf.refCode);
+      var safeBadge = escapeHtml(p.confirmedBadge);
+      var safeHeading = escapeHtml(p.confirmedHeading).replace('{name}', safeName);
+      var safeSub = escapeHtml(p.confirmedSub).replace('{ref}', safeRef);
+      var safeMonth = escapeHtml(monthObj.fullName);
+      var safeDates = (state.planner.arrivalDate || state.planner.departureDate)
+        ? ' (' + escapeHtml(arrivalDisplay) + ' → ' + escapeHtml(departureDisplay) + ')'
+        : '';
+      var safeStay = escapeHtml(stayTitle);
+      var safeTransport = escapeHtml(p.transports[state.planner.transport]);
+      var safeRouteLine = escapeHtml(routeLine);
+
       dom.plannerConfirmed.innerHTML =
         '<div class="confirmed-card">' +
-        '<span class="mono-label" style="color:var(--accent-tea);">' + p.confirmedBadge + ' · ' + conf.refCode +
+        '<span class="mono-label" style="color:var(--accent-tea);">' + safeBadge + ' · ' + safeRef +
         (conf.cloudSynced ? ' [FIREBASE SYNCED]' : '') + '</span>' +
         '<h3 class="display-serif" style="margin:0.45rem 0 0.35rem; font-size:clamp(1.45rem, 1.2rem + 0.9vw, 1.95rem);">' +
-        p.confirmedHeading.replace('{name}', conf.name) + '</h3>' +
-        '<p style="margin:0; color:var(--ink-secondary); font-size:0.92rem;">' + p.confirmedSub.replace('{ref}', conf.refCode) + '</p>' +
+        safeHeading + '</h3>' +
+        '<p style="margin:0; color:var(--ink-secondary); font-size:0.92rem;">' + safeSub + '</p>' +
         '<div class="confirmed-meta-grid">' +
-        '<div><span>' + p.monthHeading + '</span><strong>' + monthObj.fullName + ((state.planner.arrivalDate || state.planner.departureDate) ? ' (' + arrivalDisplay + ' → ' + departureDisplay + ')' : '') + '</strong></div>' +
-        '<div><span>' + p.summaryMetaTravelers + ' &amp; ' + p.summaryMetaNights + '</span><strong>' + state.planner.travelers + ' · ' + activeNights + nightsUnit + '</strong></div>' +
-        '<div><span>' + p.summaryMetaStay + '</span><strong>' + stayTitle + '</strong></div>' +
-        '<div><span>' + p.transportHeading + '</span><strong>' + p.transports[state.planner.transport] + '</strong></div>' +
-        '<div style="grid-column:1 / -1;"><span>' + p.summaryStops + '</span><strong>' + routeLine + '</strong></div>' +
+        '<div><span>' + escapeHtml(p.monthHeading) + '</span><strong>' + safeMonth + safeDates + '</strong></div>' +
+        '<div><span>' + escapeHtml(p.summaryMetaTravelers) + ' &amp; ' + escapeHtml(p.summaryMetaNights) + '</span><strong>' + Number(state.planner.travelers) + ' · ' + Number(activeNights) + escapeHtml(nightsUnit) + '</strong></div>' +
+        '<div><span>' + escapeHtml(p.summaryMetaStay) + '</span><strong>' + safeStay + '</strong></div>' +
+        '<div><span>' + escapeHtml(p.transportHeading) + '</span><strong>' + safeTransport + '</strong></div>' +
+        '<div style="grid-column:1 / -1;"><span>' + escapeHtml(p.summaryStops) + '</span><strong>' + safeRouteLine + '</strong></div>' +
         '</div>' +
         '<div style="display:flex; flex-wrap:wrap; gap:0.6rem;">' +
-        '<button type="button" class="btn btn--primary" id="pln-copy-confirmed">' + p.copySummaryBtn + '</button>' +
-        '<button type="button" class="btn btn--outline" id="pln-print-confirmed">' + p.printBtn + '</button>' +
-        '<button type="button" class="btn btn--outline" id="pln-edit-confirmed">' + p.editBtn + '</button>' +
-        '<button type="button" class="btn btn--outline" id="pln-done-confirmed">' + p.doneBtn + '</button>' +
+        '<button type="button" class="btn btn--primary" id="pln-copy-confirmed">' + escapeHtml(p.copySummaryBtn) + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-print-confirmed">' + escapeHtml(p.printBtn) + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-edit-confirmed">' + escapeHtml(p.editBtn) + '</button>' +
+        '<button type="button" class="btn btn--outline" id="pln-done-confirmed">' + escapeHtml(p.doneBtn) + '</button>' +
         '</div></div>';
 
       document.getElementById('pln-copy-confirmed').addEventListener('click', function () {
         var text = buildBlueprintText(conf.refCode);
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function () { showToast(state.locale.ui.toasts.copied); });
+          navigator.clipboard.writeText(text).then(function () {
+            showToast(state.locale.ui.toasts.copied);
+          }).catch(function () {
+            showToast(state.locale.ui.toasts.copyFallback);
+          });
+        } else {
+          showToast(state.locale.ui.toasts.copyFallback);
         }
       });
       document.getElementById('pln-print-confirmed').addEventListener('click', function () { window.print(); });
@@ -1662,15 +1713,16 @@
     var emailInput = document.getElementById('pln-email');
     if (dom.plannerForm && !dom.plannerForm.reportValidity()) return;
 
-    var name = nameInput ? nameInput.value.trim() : '';
-    var email = emailInput ? emailInput.value.trim() : '';
-    var origin = document.getElementById('pln-origin') ? document.getElementById('pln-origin').value.trim() : '';
-    var notes = document.getElementById('pln-notes') ? document.getElementById('pln-notes').value.trim() : '';
+    var name = (nameInput ? nameInput.value : '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, 120);
+    var email = (emailInput ? emailInput.value : '').replace(/[\u0000-\u001F\u007F]/g, '').trim().slice(0, 160);
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+
+    var origin = (document.getElementById('pln-origin') ? document.getElementById('pln-origin').value : '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, 120);
+    var notes = (document.getElementById('pln-notes') ? document.getElementById('pln-notes').value : '').replace(/[\u0000-\u0009\u000B-\u001F\u007F]/g, '').trim().slice(0, 1000);
     var schedule = buildDetailedSchedule();
     var stops = getSavedStopObjects().map(function (d) { return d.name; });
     var activeNights = getActivePlannerNights();
-    var suffix = Math.random().toString(36).slice(2, 6).toUpperCase() + Math.floor(10 + Math.random() * 89);
-    var refCode = 'SRD-' + suffix;
+    var refCode = generateRefCode();
 
     dom.plannerNextBtn.disabled = true;
     dom.plannerNextLabel.textContent = state.locale.ui.planner.submittingBtn;

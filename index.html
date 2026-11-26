@@ -10,25 +10,10 @@
     content="Handpicked Sri Lanka destinations, seasonal weather guide, and custom itinerary builder."
   />
 
-  <!-- Zero-flash initial Theme (Crisp Pearl default) & Language/RTL hydration -->
-  <script>
-    (function () {
-      try {
-        var savedTheme = localStorage.getItem('serendib_theme_v1');
-        var theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-        var meta = document.getElementById('meta-theme-color');
-        if (meta) meta.setAttribute('content', theme === 'dark' ? '#07151D' : '#FFFFFF');
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        var savedLang = localStorage.getItem('serendib_lang_v1');
-        var allowed = ['en', 'ta', 'hi', 'fr', 'de', 'es', 'it', 'nl', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar'];
-        if (savedLang && allowed.indexOf(savedLang) !== -1) {
-          document.documentElement.setAttribute('lang', savedLang);
-          document.documentElement.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
-        }
-      } catch (e) {}
-    })();
-  </script>
+  <!-- Zero-flash initial Theme (Crisp Pearl default) & Language/RTL hydration -->
+  <script src="./scripts/boot.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -618,22 +603,22 @@
             <form id="planner-form" class="planner-form">
               <div class="form-group">
                 <label for="pln-name" data-i18n="planner.nameLabel">Full Name</label>
-                <input id="pln-name" name="name" type="text" data-i18n-placeholder="contact.namePlaceholder" placeholder="Kavinda Perera" required />
+                <input id="pln-name" name="name" type="text" maxlength="120" autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Kavinda Perera" required />
               </div>
 
               <div class="form-group">
                 <label for="pln-email" data-i18n="planner.emailLabel">Email Address</label>
-                <input id="pln-email" name="email" type="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@domain.com" required />
+                <input id="pln-email" name="email" type="email" maxlength="160" autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@domain.com" required />
               </div>
 
               <div class="form-group field-full">
                 <label for="pln-origin" data-i18n="planner.originLabel">Flying From (Optional)</label>
-                <input id="pln-origin" name="origin" type="text" data-i18n-placeholder="planner.originPlaceholder" placeholder="London / Dubai / Singapore" />
+                <input id="pln-origin" name="origin" type="text" maxlength="120" autocomplete="country-name" data-i18n-placeholder="planner.originPlaceholder" placeholder="London / Dubai / Singapore" />
               </div>
 
               <div class="form-group field-full">
                 <label for="pln-notes" data-i18n="planner.notesLabel">Special Notes</label>
-                <textarea id="pln-notes" name="notes" data-i18n-placeholder="planner.notesPlaceholder" placeholder="Honeymoon suites, wildlife focus, dietary notes..."></textarea>
+                <textarea id="pln-notes" name="notes" maxlength="1000" data-i18n-placeholder="planner.notesPlaceholder" placeholder="Honeymoon suites, wildlife focus, dietary notes..."></textarea>
               </div>
             </form>
           </div>
@@ -700,9 +685,9 @@
   <script defer src="./scripts/locales/ko.js"></script>
   <script defer src="./scripts/locales/zh.js"></script>
   <script defer src="./scripts/locales/ar.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js" integrity="sha384-ZaR6mWzmJtrRibZ1Vm7SoHFr8OXjyAuGAXalGDKqbxFT18oi/z+oZLIRFkpeNor1" crossorigin="anonymous"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js" integrity="sha384-g5H2aNdtgRBYOBLsuOAuHvUXWnw4bswmU+tYjmGc1G3JfKxl79uWwV4sQarJsLwu" crossorigin="anonymous"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js" integrity="sha384-6Jot2RmoS66/9faJyjQ3J3Oe7wiJuUr+Hgs6+3Yzpi8q532pPlLSgu96BpQTKL6t" crossorigin="anonymous"></script>
   <script defer src="./scripts/firebase.js"></script>
   <script defer src="./scripts/app.js"></script>
 </body>
