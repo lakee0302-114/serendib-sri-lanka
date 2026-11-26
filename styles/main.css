@@ -788,9 +788,9 @@
 
   .hero__panel--sigiriya img { object-position: 50% 42%; }
   .hero__panel--ella img { object-position: 36% 48%; }
-  .hero__panel--mirissa img { object-position: 42% 44%; }
+  .hero__panel--mirissa img { object-position: 32% 54%; }
   .hero__panel--elephants img { object-position: 28% 44%; }
-  .hero__panel--tea img { object-position: 50% 42%; }
+  .hero__panel--tea img { object-position: 50% 62%; }
 
   @media (hover: hover) {
     .hero__panel:hover img {
