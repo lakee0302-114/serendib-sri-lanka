@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SERENDIB — Structural Metadata (16 Top Attractions & Twin Monsoons)
+   SERENDIB — Structural Metadata (19 Top Attractions & Twin Monsoons)
    ========================================================================== */
 
 (function () {
@@ -185,18 +185,8 @@
       imageAlt: 'Iconic conical Sri Pada summit rising sharply into deep blue mountain skies with lit pilgrimage trail'
     },
     {
-      id: 'minneriya',
-      number: '19',
-      sinhala: 'මින්නේරිය',
-      regionKey: 'wildlife',
-      coords: "08°01'15\"N · 80°53'10\"E",
-      idealNights: 1,
-      image: './assets/images/minneriya-gathering.jpg',
-      imageAlt: 'Wild Sri Lankan elephant gathering wading across sunlit water framed by lush green hills'
-    },
-    {
       id: 'knuckles',
-      number: '20',
+      number: '19',
       sinhala: 'නකල්ස් කඳු වැටිය',
       regionKey: 'highlands',
       coords: "07°27'30\"N · 80°46'50\"E",
@@ -256,7 +246,6 @@
     'arugam-bay': { coords: [6.8403, 81.8306], rail: false, highland: false },
     colombo: { coords: [6.9271, 79.8612], rail: true, highland: false },
     'sri-pada': { coords: [6.8096, 80.4994], rail: true, highland: true },
-    minneriya: { coords: [8.0208, 80.8861], rail: false, highland: false },
     knuckles: { coords: [7.4583, 80.7806], rail: false, highland: true }
   };
 
@@ -333,10 +322,6 @@
     'sri-pada': [
       { style: 'street', spot: 'Candlelit Trailside Ginger Tea & Vadai Stalls', detail: 'Hot sweet mountain tea & crispy lentil fritters on pilgrim steps' },
       { style: 'local', spot: 'Nallathanniya Morning Kiribath', detail: 'Spiced onion sambol & hot milk-rice after dawn descent' }
-    ],
-    minneriya: [
-      { style: 'local', spot: 'Habarana Earthen-Stove Clay-Pot Feast', detail: 'Authentic dry-zone dishes served overlooking elephant tanks' },
-      { style: 'street', spot: 'Dambulla–Minneriya Curd & Wild Honey Huts', detail: 'Thick buffalo curd topped with raw palm treacle' }
     ],
     knuckles: [
       { style: 'local', spot: 'Bamboo-Cooked Rice & Cardamom Estate Kitchen', detail: 'Fragrant mist-valley spices beside emerald waterfalls' },

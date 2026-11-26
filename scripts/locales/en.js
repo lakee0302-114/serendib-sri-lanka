@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['en'] = {
     },
     atlas: {
       eyebrow: 'DESTINATIONS',
-      titleStart: 'Top 20',
+      titleStart: 'Top',
       titleEm: 'destinations.',
       subcopy: 'Tap any place for details or add to your route.',
       filters: {
-        all: 'All (20)',
+        all: 'All (19)',
         cultural: 'Cultural',
         highlands: 'Highlands',
         south: 'South & West',
@@ -183,7 +183,7 @@ window.SERENDIB_LOCALES['en'] = {
       clearStops: 'Clear',
       monthHeading: 'Travel Month',
       destinationsHeading: 'Pick places, reorder route & adjust nights ({count} picked)',
-      filterAll: 'All (20)',
+      filterAll: 'All (19)',
       travelersLabel: 'How many guests?',
       nightsAutoHint: 'Suggested length: {nights} nights',
       stayHeading: 'Where would you like to stay?',
@@ -302,7 +302,7 @@ window.SERENDIB_LOCALES['en'] = {
       highlights: [
         'Climb Pidurangala at 05:45 for sunrise over Lion Rock.',
         'Explore Mirror Wall frescoes and water pools before 09:00.',
-        'Cycle quiet bund roads beside Minneriya and Kandalama tanks.'
+        'Cycle quiet bund roads beside Kandalama and Sigiriya tanks.'
       ],
       culinaryNote: 'Clay-pot red rice with lotus-root curry and fresh coconut sambol.',
       etiquette: 'Cover shoulders and knees inside Pidurangala cave temple.'
@@ -579,23 +579,6 @@ window.SERENDIB_LOCALES['en'] = {
       culinaryNote: 'Hot tea and crispy vadais served by candlelit trailside tea stalls.',
       etiquette: 'Pack warm layers for 8°C ridge winds and climb slowly in silent queues.'
     },
-    minneriya: {
-      name: 'Minneriya Elephant Gathering',
-      region: 'Wildlife',
-      tagline: 'Hundreds of wild Asian elephants on grassy tank shores',
-      elevation: '110m',
-      driveFromColombo: '4h 30m',
-      bestTime: 'Jul–Oct (Dry Peak)',
-      daylightWindow: '15:00 – 18:15',
-      summary: 'Ancient reservoir receding greens draw one of Earth’s largest wild Asian elephant congregations.',
-      highlights: [
-        'Watch dozens of elephant herds converge beside lakeside grasses after 16:00.',
-        'Combine morning Sigiriya climbs cleanly with an afternoon Minneriya 4x4.',
-        'Track painted storks, pelicans, and toque macaques near the bund.'
-      ],
-      culinaryNote: 'Cool king coconut paired with warm roadside corn cobs outside Habarana.',
-      etiquette: 'Use quiet naturalist jeeps that pause along tank fringes without boxing herds.'
-    },
     wilpattu: {
       name: 'Wilpattu National Park',
       region: 'Wildlife',
@@ -706,13 +689,13 @@ window.SERENDIB_LOCALES['en'] = {
     },
     JUL: {
       short: 'JUL', fullName: 'July',
-      headline: 'The Elephant Gathering & East Sunshine',
-      summary: 'Hundreds of wild elephants meet at Minneriya beside bright east lagoons.',
+      headline: 'Dry-Zone Wildlife & East Sunshine',
+      summary: 'Wild elephants gather beside dry-zone tanks while east beaches enjoy bright sun.',
       festival: 'Esala pageant preparations in Kandy & Kataragama.',
       verdicts: {
         south: { status: 'Breezy Mix', note: 'Bright breaks between quick sea squalls.' },
         highlands: { status: 'Clear East', note: 'Fine weather for Ella and Knuckles hikes.' },
-        cultural: { status: 'Peak Safari', note: 'Minneriya elephant herds and sunny ruins.' },
+        cultural: { status: 'Peak Safari', note: 'Wild elephant herds and sunny ancient ruins.' },
         northeast: { status: 'Peak Sun', note: 'Prime reef visibility and calm waters.' }
       }
     },
@@ -814,13 +797,13 @@ window.SERENDIB_LOCALES['en'] = {
       duration: '10D / 09N',
       season: 'May–Sep · Dry Summer',
       pace: 'Reef & Culture',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Minneriya → Sigiriya',
-      summary: 'Follows northern summer sun across Tamil kovils, calm eastern reefs, and elephant herds.',
+      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      summary: 'Follows northern summer sun across Tamil kovils, calm eastern reefs, and ancient capitals.',
       days: [
         { day: 'Day 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Sacred white dagobas and forest leopard safaris.' },
         { day: 'Day 3–5', stop: 'Jaffna & Delft', note: 'Palmyrah groves, Nallur kovils, and wild island ponies.' },
         { day: 'Day 6–8', stop: 'Trincomalee', note: 'Pigeon Island reef snorkeling and sunrise beach boats.' },
-        { day: 'Day 9–10', stop: 'Minneriya & Sigiriya', note: 'Hundreds of wild elephants gathering beside ancient tanks.' }
+        { day: 'Day 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Cycling lakeside ruins before a golden Lion Rock climb.' }
       ]
     }
   },

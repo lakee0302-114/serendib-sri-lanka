@@ -68,11 +68,14 @@
   }
 
   function loadSavedStops() {
+    var validIds = DESTINATIONS_META.map(function (d) { return d.id; });
     try {
       var raw = localStorage.getItem(STORAGE_KEYS.route);
       if (!raw) return ['sigiriya', 'ella', 'galle'];
       var parsed = JSON.parse(raw);
-      return Array.isArray(parsed) ? parsed : ['sigiriya', 'ella', 'galle'];
+      return Array.isArray(parsed)
+        ? parsed.filter(function (id) { return validIds.indexOf(id) !== -1; })
+        : ['sigiriya', 'ella', 'galle'];
     } catch (e) {
       return ['sigiriya', 'ella', 'galle'];
     }

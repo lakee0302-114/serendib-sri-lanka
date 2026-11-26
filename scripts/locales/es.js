@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['es'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Veinte paisajes',
+      titleStart: 'Paisajes',
       titleEm: 'imprescindibles.',
       subcopy: 'Toca foto o título para ver horarios, comida o añadir a tu ruta.',
       filters: {
-        all: 'Todos (20)',
+        all: 'Todos (19)',
         cultural: 'Cultura',
         highlands: 'Montañas',
         south: 'Sur',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['es'] = {
         "seafood": "Marisco fresco",
         "cafe": "Cafés y Veg"
       },
-      "filterAll": "Todos (20)",
+      "filterAll": "Todos (19)",
       "routeOrderHeading": "Visitas, gastronomía y traslados",
       "seeLabel": "Visitar",
       "eatLabel": "Comer",
@@ -311,7 +311,7 @@ window.SERENDIB_LOCALES['es'] = {
       highlights: [
         'Subir a Pidurangala a las 05:45 para el amanecer frente a Sigiriya.',
         'Recorrer los jardines de agua antes de las 09:00.',
-        'Pasear en bici por las riberas de Minneriya al atardecer.'
+        'Pasear en bici por las riberas de Kandalama al atardecer.'
       ],
       culinaryNote: 'Arroz rojo en olla de barro con curry de raíz de loto.',
       etiquette: 'Cubrir hombros y rodillas en el templo de Pidurangala.'
@@ -484,7 +484,6 @@ window.SERENDIB_LOCALES['es'] = {
       culinaryNote: 'Cangrejo a la pimienta negra o kottu caliente de Pettah.', etiquette: 'Usar tuk-tuks con taxímetro e hidratarse por la tarde.'
     },
     'sri-pada': { name: 'Sri Pada (Pico de Adán)', region: 'Montañas', tagline: 'Ascenso nocturno con faroles y sombra triangular al alba', elevation: '2.243 m', driveFromColombo: '4h 15m', bestTime: 'Dic–May', daylightWindow: '05:30 – 07:30', summary: 'La montaña sagrada más venerada se sube antes del amanecer por senderos iluminados.', highlights: ['Empezar en Nallathanniya a las 02:00 con pausas de té caliente.', 'Contemplar la sombra piramidal perfecta sobre el mar de nubes.', 'Tocar la campana sagrada de la cima junto a peregrinos locales.'], culinaryNote: 'Té especiado y vadais crujientes en puestos nocturnos.', etiquette: 'Llevar ropa de abrigo para los 8°C de la cumbre.' },
-    minneriya: { name: 'Gran Reunión de Minneriya', region: 'Fauna', tagline: 'Cientos de elefantes asiáticos junto al antiguo embalse', elevation: '110 m', driveFromColombo: '4h 30m', bestTime: 'Jul–Oct', daylightWindow: '15:00 – 18:15', summary: 'En la estación seca, enormes manadas acuden a pastar a orillas del gran lago.', highlights: ['Observar decenas de familias de elefantes tras las 16:00.', 'Combinar perfectamente con la subida matinal a Sigiriya.', 'Ver pelícanos y cigüeñas junto al agua tranquila.'], culinaryNote: 'Coco rey fresco y mazorcas asadas camino a Habarana.', etiquette: 'Elegir vehículos tranquilos que no bloqueen el paso de las crías.' },
     wilpattu: { name: 'Parque Nacional de Wilpattu', region: 'Fauna', tagline: 'Lagunas de arena en la selva, leopardos y osos perezosos', elevation: '65 m', driveFromColombo: '3h 45m', bestTime: 'Feb–Oct', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'El parque más extenso de la isla, célebre por sus rutas silenciosas y lagos naturales villu.', highlights: ['Rastrear leopardos de Ceilán por pistas arenosas sombreadas.', 'Descubrir los lagos villu rodeados de ciervos y aves.', 'Avistar osos perezosos entre mayo y julio bajo árboles en flor.'], culinaryNote: 'Curry de pescado de lago en olla de barro y arroz rojo.', etiquette: 'Mantener absoluto silencio durante los avistamientos de fauna.' },
     knuckles: { name: 'Cordillera de los Knuckles', region: 'Montañas', tagline: 'Cumbres brumosas UNESCO y aldeas entre cardamomo', elevation: '1.863 m', driveFromColombo: '4h 30m', bestTime: 'Feb–May · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Macizo montañoso de cinco picos con terrazas de arroz, cascadas y bosque nuboso.', highlights: ['Caminar hasta Mini World’s End sobre el valle de Meemure.', 'Refrescarse en la cascada Sera Ella tras cruzar cardamomos.', 'Observar especies endémicas en senderos cubiertos de musgo.'], culinaryNote: 'Dulces de mijo con miel de palma y curries caseros de montaña.', etiquette: 'Contratar guía acreditado y usar calcetines antissanguijuelas.' }
   },
@@ -495,7 +494,7 @@ window.SERENDIB_LOCALES['es'] = {
     APR: { short: 'ABR', fullName: 'Abril', headline: 'Año Nuevo y Colinas en Flor', summary: 'Celebraciones rurales y buen mar antes del cambio de mayo.', festival: 'Año Nuevo Avurudu / Puthandu (13–14 abr.).', verdicts: { south: { status: 'Cálido', note: 'Buen baño hasta el cambio de fin de mes.' }, highlands: { status: 'Florido', note: 'Laderas vivas con lluvias de tarde.' }, cultural: { status: 'Festivo', note: 'Mañanas luminosas y hospitalidad local.' }, northeast: { status: 'Óptimo', note: 'Playas del este y arrecifes limpios.' } } },
     MAY: { short: 'MAY', fullName: 'Mayo', headline: 'Abre la Costa Este; Lluvias al Sur', summary: 'Llega el monzón del suroeste mientras Trincomalee brilla.', festival: 'Luna llena de Vesak (faroles).', verdicts: { south: { status: 'Monzón', note: 'Mar agitado; tarifas tranquilas en villas.' }, highlands: { status: 'Bruma', note: 'Mañanas claras, lluvias por la tarde.' }, cultural: { status: 'Seco', note: 'Sigiriya y Polonnaruwa permanecen secos.' }, northeast: { status: 'Sol Pleno', note: 'Mar plano y surf en Arugam Bay.' } } },
     JUN: { short: 'JUN', fullName: 'Junio', headline: 'Olas en Arugam y Este Despejado', summary: 'Cielos secos al este y elefantes rumbo a los embalses.', festival: 'Peregrinación de Poson Poya.', verdicts: { south: { status: 'Ventoso', note: 'Evitar baño en el sur; viajar al este.' }, highlands: { status: 'Fresco', note: 'Ella mucho más seca que el oeste.' }, cultural: { status: 'Seco', note: 'Ruinas soleadas y buen safari.' }, northeast: { status: 'Cima Este', note: 'Baño calmo en Nilaveli y surf en Arugam.' } } },
-    JUL: { short: 'JUL', fullName: 'Julio', headline: 'Gran Reunión de Elefantes y Sol Este', summary: 'Cientos de elefantes en Minneriya bajo cielo claro.', festival: 'Inicio de festejos de Esala.', verdicts: { south: { status: 'Mixto', note: 'Claros entre chubascos marinos rápidos.' }, highlands: { status: 'Despejado', note: 'Ideal para senderos en Ella y Knuckles.' }, cultural: { status: 'Gran Safari', note: 'Grandes manadas junto a los lagos.' }, northeast: { status: 'Sol Pleno', note: 'Excelente visibilidad en arrecifes.' } } },
+    JUL: { short: 'JUL', fullName: 'Julio', headline: 'Safaris en Zona Seca y Sol Este', summary: 'Manadas de elefantes junto a antiguos embalses bajo cielo claro.', festival: 'Inicio de festejos de Esala.', verdicts: { south: { status: 'Mixto', note: 'Claros entre chubascos marinos rápidos.' }, highlands: { status: 'Despejado', note: 'Ideal para senderos en Ella y Knuckles.' }, cultural: { status: 'Gran Safari', note: 'Grandes manadas y ruinas soleadas.' }, northeast: { status: 'Sol Pleno', note: 'Excelente visibilidad en arrecifes.' } } },
     AUG: { short: 'AGO', fullName: 'Agosto', headline: 'Esala Perahera de Kandy y Nallur', summary: 'Grandes festivales tradicionales con sol en norte y centro.', festival: 'Esala Perahera Kandy · Nallur Jaffna.', verdicts: { south: { status: 'Mejora', note: 'Ratos secos soleados en Galle Fort.' }, highlands: { status: 'Festivo', note: 'Noches frescas y desfiles con antorchas.' }, cultural: { status: 'Seco', note: 'Escalada clara en Sigiriya y safaris.' }, northeast: { status: 'Pleno', note: 'Festival en Jaffna y bahías calmas.' } } },
     SEP: { short: 'SEP', fullName: 'Septiembre', headline: 'Equilibrio Suave — Este y Norte', summary: 'Poca gente, buenas olas al este y parques despejados.', festival: 'Ceremonias de Binara Poya.', verdicts: { south: { status: 'Variable', note: 'Mañanas claras con brisa oceánica.' }, highlands: { status: 'Claro', note: 'Vistas nítidas desde el tren de té.' }, cultural: { status: 'Tranquilo', note: 'Monumentos sin multitudes y clima seco.' }, northeast: { status: 'Recta Final', note: 'Últimas semanas de mar tranquilo.' } } },
     OCT: { short: 'OCT', fullName: 'Octubre', headline: 'Transición Verde entre Monzones', summary: 'Mañanas doradas seguidas de lluvias tropicales breves.', festival: 'Deepavali (fiesta de luces).', verdicts: { south: { status: 'Lluvias', note: 'Calma ideal para retiros Ayurveda.' }, highlands: { status: 'Cascadas', note: 'Valles muy verdes entre neblina.' }, cultural: { status: 'Sol Matinal', note: 'Visitar temprano antes de las 14:00.' }, northeast: { status: 'Cambio', note: 'Empiezan vientos hacia el este.' } } },
@@ -539,13 +538,13 @@ window.SERENDIB_LOCALES['es'] = {
       duration: '10D / 09N',
       season: 'May–Sep · Sol Seguro',
       pace: 'Arrecife y Cultura',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Minneriya → Sigiriya',
-      summary: 'Sigue el sol estival entre templos tamiles, arrecifes y manadas de elefantes.',
+      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      summary: 'Sigue el sol estival entre templos tamiles, arrecifes y ciudades reales.',
       days: [
         { day: 'Día 1–2', stop: 'Anuradhapura y Wilpattu', note: 'Estupas blancas y safaris entre lagunas.' },
         { day: 'Día 3–5', stop: 'Jaffna y Delft', note: 'Palmares, templo Nallur y ponis salvajes.' },
         { day: 'Día 6–8', stop: 'Trincomalee', note: 'Snorkel en Pigeon Island y barcas al alba.' },
-        { day: 'Día 9–10', stop: 'Minneriya y Sigiriya', note: 'Cientos de elefantes reunidos junto al lago.' }
+        { day: 'Día 9–10', stop: 'Polonnaruwa y Sigiriya', note: 'Bici junto al lago antes de subir a Sigiriya.' }
       ]
     }
   },

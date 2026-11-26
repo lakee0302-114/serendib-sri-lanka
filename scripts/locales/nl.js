@@ -69,11 +69,11 @@ window.SERENDIB_LOCALES['nl'] = {
     },
     atlas: {
       eyebrow: '02 / Atlas',
-      titleStart: 'Twintig toplocaties',
+      titleStart: 'Toplocaties',
       titleEm: 'op het eiland.',
       subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (20)',
+        all: 'Alles (19)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['nl'] = {
         "seafood": "Verse vis",
         "cafe": "Cafés & Vega"
       },
-      "filterAll": "Alles (20)",
+      "filterAll": "Alles (19)",
       "routeOrderHeading": "Plekken, eten & vervoer",
       "seeLabel": "Zien",
       "eatLabel": "Eten",
@@ -302,7 +302,7 @@ window.SERENDIB_LOCALES['nl'] = {
     sigiriya: {
       name: 'Sigiriya & Pidurangala', region: 'Cultuur', tagline: 'Vijfde-eeuwse rotsburcht boven koninklijke tuinen', elevation: '349 m', driveFromColombo: '4u 15', bestTime: 'Jan–Apr · Jul–Sep', daylightWindow: '06:00 – 08:30',
       summary: 'Koning Kashyapa’s rotspaleis troont op een vulkaanrots omringd door watertuinen.',
-      highlights: ['Beklim Pidurangala om 05:45 voor zonsopgang boven Sigiriya.', 'Bezoek Spiegelwand en fonteinen vóór 09:00.', 'Fiets langs dijkwegen bij Minneriya bij schemer.'],
+      highlights: ['Beklim Pidurangala om 05:45 voor zonsopgang boven Sigiriya.', 'Bezoek Spiegelwand en fonteinen vóór 09:00.', 'Fiets langs dijkwegen bij Kandalama bij schemer.'],
       culinaryNote: 'Rode rijst uit kleipot met lotuswortelcurry en kokossambol.', etiquette: 'Bedek schouders en knieën bij de grottempel van Pidurangala.'
     },
     ella: {
@@ -396,7 +396,6 @@ window.SERENDIB_LOCALES['nl'] = {
       culinaryNote: 'Zwartpeper-krab of pittige Pettah kottu van de plaat.', etiquette: 'Gebruik tuk-tuks met meter en drink goed water.'
     },
     'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hooglanden', tagline: 'Heilige nachtbeklimming langs lantaarns & driehoekige zonsopgang', elevation: '2.243 m', driveFromColombo: '4u 15', bestTime: 'Dec–Mei', daylightWindow: '05:30 – 07:30', summary: 'Iconische heilige bergtop die voor zonsopgang over verlichte trappen wordt beklommen.', highlights: ['Start rond 02:00 uur vanuit Nallathanniya met warme theepauzes.', 'Zie de beroemde scherpe bergschaduw over het wolkendek.', 'Luid de tempelbel op de top naast pelgrims uit het hele land.'], culinaryNote: 'Warme gemberthee en krokante linzenbeignets onderweg.', etiquette: 'Neem een warme jas mee voor de 8°C koude ochtendwind.' },
-    minneriya: { name: 'Minneriya Olifantenverzameling', region: 'Wildernis', tagline: 'Honderden wilde olifanten langs het oude stuwmeer', elevation: '110 m', driveFromColombo: '4u 30', bestTime: 'Jul–Okt', daylightWindow: '15:00 – 18:15', summary: 'In het droge seizoen komen hier reusachtige kuddes wilde olifanten bijeen aan de oever.', highlights: ['Zie tientallen kuddes samen grazen aan het water na 16:00 uur.', 'Ideaal te combineren met een ochtendbeklimming van Sigiriya.', 'Spot pelikanen en nimmersatten langs het groene meer.'], culinaryNote: 'Koele koningskokosnoot en geroosterde mais bij Habarana.', etiquette: 'Kies een rustige safarichauffeur die ruim afstand houdt.' },
     wilpattu: { name: 'Wilpattu Nationaal Park', region: 'Wildernis', tagline: 'Stille zandmeren in de jungle, luipaarden & lippenberen', elevation: '65 m', driveFromColombo: '3u 45', bestTime: 'Feb–Okt', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Het grootste natuurpark van Sri Lanka met natuurlijke villu-meren en kalme bospaden.', highlights: ['Speur rustig naar luipaarden op schaduwrijke zandwegen.', 'Bezoek stille villu-meren vol herten, krokodillen en watervogels.', 'Spot zeldzame lippenberen van mei tot juli onder bloeiende bomen.'], culinaryNote: 'In kleipot bereide meervis-curry bij Nochchiyagama.', etiquette: 'Blijf stil zitten zodra wilde dieren dicht bij de weg lopen.' },
     knuckles: { name: 'Knuckles-gebergte', region: 'Hooglanden', tagline: 'UNESCO-neveltoppen & verborgen kardemomvalleien', elevation: '1.863 m', driveFromColombo: '4u 30', bestTime: 'Feb–Mei · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Ruig vijf-toppige bergketen vol rijstterrassen, watervallen en nevelbossen.', highlights: ['Wandel naar Mini World’s End met uitzicht over de Meemure-vallei.', 'Koel af bij de Sera Ella-waterval langs schaduwrijke bergpaden.', 'Zie endemische boomhagedissen en langoeren in het mistige bos.'], culinaryNote: 'Dorpstraktatie van gierstkoekjes met palmsiroop en curries.', etiquette: 'Loop met een erkende berggids en draag bloedzuigersokken.' }
   },
@@ -407,7 +406,7 @@ window.SERENDIB_LOCALES['nl'] = {
     APR: { short: 'APR', fullName: 'April', headline: 'Nieuwjaarsfeest & Groene Heuvels', summary: 'Dorpsfeesten en kalme zee vóór de weersomslag in mei.', festival: 'Singalees & Tamil Nieuwjaar (13–14 apr).', verdicts: { south: { status: 'Warm', note: 'Goed zwemmen tot eind april.' }, highlands: { status: 'Bloeiend', note: 'Groene valleien met korte middagbuien.' }, cultural: { status: 'Feestelijk', note: 'Warme ochtenden en dorpsgastvrijheid.' }, northeast: { status: 'Topperiode', note: 'Ooststranden en riffen zijn glashelder.' } } },
     MAY: { short: 'MEI', fullName: 'Mei', headline: 'Oostkust Opent; Zuidwest krijgt Regen', summary: 'Zuidwestmoesson brengt regen terwijl Trincomalee straalt.', festival: 'Vesak volle maan lantaarnfeest.', verdicts: { south: { status: 'Moesson', note: 'Hoge golven en buien; rustige resorts.' }, highlands: { status: 'Mistig', note: 'Heldere ochtenden, regen in de middag.' }, cultural: { status: 'Droog', note: 'Sigiriya en Polonnaruwa blijven droog.' }, northeast: { status: 'Zonnig', note: 'Kalme oostzee en surfstart in Arugam.' } } },
     JUN: { short: 'JUN', fullName: 'Juni', headline: 'Surfen in Arugam & Zonnig Oosten', summary: 'Droge zon aan de oostkust en olifanten naar de meren.', festival: 'Poson Poya bedevaart naar Mihintale.', verdicts: { south: { status: 'Winderig', note: 'Niet zwemmen in het zuiden; kies oost.' }, highlands: { status: 'Bries', note: 'Ella veel droger dan westelijke heuvels.' }, cultural: { status: 'Droog', note: 'Zonnige ruïnes en goede safari’s.' }, northeast: { status: 'Topseizoen', note: 'Vlak Nilaveli en topsurf in Arugam.' } } },
-    JUL: { short: 'JUL', fullName: 'Juli', headline: 'De Grote Olifantenbijeenkomst & Oostzon', summary: 'Honderden olifanten bij Minneriya onder een stralende lucht.', festival: 'Voorbereidingen Esala-optochten.', verdicts: { south: { status: 'Wisselend', note: 'Zonmomenten tussen korte buien door.' }, highlands: { status: 'Helder Oost', note: 'Fijn wandelweer rond Ella en Knuckles.' }, cultural: { status: 'Topsafari', note: 'Grote kuddes aan het Minneriya-meer.' }, northeast: { status: 'Zon', note: 'Beste zicht voor snorkelen op riffen.' } } },
+    JUL: { short: 'JUL', fullName: 'Juli', headline: 'Safari in de Droge Zone & Oostzon', summary: 'Wilde olifanten langs oude meren onder een stralende oostlucht.', festival: 'Voorbereidingen Esala-optochten.', verdicts: { south: { status: 'Wisselend', note: 'Zonmomenten tussen korte buien door.' }, highlands: { status: 'Helder Oost', note: 'Fijn wandelweer rond Ella en Knuckles.' }, cultural: { status: 'Topsafari', note: 'Grote kuddes langs eeuwenoude meren.' }, northeast: { status: 'Zon', note: 'Beste zicht voor snorkelen op riffen.' } } },
     AUG: { short: 'AUG', fullName: 'Augustus', headline: 'Kandy Esala Perahera & Nallur Festival', summary: 'Grote cultuurfeesten onder droge zomerse luchten.', festival: 'Esala Perahera Kandy · Nallur Jaffna.', verdicts: { south: { status: 'Beter', note: 'Droge periodes rond Galle Fort.' }, highlands: { status: 'Feestelijk', note: 'Koele avonden en optochten in Kandy.' }, cultural: { status: 'Droog', note: 'Heldere beklimming van Sigiriya.' }, northeast: { status: 'Hoogseizoen', note: 'Tempelfeest in Jaffna & kalme baaien.' } } },
     SEP: { short: 'SEP', fullName: 'September', headline: 'Rustige Tussenperiode — Oost & Noord', summary: 'Minder bezoekers, goede golven en open wildparken.', festival: 'Binara Poya tempelvieringen.', verdicts: { south: { status: 'Wisselend', note: 'Zonnige ochtenden met zeebries.' }, highlands: { status: 'Helder', note: 'Strak uitzicht vanuit de bergtrein.' }, cultural: { status: 'Rustig', note: 'Kalm en droog voor oude steden.' }, northeast: { status: 'Laatste Piek', note: 'Laatste weken van kalme ooststranden.' } } },
     OCT: { short: 'OKT', fullName: 'Oktober', headline: 'Groene Tussenmoesson', summary: 'Gouden ochtenden gevolgd door verfrissende middagbuien.', festival: 'Deepavali lichtjesfeest.', verdicts: { south: { status: 'Buien', note: 'Rust ideaal voor Ayurveda-verblijven.' }, highlands: { status: 'Watervallen', note: 'Smaragdgroene dalen tussen nevel.' }, cultural: { status: 'Ochtendzon', note: 'Vroeg op pad vóór middagbuien.' }, northeast: { status: 'Omslag', note: 'Stroming keert richting noordoostmoesson.' } } },
@@ -436,13 +435,13 @@ window.SERENDIB_LOCALES['nl'] = {
       ]
     },
     'east-north-sun': {
-      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Wilpattu → Jaffna → Trinco → Minneriya → Sigiriya',
-      summary: 'Volgt zomerzon langs Tamil-tempels, koraalriffen en olifantenkuddes.',
+      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      summary: 'Volgt zomerzon langs Tamil-tempels, koraalriffen en koningssteden.',
       days: [
         { day: 'Dag 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Witte stoepa’s en luipaardsafari’s.' },
         { day: 'Dag 3–5', stop: 'Jaffna & Delft', note: 'Palmtuinen, Nallur-tempel en wilde pony’s.' },
         { day: 'Dag 6–8', stop: 'Trincomalee', note: 'Snorkelen bij Pigeon Island en Nilaveli.' },
-        { day: 'Dag 9–10', stop: 'Minneriya & Sigiriya', note: 'Honderden olifanten rond eeuwenoude meren.' }
+        { day: 'Dag 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Fietsen langs oude meren voor de beklimming van Sigiriya.' }
       ]
     }
   },

@@ -70,10 +70,10 @@ window.SERENDIB_LOCALES['ko'] = {
     atlas: {
       eyebrow: '02 / 아틀라스',
       titleStart: '섬을 대표하는',
-      titleEm: '스무 풍경.',
+      titleEm: '주요 명소.',
       subcopy: '장소를 눌러 최적의 빛 시간, 현지 음식, 루트 저장을 확인하세요.',
       filters: {
-        all: '전체 (20)',
+        all: '전체 (19)',
         cultural: '문화유적',
         highlands: '고원',
         south: '남부',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['ko'] = {
         "seafood": "해산물 요리",
         "cafe": "카페·채식"
       },
-      "filterAll": "전체 (20)",
+      "filterAll": "전체 (19)",
       "routeOrderHeading": "명소·맛집·이동 경로",
       "seeLabel": "관광",
       "eatLabel": "맛집",
@@ -299,7 +299,7 @@ window.SERENDIB_LOCALES['ko'] = {
     }
   },
   destinations: {
-    sigiriya: { name: '시기리야 & 피두랑갈라', region: '문화유적', tagline: '연꽃 연못 위로 솟은 5세기 바위 요새', elevation: '349m', driveFromColombo: '차량 4시간 15분', bestTime: '1–4월 · 7–9월', daylightWindow: '06:00 – 08:30', summary: '카샤파 왕의 바위 궁전으로, 비가 오면 흐르는 고대 분수 정원에 둘러싸여 있습니다.', highlights: ['05:45 피두랑갈라에 올라 해 뜨는 시기리야 바위 감상.', '단체가 오기 전 09:00 전에 거울 벽화와 연못 산책.', '해 질 녘 민네리야·칸달라마 저수지 둑길 자전거 타기.'], culinaryNote: '질그릇 붉은 쌀밥과 연근 커리, 코코넛 삼볼.', etiquette: '피두랑갈라 동굴 사원에서는 어깨와 무릎을 가리세요.' },
+    sigiriya: { name: '시기리야 & 피두랑갈라', region: '문화유적', tagline: '연꽃 연못 위로 솟은 5세기 바위 요새', elevation: '349m', driveFromColombo: '차량 4시간 15분', bestTime: '1–4월 · 7–9월', daylightWindow: '06:00 – 08:30', summary: '카샤파 왕의 바위 궁전으로, 비가 오면 흐르는 고대 분수 정원에 둘러싸여 있습니다.', highlights: ['05:45 피두랑갈라에 올라 해 뜨는 시기리야 바위 감상.', '단체가 오기 전 09:00 전에 거울 벽화와 연못 산책.', '해 질 녘 칸달라마 저수지 둑길 자전거 타기.'], culinaryNote: '질그릇 붉은 쌀밥과 연근 커리, 코코넛 삼볼.', etiquette: '피두랑갈라 동굴 사원에서는 어깨와 무릎을 가리세요.' },
     ella: { name: '엘라 & 데모다라', region: '고원', tagline: '아홉 아치 돌다리와 구름 낀 차밭 철길', elevation: '1,041m', driveFromColombo: '차 5시간 / 기차 6시간', bestTime: '1–5월 · 8–9월', daylightWindow: '06:30 – 10:00', summary: '남부 평원이 내려다보이는 고개, 파란 산악 열차와 녹차 능선이 어우러집니다.', highlights: ['콜롬보 전 구간 대신 나누오야~엘라 3시간 절경 구간만 탑승.', '데모다라 차밭 길을 걸어 나인 아치 브리지 도착.', '반다라웰라 위 한적한 페코 트레일 산책.'], culinaryNote: '화덕 구이 쿠라칸 로티와 달콤한 시니 삼볼.', etiquette: '터널 근처에서는 열린 기차 문 밖으로 몸을 내밀지 마세요.' },
     galle: { name: '갈레 요새 & 우나와투나', region: '남부 해안', tagline: '노을빛에 물드는 산호석 성벽과 등대', elevation: '해수면', driveFromColombo: '고속도로 2시간', bestTime: '12–4월', daylightWindow: '16:45 – 18:30', summary: '네덜란드식 저택과 서점, 모스크가 어우러진 살아있는 해변 성곽 도시.', highlights: ['일몰 때 플래그 록부터 등대까지 성벽 위를 시계방향으로 산책.', '페들러 거리 골목의 도자기와 핸드룸 린넨 공방 구경.', '이른 아침 동쪽 아항가마·하바라두와 산호 바다 방문.'], culinaryNote: '검은 타마린드 암불 티얄 생선 커리와 에그 호퍼.', etiquette: '실제 주민 주거지이므로 해변 밖에서는 단정한 복장 착용.' },
     yala: { name: '얄라 & 쿠마나 국립공원', region: '야생', tagline: '화강암 바위숲을 누비는 야생 실론 표범', elevation: '45m', driveFromColombo: '차량 4시간 45분', bestTime: '2–7월', daylightWindow: '05:45–09:30 / 15:30', summary: '건조 관목림과 해안 사구가 만나는 곳으로 야생 표범과 코끼리가 살아갑니다.', highlights: ['지프 혼잡을 피하려면 얄라 블록 V 또는 쿠마나 선택.', '새벽 개장 직후 전문 가이드와 프라이빗 사파리.', '파타난갈라 사구 뒤 텐트 캠프에서 파도 소리와 숙박.'], culinaryNote: '질그릇 물소 요거트(미키리)와 야생 벌꿀.', etiquette: '동물과 30m 거리 유지, 시동 끄기, 플래시 금지.' },
@@ -316,7 +316,6 @@ window.SERENDIB_LOCALES['ko'] = {
     'arugam-bay': { name: '아루감 베이 & 파시쿠다', region: '북·동부', tagline: '인도양의 명품 포인트 브레이크와 잔잔한 얕은 라군', elevation: '해수면', driveFromColombo: '차량 6시간 30분', bestTime: '5–9월', daylightWindow: '06:00 새벽 서핑', summary: '남서부에 비가 내리는 계절에도 맑은 파도와 고요한 라군을 선물하는 동부 해안.', highlights: ['메인 포인트와 위스키 포인트에서 이어지는 매끄러운 라이트 핸드 파도 서핑.', '파시쿠다의 허리 깊이 맑은 산호초 라군에서 여유로운 수영.', '해 뜰 녘 물총새를 따라 고요한 포투빌 맹그로브 카약 투어.'], culinaryNote: '구운 고수를 넣고 끓인 동해안 스타일 생선 커리와 라이스.', etiquette: '해변 밖 마을 골목에서는 가벼운 단정한 복장으로 현지 문화를 존중해 주세요.' },
     colombo: { name: '콜롬보 & 갈 페이스', region: '남·서부', tagline: '고풍스러운 아치 건축, 페타 향신료 골목과 바다 노을', elevation: '해수면', driveFromColombo: '관문 도시', bestTime: '12–4월', daylightWindow: '17:00 – 19:00', summary: '식민지 시대 박물관과 붉은 모스크, 해변 산책로가 공존하는 활기찬 관문 도시.', highlights: ['붉고 흰 줄무늬의 자미 울 알파르 모스크와 페타 시장 골목 탐험.', '콜롬보 국립 박물관에서 스리랑카 왕실 유물과 예술 감상.', '해질녘 갈 페이스 그린 산책로에서 바삭한 새우 와데이 맛보기.'], culinaryNote: '블랙 페퍼 크랩 요리 또는 페타 야시장의 매콤한 코투 로티.', etiquette: '습한 오후에는 충분히 수분을 섭취하고 툭툭 이용 시 미터기 요금을 확인하세요.' },
     'sri-pada': { name: '스리 파다 (아담스 피크)', region: '고원지대', tagline: '새벽 등불 산행과 구름 위 삼각형 그림자', elevation: '2,243m', driveFromColombo: '차량 4시간 15분', bestTime: '12–5월 (순례 시즌)', daylightWindow: '05:30 – 07:30', summary: '불빛이 이어진 계단을 따라 새벽 전에 올라 일출을 맞이하는 신성한 원뿔형 영산.', highlights: ['오전 2시 날라타니야에서 출발해 따뜻한 차를 마시며 등반.', '아침 안개 위로 선명히 드리우는 산의 삼각 그림자 감상.', '정상 사원에서 현지 순례자들과 함께 종을 울려 보기.'], culinaryNote: '산길 찻집에서 마시는 뜨거운 생강차와 바삭한 와다이.', etiquette: '정상 일출 무렵 기온이 8°C까지 떨어지므로 따뜻한 겉옷을 챙기세요.' },
-    minneriya: { name: '민네리야 코끼리 대이동', region: '야생동물', tagline: '고대 저수지 풀밭에 모이는 수백 마리 야생 코끼리', elevation: '110m', driveFromColombo: '차량 4시간 30분', bestTime: '7–10월 (건기 성수기)', daylightWindow: '15:00 – 18:15', summary: '건기에 드러난 호숫가 초원으로 아시아 최대 규모의 야생 코끼리 무리가 모여듭니다.', highlights: ['오후 4시 이후 호숫가로 모여드는 수십 가족의 코끼리 떼 관찰.', '오전 시기리야 등반과 오후 사파리를 하루에 매끄럽게 연계.', '저수지 둑 주변 펠리컨과 황새, 마카크 원숭이 포착.'], culinaryNote: '하바라나 길가의 시원한 킹 코코넛과 구운 옥수수.', etiquette: '아기 코끼리 무리의 길을 막지 않는 차분한 사파리 차량을 이용하세요.' },
     wilpattu: { name: '윌파투 국립공원', region: '야생동물', tagline: '정글 속 고요한 모래 호수, 표범과 느림보곰의 낙원', elevation: '65m', driveFromColombo: '차량 3시간 45분', bestTime: '2–10월', daylightWindow: '06:00 – 09:30 & 15:30', summary: '자연 모래 호수(윌루)와 한적한 숲길이 어우러진 스리랑카 최대 면적의 야생 보호구.', highlights: ['그늘진 숲속 모래 트랙을 거니는 실론 표범 탐사.', '사슴과 악어가 쉬는 평온한 윌루 호수 풍경 감상.', '5~7월 열매 철을 맞아 희귀 느림보곰 발견 기회.'], culinaryNote: '노치야가마 인근 토기 솥에 끓인 민물고기 커리와 홍미밥.', etiquette: '야생동물 포착 시 차량 내에서 조용히 속삭이며 거리를 유지하세요.' },
     knuckles: { name: '너클즈 산맥', region: '고원지대', tagline: '유네스코 안개 봉우리와 카다멈 계곡 트레킹', elevation: '1,863m', driveFromColombo: '차량 4시간 30분', bestTime: '2–5월 · 7–9월', daylightWindow: '07:00 – 11:00', summary: '계단식 논 마을과 폭포, 원시 운무림이 보존된 야생 다섯 봉우리 산악 지대.', highlights: ['푸른 미무레 계곡을 내려다보는 미니 세상의 끝 전망대 트레킹.', '카다멈 숲길을 지나 시원한 세라 엘라 폭포에서 휴식.', '이끼 낀 능선에서 스리랑카 고유종 도마뱀과 원숭이 관찰.'], culinaryNote: '야자 시럽을 넣은 기장 전통 떡(할라페)과 시골 채소 커리.', etiquette: '공인 산악 가이드를 동반하고 우기에는 거머리 방지 양말을 착용하세요.' }
   },
@@ -327,7 +326,7 @@ window.SERENDIB_LOCALES['ko'] = {
     APR: { short: '4월', fullName: '4월', headline: '전통 새해 축제 & 꽃 피는 산악', summary: '마을 축제와 따뜻한 바다, 5월 몬순 전환 전 시기.', festival: '신할라·타밀 설날 (4월 13–14일)', verdicts: { south: { status: '따뜻', note: '월말 파도 전까지 좋은 해수욕 시즌.' }, highlands: { status: '만개', note: '푸른 계곡과 가끔 오는 오후 소나기.' }, cultural: { status: '축제', note: '맑은 아침과 정겨운 시골 인심.' }, northeast: { status: '최적기', note: '동해안과 산호초가 유리처럼 맑아짐.' } } },
     MAY: { short: '5월', fullName: '5월', headline: '동부 해안 개장 & 남서부 몬순', summary: '남서부에 비가 내리는 사이 트링코말리가 쾌청해집니다.', festival: '웨삭 보름달 연등 축제', verdicts: { south: { status: '몬순', note: '높은 파도와 스콜; 조용한 비수기 요금.' }, highlands: { status: '안개', note: '오전엔 맑고 오후엔 소나기.' }, cultural: { status: '건조', note: '시기리야·폴론나루와는 비교적 건조.' }, northeast: { status: '쾌청', note: '잔잔한 동해와 아루감 서핑 개막.' } } },
     JUN: { short: '6월', fullName: '6월', headline: '아루감 베이 서핑 & 동부 여름 성수기', summary: '맑은 북동부 하늘과 저수지로 모이는 코끼리 떼.', festival: '미힌탈레 포손 포야 순례', verdicts: { south: { status: '강풍', note: '남부 수영 비추천; 동해안 여행 적기.' }, highlands: { status: '선선', note: '엘라 쪽은 서부 능선보다 훨씬 건조.' }, cultural: { status: '건조·바람', note: '햇살 좋은 유적과 사파리.' }, northeast: { status: '전성기', note: '고요한 닐라벨리와 최고 아루감 파도.' } } },
-    JUL: { short: '7월', fullName: '7월', headline: '코끼리 대집결과 동해안의 햇살', summary: '민네리야에 수백 마리 코끼리가 모이는 맑은 여름.', festival: '캔디·카타라가마 에살라 축제 시작', verdicts: { south: { status: '변화', note: '짧은 스콜 사이로 햇살이 비침.' }, highlands: { status: '동쪽 맑음', note: '엘라와 너클스 산맥 하이킹 호기.' }, cultural: { status: '특급 사파리', note: '호숫가 거대 코끼리 무리 장관.' }, northeast: { status: '최적기', note: '스노클링 시야 최상, 잔잔한 라군.' } } },
+    JUL: { short: '7월', fullName: '7월', headline: '코끼리 대집결과 동해안의 햇살', summary: '건조 지대 호숫가에 모이는 야생동물과 맑은 동부 여름 하늘.', festival: '캔디·카타라가마 에살라 축제 시작', verdicts: { south: { status: '변화', note: '짧은 스콜 사이로 햇살이 비침.' }, highlands: { status: '동쪽 맑음', note: '엘라와 너클스 산맥 하이킹 호기.' }, cultural: { status: '특급 사파리', note: '호숫가 거대 코끼리 무리 장관.' }, northeast: { status: '최적기', note: '스노클링 시야 최상, 잔잔한 라군.' } } },
     AUG: { short: '8월', fullName: '8월', headline: '캔디 에살라 페라헤라 & 날루르 축제', summary: '스리랑카 최대 문화 축제와 북부·중부의 맑은 하늘.', festival: '캔디 에살라 페라헤라 · 자프나 날루르', verdicts: { south: { status: '맑은 틈', note: '갈레 주변으로 맑은 날이 늘어남.' }, highlands: { status: '축제', note: '시원한 밤과 웅장한 캔디 야간 행렬.' }, cultural: { status: '건조', note: '깨끗한 시기리야 전망과 사파리.' }, northeast: { status: '전성기', note: '자프나 수레 축제와 고요한 트링코.' } } },
     SEP: { short: '9월', fullName: '9월', headline: '한적한 어깨 시즌 — 동부와 문화 지대', summary: '여행객이 줄고 동부 파도와 국립공원 시야가 깨끗합니다.', festival: '비나라 포야 사원 의식', verdicts: { south: { status: '유동적', note: '맑은 아침과 가벼운 해풍.' }, highlands: { status: '선명', note: '기차 창밖 초록 차밭 전망 최고.' }, cultural: { status: '여유·건조', note: '한적하게 고대 도시 감상 가능.' }, northeast: { status: '막바지 성수기', note: '잔잔한 동부 해변의 마지막 주간.' } } },
     OCT: { short: '10월', fullName: '10월', headline: '초록빛 간몬순 전환기', summary: '화창한 아침 뒤 오후에 짧은 열대 소나기가 내립니다.', festival: '디파발리 등불 축제', verdicts: { south: { status: '소나기', note: '조용한 아유르베다 휴양에 이상적.' }, highlands: { status: '폭포', note: '짙은 녹음과 웅장한 산속 폭포.' }, cultural: { status: '오전 맑음', note: '오후 2시 이전 아침 일정 권장.' }, northeast: { status: '전환기', note: '북동 몬순으로 바람 방향 전환.' } } },
@@ -337,7 +336,7 @@ window.SERENDIB_LOCALES['ko'] = {
   itineraries: {
     'classic-arc': { number: '루트 01', title: '클래식 세렌딥 일주', duration: '09일 / 08박', season: '12–4월 · 첫 방문 추천', pace: '기차 + 전용 기사', routeLine: '시기리야 → 캔디 → 하튼 → 엘라 → 갈레 요새', summary: '바위 요새, 차밭 산악 열차, 남부 해안 요새를 여유롭게 잇습니다.', days: [{ day: '1–2일차', stop: '시기리야 & 폴론나루와', note: '피두랑갈라 일출과 고대 도시 자전거 일주.' }, { day: '3–4일차', stop: '캔디', note: '불치사 저녁 예불과 마탈레 향신료 정원.' }, { day: '5–6일차', stop: '하튼 & 엘라', note: '차 농장 숙박 및 나인 아치 3시간 기차.' }, { day: '7–9일차', stop: '갈레 요새', note: '해 질 녘 성벽 산책과 산호초 해변.' }] },
     'wild-south': { number: '루트 02', title: '표범, 홍차 & 남부 해변', duration: '11일 / 10박', season: '1–4월 · 디자인 & 야생', pace: '슬로우 럭셔리', routeLine: '콜롬보 → 하튼 → 얄라 → 탕갈레 → 갈레', summary: '바와의 건축 미학과 산악 트레킹, 프라이빗 사파리, 한적한 만을 엮습니다.', days: [{ day: '1일차', stop: '콜롬보', note: '제프리 바와 자택 넘버 11과 갈레 페이스 석양.' }, { day: '2–4일차', stop: '하튼', note: '백 년 된 차 농장 방갈로 사이의 능선 걷기.' }, { day: '5–7일차', stop: '얄라 & 쿠마나', note: '새벽 전용 4WD로 야생 표범 추적.' }, { day: '8–11일차', stop: '탕갈레 & 갈레', note: '인적 드문 해변과 고택 부티크 스테이.' }] },
-    'east-north-sun': { number: '루트 03', title: '여름 탈출: 동부와 북부', duration: '10일 / 09박', season: '5–9월 · 여름 맑음 보장', pace: '산호 & 타밀 문화', routeLine: '윌파투 → 자프나 → 트링코 → 민네리야 → 시기리야', summary: '여름에도 맑은 북부 사원과 투명한 동부 산호초, 코끼리 떼를 만납니다.', days: [{ day: '1–2일차', stop: '아누라다푸라 & 윌파투', note: '하얀 불탑과 숲속 호수 사파리.' }, { day: '3–5일차', stop: '자프나 & 델프트', note: '팔미라 야자숲, 날루르 사원, 야생 조랑말.' }, { day: '6–8일차', stop: '트링코말리', note: '피전 아일랜드 스노클링과 닐라벨리.' }, { day: '9–10일차', stop: '민네리야 & 시기리야', note: '고대 호숫가에 모인 수백 마리 야생 코끼리.' }] }
+    'east-north-sun': { number: '루트 03', title: '여름 탈출: 동부와 북부', duration: '10일 / 09박', season: '5–9월 · 여름 맑음 보장', pace: '산호 & 타밀 문화', routeLine: '윌파투 → 자프나 → 트링코 → 폴론나루와 → 시기리야', summary: '여름에도 맑은 북부 사원과 투명한 동부 산호초, 고대 왕도를 만납니다.', days: [{ day: '1–2일차', stop: '아누라다푸라 & 윌파투', note: '하얀 불탑과 숲속 호수 사파리.' }, { day: '3–5일차', stop: '자프나 & 델프트', note: '팔미라 야자숲, 날루르 사원, 야생 조랑말.' }, { day: '6–8일차', stop: '트링코말리', note: '피전 아일랜드 스노클링과 닐라벨리.' }, { day: '9–10일차', stop: '폴론나루와 & 시기리야', note: '호숫가 고대 유적 자전거 일주와 시기리야 일출 등반.' }] }
   },
   fieldNotes: [
     { question: '두 계절풍에 따라 여행 시기를 어떻게 잡나요?', answer: '12~4월은 서·남부와 산악이 맑고, 5~9월은 동해안과 북부가 쾌청합니다.' },
