@@ -484,7 +484,7 @@ window.SERENDIB_LOCALES['es'] = {
       culinaryNote: 'Cangrejo a la pimienta negra o kottu caliente de Pettah.', etiquette: 'Usar tuk-tuks con taxímetro e hidratarse por la tarde.'
     },
     'sri-pada': { name: 'Sri Pada (Pico de Adán)', region: 'Montañas', tagline: 'Ascenso nocturno con faroles y sombra triangular al alba', elevation: '2.243 m', driveFromColombo: '4h 15m', bestTime: 'Dic–May', daylightWindow: '05:30 – 07:30', summary: 'La montaña sagrada más venerada se sube antes del amanecer por senderos iluminados.', highlights: ['Empezar en Nallathanniya a las 02:00 con pausas de té caliente.', 'Contemplar la sombra piramidal perfecta sobre el mar de nubes.', 'Tocar la campana sagrada de la cima junto a peregrinos locales.'], culinaryNote: 'Té especiado y vadais crujientes en puestos nocturnos.', etiquette: 'Llevar ropa de abrigo para los 8°C de la cumbre.' },
-    wilpattu: { name: 'Parque Nacional de Wilpattu', region: 'Fauna', tagline: 'Lagunas de arena en la selva, leopardos y osos perezosos', elevation: '65 m', driveFromColombo: '3h 45m', bestTime: 'Feb–Oct', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'El parque más extenso de la isla, célebre por sus rutas silenciosas y lagos naturales villu.', highlights: ['Rastrear leopardos de Ceilán por pistas arenosas sombreadas.', 'Descubrir los lagos villu rodeados de ciervos y aves.', 'Avistar osos perezosos entre mayo y julio bajo árboles en flor.'], culinaryNote: 'Curry de pescado de lago en olla de barro y arroz rojo.', etiquette: 'Mantener absoluto silencio durante los avistamientos de fauna.' },
+    pinnawala: { name: 'Santuario de Elefantes de Pinnawala', region: 'Fauna', tagline: 'Manadas y crías de elefante bañándose en el río Maha Oya', elevation: '125 m', driveFromColombo: '2h 30m', bestTime: 'Todo el año', daylightWindow: '10:00 y 14:00 Baño', summary: 'Famoso santuario fluvial junto al río Maha Oya donde las familias de elefantes se refrescan dos veces al día.', highlights: ['Ver bañarse a decenas de elefantes en el río a las 10:00 y las 14:00.', 'Observar de cerca el cariño entre crías y madres desde terrazas sombreadas.', 'Parada ideal camino entre el aeropuerto de Colombo y las colinas de Kandy.'], culinaryNote: 'Arroz y currys tradicionales servidos en miradores sobre el río.', etiquette: 'Mantener silencio y observar sin tocar ni asustar a las crías.' },
     knuckles: { name: 'Cordillera de los Knuckles', region: 'Montañas', tagline: 'Cumbres brumosas UNESCO y aldeas entre cardamomo', elevation: '1.863 m', driveFromColombo: '4h 30m', bestTime: 'Feb–May · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Macizo montañoso de cinco picos con terrazas de arroz, cascadas y bosque nuboso.', highlights: ['Caminar hasta Mini World’s End sobre el valle de Meemure.', 'Refrescarse en la cascada Sera Ella tras cruzar cardamomos.', 'Observar especies endémicas en senderos cubiertos de musgo.'], culinaryNote: 'Dulces de mijo con miel de palma y curries caseros de montaña.', etiquette: 'Contratar guía acreditado y usar calcetines antissanguijuelas.' }
   },
   months: {
@@ -538,10 +538,10 @@ window.SERENDIB_LOCALES['es'] = {
       duration: '10D / 09N',
       season: 'May–Sep · Sol Seguro',
       pace: 'Arrecife y Cultura',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Sigue el sol estival entre templos tamiles, arrecifes y ciudades reales.',
       days: [
-        { day: 'Día 1–2', stop: 'Anuradhapura y Wilpattu', note: 'Estupas blancas y safaris entre lagunas.' },
+        { day: 'Día 1–2', stop: 'Anuradhapura y Mihintale', note: 'Estupas blancas y escalinatas sagradas de piedra.' },
         { day: 'Día 3–5', stop: 'Jaffna y Delft', note: 'Palmares, templo Nallur y ponis salvajes.' },
         { day: 'Día 6–8', stop: 'Trincomalee', note: 'Snorkel en Pigeon Island y barcas al alba.' },
         { day: 'Día 9–10', stop: 'Polonnaruwa y Sigiriya', note: 'Bici junto al lago antes de subir a Sigiriya.' }

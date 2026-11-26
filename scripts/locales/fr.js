@@ -484,7 +484,7 @@ window.SERENDIB_LOCALES['fr'] = {
       culinaryNote: 'Crabe au poivre noir ou kottu brûlant du quartier Pettah.', etiquette: 'Utiliser des tuk-tuks à compteur et rester hydraté.'
     },
     'sri-pada': { name: 'Sri Pada (Pic d’Adam)', region: 'Hauts Plateaux', tagline: 'Ascension nocturne aux lanternes et ombre sacrée à l’aube', elevation: '2 243 m', driveFromColombo: '4h 15', bestTime: 'Déc–Mai', daylightWindow: '05:30 – 07:30', summary: 'Montagne sacrée gravie de nuit sous des guirlandes lumineuses jusqu’au lever du soleil.', highlights: ['Départ à 02h00 depuis Nallathanniya entre deux tasses de thé chaud.', 'Observer l’ombre pyramidale parfaite sur la mer de nuages.', 'Sonner la cloche du sommet au milieu des pèlerins.'], culinaryNote: 'Thé au gingembre brûlant et beignets vadais le long des marches.', etiquette: 'Prévoir une couche chaude contre le vent à 8°C au sommet.' },
-    wilpattu: { name: 'Parc National de Wilpattu', region: 'Faune', tagline: 'Lacs forestiers bordés de sable, léopards et ours lippus', elevation: '65 m', driveFromColombo: '3h 45', bestTime: 'Fév–Oct', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Le plus vaste sanctuaire du pays, réputé pour ses pistes sableuses calmes et ses bassins naturels.', highlights: ['Suivre la trace des léopards discrets sur les pistes ombragées.', 'Explorer les lacs villus paisibles fréquentés par cerfs et crocodiles.', 'Apercevoir les ours lippus entre mai et juillet sous les arbres en fleurs.'], culinaryNote: 'Curry de poisson d’eau douce en pot d’argile vers Nochchiyagama.', etiquette: 'Rester silencieux en 4x4 près des points d’observation.' },
+    pinnawala: { name: 'Orphelinat d’Éléphants de Pinnawala', region: 'Faune', tagline: 'Hardes d’éléphants d’Asie se baignant dans la rivière Maha Oya', elevation: '125 m', driveFromColombo: '2h 30', bestTime: 'Toute l’année', daylightWindow: '10:00 & 14:00 Bain en rivière', summary: 'Sanctuaire riverain emblématique de la Maha Oya où mères et éléphanteaux se rafraîchissent deux fois par jour.', highlights: ['Observer les troupeaux barboter et jouer dans les rapides à 10h00 et 14h00.', 'Admirer les éléphanteaux près de leurs mères depuis les terrasses ombragées.', 'Halte idéale entre l’aéroport de Colombo et les collines de Kandy.'], culinaryNote: 'Riz et currys mijotés au feu de bois sur les terrasses face à la rivière.', etiquette: 'Observer calmement depuis les belvédères sans déranger ni toucher les petits.' },
     knuckles: { name: 'Chaîne des Knuckles', region: 'Hauts Plateaux', tagline: 'Sommets brumeux UNESCO et sentiers de cardamome', elevation: '1 863 m', driveFromColombo: '4h 30', bestTime: 'Fév–Mai · Juil–Sep', daylightWindow: '07:00 – 11:00', summary: 'Massif sauvage abritant rizières en terrasses, cascades cristallines et forêts de nuages.', highlights: ['Randonner jusqu’à Mini World’s End au-dessus du village de Meemure.', 'Se rafraîchir au pied de la cascade Sera Ella.', 'Observer lézards pygmées endémiques et semnopithèques dans la brume.'], culinaryNote: 'Gâteau de millet au sirop de palme et currys paysans.', etiquette: 'Partir avec un guide agréé et prévoir des chaussettes anti-sangsues.' }
   },
   months: {
@@ -538,10 +538,10 @@ window.SERENDIB_LOCALES['fr'] = {
       duration: '10J / 09N',
       season: 'Mai–Sep · Soleil Garanti',
       pace: 'Récifs & Culture',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Suit le soleil estival entre temples tamouls, lagons calmes et cités anciennes.',
       days: [
-        { day: 'Jour 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Grands stupas blancs et safaris forestiers.' },
+        { day: 'Jour 1–2', stop: 'Anuradhapura & Mihintale', note: 'Grands stupas blancs et escaliers rocheux sacrés.' },
         { day: 'Jour 3–5', stop: 'Jaffna & Delft', note: 'Palmeraies, temple Nallur et île aux chevaux sauvages.' },
         { day: 'Jour 6–8', stop: 'Trincomalee', note: 'Snorkeling à Pigeon Island et plages de Nilaveli.' },
         { day: 'Jour 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Balade à vélo le long des lacs avant Sigiriya.' }

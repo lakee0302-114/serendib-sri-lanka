@@ -35,14 +35,14 @@
       imageAlt: 'Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest'
     },
     {
-      id: 'wilpattu',
+      id: 'trinco-jaffna',
       number: '04',
-      sinhala: 'විල්පත්තුව',
-      regionKey: 'wildlife',
-      coords: "08°27'15\"N · 80°02'30\"E",
-      idealNights: 2,
-      image: './assets/images/wilpattu-trunk-spray.jpg',
-      imageAlt: 'Wild Sri Lankan elephant raising its trunk high to spray cooling bath water in sunlight'
+      sinhala: 'ත්‍රිකුණාමලය · யாழ்ப்பாணம்',
+      regionKey: 'northeast',
+      coords: "08°34'16\"N · 81°14'00\"E",
+      idealNights: 3,
+      image: './assets/images/east-coast-trinco.jpg',
+      imageAlt: 'Transparent turquoise Pigeon Island reef lagoon and warm coastal rocks near Trincomalee'
     },
     {
       id: 'galle',
@@ -145,18 +145,8 @@
       imageAlt: 'Golden sunset light across Bentota curving sandy beach framed by swaying coconut palms'
     },
     {
-      id: 'trinco-jaffna',
-      number: '15',
-      sinhala: 'ත්‍රිකුණාමලය · யாழ்ப்பாணம்',
-      regionKey: 'northeast',
-      coords: "08°34'16\"N · 81°14'00\"E",
-      idealNights: 3,
-      image: './assets/images/east-coast-trinco.jpg',
-      imageAlt: 'Transparent turquoise Pigeon Island reef lagoon and warm coastal rocks near Trincomalee'
-    },
-    {
       id: 'arugam-bay',
-      number: '16',
+      number: '15',
       sinhala: 'ආරුගම් බොක්ක',
       regionKey: 'northeast',
       coords: "06°50'25\"N · 81°49'50\"E",
@@ -166,7 +156,7 @@
     },
     {
       id: 'colombo',
-      number: '17',
+      number: '16',
       sinhala: 'කොළඹ',
       regionKey: 'south',
       coords: "06°55'37\"N · 79°51'40\"E",
@@ -176,7 +166,7 @@
     },
     {
       id: 'sri-pada',
-      number: '18',
+      number: '17',
       sinhala: 'ශ්‍රී පාදය',
       regionKey: 'highlands',
       coords: "06°48'34\"N · 80°29'59\"E",
@@ -186,13 +176,23 @@
     },
     {
       id: 'knuckles',
-      number: '19',
+      number: '18',
       sinhala: 'නකල්ස් කඳු වැටිය',
       regionKey: 'highlands',
       coords: "07°27'30\"N · 80°46'50\"E",
       idealNights: 2,
       image: './assets/images/knuckles-range.jpg',
       imageAlt: 'Pastel twilight clouds drifting over lush misty Knuckles mountain valleys in central Sri Lanka'
+    },
+    {
+      id: 'pinnawala',
+      number: '19',
+      sinhala: 'පින්නවල',
+      regionKey: 'wildlife',
+      coords: "07°18'04\"N · 80°23'13\"E",
+      idealNights: 1,
+      image: './assets/images/pinnawala-elephants.jpg',
+      imageAlt: 'Sri Lankan elephant family with baby reaching trunk onto its mother while bathing in golden Maha Oya river at Pinnawala'
     }
   ];
 
@@ -231,7 +231,7 @@
     sigiriya: { coords: [7.9570, 80.7603], rail: false, highland: false },
     kandy: { coords: [7.2906, 80.6337], rail: true, highland: true },
     ella: { coords: [6.8667, 81.0466], rail: true, highland: true },
-    wilpattu: { coords: [8.4542, 80.0417], rail: false, highland: false },
+    'trinco-jaffna': { coords: [8.5711, 81.2335], rail: true, highland: false },
     galle: { coords: [6.0329, 80.2170], rail: true, highland: false },
     mirissa: { coords: [5.9483, 80.4716], rail: true, highland: false },
     'nuwara-eliya': { coords: [6.9497, 80.7891], rail: true, highland: true },
@@ -242,11 +242,11 @@
     polonnaruwa: { coords: [7.9403, 81.0188], rail: true, highland: false },
     'horton-plains': { coords: [6.8025, 80.8025], rail: true, highland: true },
     bentota: { coords: [6.4211, 79.9958], rail: true, highland: false },
-    'trinco-jaffna': { coords: [8.5711, 81.2335], rail: true, highland: false },
     'arugam-bay': { coords: [6.8403, 81.8306], rail: false, highland: false },
     colombo: { coords: [6.9271, 79.8612], rail: true, highland: false },
     'sri-pada': { coords: [6.8096, 80.4994], rail: true, highland: true },
-    knuckles: { coords: [7.4583, 80.7806], rail: false, highland: true }
+    knuckles: { coords: [7.4583, 80.7806], rail: false, highland: true },
+    pinnawala: { coords: [7.3011, 80.3869], rail: true, highland: false }
   };
 
   var DINING_GUIDE = {
@@ -261,10 +261,6 @@
     ella: [
       { style: 'street', spot: 'Ella Town Courtyards & Kurakkan Roti', detail: 'Wood-fired millet roti, kottu & scenic rail-view cafés' },
       { style: 'cafe', spot: 'Halpewatte Tea Tasting Terrace', detail: 'High-grown Ceylon Orange Pekoe over mountain mist' }
-    ],
-    wilpattu: [
-      { style: 'local', spot: 'Lakeside Safari Picnic & Smoked Tank Fish', detail: 'Dry-zone village rice parcels packed fresh for game drives' },
-      { style: 'cafe', spot: 'Lantern Bush Camp Table', detail: 'Wild-pepper grilled skewers under dry-forest canopy' }
     ],
     galle: [
       { style: 'seafood', spot: 'Fort Bastion Sea-Breeze Grills', detail: 'Black-pepper ambul thiyal tuna & crisp egg hoppers' },
@@ -326,6 +322,10 @@
     knuckles: [
       { style: 'local', spot: 'Bamboo-Cooked Rice & Cardamom Estate Kitchen', detail: 'Fragrant mist-valley spices beside emerald waterfalls' },
       { style: 'cafe', spot: 'Cloud-Ridge Eco Veranda Tea', detail: 'Estate-picked single-origin brew after canyon hikes' }
+    ],
+    pinnawala: [
+      { style: 'local', spot: 'Maha Oya Riverside Veranda Rice & Curry', detail: 'Open-air river deck overlooking bathing elephants with clay-pot curries' },
+      { style: 'cafe', spot: 'Rambukkana Spice & King Coconut Pavilion', detail: 'Chilled thambili, fresh jaggery sweets & sunlit river breeze' }
     ]
   };
 

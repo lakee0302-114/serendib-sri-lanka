@@ -396,7 +396,7 @@ window.SERENDIB_LOCALES['it'] = {
       culinaryNote: 'Granchio al pepe nero o kottu caldo nel cuore di Pettah.', etiquette: 'Preferire tuk-tuk con tassametro e bere molta acqua.'
     },
     'sri-pada': { name: 'Sri Pada (Picco di Adamo)', region: 'Altopiani', tagline: 'Salita notturna tra le lanterne e ombra sacra all’alba', elevation: '2.243 m', driveFromColombo: '4h 15m', bestTime: 'Dic–Mag', daylightWindow: '05:30 – 07:30', summary: 'Il cono montuoso sacro scalato prima dell’alba lungo gradini illuminati tra le nuvole.', highlights: ['Iniziare la salita da Nallathanniya alle 02:00 con soste per il tè.', 'Ammirare la netta ombra piramidale proiettata sulle nuvole.', 'Suonare la campana in vetta insieme ai pellegrini.'], culinaryNote: 'Tè bollente allo zenzero e frittelle vadais nei chioschi notturni.', etiquette: 'Portare una giacca calda per gli 8°C della cima.' },
-    wilpattu: { name: 'Parco Nazionale di Wilpattu', region: 'Natura', tagline: 'Laghi naturali nella giungla, leopardi e orsi labiati', elevation: '65 m', driveFromColombo: '3h 45m', bestTime: 'Feb–Ott', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Il parco più vasto dello Sri Lanka, celebre per piste sabbiose tranquille e bacini villu.', highlights: ['Seguire le tracce dei leopardi lungo i sentieri ombreggiati.', 'Esplorare i silenziosi laghi villu tra cervi e coccodrilli.', 'Avvistare l’orso labiato tra maggio e luglio sotto i fiori di palu.'], culinaryNote: 'Curry di pesce di lago in pentola di terracotta a Nochchiyagama.', etiquette: 'Rimanere silenziosi a bordo durante gli avvistamenti.' },
+    pinnawala: { name: 'Orfanotrofio di Elefanti Pinnawala', region: 'Natura', tagline: 'Branchi e cuccioli di elefante al bagno nel fiume Maha Oya', elevation: '125 m', driveFromColombo: '2h 30m', bestTime: 'Tutto l’anno', daylightWindow: '10:00 & 14:00 Bagno', summary: 'Celebre rifugio lungo il fiume Maha Oya dove famiglie e cuccioli di elefante si rinfrescano due volte al giorno.', highlights: ['Ammirare decine di elefanti giocare tra le acque del fiume alle 10:00 e alle 14:00.', 'Osservare da vicino madri e cuccioli dalle terrazze panoramiche.', 'Tappa perfetta lungo il trasferimento da Colombo verso le colline di Kandy.'], culinaryNote: 'Riso e curry in pentola di terracotta con vista sul fiume degli elefanti.', etiquette: 'Osservare in silenzio dalle piattaforme senza toccare i cuccioli.' },
     knuckles: { name: 'Catena dei Knuckles', region: 'Altopiani', tagline: 'Vette nebbiose UNESCO e sentieri tra il cardamomo', elevation: '1.863 m', driveFromColombo: '4h 30m', bestTime: 'Feb–Mag · Lug–Set', daylightWindow: '07:00 – 11:00', summary: 'Massiccio montuoso con risaie a terrazza, cascate fresche e foreste pluviali di quota.', highlights: ['Camminare verso Mini World’s End sopra la valle di Meemure.', 'Rinfrescarsi alle cascate di Sera Ella dopo i sentieri di montagna.', 'Scoprire specie endemiche tra i crinali muschiosi.'], culinaryNote: 'Dolcetti di miglio allo sciroppo di palma e curry di villaggio.', etiquette: 'Affidarsi a una guida autorizzata con calze anti-sanguisughe.' }
   },
   months: {
@@ -435,10 +435,10 @@ window.SERENDIB_LOCALES['it'] = {
       ]
     },
     'east-north-sun': {
-      number: 'ROTTA 03', title: 'Fuga Estiva: Est & Nord', duration: '10G / 09N', season: 'Mag–Set · Sole Sicuro', pace: 'Reef & Cultura', routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      number: 'ROTTA 03', title: 'Fuga Estiva: Est & Nord', duration: '10G / 09N', season: 'Mag–Set · Sole Sicuro', pace: 'Reef & Cultura', routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Segue il sole estivo fra templi tamil, barriere calme e capitali reali.',
       days: [
-        { day: 'Giorno 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Stupa bianchi e safari tra laghi nella foresta.' },
+        { day: 'Giorno 1–2', stop: 'Anuradhapura & Mihintale', note: 'Stupa bianchi e sacre scalinate di granito.' },
         { day: 'Giorno 3–5', stop: 'Jaffna & Delft', note: 'Palmeti, tempio Nallur e pony selvaggi.' },
         { day: 'Giorno 6–8', stop: 'Trincomalee', note: 'Snorkeling a Pigeon Island e barche all’alba.' },
         { day: 'Giorno 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Giro in bici fra le rovine prima di salire a Sigiriya.' }

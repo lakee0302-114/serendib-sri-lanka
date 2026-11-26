@@ -396,7 +396,7 @@ window.SERENDIB_LOCALES['nl'] = {
       culinaryNote: 'Zwartpeper-krab of pittige Pettah kottu van de plaat.', etiquette: 'Gebruik tuk-tuks met meter en drink goed water.'
     },
     'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hooglanden', tagline: 'Heilige nachtbeklimming langs lantaarns & driehoekige zonsopgang', elevation: '2.243 m', driveFromColombo: '4u 15', bestTime: 'Dec–Mei', daylightWindow: '05:30 – 07:30', summary: 'Iconische heilige bergtop die voor zonsopgang over verlichte trappen wordt beklommen.', highlights: ['Start rond 02:00 uur vanuit Nallathanniya met warme theepauzes.', 'Zie de beroemde scherpe bergschaduw over het wolkendek.', 'Luid de tempelbel op de top naast pelgrims uit het hele land.'], culinaryNote: 'Warme gemberthee en krokante linzenbeignets onderweg.', etiquette: 'Neem een warme jas mee voor de 8°C koude ochtendwind.' },
-    wilpattu: { name: 'Wilpattu Nationaal Park', region: 'Wildernis', tagline: 'Stille zandmeren in de jungle, luipaarden & lippenberen', elevation: '65 m', driveFromColombo: '3u 45', bestTime: 'Feb–Okt', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Het grootste natuurpark van Sri Lanka met natuurlijke villu-meren en kalme bospaden.', highlights: ['Speur rustig naar luipaarden op schaduwrijke zandwegen.', 'Bezoek stille villu-meren vol herten, krokodillen en watervogels.', 'Spot zeldzame lippenberen van mei tot juli onder bloeiende bomen.'], culinaryNote: 'In kleipot bereide meervis-curry bij Nochchiyagama.', etiquette: 'Blijf stil zitten zodra wilde dieren dicht bij de weg lopen.' },
+    pinnawala: { name: 'Pinnawala Olifantenweeshuis', region: 'Wildernis', tagline: 'Aziatische olifantenkuddes die baden in de Maha Oya-rivier', elevation: '125 m', driveFromColombo: '2u 30', bestTime: 'Hele jaar', daylightWindow: '10:00 & 14:00 Rivierbad', summary: 'Beroemd opvangreservaat aan de Maha Oya waar olifantenfamilies en jongen tweemaal daags komen baden.', highlights: ['Zie tientallen olifanten om 10:00 en 14:00 uur samen baden in de rivier.', 'Bewonder speelse jongen en moeders vanaf de schaduwrijke oeverterrassen.', 'Ideale tussenstop tussen Colombo Airport en het heuvelland rond Kandy.'], culinaryNote: 'Rijst en curry uit kleipotten op balkons met uitzicht over de rivier.', etiquette: 'Blijf rustig op de uitkijkterrassen en raak de jonge olifanten niet aan.' },
     knuckles: { name: 'Knuckles-gebergte', region: 'Hooglanden', tagline: 'UNESCO-neveltoppen & verborgen kardemomvalleien', elevation: '1.863 m', driveFromColombo: '4u 30', bestTime: 'Feb–Mei · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Ruig vijf-toppige bergketen vol rijstterrassen, watervallen en nevelbossen.', highlights: ['Wandel naar Mini World’s End met uitzicht over de Meemure-vallei.', 'Koel af bij de Sera Ella-waterval langs schaduwrijke bergpaden.', 'Zie endemische boomhagedissen en langoeren in het mistige bos.'], culinaryNote: 'Dorpstraktatie van gierstkoekjes met palmsiroop en curries.', etiquette: 'Loop met een erkende berggids en draag bloedzuigersokken.' }
   },
   months: {
@@ -435,10 +435,10 @@ window.SERENDIB_LOCALES['nl'] = {
       ]
     },
     'east-north-sun': {
-      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      number: 'ROUTE 03', title: 'Zomerzon: Oost & Noord', duration: '10D / 09N', season: 'Mei–Sep · Droge Zomer', pace: 'Rif & Cultuur', routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Volgt zomerzon langs Tamil-tempels, koraalriffen en koningssteden.',
       days: [
-        { day: 'Dag 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Witte stoepa’s en luipaardsafari’s.' },
+        { day: 'Dag 1–2', stop: 'Anuradhapura & Mihintale', note: 'Witte stoepa’s en eeuwenoude rotstrappen.' },
         { day: 'Dag 3–5', stop: 'Jaffna & Delft', note: 'Palmtuinen, Nallur-tempel en wilde pony’s.' },
         { day: 'Dag 6–8', stop: 'Trincomalee', note: 'Snorkelen bij Pigeon Island en Nilaveli.' },
         { day: 'Dag 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Fietsen langs oude meren voor de beklimming van Sigiriya.' }

@@ -579,22 +579,22 @@ window.SERENDIB_LOCALES['en'] = {
       culinaryNote: 'Hot tea and crispy vadais served by candlelit trailside tea stalls.',
       etiquette: 'Pack warm layers for 8°C ridge winds and climb slowly in silent queues.'
     },
-    wilpattu: {
-      name: 'Wilpattu National Park',
+    pinnawala: {
+      name: 'Pinnawala Elephant Orphanage',
       region: 'Wildlife',
-      tagline: 'Bathing elephants, sand-rimmed forest lakes & leopards',
-      elevation: '65m',
-      driveFromColombo: '3h 45m',
-      bestTime: 'Feb–Oct',
-      daylightWindow: '06:00 – 09:30 & 15:30',
-      summary: 'Sri Lanka’s largest sanctuary famed for serene forest lakes where wild herds cool off beside shaded leopard trails.',
+      tagline: 'Rescued Asian elephant herds bathing across Maha Oya river boulders',
+      elevation: '125m',
+      driveFromColombo: '2h 30m',
+      bestTime: 'Year-round',
+      daylightWindow: '10:00 & 14:00 River Bath',
+      summary: 'Iconic hillside river sanctuary along the Maha Oya where elephant families and calves cool off and drink twice daily.',
       highlights: [
-        'Watch elephant families wading and bathing across shallow villu waters.',
-        'Explore serene forest basins dotted with crocodiles, deer, and peacocks.',
-        'Track quiet Ceylon leopards and sloth bears under shady jungle canopy.'
+        'Watch dozens of rescued Asian elephants bathe and play in river rapids at 10:00 and 14:00.',
+        'See playful baby elephants beside herd matriarchs from shaded riverside decks.',
+        'Break up the drive between Colombo Airport and Kandy hills cleanly.'
       ],
-      culinaryNote: 'Home-cooked clay-pot lake fish and red rice near Nochchiyagama.',
-      etiquette: 'Stay seated and keep jeeps whisper-quiet around shaded leopard sightings.'
+      culinaryNote: 'Traditional rice & clay-pot curries served overlooking the Maha Oya river terrace.',
+      etiquette: 'Admire herds quietly from viewing platforms without touching or startling calves.'
     },
     knuckles: {
       name: 'Knuckles Mountain Range',
@@ -797,10 +797,10 @@ window.SERENDIB_LOCALES['en'] = {
       duration: '10D / 09N',
       season: 'May–Sep · Dry Summer',
       pace: 'Reef & Culture',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Follows northern summer sun across Tamil kovils, calm eastern reefs, and ancient capitals.',
       days: [
-        { day: 'Day 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Sacred white dagobas and forest leopard safaris.' },
+        { day: 'Day 1–2', stop: 'Anuradhapura & Mihintale', note: 'Sacred white dagobas and sunlit ancient rock stairways.' },
         { day: 'Day 3–5', stop: 'Jaffna & Delft', note: 'Palmyrah groves, Nallur kovils, and wild island ponies.' },
         { day: 'Day 6–8', stop: 'Trincomalee', note: 'Pigeon Island reef snorkeling and sunrise beach boats.' },
         { day: 'Day 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Cycling lakeside ruins before a golden Lion Rock climb.' }

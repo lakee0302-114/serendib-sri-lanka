@@ -484,7 +484,7 @@ window.SERENDIB_LOCALES['de'] = {
       culinaryNote: 'Pfefferkrabbe oder heißes Kottu direkt aus Pettah.', etiquette: 'Tuk-Tuk-Taxameter nutzen und tagsüber genug trinken.'
     },
     'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hochland', tagline: 'Heiliger Laternenaufstieg & dreieckiger Gipfelschatten', elevation: '2.243 m', driveFromColombo: '4 Std. 15 Min.', bestTime: 'Dez–Mai', daylightWindow: '05:30 – 07:30', summary: 'Der heilige Kegelberg wird nachts entlang beleuchteter Stufen bis zum Sonnenaufgang bestiegen.', highlights: ['Um 02:00 Uhr bei Nallathanniya starten und an Teeständen pausieren.', 'Das perfekte Schattendreieck über den Nebeltälern sehen.', 'Die Tempelglocke auf dem friedlichen Gipfel läuten.'], culinaryNote: 'Heißer Ingwertee und knusprige Vadais an den Wegständen.', etiquette: 'Warme Kleidung für 8°C Gipfelwind mitbringen.' },
-    wilpattu: { name: 'Wilpattu-Nationalpark', region: 'Wildnis', tagline: 'Versteckte Dschungelseen, Leoparden & Lippenbären', elevation: '65 m', driveFromColombo: '3 Std. 45 Min.', bestTime: 'Feb–Okt', daylightWindow: '06:00 – 09:30 & 15:30', summary: 'Sri Lankas größter Nationalpark bietet ruhige Sandpisten rund um natürliche Waldseen.', highlights: ['Leoparden auf schattigen Waldpfaden behutsam verfolgen.', 'Die stillen Villu-Seen mit Krokodilen und Hirschen erkunden.', 'Zwischen Mai und Juli seltene Lippenbären erspähen.'], culinaryNote: 'Hausgemachtes Seefisch-Curry im Tontopf nahe Nochchiyagama.', etiquette: 'Im Jeep ruhig bleiben und Sichtungen nicht bedrängen.' },
+    pinnawala: { name: 'Pinnawala Elefantenwaisenhaus', region: 'Wildnis', tagline: 'Asiatische Elefantenherden beim Flussbad im Maha Oya', elevation: '125 m', driveFromColombo: '2 Std. 30 Min.', bestTime: 'Ganzjährig', daylightWindow: '10:00 & 14:00 Flussbad', summary: 'Berühmtes Flussschutzgebiet am Maha Oya, wo Elefantenfamilien und Jungtiere zweimal täglich gemeinsam baden.', highlights: ['Um 10:00 und 14:00 Uhr Dutzende Elefanten im fließenden Wasser beobachten.', 'Verspielte Elefantenkälber und Muttertiere von den schattigen Terrassen erleben.', 'Perfekter Zwischenstopp zwischen Colombo und den Hügeln von Kandy.'], culinaryNote: 'Reis und Tontopf-Curry mit Blick auf die badende Herde am Fluss.', etiquette: 'Die Tiere ruhig von den Uferterrassen betrachten, ohne Jungtiere zu stören.' },
     knuckles: { name: 'Knuckles Mountain Range', region: 'Hochland', tagline: 'UNESCO-Nebelgipfel & urige Bergdörfer', elevation: '1.863 m', driveFromColombo: '4 Std. 30 Min.', bestTime: 'Feb–Mai · Jul–Sep', daylightWindow: '07:00 – 11:00', summary: 'Wildes fünfzackiges Gebirge voller Terrassenfelder, Wasserfälle und Nebelwälder.', highlights: ['Zum Mini World’s End über dem grünen Tal von Meemure wandern.', 'Im klaren Wasser des Wasserfalls Sera Ella erfrischen.', 'Endemische Agamen und Languren auf Moospfaden entdecken.'], culinaryNote: 'Süßer Hirse-Snack in Blättern und Gemüsec-Curry vom Dorf.', etiquette: 'Mit zertifiziertem Guide wandern und Blutegelsocken tragen.' }
   },
   months: {
@@ -538,10 +538,10 @@ window.SERENDIB_LOCALES['de'] = {
       duration: '10T / 09N',
       season: 'Mai–Sep · Sonnengarantie',
       pace: 'Riff & Kultur',
-      routeLine: 'Wilpattu → Jaffna → Trinco → Polonnaruwa → Sigiriya',
+      routeLine: 'Anuradhapura → Jaffna → Trinco → Polonnaruwa → Sigiriya',
       summary: 'Folgt der Sommersonne zu Hindutempeln, Riffen im Osten und Königsstädten.',
       days: [
-        { day: 'Tag 1–2', stop: 'Anuradhapura & Wilpattu', note: 'Weiße Stupas und Waldsafaris.' },
+        { day: 'Tag 1–2', stop: 'Anuradhapura & Mihintale', note: 'Weiße Stupas und heilige Granittreppen.' },
         { day: 'Tag 3–5', stop: 'Jaffna & Delft', note: 'Palmeninseln, Nallur-Kovil und Wildpferde.' },
         { day: 'Tag 6–8', stop: 'Trincomalee', note: 'Schnorcheln bei Pigeon Island und Nilaveli.' },
         { day: 'Tag 9–10', stop: 'Polonnaruwa & Sigiriya', note: 'Radtour durch See-Ruinen vor dem Aufstieg auf Sigiriya.' }
