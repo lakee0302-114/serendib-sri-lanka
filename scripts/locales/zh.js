@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['zh'] = {
       titleEm: '精选风景。',
       subcopy: '点击任一站查看最佳采光时段、风味美食或加入行程。',
       filters: {
-        all: '全部 (18)',
+        all: '全部 (19)',
         cultural: '文化三角',
         highlands: '高山茶园',
         south: '南岸海湾',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['zh'] = {
         "seafood": "现烤海鲜",
         "cafe": "精品咖啡与素食"
       },
-      "filterAll": "全部 (18)",
+      "filterAll": "全部 (19)",
       "routeOrderHeading": "景点、餐厅与交通接驳",
       "seeLabel": "游览",
       "eatLabel": "餐饮",
@@ -302,7 +302,8 @@ window.SERENDIB_LOCALES['zh'] = {
     sigiriya: { name: '狮子岩与皮杜兰加拉', region: '文化三角', tagline: '五世纪火山岩宫殿立于皇家莲池之上', elevation: '349米', driveFromColombo: '车程4小时15分', bestTime: '1–4月 · 7–9月', daylightWindow: '06:00 – 08:30', summary: '迦叶波王建于高耸岩巅的天空王宫，四周留有对称皇家水景与壁画。', highlights: ['清晨05:45登皮杜兰加拉石，远眺日出映照狮子岩剪影。', '9点旅游团抵达前游览水园林与镜墙壁画。', '黄昏沿着坎达拉马水库堤道骑行。'], culinaryNote: '瓦锅煮红米饭配莲藕咖喱与现磨椰蓉叁巴酱。', etiquette: '进入皮杜兰加拉洞穴寺庙请遮盖双肩与双膝。' },
     ella: { name: '埃拉与德莫达拉', region: '高山茶园', tagline: '九孔石拱桥、茶山曲线与晨雾隘口', elevation: '1,041米', driveFromColombo: '车5小时 / 火车6小时', bestTime: '1–5月 · 8–9月', daylightWindow: '06:30 – 10:00', summary: '中央高地南缘山口，蓝色高山列车穿梭于叠翠茶园与石拱高架桥间。', highlights: ['跳过科伦坡长途，仅乘纳努奥亚至埃拉最美3小时火车段。', '穿过德莫达拉茶坡小径步行前往九孔桥看列车经过。', '徒步班达拉韦拉上方人少的Pekoe Trail第16段。'], culinaryNote: '柴火烤小米饼配焦糖洋葱叁巴酱及棕榈糖蜜。', etiquette: '经过隧道时切勿探身出敞开的火车门，并远离铁轨。' },
     galle: { name: '加勒古城与乌纳瓦图纳', region: '南岸海湾', tagline: '海风与落日染暖的百年珊瑚石城墙', elevation: '海平面', driveFromColombo: '高速2小时', bestTime: '12–4月', daylightWindow: '16:45 – 18:30', summary: '活态海滨要塞半岛，荷兰时期庭院、清真寺、灯塔与手艺小店并存。', highlights: ['日落时自旗岩沿城墙顺时针步行经灯塔至月亮堡垒。', '探访佩德勒街古宅里的陶瓷、手织麻布与古地图店。', '清晨向东前往阿杭伽马看清澈浅礁与高跷渔夫。'], culinaryNote: '黑酸角慢炖金枪鱼咖喱配酥脆鸡蛋碗糕。', etiquette: '城内为当地居民社区，离开沙滩请穿着得体。' },
-    yala: { name: '雅拉与库马纳公园', region: '荒野猎游', tagline: '花岗岩巨石、咸水泻湖与野生锡兰花豹', elevation: '45米', driveFromColombo: '4小时45分', bestTime: '2–7月', daylightWindow: '05:45–09:30 / 15:30', summary: '旱林与印度洋沙丘交汇处，野生花豹密度冠绝全球，伴见懒熊与野象。', highlights: ['选择雅拉第5区或库马纳公园避开吉普车拥堵。', '开园清晨随专业生态向导追踪晨间巡逻的花豹。', '夜宿帕塔南加拉沙丘后方的帆布帐篷营地伴海声入眠。'], culinaryNote: '瓦罐水牛凝乳淋森林野蜂蜜。', etiquette: '坚持与动物保持30米距离、熄火观察并严禁开闪光灯。' },
+    yala: { name: '雅拉国家公园', region: '荒野猎游', tagline: '花岗岩巨石、咸水泻湖与野生锡兰花豹', elevation: '45米', driveFromColombo: '4小时45分', bestTime: '2–7月', daylightWindow: '05:45–09:30 / 15:30', summary: '旱林与印度洋沙丘交汇处，野生花豹密度冠绝全球，伴见懒熊与野象。', highlights: ['选择雅拉第5区或清早入园，避开吉普车拥堵。', '开园清晨随专业生态向导追踪晨间巡逻的花豹。', '夜宿帕塔南加拉沙丘后方的帆布帐篷营地伴海声入眠。'], culinaryNote: '瓦罐水牛凝乳淋森林野蜂蜜。', etiquette: '坚持与动物保持30米距离、熄火观察并严禁开闪光灯。' },
+    kumana: { name: '库马纳观鸟保护区', region: '荒野猎游', tagline: '静谧红树林泻湖与成群彩鹳栖息地', elevation: '10米', driveFromColombo: '车程6小时15分', bestTime: '4–8月', daylightWindow: '06:00–09:30 / 15:30', summary: '斯里兰卡首屈一指的滨海观鸟胜地，如镜湿地上栖息着白头鹮鹳、鹈鹕与黑颈鹳等珍稀水鸟。', highlights: ['4–7月筑巢高峰期前往库马纳维卢湿地看万鸟齐栖。', '在安静湖畔寻踪珍稀黑颈鹳、白琵鹭与翠鸟。', '将清晨安静观鸟之旅与巴拿马小众海湾串联。'], culinaryNote: '巴拿马村传统荷叶包红米风味餐。', etiquette: '水边熄火静观，使用望远镜赏鸟切勿惊扰鸟巢。' },
     'nuwara-eliya': { name: '哈顿与高山茶区', region: '高山茶园', tagline: '翡翠茶谷、殖民茶园木屋与清晨薄雾', elevation: '1,868米', driveFromColombo: '车程4小时30分', bestTime: '1–4月 · 8月', daylightWindow: '06:15 – 09:30', summary: '卡斯尔雷水库周围高海拔冷凉山谷，出产清亮带柑橘花香的锡兰红茶。', highlights: ['随茶园顾问漫步茶垄学习“一芽两叶”传统工艺。', '清晨赴霍顿平原跨越世界尽头悬崖与贝克瀑布。', '在修复的百年茶园老屋壁炉旁品味高地午茶。'], culinaryNote: '丁布拉金毫白毫橙佩科红茶配豆蔻酥饼。', etiquette: '夜间常降至12°C，需备保暖针织衫；拍茶农前先征求同意。' },
     bentota: { name: '本托塔与坦加勒海湾', region: '南岸海湾', tagline: '巴瓦热带极简美学与幽静新月湾', elevation: '海平面', driveFromColombo: '1小时30分', bestTime: '11–4月', daylightWindow: '07:00 与 17:15', summary: '消除室内外界线的热带现代主义庭院直面棕榈海滩与平静内河。', highlights: ['提前预约游览本托塔郊外巴瓦的私家园林卢努甘卡。', '12月至3月出海美蕊沙或唐德拉角追寻蓝鲸。', '退隐戈扬博卡与雷卡瓦空旷湾畔漫步护龟滩。'], culinaryNote: '黑胡椒咖喱叶与香兰叶焖炒泻湖泥蟹。', etiquette: '夜晚探访海龟产卵滩需持导游提供的暗红光手电。' },
     'trinco-jaffna': { name: '亭可马里与贾夫纳', region: '北与东岸', tagline: '夏日玻璃海、珊瑚岛礁与北方泰米尔文化', elevation: '海平面', driveFromColombo: '车程5小时30分', bestTime: '5–10月', daylightWindow: '06:00 与 17:30', summary: '每当西南迎来季风雨季，北方与东海岸便放晴迎来绝佳潜水季。', highlights: ['鸽子岛珊瑚礁浮潜并沿开阔的尼拉韦利白沙晨步。', '往北参拜贾夫纳纳卢尔神庙，赴代尔夫特岛寻野马。', '6至9月在东岸阿鲁甘湾尽享稳定右跑道海浪冲浪。'], culinaryNote: '香料浓郁的贾夫纳螃蟹咖喱配棕榈根粉海鲜浓汤。', etiquette: '北方主要印度教神庙内男士常需依传统脱去上衣示敬。' },
@@ -334,7 +335,7 @@ window.SERENDIB_LOCALES['zh'] = {
   },
   itineraries: {
     'classic-arc': { number: '路线 01', title: '经典塞伦迪布环线', duration: '9天 / 8晚', season: '12–4月 · 初访首选', pace: '高山火车 + 专车向导', routeLine: '狮子岩 → 康提 → 哈顿 → 埃拉 → 加勒古城', summary: '稳健串联空中王宫、翡翠茶山铁道与南部海防石城，不赶路。', days: [{ day: '第1–2天', stop: '狮子岩与丹布勒', note: '登皮杜兰加拉看日出并探访彩绘石窟寺。' }, { day: '第3–4天', stop: '康提山谷', note: '傍晚佛牙寺诵经与马特莱香料小径。' }, { day: '第5–6天', stop: '哈顿与埃拉', note: '百年茶园庄园下榻加3小时精华铁道跨九孔桥。' }, { day: '第7–9天', stop: '加勒古城', note: '城墙落日漫步与南岸珊瑚海湾闲适时光。' }] },
-    'wild-south': { number: '路线 02', title: '花豹、红茶与隐世海湾', duration: '11天 / 10晚', season: '1–4月 · 设计与野趣', pace: '慢奢节奏', routeLine: '科伦坡 → 哈顿 → 雅拉 → 坦加勒 → 加勒', summary: '融合巴瓦热带建筑、高地徒步、私家猎豹游与幽静南岸海滩。', days: [{ day: '第1天', stop: '科伦坡建筑漫游', note: '拜访巴瓦故居11号及加勒菲斯海滨日落。' }, { day: '第2–4天', stop: '哈顿茶山步道', note: '连住高地庄园并在山脊瀑布间轻徒步。' }, { day: '第5–7天', stop: '雅拉与库马纳', note: '破晓吉普专车深入荒野追踪野生花豹。' }, { day: '第8–11天', stop: '坦加勒与加勒', note: '独享空旷新月海滩与加勒古宅院落。' }] },
+    'wild-south': { number: '路线 02', title: '花豹、红茶与隐世海湾', duration: '11天 / 10晚', season: '1–4月 · 设计与野趣', pace: '慢奢节奏', routeLine: '科伦坡 → 哈顿 → 雅拉 → 坦加勒 → 加勒', summary: '融合巴瓦热带建筑、高地徒步、私家猎豹游与幽静南岸海滩。', days: [{ day: '第1天', stop: '科伦坡建筑漫游', note: '拜访巴瓦故居11号及加勒菲斯海滨日落。' }, { day: '第2–4天', stop: '哈顿茶山步道', note: '连住高地庄园并在山脊瀑布间轻徒步。' }, { day: '第5–7天', stop: '雅拉国家公园', note: '破晓吉普专车深入荒野追踪野生花豹。' }, { day: '第8–11天', stop: '坦加勒与加勒', note: '独享空旷新月海滩与加勒古宅院落。' }] },
     'east-north-sun': { number: '路线 03', title: '夏日避雨：东海岸与北部', duration: '10天 / 9晚', season: '5–9月 · 暑假艳阳保证', pace: '珊瑚礁 + 文化探索', routeLine: '阿努拉德普勒 → 贾夫纳 → 亭可马里 → 狮子岩', summary: '专为北半球暑假定制，追随晴空遍访泰米尔圣殿、珊瑚礁与古都遗址。', days: [{ day: '第1–2天', stop: '阿努拉德普勒与米欣塔莱', note: '白塔月光朝圣与圣山花岗岩古阶。' }, { day: '第3–5天', stop: '贾夫纳与代尔夫特', note: '扇椰林海岛、纳卢尔神庙与岛上野马群。' }, { day: '第6–8天', stop: '亭可马里海湾', note: '鸽子岛礁盘浮潜与尼拉韦利朝霞渔船。' }, { day: '第9–10天', stop: '丹布勒与狮子岩', note: '探秘古洞窟壁画再攀登金色狮子岩。' }] }
   },
   fieldNotes: [

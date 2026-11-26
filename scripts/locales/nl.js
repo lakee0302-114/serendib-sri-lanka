@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['nl'] = {
       titleEm: 'op het eiland.',
       subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (18)',
+        all: 'Alles (19)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['nl'] = {
         "seafood": "Verse vis",
         "cafe": "Cafés & Vega"
       },
-      "filterAll": "Alles (18)",
+      "filterAll": "Alles (19)",
       "routeOrderHeading": "Plekken, eten & vervoer",
       "seeLabel": "Zien",
       "eatLabel": "Eten",
@@ -318,10 +318,16 @@ window.SERENDIB_LOCALES['nl'] = {
       culinaryNote: 'Gekruide ambul thiyal-tonijn en krokante egg hoppers.', etiquette: 'Woonwijk — draag gepaste kleding buiten de stranden.'
     },
     yala: {
-      name: 'Yala & Kumana', region: 'Natuur', tagline: 'Granietrotsen, lagunes en wilde luipaarden', elevation: '45 m', driveFromColombo: '4u 45', bestTime: 'Feb–Jul', daylightWindow: '05:45–09:30 & 15:30',
+      name: 'Nationaal Park Yala', region: 'Natuur', tagline: 'Granietrotsen, lagunes en wilde luipaarden', elevation: '45 m', driveFromColombo: '4u 45', bestTime: 'Feb–Jul', daylightWindow: '05:45–09:30 & 15:30',
       summary: 'Droog struikgewas aan duinen — beroemd om luipaarden, lippenberen en olifanten.',
-      highlights: ['Kies Yala Blok V of Kumana om jeepfiles te vermijden.', 'Start vroeg met een ervaren privégids.', 'Slaap in tentenkampen achter de duinen van Patanangala.'],
+      highlights: ['Kies Yala Blok V of de vroege opening om jeepfiles te vermijden.', 'Start vroeg met een ervaren privégids.', 'Slaap in tentenkampen achter de duinen van Patanangala.'],
       culinaryNote: 'Buffelkwark in kleipot met wilde boshoning.', etiquette: 'Houd 30 m afstand, zet de motor uit en gebruik geen flits.'
+    },
+    kumana: {
+      name: 'Kumana Vogelreservaat', region: 'Natuur', tagline: 'Stille mangrovelagunes en kleurrijke nimmerzatten', elevation: '10 m', driveFromColombo: '6u 15', bestTime: 'Apr–Aug', daylightWindow: '06:00–09:30 & 15:30',
+      summary: 'Sri Lanka’s beroemdste vogelparadijs — spiegelende lagunes vol nimmerzatten, pelikanen, lepelaars en ijsvogels.',
+      highlights: ['Bezoek Kumana Villu tijdens het broedseizoen tussen april en juli.', 'Spot de zeldzame zwartnekooievaar en bonte ijsvogels.', 'Combineer stille ochtendtochten met de rustige baaien van Panama.'],
+      culinaryNote: 'Traditionele dorpsrijst in vers lotusblad uit Panama.', etiquette: 'Blijf stil in de open jeep en verstoor nooit waternesten.'
     },
     'nuwara-eliya': {
       name: 'Hatton & Theeheuvels', region: 'Hoogland', tagline: 'Smaragdgroene valleien en oude plantersbungalows', elevation: '1.868 m', driveFromColombo: '4u 30', bestTime: 'Jan–Apr · Aug', daylightWindow: '06:15 – 09:30',
@@ -424,7 +430,7 @@ window.SERENDIB_LOCALES['nl'] = {
       days: [
         { day: 'Dag 1', stop: 'Colombo', note: 'Bawa’s woonhuis Number 11 en Galle Face.' },
         { day: 'Dag 2–4', stop: 'Hatton', note: 'Wandelen tussen historische plantersbungalows.' },
-        { day: 'Dag 5–7', stop: 'Yala & Kumana', note: 'Vroege 4x4-tochten op zoek naar luipaarden.' },
+        { day: 'Dag 5–7', stop: 'Nationaal Park Yala', note: 'Vroege 4x4-tochten op zoek naar luipaarden.' },
         { day: 'Dag 8–11', stop: 'Tangalle & Galle', note: 'Verlaten baaien en sfeervolle fort-panden.' }
       ]
     },

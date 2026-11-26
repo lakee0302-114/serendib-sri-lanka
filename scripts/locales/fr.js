@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['fr'] = {
       titleEm: 'incontournables.',
       subcopy: 'Touchez une étape pour la lumière idéale, la table ou votre circuit.',
       filters: {
-        all: 'Tous (18)',
+        all: 'Tous (19)',
         cultural: 'Culture',
         highlands: 'Montagnes',
         south: 'Sud',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['fr'] = {
         "seafood": "Fruits de mer",
         "cafe": "Cafés & Végé"
       },
-      "filterAll": "Tout (18)",
+      "filterAll": "Tout (19)",
       "routeOrderHeading": "Visites, tables & trajets",
       "seeLabel": "Visiter",
       "eatLabel": "Manger",
@@ -351,7 +351,7 @@ window.SERENDIB_LOCALES['fr'] = {
       etiquette: 'Quartier habité : tenue respectueuse hors des plages.'
     },
     yala: {
-      name: 'Yala & Kumana',
+      name: 'Parc National de Yala',
       region: 'Faune',
       tagline: 'Rochers granitiques, lagunes et léopards de Ceylan',
       elevation: '45 m',
@@ -360,12 +360,29 @@ window.SERENDIB_LOCALES['fr'] = {
       daylightWindow: '05:45–09:30 & 15:30',
       summary: 'Savane côtière abritant l’une des plus fortes densités de léopards sauvages au monde.',
       highlights: [
-        'Privilégier Yala Bloc V ou Kumana pour éviter la foule.',
+        'Privilégier le secteur V de Yala pour éviter les files de jeeps.',
         'Partir dès l’ouverture avec un guide naturaliste privé.',
         'Dormir sous toile derrière les dunes sauvages de Patanangala.'
       ],
       culinaryNote: 'Yaourt de bufflonne en pot d’argile au miel de forêt.',
       etiquette: 'Garder 30 m de distance, couper le moteur, sans flash.'
+    },
+    kumana: {
+      name: 'Réserve d’Oiseaux de Kumana',
+      region: 'Faune',
+      tagline: 'Lagunes de mangroves paisibles et tantales indiens',
+      elevation: '10 m',
+      driveFromColombo: '6h 15',
+      bestTime: 'Avr–Août',
+      daylightWindow: '06:00–09:30 & 15:30',
+      summary: 'Premier sanctuaire ornithologique côtier du Sri Lanka, peuplé de tantales indiens, jabirus, pélicans et spatules.',
+      highlights: [
+        'Observer les nuées nicheuses à Kumana Villu entre avril et juillet.',
+        'Repérer le rare jabiru d’Asie et le martin-pêcheur à gorge blanche.',
+        'Associer affût matinal silencieux et plages sauvages de Panama.'
+      ],
+      culinaryNote: 'Riz rouge villageois de Panama enveloppé en feuille de lotus.',
+      etiquette: 'Couper le moteur au bord de l’eau et ne jamais déranger les nids.'
     },
     'nuwara-eliya': {
       name: 'Hatton & Plateaux du Thé',
@@ -511,7 +528,7 @@ window.SERENDIB_LOCALES['fr'] = {
       days: [
         { day: 'Jour 1', stop: 'Colombo', note: 'Résidence de Geoffrey Bawa et bord de mer à Galle Face.' },
         { day: 'Jour 2–4', stop: 'Hatton', note: 'Sentiers dans le thé entre anciens bungalows coloniaux.' },
-        { day: 'Jour 5–7', stop: 'Yala & Kumana', note: 'Pistes privées dès l’aube sur la trace des léopards.' },
+        { day: 'Jour 5–7', stop: 'Parc National de Yala', note: 'Pistes privées dès l’aube sur la trace des léopards.' },
         { day: 'Jour 8–11', stop: 'Tangalle & Galle', note: 'Criques solitaires et maisons d’hôtes historiques.' }
       ]
     },

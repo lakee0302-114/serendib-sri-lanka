@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SERENDIB — Structural Metadata (18 Top Attractions & Twin Monsoons)
+   SERENDIB — Structural Metadata (19 Top Attractions & Twin Monsoons)
    ========================================================================== */
 
 (function () {
@@ -85,8 +85,18 @@
       imageAlt: 'Wild Sri Lankan leopard drinking at a sunlit mirror waterhole inside Yala National Park'
     },
     {
-      id: 'udawalawe',
+      id: 'kumana',
       number: '09',
+      sinhala: 'කුමන',
+      regionKey: 'wildlife',
+      coords: "06°33'30\"N · 81°40'50\"E",
+      idealNights: 1,
+      image: './assets/images/kumana-birds.jpg',
+      imageAlt: 'Painted stork wading across sunlit mirror wetlands in Kumana National Park bird sanctuary'
+    },
+    {
+      id: 'udawalawe',
+      number: '10',
       sinhala: 'උඩවලව',
       regionKey: 'wildlife',
       coords: "06°26'18\"N · 80°53'18\"E",
@@ -96,7 +106,7 @@
     },
     {
       id: 'anuradhapura',
-      number: '10',
+      number: '11',
       sinhala: 'අනුරාධපුරය',
       regionKey: 'cultural',
       coords: "08°21'00\"N · 80°23'47\"E",
@@ -106,7 +116,7 @@
     },
     {
       id: 'dambulla',
-      number: '11',
+      number: '12',
       sinhala: 'දඹුල්ල',
       regionKey: 'cultural',
       coords: "07°51'24\"N · 80°38'57\"E",
@@ -116,7 +126,7 @@
     },
     {
       id: 'horton-plains',
-      number: '12',
+      number: '13',
       sinhala: 'හෝර්ටන් තැන්න',
       regionKey: 'highlands',
       coords: "06°48'09\"N · 80°48'09\"E",
@@ -126,7 +136,7 @@
     },
     {
       id: 'bentota',
-      number: '13',
+      number: '14',
       sinhala: 'බෙන්තොට / තංගල්ල',
       regionKey: 'south',
       coords: "06°25'16\"N · 79°59'45\"E",
@@ -136,7 +146,7 @@
     },
     {
       id: 'arugam-bay',
-      number: '14',
+      number: '15',
       sinhala: 'ආරුගම් බොක්ක',
       regionKey: 'northeast',
       coords: "06°50'25\"N · 81°49'50\"E",
@@ -146,7 +156,7 @@
     },
     {
       id: 'colombo',
-      number: '15',
+      number: '16',
       sinhala: 'කොළඹ',
       regionKey: 'south',
       coords: "06°55'37\"N · 79°51'40\"E",
@@ -156,7 +166,7 @@
     },
     {
       id: 'sri-pada',
-      number: '16',
+      number: '17',
       sinhala: 'ශ්‍රී පාදය',
       regionKey: 'highlands',
       coords: "06°48'34\"N · 80°29'59\"E",
@@ -166,7 +176,7 @@
     },
     {
       id: 'knuckles',
-      number: '17',
+      number: '18',
       sinhala: 'නකල්ස් කඳු වැටිය',
       regionKey: 'highlands',
       coords: "07°27'30\"N · 80°46'50\"E",
@@ -176,7 +186,7 @@
     },
     {
       id: 'pinnawala',
-      number: '18',
+      number: '19',
       sinhala: 'පින්නවල',
       regionKey: 'wildlife',
       coords: "07°18'04\"N · 80°23'13\"E",
@@ -226,6 +236,7 @@
     mirissa: { coords: [5.9483, 80.4716], rail: true, highland: false },
     'nuwara-eliya': { coords: [6.9497, 80.7891], rail: true, highland: true },
     yala: { coords: [6.3722, 81.5181], rail: false, highland: false },
+    kumana: { coords: [6.5583, 81.6806], rail: false, highland: false },
     udawalawe: { coords: [6.4383, 80.8883], rail: false, highland: false },
     anuradhapura: { coords: [8.3114, 80.4037], rail: true, highland: false },
     dambulla: { coords: [7.8606, 80.6517], rail: false, highland: false },
@@ -266,6 +277,10 @@
     yala: [
       { style: 'local', spot: 'Tissamaharama Clay-Pot Curd & Honey', detail: 'Chilled lake-side buffalo curd with wild forest honey' },
       { style: 'seafood', spot: 'Safari Campfire & Dune Barbeque', detail: 'Open-fire coastal seafood served beneath southern stars' }
+    ],
+    kumana: [
+      { style: 'local', spot: 'Okanda & Kudumbigala Lagoon Rice Parcels', detail: 'Traditional red rice & village vegetable curries after birding dawn drives' },
+      { style: 'seafood', spot: 'Panama Coastal Bay Fresh Grill', detail: 'Line-caught eastern lagoon barramundi & lime sambol near Arugam' }
     ],
     udawalawe: [
       { style: 'street', spot: 'Park-Gate Hot Hoppers & Thambili', detail: 'Early-morning egg hoppers & sweet king coconut stops' },

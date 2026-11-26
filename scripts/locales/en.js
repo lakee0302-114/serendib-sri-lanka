@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['en'] = {
       titleEm: 'destinations.',
       subcopy: 'Tap any place for details or add to your route.',
       filters: {
-        all: 'All (18)',
+        all: 'All (19)',
         cultural: 'Cultural',
         highlands: 'Highlands',
         south: 'South & West',
@@ -183,7 +183,7 @@ window.SERENDIB_LOCALES['en'] = {
       clearStops: 'Clear',
       monthHeading: 'Travel Month',
       destinationsHeading: 'Pick places, reorder route & adjust nights ({count} picked)',
-      filterAll: 'All (18)',
+      filterAll: 'All (19)',
       travelersLabel: 'How many guests?',
       nightsAutoHint: 'Suggested length: {nights} nights',
       stayHeading: 'Where would you like to stay?',
@@ -342,7 +342,7 @@ window.SERENDIB_LOCALES['en'] = {
       etiquette: 'Galle Fort is a residential enclave — dress modestly off beaches.'
     },
     yala: {
-      name: 'Yala & Kumana',
+      name: 'Yala National Park',
       region: 'Wildlife',
       tagline: 'Granite boulders, coastal dunes & wild Ceylon leopards',
       elevation: '45m Scrub',
@@ -351,12 +351,29 @@ window.SERENDIB_LOCALES['en'] = {
       daylightWindow: '05:45–09:30 & 15:30',
       summary: 'Where monsoon scrub meets coastal lagoons — home to wild leopards, sloth bears, and elephants.',
       highlights: [
-        'Choose Yala Block V or Kumana to avoid jeep crowds.',
+        'Choose quieter Block V or dawn entry for uncrowded leopard sightings.',
         'Book early-gate naturalist drives when cats patrol tracks.',
         'Sleep in quiet canvas camps behind Patanangala dunes.'
       ],
       culinaryNote: 'Tissamaharama buffalo curd drizzled with wild bee honey.',
       etiquette: 'Keep 30m distance, mute engines, and never use flash.'
+    },
+    kumana: {
+      name: 'Kumana Bird Sanctuary',
+      region: 'Wildlife',
+      tagline: 'Coastal mangroves, serene villus & nesting painted storks',
+      elevation: '10m Lagoons',
+      driveFromColombo: '6h 15m',
+      bestTime: 'Apr–Aug',
+      daylightWindow: '06:00–09:30 & 15:30',
+      summary: 'Sri Lanka’s premier coastal birding sanctuary — calm mangrove lagoons teeming with painted storks, black-necked storks, spoonbills, and pelicans.',
+      highlights: [
+        'Glide beside Kumana Villu swamp during April–July nesting peaks.',
+        'Spot rare black-necked storks, lesser adjutants, and openbills.',
+        'Pair quiet dawn birding drives with nearby Panama beaches.'
+      ],
+      culinaryNote: 'Traditional Panama village red rice wrapped in lotus leaves.',
+      etiquette: 'Keep binoculars steady from silent jeeps; never disturb waterside nests.'
     },
     'nuwara-eliya': {
       name: 'Hatton & Tea Hills',
@@ -770,7 +787,7 @@ window.SERENDIB_LOCALES['en'] = {
       days: [
         { day: 'Day 1', stop: 'Colombo', note: 'Geoffrey Bawa’s Number 11 and sunset cocktails along Galle Face.' },
         { day: 'Day 2–4', stop: 'Hatton Ridges', note: 'Trail walks between century-old planters’ tea bungalows.' },
-        { day: 'Day 5–7', stop: 'Yala & Kumana', note: 'Dawn private 4x4 leopard tracking among scrub boulders.' },
+        { day: 'Day 5–7', stop: 'Yala National Park', note: 'Dawn private 4x4 leopard tracking among scrub boulders.' },
         { day: 'Day 8–11', stop: 'Tangalle & Galle', note: 'Lonely southern coves and restored boutique townhouses.' }
       ]
     },

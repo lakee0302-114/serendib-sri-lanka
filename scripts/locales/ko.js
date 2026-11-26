@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['ko'] = {
       titleEm: '주요 명소.',
       subcopy: '장소를 눌러 최적의 빛 시간, 현지 음식, 루트 저장을 확인하세요.',
       filters: {
-        all: '전체 (18)',
+        all: '전체 (19)',
         cultural: '문화유적',
         highlands: '고원',
         south: '남부',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['ko'] = {
         "seafood": "해산물 요리",
         "cafe": "카페·채식"
       },
-      "filterAll": "전체 (18)",
+      "filterAll": "전체 (19)",
       "routeOrderHeading": "명소·맛집·이동 경로",
       "seeLabel": "관광",
       "eatLabel": "맛집",
@@ -302,7 +302,8 @@ window.SERENDIB_LOCALES['ko'] = {
     sigiriya: { name: '시기리야 & 피두랑갈라', region: '문화유적', tagline: '연꽃 연못 위로 솟은 5세기 바위 요새', elevation: '349m', driveFromColombo: '차량 4시간 15분', bestTime: '1–4월 · 7–9월', daylightWindow: '06:00 – 08:30', summary: '카샤파 왕의 바위 궁전으로, 비가 오면 흐르는 고대 분수 정원에 둘러싸여 있습니다.', highlights: ['05:45 피두랑갈라에 올라 해 뜨는 시기리야 바위 감상.', '단체가 오기 전 09:00 전에 거울 벽화와 연못 산책.', '해 질 녘 칸달라마 저수지 둑길 자전거 타기.'], culinaryNote: '질그릇 붉은 쌀밥과 연근 커리, 코코넛 삼볼.', etiquette: '피두랑갈라 동굴 사원에서는 어깨와 무릎을 가리세요.' },
     ella: { name: '엘라 & 데모다라', region: '고원', tagline: '아홉 아치 돌다리와 구름 낀 차밭 철길', elevation: '1,041m', driveFromColombo: '차 5시간 / 기차 6시간', bestTime: '1–5월 · 8–9월', daylightWindow: '06:30 – 10:00', summary: '남부 평원이 내려다보이는 고개, 파란 산악 열차와 녹차 능선이 어우러집니다.', highlights: ['콜롬보 전 구간 대신 나누오야~엘라 3시간 절경 구간만 탑승.', '데모다라 차밭 길을 걸어 나인 아치 브리지 도착.', '반다라웰라 위 한적한 페코 트레일 산책.'], culinaryNote: '화덕 구이 쿠라칸 로티와 달콤한 시니 삼볼.', etiquette: '터널 근처에서는 열린 기차 문 밖으로 몸을 내밀지 마세요.' },
     galle: { name: '갈레 요새 & 우나와투나', region: '남부 해안', tagline: '노을빛에 물드는 산호석 성벽과 등대', elevation: '해수면', driveFromColombo: '고속도로 2시간', bestTime: '12–4월', daylightWindow: '16:45 – 18:30', summary: '네덜란드식 저택과 서점, 모스크가 어우러진 살아있는 해변 성곽 도시.', highlights: ['일몰 때 플래그 록부터 등대까지 성벽 위를 시계방향으로 산책.', '페들러 거리 골목의 도자기와 핸드룸 린넨 공방 구경.', '이른 아침 동쪽 아항가마·하바라두와 산호 바다 방문.'], culinaryNote: '검은 타마린드 암불 티얄 생선 커리와 에그 호퍼.', etiquette: '실제 주민 주거지이므로 해변 밖에서는 단정한 복장 착용.' },
-    yala: { name: '얄라 & 쿠마나 국립공원', region: '야생', tagline: '화강암 바위숲을 누비는 야생 실론 표범', elevation: '45m', driveFromColombo: '차량 4시간 45분', bestTime: '2–7월', daylightWindow: '05:45–09:30 / 15:30', summary: '건조 관목림과 해안 사구가 만나는 곳으로 야생 표범과 코끼리가 살아갑니다.', highlights: ['지프 혼잡을 피하려면 얄라 블록 V 또는 쿠마나 선택.', '새벽 개장 직후 전문 가이드와 프라이빗 사파리.', '파타난갈라 사구 뒤 텐트 캠프에서 파도 소리와 숙박.'], culinaryNote: '질그릇 물소 요거트(미키리)와 야생 벌꿀.', etiquette: '동물과 30m 거리 유지, 시동 끄기, 플래시 금지.' },
+    yala: { name: '얄라 국립공원', region: '야생', tagline: '화강암 바위숲을 누비는 야생 실론 표범', elevation: '45m', driveFromColombo: '차량 4시간 45분', bestTime: '2–7월', daylightWindow: '05:45–09:30 / 15:30', summary: '건조 관목림과 해안 사구가 만나는 곳으로 야생 표범과 코끼리가 살아갑니다.', highlights: ['지프 혼잡을 피하려면 얄라 블록 V 또는 새벽 입장을 선택.', '새벽 개장 직후 전문 가이드와 프라이빗 사파리.', '파타난갈라 사구 뒤 텐트 캠프에서 파도 소리와 숙박.'], culinaryNote: '질그릇 물소 요거트(미키리)와 야생 벌꿀.', etiquette: '동물과 30m 거리 유지, 시동 끄기, 플래시 금지.' },
+    kumana: { name: '쿠마나 조류 보호구역', region: '야생', tagline: '잔잔한 맹그로브 석호와 황새 떼의 낙원', elevation: '10m', driveFromColombo: '차량 6시간 15분', bestTime: '4–8월', daylightWindow: '06:00–09:30 / 15:30', summary: '스리랑카 최고의 해안 철새 도래지 — 호수 위 노랑부리황새와 사다새, 희귀 물새가 장관을 이룹니다.', highlights: ['4–7월 번식기 동안 쿠마나 빌루 습지에 모이는 철새 떼 감상.', '희귀한 검은목황새와 저어새, 물총새를 조용히 탐조.', '한적한 새벽 탐조와 파나마 해변 산책을 함께 즐기기.'], culinaryNote: '파나마 마을의 연잎에 싼 전통 붉은 쌀밥 정식.', etiquette: '물가 둥지 근처에서는 차량 시동을 끄고 조용히 쌍안경으로 관찰하세요.' },
     'nuwara-eliya': { name: '하튼 & 홍차 고원', region: '고원', tagline: '에메랄드 차 계곡과 고풍스러운 플랜터 저택', elevation: '1,868m', driveFromColombo: '차량 4시간 30분', bestTime: '1–4월 · 8월', daylightWindow: '06:15 – 09:30', summary: '캐슬리 호수 주변 서늘한 계곡에서 최고급 오렌지 페코 홍차가 자랍니다.', highlights: ['다원 트레킹으로 전통 찻잎 수확과 제다 과정 체험.', '새벽 호튼 플레인스 월드 엔드 절벽 조망.', '백 년 된 차 농장 방갈로 벽난로 앞에서 휴식.'], culinaryNote: '딤불라 골든 페코 홍차와 카다멈 쇼트브레드.', etiquette: '밤에는 12°C까지 내려가니 겉옷을 챙기고 사진 전 양해를 구하세요.' },
     bentota: { name: '벤토타 & 탕갈레', region: '남부 해안', tagline: '바와의 건축 미학과 고요한 초승달 만', elevation: '해수면', driveFromColombo: '1시간 30분', bestTime: '11–4월', daylightWindow: '07:00 & 17:15', summary: '실내외 경계를 허문 트로피컬 모더니즘 정원과 한적한 남부 해변.', highlights: ['제프리 바와의 평생 정원 루누강가 사전 예약 투어.', '12~3월 미리사·돈드라 앞바다 대왕고래 탐험.', '한적한 고얌보카와 레카와 만에서 여유로운 휴식.'], culinaryNote: '흑후추와 판단 잎을 넣고 끓인 라군 머드 크랩.', etiquette: '밤바다 거북 산란 구역에선 적색 손전등만 사용하세요.' },
     'trinco-jaffna': { name: '트링코말리 & 자프나', region: '북·동부', tagline: '여름에 빛나는 동부 바다와 북부 타밀 문화', elevation: '해수면', driveFromColombo: '차량 5시간 30분', bestTime: '5–10월', daylightWindow: '06:00 & 17:30', summary: '남서부에 비가 내리는 여름, 북부와 동부는 구름 없이 맑고 잔잔합니다.', highlights: ['피전 아일랜드 스노클링과 넓은 닐라벨리 백사장 산책.', '자프나 날루르 사원과 델프트 섬의 야생 조랑말 탐방.', '6~9월 아루감 베이의 깔끔한 파도 서핑.'], culinaryNote: '매콤한 자프나 크랩 커리와 팔미라 해산물 수프.', etiquette: '북부 주요 힌두 사원 내부에서는 남성이 상의를 탈의하는 것이 예의입니다.' },
@@ -334,7 +335,7 @@ window.SERENDIB_LOCALES['ko'] = {
   },
   itineraries: {
     'classic-arc': { number: '루트 01', title: '클래식 세렌딥 일주', duration: '09일 / 08박', season: '12–4월 · 첫 방문 추천', pace: '기차 + 전용 기사', routeLine: '시기리야 → 캔디 → 하튼 → 엘라 → 갈레 요새', summary: '바위 요새, 차밭 산악 열차, 남부 해안 요새를 여유롭게 잇습니다.', days: [{ day: '1–2일차', stop: '시기리야 & 담불라', note: '피두랑갈라 일출과 황금 석굴 사원.' }, { day: '3–4일차', stop: '캔디', note: '불치사 저녁 예불과 마탈레 향신료 정원.' }, { day: '5–6일차', stop: '하튼 & 엘라', note: '차 농장 숙박 및 나인 아치 3시간 기차.' }, { day: '7–9일차', stop: '갈레 요새', note: '해 질 녘 성벽 산책과 산호초 해변.' }] },
-    'wild-south': { number: '루트 02', title: '표범, 홍차 & 남부 해변', duration: '11일 / 10박', season: '1–4월 · 디자인 & 야생', pace: '슬로우 럭셔리', routeLine: '콜롬보 → 하튼 → 얄라 → 탕갈레 → 갈레', summary: '바와의 건축 미학과 산악 트레킹, 프라이빗 사파리, 한적한 만을 엮습니다.', days: [{ day: '1일차', stop: '콜롬보', note: '제프리 바와 자택 넘버 11과 갈레 페이스 석양.' }, { day: '2–4일차', stop: '하튼', note: '백 년 된 차 농장 방갈로 사이의 능선 걷기.' }, { day: '5–7일차', stop: '얄라 & 쿠마나', note: '새벽 전용 4WD로 야생 표범 추적.' }, { day: '8–11일차', stop: '탕갈레 & 갈레', note: '인적 드문 해변과 고택 부티크 스테이.' }] },
+    'wild-south': { number: '루트 02', title: '표범, 홍차 & 남부 해변', duration: '11일 / 10박', season: '1–4월 · 디자인 & 야생', pace: '슬로우 럭셔리', routeLine: '콜롬보 → 하튼 → 얄라 → 탕갈레 → 갈레', summary: '바와의 건축 미학과 산악 트레킹, 프라이빗 사파리, 한적한 만을 엮습니다.', days: [{ day: '1일차', stop: '콜롬보', note: '제프리 바와 자택 넘버 11과 갈레 페이스 석양.' }, { day: '2–4일차', stop: '하튼', note: '백 년 된 차 농장 방갈로 사이의 능선 걷기.' }, { day: '5–7일차', stop: '얄라 국립공원', note: '새벽 전용 4WD로 야생 표범 추적.' }, { day: '8–11일차', stop: '탕갈레 & 갈레', note: '인적 드문 해변과 고택 부티크 스테이.' }] },
     'east-north-sun': { number: '루트 03', title: '여름 탈출: 동부와 북부', duration: '10일 / 09박', season: '5–9월 · 여름 맑음 보장', pace: '산호 & 타밀 문화', routeLine: '아누라다푸라 → 자프나 → 트링코 → 시기리야', summary: '여름에도 맑은 북부 사원과 투명한 동부 산호초, 고대 왕도를 만납니다.', days: [{ day: '1–2일차', stop: '아누라다푸라 & 미힌탈레', note: '하얀 불탑과 신성한 암석 계단 순례.' }, { day: '3–5일차', stop: '자프나 & 델프트', note: '팔미라 야자숲, 날루르 사원, 야생 조랑말.' }, { day: '6–8일차', stop: '트링코말리', note: '피전 아일랜드 스노클링과 닐라벨리.' }, { day: '9–10일차', stop: '담불라 & 시기리야', note: '벽화 가득한 석굴 사원과 시기리야 일출 등반.' }] }
   },
   fieldNotes: [

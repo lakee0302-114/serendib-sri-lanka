@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['es'] = {
       titleEm: 'imprescindibles.',
       subcopy: 'Toca foto o título para ver horarios, comida o añadir a tu ruta.',
       filters: {
-        all: 'Todos (18)',
+        all: 'Todos (19)',
         cultural: 'Cultura',
         highlands: 'Montañas',
         south: 'Sur',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['es'] = {
         "seafood": "Marisco fresco",
         "cafe": "Cafés y Veg"
       },
-      "filterAll": "Todos (18)",
+      "filterAll": "Todos (19)",
       "routeOrderHeading": "Visitas, gastronomía y traslados",
       "seeLabel": "Visitar",
       "eatLabel": "Comer",
@@ -351,7 +351,7 @@ window.SERENDIB_LOCALES['es'] = {
       etiquette: 'Barrio residencial — vestir con respeto fuera de la playa.'
     },
     yala: {
-      name: 'Yala y Kumana',
+      name: 'Parque Nacional Yala',
       region: 'Fauna',
       tagline: 'Rocas de granito, lagunas y leopardos salvajes',
       elevation: '45 m',
@@ -360,12 +360,29 @@ window.SERENDIB_LOCALES['es'] = {
       daylightWindow: '05:45–09:30 y 15:30',
       summary: 'Bosque seco y dunas costeras hogar de leopardos, osos perezosos y elefantes.',
       highlights: [
-        'Elegir el Bloque V de Yala o Kumana para evitar multitudes.',
+        'Elegir el Bloque V de Yala para evitar multitudes de jeeps.',
         'Entrar al amanecer con rastreador naturalista privado.',
         'Alojarse en campamentos tras las dunas de Patanangala.'
       ],
       culinaryNote: 'Cuajada de búfala en barro bañada con miel silvestre.',
       etiquette: 'Mantener 30 m de distancia, apagar el motor y evitar flash.'
+    },
+    kumana: {
+      name: 'Santuario de Aves Kumana',
+      region: 'Fauna',
+      tagline: 'Lagunas de manglares tranquilas y cigüeñas pintadas',
+      elevation: '10 m',
+      driveFromColombo: '6h 15',
+      bestTime: 'Abr–Ago',
+      daylightWindow: '06:00–09:30 y 15:30',
+      summary: 'Principal santuario ornitológico costero de Sri Lanka — humedales repletos de cigüeñas pintadas, pelícanos y espátulas.',
+      highlights: [
+        'Visitar la laguna Kumana Villu en la época de cría entre abril y julio.',
+        'Avistar cigüeñas de cuello negro, espátulas y martines pescadores.',
+        'Combinar el safari silencioso al alba con la costa virgen de Panama.'
+      ],
+      culinaryNote: 'Arroz rojo tradicional de Panama servido en hoja de loto.',
+      etiquette: 'Mantener silencio en el 4x4 y respetar las zonas de nidificación.'
     },
     'nuwara-eliya': {
       name: 'Hatton y Tierras del Té',
@@ -511,7 +528,7 @@ window.SERENDIB_LOCALES['es'] = {
       days: [
         { day: 'Día 1', stop: 'Colombo', note: 'Casa Number 11 de Bawa y paseo por Galle Face.' },
         { day: 'Día 2–4', stop: 'Hatton', note: 'Senderos entre antiguos bungalows coloniales.' },
-        { day: 'Día 5–7', stop: 'Yala y Kumana', note: 'Rastreo privado en 4x4 tras huellas de leopardo.' },
+        { day: 'Día 5–7', stop: 'Parque Nacional Yala', note: 'Rastreo privado en 4x4 tras huellas de leopardo.' },
         { day: 'Día 8–11', stop: 'Tangalle y Galle', note: 'Calas vacías y casas coloniales restauradas.' }
       ]
     },

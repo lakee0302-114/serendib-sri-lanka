@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['it'] = {
       titleEm: 'imperdibili.',
       subcopy: 'Tocca foto o titolo per luce migliore, cucina o per salvare la tappa.',
       filters: {
-        all: 'Tutti (18)',
+        all: 'Tutti (19)',
         cultural: 'Cultura',
         highlands: 'Montagne',
         south: 'Sud',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['it'] = {
         "seafood": "Pesce fresco",
         "cafe": "Caffè e Veg"
       },
-      "filterAll": "Tutti (18)",
+      "filterAll": "Tutti (19)",
       "routeOrderHeading": "Visite, cucina e trasferimenti",
       "seeLabel": "Vedere",
       "eatLabel": "Mangiare",
@@ -318,10 +318,16 @@ window.SERENDIB_LOCALES['it'] = {
       culinaryNote: 'Tonno ambul thiyal al tamarindo nero e hoppers.', etiquette: 'Quartiere abitato — abbigliamento sobrio fuori dalla spiaggia.'
     },
     yala: {
-      name: 'Yala & Kumana', region: 'Natura', tagline: 'Graniti selvaggi, lagune e leopardi di Ceylon', elevation: '45 m', driveFromColombo: '4h 45', bestTime: 'Feb–Lug', daylightWindow: '05:45–09:30 e 15:30',
+      name: 'Parco Nazionale Yala', region: 'Natura', tagline: 'Graniti selvaggi, lagune e leopardi di Ceylon', elevation: '45 m', driveFromColombo: '4h 45', bestTime: 'Feb–Lug', daylightWindow: '05:45–09:30 e 15:30',
       summary: 'Boscaglia arida e dune oceaniche abitate da leopardi, orsi ed elefanti.',
-      highlights: ['Scegliere Yala Blocco V o Kumana per evitare folla di jeep.', 'Entrare all’alba con una guida naturalistica privata.', 'Dormire in campi tendati dietro le dune di Patanangala.'],
+      highlights: ['Scegliere il Blocco V di Yala per evitare la folla di jeep.', 'Entrare all’alba con una guida naturalistica privata.', 'Dormire in campi tendati dietro le dune di Patanangala.'],
       culinaryNote: 'Yogurt di bufala in terracotta con miele selvatico.', etiquette: 'Tenere 30 m di distanza, spegnere il motore, niente flash.'
+    },
+    kumana: {
+      name: 'Oasi Uccelli di Kumana', region: 'Natura', tagline: 'Lagune di mangrovie e tantali indiani variopinti', elevation: '10 m', driveFromColombo: '6h 15', bestTime: 'Apr–Ago', daylightWindow: '06:00–09:30 e 15:30',
+      summary: 'Principale santuario costiero per uccelli dello Sri Lanka — specchi d’acqua popolati da cicogne dipinte, pellicani e spatole.',
+      highlights: ['Visitare la laguna di Kumana Villu durante i nidi tra aprile e luglio.', 'Avvistare il raro jabiru asiatico, ibis e martin pescatori.', 'Abbinare safari silenziosi all’alba alle spiagge selvagge di Panama.'],
+      culinaryNote: 'Riso rosso di villaggio avvolto in foglia di loto vicino a Panama.', etiquette: 'Restare in silenzio in jeep e non disturbare mai i nidi sull’acqua.'
     },
     'nuwara-eliya': {
       name: 'Hatton & Monti del Tè', region: 'Montagne', tagline: 'Valli smeraldo, bungalow storici e aria pura', elevation: '1.868 m', driveFromColombo: '4h 30', bestTime: 'Gen–Apr · Ago', daylightWindow: '06:15 – 09:30',
@@ -424,7 +430,7 @@ window.SERENDIB_LOCALES['it'] = {
       days: [
         { day: 'Giorno 1', stop: 'Colombo', note: 'Casa Number 11 di Bawa e sera a Galle Face.' },
         { day: 'Giorno 2–4', stop: 'Hatton', note: 'Camminate fra storici bungalow di piantagione.' },
-        { day: 'Giorno 5–7', stop: 'Yala & Kumana', note: 'Safari 4x4 all’alba sulle tracce dei leopardi.' },
+        { day: 'Giorno 5–7', stop: 'Parco Nazionale Yala', note: 'Safari 4x4 all’alba sulle tracce dei leopardi.' },
         { day: 'Giorno 8–11', stop: 'Tangalle & Galle', note: 'Cale deserte e dimore storiche restaurate.' }
       ]
     },

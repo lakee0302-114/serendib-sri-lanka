@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['de'] = {
       titleEm: 'Reiseziele.',
       subcopy: 'Tippen Sie auf Bild oder Titel für Zeiten, Küche und Planung.',
       filters: {
-        all: 'Alle (18)',
+        all: 'Alle (19)',
         cultural: 'Kultur',
         highlands: 'Hochland',
         south: 'Süden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['de'] = {
         "seafood": "Meeresfrüchte",
         "cafe": "Cafés & Veggie"
       },
-      "filterAll": "Alle (18)",
+      "filterAll": "Alle (19)",
       "routeOrderHeading": "Ziele, Essen & Transfers",
       "seeLabel": "Erleben",
       "eatLabel": "Essen",
@@ -351,7 +351,7 @@ window.SERENDIB_LOCALES['de'] = {
       etiquette: 'Das Fort ist bewohnt — abseits der Strände dezent kleiden.'
     },
     yala: {
-      name: 'Yala & Kumana',
+      name: 'Yala-Nationalpark',
       region: 'Wildnis',
       tagline: 'Granitfelsen, Lagunen & wilde Ceylon-Leoparden',
       elevation: '45 m',
@@ -360,12 +360,29 @@ window.SERENDIB_LOCALES['de'] = {
       daylightWindow: '05:45–09:30 & 15:30',
       summary: 'Trockenbusch trifft Ozeandünen — bekannt für frei lebende Leoparden und Elefanten.',
       highlights: [
-        'Yala Sektor V oder Kumana für ruhigere Pirschfahrten wählen.',
+        'Ruhigeren Sektor V für entspannte Leoparden-Sichtungen wählen.',
         'Morgens beim Toröffnung mit privatem Naturguide starten.',
         'In Zeltcamps hinter den Dünen von Patanangala schlafen.'
       ],
       culinaryNote: 'Frischer Büffeljoghurt (Meekiri) mit wildem Bienenhonig.',
       etiquette: '30 m Abstand halten, Motor abstellen, ohne Blitz fotografieren.'
+    },
+    kumana: {
+      name: 'Kumana-Vogelschutzpark',
+      region: 'Wildnis',
+      tagline: 'Stille Mangrovenlagunen & bunte Nimmersatt-Störche',
+      elevation: '10 m',
+      driveFromColombo: '6h 15',
+      bestTime: 'Apr–Aug',
+      daylightWindow: '06:00–09:30 & 15:30',
+      summary: 'Sri Lankas wichtigstes Vogelparadies — glitzernde Lagunen voller Buntstörche, Pelikane und seltener Wasservögel.',
+      highlights: [
+        'Im Kumana Villu zur Brutzeit von April bis Juli tausende Vögel erleben.',
+        'Seltene Riesenstörche, Löffler und Fischadler am Wasser beobachten.',
+        'Ruhige Morgenpirsch perfekt mit der Ostküste von Panama verbinden.'
+      ],
+      culinaryNote: 'Traditioneller Dorf-Reis in frischem Lotusblatt aus Panama.',
+      etiquette: 'Im leisen Jeep bleiben und Nistplätze am Wasser nicht stören.'
     },
     'nuwara-eliya': {
       name: 'Hatton & Teehochland',
@@ -511,7 +528,7 @@ window.SERENDIB_LOCALES['de'] = {
       days: [
         { day: 'Tag 1', stop: 'Colombo', note: 'Geoffrey Bawas Wohnhaus & Abend am Galle Face.' },
         { day: 'Tag 2–4', stop: 'Hatton', note: 'Wanderungen zwischen kolonialen Tee-Bungalows.' },
-        { day: 'Tag 5–7', stop: 'Yala & Kumana', note: 'Frühe 4x4-Pirschfahrten auf Leoparden-Spur.' },
+        { day: 'Tag 5–7', stop: 'Yala-Nationalpark', note: 'Frühe 4x4-Pirschfahrten auf Leoparden-Spur.' },
         { day: 'Tag 8–11', stop: 'Tangalle & Galle', note: 'Einsame Buchten und Boutique-Stadthäuser.' }
       ]
     },
