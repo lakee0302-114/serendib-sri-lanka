@@ -1063,14 +1063,14 @@
     };
   }
 
-  function buildLegSummaryText(leg, fromLabel, p) {
+  function buildLegSummaryText(leg, fromLabel, toLabel, p) {
     if (!leg) return '';
     var dur = formatDurationMins(leg.mins);
-    var base = fromLabel + ' · ~' + dur + ' ' + p.roadBadge + ' (~' + leg.km + ' km)';
+    var routePair = fromLabel + ' \u2192 ' + toLabel;
     if (leg.scenicHillRail || (leg.railAvailable && state.planner.transport === 'rail')) {
-      return fromLabel + ' · ' + p.scenicRailBadge + ' / ~' + dur + ' (~' + leg.km + ' km)';
+      return routePair + ' \u00B7 ' + p.scenicRailBadge + ' / ~' + dur + ' (~' + leg.km + ' km)';
     }
-    return base;
+    return routePair + ' \u00B7 ~' + dur + ' ' + p.roadBadge + ' (~' + leg.km + ' km)';
   }
 
   function buildDetailedSchedule() {
@@ -1103,7 +1103,7 @@
         nights: nights,
         dayRange: dayRange,
         leg: leg,
-        legText: buildLegSummaryText(leg, prevLabel, p),
+        legText: buildLegSummaryText(leg, prevLabel, stop.name, p),
         dining: getPreferredDining(stop)
       };
     });
@@ -1168,6 +1168,11 @@
     state.planner.confirmed = null;
     state.planner.step = startStep || 1;
     state.planner.month = state.activeMonth;
+
+    if (dom.toast) {
+      dom.toast.classList.remove('is-shown');
+      clearTimeout(toastTimer);
+    }
 
     dom.dossierSheet.classList.remove('is-open');
     dom.routeSheet.classList.remove('is-open');
