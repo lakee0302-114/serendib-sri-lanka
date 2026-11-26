@@ -1069,6 +1069,7 @@
   }
 
   .filter-rail {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1115,10 +1116,7 @@
   }
 
   .mobile-rail-arrows {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    flex-shrink: 0;
+    display: none;
   }
 
   .rail-btn {
@@ -1134,37 +1132,21 @@
     cursor: pointer;
   }
 
-  @media (min-width: 768px) {
-    .mobile-rail-arrows {
-      display: none;
-    }
-  }
-
   .atlas-grid {
-    display: flex;
-    gap: 0.85rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 2px;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
-    scrollbar-width: none;
-  }
-
-  .atlas-grid::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.72rem;
+    overflow: visible;
+    padding-bottom: 0;
   }
 
   .dest-card {
     container-type: inline-size;
-    flex: 0 0 80vw;
-    max-width: 316px;
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     background-color: var(--bg-cream);
     border: 1px solid var(--hairline);
-    border-radius: var(--radius-card);
+    border-radius: 14px;
     box-shadow: var(--shadow-card);
     overflow: hidden;
     position: relative;
@@ -1186,17 +1168,54 @@
     }
   }
 
+  @media (max-width: 767px) {
+    .atlas-grid:not(.is-expanded) .dest-card:nth-child(n + 7) {
+      display: none;
+    }
+    .dest-card__body {
+      padding: 0.56rem 0.62rem 0.62rem;
+    }
+    .dest-card__meta .mono-label {
+      font-size: 0.63rem;
+    }
+    .dest-card__meta .mono-label:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .dest-card__meta .mono-label:last-child {
+      flex-shrink: 0;
+    }
+    .dest-card__title {
+      font-size: 0.88rem;
+      line-height: 1.24;
+      margin: 0 0 0.5rem;
+    }
+    .dest-card__footer {
+      gap: 0.25rem;
+      padding-top: 0.45rem;
+    }
+    .dest-card__footer .text-link-btn {
+      font-size: 0.74rem;
+      min-height: 32px;
+      padding: 0.2rem 0;
+      white-space: nowrap;
+    }
+    .dest-card__footer .add-stop-btn {
+      min-height: 30px;
+      padding: 0.22rem 0.5rem;
+      font-size: 0.71rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
   @media (min-width: 768px) {
     .atlas-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2rem 1.65rem;
-      overflow: visible;
-      padding-bottom: 0;
     }
     .dest-card {
-      flex: initial;
-      max-width: none;
+      border-radius: var(--radius-card);
     }
   }
 
@@ -1217,7 +1236,9 @@
   }
 
   .atlas-expand-wrap {
-    display: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.35rem;
   }
 
   .atlas-expand-wrap[hidden] {
@@ -1226,8 +1247,6 @@
 
   @media (min-width: 768px) {
     .atlas-expand-wrap {
-      display: flex;
-      justify-content: center;
       margin-top: 2rem;
     }
   }
@@ -1255,16 +1274,10 @@
 
   .dest-card__media {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     background-color: var(--bg-sandstone);
     cursor: pointer;
-  }
-
-  @media (min-width: 768px) {
-    .dest-card__media {
-      aspect-ratio: 4 / 3;
-    }
   }
 
   .dest-card__media img {

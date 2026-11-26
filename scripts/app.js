@@ -483,7 +483,7 @@
 
   function updateAtlasExpandUI(totalCount) {
     if (!dom.atlasExpandWrap || !dom.atlasExpandBtn || !dom.atlasExpandLabel || !state.locale) return;
-    var rowCap = window.innerWidth >= 1120 ? 4 : 2;
+    var rowCap = window.innerWidth >= 1120 ? 4 : (window.innerWidth >= 768 ? 2 : 6);
     var needsExpand = totalCount > rowCap;
     dom.atlasGrid.classList.toggle('is-expanded', state.atlasExpanded || !needsExpand);
     dom.atlasExpandWrap.hidden = !needsExpand;
