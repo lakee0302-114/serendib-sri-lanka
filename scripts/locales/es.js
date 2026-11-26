@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['es'] = {
       titleEm: 'imprescindibles.',
       subcopy: 'Toca foto o título para ver horarios, comida o añadir a tu ruta.',
       filters: {
-        all: 'Todos (19)',
+        all: 'Todos (20)',
         cultural: 'Cultura',
         highlands: 'Montañas',
         south: 'Sur',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['es'] = {
         "seafood": "Marisco fresco",
         "cafe": "Cafés y Veg"
       },
-      "filterAll": "Todos (19)",
+      "filterAll": "Todos (20)",
       "routeOrderHeading": "Visitas, gastronomía y traslados",
       "seeLabel": "Visitar",
       "eatLabel": "Comer",
@@ -485,7 +485,8 @@ window.SERENDIB_LOCALES['es'] = {
     },
     'sri-pada': { name: 'Sri Pada (Pico de Adán)', region: 'Montañas', tagline: 'Ascenso nocturno con faroles y sombra triangular al alba', elevation: '2.243 m', driveFromColombo: '4h 15m', bestTime: 'Dic–May', daylightWindow: '05:30 – 07:30', summary: 'La montaña sagrada más venerada se sube antes del amanecer por senderos iluminados.', highlights: ['Empezar en Nallathanniya a las 02:00 con pausas de té caliente.', 'Contemplar la sombra piramidal perfecta sobre el mar de nubes.', 'Tocar la campana sagrada de la cima junto a peregrinos locales.'], culinaryNote: 'Té especiado y vadais crujientes en puestos nocturnos.', etiquette: 'Llevar ropa de abrigo para los 8°C de la cumbre.' },
     pinnawala: { name: 'Santuario de Elefantes de Pinnawala', region: 'Fauna', tagline: 'Manadas y crías de elefante bañándose en el río Maha Oya', elevation: '125 m', driveFromColombo: '2h 30m', bestTime: 'Todo el año', daylightWindow: '10:00 y 14:00 Baño', summary: 'Famoso santuario fluvial junto al río Maha Oya donde las familias de elefantes se refrescan dos veces al día.', highlights: ['Ver bañarse a decenas de elefantes en el río a las 10:00 y las 14:00.', 'Observar de cerca el cariño entre crías y madres desde terrazas sombreadas.', 'Parada ideal camino entre el aeropuerto de Colombo y las colinas de Kandy.'], culinaryNote: 'Arroz y currys tradicionales servidos en miradores sobre el río.', etiquette: 'Mantener silencio y observar sin tocar ni asustar a las crías.' },
-    riverston: { name: 'Riverston', region: 'Montañas', tagline: 'Cumbres ventosas, llanuras Pitawala y Mini World’s End', elevation: '1.420 m', driveFromColombo: '4h 15m', bestTime: 'Feb–May · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Paso de montaña brumoso en Matale famoso por sus praderas en acantilado, cascadas con cueva y valles verdes.', highlights: ['Caminar hasta el acantilado Mini World’s End sobre valles esmeralda.', 'Cruzar tras el velo de agua en la cascada Sera Ella.', 'Sentir la brisa de altura en la ruta escénica de Riverston Peak.'], culinaryNote: 'Dulces de mijo con miel de palma y curries caseros de montaña.', etiquette: 'Alejarse del borde del abismo si baja niebla densa y usar guía local.' }
+    riverston: { name: 'Riverston', region: 'Montañas', tagline: 'Cumbres ventosas, llanuras Pitawala y Mini World’s End', elevation: '1.420 m', driveFromColombo: '4h 15m', bestTime: 'Feb–May · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Paso de montaña brumoso en Matale famoso por sus praderas en acantilado, cascadas con cueva y valles verdes.', highlights: ['Caminar hasta el acantilado Mini World’s End sobre valles esmeralda.', 'Cruzar tras el velo de agua en la cascada Sera Ella.', 'Sentir la brisa de altura en la ruta escénica de Riverston Peak.'], culinaryNote: 'Dulces de mijo con miel de palma y curries caseros de montaña.', etiquette: 'Alejarse del borde del abismo si baja niebla densa y usar guía local.' },
+    peradeniya: { name: 'Jardín Botánico de Peradeniya', region: 'Cultura', tagline: 'Avenida de palmas reales, orquidario y ficus gigante', elevation: '460 m', driveFromColombo: '3h 20', bestTime: 'Ene–Abr · Jul–Sep', daylightWindow: '07:30 – 10:30 y 16:00', summary: 'Exuberante jardín histórico rodeado por el río Mahaweli, célebre por sus avenidas de palmeras, colección de orquídeas y árboles centenarios.', highlights: ['Recorrer la majestuosa avenida doble de palmas reales.', 'Visitar el conservatorio de orquídeas y estanques de nenúfares.', 'Descansar bajo la copa inmensa de la higuera gigante de Java.'], culinaryNote: 'Té helado de Ceilán y frutas frescas junto al río Mahaweli.', etiquette: 'Seguir los senderos cuidados y no arrancar flores ni especias.' }
   },
   months: {
     JAN: { short: 'ENE', fullName: 'Enero', headline: 'Estación Seca — Oeste, Sur y Montañas', summary: 'Mañanas frescas, mar calmo al sur y safaris despejados.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Sol Pleno', note: 'Mar en calma y ballenas cerca de Mirissa.' }, highlands: { status: 'Claro', note: 'Pasos despejados y tardes frescas.' }, cultural: { status: 'Seco', note: 'Mañanas suaves en ruinas históricas.' }, northeast: { status: 'Lluvias', note: 'Mar movido al este; Jaffna seco.' } } },

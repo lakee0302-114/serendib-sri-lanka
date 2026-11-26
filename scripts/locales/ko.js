@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['ko'] = {
       titleEm: '주요 명소.',
       subcopy: '장소를 눌러 최적의 빛 시간, 현지 음식, 루트 저장을 확인하세요.',
       filters: {
-        all: '전체 (19)',
+        all: '전체 (20)',
         cultural: '문화유적',
         highlands: '고원',
         south: '남부',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['ko'] = {
         "seafood": "해산물 요리",
         "cafe": "카페·채식"
       },
-      "filterAll": "전체 (19)",
+      "filterAll": "전체 (20)",
       "routeOrderHeading": "명소·맛집·이동 경로",
       "seeLabel": "관광",
       "eatLabel": "맛집",
@@ -317,7 +317,8 @@ window.SERENDIB_LOCALES['ko'] = {
     colombo: { name: '콜롬보 & 갈 페이스', region: '남·서부', tagline: '고풍스러운 아치 건축, 페타 향신료 골목과 바다 노을', elevation: '해수면', driveFromColombo: '관문 도시', bestTime: '12–4월', daylightWindow: '17:00 – 19:00', summary: '식민지 시대 박물관과 붉은 모스크, 해변 산책로가 공존하는 활기찬 관문 도시.', highlights: ['붉고 흰 줄무늬의 자미 울 알파르 모스크와 페타 시장 골목 탐험.', '콜롬보 국립 박물관에서 스리랑카 왕실 유물과 예술 감상.', '해질녘 갈 페이스 그린 산책로에서 바삭한 새우 와데이 맛보기.'], culinaryNote: '블랙 페퍼 크랩 요리 또는 페타 야시장의 매콤한 코투 로티.', etiquette: '습한 오후에는 충분히 수분을 섭취하고 툭툭 이용 시 미터기 요금을 확인하세요.' },
     'sri-pada': { name: '스리 파다 (아담스 피크)', region: '고원지대', tagline: '새벽 등불 산행과 구름 위 삼각형 그림자', elevation: '2,243m', driveFromColombo: '차량 4시간 15분', bestTime: '12–5월 (순례 시즌)', daylightWindow: '05:30 – 07:30', summary: '불빛이 이어진 계단을 따라 새벽 전에 올라 일출을 맞이하는 신성한 원뿔형 영산.', highlights: ['오전 2시 날라타니야에서 출발해 따뜻한 차를 마시며 등반.', '아침 안개 위로 선명히 드리우는 산의 삼각 그림자 감상.', '정상 사원에서 현지 순례자들과 함께 종을 울려 보기.'], culinaryNote: '산길 찻집에서 마시는 뜨거운 생강차와 바삭한 와다이.', etiquette: '정상 일출 무렵 기온이 8°C까지 떨어지므로 따뜻한 겉옷을 챙기세요.' },
     pinnawala: { name: '핀나왈라 코끼리 고아원', region: '야생동물', tagline: '마하 오야 강에서 목욕하는 어미와 아기 코끼리 떼', elevation: '125m', driveFromColombo: '차량 2시간 30분', bestTime: '연중 무휴', daylightWindow: '10:00 & 14:00 강물 목욕', summary: '매일 두 차례 마하 오야 강가에 코끼리 가족과 어린 코끼리들이 모여 목욕하는 명소.', highlights: ['오전 10시와 오후 2시 강물에서 물놀이하는 코끼리 무리 감상.', '강변 테라스에서 어미 코끼리에 기대는 아기 코끼리 관찰.', '콜롬보 공항과 캔디 이동 중 편리하게 들를 수 있는 코스.'], culinaryNote: '코끼리 강변이 내려다보이는 야외 데크에서 즐기는 뚝배기 커리.', etiquette: '전망 데크에서 조용히 감상하고 아기 코끼리를 놀라게 하지 마세요.' },
-    riverston: { name: '리버스턴', region: '고원지대', tagline: '시원한 바람 고개, 피타왈라 평원 & 미니 세상의 끝', elevation: '1,420m', driveFromColombo: '차량 4시간 15분', bestTime: '2–5월 · 7–9월', daylightWindow: '06:30 – 11:00', summary: '마탈레 산악지대에 자리한 안개 고개로 피타왈라 파타나 절벽 초원과 계곡 폭포로 유명합니다.', highlights: ['푸른 협곡을 내려다보는 미니 세상의 끝 절벽 전망대 산책.', '맑은 세라 엘라 폭포 물줄기 뒤쪽 동굴 길 탐방.', '시원한 산바람이 부는 리버스턴 피크 능선 트레킹.'], culinaryNote: '야자 시럽을 넣은 기장 전통 떡(할라페)과 시골 채소 커리.', etiquette: '짙은 안개가 끼면 절벽 끝에 너무 가까이 가지 말고 현지 가이드와 동행하세요.' }
+    riverston: { name: '리버스턴', region: '고원지대', tagline: '시원한 바람 고개, 피타왈라 평원 & 미니 세상의 끝', elevation: '1,420m', driveFromColombo: '차량 4시간 15분', bestTime: '2–5월 · 7–9월', daylightWindow: '06:30 – 11:00', summary: '마탈레 산악지대에 자리한 안개 고개로 피타왈라 파타나 절벽 초원과 계곡 폭포로 유명합니다.', highlights: ['푸른 협곡을 내려다보는 미니 세상의 끝 절벽 전망대 산책.', '맑은 세라 엘라 폭포 물줄기 뒤쪽 동굴 길 탐방.', '시원한 산바람이 부는 리버스턴 피크 능선 트레킹.'], culinaryNote: '야자 시럽을 넣은 기장 전통 떡(할라페)과 시골 채소 커리.', etiquette: '짙은 안개가 끼면 절벽 끝에 너무 가까이 가지 말고 현지 가이드와 동행하세요.' },
+    peradeniya: { name: '페라데니야 왕립 식물원', region: '문화유산', tagline: '왕실 야자수 길, 난초 온실 & 거대한 반얀트리', elevation: '460m', driveFromColombo: '차량 3시간 20분', bestTime: '1–4월 · 7–9월', daylightWindow: '07:30 – 10:30 & 16:00', summary: '마하웰리 강 굽이에 펼쳐진 약 60헥타르 규모의 왕립 식물원으로, 하늘로 뻗은 야자수 가로수와 희귀 난초 정원이 장관입니다.', highlights: ['양옆으로 곧게 솟은 상징적인 로얄 팜 애비뉴 가로수길 산책.', '화려한 열대 난초 온실과 수련 연못 반영 감상.', '드넓은 잔디밭을 덮는 거대한 자바 무화과나무 아래에서 휴식.'], culinaryNote: '마하웰리 강변에서 즐기는 시원한 실론 아이스티와 열대 과일 플래터.', etiquette: '정해진 산책로를 따라 걸으며 희귀 난초나 향신료 식물을 꺾지 마세요.' }
   },
   months: {
     JAN: { short: '1월', fullName: '1월', headline: '건기 절정 — 서·남부 & 산악', summary: '맑은 고원 아침, 잔잔한 남쪽 바다, 뛰어난 사파리 시야.', festival: '두루투 페라헤라 · 타이 퐁갈', verdicts: { south: { status: '쾌청', note: '잔잔한 바다와 미리사 고래 시즌.' }, highlands: { status: '맑음', note: '시원한 산악 패스와 상쾌한 밤.' }, cultural: { status: '건조', note: '유적 산책하기 좋은 온화한 아침.' }, northeast: { status: '소나기', note: '동해안 파도 높음; 자프나는 대체로 맑음.' } } },

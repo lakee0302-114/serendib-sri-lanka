@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SERENDIB — Structural Metadata (19 Top Attractions & Twin Monsoons)
+   SERENDIB — Structural Metadata (20 Top Attractions & Twin Monsoons)
    ========================================================================== */
 
 (function () {
@@ -22,7 +22,7 @@
       coords: "07°17'37\"N · 80°38'29\"E",
       idealNights: 2,
       image: './assets/images/kandy-temple.jpg',
-      imageAlt: 'Temple of the Sacred Tooth Relic in Kandy reflecting across calm water and palm gardens'
+      imageAlt: 'Sunlit octagonal Paththirippuwa pavilion of the Sacred Temple of the Tooth in Kandy framed by Buddhist flags'
     },
     {
       id: 'ella',
@@ -193,6 +193,16 @@
       idealNights: 1,
       image: './assets/images/pinnawala-elephants.jpg',
       imageAlt: 'Sri Lankan elephant family with baby reaching trunk onto its mother while bathing in golden Maha Oya river at Pinnawala'
+    },
+    {
+      id: 'peradeniya',
+      number: '20',
+      sinhala: 'පේරාදෙණිය උද්‍යානය',
+      regionKey: 'cultural',
+      coords: "07°16'16\"N · 80°35'48\"E",
+      idealNights: 1,
+      image: './assets/images/peradeniya-garden.jpg',
+      imageAlt: 'Botanical glasshouse conservatory reflected in a serene water-lily pool surrounded by giant canopy trees at Peradeniya Royal Botanical Gardens'
     }
   ];
 
@@ -246,7 +256,8 @@
     colombo: { coords: [6.9271, 79.8612], rail: true, highland: false },
     'sri-pada': { coords: [6.8096, 80.4994], rail: true, highland: true },
     riverston: { coords: [7.5283, 80.7386], rail: false, highland: true },
-    pinnawala: { coords: [7.3011, 80.3869], rail: true, highland: false }
+    pinnawala: { coords: [7.3011, 80.3869], rail: true, highland: false },
+    peradeniya: { coords: [7.2712, 80.5966], rail: true, highland: true }
   };
 
   var DINING_GUIDE = {
@@ -326,6 +337,10 @@
     pinnawala: [
       { style: 'local', spot: 'Maha Oya Riverside Veranda Rice & Curry', detail: 'Open-air river deck overlooking bathing elephants with clay-pot curries' },
       { style: 'cafe', spot: 'Rambukkana Spice & King Coconut Pavilion', detail: 'Chilled thambili, fresh jaggery sweets & sunlit river breeze' }
+    ],
+    peradeniya: [
+      { style: 'cafe', spot: 'Royal Garden Courtyard & Spice Tea Pavilion', detail: 'Chilled Ceylon iced tea, fresh tropical fruits & colonial veranda cakes beneath giant fig trees' },
+      { style: 'local', spot: 'Mahaweli Riverbank Kandyan Rice & Curry', detail: 'Traditional clay-pot mountain curries & jackfruit mallung beside Peradeniya bridge' }
     ]
   };
 

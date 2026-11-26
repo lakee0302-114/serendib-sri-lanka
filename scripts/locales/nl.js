@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['nl'] = {
       titleEm: 'op het eiland.',
       subcopy: 'Tik op foto of titel voor beste tijd, keuken of opslaan.',
       filters: {
-        all: 'Alles (19)',
+        all: 'Alles (20)',
         cultural: 'Cultuur',
         highlands: 'Hoogland',
         south: 'Zuiden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['nl'] = {
         "seafood": "Verse vis",
         "cafe": "Cafés & Vega"
       },
-      "filterAll": "Alles (19)",
+      "filterAll": "Alles (20)",
       "routeOrderHeading": "Plekken, eten & vervoer",
       "seeLabel": "Zien",
       "eatLabel": "Eten",
@@ -397,7 +397,8 @@ window.SERENDIB_LOCALES['nl'] = {
     },
     'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hooglanden', tagline: 'Heilige nachtbeklimming langs lantaarns & driehoekige zonsopgang', elevation: '2.243 m', driveFromColombo: '4u 15', bestTime: 'Dec–Mei', daylightWindow: '05:30 – 07:30', summary: 'Iconische heilige bergtop die voor zonsopgang over verlichte trappen wordt beklommen.', highlights: ['Start rond 02:00 uur vanuit Nallathanniya met warme theepauzes.', 'Zie de beroemde scherpe bergschaduw over het wolkendek.', 'Luid de tempelbel op de top naast pelgrims uit het hele land.'], culinaryNote: 'Warme gemberthee en krokante linzenbeignets onderweg.', etiquette: 'Neem een warme jas mee voor de 8°C koude ochtendwind.' },
     pinnawala: { name: 'Pinnawala Olifantenweeshuis', region: 'Wildernis', tagline: 'Aziatische olifantenkuddes die baden in de Maha Oya-rivier', elevation: '125 m', driveFromColombo: '2u 30', bestTime: 'Hele jaar', daylightWindow: '10:00 & 14:00 Rivierbad', summary: 'Beroemd opvangreservaat aan de Maha Oya waar olifantenfamilies en jongen tweemaal daags komen baden.', highlights: ['Zie tientallen olifanten om 10:00 en 14:00 uur samen baden in de rivier.', 'Bewonder speelse jongen en moeders vanaf de schaduwrijke oeverterrassen.', 'Ideale tussenstop tussen Colombo Airport en het heuvelland rond Kandy.'], culinaryNote: 'Rijst en curry uit kleipotten op balkons met uitzicht over de rivier.', etiquette: 'Blijf rustig op de uitkijkterrassen en raak de jonge olifanten niet aan.' },
-    riverston: { name: 'Riverston', region: 'Hooglanden', tagline: 'Winderige bergpas, Pitawala-vlakte & Mini World’s End', elevation: '1.420 m', driveFromColombo: '4u 15', bestTime: 'Feb–Mei · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Spectaculaire bergpas nabij Matale met het klifplateau van Pitawala Pathana, grotten achter watervallen en groene valleien.', highlights: ['Wandel naar de klif van Mini World’s End boven groene valleien.', 'Loop achter het watergordijn van de Sera Ella-waterval.', 'Voel de koele bergwind langs de pas van Riverston Peak.'], culinaryNote: 'Dorpstraktatie van gierstkoekjes met palmsiroop en curries.', etiquette: 'Blijf bij plotselinge mist weg van de afgrond en neem een lokale gids.' }
+    riverston: { name: 'Riverston', region: 'Hooglanden', tagline: 'Winderige bergpas, Pitawala-vlakte & Mini World’s End', elevation: '1.420 m', driveFromColombo: '4u 15', bestTime: 'Feb–Mei · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Spectaculaire bergpas nabij Matale met het klifplateau van Pitawala Pathana, grotten achter watervallen en groene valleien.', highlights: ['Wandel naar de klif van Mini World’s End boven groene valleien.', 'Loop achter het watergordijn van de Sera Ella-waterval.', 'Voel de koele bergwind langs de pas van Riverston Peak.'], culinaryNote: 'Dorpstraktatie van gierstkoekjes met palmsiroop en curries.', etiquette: 'Blijf bij plotselinge mist weg van de afgrond en neem een lokale gids.' },
+    peradeniya: { name: 'Botanische Tuinen Peradeniya', region: 'Cultuur', tagline: 'Koningspalmenlaan, orchideeënkas & reuzenficus', elevation: '460 m', driveFromColombo: '3u 20', bestTime: 'Jan–Apr · Jul–Sep', daylightWindow: '07:30 – 10:30 & 16:00', summary: 'Weelderige koninklijke tuin langs de Mahaweli-rivier met beroemde palmenlanen, bloeiende orchideeën en eeuwenoude bomen.', highlights: ['Slenter door de imposante dubbele laan met koningspalmen.', 'Bezoek de tropische orchideeënkas en de serene waterlelievijvers.', 'Ontspan onder het enorme bladerdak van de Javaanse reuzenficus.'], culinaryNote: 'Gekoelde Ceylon-ijsthee en tropisch fruit langs de oever van de Mahaweli.', etiquette: 'Blijf op de aangelegde paden en raak geen zeldzame bloemen aan.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januari', headline: 'Droogseizoen — West, Zuid & Heuvels', summary: 'Frisse ochtenden in de bergen en kalme zuidzee.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Zonnig', note: 'Vlak water en walvissen bij Mirissa.' }, highlands: { status: 'Helder', note: 'Strakke uitzichten en koele avonden.' }, cultural: { status: 'Droog', note: 'Aangenaam licht over oude steden.' }, northeast: { status: 'Buien', note: 'Ruwe oostzee; Jaffna meestal droog.' } } },

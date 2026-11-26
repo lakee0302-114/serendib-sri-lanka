@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['en'] = {
       titleEm: 'destinations.',
       subcopy: 'Tap any place for details or add to your route.',
       filters: {
-        all: 'All (19)',
+        all: 'All (20)',
         cultural: 'Cultural',
         highlands: 'Highlands',
         south: 'South & West',
@@ -183,7 +183,7 @@ window.SERENDIB_LOCALES['en'] = {
       clearStops: 'Clear',
       monthHeading: 'Travel Month',
       destinationsHeading: 'Pick places, reorder route & adjust nights ({count} picked)',
-      filterAll: 'All (19)',
+      filterAll: 'All (20)',
       travelersLabel: 'How many guests?',
       nightsAutoHint: 'Suggested length: {nights} nights',
       stayHeading: 'Where would you like to stay?',
@@ -612,6 +612,23 @@ window.SERENDIB_LOCALES['en'] = {
       ],
       culinaryNote: 'Village kithul-sweetened kurakkan halape and warm mountain rice & curry.',
       etiquette: 'Stay clear of sheer cliff drops during sudden clouds and hire a local guide.'
+    },
+    peradeniya: {
+      name: 'Peradeniya Botanical Garden',
+      region: 'Cultural',
+      tagline: 'Royal palm avenues, orchid conservatory & giant bamboo',
+      elevation: '460m',
+      driveFromColombo: '3h 20m',
+      bestTime: 'Jan–Apr · Jul–Sep',
+      daylightWindow: '07:30 – 10:30 & 16:00',
+      summary: 'Sri Lanka’s lush 147-acre botanical sanctuary beside a horseshoe bend of the Mahaweli River, famed for towering royal palms, orchids, and century-old Javan fig trees.',
+      highlights: [
+        'Walk beneath soaring twin rows along the iconic Royal Palm Avenue.',
+        'Explore the vibrant tropical orchid glasshouse and lily reflection pools.',
+        'Rest beneath the immense umbrella canopy of the Giant Javan Fig tree.'
+      ],
+      culinaryNote: 'Chilled Ceylon iced tea and tropical fruit platters beside the Mahaweli river.',
+      etiquette: 'Keep to manicured pathways and never pluck rare orchids or spice flora.'
     }
   },
   months: {

@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['zh'] = {
       titleEm: '精选风景。',
       subcopy: '点击任一站查看最佳采光时段、风味美食或加入行程。',
       filters: {
-        all: '全部 (19)',
+        all: '全部 (20)',
         cultural: '文化三角',
         highlands: '高山茶园',
         south: '南岸海湾',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['zh'] = {
         "seafood": "现烤海鲜",
         "cafe": "精品咖啡与素食"
       },
-      "filterAll": "全部 (19)",
+      "filterAll": "全部 (20)",
       "routeOrderHeading": "景点、餐厅与交通接驳",
       "seeLabel": "游览",
       "eatLabel": "餐饮",
@@ -317,7 +317,8 @@ window.SERENDIB_LOCALES['zh'] = {
     colombo: { name: '科伦坡与加勒菲斯绿地', region: '南与西岸', tagline: '殖民拱廊建筑、贝塔香料巷与海滨落日', elevation: '海平面', driveFromColombo: '国际门户', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: '温润热闹的海滨首府，交融古典博物长廊、红白清真寺与海岸长堤。', highlights: ['探访红白砖砌的加米乌尔阿尔法清真寺与贝塔市集老巷。', '步入科伦坡国家博物馆欣赏斯里兰卡历代珍藏展厅。', '傍晚在加勒菲斯绿地品尝酥香鲜虾炸饼观海霞。'], culinaryNote: '招牌黑胡椒螃蟹或贝塔夜市火热铁板炒饼。', etiquette: '午后湿热注意补水，搭乘突突车请优先要求打表计费。' },
     'sri-pada': { name: '圣足山（亚当峰）', region: '高地茶园', tagline: '星夜灯火朝圣阶梯与日出三角山影', elevation: '2,243米', driveFromColombo: '车程4小时15分', bestTime: '12–5月（朝圣季）', daylightWindow: '05:30 – 07:30 峰顶', summary: '沿着灯火通明的千年山阶黎明前登顶，俯瞰云海之上清晰的金字塔形山影。', highlights: ['凌晨两点从纳拉塔尼亚出发，沿途在茶棚歇脚取暖。', '日出瞬间见证投射在晨雾云海上的完美三角山影。', '在多信仰共仰的山顶圣殿敲响平安钟声。'], culinaryNote: '夜间山路茶摊供应的滚烫姜茶与香脆扁豆酥饼。', etiquette: '山顶黎明气温仅约8°C且海风劲吹，务必随身携带保暖外套。' },
     pinnawala: { name: '品纳维拉大象孤儿院', region: '野生动物', tagline: '马哈奥亚河畔戏水沐浴的象群与温情母子', elevation: '125米', driveFromColombo: '车程2小时30分', bestTime: '全年皆宜', daylightWindow: '10:00 与 14:00 河浴', summary: '马哈奥亚河谷旁著名的象群家园，每天两次成群象妈与幼象下河洗浴嬉戏。', highlights: ['每天10:00与14:00观看成群大象步入河道喷水洗浴。', '在河畔观景茶座近看幼象依偎象妈妈的温情画面。', '往返科伦坡机场与康提古城沿途即可顺道探访。'], culinaryNote: '河景露台上边赏大象河浴边享传统瓦罐米饭咖喱。', etiquette: '请在河岸观景平台安静观赏，切勿惊扰或触碰幼象。' },
-    riverston: { name: '里弗斯顿风口（Riverston）', region: '高地茶园', tagline: '云雾风口隘道、皮塔瓦拉高原与小世界尽头崖壁', elevation: '1,420米', driveFromColombo: '车程4小时15分', bestTime: '2–5月 · 7–9月', daylightWindow: '06:30 – 11:00', summary: '马特莱山区风起云涌的避暑垭口，以皮塔瓦拉草甸悬崖、瀑布岩洞和翠绿峡谷而闻名。', highlights: ['漫步皮塔瓦拉草甸直至俯瞰壮阔绿谷的小世界尽头悬崖。', '绕行晶莹的塞拉埃拉瀑布背后水帘洞与山涧吊桥。', '沿着清风拂面的里弗斯顿峰脊道感受高地云雾流动。'], culinaryNote: '村落自制棕榈蜜粟米糕配乡野山蔬咖喱。', etiquette: '起大雾时请远离悬崖边缘，建议聘请当地向导同行。' }
+    riverston: { name: '里弗斯顿风口（Riverston）', region: '高地茶园', tagline: '云雾风口隘道、皮塔瓦拉高原与小世界尽头崖壁', elevation: '1,420米', driveFromColombo: '车程4小时15分', bestTime: '2–5月 · 7–9月', daylightWindow: '06:30 – 11:00', summary: '马特莱山区风起云涌的避暑垭口，以皮塔瓦拉草甸悬崖、瀑布岩洞和翠绿峡谷而闻名。', highlights: ['漫步皮塔瓦拉草甸直至俯瞰壮阔绿谷的小世界尽头悬崖。', '绕行晶莹的塞拉埃拉瀑布背后水帘洞与山涧吊桥。', '沿着清风拂面的里弗斯顿峰脊道感受高地云雾流动。'], culinaryNote: '村落自制棕榈蜜粟米糕配乡野山蔬咖喱。', etiquette: '起大雾时请远离悬崖边缘，建议聘请当地向导同行。' },
+    peradeniya: { name: '佩拉德尼亚皇家植物园', region: '文化古城', tagline: '皇家棕榈大道、热带兰花温室与百年巨榕', elevation: '460米', driveFromColombo: '车程3小时20分', bestTime: '1–4月 · 7–9月', daylightWindow: '07:30 – 10:30 / 16:00', summary: '马哈威利河畔占地147英亩的古老皇家植物园，以笔直入云的棕榈大道、稀有兰花温室和遮天巨榕闻名。', highlights: ['漫步极具仪式感的双排皇家棕榈树大道。', '探访绚丽的热带兰花玻璃花房与静谧睡莲倒影池。', '在广阔绿茵草坪上的百年巨型爪哇榕树冠下乘凉歇息。'], culinaryNote: '马哈威利河畔享用冰镇锡兰红茶与新鲜热带果盘。', etiquette: '请沿园区步道漫步，切勿采摘珍稀兰花及香料植物。' }
   },
   months: {
     JAN: { short: '1月', fullName: '1月', headline: '干季巅峰 — 西南岸与茶山', summary: '山地清晨干爽、南部海水澄澈、国家公园易见猎豹。', festival: '杜鲁图游行 · 泰米尔丰收节', verdicts: { south: { status: '晴空艳阳', note: '海平如镜，美蕊沙蓝鲸活跃。' }, highlands: { status: '晴朗微凉', note: '山口明净，夜间添衣保暖。' }, cultural: { status: '干爽宜人', note: '古城正午少雨适合漫游。' }, northeast: { status: '阵雨', note: '东海多浪，贾夫纳大部晴干。' } } },

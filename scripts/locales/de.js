@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['de'] = {
       titleEm: 'Reiseziele.',
       subcopy: 'Tippen Sie auf Bild oder Titel für Zeiten, Küche und Planung.',
       filters: {
-        all: 'Alle (19)',
+        all: 'Alle (20)',
         cultural: 'Kultur',
         highlands: 'Hochland',
         south: 'Süden',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['de'] = {
         "seafood": "Meeresfrüchte",
         "cafe": "Cafés & Veggie"
       },
-      "filterAll": "Alle (19)",
+      "filterAll": "Alle (20)",
       "routeOrderHeading": "Ziele, Essen & Transfers",
       "seeLabel": "Erleben",
       "eatLabel": "Essen",
@@ -485,7 +485,8 @@ window.SERENDIB_LOCALES['de'] = {
     },
     'sri-pada': { name: 'Sri Pada (Adam’s Peak)', region: 'Hochland', tagline: 'Heiliger Laternenaufstieg & dreieckiger Gipfelschatten', elevation: '2.243 m', driveFromColombo: '4 Std. 15 Min.', bestTime: 'Dez–Mai', daylightWindow: '05:30 – 07:30', summary: 'Der heilige Kegelberg wird nachts entlang beleuchteter Stufen bis zum Sonnenaufgang bestiegen.', highlights: ['Um 02:00 Uhr bei Nallathanniya starten und an Teeständen pausieren.', 'Das perfekte Schattendreieck über den Nebeltälern sehen.', 'Die Tempelglocke auf dem friedlichen Gipfel läuten.'], culinaryNote: 'Heißer Ingwertee und knusprige Vadais an den Wegständen.', etiquette: 'Warme Kleidung für 8°C Gipfelwind mitbringen.' },
     pinnawala: { name: 'Pinnawala Elefantenwaisenhaus', region: 'Wildnis', tagline: 'Asiatische Elefantenherden beim Flussbad im Maha Oya', elevation: '125 m', driveFromColombo: '2 Std. 30 Min.', bestTime: 'Ganzjährig', daylightWindow: '10:00 & 14:00 Flussbad', summary: 'Berühmtes Flussschutzgebiet am Maha Oya, wo Elefantenfamilien und Jungtiere zweimal täglich gemeinsam baden.', highlights: ['Um 10:00 und 14:00 Uhr Dutzende Elefanten im fließenden Wasser beobachten.', 'Verspielte Elefantenkälber und Muttertiere von den schattigen Terrassen erleben.', 'Perfekter Zwischenstopp zwischen Colombo und den Hügeln von Kandy.'], culinaryNote: 'Reis und Tontopf-Curry mit Blick auf die badende Herde am Fluss.', etiquette: 'Die Tiere ruhig von den Uferterrassen betrachten, ohne Jungtiere zu stören.' },
-    riverston: { name: 'Riverston', region: 'Hochland', tagline: 'Windiger Nebelpass, Pitawala-Ebenen & Mini World’s End', elevation: '1.420 m', driveFromColombo: '4 Std. 15 Min.', bestTime: 'Feb–Mai · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Spektakulärer Gebirgspass bei Matale mit Grasplateaus, versteckten Wasserfallhöhlen und weiten Tälern.', highlights: ['Zum Steilabbruch Mini World’s End auf dem Pitawala Pathana wandern.', 'Hinter den rauschenden Wasserschleier von Sera Ella klettern.', 'Über den kühlen, windumtosten Berggrat zum Riverston Peak laufen.'], culinaryNote: 'Süßer Hirse-Snack mit Palmhonig und würziges Bergdorf-Curry.', etiquette: 'Bei dichtem Nebel Abstand zur Klippe halten und lokalen Guide wählen.' }
+    riverston: { name: 'Riverston', region: 'Hochland', tagline: 'Windiger Nebelpass, Pitawala-Ebenen & Mini World’s End', elevation: '1.420 m', driveFromColombo: '4 Std. 15 Min.', bestTime: 'Feb–Mai · Jul–Sep', daylightWindow: '06:30 – 11:00', summary: 'Spektakulärer Gebirgspass bei Matale mit Grasplateaus, versteckten Wasserfallhöhlen und weiten Tälern.', highlights: ['Zum Steilabbruch Mini World’s End auf dem Pitawala Pathana wandern.', 'Hinter den rauschenden Wasserschleier von Sera Ella klettern.', 'Über den kühlen, windumtosten Berggrat zum Riverston Peak laufen.'], culinaryNote: 'Süßer Hirse-Snack mit Palmhonig und würziges Bergdorf-Curry.', etiquette: 'Bei dichtem Nebel Abstand zur Klippe halten und lokalen Guide wählen.' },
+    peradeniya: { name: 'Botanischer Garten Peradeniya', region: 'Kultur', tagline: 'Königspalmen-Allee, Orchideenhaus & Riesen-Feigenbaum', elevation: '460 m', driveFromColombo: '3h 20', bestTime: 'Jan–Apr · Jul–Sep', daylightWindow: '07:30 – 10:30 & 16:00', summary: 'Üppiger 60-Hektar-Park in einer Schleife des Mahaweli-Flusses mit berühmter Königspalmen-Allee, Orchideen und Gewürzbäumen.', highlights: ['Durch die majestätische Allee der Königspalmen flanieren.', 'Im blühenden Orchideenhaus und an ruhigen Seerosenteichen verweilen.', 'Im Schatten des riesigen Java-Feigenbaums auf weiten Wiesen rasten.'], culinaryNote: 'Eisgekühlter Ceylon-Tee und tropisches Obst am Ufer des Mahaweli.', etiquette: 'Auf den gepflegten Wegen bleiben und keine seltenen Blüten pflücken.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Januar', headline: 'Trockenzeit — West, Süd & Berge', summary: 'Klare Bergmorgen, ruhiges Südmeer und beste Safari-Sicht.', festival: 'Duruthu Perahera · Thai Pongal.', verdicts: { south: { status: 'Sonne', note: 'Ruhige See & Blauwale vor Mirissa.' }, highlands: { status: 'Klar & Kühl', note: 'Klare Pässe und frische Abende.' }, cultural: { status: 'Trocken', note: 'Angenehme Morgen in Königsstädten.' }, northeast: { status: 'Schauer', note: 'Ostküste wellig; Jaffna meist trocken.' } } },

@@ -73,7 +73,7 @@ window.SERENDIB_LOCALES['fr'] = {
       titleEm: 'incontournables.',
       subcopy: 'Touchez une étape pour la lumière idéale, la table ou votre circuit.',
       filters: {
-        all: 'Tous (19)',
+        all: 'Tous (20)',
         cultural: 'Culture',
         highlands: 'Montagnes',
         south: 'Sud',
@@ -239,7 +239,7 @@ window.SERENDIB_LOCALES['fr'] = {
         "seafood": "Fruits de mer",
         "cafe": "Cafés & Végé"
       },
-      "filterAll": "Tout (19)",
+      "filterAll": "Tout (20)",
       "routeOrderHeading": "Visites, tables & trajets",
       "seeLabel": "Visiter",
       "eatLabel": "Manger",
@@ -485,7 +485,8 @@ window.SERENDIB_LOCALES['fr'] = {
     },
     'sri-pada': { name: 'Sri Pada (Pic d’Adam)', region: 'Hauts Plateaux', tagline: 'Ascension nocturne aux lanternes et ombre sacrée à l’aube', elevation: '2 243 m', driveFromColombo: '4h 15', bestTime: 'Déc–Mai', daylightWindow: '05:30 – 07:30', summary: 'Montagne sacrée gravie de nuit sous des guirlandes lumineuses jusqu’au lever du soleil.', highlights: ['Départ à 02h00 depuis Nallathanniya entre deux tasses de thé chaud.', 'Observer l’ombre pyramidale parfaite sur la mer de nuages.', 'Sonner la cloche du sommet au milieu des pèlerins.'], culinaryNote: 'Thé au gingembre brûlant et beignets vadais le long des marches.', etiquette: 'Prévoir une couche chaude contre le vent à 8°C au sommet.' },
     pinnawala: { name: 'Orphelinat d’Éléphants de Pinnawala', region: 'Faune', tagline: 'Hardes d’éléphants d’Asie se baignant dans la rivière Maha Oya', elevation: '125 m', driveFromColombo: '2h 30', bestTime: 'Toute l’année', daylightWindow: '10:00 & 14:00 Bain en rivière', summary: 'Sanctuaire riverain emblématique de la Maha Oya où mères et éléphanteaux se rafraîchissent deux fois par jour.', highlights: ['Observer les troupeaux barboter et jouer dans les rapides à 10h00 et 14h00.', 'Admirer les éléphanteaux près de leurs mères depuis les terrasses ombragées.', 'Halte idéale entre l’aéroport de Colombo et les collines de Kandy.'], culinaryNote: 'Riz et currys mijotés au feu de bois sur les terrasses face à la rivière.', etiquette: 'Observer calmement depuis les belvédères sans déranger ni toucher les petits.' },
-    riverston: { name: 'Riverston', region: 'Hauts Plateaux', tagline: 'Cols balayés par les vents, Pitawala et Mini World’s End', elevation: '1 420 m', driveFromColombo: '4h 15', bestTime: 'Fév–Mai · Juil–Sep', daylightWindow: '06:30 – 11:00', summary: 'Col brumeux au cœur de Matale réputé pour le plateau de Pitawala Pathana, ses cascades secrètes et vallées verdoyantes.', highlights: ['Rejoindre la falaise de Mini World’s End face aux vallées émeraude.', 'Passer sous la grotte rocheuse de la cascade Sera Ella.', 'Respirer l’air frais de la crête venteuse de Riverston Peak.'], culinaryNote: 'Gâteau de millet au sirop de palme et currys paysans.', etiquette: 'Rester prudent près de la falaise dans la brume et choisir un guide local.' }
+    riverston: { name: 'Riverston', region: 'Hauts Plateaux', tagline: 'Cols balayés par les vents, Pitawala et Mini World’s End', elevation: '1 420 m', driveFromColombo: '4h 15', bestTime: 'Fév–Mai · Juil–Sep', daylightWindow: '06:30 – 11:00', summary: 'Col brumeux au cœur de Matale réputé pour le plateau de Pitawala Pathana, ses cascades secrètes et vallées verdoyantes.', highlights: ['Rejoindre la falaise de Mini World’s End face aux vallées émeraude.', 'Passer sous la grotte rocheuse de la cascade Sera Ella.', 'Respirer l’air frais de la crête venteuse de Riverston Peak.'], culinaryNote: 'Gâteau de millet au sirop de palme et currys paysans.', etiquette: 'Rester prudent près de la falaise dans la brume et choisir un guide local.' },
+    peradeniya: { name: 'Jardin Botanique de Peradeniya', region: 'Culture', tagline: 'Allée des palmiers royaux, orchidées et ficus géant', elevation: '460 m', driveFromColombo: '3h 20', bestTime: 'Jan–Avr · Juil–Sep', daylightWindow: '07:30 – 10:30 & 16:00', summary: 'Vaste parc botanique au bord du fleuve Mahaweli célèbre pour ses allées de palmiers royaux, sa serre d’orchidées et ses arbres centenaires.', highlights: ['Déambuler le long de la spectaculaire allée des palmiers royaux.', 'Découvrir la serre aux orchidées et les bassins de nénuphars.', 'Se reposer à l’ombre du gigantesque figuier de Java centenaire.'], culinaryNote: 'Thé glacé de Ceylan et assiette de fruits tropicaux près du fleuve.', etiquette: 'Rester sur les allées tracées sans cueillir fleurs ni plantes rares.' }
   },
   months: {
     JAN: { short: 'JAN', fullName: 'Janvier', headline: 'Saison Sèche — Ouest, Sud & Montagnes', summary: 'Matins frais en altitude, mer calme au sud et safaris clairs.', festival: 'Perahera de Duruthu · Thai Pongal.', verdicts: { south: { status: 'Plein Soleil', note: 'Mer plate et baleines vers Mirissa.' }, highlands: { status: 'Clair & Frais', note: 'Cols dégagés et soirées fraîches.' }, cultural: { status: 'Sec & Doux', note: 'Matinées agréables dans les cités.' }, northeast: { status: 'Averses', note: 'Mer agitée à l’est ; Jaffna reste sec.' } } },
