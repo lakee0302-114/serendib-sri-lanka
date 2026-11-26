@@ -145,42 +145,56 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero" aria-label="Welcome to Sri Lanka">
-      <div class="hero__mosaic" id="hero-mosaic">
-        <figure class="hero__panel hero__panel--sigiriya">
+      <div class="hero__slider" id="hero-slider" role="region" aria-label="Featured Sri Lanka photographs">
+        <figure class="hero__slide is-active">
           <img
             src="./assets/images/hero-sigiriya.jpg"
             alt="Sunlit pathway through royal water gardens toward Sigiriya Lion Rock under bright blue sky"
+            style="object-position: 50% 42%;"
             fetchpriority="high"
           />
         </figure>
-        <figure class="hero__panel hero__panel--ella">
+        <figure class="hero__slide">
           <img
             src="./assets/images/ella-train.jpg"
             alt="Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest"
+            style="object-position: 48% 50%;"
             loading="eager"
             decoding="async"
           />
         </figure>
-        <figure class="hero__panel hero__panel--mirissa">
+        <figure class="hero__slide">
+          <img
+            src="./assets/images/hero-tea-estate.jpg"
+            alt="Sunlit rolling Ceylon tea plantation hills and highland ridges in Nuwara Eliya, Sri Lanka"
+            style="object-position: 50% 52%;"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+        <figure class="hero__slide">
           <img
             src="./assets/images/hero-beach.jpg"
             alt="Vibrant Sri Lankan tropical palm beach with crystal turquoise waves and sunlit coastal boulders"
+            style="object-position: 45% 58%;"
             loading="eager"
             decoding="async"
           />
         </figure>
-        <figure class="hero__panel hero__panel--elephants">
+        <figure class="hero__slide">
           <img
             src="./assets/images/udawalawe-elephants.jpg"
             alt="Close-up portrait of a wild Sri Lankan elephant curling its trunk in sunlit savannah grasslands"
+            style="object-position: 42% 38%;"
             loading="eager"
             decoding="async"
           />
         </figure>
-        <figure class="hero__panel hero__panel--tea">
+        <figure class="hero__slide">
           <img
-            src="./assets/images/hero-tea-estate.jpg"
-            alt="Golden dawn rays over terraced Ceylon tea estate ridges, winding stone trail, and misty Sri Lankan peaks"
+            src="./assets/images/colombo-city.jpg"
+            alt="Glowing Nelum Kuluna Lotus Tower and Colombo harbour skyline at dusk"
+            style="object-position: 62% 36%;"
             loading="eager"
             decoding="async"
           />
@@ -197,14 +211,24 @@
           <p class="hero__subtitle" data-i18n="hero.subtitle">
             Pick your places and plan your dream trip in minutes.
           </p>
-          <div class="hero__actions">
-            <button type="button" class="btn btn--primary" data-open-planner>
-              <span data-i18n="nav.planJourney">Plan My Trip</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </button>
-            <a href="#atlas" class="btn btn--ghost-light" data-i18n="hero.ctaPrimary">
-              Browse Places
-            </a>
+          <div class="hero__bottom-row">
+            <div class="hero__actions">
+              <button type="button" class="btn btn--primary" data-open-planner>
+                <span data-i18n="nav.planJourney">Plan My Trip</span>
+                <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+              </button>
+              <a href="#atlas" class="btn btn--ghost-light" data-i18n="hero.ctaPrimary">
+                Browse Places
+              </a>
+            </div>
+            <div class="hero__dots" id="hero-dots" role="tablist" aria-label="Choose background scene">
+              <button type="button" class="hero__dot is-active" data-hero-dot="0" role="tab" aria-selected="true" aria-label="Sigiriya"></button>
+              <button type="button" class="hero__dot" data-hero-dot="1" role="tab" aria-selected="false" aria-label="Ella"></button>
+              <button type="button" class="hero__dot" data-hero-dot="2" role="tab" aria-selected="false" aria-label="Nuwara Eliya"></button>
+              <button type="button" class="hero__dot" data-hero-dot="3" role="tab" aria-selected="false" aria-label="South Coast"></button>
+              <button type="button" class="hero__dot" data-hero-dot="4" role="tab" aria-selected="false" aria-label="Wildlife"></button>
+              <button type="button" class="hero__dot" data-hero-dot="5" role="tab" aria-selected="false" aria-label="Colombo"></button>
+            </div>
           </div>
         </div>
       </div>

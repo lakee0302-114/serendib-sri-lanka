@@ -1902,10 +1902,77 @@
     els.forEach(function (el) { observer.observe(el); });
   }
 
+  function initHeroSlider() {
+    var slider = document.getElementById('hero-slider');
+    if (!slider) return;
+    var slides = slider.querySelectorAll('.hero__slide');
+    var dots = document.querySelectorAll('.hero__dot');
+    if (slides.length < 2) return;
+
+    var current = 0;
+    var timer = null;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function goTo(index) {
+      var next = (index + slides.length) % slides.length;
+      if (next === current) return;
+      slides[current].classList.remove('is-active');
+      if (dots[current]) {
+        dots[current].classList.remove('is-active');
+        dots[current].setAttribute('aria-selected', 'false');
+      }
+      current = next;
+      slides[current].classList.add('is-active');
+      if (dots[current]) {
+        dots[current].classList.add('is-active');
+        dots[current].setAttribute('aria-selected', 'true');
+      }
+    }
+
+    function stopAuto() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function startAuto() {
+      stopAuto();
+      if (reduceMotion) return;
+      timer = setInterval(function () {
+        if (!document.hidden) goTo(current + 1);
+      }, 4200);
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        var idx = Number(dot.dataset.heroDot);
+        if (!isNaN(idx)) {
+          goTo(idx);
+          startAuto();
+        }
+      });
+    });
+
+    var heroEl = slider.closest('.hero');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', stopAuto);
+      heroEl.addEventListener('mouseleave', startAuto);
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopAuto();
+      else startAuto();
+    });
+
+    startAuto();
+  }
+
   /* ------------------------------------------------------------------------
      Boot
      ------------------------------------------------------------------------ */
   function init() {
+    initHeroSlider();
     initNavigation();
     initAtlasControls();
     initSheets();
