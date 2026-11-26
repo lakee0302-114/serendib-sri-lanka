@@ -11,8 +11,8 @@
       regionKey: 'cultural',
       coords: "07°57'25\"N · 80°45'35\"E",
       idealNights: 2,
-      image: './assets/images/hero-sigiriya.jpg',
-      imageAlt: 'Sunlit pathway through royal water gardens toward Sigiriya Lion Rock under bright blue sky'
+      image: './assets/images/sigiriya-pidurangala.jpg',
+      imageAlt: 'Golden sunlight illuminating Sigiriya Lion Rock rising above endless rainforest canopy and misty ridges'
     },
     {
       id: 'kandy',
@@ -61,8 +61,8 @@
       regionKey: 'south',
       coords: "05°56'54\"N · 80°27'31\"E",
       idealNights: 2,
-      image: './assets/images/mirissa-coast.jpg',
-      imageAlt: 'Sun-drenched Coconut Tree Hill headland in Mirissa lined with swaying palms above turquoise surf'
+      image: './assets/images/mirissa-bay.jpg',
+      imageAlt: 'Sun-warmed curving sandy Mirissa bay lined with palms and gentle turquoise surf waves'
     },
     {
       id: 'nuwara-eliya',
@@ -91,8 +91,8 @@
       regionKey: 'wildlife',
       coords: "06°26'18\"N · 80°53'18\"E",
       idealNights: 1,
-      image: './assets/images/udawalawe-elephants.jpg',
-      imageAlt: 'Close-up of a wild Sri Lankan elephant curling its trunk in green savannah flora'
+      image: './assets/images/udawalawe-stride.jpg',
+      imageAlt: 'Wild Sri Lankan elephants striding forward across sunlit Udawalawe savannah grass'
     },
     {
       id: 'anuradhapura',
@@ -102,7 +102,7 @@
       coords: "08°21'00\"N · 80°23'47\"E",
       idealNights: 2,
       image: './assets/images/anuradhapura-stupa.jpg',
-      imageAlt: 'Great white Ruwanwelisaya Maha Stupa lined with carved elephant walls in ancient Anuradhapura'
+      imageAlt: 'Illuminated snow-white Ruwanwelisaya Great Stupa reflecting across tranquil water at night'
     },
     {
       id: 'dambulla',
@@ -122,7 +122,7 @@
       coords: "07°56'40\"N · 81°00'08\"E",
       idealNights: 1,
       image: './assets/images/ancient-polonnaruwa.jpg',
-      imageAlt: 'Carved stone moonstone stairway leading up to serene granite Buddha at Polonnaruwa Vatadage'
+      imageAlt: 'Monumental 12th-century Gal Vihara seated Buddha carved directly into Polonnaruwa granite rock'
     },
     {
       id: 'horton-plains',
@@ -132,7 +132,7 @@
       coords: "06°48'09\"N · 80°48'09\"E",
       idealNights: 1,
       image: './assets/images/horton-plains.jpg',
-      imageAlt: 'Natural highland rock infinity pool overlooking sunset valleys and Sri Lankan peaks'
+      imageAlt: 'Wide tiered highland waterfall cascading across dark mossy granite cliffs in Sri Lanka rainforest'
     },
     {
       id: 'bentota',
@@ -142,7 +142,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Aerial cape resort with oceanfront pool overlooking twin crescent Sri Lankan beaches'
+      imageAlt: 'Golden sunset light across Bentota curving sandy beach framed by swaying coconut palms'
     },
     {
       id: 'trinco-jaffna',
@@ -152,7 +152,7 @@
       coords: "08°34'16\"N · 81°14'00\"E",
       idealNights: 3,
       image: './assets/images/east-coast-trinco.jpg',
-      imageAlt: 'Crystal clear turquoise reef water, sandy shoreline, and boat along Sri Lanka calm bay'
+      imageAlt: 'Transparent turquoise Pigeon Island reef lagoon and warm coastal rocks near Trincomalee'
     },
     {
       id: 'arugam-bay',
@@ -162,7 +162,7 @@
       coords: "06°50'25\"N · 81°49'50\"E",
       idealNights: 3,
       image: './assets/images/arugam-passikudah.jpg',
-      imageAlt: 'Sweeping emerald coastal headland and foaming turquoise surf waves under bright clouds'
+      imageAlt: 'Aerial turquoise coral bay and shallow calm reef lagoon along Sri Lanka sunny eastern shore'
     },
     {
       id: 'colombo',
@@ -172,7 +172,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Illuminated Colombo skyline and lakeside pavilion reflecting golden twilight lights on Beira Lake'
+      imageAlt: 'Glowing Nelum Kuluna Lotus Tower and illuminated Colombo downtown skyscrapers reflected at night'
     },
     {
       id: 'sri-pada',
@@ -182,7 +182,7 @@
       coords: "06°48'34\"N · 80°29'59\"E",
       idealNights: 1,
       image: './assets/images/sri-pada.jpg',
-      imageAlt: 'Golden amber sunrise glowing above a sea of highland clouds seen from the sacred summit of Sri Pada'
+      imageAlt: 'Iconic conical Sri Pada summit rising sharply into deep blue mountain skies with lit pilgrimage trail'
     },
     {
       id: 'minneriya',
@@ -192,7 +192,7 @@
       coords: "08°01'15\"N · 80°53'10\"E",
       idealNights: 1,
       image: './assets/images/minneriya-gathering.jpg',
-      imageAlt: 'Herd of wild Sri Lankan elephants and calf grazing across lush green Minneriya grasslands'
+      imageAlt: 'Wild Sri Lankan elephant gathering wading across sunlit water framed by lush green hills'
     },
     {
       id: 'knuckles',
@@ -202,7 +202,7 @@
       coords: "07°27'30\"N · 80°46'50\"E",
       idealNights: 2,
       image: './assets/images/knuckles-range.jpg',
-      imageAlt: 'Lush emerald mountain ridge and sunlit valley under bright clouds in Knuckles Range'
+      imageAlt: 'Pastel twilight clouds drifting over lush misty Knuckles mountain valleys in central Sri Lanka'
     }
   ];
 
