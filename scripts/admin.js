@@ -4,7 +4,8 @@
   'use strict';
 
   var ALLOWED_ADMIN_USERNAME = 'lakee1121';
-  var ALLOWED_ADMIN_EMAIL = 'lakditha2008@gmail.com';
+  var ALLOWED_ADMIN_UID = 'serendibAdminLakee1121';
+  var ALLOWED_ADMIN_EMAIL = 'lakee1121@admin.serendib.lk';
   var STATUS_LIST = ['new', 'contacted', 'confirmed', 'archived'];
   var META_LIST = (window.SERENDIB_DATA && window.SERENDIB_DATA.DESTINATIONS_META) || [];
 
@@ -672,16 +673,8 @@
   }
 
   function handleForgotPassword() {
-    var auth = getFirebaseAuth();
-    if (!auth) return;
     showAlert(dom.loginError, '');
-    showAlert(dom.loginNotice, '');
-
-    auth.sendPasswordResetEmail(ALLOWED_ADMIN_EMAIL).then(function () {
-      showAlert(dom.loginNotice, 'Password reset link sent to your registered admin recovery mailbox. Check Inbox & Spam.');
-    }).catch(function (err) {
-      showAlert(dom.loginError, friendlyAuthError(err));
-    });
+    showAlert(dom.loginNotice, 'To reset your admin password, sign in and click Change Password in the top bar, or reset the user in Firebase Console -> Authentication.');
   }
 
   function openPasswordModal() {
@@ -932,10 +925,10 @@
         return;
       }
 
-      if (String(user.email || '').toLowerCase() !== ALLOWED_ADMIN_EMAIL) {
+      if (String(user.email || '').toLowerCase() !== ALLOWED_ADMIN_EMAIL || user.uid !== ALLOWED_ADMIN_UID) {
         auth.signOut();
         setViewGate('login');
-        showAlert(dom.loginError, 'Access denied: ' + (user.email || 'this account') + ' is not an authorized administrator.');
+        showAlert(dom.loginError, 'Access denied: this account is not an authorized administrator.');
         return;
       }
 
