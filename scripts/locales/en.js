@@ -5,7 +5,7 @@ window.SERENDIB_LOCALES['en'] = {
     "label": "English",
     "native": "English",
     "dir": "ltr",
-    "pageTitle": "Serendib Travels | Private Drivers & Tours in Sri Lanka"
+    "pageTitle": "Serendib Travels | Private Sri Lanka Tours & Route Planner"
   },
   "ui": {
     "brandSub": "ශ්‍රී ලංකා",
@@ -28,10 +28,10 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "hero": {
       "coord": "SERENDIB TRAVELS · COLOMBO",
-      "titleStart": "See Sri Lanka",
-      "titleEm": "with a local driver.",
-      "subtitle": "Our Colombo team pairs you with an English-speaking driver who knows every back road. Hill train tickets and safari jeeps sorted too.",
-      "ctaPrimary": "Browse 20 Places",
+      "titleStart": "Your Journey Through",
+      "titleEm": "Sri Lanka.",
+      "subtitle": "Private chauffeur-guides, scenic hill country trains, wildlife safaris, and coastal stays across the island.",
+      "ctaPrimary": "Explore Destinations",
       "ctaSecondary": "Weather by Month",
       "plate": "SIGIRIYA",
       "area": "ISLAND ATLAS",
@@ -78,9 +78,9 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "atlas": {
       "eyebrow": "DESTINATIONS",
-      "titleStart": "20 spots we send",
-      "titleEm": "guests to most",
-      "subcopy": "Click any stop for drive times and notes, or tap + Add to save it to your list.",
+      "titleStart": "Signature places across",
+      "titleEm": "the island",
+      "subcopy": "Open any destination for drive times, dining notes, and season tips.",
       "filters": {
         "all": "All 20",
         "cultural": "Cultural",
@@ -98,8 +98,8 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "compass": {
       "eyebrow": "SEASONS",
-      "titleStart": "Weather month",
-      "titleEm": "by month",
+      "titleStart": "Best seasons",
+      "titleEm": "month by month",
       "subcopy": "Two monsoons hit opposite sides of the island. Pick your month below to see where it's actually sunny.",
       "seasonKey": "WEATHER GUIDE",
       "legendOptimal": "Dry & sunny",
@@ -116,8 +116,8 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "itineraries": {
       "eyebrow": "TRIPS",
-      "titleStart": "Three trips people",
-      "titleEm": "usually book",
+      "titleStart": "Sample journeys",
+      "titleEm": "built to customize",
       "subcopy": "Load any route into the planner and swap stops as you go.",
       "adoptBtn": "Use This Route"
     },
@@ -138,14 +138,14 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "fieldNotes": {
       "eyebrow": "TIPS",
-      "titleStart": "Common questions",
-      "titleEm": "before booking",
+      "titleStart": "Travel answers",
+      "titleEm": "from Colombo",
       "subcopy": "Straight answers from our drivers and Colombo office."
     },
     "contact": {
       "eyebrow": "PLAN",
-      "titleStart": "Put your own",
-      "titleEm": "trip together",
+      "titleStart": "Build your",
+      "titleEm": "Sri Lanka itinerary",
       "subcopy": "Takes about two minutes to send your dates and saved stops.",
       "shortlistLabel": "YOUR PLACES",
       "emptyShortlist": "No places picked yet. Tap + Add above.",
@@ -170,7 +170,7 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "planner": {
       "eyebrow": "SERENDIB TRAVELS",
-      "title": "Plan your Sri Lanka trip",
+      "title": "Plan Your Sri Lanka Journey",
       "closeLabel": "Close trip builder",
       "step1Tab": "1. Dates & Style",
       "step2Tab": "2. Route & Food",
@@ -957,7 +957,7 @@ window.SERENDIB_LOCALES['en'] = {
         },
         "northeast": {
           "status": "Monsoon",
-          "note": "Wettest season on the east coast — avoid beach plans here."
+          "note": "Wettest season on the east coast, so avoid beach plans here."
         }
       }
     },
@@ -1041,7 +1041,7 @@ window.SERENDIB_LOCALES['en'] = {
         {
           "day": "Day 5–7",
           "stop": "Yala National Park",
-          "note": "Your jeep driver meets us before dawn for 6 AM gate opening in Block I or quieter Block V."
+          "note": "Your jeep driver picks you up early for the 6 AM gate opening in Block I or quieter Block V."
         },
         {
           "day": "Day 8–11",
