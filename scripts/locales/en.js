@@ -5,20 +5,20 @@ window.SERENDIB_LOCALES['en'] = {
     "label": "English",
     "native": "English",
     "dir": "ltr",
-    "pageTitle": "Serendib Travels | Sri Lanka Tours & Route Planner"
+    "pageTitle": "Serendib Travels | Private Drivers & Tours in Sri Lanka"
   },
   "ui": {
     "brandSub": "ශ්‍රී ලංකා",
     "nav": {
       "atlas": "Places",
-      "compass": "When to Go",
-      "itineraries": "Sample Trips",
-      "journal": "Craft",
-      "fieldNotes": "Quick Tips",
+      "compass": "Weather",
+      "itineraries": "Sample Routes",
+      "journal": "Stories",
+      "fieldNotes": "FAQ",
       "myRoute": "Saved",
-      "planJourney": "Plan Trip",
-      "openRouteMobile": "See Saved Places",
-      "deskCoord": "COLOMBO OFFICE · SRI LANKA"
+      "planJourney": "Plan a Trip",
+      "openRouteMobile": "Open Saved Stops",
+      "deskCoord": "COLOMBO 03 · GALLE ROAD"
     },
     "theme": {
       "toDark": "Switch to night mode",
@@ -27,12 +27,12 @@ window.SERENDIB_LOCALES['en'] = {
       "lightLabel": "Day"
     },
     "hero": {
-      "coord": "SERENDIB",
-      "titleStart": "Explore",
-      "titleEm": "Sri Lanka",
-      "subtitle": "Plan your Sri Lanka car tour, hill train ride, and coastal stays.",
-      "ctaPrimary": "Browse Places",
-      "ctaSecondary": "When to Go",
+      "coord": "SERENDIB TRAVELS · COLOMBO",
+      "titleStart": "See Sri Lanka",
+      "titleEm": "with a local driver.",
+      "subtitle": "Our Colombo team pairs you with an English-speaking driver who knows every back road. Hill train tickets and safari jeeps sorted too.",
+      "ctaPrimary": "Browse 20 Places",
+      "ctaSecondary": "Weather by Month",
       "plate": "SIGIRIYA",
       "area": "ISLAND ATLAS",
       "calendar": "YEAR-ROUND SUN"
@@ -78,11 +78,11 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "atlas": {
       "eyebrow": "DESTINATIONS",
-      "titleStart": "Places across",
-      "titleEm": "Sri Lanka",
-      "subcopy": "Tap any place for details or add to your route.",
+      "titleStart": "20 spots we send",
+      "titleEm": "guests to most",
+      "subcopy": "Click any stop for drive times and notes, or tap + Add to save it to your list.",
       "filters": {
-        "all": "All (20)",
+        "all": "All 20",
         "cultural": "Cultural",
         "highlands": "Highlands",
         "south": "South & West",
@@ -93,18 +93,18 @@ window.SERENDIB_LOCALES['en'] = {
       "addStop": "+ Add",
       "savedStop": "✓ Added",
       "nightsUnit": "N",
-      "showAllBtn": "Show all {count} places",
+      "showAllBtn": "Show all {count} stops",
       "showLessBtn": "Show fewer"
     },
     "compass": {
       "eyebrow": "SEASONS",
-      "titleStart": "Best months",
-      "titleEm": "by region",
-      "subcopy": "Select a month to check dry and rainy regions.",
-      "seasonKey": "WEATHER",
-      "legendOptimal": "Sunny & Great",
-      "legendGood": "Nice Weather",
-      "legendCaution": "Rainy Season",
+      "titleStart": "Weather month",
+      "titleEm": "by month",
+      "subcopy": "Two monsoons hit opposite sides of the island. Pick your month below to see where it's actually sunny.",
+      "seasonKey": "WEATHER GUIDE",
+      "legendOptimal": "Dry & sunny",
+      "legendGood": "Mostly dry",
+      "legendCaution": "Monsoon rain",
       "verdictSuffix": "WEATHER",
       "culturalCalendar": "EVENTS",
       "zones": {
@@ -116,10 +116,10 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "itineraries": {
       "eyebrow": "TRIPS",
-      "titleStart": "Popular island",
-      "titleEm": "itineraries",
-      "subcopy": "Ready-made island trips.",
-      "adoptBtn": "Use This Trip"
+      "titleStart": "Three trips people",
+      "titleEm": "usually book",
+      "subcopy": "Load any route into the planner and swap stops as you go.",
+      "adoptBtn": "Use This Route"
     },
     "journal": {
       "eyebrow": "05 / Craft",
@@ -138,15 +138,15 @@ window.SERENDIB_LOCALES['en'] = {
     },
     "fieldNotes": {
       "eyebrow": "TIPS",
-      "titleStart": "Good to",
-      "titleEm": "know before you go",
-      "subcopy": "Quick answers."
+      "titleStart": "Common questions",
+      "titleEm": "before booking",
+      "subcopy": "Straight answers from our drivers and Colombo office."
     },
     "contact": {
       "eyebrow": "PLAN",
-      "titleStart": "Build your",
-      "titleEm": "custom route",
-      "subcopy": "Put together your route in under a minute.",
+      "titleStart": "Put your own",
+      "titleEm": "trip together",
+      "subcopy": "Takes about two minutes to send your dates and saved stops.",
       "shortlistLabel": "YOUR PLACES",
       "emptyShortlist": "No places picked yet. Tap + Add above.",
       "nightsSuggested": "nights",
@@ -166,7 +166,7 @@ window.SERENDIB_LOCALES['en'] = {
       "briefBody": "Your outline for",
       "briefMid": "covering",
       "briefSuffix": "is saved.",
-      "launchBtn": "Launch Trip Planner"
+      "launchBtn": "Open Trip Planner"
     },
     "planner": {
       "eyebrow": "SERENDIB TRAVELS",
@@ -271,7 +271,7 @@ window.SERENDIB_LOCALES['en'] = {
       "navAccountMobile": "My Trips & Sign In",
       "kicker": "MY ACCOUNT",
       "authTitle": "Sign in to view your trips",
-      "authSub": "Save custom Sri Lanka journeys, log back in anytime, and view your full day-by-day route.",
+      "authSub": "Sign in to open trips you saved earlier on any device.",
       "tabSignIn": "Sign In",
       "tabSignUp": "Create Account",
       "nameLabel": "Full Name",
@@ -296,12 +296,12 @@ window.SERENDIB_LOCALES['en'] = {
       "viewInMyTripsBtn": "View in My Trips"
     },
     "footer": {
-      "blurb": "Local driver tours, train tickets, and family-run stays around Sri Lanka.",
+      "blurb": "Small Sri Lankan tour company off Galle Road in Colombo 03. Private cars with drivers, hill country trains and local guesthouses across the island.",
       "greeting": "ආයුබෝවන් · வணக்கம் · WELCOME",
-      "colExplore": "Explore",
+      "colExplore": "Menu",
       "colRegions": "Regions",
-      "colDesk": "Desk",
-      "deskNote": "Colombo · Galle · Kandy",
+      "colDesk": "Contact",
+      "deskNote": "Colombo 03 · Kandy · Galle",
       "copyright": "© 2026 Serendib Travels (Pvt) Ltd"
     },
     "dossier": {
@@ -689,300 +689,300 @@ window.SERENDIB_LOCALES['en'] = {
     "JAN": {
       "short": "JAN",
       "fullName": "January",
-      "headline": "Dry on the West Coast & Hills",
-      "summary": "Good beach weather down south and clear mountain views.",
+      "headline": "Peak dry weather down south and in the hills",
+      "summary": "Great beach month around Galle and Mirissa, plus cool nights up in Nuwara Eliya. Expect showers if you head across to Trinco.",
       "festival": "Duruthu Perahera · Thai Pongal harvest.",
       "verdicts": {
         "south": {
-          "status": "Prime Sun",
-          "note": "Calm sea along Bentota, Galle, and Mirissa."
+          "status": "Dry & Sunny",
+          "note": "Ocean stays flat for swimming right from Bentota down to Tangalle."
         },
         "highlands": {
-          "status": "Clear & Cool",
-          "note": "Cool nights and dry walking weather."
+          "status": "Chilly Nights",
+          "note": "Sunny days on tea trails, though it drops to around 12 C after sunset."
         },
         "cultural": {
-          "status": "Dry & Pleasant",
-          "note": "Warm mornings around Sigiriya and Polonnaruwa."
+          "status": "Warm",
+          "note": "Pleasant until 11 AM around Sigiriya and Polonnaruwa."
         },
         "northeast": {
-          "status": "Showers",
-          "note": "Trinco is quiet with occasional showers. Jaffna stays mostly dry."
+          "status": "Rainy",
+          "note": "East coast gets afternoon rain in January. Better to wait till May."
         }
       }
     },
     "FEB": {
       "short": "FEB",
       "fullName": "February",
-      "headline": "Good Weather Across Most Regions",
-      "summary": "Easy month for travelling north to south without heavy rain.",
+      "headline": "Dry almost everywhere on the island",
+      "summary": "February is easily the safest all-round month if you want beaches, hill country trains and ancient sites in one go.",
       "festival": "Navam Perahera, Colombo · Independence Day.",
       "verdicts": {
         "south": {
-          "status": "Prime Sun",
-          "note": "Calm water for swimming down south."
+          "status": "Dry & Sunny",
+          "note": "Calm mornings for blue whale boats out of Mirissa."
         },
         "highlands": {
-          "status": "Crisp Skies",
-          "note": "Clear views on the Nuwara Eliya and Ella trails."
+          "status": "Clear Views",
+          "note": "Zero fog at World's End if you reach the gate by 6:30 AM."
         },
         "cultural": {
-          "status": "Dry & Bright",
-          "note": "Dry heat in the ancient cities. Morning walks are comfortable."
+          "status": "Hot Midday",
+          "note": "Start Lion Rock early. Climbing stone steps after noon gets baking hot."
         },
         "northeast": {
-          "status": "Clearing",
-          "note": "Jaffna stays dry and Trincomalee seas begin to settle."
+          "status": "Clearing Up",
+          "note": "Jaffna is already dry and Trinco waves start settling down."
         }
       }
     },
     "MAR": {
       "short": "MAR",
       "fullName": "March",
-      "headline": "Warm Coasts & Active Parks",
-      "summary": "Hot afternoon sun down south and animals gathered near tanks.",
+      "headline": "Hot lowlands, clear mountains",
+      "summary": "Long dry spells down south. Wildlife crowds around waterholes in Yala and Udawalawe.",
       "festival": "Maha Shivaratri vigil at Koneswaram cliff.",
       "verdicts": {
         "south": {
-          "status": "Prime Sun",
-          "note": "Warm swimming from Bentota to Tangalle."
+          "status": "Sunny",
+          "note": "Warm water all along Unawatuna and Weligama bays."
         },
         "highlands": {
-          "status": "Sunny",
-          "note": "Sunny mornings around tea plantations."
+          "status": "Warm Days",
+          "note": "Great month for the train from Nanu Oya through Haputale."
         },
         "cultural": {
-          "status": "Warm",
-          "note": "Climb Sigiriya early before noon heat."
+          "status": "Hot",
+          "note": "Go out early morning; midday shade helps a lot."
         },
         "northeast": {
-          "status": "Calm & Sunny",
-          "note": "East coast beaches turn dry and sunny."
+          "status": "Sunny",
+          "note": "Pigeon Island snorkeling starts getting clear."
         }
       }
     },
     "APR": {
       "short": "APR",
       "fullName": "April",
-      "headline": "New Year Holiday & Transitional Weather",
-      "summary": "Avurudu mid-month festivities before May rains start south.",
+      "headline": "Sinhala & Tamil New Year week",
+      "summary": "Half the island closes mid-April to visit family, so book your car well ahead. Warm everywhere with quick afternoon showers.",
       "festival": "Sinhala & Tamil New Year (Apr 13–14).",
       "verdicts": {
         "south": {
-          "status": "Warm & Calm",
-          "note": "Calm early in the month; larger waves build later."
+          "status": "Warm",
+          "note": "Great beach mornings before 3 PM showers roll in."
         },
         "highlands": {
-          "status": "Green & Mild",
-          "note": "Green hills with short afternoon showers."
+          "status": "Mild",
+          "note": "Spring flowers around Victoria Park in Nuwara Eliya."
         },
         "cultural": {
-          "status": "Festive",
-          "note": "Hot afternoons; start outdoor visits around 7 AM."
+          "status": "Hot",
+          "note": "Humid afternoons; carry plenty of water."
         },
         "northeast": {
-          "status": "Prime Window",
-          "note": "Trincomalee seas flatten out for snorkelling."
+          "status": "Prime Dry",
+          "note": "East coast turns sunny while roads stay quiet."
         }
       }
     },
     "MAY": {
       "short": "MAY",
       "fullName": "May",
-      "headline": "East Coast Opens, Southwest Monsoon Starts",
-      "summary": "South coast turns rough while Trincomalee and Arugam Bay stay sunny.",
+      "headline": "Monsoon shifts west, east coast opens up",
+      "summary": "Time to switch coasts. Colombo and Galle turn windy and wet, while Trincomalee and Passikudah stay flat calm.",
       "festival": "Vesak Full Moon lantern festival.",
       "verdicts": {
         "south": {
           "status": "Monsoon",
-          "note": "Rough waves along Galle and Bentota. Quiet hotel rates."
+          "note": "Rough surf and red flags on swimming beaches down south."
         },
         "highlands": {
           "status": "Misty",
-          "note": "Cloudy afternoons with fresh mountain rain."
+          "note": "Heavy mountain rain in pockets, though tea estates look bright green."
         },
         "cultural": {
-          "status": "Dry",
-          "note": "Usually dry across Sigiriya and Dambulla."
+          "status": "Warm & Dry",
+          "note": "Sigiriya and Polonnaruwa usually stay dry."
         },
         "northeast": {
-          "status": "Prime Sun",
-          "note": "Flat beaches in Trinco and early surf in Arugam Bay."
+          "status": "Peak Sun",
+          "note": "Best beaches in Sri Lanka right now, head to Nilaveli or Arugam Bay."
         }
       }
     },
     "JUN": {
       "short": "JUN",
       "fullName": "June",
-      "headline": "Arugam Bay Surf & East Coast Sun",
-      "summary": "Good swimming on the east coast while the southwest stays rainy.",
+      "headline": "Sunny beaches in Trinco & Arugam Bay",
+      "summary": "Stick to the Cultural Triangle, east coast beaches and Jaffna peninsula.",
       "festival": "Poson Poya pilgrimage at Mihintale.",
       "verdicts": {
         "south": {
-          "status": "Windy",
-          "note": "Choppy surf and rain down south."
+          "status": "Rainy",
+          "note": "South-west monsoon swells keep most swimmers ashore."
         },
         "highlands": {
-          "status": "Breezy",
-          "note": "Ella is mostly dry; Hatton sees afternoon showers."
+          "status": "Mixed",
+          "note": "Cool rain showers around Hatton, drier over near Ella."
         },
         "cultural": {
-          "status": "Dry & Breezy",
-          "note": "Breezy and dry around old capitals and Minneriya."
+          "status": "Breezy & Dry",
+          "note": "Kite season wind cools down the dry plains."
         },
         "northeast": {
-          "status": "Peak East",
-          "note": "Calm bays in Nilaveli and steady waves at Arugam."
+          "status": "Peak Sun",
+          "note": "Flat reef water for swimming at Passikudah."
         }
       }
     },
     "JUL": {
       "short": "JUL",
       "fullName": "July",
-      "headline": "Dry Zone Elephants & East Sunshine",
-      "summary": "Big elephant herds around Minneriya plus steady east coast weather.",
+      "headline": "Esala Perahera & elephant gathering",
+      "summary": "Busy month for Kandy's street pageant and big elephant herds at Minneriya tank. East coast weather stays solid.",
       "festival": "Esala pageant preparations in Kandy & Kataragama.",
       "verdicts": {
         "south": {
-          "status": "Breezy Mix",
-          "note": "Mixed clouds and sunshine with rough southern swell."
+          "status": "Mixed",
+          "note": "Decent sunny breaks between passing coastal squalls."
         },
         "highlands": {
-          "status": "Clear East",
-          "note": "Comfortable walking weather in Ella and Riverston."
+          "status": "Pleasant",
+          "note": "Good walking weather in Ella and Knuckles hills."
         },
         "cultural": {
-          "status": "Peak Safari",
-          "note": "Dry roads and clear game drives in cultural parks."
+          "status": "Festival Month",
+          "note": "Book Kandy rooms months early if Perahera falls in July."
         },
         "northeast": {
           "status": "Peak Sun",
-          "note": "Clear water for diving off Pigeon Island."
+          "note": "Warm seas and right-hand surf breaks in Arugam Bay."
         }
       }
     },
     "AUG": {
       "short": "AUG",
       "fullName": "August",
-      "headline": "Kandy Esala Perahera & Peak East Season",
-      "summary": "Pageants in Kandy alongside clear summer days up north and east.",
+      "headline": "Sunny dry summer & highland trails",
+      "summary": "Peak summer window for families. Elephant herds gather by the hundreds around Minneriya.",
       "festival": "Kandy Esala Perahera · Jaffna Nallur Festival.",
       "verdicts": {
         "south": {
-          "status": "Sunny Breaks",
-          "note": "Short sunny spells between southwest wind gusts."
+          "status": "Okay",
+          "note": "Sheltered bays like Jungle Beach stay swimmable on calm days."
         },
         "highlands": {
-          "status": "Festive",
-          "note": "Cool nights and evening processions in Kandy."
+          "status": "Good",
+          "note": "Tea valleys clear out nicely most mornings."
         },
         "cultural": {
-          "status": "Prime Dry",
-          "note": "Good weather for climbing Sigiriya and visiting lakes."
+          "status": "Dry",
+          "note": "Dry dusty tracks around jeep safaris up north-central."
         },
         "northeast": {
-          "status": "Prime East",
-          "note": "Nallur Festival in Jaffna and flat seas in Trincomalee."
+          "status": "Peak Sun",
+          "note": "Last full month of prime weather in Trinco and Arugam Bay."
         }
       }
     },
     "SEP": {
       "short": "SEP",
       "fullName": "September",
-      "headline": "Late East Summer & Quiet Cultural Sites",
-      "summary": "Smaller crowds everywhere with good beach weather still holding east.",
+      "headline": "Quiet shoulder weeks",
+      "summary": "Smaller crowds almost everywhere. East coast stays warm until late September.",
       "festival": "Binara Poya temple observances.",
       "verdicts": {
         "south": {
-          "status": "Variable",
-          "note": "Some rain showers, but mornings are often clear."
+          "status": "Unsettled",
+          "note": "Occasional heavy rain bursts alternating with sun."
         },
         "highlands": {
-          "status": "Clear",
-          "note": "Clear train views between Nanu Oya and Ella."
+          "status": "Good",
+          "note": "Quiet train carriages between Kandy and Ella."
         },
         "cultural": {
-          "status": "Quiet & Dry",
-          "note": "Warm and dry in Anuradhapura and Dambulla."
+          "status": "Warm",
+          "note": "Easy safari driving with fewer tour vans around."
         },
         "northeast": {
-          "status": "Late Peak",
-          "note": "Final good weeks on the east coast before October rain."
+          "status": "Warm",
+          "note": "Still good swimming at Nilaveli before October rains."
         }
       }
     },
     "OCT": {
       "short": "OCT",
       "fullName": "October",
-      "headline": "Changeover Month with Afternoon Rain",
-      "summary": "Sunny mornings across most towns, usually followed by rain after 2 PM.",
+      "headline": "Inter-monsoon rain across the island",
+      "summary": "October brings unpredictable afternoon downpours nearly everywhere, along with huge discounts at boutique villas.",
       "festival": "Deepavali oil-lamp celebrations.",
       "verdicts": {
         "south": {
-          "status": "Showers",
-          "note": "Rainy breaks and quiet Ayurveda stays."
+          "status": "Wet",
+          "note": "Sudden afternoon storms pass fast, leaving wet evenings."
         },
         "highlands": {
-          "status": "Waterfalls",
-          "note": "Full waterfalls across Nuwara Eliya and Hatton."
+          "status": "Misty",
+          "note": "Pack waterproof jackets and expect cloudy ridge views."
         },
         "cultural": {
-          "status": "AM Sun",
-          "note": "Visit temples before lunch when skies stay clear."
+          "status": "Showers",
+          "note": "Muddy safari tracks; elephants disperse away from tanks."
         },
         "northeast": {
-          "status": "Shifting",
-          "note": "East wind picks up ahead of the northeast monsoon."
+          "status": "Showers",
+          "note": "East coast surf wraps up as northeast winds build."
         }
       }
     },
     "NOV": {
       "short": "NOV",
       "fullName": "November",
-      "headline": "Southwest Beaches Start Clearing",
-      "summary": "Rain moves toward Jaffna and Trinco while Galle starts to dry out.",
+      "headline": "South coast wakes back up late month",
+      "summary": "Everything turns vivid green after October rain. Early beach seekers start heading back to Weligama.",
       "festival": "Il Poya & Bundala migratory birds arrive.",
       "verdicts": {
         "south": {
-          "status": "Season Starts",
-          "note": "Swimming returns gradually to Weligama and Unawatuna."
+          "status": "Improving",
+          "note": "Waves calm down week by week around Galle and Unawatuna."
         },
         "highlands": {
-          "status": "Green Hills",
-          "note": "Fresh green valleys after rain."
+          "status": "Cool & Green",
+          "note": "Waterfalls run full after the rains."
         },
         "cultural": {
-          "status": "Green",
-          "note": "Lotus ponds fill up around Anuradhapura."
+          "status": "Mild",
+          "note": "Comfortable morning light over Anuradhapura stupas."
         },
         "northeast": {
           "status": "Monsoon",
-          "note": "Heavy northeast rain. Stick to the south or hills."
+          "note": "Wettest season on the east coast — avoid beach plans here."
         }
       }
     },
     "DEC": {
       "short": "DEC",
       "fullName": "December",
-      "headline": "South & West Beaches Open for Winter",
-      "summary": "Sunny south coast weather returns along with whale boats in Mirissa.",
+      "headline": "Holiday season down south",
+      "summary": "South beaches fill up fast from December 15 onward. Reserve drivers and hill trains well ahead.",
       "festival": "Coastal Christmas · Unduvap Poya.",
       "verdicts": {
         "south": {
-          "status": "Prime Sun",
-          "note": "Flat bays and clear evening sunsets in Galle Fort."
+          "status": "Sunny",
+          "note": "Blue skies down in Mirissa, Tangalle and Galle Fort."
         },
         "highlands": {
-          "status": "Crisp Air",
-          "note": "Chilly early mornings in Nuwara Eliya."
+          "status": "Crisp",
+          "note": "Cool morning air up in Hatton and Nuwara Eliya."
         },
         "cultural": {
           "status": "Mild",
-          "note": "Mild mornings with green countryside."
+          "note": "Short tropical showers still pop up occasionally."
         },
         "northeast": {
-          "status": "Rains",
-          "note": "East coast gets showers through January. Head south instead."
+          "status": "Wet",
+          "note": "Rainy east coast winds continue through Christmas."
         }
       }
     }
@@ -990,118 +990,118 @@ window.SERENDIB_LOCALES['en'] = {
   "itineraries": {
     "classic-arc": {
       "number": "ROUTE 01",
-      "title": "The Classic 9-Day Loop",
+      "title": "9 Days: Ancient Cities, Tea Hills & Galle",
       "duration": "09D / 08N",
-      "season": "Dec–Apr · First Timer",
-      "pace": "Rail + Private Driver",
-      "routeLine": "Sigiriya → Kandy → Hatton → Ella → Galle Fort",
-      "summary": "Covers Sigiriya, Kandy, hill country trains, and Galle Fort without rushing.",
+      "season": "Dec–Apr · Best First Trip",
+      "pace": "Car + Hill Train",
+      "routeLine": "Sigiriya → Kandy → Nuwara Eliya → Ella → Galle Fort",
+      "summary": "Our most requested first-timer loop. Starts in the Cultural Triangle while you still have energy for rock climbs, then cools down in the tea country before ending on a calm beach.",
       "days": [
         {
-          "day": "Day 1-2",
+          "day": "Day 1–2",
           "stop": "Sigiriya & Dambulla",
-          "note": "Morning climb up Pidurangala rock and Dambulla cave temple."
+          "note": "Go up Pidurangala early before noon heat hits. We usually stop at Dambulla cave temple on day two as we drive down toward Kandy."
         },
         {
-          "day": "Day 3-4",
+          "day": "Day 3–4",
           "stop": "Kandy",
-          "note": "Evening puja at the Temple of the Tooth and spice garden visit."
+          "note": "Catch the evening drumming at Temple of the Tooth, browse the town market and stretch your legs around Peradeniya gardens."
         },
         {
-          "day": "Day 5-6",
+          "day": "Day 5–6",
           "stop": "Hatton & Ella",
-          "note": "Board the morning hill train from Nanu Oya to Ella."
+          "note": "Your driver takes the bags straight by road so you can sit light on the 3-hour mountain train from Nanu Oya into Ella."
         },
         {
-          "day": "Day 7-9",
+          "day": "Day 7–9",
           "stop": "Galle Fort",
-          "note": "Two relaxed nights on the coast before flying home."
+          "note": "Walk the old Dutch ramparts around 5 PM when the breeze picks up, then spend your last full day swimming in Unawatuna before flying out."
         }
       ]
     },
     "wild-south": {
       "number": "ROUTE 02",
-      "title": "Tea Hills, Safari & South Coast",
+      "title": "11 Days: Tea Estates, Yala Leopards & Coast",
       "duration": "11D / 10N",
-      "season": "Jan–Apr · Design & Wildlife",
-      "pace": "Slow Luxury",
+      "season": "Jan–Apr · Wildlife & Villas",
+      "pace": "Unrushed",
       "routeLine": "Colombo → Hatton → Yala → Tangalle → Galle",
-      "summary": "Combines Colombo, tea country walks, Yala jeep drives, and beach days.",
+      "summary": "Skips the long northern drive and focuses on bungalow stays in tea country, early jeep drives in Yala and quiet bays along the south coast.",
       "days": [
         {
           "day": "Day 1",
           "stop": "Colombo",
-          "note": "Rest after arrival, visit Geoffrey Bawa's house or Pettah market."
+          "note": "Sleep off the flight, grab crab curry downtown or drop by Geoffrey Bawa's house on 33rd Lane."
         },
         {
-          "day": "Day 2-4",
-          "stop": "Hatton Tea Country",
-          "note": "Stay in an estate bungalow and walk along tea trails."
+          "day": "Day 2–4",
+          "stop": "Hatton",
+          "note": "Three nights in an old tea estate bungalow. Easy morning walks above Castlereagh reservoir."
         },
         {
-          "day": "Day 5-7",
+          "day": "Day 5–7",
           "stop": "Yala National Park",
-          "note": "Early morning 4x4 safari drives at gate opening."
+          "note": "Your jeep driver meets us before dawn for 6 AM gate opening in Block I or quieter Block V."
         },
         {
-          "day": "Day 8-11",
+          "day": "Day 8–11",
           "stop": "Tangalle & Galle",
-          "note": "Beach towns and old Fort streets along the southern highway."
+          "note": "Empty coconut beaches near Tangalle first, then boutique cafés inside Galle Fort before catching the airport expressway."
         }
       ]
     },
     "east-north-sun": {
       "number": "ROUTE 03",
-      "title": "May to September: North & East Coast",
+      "title": "10 Days: Summer Dry Season Up North & East",
       "duration": "10D / 09N",
-      "season": "May–Sep · Dry Summer",
-      "pace": "Reef & Culture",
-      "routeLine": "Anuradhapura → Jaffna → Trinco → Sigiriya",
-      "summary": "Built for the dry northern summer across Jaffna, Trincomalee, and Sigiriya.",
+      "season": "May–Sep · Dry Coast",
+      "pace": "North & East",
+      "routeLine": "Anuradhapura → Jaffna → Trincomalee → Sigiriya",
+      "summary": "Built specifically for May to September when the southwest coast gets monsoon rain. Warm seas in Trinco and proper northern food up in Jaffna.",
       "days": [
         {
-          "day": "Day 1-2",
+          "day": "Day 1–2",
           "stop": "Anuradhapura & Mihintale",
-          "note": "Ancient stupas and sunset steps up Mihintale."
+          "note": "Giant brick stupas and sunset steps overlooking dry-zone lakes."
         },
         {
-          "day": "Day 3-5",
+          "day": "Day 3–5",
           "stop": "Jaffna",
-          "note": "Drive north to Nallur Kovil, Jaffna market, and Delft island."
+          "note": "Try spicy Jaffna crab curry, visit Nallur Kovil and take the wooden boat over to Delft Island."
         },
         {
-          "day": "Day 6-8",
+          "day": "Day 6–8",
           "stop": "Trincomalee",
-          "note": "Boat trip to Pigeon Island and calm Nilaveli beach."
+          "note": "Three beach days on Nilaveli sand with a morning boat ride out to Pigeon Island reef."
         },
         {
-          "day": "Day 9-10",
+          "day": "Day 9–10",
           "stop": "Sigiriya",
-          "note": "Climb Lion Rock early before returning toward the airport."
+          "note": "Head back via Lion Rock and stop for wild elephants near Minneriya on the way to the airport."
         }
       ]
     }
   },
   "fieldNotes": [
     {
-      "question": "When is the best weather for Sri Lanka?",
-      "answer": "From December to April the south coast, west coast, and hill country are sunny. From May to September, the dry season shifts to Trincomalee, Passikudah, and Arugam Bay."
+      "question": "Which months actually get good weather?",
+      "answer": "Depends entirely on which coast you visit. December through April is dry and sunny down in Galle, Mirissa and up in the hills. From May to September the monsoon flips, so Trincomalee, Passikudah and Arugam Bay get flat blue water while Colombo sees rain."
     },
     {
-      "question": "Should I take the train all the way from Colombo to Ella?",
-      "answer": "The whole ride takes 9+ hours and gets tiring. Most people have their driver drop them at Nanu Oya or Kandy so they only sit the best 3-hour mountain leg to Ella."
+      "question": "Should we take the train all the way from Colombo to Ella?",
+      "answer": "Honestly, skip the first half. Nine hours on a train wears almost everybody out. Have your driver drop you at Kandy or Nanu Oya instead so you just do the scenic three-hour stretch through the tea estates."
     },
     {
-      "question": "Do tourists need a visa before arrival?",
-      "answer": "Yes. Apply online at eta.gov.lk a few days before flying. Make sure your passport still has 6 months validity left."
+      "question": "How do Sri Lanka tourist visas work right now?",
+      "answer": "Easy enough to sort at home. Apply online at eta.gov.lk a few days before your flight, and double-check your passport still has at least six months left on it."
     },
     {
-      "question": "Car with driver or public buses and tuk-tuks?",
-      "answer": "Mountain roads average around 35 to 40 km/h. Hiring a car with an English-speaking driver saves hours between cities, while tuk-tuks work well for short local rides."
+      "question": "Should we hire a car with driver or use buses and trains?",
+      "answer": "Mountain roads barely average 35 to 40 km/h, so a private car with a driver saves half a day every time you switch towns. Take tuk-tuks for short hops inside Galle or Ella, plus the scenic train segment once you're upcountry."
     },
     {
-      "question": "What should I wear at temples and safaris?",
-      "answer": "Temples ask you to cover shoulders and knees and leave shoes at the gate. On safari, wear neutral clothes, keep quiet near animals, and avoid camera flash."
+      "question": "What should I pack for temples and jeep safaris?",
+      "answer": "Carry a light scarf or pair of trousers for inside Kandy temple and Dambulla caves, plus old socks in your daypack because bare temple stone gets hot after 10 AM. On safari, wear dull colours and switch camera flash off."
     }
   ]
 };

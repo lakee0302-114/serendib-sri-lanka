@@ -30,7 +30,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Blue train crossing Nine Arch Bridge near Ella'
+      imageAlt: 'Red train crossing Nine Arch Bridge near Ella'
     },
     {
       id: 'trinco-jaffna',
@@ -70,7 +70,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Tea terraces in the Sri Lankan highlands'
+      imageAlt: 'View over Haputale hills and tea valleys from Lipton Seat'
     },
     {
       id: 'yala',
@@ -90,7 +90,7 @@
       coords: "06°33'30\"N · 81°40'50\"E",
       idealNights: 1,
       image: './assets/images/kumana-birds.jpg',
-      imageAlt: 'Painted stork in Kumana lagoon wetlands'
+      imageAlt: 'Black-necked stork wading in Kumana lagoon'
     },
     {
       id: 'udawalawe',
@@ -130,7 +130,7 @@
       coords: "06°48'09\"N · 80°48'09\"E",
       idealNights: 1,
       image: './assets/images/horton-plains.jpg',
-      imageAlt: 'Waterfall at Horton Plains'
+      imageAlt: 'Mist rolling up the escarpment at Horton Plains'
     },
     {
       id: 'bentota',
@@ -140,7 +140,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Sunset over Bentota beach palms'
+      imageAlt: 'Open wooden veranda at Geoffrey Bawa Lunuganga estate near Bentota'
     },
     {
       id: 'arugam-bay',
@@ -160,7 +160,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Lotus Tower and Colombo skyline'
+      imageAlt: 'Fishing boats on the beach looking toward Colombo city buildings'
     },
     {
       id: 'sri-pada',
@@ -200,7 +200,7 @@
       coords: "07°16'16\"N · 80°35'48\"E",
       idealNights: 1,
       image: './assets/images/peradeniya-garden.jpg',
-      imageAlt: 'Garden glasshouse and lily pond at Peradeniya'
+      imageAlt: 'Lawns and tall royal palms at Peradeniya botanical garden'
     }
   ];
 

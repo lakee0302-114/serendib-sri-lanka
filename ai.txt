@@ -1,12 +1,6 @@
-﻿# AI Crawler Policy
-# https://serendib-sri-lanka-three.vercel.app/ai.txt
-
-User-agent: *
+﻿User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /admin.html
 
-# About this site
-Name: Serendib Travels
-Description: Sri Lanka travel planning — destinations, trip builder, local guides.
 Contact: info@serendibsrilanka.com
