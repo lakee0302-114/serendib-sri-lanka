@@ -1,9 +1,4 @@
-/* ==========================================================================
-   SERENDIB — Advanced Layered CSS Architecture
-   @layer reset, base, components, utilities
-   Uses Logical Properties (RTL-ready), @container queries, color-mix(),
-   scroll-driven animations, and View Transitions API.
-   ========================================================================== */
+/* Serendib Travels - Main Stylesheet */
 
 @layer reset, base, components, utilities;
 
@@ -97,7 +92,7 @@
   }
 
   ::view-transition-new(root) {
-    animation: theme-circle-reveal 520ms var(--ease-editorial);
+    animation: theme-circle-reveal 520ms var(--ease-smooth);
   }
 
   @keyframes theme-circle-reveal {
@@ -141,8 +136,8 @@
   }
 
   .display-serif em {
-    font-style: italic;
-    font-weight: 400;
+    font-style: normal;
+    font-weight: inherit;
   }
 
   .section {
@@ -190,7 +185,7 @@
   [data-reveal] {
     opacity: 0;
     transform: translateY(18px);
-    transition: opacity 720ms var(--ease-editorial), transform 720ms var(--ease-editorial);
+    transition: opacity 720ms var(--ease-smooth), transform 720ms var(--ease-smooth);
   }
 
   [data-reveal].is-visible {
@@ -652,7 +647,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
-    transition: opacity 320ms var(--ease-editorial), transform 320ms var(--ease-editorial);
+    transition: opacity 320ms var(--ease-smooth), transform 320ms var(--ease-smooth);
   }
 
   .mobile-nav.is-open {
@@ -1033,9 +1028,7 @@
     }
   }
 
-  /* ========================================================================
-     02 — Destination Atlas (Container Queries + Spotlight + Mobile Snap)
-     ======================================================================== */
+  /* Destinations Grid */
   .section-header-split {
     display: flex;
     flex-direction: column;
@@ -1157,21 +1150,6 @@
     overflow: hidden;
     position: relative;
     transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-fast);
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    .dest-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), var(--spotlight-color), transparent 70%);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 280ms ease;
-    }
-    .dest-card:hover::after {
-      opacity: 1;
-    }
   }
 
   @media (max-width: 767px) {
@@ -1950,7 +1928,7 @@
     width: 100%;
     height: 1.5px;
     background-color: var(--ink-primary);
-    transition: transform 260ms var(--ease-editorial);
+    transition: transform 260ms var(--ease-smooth);
   }
 
   .accordion-plus::after {
@@ -1964,7 +1942,7 @@
   .accordion-panel {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 340ms var(--ease-editorial);
+    transition: grid-template-rows 340ms var(--ease-smooth);
   }
 
   .accordion-panel.is-open {
@@ -1982,9 +1960,7 @@
     max-width: 65ch;
   }
 
-  /* ========================================================================
-     07 — Bespoke Concierge Studio Launchpad
-     ======================================================================== */
+  /* Route Summary CTA */
   .concierge-card {
     background-color: var(--bg-cream);
     border: 1px solid var(--hairline);
@@ -2103,7 +2079,7 @@
     flex-direction: column;
     overflow: hidden;
     transform: translateY(18px) scale(0.985);
-    transition: transform 320ms var(--ease-editorial);
+    transition: transform 320ms var(--ease-smooth);
   }
 
   .planner-overlay.is-open .planner-dialog {
@@ -3317,7 +3293,7 @@
     display: flex;
     flex-direction: column;
     transform: translateY(105%);
-    transition: transform 380ms var(--ease-editorial);
+    transition: transform 380ms var(--ease-smooth);
   }
 
   .sheet-panel::before {
@@ -3514,7 +3490,7 @@
     transform: translate(-50%, 0);
   }
 
-  /* Simple Floating Bottom Trip Bar */
+  /* Floating Trip Bar */
   .floating-trip-bar {
     position: fixed;
     left: 50%;
@@ -3533,13 +3509,24 @@
     max-width: calc(100vw - 1.5rem);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 260ms var(--ease-editorial), transform 260ms var(--ease-editorial);
+    transition: opacity 260ms var(--ease-smooth), transform 260ms var(--ease-smooth);
   }
 
   .floating-trip-bar.is-visible {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, 0);
+  }
+
+  @media (min-width: 920px) {
+    .floating-trip-bar {
+      left: auto;
+      right: 1.5rem;
+      transform: translateY(16px);
+    }
+    .floating-trip-bar.is-visible {
+      transform: translateY(0);
+    }
   }
 
   .floating-trip-bar__count {
@@ -3657,7 +3644,7 @@
     padding: 0;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 260ms var(--ease-editorial);
+    transition: opacity 260ms var(--ease-smooth);
   }
 
   @media (min-width: 768px) {
@@ -3686,7 +3673,7 @@
     flex-direction: column;
     overflow: hidden;
     transform: translateY(18px) scale(0.985);
-    transition: transform 300ms var(--ease-editorial);
+    transition: transform 300ms var(--ease-smooth);
   }
 
   @media (min-width: 768px) {

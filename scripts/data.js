@@ -1,6 +1,4 @@
-/* ==========================================================================
-   SERENDIB — Structural Metadata (20 Top Attractions & Twin Monsoons)
-   ========================================================================== */
+/* Serendib Travels - Sri Lanka Destinations & Seasonal Weather Data */
 
 (function () {
   var DESTINATIONS_META = [

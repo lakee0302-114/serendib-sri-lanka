@@ -1,7 +1,4 @@
-/* ==========================================================================
-   SERENDIB — Firebase Integration (Realtime Database & Analytics)
-   Project: serendib-sri-lanka
-   ========================================================================== */
+/* Serendib Travels - Firebase Realtime Database & Auth */
 
 (function () {
   'use strict';

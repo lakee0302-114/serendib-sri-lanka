@@ -1,7 +1,4 @@
-/* ==========================================================================
-   SERENDIB — Dual-Theme Engine, 9-Language i18n, Atlas & Route Builder
-   Universal classic script (works seamlessly on both file:/// and http(s)://)
-   ========================================================================== */
+/* Serendib Travels - Main Client Script */
 
 (function () {
   'use strict';
@@ -654,16 +651,6 @@
         toggleSavedStop(btn.dataset.toggleStop);
       });
     });
-
-    if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      dom.atlasGrid.querySelectorAll('.dest-card').forEach(function (card) {
-        card.addEventListener('pointermove', function (e) {
-          var rect = card.getBoundingClientRect();
-          card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
-          card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
-        });
-      });
-    }
   }
 
   function initAtlasControls() {

@@ -1,12 +1,9 @@
-/* ==========================================================================
-   SERENDIB — Ceylon Azure & Pearl Dual-Theme Design System Tokens
-   Light ("Crisp Pearl & Ocean Azure") & Dark ("Midnight Sapphire & Lagoon")
-   ========================================================================== */
+/* Serendib Travels - Theme & Layout Tokens */
 
 :root {
   color-scheme: light;
 
-  /* Light Theme — Bright Airy Canvas, Ocean Azure & Tropical Turquoise */
+  /* Light Palette */
   --bg-limestone: #FFFFFF;
   --bg-sandstone: #F2F7F9;
   --bg-compass: #EAF3F6;
@@ -56,17 +53,17 @@
   /* Spacing & Layout */
   --container-max: 1320px;
   --gutter: clamp(1rem, 3vw, 2.75rem);
-  --section-py: clamp(2.5rem, 5.5vw, 6.25rem);
+  --section-py: clamp(2.25rem, 4.4vw, 4.75rem);
 
   /* Motion & View Transition Origin */
-  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
-  --transition-fast: 200ms var(--ease-editorial);
-  --transition-med: 380ms var(--ease-editorial);
-  --transition-slow: 650ms var(--ease-editorial);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 200ms var(--ease-smooth);
+  --transition-med: 360ms var(--ease-smooth);
+  --transition-slow: 600ms var(--ease-smooth);
   --vt-x: 90%;
   --vt-y: 36px;
 
-  /* Soft Friendly Radii & Clean Elevation */
+  /* Radii & Shadows */
   --radius-sharp: 12px;
   --radius-card: 18px;
   --radius-soft: 20px;
@@ -78,7 +75,7 @@
   --shadow-popover: 0 16px 40px rgba(14, 22, 18, 0.14);
 }
 
-/* Dark Theme — Deep Midnight Sapphire & Luminous Lagoon */
+/* Dark Palette */
 [data-theme="dark"] {
   color-scheme: dark;
 

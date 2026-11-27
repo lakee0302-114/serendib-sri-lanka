@@ -1,4 +1,4 @@
-/* Zero-flash initial Theme & Language/RTL hydration */
+/* Theme & language pre-hydration */
 (function () {
   'use strict';
   try {

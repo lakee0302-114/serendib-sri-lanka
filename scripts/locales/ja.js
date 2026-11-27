@@ -1,166 +1,175 @@
 window.SERENDIB_LOCALES = window.SERENDIB_LOCALES || {};
 window.SERENDIB_LOCALES['ja'] = {
-  meta: {
-    code: 'ja',
-    label: 'Japanese',
-    native: '日本語',
-    dir: 'ltr',
-    pageTitle: 'SERENDIB — スリランカ旅アトラス'
+  "meta": {
+    "code": "ja",
+    "label": "Japanese",
+    "native": "日本語",
+    "dir": "ltr",
+    "pageTitle": "Serendib Travels | スリランカ周遊・旅行プランナー"
   },
-  ui: {
-    brandSub: 'スリランカ',
-    nav: {
-      atlas: '名所',
-      compass: '季節風',
-      itineraries: '周遊ルート',
-      journal: '建築・文化',
-      fieldNotes: '旅の知恵',
-      myRoute: 'ルート',
-      planJourney: '旅程作成',
-      openRouteMobile: '保存ルートを見る',
-      deskCoord: "COLOMBO · 06°55'N 79°51'E"
+  "ui": {
+    "brandSub": "スリランカ",
+    "nav": {
+      "atlas": "名所",
+      "compass": "季節風",
+      "itineraries": "周遊ルート",
+      "journal": "建築・文化",
+      "fieldNotes": "旅の知恵",
+      "myRoute": "ルート",
+      "planJourney": "旅程作成",
+      "openRouteMobile": "保存ルートを見る",
+      "deskCoord": "コロンボ案内窓口 · スリランカ"
     },
-    theme: {
-      toDark: 'ナイトモードへ',
-      toLight: 'デイモードへ',
-      darkLabel: '夜',
-      lightLabel: '昼'
+    "theme": {
+      "toDark": "ナイトモードへ",
+      "toLight": "デイモードへ",
+      "darkLabel": "夜",
+      "lightLabel": "昼"
     },
-    hero: {
-      coord: '07°57\'25"N · 80°45\'35"E — SERENDIB',
-      titleStart: '花崗岩と茶霧、',
-      titleEm: 'そして潮風の島。',
-      subtitle: '古代天空宮殿から南海岸の珊瑚礁まで、季節風を読むスリランカ旅案内。',
-      ctaPrimary: '名所を見る',
-      ctaSecondary: '季節風マップ',
-      plate: 'PLATE 01 · SIGIRIYA',
-      area: '65,610 KM² 島',
-      calendar: '二季モンスーン'
+    "hero": {
+      "coord": "07°57'25\"N · 80°45'35\"E — SERENDIB",
+      "titleStart": "スリランカ",
+      "titleEm": "周遊の旅",
+      "subtitle": "古代天空宮殿から南海岸の珊瑚礁まで、季節風を読むスリランカ旅案内。",
+      "ctaPrimary": "名所を見る",
+      "ctaSecondary": "季節風マップ",
+      "plate": "PLATE 01 · SIGIRIYA",
+      "area": "65,610 KM² 島",
+      "calendar": "二季モンスーン"
     },
-    finder: {
-      monthLabel: '渡航月',
-      focusLabel: 'テーマ',
-      paceLabel: 'ルート',
-      submit: '地域を絞る',
-      focusOptions: {
-        all: '島全体',
-        cultural: '古代遺産',
-        highlands: '紅茶と鉄道',
-        south: '南海岸',
-        wildlife: 'サファリ',
-        northeast: '東海岸・ジャフナ'
+    "finder": {
+      "monthLabel": "渡航月",
+      "focusLabel": "テーマ",
+      "paceLabel": "ルート",
+      "submit": "地域を絞る",
+      "focusOptions": {
+        "all": "島全体",
+        "cultural": "古代遺産",
+        "highlands": "紅茶と鉄道",
+        "south": "南海岸",
+        "wildlife": "サファリ",
+        "northeast": "東海岸・ジャフナ"
       },
-      paceOptions: {
-        'classic-arc': '9日間・王道周遊',
-        'wild-south': '11日間・自然と建築',
-        'east-north-sun': '10日間・夏限定 東北周遊'
+      "paceOptions": {
+        "classic-arc": "9日間・王道周遊",
+        "wild-south": "11日間・自然と建築",
+        "east-north-sun": "10日間・夏限定 東北周遊"
       }
     },
-    intro: {
-      eyebrow: '01 / 対比と風景',
-      titleStart: '日の入りまでに',
-      titleEm: '異なる季節へ。',
-      lead: '夜明けに標高1,800mの茶霧を抜け、夕暮れにはインド洋の城壁へ。',
-      datums: [
-        { key: '季節風', val: '二つの逆転モンスーンで一年中どこかの海が晴れます。' },
-        { key: '世界遺産', val: '8つのUNESCO遺産が暮らしの中に息づきます。' },
-        { key: '建築美', val: '古代貯水池とバワの開放的な熱帯モダニズム。' }
+    "intro": {
+      "eyebrow": "01 / 対比と風景",
+      "titleStart": "日の入りまでに",
+      "titleEm": "異なる季節へ。",
+      "lead": "夜明けに標高1,800mの茶霧を抜け、夕暮れにはインド洋の城壁へ。",
+      "datums": [
+        {
+          "key": "季節風",
+          "val": "二つの逆転モンスーンで一年中どこかの海が晴れます。"
+        },
+        {
+          "key": "世界遺産",
+          "val": "8つのUNESCO遺産が暮らしの中に息づきます。"
+        },
+        {
+          "key": "建築美",
+          "val": "古代貯水池とバワの開放的な熱帯モダニズム。"
+        }
       ]
     },
-    atlas: {
-      eyebrow: '02 / 名所アトラス',
-      titleStart: '島を象徴する',
-      titleEm: '厳選スポット。',
-      subcopy: '各地域をタップしてベストな時間帯、郷土料理、保存を確認。',
-      filters: {
-        all: 'すべて (20)',
-        cultural: '文化三角地帯',
-        highlands: '高原',
-        south: '南海岸',
-        wildlife: '野生保護区',
-        northeast: '北・東海岸'
+    "atlas": {
+      "eyebrow": "02 / 名所アトラス",
+      "titleStart": "スリランカの",
+      "titleEm": "主な観光地",
+      "subcopy": "各地域をタップしてベストな時間帯、郷土料理、保存を確認。",
+      "filters": {
+        "all": "すべて (20)",
+        "cultural": "文化三角地帯",
+        "highlands": "高原",
+        "south": "南海岸",
+        "wildlife": "野生保護区",
+        "northeast": "北・東海岸"
       },
-      dossierBtn: '詳細',
-      addStop: '+ 追加',
-      savedStop: '✓ 保存済',
-      nightsUnit: '泊',
-      showAllBtn: '全{count}カ所を見る',
-      showLessBtn: '最初の行に戻す'
+      "dossierBtn": "詳細",
+      "addStop": "+ 追加",
+      "savedStop": "✓ 保存済",
+      "nightsUnit": "泊",
+      "showAllBtn": "全{count}カ所を見る",
+      "showLessBtn": "最初の行に戻す"
     },
-    compass: {
-      eyebrow: '03 / モンスーン羅針盤',
-      titleStart: '風の向きで',
-      titleEm: '海を選ぶ。',
-      subcopy: '渡航月を選ぶと乾季のエリアと穏やかな海が一目で分かります。',
-      seasonKey: '凡例',
-      legendOptimal: '快晴・凪',
-      legendGood: '穏やかな風',
-      legendCaution: 'モンスーン',
-      verdictSuffix: '予報',
-      culturalCalendar: '祭事',
-      zones: {
-        south: '南海岸・ヤーラ',
-        highlands: '紅茶高原',
-        cultural: '文化三角地帯',
-        northeast: '北・東海岸'
+    "compass": {
+      "eyebrow": "03 / モンスーン羅針盤",
+      "titleStart": "季節別の",
+      "titleEm": "おすすめ時期",
+      "subcopy": "渡航月を選ぶと乾季のエリアと穏やかな海が一目で分かります。",
+      "seasonKey": "凡例",
+      "legendOptimal": "快晴・凪",
+      "legendGood": "穏やかな風",
+      "legendCaution": "モンスーン",
+      "verdictSuffix": "予報",
+      "culturalCalendar": "祭事",
+      "zones": {
+        "south": "南海岸・ヤーラ",
+        "highlands": "紅茶高原",
+        "cultural": "文化三角地帯",
+        "northeast": "北・東海岸"
       }
     },
-    itineraries: {
-      eyebrow: '04 / おすすめ旅程',
-      titleStart: '山道の速度に合う',
-      titleEm: 'ゆとりの弧。',
-      subcopy: '山間道路の実測移動に合わせ、各拠点に2〜3泊する構成です。',
-      adoptBtn: 'このルートを取り込む'
+    "itineraries": {
+      "eyebrow": "04 / おすすめ旅程",
+      "titleStart": "人気モデル",
+      "titleEm": "コース",
+      "subcopy": "山間道路の実測移動に合わせ、各拠点に2〜3泊する構成です。",
+      "adoptBtn": "このルートを取り込む"
     },
-    journal: {
-      eyebrow: '05 / 感覚のセイロン',
-      titleStart: 'ベランダ、鉄路、',
-      titleEm: '土鍋のスパイス。',
-      subcopy: '風を通す開放建築、青い高原列車、炭火の郷土料理。',
-      featureTag: 'バワ建築 · ルヌガンガ',
-      featureTitle: '雨さえも招き入れる熱帯の居間',
-      featureCopy: 'ジェフリー・バワの空間はチーク材と花崗岩、海風を室内外なく結びます。',
-      sub1Tag: 'セイロン紅茶',
-      sub1Title: '標高1,800mの朝霧茶園',
-      sub1Copy: '涼しい霧がハイグロウン紅茶の爽やかな柑橘香を育てます。',
-      sub2Tag: '古代水利王国',
-      sub2Title: 'ムーンストーンと大貯水池',
-      sub2Copy: '千年以上前の王の貯水湖が今も緑の棚田を潤しています。'
+    "journal": {
+      "eyebrow": "05 / 感覚のセイロン",
+      "titleStart": "ベランダ、鉄路、",
+      "titleEm": "土鍋のスパイス。",
+      "subcopy": "風を通す開放建築、青い高原列車、炭火の郷土料理。",
+      "featureTag": "バワ建築 · ルヌガンガ",
+      "featureTitle": "雨さえも招き入れる熱帯の居間",
+      "featureCopy": "ジェフリー・バワの空間はチーク材と花崗岩、海風を室内外なく結びます。",
+      "sub1Tag": "セイロン紅茶",
+      "sub1Title": "標高1,800mの朝霧茶園",
+      "sub1Copy": "涼しい霧がハイグロウン紅茶の爽やかな柑橘香を育てます。",
+      "sub2Tag": "古代水利王国",
+      "sub2Title": "ムーンストーンと大貯水池",
+      "sub2Copy": "千年以上前の王の貯水湖が今も緑の棚田を潤しています。"
     },
-    fieldNotes: {
-      eyebrow: '06 / 実用メモ',
-      titleStart: '出発前に知る',
-      titleEm: '旅の基本。',
-      subcopy: '鉄道座席、ETAビザ、移動時間、寺院の作法。'
+    "fieldNotes": {
+      "eyebrow": "06 / 実用メモ",
+      "titleStart": "旅の",
+      "titleEm": "基本情報",
+      "subcopy": "鉄道座席、ETAビザ、移動時間、寺院の作法。"
     },
-    contact: {
-      eyebrow: '07 / 相談窓口',
-      titleStart: '自分だけの',
-      titleEm: 'ルートを形に。',
-      subcopy: '保存した立ち寄り先は下のプラン作成欄へ自動反映されます。',
-      shortlistLabel: '保存済みの立ち寄り先',
-      emptyShortlist: 'まだ選択されていません — 上のアトラスから追加してください。',
-      nightsSuggested: '泊目安',
-      nameLabel: 'お名前',
-      namePlaceholder: '山田 太郎',
-      emailLabel: 'メール',
-      emailPlaceholder: 'you@domain.jp',
-      monthLabel: '渡航月',
-      guestsLabel: '人数・泊数',
-      guestsPlaceholder: '2名・8泊',
-      notesLabel: 'ご希望',
-      notesPlaceholder: '茶園バンガロー、ヒョウ観察、静かなビーチなど…',
-      submitBtn: 'プラン送信',
-      copyBtn: 'コピー',
-      briefReady: '作成完了',
-      briefPrefix: 'アーユボーワン',
-      briefBody: 'ご指定の渡航月',
-      briefMid: '・巡回地：',
-      briefSuffix: 'の内容を保存しました。',
-      launchBtn: '旅プランナーを開く'
+    "contact": {
+      "eyebrow": "07 / 相談窓口",
+      "titleStart": "オリジナル日程を",
+      "titleEm": "作成する",
+      "subcopy": "保存した立ち寄り先は下のプラン作成欄へ自動反映されます。",
+      "shortlistLabel": "保存済みの立ち寄り先",
+      "emptyShortlist": "まだ選択されていません — 上のアトラスから追加してください。",
+      "nightsSuggested": "泊目安",
+      "nameLabel": "お名前",
+      "namePlaceholder": "山田 太郎",
+      "emailLabel": "メール",
+      "emailPlaceholder": "you@domain.jp",
+      "monthLabel": "渡航月",
+      "guestsLabel": "人数・泊数",
+      "guestsPlaceholder": "2名・8泊",
+      "notesLabel": "ご希望",
+      "notesPlaceholder": "茶園バンガロー、ヒョウ観察、静かなビーチなど…",
+      "submitBtn": "プラン送信",
+      "copyBtn": "コピー",
+      "briefReady": "作成完了",
+      "briefPrefix": "アーユボーワン",
+      "briefBody": "ご指定の渡航月",
+      "briefMid": "・巡回地：",
+      "briefSuffix": "の内容を保存しました。",
+      "launchBtn": "旅プランナーを開く"
     },
-    planner: {
-      "eyebrow": "SERENDIB 旅程スタジオ",
+    "planner": {
+      "eyebrow": "SERENDIB TRAVELS",
       "title": "あなただけのスリランカ旅を設計",
       "closeLabel": "プランナーを閉じる",
       "step1Tab": "1. 日程・スタイル",
@@ -256,11 +265,11 @@ window.SERENDIB_LOCALES['ja'] = {
       "otherFoodPlaceholder": "例：ハラール、ヴィーガン、グルテンフリー...",
       "otherInterestPlaceholder": "例：サーフィン、スパ、写真撮影..."
     },
-    account: {
+    "account": {
       "navSignIn": "ログイン",
       "navMyTrips": "マイトリップ",
       "navAccountMobile": "マイトリップ・ログイン",
-      "kicker": "SERENDIB トラベラーパス",
+      "kicker": "マイアカウント",
       "authTitle": "ログインしてプランを確認",
       "authSub": "作成したスリランカ旅行プランを保存し、いつでも詳細を確認できます。",
       "tabSignIn": "ログイン",
@@ -286,100 +295,813 @@ window.SERENDIB_LOCALES['ja'] = {
       "signedInAutoSave": "{email} としてログイン中 — 自動保存されます。",
       "viewInMyTripsBtn": "マイトリップで見る"
     },
-    footer: {
-      blurb: '季節風と景観から編むスリランカ旅アトラス。',
-      greeting: 'ආයුබෝවන් · வணக்கம் · WELCOME',
-      colExplore: 'メニュー',
-      colRegions: '地域',
-      colDesk: '案内',
-      deskNote: 'コロンボ · ゴール · キャンディ',
-      copyright: '© 2026 Serendib Travel Atlas'
+    "footer": {
+      "blurb": "季節風と景観から編むスリランカ旅アトラス。",
+      "greeting": "ආයුබෝවන් · வணக்கம் · WELCOME",
+      "colExplore": "メニュー",
+      "colRegions": "地域",
+      "colDesk": "案内",
+      "deskNote": "コロンボ · ゴール · キャンディ",
+      "copyright": "© 2026 Serendib Travels (Pvt) Ltd"
     },
-    dossier: {
-      kickerPrefix: '詳細メモ',
-      elevation: '標高',
-      fromColombo: 'コロンボから',
-      primeWindow: 'ベスト時期',
-      bestDaylight: '光が美しい時間',
-      highlightsHeading: '見どころ',
-      atTable: '食卓：',
-      etiquette: '作法：',
-      nightsRec: '泊推奨',
-      addBtn: '+ ルートに追加',
-      removeBtn: '✓ 保存済（削除）'
+    "dossier": {
+      "kickerPrefix": "詳細メモ",
+      "elevation": "標高",
+      "fromColombo": "コロンボから",
+      "primeWindow": "ベスト時期",
+      "bestDaylight": "光が美しい時間",
+      "highlightsHeading": "見どころ",
+      "atTable": "食卓：",
+      "etiquette": "作法：",
+      "nightsRec": "泊推奨",
+      "addBtn": "+ ルートに追加",
+      "removeBtn": "✓ 保存済（削除）"
     },
-    routeSheet: {
-      kicker: 'ルート',
-      title: '保存した周遊プラン',
-      recommendedPace: '目安日数',
-      clearBtn: '空にする',
-      sendBtn: 'フォームへ送る',
-      emptyText: 'ルートは空です。上のアトラスから場所を追加してください。',
-      browseBtn: 'アトラスを見る',
-      introText: '順番や拠点数を調整し、そのまま旅程フォームへ反映できます。',
-      stopLabel: '拠点',
-      removeStop: '削除',
-      nightsLabel: '泊',
-      stopsLabel: 'ヶ所'
+    "routeSheet": {
+      "kicker": "ルート",
+      "title": "保存した周遊プラン",
+      "recommendedPace": "目安日数",
+      "clearBtn": "空にする",
+      "sendBtn": "フォームへ送る",
+      "emptyText": "ルートは空です。上のアトラスから場所を追加してください。",
+      "browseBtn": "アトラスを見る",
+      "introText": "順番や拠点数を調整し、そのまま旅程フォームへ反映できます。",
+      "stopLabel": "拠点",
+      "removeStop": "削除",
+      "nightsLabel": "泊",
+      "stopsLabel": "ヶ所"
     },
-    toasts: {
-      removed: '{name} を削除しました',
-      added: '{name} を追加しました',
-      matched: '{month} の気候に合わせました',
-      loadedRoute: '{title} を読み込みました',
-      cleared: 'ルートを空にしました',
-      copied: 'クリップボードにコピーしました',
-      copyFallback: '先に場所を保存してください',
-      compiled: 'プラン {ref} 作成完了',
-      langChanged: '日本語に切り替えました'
+    "toasts": {
+      "removed": "{name} を削除しました",
+      "added": "{name} を追加しました",
+      "matched": "{month} の気候に合わせました",
+      "loadedRoute": "{title} を読み込みました",
+      "cleared": "ルートを空にしました",
+      "copied": "クリップボードにコピーしました",
+      "copyFallback": "先に場所を保存してください",
+      "compiled": "プラン {ref} 作成完了",
+      "langChanged": "日本語に切り替えました"
     }
   },
-  destinations: {
-    sigiriya: { name: 'シーギリヤ＆ピドゥランガラ', region: '文化三角地帯', tagline: '蓮の水庭園の上にそびえる5世紀の天空要塞', elevation: '349m', driveFromColombo: '車で4時間15分', bestTime: '1–4月・7–9月', daylightWindow: '06:00 – 08:30', summary: 'カッサパ王が築いた岩山の王宮跡。モンスーン期に湧く水庭園と壁画が残ります。', highlights: ['05:45に隣山ピドゥランガラへ登り朝日のシーギリヤを望む。', '団体客前の09:00までに鏡の壁と水庭園を散策。', '夕暮れにカンダラマ貯水池の堤防をサイクリング。'], culinaryNote: '素焼き土鍋で炊く赤米と蓮根カレー。', etiquette: 'ピドゥランガラ石窟寺院内では肩と膝を覆う服装で。' },
-    ella: { name: 'エッラ＆デモダラ', region: '高原', tagline: '9連石橋と茶畑を縫う霧の高原鉄道', elevation: '1,041m', driveFromColombo: '車5時間 / 鉄道6時間', bestTime: '1–5月・8–9月', daylightWindow: '06:30 – 10:00', summary: '茶畑の尾根と青い高原列車、渓谷の絶景が広がる避暑地。', highlights: ['コロンボ発ではなくナヌオヤ〜エッラ間の絶景3時間のみ乗車。', 'デモダラの茶畑を抜けてナイン・アーチ・ブリッジへ歩く。', 'バンダラウェラ側の静かなペコー・トレイルを散策。'], culinaryNote: '薪焼きシコクビエのロティと甘いシーニ・サンボル。', etiquette: 'トンネル手前で列車の開いたドアから身を乗り出さない。' },
-    galle: { name: 'ゴール旧市街＆ウナワトゥナ', region: '南海岸', tagline: '潮風と夕陽に染まる珊瑚石の城壁', elevation: '海抜0m', driveFromColombo: '高速道路2時間', bestTime: '12–4月', daylightWindow: '16:45 – 18:30', summary: 'オランダ時代の白壁建築、灯台、書店が生きづく海辺の世界遺産要塞。', highlights: ['夕刻にフラッグ・ロックから灯台まで城壁上を一周歩く。', 'ペドラー通りの古い中庭で陶器や手織りリネンを探す。', '朝は東隣のハバラドゥワやアハンガマの静かな海へ。'], culinaryNote: '黒タマリンド風味の魚カレーと焼きたてホッパー。', etiquette: '住民が暮らす街区のためビーチ外では露出を控えめに。' },
-    yala: { name: 'ヤーラ国立公園', region: '野生保護区', tagline: '巨岩の海岸林に息づく野生のセイロンヒョウ', elevation: '45m', driveFromColombo: '車で4時間45分', bestTime: '2–7月', daylightWindow: '05:45–09:30 / 15:30', summary: '乾燥林と海岸砂丘が交わり、世界有数の密度で野生ヒョウが生息します。', highlights: ['車両渋滞を避けるならヤーラ第5区画または早朝入園へ。', '早朝開門と同時に専任ナチュラリストと出発。', 'パタナンガラ砂丘裏の静かなテントロッジに宿泊。'], culinaryNote: 'ティッサマハラマ名産の土壺入り水牛ヨーグルトと野生蜂蜜。', etiquette: '動物から30m以上離れエンジン停止・フラッシュ厳禁。' },
-    kumana: { name: 'クマナ野鳥保護区', region: '野生保護区', tagline: '静かなマングローブ湿原と極彩色のインドトキコウ', elevation: '10m', driveFromColombo: '車で6時間15分', bestTime: '4–8月', daylightWindow: '06:00–09:30 / 15:30', summary: 'スリランカ随一の海辺の野鳥の楽園。鏡のような湿原にインドトキコウやペリカンが集います。', highlights: ['4–7月の営巣期にはクマナ・ヴィッル湿地が鳥の群れで賑わいます。', '希少なセイタカコウやヘラサギ、カワセミを間近で観察。', '静かな朝のバードウォッチングとパナマの穴場海岸を巡る。'], culinaryNote: 'パナマ村の蓮の葉包みの伝統赤米カレー。', etiquette: 'エンジンを止めて静かに観察し、水辺の営巣地に近づかない。' },
-    'nuwara-eliya': { name: 'ハットン＆紅茶高原', region: '高原', tagline: '翡翠色の茶畑、歴史ある茶園バンガロー', elevation: '1,868m', driveFromColombo: '車で4時間30分', bestTime: '1–4月・8月', daylightWindow: '06:15 – 09:30', summary: 'カッスルリー湖を囲む涼しい山あいで極上のオレンジ・ペコーが生まれます。', highlights: ['元茶園主の案内で一芯二葉の手摘み工程を見学。', '早朝のホートン・プレインズで断崖ワールズ・エンドへ。', '百年前の木造バンガローで暖炉とアフタヌーンティー。'], culinaryNote: '澄んだディンブラ紅茶とカルダモンのショートブレッド。', etiquette: '夜間は12°C前後まで冷えるため羽織物を必ず持参。' },
-    bentota: { name: 'ベントータ＆タンガッレ', region: '南海岸', tagline: 'バワの建築美学とヤシの木陰の静かな入り江', elevation: '海抜0m', driveFromColombo: '1時間30分', bestTime: '11–4月', daylightWindow: '07:00 & 17:15', summary: '内と外の境界を溶かす熱帯モダニズムと手つかずの白い弓なり海岸。', highlights: ['ベントータ郊外にあるバワの庭園邸宅ルヌガンガを予約見学。', '12〜3月はミリッサやドンドラ岬沖でシロナガスクジラ観察。', 'ゴヤンボッカやレカワの静かな入り江で過ごす。'], culinaryNote: '黒胡椒とパンダンリーフで煮込んだラグーン蟹カレー。', etiquette: 'ウミガメ産卵ビーチでは必ずガイド同伴・赤色灯のみ使用。' },
-    'trinco-jaffna': { name: 'トリンコマリー＆ジャフナ', region: '北・東海岸', tagline: '夏の澄んだ東海岸と北部の深いタミル文化', elevation: '海抜0m', driveFromColombo: '車で5時間30分', bestTime: '5–10月', daylightWindow: '06:00 & 17:30', summary: '南西海岸に雨が降る夏、北と東は雲ひとつない晴天と穏やかな珊瑚礁に変わります。', highlights: ['ピジョン・アイランドでスノーケル、ニラヴェリの白砂を歩く。', 'ジャフナのナルール寺院や野生馬が駆けるデルフト島へ。', '6〜9月はアルガム・ベイの美しいライトブレイクを堪能。'], culinaryNote: '名物ジャフナ蟹カレーとオディヤル海鮮スープ。', etiquette: '北部の主要ヒンドゥー寺院では男性は上衣を脱ぐのが礼儀です。' },
-    kandy: { name: 'キャンディ＆佛歯寺', region: '文化遺産', tagline: '聖なる湖畔の古都と伝統のペラヘラ太鼓', elevation: '500m', driveFromColombo: '車で3時間30分', bestTime: '1–4月 · 7–9月', daylightWindow: '06:30 & 18:30', summary: '霧の山並みに抱かれ、仏歯を祀るスリランカ最後の王都。', highlights: ['夕暮れの佛歯寺でテワヴァ（太鼓と礼拝）の儀式に立ち会う。', 'ペラデニヤ王立植物園の巨大な竹並木を散策する。', 'アーサーズ・シート展望台からキャンディ湖の夕景を望む。'], culinaryNote: '新鮮な蓮の葉に盛られた香り高いキャンディ風ライス＆カリー。', etiquette: '佛歯寺の境内では白または肩と膝が隠れる控えめな服装が必要です。' },
-    anuradhapura: { name: '聖地アヌラーダプラ', region: '文化遺産', tagline: '白亜の巨大仏塔と樹齢2,300年の聖菩提樹', elevation: '81m', driveFromColombo: '車で4時間15分', bestTime: '1–9月', daylightWindow: '06:30–09:30 & 夕暮れ', summary: '壮大な煉瓦の仏塔と古代貯水池が点在するシンハラ最初の王都。', highlights: ['世界最古の歴史ある聖木ジャヤ・スリ・マハ・ボディにジャスミンを供える。', '象の彫刻が連なる白亜のルワンウェリサヤ大塔を巡る。', '夕暮れ時にミヒンタレーの巨大な花崗岩の石段を登る。'], culinaryNote: '乾燥地帯伝統のシコクビエ粥と蓮の実料理。', etiquette: '白い仏塔の周囲は必ず裸足になり時計回りに歩きます。' },
-    dambulla: { name: 'ダンブッラ石窟寺院', region: '文化遺産', tagline: '岩壁に刻まれた5つの彩色洞窟と黄金の仏像群', elevation: '341m', driveFromColombo: '車で3時間50分', bestTime: '1–9月', daylightWindow: '07:30 – 10:00', summary: '壮大な岩天井画の下に153体の金箔仏像を納める断崖の僧院。', highlights: ['マハラジャ・ヴィハーラを中心とする5つの岩窟を巡る。', '尾根から朝霧が晴れる遠くのシーギリヤを眺める。', '麓の活気あふれるスパイス・青果卸売市場に立ち寄る。'], culinaryNote: 'カリッと揚げたキャッサバチップスと香り高いマータレー産パイナップル。', etiquette: 'テラス入口で履物を預け、仏像に背を向けて撮影しないでください。' },
-    'horton-plains': { name: 'ホートンプレインズ＆ワールズエンド', region: '高原地帯', tagline: '霧深い雲霧林の果てに落ちる880mの大断崖', elevation: '2,100m', driveFromColombo: '車で5時間30分', bestTime: '1–4月 · 8月', daylightWindow: '06:00 – 09:00', summary: '南部の茶畑平野へ垂直に落ち込む、スリランカ最高峰の草原台地。', highlights: ['雲が湧き上がる前の朝9時までにワールズエンド展望台へ到着する。', 'シャクナゲの林を抜けてベーカーズ滝を周回トレッキング。', '朝霜の草原を歩く野生のサンバー鹿に出会う。'], culinaryNote: '公園ゲートで味わう熱いジンジャーティーと薪焼きトースト。', etiquette: '使い捨てプラスチックは厳禁で、入園時に手荷物検査があります。' },
-    mirissa: { name: 'ミリッサ＆ウェリガマ湾', region: '南海岸・西海岸', tagline: '椰子の岬、穏やかなサーフ湾と外洋のシロナガスクジラ', elevation: '海抜0m', driveFromColombo: '車で2時間15分', bestTime: '11–4月', daylightWindow: '06:30 & 17:30', summary: 'ホエールウォッチングと柔らかな波、黄金色の入り江が魅力の双子の南湾。', highlights: ['12〜3月の朝、沖合でシロナガスクジラやハシナガイルカを観賞。', '混雑前の日の出にココナッツ・ツリー・ヒルを歩く。', '遠浅のウェリガマ・ビーチで初心者向けサーフィンを楽しむ。'], culinaryNote: '浜辺で焼く新鮮なフエダイのグリルとライム、ココナッツロティ。', etiquette: 'クジラと適正距離を保つ環境配慮認定の船をお選びください。' },
-    udawalawe: { name: 'ウダワラウェ国立公園', region: '野生動物', tagline: '野生の象の群れが集う広大なサバンナ平原', elevation: '118m', driveFromColombo: '車で3時間45分', bestTime: '通年（5–9月が最適）', daylightWindow: '06:00 & 15:30', summary: 'ウダワラウェ貯水池の畔に広がる草原で、一年中高い確率で象に出会えます。', highlights: ['季節を問わず家族の群れで遊ぶ愛らしい子象を観察する。', '象の孤児院トランジットホームでミルクやりの時間を見学。', '枯れ木に止まるカンムリワシや孔雀をサファリ中に探す。'], culinaryNote: '道端で割ってもらう甘いキングココナッツとジャガリークレープ。', etiquette: 'サファリ車から動物を呼んだり餌を与えたりしないでください。' },
-    'arugam-bay': { name: 'アルガム・ベイ＆パシクダ', region: '北・東海岸', tagline: 'インド洋の極上ポイントブレイクと遠浅の透明ラグーン', elevation: '海抜0m', driveFromColombo: '車で6時間30分', bestTime: '5–9月', daylightWindow: '06:00 夜明け', summary: '南西が雨季の間、乾季の澄んだ波と穏やかなラグーンが広がる東海岸の聖地。', highlights: ['メインポイントやウィスキーポイントで綺麗なライトブレイクに乗る。', 'パシクダの腰の深さほどしかない珊瑚のラグーンでゆったり泳ぐ。', '日の出のポットゥビル・マングローブをカヤックで静かに進む。'], culinaryNote: '焙煎コリアンダーが香る東海岸の魚カレーとライス。', etiquette: 'ビーチを離れる町中では肩を覆う軽装で穏やかな村の雰囲気を大切に。' },
-    colombo: { name: 'コロンボ＆ゴール・フェイス', region: '南海岸・西海岸', tagline: '歴史的アーチ建築、ペター市場とインド洋の夕陽', elevation: '海抜0m', driveFromColombo: '玄関口', bestTime: '12–4月', daylightWindow: '17:00 – 19:00', summary: 'コロニアル建築の博物館、赤いモスク、海辺の遊歩道が交差する温暖な玄関口。', highlights: ['赤白模様のジャミ・ウル・アルファー・モスクとペターのスパイス通りを散策。', 'コロンボ国立博物館で歴史的な王室ギャラリーを鑑賞。', '夕暮れのゴール・フェイス・グリーンでピリ辛の海老ワデを味わう。'], culinaryNote: '黒胡椒クラブの名店料理やペターの熱いコットゥ・ロティ。', etiquette: '午後の湿気に備えて水分を補給し、トゥクトゥクはメーター制を利用しましょう。' },
-    'sri-pada': { name: 'スリー・パーダ（アダムスピーク）', region: '高原地帯', tagline: '灯火に照らされた夜明け前登山と神秘的な三角影', elevation: '2,243m', driveFromColombo: '車で4時間15分', bestTime: '12–5月（巡礼期）', daylightWindow: '05:30 – 07:30', summary: '明かりが連なる石段を夜間に登り、雲海のご来光を拝むスリランカ最古の霊峰。', highlights: ['ナラタニヤから午前2時に出発し茶屋で休憩しながら登る。', '雲海にくっきりと浮かぶ三角形の山の影を望む。', '多宗教の巡礼者とともに山頂の鐘を鳴らす。'], culinaryNote: '参道茶屋で味わう熱いジンジャーティーと揚げたてワデ。', etiquette: '山頂の朝は8°C前後に冷え込むため防寒着が必須です。' },
-    pinnawala: { name: 'ピンナワラ象の孤児院', region: '野生動物', tagline: 'マハ・オヤ川で水浴びする象の家族と愛らしい子象たち', elevation: '125m', driveFromColombo: '車で2時間30分', bestTime: '通年', daylightWindow: '10:00 & 14:00 水浴び', summary: 'マハ・オヤ川の浅瀬へ毎日2回、親子の象の群れが揃って水浴びに訪れる名所。', highlights: ['10:00と14:00に川へ集まり水遊びする多くの象を見学。', '川辺のテラスから寄り添う母子象の温かい情景を眺める。', 'コロンボ空港と古都キャンディ間の移動途中に立ち寄り可能。'], culinaryNote: '川面を望むテラスで味わう土鍋スリランカカレーと赤米。', etiquette: '展望テラスから静かに見守り、子象を驚かせないようご配慮ください。' },
-    riverston: { name: 'リバーストン', region: '高原地帯', tagline: '風吹き抜ける峠とピタワラ平原・ミニワールズエンド', elevation: '1,420m', driveFromColombo: '車で4時間15分', bestTime: '2–5月 · 7–9月', daylightWindow: '06:30 – 11:00', summary: 'マータレー山地に位置し、ピタワラ草原の絶壁や滝の裏側を歩く洞窟、緑深い渓谷美で人気。', highlights: ['エメラルドの谷を見下ろすミニ・ワールズエンドの断崖へ。', '澄みきったセラ・エラ滝の裏側の岩陰を散策。', '涼風が吹き渡るリバーストン・ピークの稜線をハイキング。'], culinaryNote: 'キトゥル椰子蜜を使った素朴な雑穀菓子ハラペと山菜カレー。', etiquette: '霧の日は断崖の縁に近づきすぎず、地元ガイドと歩きましょう。' },
-    peradeniya: { name: 'ペラデニヤ王立植物園', region: '文化遺産', tagline: 'ロヤルパーム並木・蘭の温室と巨大ジャワガジュマル', elevation: '460m', driveFromColombo: '車で3時間20分', bestTime: '1–4月 · 7–9月', daylightWindow: '07:30 – 10:30 & 16:00', summary: 'マハウェリ川が湾曲する豊かな約60ヘクタールの王立植物園。空へ伸びるヤシ並木と蘭園が見どころです。', highlights: ['まっすぐ伸びる象徴的なロヤル・パーム並木道を散策。', '色鮮やかな洋蘭の温室と睡蓮の池の風景を満喫。', '広大な芝生に枝を広げる巨大ジャワ・イチジクの木陰で一休み。'], culinaryNote: 'マハウェリ川沿いで味わう冷たいセイロンティーと旬の熱帯フルーツ。', etiquette: '整備された園路を歩き、希少な蘭や香料樹には手を触れないでください。' }
+  "destinations": {
+    "sigiriya": {
+      "name": "シーギリヤ＆ピドゥランガラ",
+      "region": "文化三角地帯",
+      "tagline": "蓮の水庭園の上にそびえる5世紀の天空要塞",
+      "elevation": "349m",
+      "driveFromColombo": "車で4時間15分",
+      "bestTime": "1–4月・7–9月",
+      "daylightWindow": "06:00 – 08:30",
+      "summary": "カッサパ王が築いた岩山の王宮跡。モンスーン期に湧く水庭園と壁画が残ります。",
+      "highlights": [
+        "05:45に隣山ピドゥランガラへ登り朝日のシーギリヤを望む。",
+        "団体客前の09:00までに鏡の壁と水庭園を散策。",
+        "夕暮れにカンダラマ貯水池の堤防をサイクリング。"
+      ],
+      "culinaryNote": "素焼き土鍋で炊く赤米と蓮根カレー。",
+      "etiquette": "ピドゥランガラ石窟寺院内では肩と膝を覆う服装で。"
+    },
+    "ella": {
+      "name": "エッラ＆デモダラ",
+      "region": "高原",
+      "tagline": "9連石橋と茶畑を縫う霧の高原鉄道",
+      "elevation": "1,041m",
+      "driveFromColombo": "車5時間 / 鉄道6時間",
+      "bestTime": "1–5月・8–9月",
+      "daylightWindow": "06:30 – 10:00",
+      "summary": "茶畑の尾根と青い高原列車、渓谷の絶景が広がる避暑地。",
+      "highlights": [
+        "コロンボ発ではなくナヌオヤ〜エッラ間の絶景3時間のみ乗車。",
+        "デモダラの茶畑を抜けてナイン・アーチ・ブリッジへ歩く。",
+        "バンダラウェラ側の静かなペコー・トレイルを散策。"
+      ],
+      "culinaryNote": "薪焼きシコクビエのロティと甘いシーニ・サンボル。",
+      "etiquette": "トンネル手前で列車の開いたドアから身を乗り出さない。"
+    },
+    "galle": {
+      "name": "ゴール旧市街＆ウナワトゥナ",
+      "region": "南海岸",
+      "tagline": "潮風と夕陽に染まる珊瑚石の城壁",
+      "elevation": "海抜0m",
+      "driveFromColombo": "高速道路2時間",
+      "bestTime": "12–4月",
+      "daylightWindow": "16:45 – 18:30",
+      "summary": "オランダ時代の白壁建築、灯台、書店が生きづく海辺の世界遺産要塞。",
+      "highlights": [
+        "夕刻にフラッグ・ロックから灯台まで城壁上を一周歩く。",
+        "ペドラー通りの古い中庭で陶器や手織りリネンを探す。",
+        "朝は東隣のハバラドゥワやアハンガマの静かな海へ。"
+      ],
+      "culinaryNote": "黒タマリンド風味の魚カレーと焼きたてホッパー。",
+      "etiquette": "住民が暮らす街区のためビーチ外では露出を控えめに。"
+    },
+    "yala": {
+      "name": "ヤーラ国立公園",
+      "region": "野生保護区",
+      "tagline": "巨岩の海岸林に息づく野生のセイロンヒョウ",
+      "elevation": "45m",
+      "driveFromColombo": "車で4時間45分",
+      "bestTime": "2–7月",
+      "daylightWindow": "05:45–09:30 / 15:30",
+      "summary": "乾燥林と海岸砂丘が交わり、世界有数の密度で野生ヒョウが生息します。",
+      "highlights": [
+        "車両渋滞を避けるならヤーラ第5区画または早朝入園へ。",
+        "早朝開門と同時に専任ナチュラリストと出発。",
+        "パタナンガラ砂丘裏の静かなテントロッジに宿泊。"
+      ],
+      "culinaryNote": "ティッサマハラマ名産の土壺入り水牛ヨーグルトと野生蜂蜜。",
+      "etiquette": "動物から30m以上離れエンジン停止・フラッシュ厳禁。"
+    },
+    "kumana": {
+      "name": "クマナ野鳥保護区",
+      "region": "野生保護区",
+      "tagline": "静かなマングローブ湿原と極彩色のインドトキコウ",
+      "elevation": "10m",
+      "driveFromColombo": "車で6時間15分",
+      "bestTime": "4–8月",
+      "daylightWindow": "06:00–09:30 / 15:30",
+      "summary": "スリランカ随一の海辺の野鳥の楽園。鏡のような湿原にインドトキコウやペリカンが集います。",
+      "highlights": [
+        "4–7月の営巣期にはクマナ・ヴィッル湿地が鳥の群れで賑わいます。",
+        "希少なセイタカコウやヘラサギ、カワセミを間近で観察。",
+        "静かな朝のバードウォッチングとパナマの穴場海岸を巡る。"
+      ],
+      "culinaryNote": "パナマ村の蓮の葉包みの伝統赤米カレー。",
+      "etiquette": "エンジンを止めて静かに観察し、水辺の営巣地に近づかない。"
+    },
+    "nuwara-eliya": {
+      "name": "ハットン＆紅茶高原",
+      "region": "高原",
+      "tagline": "翡翠色の茶畑、歴史ある茶園バンガロー",
+      "elevation": "1,868m",
+      "driveFromColombo": "車で4時間30分",
+      "bestTime": "1–4月・8月",
+      "daylightWindow": "06:15 – 09:30",
+      "summary": "カッスルリー湖を囲む涼しい山あいで極上のオレンジ・ペコーが生まれます。",
+      "highlights": [
+        "元茶園主の案内で一芯二葉の手摘み工程を見学。",
+        "早朝のホートン・プレインズで断崖ワールズ・エンドへ。",
+        "百年前の木造バンガローで暖炉とアフタヌーンティー。"
+      ],
+      "culinaryNote": "澄んだディンブラ紅茶とカルダモンのショートブレッド。",
+      "etiquette": "夜間は12°C前後まで冷えるため羽織物を必ず持参。"
+    },
+    "bentota": {
+      "name": "ベントータ＆タンガッレ",
+      "region": "南海岸",
+      "tagline": "バワの建築美学とヤシの木陰の静かな入り江",
+      "elevation": "海抜0m",
+      "driveFromColombo": "1時間30分",
+      "bestTime": "11–4月",
+      "daylightWindow": "07:00 & 17:15",
+      "summary": "内と外の境界を溶かす熱帯モダニズムと手つかずの白い弓なり海岸。",
+      "highlights": [
+        "ベントータ郊外にあるバワの庭園邸宅ルヌガンガを予約見学。",
+        "12〜3月はミリッサやドンドラ岬沖でシロナガスクジラ観察。",
+        "ゴヤンボッカやレカワの静かな入り江で過ごす。"
+      ],
+      "culinaryNote": "黒胡椒とパンダンリーフで煮込んだラグーン蟹カレー。",
+      "etiquette": "ウミガメ産卵ビーチでは必ずガイド同伴・赤色灯のみ使用。"
+    },
+    "trinco-jaffna": {
+      "name": "トリンコマリー＆ジャフナ",
+      "region": "北・東海岸",
+      "tagline": "夏の澄んだ東海岸と北部の深いタミル文化",
+      "elevation": "海抜0m",
+      "driveFromColombo": "車で5時間30分",
+      "bestTime": "5–10月",
+      "daylightWindow": "06:00 & 17:30",
+      "summary": "南西海岸に雨が降る夏、北と東は雲ひとつない晴天と穏やかな珊瑚礁に変わります。",
+      "highlights": [
+        "ピジョン・アイランドでスノーケル、ニラヴェリの白砂を歩く。",
+        "ジャフナのナルール寺院や野生馬が駆けるデルフト島へ。",
+        "6〜9月はアルガム・ベイの美しいライトブレイクを堪能。"
+      ],
+      "culinaryNote": "名物ジャフナ蟹カレーとオディヤル海鮮スープ。",
+      "etiquette": "北部の主要ヒンドゥー寺院では男性は上衣を脱ぐのが礼儀です。"
+    },
+    "kandy": {
+      "name": "キャンディ＆佛歯寺",
+      "region": "文化遺産",
+      "tagline": "聖なる湖畔の古都と伝統のペラヘラ太鼓",
+      "elevation": "500m",
+      "driveFromColombo": "車で3時間30分",
+      "bestTime": "1–4月 · 7–9月",
+      "daylightWindow": "06:30 & 18:30",
+      "summary": "霧の山並みに抱かれ、仏歯を祀るスリランカ最後の王都。",
+      "highlights": [
+        "夕暮れの佛歯寺でテワヴァ（太鼓と礼拝）の儀式に立ち会う。",
+        "ペラデニヤ王立植物園の巨大な竹並木を散策する。",
+        "アーサーズ・シート展望台からキャンディ湖の夕景を望む。"
+      ],
+      "culinaryNote": "新鮮な蓮の葉に盛られた香り高いキャンディ風ライス＆カリー。",
+      "etiquette": "佛歯寺の境内では白または肩と膝が隠れる控えめな服装が必要です。"
+    },
+    "anuradhapura": {
+      "name": "聖地アヌラーダプラ",
+      "region": "文化遺産",
+      "tagline": "白亜の巨大仏塔と樹齢2,300年の聖菩提樹",
+      "elevation": "81m",
+      "driveFromColombo": "車で4時間15分",
+      "bestTime": "1–9月",
+      "daylightWindow": "06:30–09:30 & 夕暮れ",
+      "summary": "壮大な煉瓦の仏塔と古代貯水池が点在するシンハラ最初の王都。",
+      "highlights": [
+        "世界最古の歴史ある聖木ジャヤ・スリ・マハ・ボディにジャスミンを供える。",
+        "象の彫刻が連なる白亜のルワンウェリサヤ大塔を巡る。",
+        "夕暮れ時にミヒンタレーの巨大な花崗岩の石段を登る。"
+      ],
+      "culinaryNote": "乾燥地帯伝統のシコクビエ粥と蓮の実料理。",
+      "etiquette": "白い仏塔の周囲は必ず裸足になり時計回りに歩きます。"
+    },
+    "dambulla": {
+      "name": "ダンブッラ石窟寺院",
+      "region": "文化遺産",
+      "tagline": "岩壁に刻まれた5つの彩色洞窟と黄金の仏像群",
+      "elevation": "341m",
+      "driveFromColombo": "車で3時間50分",
+      "bestTime": "1–9月",
+      "daylightWindow": "07:30 – 10:00",
+      "summary": "壮大な岩天井画の下に153体の金箔仏像を納める断崖の僧院。",
+      "highlights": [
+        "マハラジャ・ヴィハーラを中心とする5つの岩窟を巡る。",
+        "尾根から朝霧が晴れる遠くのシーギリヤを眺める。",
+        "麓の活気あふれるスパイス・青果卸売市場に立ち寄る。"
+      ],
+      "culinaryNote": "カリッと揚げたキャッサバチップスと香り高いマータレー産パイナップル。",
+      "etiquette": "テラス入口で履物を預け、仏像に背を向けて撮影しないでください。"
+    },
+    "horton-plains": {
+      "name": "ホートンプレインズ＆ワールズエンド",
+      "region": "高原地帯",
+      "tagline": "霧深い雲霧林の果てに落ちる880mの大断崖",
+      "elevation": "2,100m",
+      "driveFromColombo": "車で5時間30分",
+      "bestTime": "1–4月 · 8月",
+      "daylightWindow": "06:00 – 09:00",
+      "summary": "南部の茶畑平野へ垂直に落ち込む、スリランカ最高峰の草原台地。",
+      "highlights": [
+        "雲が湧き上がる前の朝9時までにワールズエンド展望台へ到着する。",
+        "シャクナゲの林を抜けてベーカーズ滝を周回トレッキング。",
+        "朝霜の草原を歩く野生のサンバー鹿に出会う。"
+      ],
+      "culinaryNote": "公園ゲートで味わう熱いジンジャーティーと薪焼きトースト。",
+      "etiquette": "使い捨てプラスチックは厳禁で、入園時に手荷物検査があります。"
+    },
+    "mirissa": {
+      "name": "ミリッサ＆ウェリガマ湾",
+      "region": "南海岸・西海岸",
+      "tagline": "椰子の岬、穏やかなサーフ湾と外洋のシロナガスクジラ",
+      "elevation": "海抜0m",
+      "driveFromColombo": "車で2時間15分",
+      "bestTime": "11–4月",
+      "daylightWindow": "06:30 & 17:30",
+      "summary": "ホエールウォッチングと柔らかな波、黄金色の入り江が魅力の双子の南湾。",
+      "highlights": [
+        "12〜3月の朝、沖合でシロナガスクジラやハシナガイルカを観賞。",
+        "混雑前の日の出にココナッツ・ツリー・ヒルを歩く。",
+        "遠浅のウェリガマ・ビーチで初心者向けサーフィンを楽しむ。"
+      ],
+      "culinaryNote": "浜辺で焼く新鮮なフエダイのグリルとライム、ココナッツロティ。",
+      "etiquette": "クジラと適正距離を保つ環境配慮認定の船をお選びください。"
+    },
+    "udawalawe": {
+      "name": "ウダワラウェ国立公園",
+      "region": "野生動物",
+      "tagline": "野生の象の群れが集う広大なサバンナ平原",
+      "elevation": "118m",
+      "driveFromColombo": "車で3時間45分",
+      "bestTime": "通年（5–9月が最適）",
+      "daylightWindow": "06:00 & 15:30",
+      "summary": "ウダワラウェ貯水池の畔に広がる草原で、一年中高い確率で象に出会えます。",
+      "highlights": [
+        "季節を問わず家族の群れで遊ぶ愛らしい子象を観察する。",
+        "象の孤児院トランジットホームでミルクやりの時間を見学。",
+        "枯れ木に止まるカンムリワシや孔雀をサファリ中に探す。"
+      ],
+      "culinaryNote": "道端で割ってもらう甘いキングココナッツとジャガリークレープ。",
+      "etiquette": "サファリ車から動物を呼んだり餌を与えたりしないでください。"
+    },
+    "arugam-bay": {
+      "name": "アルガム・ベイ＆パシクダ",
+      "region": "北・東海岸",
+      "tagline": "インド洋の極上ポイントブレイクと遠浅の透明ラグーン",
+      "elevation": "海抜0m",
+      "driveFromColombo": "車で6時間30分",
+      "bestTime": "5–9月",
+      "daylightWindow": "06:00 夜明け",
+      "summary": "南西が雨季の間、乾季の澄んだ波と穏やかなラグーンが広がる東海岸の聖地。",
+      "highlights": [
+        "メインポイントやウィスキーポイントで綺麗なライトブレイクに乗る。",
+        "パシクダの腰の深さほどしかない珊瑚のラグーンでゆったり泳ぐ。",
+        "日の出のポットゥビル・マングローブをカヤックで静かに進む。"
+      ],
+      "culinaryNote": "焙煎コリアンダーが香る東海岸の魚カレーとライス。",
+      "etiquette": "ビーチを離れる町中では肩を覆う軽装で穏やかな村の雰囲気を大切に。"
+    },
+    "colombo": {
+      "name": "コロンボ＆ゴール・フェイス",
+      "region": "南海岸・西海岸",
+      "tagline": "歴史的アーチ建築、ペター市場とインド洋の夕陽",
+      "elevation": "海抜0m",
+      "driveFromColombo": "玄関口",
+      "bestTime": "12–4月",
+      "daylightWindow": "17:00 – 19:00",
+      "summary": "コロニアル建築の博物館、赤いモスク、海辺の遊歩道が交差する温暖な玄関口。",
+      "highlights": [
+        "赤白模様のジャミ・ウル・アルファー・モスクとペターのスパイス通りを散策。",
+        "コロンボ国立博物館で歴史的な王室ギャラリーを鑑賞。",
+        "夕暮れのゴール・フェイス・グリーンでピリ辛の海老ワデを味わう。"
+      ],
+      "culinaryNote": "黒胡椒クラブの名店料理やペターの熱いコットゥ・ロティ。",
+      "etiquette": "午後の湿気に備えて水分を補給し、トゥクトゥクはメーター制を利用しましょう。"
+    },
+    "sri-pada": {
+      "name": "スリー・パーダ（アダムスピーク）",
+      "region": "高原地帯",
+      "tagline": "灯火に照らされた夜明け前登山と神秘的な三角影",
+      "elevation": "2,243m",
+      "driveFromColombo": "車で4時間15分",
+      "bestTime": "12–5月（巡礼期）",
+      "daylightWindow": "05:30 – 07:30",
+      "summary": "明かりが連なる石段を夜間に登り、雲海のご来光を拝むスリランカ最古の霊峰。",
+      "highlights": [
+        "ナラタニヤから午前2時に出発し茶屋で休憩しながら登る。",
+        "雲海にくっきりと浮かぶ三角形の山の影を望む。",
+        "多宗教の巡礼者とともに山頂の鐘を鳴らす。"
+      ],
+      "culinaryNote": "参道茶屋で味わう熱いジンジャーティーと揚げたてワデ。",
+      "etiquette": "山頂の朝は8°C前後に冷え込むため防寒着が必須です。"
+    },
+    "pinnawala": {
+      "name": "ピンナワラ象の孤児院",
+      "region": "野生動物",
+      "tagline": "マハ・オヤ川で水浴びする象の家族と愛らしい子象たち",
+      "elevation": "125m",
+      "driveFromColombo": "車で2時間30分",
+      "bestTime": "通年",
+      "daylightWindow": "10:00 & 14:00 水浴び",
+      "summary": "マハ・オヤ川の浅瀬へ毎日2回、親子の象の群れが揃って水浴びに訪れる名所。",
+      "highlights": [
+        "10:00と14:00に川へ集まり水遊びする多くの象を見学。",
+        "川辺のテラスから寄り添う母子象の温かい情景を眺める。",
+        "コロンボ空港と古都キャンディ間の移動途中に立ち寄り可能。"
+      ],
+      "culinaryNote": "川面を望むテラスで味わう土鍋スリランカカレーと赤米。",
+      "etiquette": "展望テラスから静かに見守り、子象を驚かせないようご配慮ください。"
+    },
+    "riverston": {
+      "name": "リバーストン",
+      "region": "高原地帯",
+      "tagline": "風吹き抜ける峠とピタワラ平原・ミニワールズエンド",
+      "elevation": "1,420m",
+      "driveFromColombo": "車で4時間15分",
+      "bestTime": "2–5月 · 7–9月",
+      "daylightWindow": "06:30 – 11:00",
+      "summary": "マータレー山地に位置し、ピタワラ草原の絶壁や滝の裏側を歩く洞窟、緑深い渓谷美で人気。",
+      "highlights": [
+        "エメラルドの谷を見下ろすミニ・ワールズエンドの断崖へ。",
+        "澄みきったセラ・エラ滝の裏側の岩陰を散策。",
+        "涼風が吹き渡るリバーストン・ピークの稜線をハイキング。"
+      ],
+      "culinaryNote": "キトゥル椰子蜜を使った素朴な雑穀菓子ハラペと山菜カレー。",
+      "etiquette": "霧の日は断崖の縁に近づきすぎず、地元ガイドと歩きましょう。"
+    },
+    "peradeniya": {
+      "name": "ペラデニヤ王立植物園",
+      "region": "文化遺産",
+      "tagline": "ロヤルパーム並木・蘭の温室と巨大ジャワガジュマル",
+      "elevation": "460m",
+      "driveFromColombo": "車で3時間20分",
+      "bestTime": "1–4月 · 7–9月",
+      "daylightWindow": "07:30 – 10:30 & 16:00",
+      "summary": "マハウェリ川が湾曲する豊かな約60ヘクタールの王立植物園。空へ伸びるヤシ並木と蘭園が見どころです。",
+      "highlights": [
+        "まっすぐ伸びる象徴的なロヤル・パーム並木道を散策。",
+        "色鮮やかな洋蘭の温室と睡蓮の池の風景を満喫。",
+        "広大な芝生に枝を広げる巨大ジャワ・イチジクの木陰で一休み。"
+      ],
+      "culinaryNote": "マハウェリ川沿いで味わう冷たいセイロンティーと旬の熱帯フルーツ。",
+      "etiquette": "整備された園路を歩き、希少な蘭や香料樹には手を触れないでください。"
+    }
   },
-  months: {
-    JAN: { short: '1月', fullName: '1月', headline: '西海岸・南海岸・高原のベスト乾季', summary: '高原の澄んだ朝と穏やかな南の海、サファリ日和。', festival: 'ドゥルトゥ・ペラヘラ・タイ・ポンガル', verdicts: { south: { status: '快晴', note: '穏やかな海とミリッサのクジラ季節。' }, highlands: { status: '快晴涼風', note: '峠の見晴らし良好、夜は涼しい。' }, cultural: { status: '乾燥', note: '午前中の遺跡巡りが快適。' }, northeast: { status: '時雨', note: '東海岸は高波。ジャフナは晴れ中心。' } } },
-    FEB: { short: '2月', fullName: '2月', headline: '全島が晴天に包まれる最良の月', summary: '年間で最も雨が少なく南北縦断ルートに最適。', festival: 'ナヴァム・ペラヘラ・独立記念日', verdicts: { south: { status: '快晴', note: '透明度抜群の海水浴とダイビング。' }, highlands: { status: '青空', note: 'ペコー・トレイルやスリーパーダ登山日和。' }, cultural: { status: '晴天', note: '古代遺跡や湖畔の散策に最適。' }, northeast: { status: '回復', note: 'ジャフナ晴れ、トリンコの海も静まる。' } } },
-    MAR: { short: '3月', fullName: '3月', headline: '輝く南岸と水場へ集まる野生動物', summary: '長い日照時間と水辺に集うゾウ・ヒョウの好機。', festival: 'コネスワラムのマハ・シヴァラートリ', verdicts: { south: { status: '快晴', note: 'ベントータ〜タンガッレで暖かい海。' }, highlands: { status: '晴れ', note: '朝露に光る茶畑と快適な午後。' }, cultural: { status: '温暖', note: '暑い午前に備え06:00登頂がおすすめ。' }, northeast: { status: '凪・晴れ', note: '東海岸の長い乾季が始まります。' } } },
-    APR: { short: '4月', fullName: '4月', headline: '伝統新年祭と新緑の高原', summary: 'シンハラ・タミル新年で賑わう季節の変わり目。', festival: '伝統新年アウルドゥ（4月13–14日）', verdicts: { south: { status: '穏やか', note: '下旬まで海は穏やか。月末から波高まる。' }, highlands: { status: '新緑', note: '花開くヌワラエリヤ、夕方は時折雨。' }, cultural: { status: '祝祭', note: '朝の光が澄み、田舎の伝統菓子が並ぶ。' }, northeast: { status: '好機', note: '東海岸のビーチが鏡のように澄む。' } } },
-    MAY: { short: '5月', fullName: '5月', headline: '東海岸が開き、南西に雨季到来', summary: '南西にスコールが降る頃、トリンコマリーが乾季入り。', festival: 'ウェサック満月のランタン祭り', verdicts: { south: { status: 'モンスーン', note: '高波と通り雨。落ち着いたオフ期滞在に。' }, highlands: { status: '朝晴れ', note: '午前は散策向き、午後は滝の水量増。' }, cultural: { status: '乾燥', note: 'シーギリヤ周辺は晴れ間が多い。' }, northeast: { status: '最高季', note: '穏やかな東岸とアルガム波乗り開幕。' } } },
-    JUN: { short: '6月', fullName: '6月', headline: 'アルガム・ベイの波と東海岸の夏', summary: '北東部に青空が広がり乾季の湖へ象が集まり始める。', festival: 'ミヒンタレーのポソン巡礼', verdicts: { south: { status: '強風', note: '遊泳不適。夏の主役は東海岸へ。' }, highlands: { status: '爽風', note: 'エッラ側はハットンよりずっと乾燥。' }, cultural: { status: '晴・風', note: '遺跡もサファリも晴天率が高い。' }, northeast: { status: '最盛期', note: 'ニラヴェリは凪、アルガムは好波。' } } },
-    JUL: { short: '7月', fullName: '7月', headline: '乾季サファリと東海岸の太陽', summary: '乾いた湖畔に象の群れが集まり東海岸は雲ひとつない夏。', festival: 'キャンディ・エサラ祭準備開始', verdicts: { south: { status: '変化', note: 'スコール合間に日差しも差す時期。' }, highlands: { status: '東側快晴', note: 'エッラやリバーストンのハイク良好。' }, cultural: { status: '象サファリ', note: '乾いた湖畔に野生の象の群れが集う。' }, northeast: { status: '最盛期', note: '最高の珊瑚透明度と凪の日々。' } } },
-    AUG: { short: '8月', fullName: '8月', headline: 'キャンディ・エサラ祭とナルール祭', summary: 'スリランカ最大の祭典と北・東海岸の夏晴天が重なる月。', festival: 'キャンディ・エサラ・ペラヘラ / ナルール', verdicts: { south: { status: '晴れ間', note: 'ゴール周辺に一時的な晴天戻る。' }, highlands: { status: '祭典', note: '涼しい高原の夜と松明・象のパレード。' }, cultural: { status: '晴天', note: 'シーギリヤ展望と象観察の好機。' }, northeast: { status: '最盛期', note: 'ジャフナの寺院祭と静かなトリンコの海。' } } },
-    SEP: { short: '9月', fullName: '9月', headline: '肩の荷を下ろす静かな東・北部', summary: '観光客が減り、東海岸最後の晴天とサーフ波が続く。', festival: 'ビナラ・ポヤ寺院行事', verdicts: { south: { status: '移行期', note: '朝の陽射しと午後の海風。' }, highlands: { status: '澄明', note: '茶畑の鉄道車窓がくっきり見える。' }, cultural: { status: '静か・乾', note: '混雑少ない古代都市と心地よい気温。' }, northeast: { status: '終盤好調', note: '穏やかな東ビーチのラストシーズン。' } } },
-    OCT: { short: '10月', fullName: '10月', headline: '緑深まる間モンスーン期', summary: '午前は澄んだ陽射し、午後に恵みのスコールが降ります。', festival: 'ディーワーリー光の祭り', verdicts: { south: { status: '夕立', note: '波が落ち着き始めアーユルヴェーダ日和。' }, highlands: { status: '霧と滝', note: '濃い緑と雲の間から滝が轟く。' }, cultural: { status: '午前晴れ', note: '午後2時までの早朝観光が快適。' }, northeast: { status: '転換', note: '北東モンスーンへ潮の流れが変化。' } } },
-    NOV: { short: '11月', fullName: '11月', headline: '南海岸と西海岸が冬の輝きへ', summary: '東に雨が移り、ゴールとベントータが乾季の海を取り戻す。', festival: 'イル・ポヤ・ブンダラ渡り鳥到来', verdicts: { south: { status: '海開き', note: 'ウェリガマのサーフとゴール散歩再開。' }, highlands: { status: '緑豊か', note: '霧が晴れる爽やかな茶園の朝。' }, cultural: { status: '蓮の花', note: '満水になった古代湖に蓮が咲く。' }, northeast: { status: '雨季', note: '北東部は雨。迷わず南西海岸へ。' } } },
-    DEC: { short: '12月', fullName: '12月', headline: '南・西海岸と茶高原のハイシーズン', summary: '青い空、クジラの到来、活気づくゴールの石畳。', festival: '海辺のクリスマス・ウンドゥワプ・ポヤ', verdicts: { south: { status: '快晴', note: '穏やかな海とゴール城壁の夕暮れ。' }, highlands: { status: '冬晴れ', note: '冷たい澄んだ朝と茶園の暖炉。' }, cultural: { status: '穏やか', note: '瑞々しい緑と過ごしやすい朝。' }, northeast: { status: '雨期', note: '1月中旬まで雨多し。南部がベスト。' } } }
+  "months": {
+    "JAN": {
+      "short": "1月",
+      "fullName": "1月",
+      "headline": "西海岸・南海岸・高原のベスト乾季",
+      "summary": "高原の澄んだ朝と穏やかな南の海、サファリ日和。",
+      "festival": "ドゥルトゥ・ペラヘラ・タイ・ポンガル",
+      "verdicts": {
+        "south": {
+          "status": "快晴",
+          "note": "穏やかな海とミリッサのクジラ季節。"
+        },
+        "highlands": {
+          "status": "快晴涼風",
+          "note": "峠の見晴らし良好、夜は涼しい。"
+        },
+        "cultural": {
+          "status": "乾燥",
+          "note": "午前中の遺跡巡りが快適。"
+        },
+        "northeast": {
+          "status": "時雨",
+          "note": "東海岸は高波。ジャフナは晴れ中心。"
+        }
+      }
+    },
+    "FEB": {
+      "short": "2月",
+      "fullName": "2月",
+      "headline": "全島が晴天に包まれる最良の月",
+      "summary": "年間で最も雨が少なく南北縦断ルートに最適。",
+      "festival": "ナヴァム・ペラヘラ・独立記念日",
+      "verdicts": {
+        "south": {
+          "status": "快晴",
+          "note": "透明度抜群の海水浴とダイビング。"
+        },
+        "highlands": {
+          "status": "青空",
+          "note": "ペコー・トレイルやスリーパーダ登山日和。"
+        },
+        "cultural": {
+          "status": "晴天",
+          "note": "古代遺跡や湖畔の散策に最適。"
+        },
+        "northeast": {
+          "status": "回復",
+          "note": "ジャフナ晴れ、トリンコの海も静まる。"
+        }
+      }
+    },
+    "MAR": {
+      "short": "3月",
+      "fullName": "3月",
+      "headline": "輝く南岸と水場へ集まる野生動物",
+      "summary": "長い日照時間と水辺に集うゾウ・ヒョウの好機。",
+      "festival": "コネスワラムのマハ・シヴァラートリ",
+      "verdicts": {
+        "south": {
+          "status": "快晴",
+          "note": "ベントータ〜タンガッレで暖かい海。"
+        },
+        "highlands": {
+          "status": "晴れ",
+          "note": "朝露に光る茶畑と快適な午後。"
+        },
+        "cultural": {
+          "status": "温暖",
+          "note": "暑い午前に備え06:00登頂がおすすめ。"
+        },
+        "northeast": {
+          "status": "凪・晴れ",
+          "note": "東海岸の長い乾季が始まります。"
+        }
+      }
+    },
+    "APR": {
+      "short": "4月",
+      "fullName": "4月",
+      "headline": "伝統新年祭と新緑の高原",
+      "summary": "シンハラ・タミル新年で賑わう季節の変わり目。",
+      "festival": "伝統新年アウルドゥ（4月13–14日）",
+      "verdicts": {
+        "south": {
+          "status": "穏やか",
+          "note": "下旬まで海は穏やか。月末から波高まる。"
+        },
+        "highlands": {
+          "status": "新緑",
+          "note": "花開くヌワラエリヤ、夕方は時折雨。"
+        },
+        "cultural": {
+          "status": "祝祭",
+          "note": "朝の光が澄み、田舎の伝統菓子が並ぶ。"
+        },
+        "northeast": {
+          "status": "好機",
+          "note": "東海岸のビーチが鏡のように澄む。"
+        }
+      }
+    },
+    "MAY": {
+      "short": "5月",
+      "fullName": "5月",
+      "headline": "東海岸が開き、南西に雨季到来",
+      "summary": "南西にスコールが降る頃、トリンコマリーが乾季入り。",
+      "festival": "ウェサック満月のランタン祭り",
+      "verdicts": {
+        "south": {
+          "status": "モンスーン",
+          "note": "高波と通り雨。落ち着いたオフ期滞在に。"
+        },
+        "highlands": {
+          "status": "朝晴れ",
+          "note": "午前は散策向き、午後は滝の水量増。"
+        },
+        "cultural": {
+          "status": "乾燥",
+          "note": "シーギリヤ周辺は晴れ間が多い。"
+        },
+        "northeast": {
+          "status": "最高季",
+          "note": "穏やかな東岸とアルガム波乗り開幕。"
+        }
+      }
+    },
+    "JUN": {
+      "short": "6月",
+      "fullName": "6月",
+      "headline": "アルガム・ベイの波と東海岸の夏",
+      "summary": "北東部に青空が広がり乾季の湖へ象が集まり始める。",
+      "festival": "ミヒンタレーのポソン巡礼",
+      "verdicts": {
+        "south": {
+          "status": "強風",
+          "note": "遊泳不適。夏の主役は東海岸へ。"
+        },
+        "highlands": {
+          "status": "爽風",
+          "note": "エッラ側はハットンよりずっと乾燥。"
+        },
+        "cultural": {
+          "status": "晴・風",
+          "note": "遺跡もサファリも晴天率が高い。"
+        },
+        "northeast": {
+          "status": "最盛期",
+          "note": "ニラヴェリは凪、アルガムは好波。"
+        }
+      }
+    },
+    "JUL": {
+      "short": "7月",
+      "fullName": "7月",
+      "headline": "乾季サファリと東海岸の太陽",
+      "summary": "乾いた湖畔に象の群れが集まり東海岸は雲ひとつない夏。",
+      "festival": "キャンディ・エサラ祭準備開始",
+      "verdicts": {
+        "south": {
+          "status": "変化",
+          "note": "スコール合間に日差しも差す時期。"
+        },
+        "highlands": {
+          "status": "東側快晴",
+          "note": "エッラやリバーストンのハイク良好。"
+        },
+        "cultural": {
+          "status": "象サファリ",
+          "note": "乾いた湖畔に野生の象の群れが集う。"
+        },
+        "northeast": {
+          "status": "最盛期",
+          "note": "最高の珊瑚透明度と凪の日々。"
+        }
+      }
+    },
+    "AUG": {
+      "short": "8月",
+      "fullName": "8月",
+      "headline": "キャンディ・エサラ祭とナルール祭",
+      "summary": "スリランカ最大の祭典と北・東海岸の夏晴天が重なる月。",
+      "festival": "キャンディ・エサラ・ペラヘラ / ナルール",
+      "verdicts": {
+        "south": {
+          "status": "晴れ間",
+          "note": "ゴール周辺に一時的な晴天戻る。"
+        },
+        "highlands": {
+          "status": "祭典",
+          "note": "涼しい高原の夜と松明・象のパレード。"
+        },
+        "cultural": {
+          "status": "晴天",
+          "note": "シーギリヤ展望と象観察の好機。"
+        },
+        "northeast": {
+          "status": "最盛期",
+          "note": "ジャフナの寺院祭と静かなトリンコの海。"
+        }
+      }
+    },
+    "SEP": {
+      "short": "9月",
+      "fullName": "9月",
+      "headline": "肩の荷を下ろす静かな東・北部",
+      "summary": "観光客が減り、東海岸最後の晴天とサーフ波が続く。",
+      "festival": "ビナラ・ポヤ寺院行事",
+      "verdicts": {
+        "south": {
+          "status": "移行期",
+          "note": "朝の陽射しと午後の海風。"
+        },
+        "highlands": {
+          "status": "澄明",
+          "note": "茶畑の鉄道車窓がくっきり見える。"
+        },
+        "cultural": {
+          "status": "静か・乾",
+          "note": "混雑少ない古代都市と心地よい気温。"
+        },
+        "northeast": {
+          "status": "終盤好調",
+          "note": "穏やかな東ビーチのラストシーズン。"
+        }
+      }
+    },
+    "OCT": {
+      "short": "10月",
+      "fullName": "10月",
+      "headline": "緑深まる間モンスーン期",
+      "summary": "午前は澄んだ陽射し、午後に恵みのスコールが降ります。",
+      "festival": "ディーワーリー光の祭り",
+      "verdicts": {
+        "south": {
+          "status": "夕立",
+          "note": "波が落ち着き始めアーユルヴェーダ日和。"
+        },
+        "highlands": {
+          "status": "霧と滝",
+          "note": "濃い緑と雲の間から滝が轟く。"
+        },
+        "cultural": {
+          "status": "午前晴れ",
+          "note": "午後2時までの早朝観光が快適。"
+        },
+        "northeast": {
+          "status": "転換",
+          "note": "北東モンスーンへ潮の流れが変化。"
+        }
+      }
+    },
+    "NOV": {
+      "short": "11月",
+      "fullName": "11月",
+      "headline": "南海岸と西海岸が冬の輝きへ",
+      "summary": "東に雨が移り、ゴールとベントータが乾季の海を取り戻す。",
+      "festival": "イル・ポヤ・ブンダラ渡り鳥到来",
+      "verdicts": {
+        "south": {
+          "status": "海開き",
+          "note": "ウェリガマのサーフとゴール散歩再開。"
+        },
+        "highlands": {
+          "status": "緑豊か",
+          "note": "霧が晴れる爽やかな茶園の朝。"
+        },
+        "cultural": {
+          "status": "蓮の花",
+          "note": "満水になった古代湖に蓮が咲く。"
+        },
+        "northeast": {
+          "status": "雨季",
+          "note": "北東部は雨。迷わず南西海岸へ。"
+        }
+      }
+    },
+    "DEC": {
+      "short": "12月",
+      "fullName": "12月",
+      "headline": "南・西海岸と茶高原のハイシーズン",
+      "summary": "青い空、クジラの到来、活気づくゴールの石畳。",
+      "festival": "海辺のクリスマス・ウンドゥワプ・ポヤ",
+      "verdicts": {
+        "south": {
+          "status": "快晴",
+          "note": "穏やかな海とゴール城壁の夕暮れ。"
+        },
+        "highlands": {
+          "status": "冬晴れ",
+          "note": "冷たい澄んだ朝と茶園の暖炉。"
+        },
+        "cultural": {
+          "status": "穏やか",
+          "note": "瑞々しい緑と過ごしやすい朝。"
+        },
+        "northeast": {
+          "status": "雨期",
+          "note": "1月中旬まで雨多し。南部がベスト。"
+        }
+      }
+    }
   },
-  itineraries: {
-    'classic-arc': { number: 'ルート 01', title: '王道セレンディブ周遊', duration: '9日間 / 8泊', season: '12–4月・初めてに最適', pace: '鉄道＋専用車', routeLine: 'シーギリヤ → キャンディ → ハットン → エッラ → ゴール旧市街', summary: '王宮岩山、高原鉄道、南海岸の要塞を無理なくつなぐ定番ルート。', days: [{ day: '1–2日目', stop: 'シーギリヤ＆ダンブッラ', note: 'ピドゥランガラ朝日鑑賞と黄金の石窟寺院。' }, { day: '3–4日目', stop: 'キャンディ', note: '夕暮れの仏歯寺参拝とスパイス庭園。' }, { day: '5–6日目', stop: 'ハットン＆エッラ', note: '茶園滞在と9連橋を渡る3時間の絶景列車。' }, { day: '7–9日目', stop: 'ゴール旧市街', note: '城壁サンセット散策と南の海辺滞在。' }] },
-    'wild-south': { number: 'ルート 02', title: 'ヒョウ・紅茶と秘密の入江', duration: '11日間 / 10泊', season: '1–4月・建築と自然', pace: 'ゆったり上質旅', routeLine: 'コロンボ → ハットン → ヤーラ → タンガッレ → ゴール', summary: 'バワ建築、茶畑トレッキング、専用サファリ、人影少ないビーチを結ぶ。', days: [{ day: '1日目', stop: 'コロンボ', note: 'バワ自邸ナンバー11見学と海辺の夕暮れ。' }, { day: '2–4日目', stop: 'ハットン', note: '歴史ある茶園バンガローを歩く稜線旅。' }, { day: '5–7日目', stop: 'ヤーラ国立公園', note: '早朝専用4WDで野生ヒョウの痕跡を追う。' }, { day: '8–11日目', stop: 'タンガッレ＆ゴール', note: '静かな白砂の入江と旧市街邸宅ステイ。' }] },
-    'east-north-sun': { number: 'ルート 03', title: '夏の太陽：東海岸と北部', duration: '10日間 / 9泊', season: '5–9月・夏休み晴天保証', pace: '珊瑚礁とタミル文化', routeLine: 'アヌラーダプラ → ジャフナ → トリンコ → シーギリヤ', summary: '夏に晴れる北部寺院と澄んだ東の珊瑚礁、古代王都を巡る。', days: [{ day: '1–2日目', stop: 'アヌラーダプラ＆ミヒンタレー', note: '白亜の仏塔と聖なる石段の朝風景。' }, { day: '3–5日目', stop: 'ジャフナ＆デルフト島', note: 'パルミラヤシ並木とナルール寺院、野生馬。' }, { day: '6–8日目', stop: 'トリンコマリー', note: 'ピジョン島スノーケルと朝の漁船風景。' }, { day: '9–10日目', stop: 'ダンブッラ＆シーギリヤ', note: '壁画輝く石窟寺院と朝のシーギリヤ登頂へ。' }] }
+  "itineraries": {
+    "classic-arc": {
+      "number": "ルート 01",
+      "title": "王道セレンディブ周遊",
+      "duration": "9日間 / 8泊",
+      "season": "12–4月・初めてに最適",
+      "pace": "鉄道＋専用車",
+      "routeLine": "シーギリヤ → キャンディ → ハットン → エッラ → ゴール旧市街",
+      "summary": "王宮岩山、高原鉄道、南海岸の要塞を無理なくつなぐ定番ルート。",
+      "days": [
+        {
+          "day": "1–2日目",
+          "stop": "シーギリヤ＆ダンブッラ",
+          "note": "ピドゥランガラ朝日鑑賞と黄金の石窟寺院。"
+        },
+        {
+          "day": "3–4日目",
+          "stop": "キャンディ",
+          "note": "夕暮れの仏歯寺参拝とスパイス庭園。"
+        },
+        {
+          "day": "5–6日目",
+          "stop": "ハットン＆エッラ",
+          "note": "茶園滞在と9連橋を渡る3時間の絶景列車。"
+        },
+        {
+          "day": "7–9日目",
+          "stop": "ゴール旧市街",
+          "note": "城壁サンセット散策と南の海辺滞在。"
+        }
+      ]
+    },
+    "wild-south": {
+      "number": "ルート 02",
+      "title": "ヒョウ・紅茶と秘密の入江",
+      "duration": "11日間 / 10泊",
+      "season": "1–4月・建築と自然",
+      "pace": "ゆったり上質旅",
+      "routeLine": "コロンボ → ハットン → ヤーラ → タンガッレ → ゴール",
+      "summary": "バワ建築、茶畑トレッキング、専用サファリ、人影少ないビーチを結ぶ。",
+      "days": [
+        {
+          "day": "1日目",
+          "stop": "コロンボ",
+          "note": "バワ自邸ナンバー11見学と海辺の夕暮れ。"
+        },
+        {
+          "day": "2–4日目",
+          "stop": "ハットン",
+          "note": "歴史ある茶園バンガローを歩く稜線旅。"
+        },
+        {
+          "day": "5–7日目",
+          "stop": "ヤーラ国立公園",
+          "note": "早朝専用4WDで野生ヒョウの痕跡を追う。"
+        },
+        {
+          "day": "8–11日目",
+          "stop": "タンガッレ＆ゴール",
+          "note": "静かな白砂の入江と旧市街邸宅ステイ。"
+        }
+      ]
+    },
+    "east-north-sun": {
+      "number": "ルート 03",
+      "title": "夏の太陽：東海岸と北部",
+      "duration": "10日間 / 9泊",
+      "season": "5–9月・夏休み晴天保証",
+      "pace": "珊瑚礁とタミル文化",
+      "routeLine": "アヌラーダプラ → ジャフナ → トリンコ → シーギリヤ",
+      "summary": "夏に晴れる北部寺院と澄んだ東の珊瑚礁、古代王都を巡る。",
+      "days": [
+        {
+          "day": "1–2日目",
+          "stop": "アヌラーダプラ＆ミヒンタレー",
+          "note": "白亜の仏塔と聖なる石段の朝風景。"
+        },
+        {
+          "day": "3–5日目",
+          "stop": "ジャフナ＆デルフト島",
+          "note": "パルミラヤシ並木とナルール寺院、野生馬。"
+        },
+        {
+          "day": "6–8日目",
+          "stop": "トリンコマリー",
+          "note": "ピジョン島スノーケルと朝の漁船風景。"
+        },
+        {
+          "day": "9–10日目",
+          "stop": "ダンブッラ＆シーギリヤ",
+          "note": "壁画輝く石窟寺院と朝のシーギリヤ登頂へ。"
+        }
+      ]
+    }
   },
-  fieldNotes: [
-    { question: 'スリランカの二つのモンスーンはどう見分ける？', answer: '12〜4月は西・南・高原が乾季、5〜9月は東海岸と北部が晴天に変わります。' },
-    { question: '高原鉄道を疲れず一番楽しく乗る方法は？', answer: 'コロンボから全線乗らず、ナヌオヤからエッラ間の絶景約3時間だけを列車移動にするのが定石です。' },
-    { question: '入国前にETAビザ申請が必要ですか？', answer: 'はい、残存期間6ヶ月以上のパスポートで公式サイト eta.gov.lk から事前申請してください。' },
-    { question: '専用車、鉄道、トゥクトゥクの使い分けは？', answer: '山道は平均時速40km程度のため地域間は専用車＋英語ドライバー、街中はトゥクトゥクが便利です。' },
-    { question: '寺院やサファリで守るべきマナーは？', answer: '寺院は肩膝を隠し裸足で参拝。サファリでは動物から30m以上離れフラッシュ厳禁です。' }
+  "fieldNotes": [
+    {
+      "question": "スリランカの二つのモンスーンはどう見分ける？",
+      "answer": "12〜4月は西・南・高原が乾季、5〜9月は東海岸と北部が晴天に変わります。"
+    },
+    {
+      "question": "高原鉄道を疲れず一番楽しく乗る方法は？",
+      "answer": "コロンボから全線乗らず、ナヌオヤからエッラ間の絶景約3時間だけを列車移動にするのが定石です。"
+    },
+    {
+      "question": "入国前にETAビザ申請が必要ですか？",
+      "answer": "はい、残存期間6ヶ月以上のパスポートで公式サイト eta.gov.lk から事前申請してください。"
+    },
+    {
+      "question": "専用車、鉄道、トゥクトゥクの使い分けは？",
+      "answer": "山道は平均時速40km程度のため地域間は専用車＋英語ドライバー、街中はトゥクトゥクが便利です。"
+    },
+    {
+      "question": "寺院やサファリで守るべきマナーは？",
+      "answer": "寺院は肩膝を隠し裸足で参拝。サファリでは動物から30m以上離れフラッシュ厳禁です。"
+    }
   ]
 };

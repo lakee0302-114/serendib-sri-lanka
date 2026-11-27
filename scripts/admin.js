@@ -1,6 +1,4 @@
-/* ==========================================================================
-   SERENDIB — Standalone Private Admin Studio (Firebase Auth + RTDB)
-   ========================================================================== */
+/* Serendib Travels - Staff Admin Portal */
 
 (function () {
   'use strict';
