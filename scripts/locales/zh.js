@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['zh'] = {
       "kicker": "我的账户",
       "authTitle": "登录查看您的行程",
       "authSub": "保存斯里兰卡定制路线，随时重新登录查看完整每日行程。",
+      "googleBtn": "使用 Google 登录",
+      "orEmailDivider": "或使用邮箱继续",
       "tabSignIn": "登录",
       "tabSignUp": "注册账号",
       "nameLabel": "姓名",

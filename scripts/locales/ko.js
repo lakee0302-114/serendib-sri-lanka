@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['ko'] = {
       "kicker": "내 계정",
       "authTitle": "로그인하여 내 여행 보기",
       "authSub": "나만의 스리랑카 일정을 저장하고 언제든 다시 로그인해 확인하세요.",
+      "googleBtn": "Google로 계속하기",
+      "orEmailDivider": "또는 이메일로 계속하기",
       "tabSignIn": "로그인",
       "tabSignUp": "회원가입",
       "nameLabel": "이름",

@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['en'] = {
       "kicker": "MY ACCOUNT",
       "authTitle": "Sign in to view your trips",
       "authSub": "Sign in to open trips you saved earlier on any device.",
+      "googleBtn": "Continue with Google",
+      "orEmailDivider": "or continue with email",
       "tabSignIn": "Sign In",
       "tabSignUp": "Create Account",
       "nameLabel": "Full Name",

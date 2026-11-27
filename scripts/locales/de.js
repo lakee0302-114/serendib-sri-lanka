@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['de'] = {
       "kicker": "MEIN KONTO",
       "authTitle": "Anmelden für Ihre Reisen",
       "authSub": "Speichern Sie Ihre Sri-Lanka-Route und sehen Sie Ihren Tagesplan jederzeit wieder ein.",
+      "googleBtn": "Mit Google fortfahren",
+      "orEmailDivider": "oder mit E-Mail fortfahren",
       "tabSignIn": "Anmelden",
       "tabSignUp": "Konto erstellen",
       "nameLabel": "Vollständiger Name",

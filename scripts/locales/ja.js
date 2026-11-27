@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['ja'] = {
       "kicker": "マイアカウント",
       "authTitle": "ログインしてプランを確認",
       "authSub": "作成したスリランカ旅行プランを保存し、いつでも詳細を確認できます。",
+      "googleBtn": "Googleで続ける",
+      "orEmailDivider": "またはメールで続ける",
       "tabSignIn": "ログイン",
       "tabSignUp": "新規登録",
       "nameLabel": "お名前",

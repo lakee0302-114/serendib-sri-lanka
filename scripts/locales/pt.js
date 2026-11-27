@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['pt'] = {
       "kicker": "MINHA CONTA",
       "authTitle": "Entre para ver suas viagens",
       "authSub": "Salve seus roteiros no Sri Lanka e acesse seu plano completo quando quiser.",
+      "googleBtn": "Continuar com o Google",
+      "orEmailDivider": "ou continuar com e-mail",
       "tabSignIn": "Entrar",
       "tabSignUp": "Criar conta",
       "nameLabel": "Nome completo",

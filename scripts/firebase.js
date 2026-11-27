@@ -207,6 +207,30 @@
     return auth.signInWithEmailAndPassword(cleanText(email, 160, false), String(password || ''));
   }
 
+  function signInWithGoogle() {
+    var auth = getAuthInstance();
+    if (!auth || !window.firebase.auth || typeof window.firebase.auth.GoogleAuthProvider !== 'function') {
+      return Promise.reject(new Error('Google Sign-In unavailable'));
+    }
+    var provider = new window.firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    return auth.signInWithPopup(provider).catch(function (err) {
+      var code = err && err.code;
+      if (code === 'auth/popup-blocked' || code === 'auth/operation-not-supported-in-this-environment') {
+        return auth.signInWithRedirect(provider);
+      }
+      throw err;
+    });
+  }
+
+  function handleRedirectResult() {
+    var auth = getAuthInstance();
+    if (!auth || typeof auth.getRedirectResult !== 'function') {
+      return Promise.resolve(null);
+    }
+    return auth.getRedirectResult();
+  }
+
   function registerCustomer(name, email, password) {
     var auth = getAuthInstance();
     if (!auth) return Promise.reject(new Error('Authentication unavailable'));
@@ -355,6 +379,8 @@
     getCurrentUser: getCurrentUser,
     onAuthChange: onAuthChange,
     signInCustomer: signInCustomer,
+    signInWithGoogle: signInWithGoogle,
+    handleRedirectResult: handleRedirectResult,
     registerCustomer: registerCustomer,
     sendPasswordReset: sendPasswordReset,
     signOutCustomer: signOutCustomer,

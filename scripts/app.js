@@ -230,6 +230,7 @@
     accountModalTitle: document.getElementById('account-modal-title'),
     accountAuthView: document.getElementById('account-auth-view'),
     accountPendingBanner: document.getElementById('account-pending-banner'),
+    accGoogleBtn: document.getElementById('acc-google-btn'),
     accTabSignIn: document.getElementById('acc-tab-signin'),
     accTabSignUp: document.getElementById('acc-tab-signup'),
     accountForm: document.getElementById('account-auth-form'),
@@ -2301,7 +2302,16 @@
   function friendlyCustomerAuthError(err) {
     var code = (err && err.code) || '';
     if (code === 'auth/configuration-not-found' || code === 'auth/operation-not-allowed') {
-      return 'Email/Password sign-in is not yet enabled in Firebase Console (Authentication -> Sign-in method).';
+      return 'Google or Email sign-in is not enabled yet in Firebase Console (Authentication -> Sign-in method).';
+    }
+    if (code === 'auth/unauthorized-domain') {
+      return 'This website domain needs to be added under Firebase Console (Authentication -> Settings -> Authorized domains).';
+    }
+    if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request') {
+      return 'Google sign-in popup was closed before completing.';
+    }
+    if (code === 'auth/popup-blocked') {
+      return 'Pop-up was blocked by browser — redirecting to Google sign-in...';
     }
     if (code === 'auth/email-already-in-use') {
       return 'An account with this email already exists. Please sign in instead.';
@@ -2698,6 +2708,27 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && state.account.open) closeAccountModal();
     });
+
+    if (dom.accGoogleBtn && fb && typeof fb.signInWithGoogle === 'function') {
+      dom.accGoogleBtn.addEventListener('click', function () {
+        setAccMsg(dom.accountError, '');
+        setAccMsg(dom.accountNotice, '');
+        dom.accGoogleBtn.disabled = true;
+        fb.signInWithGoogle().catch(function (err) {
+          setAccMsg(dom.accountError, friendlyCustomerAuthError(err));
+        }).finally(function () {
+          dom.accGoogleBtn.disabled = false;
+        });
+      });
+    }
+
+    if (fb && typeof fb.handleRedirectResult === 'function') {
+      fb.handleRedirectResult().catch(function (err) {
+        if (err && err.code) {
+          setAccMsg(dom.accountError, friendlyCustomerAuthError(err));
+        }
+      });
+    }
 
     if (dom.accTabSignIn) {
       dom.accTabSignIn.addEventListener('click', function () {

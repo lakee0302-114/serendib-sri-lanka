@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['nl'] = {
       "kicker": "MIJN ACCOUNT",
       "authTitle": "Log in om je reizen te bekijken",
       "authSub": "Bewaar je Sri Lanka-routes en open op elk moment je volledige dagschema.",
+      "googleBtn": "Doorgaan met Google",
+      "orEmailDivider": "of ga verder met e-mail",
       "tabSignIn": "Inloggen",
       "tabSignUp": "Account maken",
       "nameLabel": "Volledige naam",

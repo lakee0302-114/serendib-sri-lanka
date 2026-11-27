@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['es'] = {
       "kicker": "MI CUENTA",
       "authTitle": "Inicia sesión para ver tus viajes",
       "authSub": "Guarda tus rutas por Sri Lanka y vuelve cuando quieras para consultar tu plan día a día.",
+      "googleBtn": "Continuar con Google",
+      "orEmailDivider": "o continuar con correo",
       "tabSignIn": "Iniciar sesión",
       "tabSignUp": "Crear cuenta",
       "nameLabel": "Nombre completo",

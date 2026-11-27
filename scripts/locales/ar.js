@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['ar'] = {
       "kicker": "حسابي",
       "authTitle": "سجّل الدخول لعرض رحلاتك",
       "authSub": "احفظ مساراتك في سريلانكا وعد في أي وقت لاستعراض خطة رحلتك بالتفصيل.",
+      "googleBtn": "المتابعة عبر Google",
+      "orEmailDivider": "أو المتابعة بالبريد الإلكتروني",
       "tabSignIn": "تسجيل الدخول",
       "tabSignUp": "إنشاء حساب",
       "nameLabel": "الاسم الكامل",

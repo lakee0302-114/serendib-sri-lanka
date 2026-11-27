@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['it'] = {
       "kicker": "IL MIO ACCOUNT",
       "authTitle": "Accedi per vedere i tuoi viaggi",
       "authSub": "Salva i tuoi itinerari in Sri Lanka e torna quando vuoi per consultare ogni tappa.",
+      "googleBtn": "Continua con Google",
+      "orEmailDivider": "oppure continua con l'email",
       "tabSignIn": "Accedi",
       "tabSignUp": "Crea account",
       "nameLabel": "Nome completo",

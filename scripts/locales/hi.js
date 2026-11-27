@@ -272,6 +272,8 @@ window.SERENDIB_LOCALES['hi'] = {
       "kicker": "मेरा अकाउंट",
       "authTitle": "अपनी यात्राएं देखने के लिए साइन इन करें",
       "authSub": "अपनी श्रीलंका यात्रा योजना सेव करें और कभी भी दोबारा लॉगिन करके पूरा प्लान देखें।",
+      "googleBtn": "Google से जारी रखें",
+      "orEmailDivider": "या ईमेल से जारी रखें",
       "tabSignIn": "साइन इन",
       "tabSignUp": "नया खाता",
       "nameLabel": "पूरा नाम",
