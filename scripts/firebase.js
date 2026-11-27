@@ -92,6 +92,7 @@
     var nightsNum = Number(payload.nights);
     var transitNum = Number(payload.totalTransitMins);
 
+    var currentUser = getCurrentUser();
     var record = {
       refCode: cleanRef,
       name: cleanName,
@@ -104,10 +105,10 @@
       guests: cleanText(payload.guests || '', 64, false),
       travelers: Number.isFinite(travelersNum) ? Math.min(30, Math.max(1, Math.round(travelersNum))) : null,
       nights: Number.isFinite(nightsNum) ? Math.min(60, Math.max(0, Math.round(nightsNum))) : null,
-      stayTier: cleanText(payload.stayTier || '', 32, false),
-      transport: cleanText(payload.transport || '', 32, false),
-      foodPrefs: cleanStringArray(payload.foodPrefs, 12, 40),
-      interests: cleanStringArray(payload.interests, 12, 40),
+      stayTier: cleanText(payload.stayTier || '', 100, false),
+      transport: cleanText(payload.transport || '', 100, false),
+      foodPrefs: cleanStringArray(payload.foodPrefs, 15, 80),
+      interests: cleanStringArray(payload.interests, 15, 80),
       perStopNights: cleanPerStopNights(payload.perStopNights),
       totalTransitMins: Number.isFinite(transitNum) ? Math.min(20000, Math.max(0, Math.round(transitNum))) : null,
       origin: cleanText(payload.origin || '', 120, false),
@@ -117,6 +118,9 @@
       createdAt: new Date().toISOString(),
       source: cleanText(window.location.hostname || 'local', 80, false)
     };
+    if (currentUser && currentUser.uid) {
+      record.userId = cleanText(currentUser.uid, 128, false);
+    }
 
     var sdkPromise = null;
     if (typeof window.firebase !== 'undefined' && typeof window.firebase.database === 'function') {
@@ -179,6 +183,165 @@
       });
   }
 
+  function getAuthInstance() {
+    if (typeof window.firebase === 'undefined' || typeof window.firebase.auth !== 'function') {
+      return null;
+    }
+    initFirebase();
+    return window.firebase.auth();
+  }
+
+  function getCurrentUser() {
+    var auth = getAuthInstance();
+    return auth ? auth.currentUser : null;
+  }
+
+  function onAuthChange(cb) {
+    var auth = getAuthInstance();
+    if (!auth || typeof cb !== 'function') {
+      return function () {};
+    }
+    return auth.onAuthStateChanged(cb);
+  }
+
+  function signInCustomer(email, password) {
+    var auth = getAuthInstance();
+    if (!auth) return Promise.reject(new Error('Authentication unavailable'));
+    return auth.signInWithEmailAndPassword(cleanText(email, 160, false), String(password || ''));
+  }
+
+  function registerCustomer(name, email, password) {
+    var auth = getAuthInstance();
+    if (!auth) return Promise.reject(new Error('Authentication unavailable'));
+    var cleanName = cleanText(name, 120, false);
+    return auth.createUserWithEmailAndPassword(cleanText(email, 160, false), String(password || '')).then(function (cred) {
+      if (cleanName && cred && cred.user && typeof cred.user.updateProfile === 'function') {
+        return cred.user.updateProfile({ displayName: cleanName }).then(function () { return cred; }).catch(function () { return cred; });
+      }
+      return cred;
+    });
+  }
+
+  function sendPasswordReset(email) {
+    var auth = getAuthInstance();
+    if (!auth) return Promise.reject(new Error('Authentication unavailable'));
+    return auth.sendPasswordResetEmail(cleanText(email, 160, false));
+  }
+
+  function signOutCustomer() {
+    var auth = getAuthInstance();
+    if (!auth) return Promise.resolve();
+    return auth.signOut();
+  }
+
+  function cleanScheduleItems(arr) {
+    if (!Array.isArray(arr)) return [];
+    var out = [];
+    for (var i = 0; i < arr.length && i < 20; i++) {
+      var item = arr[i];
+      if (!item || typeof item !== 'object') continue;
+      var n = Number(item.nights);
+      out.push({
+        stopId: cleanText(item.stopId || '', 40, false),
+        stopName: cleanText(item.stopName || '', 80, false),
+        dayRange: cleanText(item.dayRange || '', 32, false),
+        nights: Number.isFinite(n) ? Math.min(14, Math.max(1, Math.round(n))) : 1,
+        legText: cleanText(item.legText || '', 140, false),
+        highlight: cleanText(item.highlight || '', 160, false),
+        diningSpot: cleanText(item.diningSpot || '', 80, false),
+        diningDetail: cleanText(item.diningDetail || '', 160, false)
+      });
+    }
+    return out;
+  }
+
+  function saveUserTrip(payload) {
+    var user = getCurrentUser();
+    if (!user || !user.uid) return Promise.reject(new Error('Not signed in'));
+    if (!payload || typeof payload !== 'object') return Promise.reject(new Error('Invalid trip payload'));
+
+    var cleanRef = String(payload.refCode || '').replace(/[^A-Z0-9-]/g, '');
+    if (!/^SRD-[A-Z0-9]{6,10}$/.test(cleanRef)) return Promise.reject(new Error('Invalid reference code'));
+
+    var cleanMonth = String(payload.month || '').toUpperCase();
+    if (ALLOWED_MONTHS.indexOf(cleanMonth) === -1) cleanMonth = 'FEB';
+
+    var travelersNum = Number(payload.travelers);
+    var nightsNum = Number(payload.nights);
+    var transitNum = Number(payload.totalTransitMins);
+
+    var tripRecord = {
+      refCode: cleanRef,
+      name: cleanText(payload.name || user.displayName || 'Guest', 120, false),
+      email: cleanText(payload.email || user.email || '', 160, false),
+      month: cleanMonth,
+      tripStatus: payload.tripStatus === 'in_island' ? 'in_island' : 'before',
+      startHub: cleanText(payload.startHub || 'cmbAirport', 32, false),
+      arrivalDate: /^\d{4}-\d{2}-\d{2}$/.test(String(payload.arrivalDate || '')) ? payload.arrivalDate : '',
+      departureDate: /^\d{4}-\d{2}-\d{2}$/.test(String(payload.departureDate || '')) ? payload.departureDate : '',
+      travelers: Number.isFinite(travelersNum) ? Math.min(30, Math.max(1, Math.round(travelersNum))) : 2,
+      nights: Number.isFinite(nightsNum) ? Math.min(60, Math.max(0, Math.round(nightsNum))) : 0,
+      stayTier: cleanText(payload.stayTier || 'boutique', 100, false),
+      stayDisplay: cleanText(payload.stayDisplay || '', 100, false),
+      customStay: cleanText(payload.customStay || '', 80, false),
+      transport: cleanText(payload.transport || 'chauffeur', 100, false),
+      transportDisplay: cleanText(payload.transportDisplay || '', 100, false),
+      customTransport: cleanText(payload.customTransport || '', 80, false),
+      foodPrefs: cleanStringArray(payload.foodPrefs, 15, 80),
+      foodOther: cleanText(payload.foodOther || '', 80, false),
+      interests: cleanStringArray(payload.interests, 15, 80),
+      interestOther: cleanText(payload.interestOther || '', 80, false),
+      perStopNights: cleanPerStopNights(payload.perStopNights),
+      stopIds: cleanStringArray(payload.stopIds, 25, 40),
+      stops: cleanStringArray(payload.stops, 25, 80),
+      totalTransitMins: Number.isFinite(transitNum) ? Math.min(20000, Math.max(0, Math.round(transitNum))) : 0,
+      origin: cleanText(payload.origin || '', 120, false),
+      notes: cleanText(payload.notes || '', 1000, true),
+      schedule: cleanScheduleItems(payload.schedule),
+      createdAt: payload.createdAt && String(payload.createdAt).length <= 40 ? String(payload.createdAt) : new Date().toISOString()
+    };
+
+    if (typeof window.firebase === 'undefined' || typeof window.firebase.database !== 'function') {
+      return Promise.reject(new Error('Database unavailable'));
+    }
+    initFirebase();
+    return window.firebase.database().ref('userTrips/' + user.uid + '/' + cleanRef).set(tripRecord).then(function () {
+      return tripRecord;
+    });
+  }
+
+  function loadUserTrips() {
+    var user = getCurrentUser();
+    if (!user || !user.uid) return Promise.resolve([]);
+    if (typeof window.firebase === 'undefined' || typeof window.firebase.database !== 'function') {
+      return Promise.reject(new Error('Database unavailable'));
+    }
+    initFirebase();
+    return window.firebase.database().ref('userTrips/' + user.uid).once('value').then(function (snap) {
+      var raw = snap.val() || {};
+      var list = [];
+      Object.keys(raw).forEach(function (k) {
+        if (raw[k] && typeof raw[k] === 'object') {
+          list.push(raw[k]);
+        }
+      });
+      list.sort(function (a, b) {
+        return String(b.createdAt || '').localeCompare(String(a.createdAt || ''));
+      });
+      return list;
+    });
+  }
+
+  function deleteUserTrip(refCode) {
+    var user = getCurrentUser();
+    var cleanRef = String(refCode || '').replace(/[^A-Z0-9-]/g, '');
+    if (!user || !user.uid || !/^SRD-[A-Z0-9]{6,10}$/.test(cleanRef)) {
+      return Promise.reject(new Error('Invalid trip deletion request'));
+    }
+    initFirebase();
+    return window.firebase.database().ref('userTrips/' + user.uid + '/' + cleanRef).remove();
+  }
+
   function logEvent(eventName, params) {
     if (!analyticsInstance) return;
     try {
@@ -192,6 +355,15 @@
     ensureInitialized: initFirebase,
     saveInquiry: saveInquiry,
     loadCatalogOverrides: loadCatalogOverrides,
+    getCurrentUser: getCurrentUser,
+    onAuthChange: onAuthChange,
+    signInCustomer: signInCustomer,
+    registerCustomer: registerCustomer,
+    sendPasswordReset: sendPasswordReset,
+    signOutCustomer: signOutCustomer,
+    saveUserTrip: saveUserTrip,
+    loadUserTrips: loadUserTrips,
+    deleteUserTrip: deleteUserTrip,
     logEvent: logEvent
   });
 })();

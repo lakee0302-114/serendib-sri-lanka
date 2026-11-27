@@ -52,7 +52,22 @@
       interests: [],
       modalRegion: 'all',
       nightsByStop: {},
+      customStay: '',
+      customTransport: '',
+      foodOtherEnabled: false,
+      customFood: '',
+      interestOtherEnabled: false,
+      customInterest: '',
       confirmed: null
+    },
+    account: {
+      open: false,
+      user: null,
+      authMode: 'signin',
+      trips: [],
+      loadingTrips: false,
+      activeTripRef: null,
+      pendingTripToSave: null
     }
   };
 
@@ -195,10 +210,51 @@
     plannerTravelersVal: document.getElementById('planner-travelers-val'),
     plannerNightsHint: document.getElementById('planner-nights-hint'),
     plannerStayGrid: document.getElementById('planner-stay-grid'),
+    plannerStayOtherWrap: document.getElementById('planner-stay-other-wrap'),
+    plannerStayOtherInput: document.getElementById('pln-stay-other-input'),
     plannerTransportPills: document.getElementById('planner-transport-pills'),
+    plannerTransportOtherWrap: document.getElementById('planner-transport-other-wrap'),
+    plannerTransportOtherInput: document.getElementById('pln-transport-other-input'),
     plannerFoodTags: document.getElementById('planner-food-tags'),
+    plannerFoodOtherWrap: document.getElementById('planner-food-other-wrap'),
+    plannerFoodOtherInput: document.getElementById('pln-food-other-input'),
     plannerInterestTags: document.getElementById('planner-interest-tags'),
+    plannerInterestOtherWrap: document.getElementById('planner-interest-other-wrap'),
+    plannerInterestOtherInput: document.getElementById('pln-interest-other-input'),
+    plannerAuthHint: document.getElementById('planner-auth-hint'),
     plannerMobileReview: document.getElementById('planner-mobile-review'),
+    accountTrigger: document.getElementById('account-trigger'),
+    accountTriggerLabel: document.getElementById('account-trigger-label'),
+    accountTripCount: document.getElementById('account-trip-count'),
+    mobileAccountTrigger: document.getElementById('mobile-account-trigger'),
+    accountModal: document.getElementById('account-modal'),
+    accountBackdrop: document.getElementById('account-backdrop'),
+    closeAccountBtn: document.getElementById('close-account'),
+    accountModalTitle: document.getElementById('account-modal-title'),
+    accountAuthView: document.getElementById('account-auth-view'),
+    accountPendingBanner: document.getElementById('account-pending-banner'),
+    accTabSignIn: document.getElementById('acc-tab-signin'),
+    accTabSignUp: document.getElementById('acc-tab-signup'),
+    accountForm: document.getElementById('account-auth-form'),
+    accNameGroup: document.getElementById('acc-name-group'),
+    accName: document.getElementById('acc-name'),
+    accEmail: document.getElementById('acc-email'),
+    accPassword: document.getElementById('acc-password'),
+    accPwToggle: document.getElementById('acc-pw-toggle'),
+    accForgotBtn: document.getElementById('acc-forgot-btn'),
+    accountError: document.getElementById('account-error'),
+    accountNotice: document.getElementById('account-notice'),
+    accSubmitBtn: document.getElementById('acc-submit-btn'),
+    accountTripsView: document.getElementById('account-trips-view'),
+    accountAvatar: document.getElementById('account-avatar'),
+    accountDisplayName: document.getElementById('account-display-name'),
+    accountDisplayEmail: document.getElementById('account-display-email'),
+    accountPlanNewBtn: document.getElementById('account-plan-new-btn'),
+    accountSignoutBtn: document.getElementById('account-signout-btn'),
+    accountListPane: document.getElementById('account-list-pane'),
+    accountTripsEmpty: document.getElementById('account-trips-empty'),
+    accountTripsGrid: document.getElementById('account-trips-grid'),
+    accountDetailPane: document.getElementById('account-detail-pane'),
     plannerForm: document.getElementById('planner-form'),
     plannerAside: document.getElementById('planner-aside'),
     plannerAsideCount: document.getElementById('planner-aside-count'),
@@ -399,6 +455,10 @@
       }
       if (state.planner.open) {
         renderPlannerModal();
+      }
+      syncAccountHeaderUI();
+      if (state.account.open) {
+        renderAccountModal();
       }
     };
 
@@ -1178,13 +1238,45 @@
     return names.length ? state.locale.ui.compass.legendOptimal + ': ' + names.join(' · ') : state.locale.months[monthCode].headline;
   }
 
+  function getStayDisplayTitle(p) {
+    if (state.planner.stayTier === 'other') {
+      return state.planner.customStay.trim() || (p.otherOption || 'Other');
+    }
+    return (p.stays[state.planner.stayTier] || p.stays.boutique).title;
+  }
+
+  function getTransportDisplayLabel(p) {
+    if (state.planner.transport === 'other') {
+      return state.planner.customTransport.trim() || (p.otherOption || 'Other');
+    }
+    return p.transports[state.planner.transport] || p.transports.chauffeur;
+  }
+
+  function getEffectiveFoodPrefs(p) {
+    var list = state.planner.foodPrefs.map(function (k) {
+      return (p.foodStyles && p.foodStyles[k]) || k;
+    });
+    if (state.planner.foodOtherEnabled && state.planner.customFood.trim()) {
+      list.push(state.planner.customFood.trim());
+    }
+    return list;
+  }
+
+  function getEffectiveInterests() {
+    var list = state.planner.interests.slice();
+    if (state.planner.interestOtherEnabled && state.planner.customInterest.trim()) {
+      list.push(state.planner.customInterest.trim());
+    }
+    return list;
+  }
+
   function buildBlueprintText(refCode) {
     var schedule = buildDetailedSchedule();
     var m = state.locale.months[state.planner.month] || state.locale.months.FEB;
     var p = state.locale.ui.planner;
     var nights = getActivePlannerNights();
-    var stayObj = p.stays[state.planner.stayTier] || p.stays.boutique;
-    var transLabel = p.transports[state.planner.transport] || p.transports.chauffeur;
+    var stayTitle = getStayDisplayTitle(p);
+    var transLabel = getTransportDisplayLabel(p);
     var statusLabel = state.planner.status === 'in_island' ? p.statusInIsland : p.statusBefore;
     var hubLabel = (p.hubs && p.hubs[state.planner.startHub]) || 'Colombo';
     var dateParts = [];
@@ -1195,15 +1287,17 @@
       'SERENDIB SRI LANKA — DAY-BY-DAY TRIP BLUEPRINT' + (refCode ? ' (' + refCode + ')' : ''),
       statusLabel + ' · ' + p.startHubLabel + ': ' + hubLabel,
       'Month: ' + m.fullName + ' (' + m.headline + ')' + (dateParts.length ? ' · ' + dateParts.join(' · ') : ''),
-      'Guests & Stay: ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + nights + ' ' + p.summaryMetaNights + ' · ' + stayObj.title,
+      'Guests & Stay: ' + state.planner.travelers + ' ' + p.summaryMetaTravelers + ' · ' + nights + ' ' + p.summaryMetaNights + ' · ' + stayTitle,
       'Travel Mode: ' + transLabel + (schedule.totalTransitMins ? ' (Total transit ~' + formatDurationMins(schedule.totalTransitMins) + ')' : '')
     ];
 
-    if (state.planner.foodPrefs.length && p.foodStyles) {
-      lines.push('Food Focus: ' + state.planner.foodPrefs.map(function (k) { return p.foodStyles[k] || k; }).join(', '));
+    var foodList = getEffectiveFoodPrefs(p);
+    if (foodList.length) {
+      lines.push('Food Focus: ' + foodList.join(', '));
     }
-    if (state.planner.interests.length) {
-      lines.push('Interests: ' + state.planner.interests.join(', '));
+    var interestList = getEffectiveInterests();
+    if (interestList.length) {
+      lines.push('Interests: ' + interestList.join(', '));
     }
 
     if (schedule.items.length) {
@@ -1335,44 +1429,69 @@
       dom.plannerDepartureInput.value = state.planner.departureDate || '';
     }
 
-    var stayOrder = ['boutique', 'teaSanctuary', 'honest'];
+    var stayOrder = ['boutique', 'teaSanctuary', 'honest', 'other'];
     dom.plannerStayGrid.innerHTML = stayOrder.map(function (key) {
-      var item = p.stays[key];
+      var item = key === 'other'
+        ? { title: p.otherOption || 'Other', sub: p.otherStaySub || 'Type your custom stay preference' }
+        : p.stays[key];
       var active = state.planner.stayTier === key;
       return (
         '<button type="button" class="stay-card ' + (active ? 'is-active' : '') + '" data-pln-stay="' + key + '" aria-pressed="' + active + '">' +
-        '<span class="stay-card__title">' + item.title + '</span>' +
-        '<span class="stay-card__sub">' + item.sub + '</span>' +
+        '<span class="stay-card__title">' + escapeHtml(item.title) + '</span>' +
+        '<span class="stay-card__sub">' + escapeHtml(item.sub) + '</span>' +
         '</button>'
       );
     }).join('');
+    if (dom.plannerStayOtherWrap && dom.plannerStayOtherInput) {
+      dom.plannerStayOtherWrap.hidden = state.planner.stayTier !== 'other';
+      dom.plannerStayOtherInput.value = state.planner.customStay || '';
+    }
     dom.plannerStayGrid.querySelectorAll('[data-pln-stay]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         state.planner.stayTier = btn.dataset.plnStay;
         renderPlannerModal();
+        if (state.planner.stayTier === 'other' && dom.plannerStayOtherInput) {
+          dom.plannerStayOtherInput.focus();
+        }
       });
     });
 
-    var transportOrder = ['chauffeur', 'rail', 'suv'];
+    var transportOrder = ['chauffeur', 'rail', 'suv', 'other'];
     dom.plannerTransportPills.innerHTML = transportOrder.map(function (key) {
       var active = state.planner.transport === key;
+      var label = key === 'other' ? (p.otherOption || 'Other') : p.transports[key];
       return '<button type="button" class="transport-pill ' + (active ? 'is-active' : '') + '" data-pln-transport="' + key + '">' +
-        p.transports[key] + '</button>';
+        escapeHtml(label) + '</button>';
     }).join('');
+    if (dom.plannerTransportOtherWrap && dom.plannerTransportOtherInput) {
+      dom.plannerTransportOtherWrap.hidden = state.planner.transport !== 'other';
+      dom.plannerTransportOtherInput.value = state.planner.customTransport || '';
+    }
     dom.plannerTransportPills.querySelectorAll('[data-pln-transport]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         state.planner.transport = btn.dataset.plnTransport;
         renderPlannerModal();
+        if (state.planner.transport === 'other' && dom.plannerTransportOtherInput) {
+          dom.plannerTransportOtherInput.focus();
+        }
       });
     });
 
     if (dom.plannerFoodTags && p.foodStyles) {
       var foodKeys = Object.keys(p.foodStyles);
-      dom.plannerFoodTags.innerHTML = foodKeys.map(function (fk) {
+      var foodHtml = foodKeys.map(function (fk) {
         var picked = state.planner.foodPrefs.indexOf(fk) !== -1;
         return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-pln-food="' + fk + '">' +
-          (picked ? '&#10003; ' : '+ ') + p.foodStyles[fk] + '</button>';
+          (picked ? '&#10003; ' : '+ ') + escapeHtml(p.foodStyles[fk]) + '</button>';
       }).join('');
+      foodHtml += '<button type="button" class="quick-tag-chip ' + (state.planner.foodOtherEnabled ? 'is-picked' : '') + '" data-pln-food-other="1">' +
+        (state.planner.foodOtherEnabled ? '&#10003; ' : '+ ') + escapeHtml(p.otherOption || 'Other') + '</button>';
+      dom.plannerFoodTags.innerHTML = foodHtml;
+
+      if (dom.plannerFoodOtherWrap && dom.plannerFoodOtherInput) {
+        dom.plannerFoodOtherWrap.hidden = !state.planner.foodOtherEnabled;
+        dom.plannerFoodOtherInput.value = state.planner.customFood || '';
+      }
       dom.plannerFoodTags.querySelectorAll('[data-pln-food]').forEach(function (btn) {
         btn.addEventListener('click', function () {
           var fk = btn.dataset.plnFood;
@@ -1382,16 +1501,34 @@
           renderPlannerModal();
         });
       });
+      var foodOtherBtn = dom.plannerFoodTags.querySelector('[data-pln-food-other]');
+      if (foodOtherBtn) {
+        foodOtherBtn.addEventListener('click', function () {
+          state.planner.foodOtherEnabled = !state.planner.foodOtherEnabled;
+          renderPlannerModal();
+          if (state.planner.foodOtherEnabled && dom.plannerFoodOtherInput) {
+            dom.plannerFoodOtherInput.focus();
+          }
+        });
+      }
     }
 
     var focusOpts = state.locale.ui.finder.focusOptions;
     var focusKeys = Object.keys(focusOpts).filter(function (k) { return k !== 'all'; });
-    dom.plannerInterestTags.innerHTML = focusKeys.map(function (k) {
+    var intHtml = focusKeys.map(function (k) {
       var label = focusOpts[k];
       var picked = state.planner.interests.indexOf(label) !== -1;
-      return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-pln-interest="' + label.replace(/"/g, '&quot;') + '">' +
-        (picked ? '&#10003; ' : '+ ') + label + '</button>';
+      return '<button type="button" class="quick-tag-chip ' + (picked ? 'is-picked' : '') + '" data-pln-interest="' + escapeHtml(label) + '">' +
+        (picked ? '&#10003; ' : '+ ') + escapeHtml(label) + '</button>';
     }).join('');
+    intHtml += '<button type="button" class="quick-tag-chip ' + (state.planner.interestOtherEnabled ? 'is-picked' : '') + '" data-pln-interest-other="1">' +
+      (state.planner.interestOtherEnabled ? '&#10003; ' : '+ ') + escapeHtml(p.otherOption || 'Other') + '</button>';
+    dom.plannerInterestTags.innerHTML = intHtml;
+
+    if (dom.plannerInterestOtherWrap && dom.plannerInterestOtherInput) {
+      dom.plannerInterestOtherWrap.hidden = !state.planner.interestOtherEnabled;
+      dom.plannerInterestOtherInput.value = state.planner.customInterest || '';
+    }
     dom.plannerInterestTags.querySelectorAll('[data-pln-interest]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var tag = btn.dataset.plnInterest;
@@ -1401,6 +1538,16 @@
         renderPlannerModal();
       });
     });
+    var intOtherBtn = dom.plannerInterestTags.querySelector('[data-pln-interest-other]');
+    if (intOtherBtn) {
+      intOtherBtn.addEventListener('click', function () {
+        state.planner.interestOtherEnabled = !state.planner.interestOtherEnabled;
+        renderPlannerModal();
+        if (state.planner.interestOtherEnabled && dom.plannerInterestOtherInput) {
+          dom.plannerInterestOtherInput.focus();
+        }
+      });
+    }
   }
 
   function renderPlannerStep2(p, stops, schedule) {
@@ -1571,19 +1718,43 @@
     if (printBtn) {
       printBtn.addEventListener('click', function () { window.print(); });
     }
+
+    if (dom.plannerAuthHint) {
+      var acc = state.locale.ui.account || {};
+      if (state.account.user) {
+        dom.plannerAuthHint.innerHTML = '<span>' + escapeHtml((acc.signedInAutoSave || 'Signed in as {email} — saves automatically to My Trips.').replace('{email}', state.account.user.email || '')) + '</span>';
+        dom.plannerAuthHint.hidden = false;
+        var nIn = document.getElementById('pln-name');
+        var eIn = document.getElementById('pln-email');
+        if (nIn && !nIn.value && state.account.user.displayName) nIn.value = state.account.user.displayName;
+        if (eIn && !eIn.value && state.account.user.email) eIn.value = state.account.user.email;
+      } else {
+        dom.plannerAuthHint.innerHTML =
+          '<span>' + escapeHtml(acc.savePendingBanner || 'Sign in or create a free account to save this trip and open it anytime.') + '</span>' +
+          '<button type="button" class="btn btn--outline" id="pln-step3-signin-btn">' + escapeHtml(acc.navSignIn || 'Sign In') + '</button>';
+        dom.plannerAuthHint.hidden = false;
+        var sBtn = document.getElementById('pln-step3-signin-btn');
+        if (sBtn) {
+          sBtn.addEventListener('click', function () {
+            openAccountModal(null);
+          });
+        }
+      }
+    }
   }
 
   function renderPlannerAside(p, r, stops, monthObj, arrivalDisplay, departureDisplay, activeNights, schedule) {
     var nightsUnit = state.locale.ui.atlas.nightsUnit;
-    var stayTitle = (p.stays[state.planner.stayTier] || p.stays.boutique).title;
+    var stayTitle = getStayDisplayTitle(p);
+    var transLabel = getTransportDisplayLabel(p);
     var statusLabel = state.planner.status === 'in_island' ? p.statusInIsland : p.statusBefore;
     var hubLabel = (p.hubs && p.hubs[state.planner.startHub]) || 'Colombo';
 
     dom.plannerAsideCount.textContent = stops.length + ' ' + r.stopsLabel + ' · ' + activeNights + nightsUnit;
     if (dom.plannerAsideTransit) {
       dom.plannerAsideTransit.textContent = schedule.totalTransitMins
-        ? (p.transferLabel + ': ~' + formatDurationMins(schedule.totalTransitMins) + ' · ' + p.transports[state.planner.transport])
-        : (p.startHubLabel + ': ' + hubLabel);
+        ? (p.transferLabel + ': ~' + formatDurationMins(schedule.totalTransitMins) + ' · ' + transLabel)
+        : (p.startHubLabel + ': ' + hubLabel + ' · ' + transLabel);
     }
 
     dom.plannerAsideMonsoon.innerHTML =
@@ -1594,7 +1765,7 @@
       '<div><span>' + p.departureDateLabel + '</span><strong>' + departureDisplay + '</strong></div>' +
       '<div><span>' + p.summaryMetaTravelers + '</span><strong>' + state.planner.travelers + '</strong></div>' +
       '<div><span>' + p.summaryMetaNights + '</span><strong>' + activeNights + nightsUnit + '</strong></div>' +
-      '<div style="grid-column:1 / -1;"><span>' + statusLabel + ' · ' + p.startHubLabel + '</span><strong>' + hubLabel + ' · ' + stayTitle + '</strong></div>';
+      '<div style="grid-column:1 / -1;"><span>' + statusLabel + ' · ' + p.startHubLabel + '</span><strong>' + escapeHtml(hubLabel + ' · ' + stayTitle) + '</strong></div>';
 
     if (!schedule.items.length) {
       dom.plannerAsideStops.innerHTML = '<p style="font-size:0.84rem; color:var(--ink-muted); margin:0;">' + p.summaryNoStops + '</p>';
@@ -1661,7 +1832,7 @@
 
     var arrivalDisplay = state.planner.arrivalDate || p.dateAny;
     var departureDisplay = state.planner.departureDate || p.dateAny;
-    var stayTitle = (p.stays[state.planner.stayTier] || p.stays.boutique).title;
+    var stayTitle = getStayDisplayTitle(p);
     var routeLine = stops.length ? stops.map(function (s) { return s.name; }).join(' → ') : p.summaryNoStops;
 
     renderPlannerStep1(p, r, stops, recNights);
@@ -1686,8 +1857,9 @@
         ? ' (' + escapeHtml(arrivalDisplay) + ' → ' + escapeHtml(departureDisplay) + ')'
         : '';
       var safeStay = escapeHtml(stayTitle);
-      var safeTransport = escapeHtml(p.transports[state.planner.transport]);
+      var safeTransport = escapeHtml(getTransportDisplayLabel(p));
       var safeRouteLine = escapeHtml(routeLine);
+      var acc = state.locale.ui.account || {};
 
       dom.plannerConfirmed.innerHTML =
         '<div class="confirmed-card">' +
@@ -1707,8 +1879,14 @@
         '<button type="button" class="btn btn--primary" id="pln-copy-confirmed">' + escapeHtml(p.copySummaryBtn) + '</button>' +
         '<button type="button" class="btn btn--outline" id="pln-print-confirmed">' + escapeHtml(p.printBtn) + '</button>' +
         '<button type="button" class="btn btn--outline" id="pln-edit-confirmed">' + escapeHtml(p.editBtn) + '</button>' +
+        (conf.userTripSaved ? '<button type="button" class="btn btn--outline" id="pln-view-mytrips">' + escapeHtml(acc.viewInMyTripsBtn || 'View in My Trips') + '</button>' : '') +
         '<button type="button" class="btn btn--outline" id="pln-done-confirmed">' + escapeHtml(p.doneBtn) + '</button>' +
-        '</div></div>';
+        '</div>' +
+        (!conf.userTripSaved && conf.snapshot
+          ? '<div class="confirmed-save-cta"><p>' + escapeHtml(acc.savePendingBanner || 'Sign in or create a free account to save this trip and open it anytime.') + '</p>' +
+            '<button type="button" class="btn btn--primary" id="pln-save-account-btn">' + escapeHtml(acc.savePendingBtn || 'Sign In / Save to My Trips') + '</button></div>'
+          : '') +
+        '</div>';
 
       document.getElementById('pln-copy-confirmed').addEventListener('click', function () {
         var text = buildBlueprintText(conf.refCode);
@@ -1725,6 +1903,20 @@
       document.getElementById('pln-print-confirmed').addEventListener('click', function () { window.print(); });
       document.getElementById('pln-edit-confirmed').addEventListener('click', function () { setPlannerStep(1); });
       document.getElementById('pln-done-confirmed').addEventListener('click', closePlannerModal);
+      var myTripsBtn = document.getElementById('pln-view-mytrips');
+      if (myTripsBtn) {
+        myTripsBtn.addEventListener('click', function () {
+          closePlannerModal();
+          openAccountModal(null, conf.refCode);
+        });
+      }
+      var saveAccBtn = document.getElementById('pln-save-account-btn');
+      if (saveAccBtn) {
+        saveAccBtn.addEventListener('click', function () {
+          closePlannerModal();
+          openAccountModal(conf.snapshot);
+        });
+      }
     }
   }
 
@@ -1740,47 +1932,116 @@
     var origin = (document.getElementById('pln-origin') ? document.getElementById('pln-origin').value : '').replace(/[\u0000-\u001F\u007F]/g, ' ').trim().slice(0, 120);
     var notes = (document.getElementById('pln-notes') ? document.getElementById('pln-notes').value : '').replace(/[\u0000-\u0009\u000B-\u001F\u007F]/g, '').trim().slice(0, 1000);
     var schedule = buildDetailedSchedule();
-    var stops = getSavedStopObjects().map(function (d) { return d.name; });
+    var p = state.locale.ui.planner;
+    var stopObjects = getSavedStopObjects();
+    var stopIds = stopObjects.map(function (d) { return d.id; });
+    var stops = stopObjects.map(function (d) { return d.name; });
     var activeNights = getActivePlannerNights();
     var refCode = generateRefCode();
+    var createdAt = new Date().toISOString();
+
+    var stayDisplay = getStayDisplayTitle(p);
+    var stayTierVal = state.planner.stayTier === 'other' && state.planner.customStay.trim()
+      ? ('Other: ' + state.planner.customStay.trim()).slice(0, 100)
+      : state.planner.stayTier;
+    var transportDisplay = getTransportDisplayLabel(p);
+    var transportVal = state.planner.transport === 'other' && state.planner.customTransport.trim()
+      ? ('Other: ' + state.planner.customTransport.trim()).slice(0, 100)
+      : state.planner.transport;
+
+    var effectiveFood = state.planner.foodPrefs.slice();
+    if (state.planner.foodOtherEnabled && state.planner.customFood.trim()) {
+      effectiveFood.push('Other: ' + state.planner.customFood.trim().slice(0, 70));
+    }
+    var effectiveInterests = getEffectiveInterests();
+
+    var scheduleCompact = schedule.items.map(function (entry) {
+      return {
+        stopId: entry.stop.id,
+        stopName: entry.stop.name,
+        dayRange: entry.dayRange,
+        nights: entry.nights,
+        legText: entry.legText || '',
+        highlight: (entry.stop.highlights && entry.stop.highlights[0]) || '',
+        diningSpot: entry.dining ? entry.dining.spot : '',
+        diningDetail: entry.dining ? entry.dining.detail : ''
+      };
+    });
+
+    var tripSnapshot = {
+      refCode: refCode,
+      name: name,
+      email: email,
+      month: state.planner.month,
+      tripStatus: state.planner.status,
+      startHub: state.planner.startHub,
+      arrivalDate: state.planner.arrivalDate,
+      departureDate: state.planner.departureDate,
+      guests: state.planner.travelers + ' guests · ' + activeNights + ' nights',
+      travelers: state.planner.travelers,
+      nights: activeNights,
+      stayTier: stayTierVal,
+      stayDisplay: stayDisplay,
+      customStay: state.planner.customStay,
+      transport: transportVal,
+      transportDisplay: transportDisplay,
+      customTransport: state.planner.customTransport,
+      foodPrefs: effectiveFood,
+      foodOther: state.planner.foodOtherEnabled ? state.planner.customFood : '',
+      interests: effectiveInterests,
+      interestOther: state.planner.interestOtherEnabled ? state.planner.customInterest : '',
+      perStopNights: Object.assign({}, state.planner.nightsByStop),
+      totalTransitMins: schedule.totalTransitMins,
+      origin: origin,
+      notes: notes,
+      stopIds: stopIds,
+      stops: stops,
+      schedule: scheduleCompact,
+      lang: state.lang,
+      createdAt: createdAt
+    };
 
     dom.plannerNextBtn.disabled = true;
-    dom.plannerNextLabel.textContent = state.locale.ui.planner.submittingBtn;
+    dom.plannerNextLabel.textContent = p.submittingBtn;
 
-    var finish = function (cloudSynced) {
+    var finish = function (cloudSynced, userTripSaved) {
       dom.plannerNextBtn.disabled = false;
-      state.planner.confirmed = { refCode: refCode, name: name, cloudSynced: cloudSynced };
+      state.planner.confirmed = {
+        refCode: refCode,
+        name: name,
+        cloudSynced: cloudSynced,
+        userTripSaved: userTripSaved,
+        snapshot: tripSnapshot
+      };
       renderPlannerModal();
       showToast(state.locale.ui.toasts.compiled.replace('{ref}', refCode));
     };
 
-    if (window.SERENDIB_FIREBASE && typeof window.SERENDIB_FIREBASE.saveInquiry === 'function') {
-      window.SERENDIB_FIREBASE.saveInquiry({
-        refCode: refCode,
-        name: name,
-        email: email,
-        month: state.planner.month,
-        tripStatus: state.planner.status,
-        startHub: state.planner.startHub,
-        arrivalDate: state.planner.arrivalDate,
-        departureDate: state.planner.departureDate,
-        guests: state.planner.travelers + ' guests · ' + activeNights + ' nights',
-        travelers: state.planner.travelers,
-        nights: activeNights,
-        stayTier: state.planner.stayTier,
-        transport: state.planner.transport,
-        foodPrefs: state.planner.foodPrefs.slice(),
-        interests: state.planner.interests.slice(),
-        perStopNights: Object.assign({}, state.planner.nightsByStop),
-        totalTransitMins: schedule.totalTransitMins,
-        origin: origin,
-        notes: notes,
-        stops: stops,
-        lang: state.lang,
-        createdAt: new Date().toISOString()
-      }).then(function () { finish(true); }).catch(function () { finish(false); });
+    var fb = window.SERENDIB_FIREBASE;
+    if (fb && typeof fb.saveInquiry === 'function') {
+      fb.saveInquiry(tripSnapshot).then(function () {
+        if (state.account.user && typeof fb.saveUserTrip === 'function') {
+          return fb.saveUserTrip(tripSnapshot).then(function () {
+            loadAccountTrips();
+            finish(true, true);
+          }).catch(function () {
+            finish(true, false);
+          });
+        }
+        finish(true, false);
+      }).catch(function () {
+        if (state.account.user && typeof fb.saveUserTrip === 'function') {
+          return fb.saveUserTrip(tripSnapshot).then(function () {
+            loadAccountTrips();
+            finish(false, true);
+          }).catch(function () {
+            finish(false, false);
+          });
+        }
+        finish(false, false);
+      });
     } else {
-      finish(false);
+      finish(false, false);
     }
   }
 
@@ -1848,6 +2109,33 @@
         renderPlannerModal();
       });
     });
+
+    if (dom.plannerStayOtherInput) {
+      dom.plannerStayOtherInput.addEventListener('input', function () {
+        state.planner.customStay = dom.plannerStayOtherInput.value.slice(0, 80);
+        var p = state.locale.ui.planner;
+        var monthObj = state.locale.months[state.planner.month] || state.locale.months.FEB;
+        renderPlannerAside(p, state.locale.ui.routeSheet, getSavedStopObjects(), monthObj, state.planner.arrivalDate || p.dateAny, state.planner.departureDate || p.dateAny, getActivePlannerNights(), buildDetailedSchedule());
+      });
+    }
+    if (dom.plannerTransportOtherInput) {
+      dom.plannerTransportOtherInput.addEventListener('input', function () {
+        state.planner.customTransport = dom.plannerTransportOtherInput.value.slice(0, 80);
+        var p = state.locale.ui.planner;
+        var monthObj = state.locale.months[state.planner.month] || state.locale.months.FEB;
+        renderPlannerAside(p, state.locale.ui.routeSheet, getSavedStopObjects(), monthObj, state.planner.arrivalDate || p.dateAny, state.planner.departureDate || p.dateAny, getActivePlannerNights(), buildDetailedSchedule());
+      });
+    }
+    if (dom.plannerFoodOtherInput) {
+      dom.plannerFoodOtherInput.addEventListener('input', function () {
+        state.planner.customFood = dom.plannerFoodOtherInput.value.slice(0, 80);
+      });
+    }
+    if (dom.plannerInterestOtherInput) {
+      dom.plannerInterestOtherInput.addEventListener('input', function () {
+        state.planner.customInterest = dom.plannerInterestOtherInput.value.slice(0, 80);
+      });
+    }
 
     dom.plannerBackBtn.addEventListener('click', function () {
       setPlannerStep(state.planner.step - 1);
@@ -1989,6 +2277,558 @@
   }
 
   /* ------------------------------------------------------------------------
+     Customer Account & My Trips Library
+     ------------------------------------------------------------------------ */
+  function getAccStrings() {
+    return (state.locale && state.locale.ui && state.locale.ui.account) || {};
+  }
+
+  function findDestThumb(stopId) {
+    for (var i = 0; i < DESTINATIONS_META.length; i++) {
+      if (DESTINATIONS_META[i].id === stopId) return DESTINATIONS_META[i].image;
+    }
+    return './assets/images/sigiriya-pidurangala.jpg';
+  }
+
+  function syncAccountHeaderUI() {
+    var acc = getAccStrings();
+    if (dom.accountTriggerLabel) {
+      dom.accountTriggerLabel.textContent = state.account.user
+        ? (acc.navMyTrips || 'My Trips')
+        : (acc.navSignIn || 'Sign In');
+    }
+    if (dom.accountTripCount) {
+      var count = state.account.user ? state.account.trips.length : 0;
+      dom.accountTripCount.textContent = String(count);
+      dom.accountTripCount.hidden = count === 0;
+    }
+  }
+
+  function setAccMsg(target, msg) {
+    if (!target) return;
+    target.textContent = msg || '';
+    target.hidden = !msg;
+  }
+
+  function friendlyCustomerAuthError(err) {
+    var code = (err && err.code) || '';
+    if (code === 'auth/configuration-not-found' || code === 'auth/operation-not-allowed') {
+      return 'Email/Password sign-in is not yet enabled in Firebase Console (Authentication -> Sign-in method).';
+    }
+    if (code === 'auth/email-already-in-use') {
+      return 'An account with this email already exists. Please sign in instead.';
+    }
+    if (code === 'auth/weak-password') {
+      return 'Please choose a stronger password (at least 6 characters).';
+    }
+    if (code === 'auth/invalid-credential' || code === 'auth/wrong-password' || code === 'auth/user-not-found') {
+      return 'Incorrect email or password.';
+    }
+    if (code === 'auth/invalid-email') {
+      return 'Please enter a valid email address.';
+    }
+    if (code === 'auth/too-many-requests') {
+      return 'Too many attempts. Please wait a few minutes and try again.';
+    }
+    return (err && err.message) || 'Authentication error. Please try again.';
+  }
+
+  function loadAccountTrips() {
+    var fb = window.SERENDIB_FIREBASE;
+    if (!fb || typeof fb.loadUserTrips !== 'function' || !state.account.user) {
+      state.account.trips = [];
+      syncAccountHeaderUI();
+      return Promise.resolve([]);
+    }
+    state.account.loadingTrips = true;
+    return fb.loadUserTrips().then(function (list) {
+      state.account.trips = list || [];
+      state.account.loadingTrips = false;
+      syncAccountHeaderUI();
+      if (state.account.open) renderAccountModal();
+      return state.account.trips;
+    }).catch(function () {
+      state.account.loadingTrips = false;
+      return [];
+    });
+  }
+
+  function openAccountModal(pendingSnapshot, focusRef) {
+    if (pendingSnapshot) state.account.pendingTripToSave = pendingSnapshot;
+    if (focusRef) state.account.activeTripRef = focusRef;
+    state.account.open = true;
+
+    if (dom.mobileNav && dom.mobileNav.classList.contains('is-open')) {
+      dom.mobileNav.classList.remove('is-open');
+      dom.mobileNav.setAttribute('aria-hidden', 'true');
+      dom.mobileMenuOpen.setAttribute('aria-expanded', 'false');
+    }
+    dom.dossierSheet.classList.remove('is-open');
+    dom.routeSheet.classList.remove('is-open');
+    dom.dossierSheet.hidden = true;
+    dom.routeSheet.hidden = true;
+    dom.backdrop.classList.remove('is-open');
+    dom.backdrop.hidden = true;
+
+    renderAccountModal();
+    if (dom.accountModal) {
+      dom.accountModal.hidden = false;
+      requestAnimationFrame(function () {
+        dom.accountModal.classList.add('is-open');
+        document.body.classList.add('drawer-open');
+      });
+    }
+    if (state.account.user) loadAccountTrips();
+  }
+
+  function closeAccountModal() {
+    if (!dom.accountModal || dom.accountModal.hidden) return;
+    state.account.open = false;
+    state.account.activeTripRef = null;
+    dom.accountModal.classList.remove('is-open');
+    document.body.classList.remove('drawer-open');
+    setTimeout(function () {
+      if (!state.account.open && dom.accountModal) {
+        dom.accountModal.hidden = true;
+      }
+    }, 260);
+  }
+
+  function renderAccountAuthMode() {
+    var acc = getAccStrings();
+    var isSignup = state.account.authMode === 'signup';
+    if (dom.accTabSignIn) {
+      dom.accTabSignIn.classList.toggle('is-active', !isSignup);
+      dom.accTabSignIn.setAttribute('aria-selected', String(!isSignup));
+    }
+    if (dom.accTabSignUp) {
+      dom.accTabSignUp.classList.toggle('is-active', isSignup);
+      dom.accTabSignUp.setAttribute('aria-selected', String(isSignup));
+    }
+    if (dom.accNameGroup) dom.accNameGroup.hidden = !isSignup;
+    if (dom.accSubmitBtn) {
+      dom.accSubmitBtn.textContent = isSignup ? (acc.createAccountBtn || 'Create Account') : (acc.signInBtn || 'Sign In');
+    }
+    if (dom.accountPendingBanner) {
+      if (state.account.pendingTripToSave) {
+        dom.accountPendingBanner.textContent = (acc.savePendingBanner || 'Sign in or create an account to save reference ') + ' (' + state.account.pendingTripToSave.refCode + ').';
+        dom.accountPendingBanner.hidden = false;
+      } else {
+        dom.accountPendingBanner.hidden = true;
+      }
+    }
+  }
+
+  function formatSavedTripPlainText(trip) {
+    var lines = [
+      'SERENDIB SRI LANKA — SAVED TRIP (' + trip.refCode + ')',
+      'Month: ' + trip.month + (trip.arrivalDate ? ' (' + trip.arrivalDate + (trip.departureDate ? ' to ' + trip.departureDate : '') + ')' : ''),
+      'Guests & Duration: ' + (trip.travelers || 2) + ' travelers · ' + (trip.nights || 0) + ' nights',
+      'Stay: ' + (trip.stayDisplay || trip.stayTier || '—'),
+      'Travel Mode: ' + (trip.transportDisplay || trip.transport || '—')
+    ];
+    if (Array.isArray(trip.foodPrefs) && trip.foodPrefs.length) {
+      lines.push('Dining Preferences: ' + trip.foodPrefs.join(', '));
+    }
+    if (Array.isArray(trip.interests) && trip.interests.length) {
+      lines.push('Interests: ' + trip.interests.join(', '));
+    }
+    if (Array.isArray(trip.schedule) && trip.schedule.length) {
+      lines.push('');
+      trip.schedule.forEach(function (entry) {
+        lines.push(entry.dayRange + ' — ' + entry.stopName + ' (' + entry.nights + 'N)');
+        if (entry.legText) lines.push('  • Transfer: ' + entry.legText);
+        if (entry.highlight) lines.push('  • Highlight: ' + entry.highlight);
+        if (entry.diningSpot) lines.push('  • Dining: ' + entry.diningSpot + (entry.diningDetail ? ' — ' + entry.diningDetail : ''));
+      });
+    }
+    if (trip.notes) lines.push('\nNotes: ' + trip.notes);
+    return lines.join('\n');
+  }
+
+  function loadTripIntoPlanner(trip) {
+    if (!trip) return;
+    if (Array.isArray(trip.stopIds) && trip.stopIds.length) {
+      var validIds = DESTINATIONS_META.map(function (d) { return d.id; });
+      var restored = trip.stopIds.filter(function (id) { return validIds.indexOf(id) !== -1; });
+      if (restored.length) {
+        state.savedStopIds = restored;
+        persistSavedStops();
+      }
+    }
+    if (trip.month && MONTH_CODES.indexOf(trip.month) !== -1) {
+      state.activeMonth = trip.month;
+      state.planner.month = trip.month;
+    }
+    state.planner.status = trip.tripStatus === 'in_island' ? 'in_island' : 'before';
+    state.planner.startHub = trip.startHub || 'cmbAirport';
+    state.planner.arrivalDate = trip.arrivalDate || '';
+    state.planner.departureDate = trip.departureDate || '';
+    state.planner.travelers = Math.min(12, Math.max(1, Number(trip.travelers) || 2));
+    state.planner.nightsByStop = trip.perStopNights && typeof trip.perStopNights === 'object' ? Object.assign({}, trip.perStopNights) : {};
+
+    if (String(trip.stayTier || '').indexOf('Other:') === 0 || trip.stayTier === 'other' || trip.customStay) {
+      state.planner.stayTier = 'other';
+      state.planner.customStay = trip.customStay || String(trip.stayTier || '').replace(/^Other:\s*/, '');
+    } else if (trip.stayTier) {
+      state.planner.stayTier = trip.stayTier;
+      state.planner.customStay = '';
+    }
+
+    if (String(trip.transport || '').indexOf('Other:') === 0 || trip.transport === 'other' || trip.customTransport) {
+      state.planner.transport = 'other';
+      state.planner.customTransport = trip.customTransport || String(trip.transport || '').replace(/^Other:\s*/, '');
+    } else if (trip.transport) {
+      state.planner.transport = trip.transport;
+      state.planner.customTransport = '';
+    }
+
+    var knownFood = state.locale && state.locale.ui && state.locale.ui.planner && state.locale.ui.planner.foodStyles ? Object.keys(state.locale.ui.planner.foodStyles) : [];
+    state.planner.foodPrefs = Array.isArray(trip.foodPrefs)
+      ? trip.foodPrefs.filter(function (f) { return knownFood.indexOf(f) !== -1; })
+      : [];
+    if (trip.foodOther) {
+      state.planner.foodOtherEnabled = true;
+      state.planner.customFood = trip.foodOther;
+    } else {
+      state.planner.foodOtherEnabled = false;
+      state.planner.customFood = '';
+    }
+
+    var focusOpts = (state.locale && state.locale.ui && state.locale.ui.finder && state.locale.ui.finder.focusOptions) || {};
+    var knownIntVals = Object.keys(focusOpts).map(function (k) { return focusOpts[k]; });
+    state.planner.interests = Array.isArray(trip.interests)
+      ? trip.interests.filter(function (item) { return item !== trip.interestOther && (knownIntVals.indexOf(item) !== -1 || !trip.interestOther); })
+      : [];
+    if (trip.interestOther) {
+      state.planner.interestOtherEnabled = true;
+      state.planner.customInterest = trip.interestOther;
+    } else {
+      state.planner.interestOtherEnabled = false;
+      state.planner.customInterest = '';
+    }
+
+    syncRouteUI();
+    closeAccountModal();
+    setTimeout(function () {
+      openPlannerModal(1);
+    }, 280);
+  }
+
+  function renderAccountTripDetail(trip) {
+    var acc = getAccStrings();
+    var p = state.locale.ui.planner;
+    var nightsUnit = state.locale.ui.atlas.nightsUnit;
+    var monthObj = state.locale.months[trip.month] || state.locale.months.FEB;
+    var stayText = trip.stayDisplay || trip.stayTier || '—';
+    var transportText = trip.transportDisplay || trip.transport || '—';
+    var dateRange = trip.arrivalDate
+      ? trip.arrivalDate + (trip.departureDate ? ' → ' + trip.departureDate : '')
+      : monthObj.fullName;
+
+    var daysHtml = Array.isArray(trip.schedule) && trip.schedule.length
+      ? trip.schedule.map(function (entry) {
+          var thumb = findDestThumb(entry.stopId);
+          return (
+            '<article class="trip-day-card">' +
+            '<img class="trip-day-card__img" src="' + escapeHtml(thumb) + '" alt="' + escapeHtml(entry.stopName) + '" loading="lazy" />' +
+            '<div class="trip-day-card__body">' +
+            '<span class="mono-label" style="color:var(--accent-tea);">' + escapeHtml(entry.dayRange) + ' · ' + escapeHtml(entry.nights) + nightsUnit + '</span>' +
+            '<h4>' + escapeHtml(entry.stopName) + '</h4>' +
+            '<div class="trip-day-card__lines">' +
+            (entry.legText ? '<div><strong>' + escapeHtml(p.transferLabel) + ':</strong> ' + escapeHtml(entry.legText) + '</div>' : '') +
+            (entry.highlight ? '<div><strong>' + escapeHtml(p.seeLabel) + ':</strong> ' + escapeHtml(entry.highlight) + '</div>' : '') +
+            (entry.diningSpot ? '<div><strong>' + escapeHtml(p.eatLabel) + ':</strong> ' + escapeHtml(entry.diningSpot) + (entry.diningDetail ? ' — ' + escapeHtml(entry.diningDetail) : '') + '</div>' : '') +
+            '</div></div></article>'
+          );
+        }).join('')
+      : '<p style="color:var(--ink-muted);">' + escapeHtml((trip.stops || []).join(' → ')) + '</p>';
+
+    dom.accountDetailPane.innerHTML =
+      '<div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.85rem;">' +
+      '<button type="button" class="btn btn--outline" id="acc-detail-back">&larr; ' + escapeHtml(acc.backListBtn || 'All Saved Trips') + '</button>' +
+      '<span class="saved-trip-card__ref">' + escapeHtml(trip.refCode) + '</span>' +
+      '</div>' +
+      '<div class="trip-detail-hero">' +
+      '<span class="mono-label" style="color:var(--accent-terracotta); display:block; margin-bottom:0.25rem;">' + escapeHtml(monthObj.fullName) + ' · ' + escapeHtml(monthObj.headline) + '</span>' +
+      '<h3 class="display-serif" style="margin:0 0 0.5rem; font-size:clamp(1.35rem, 1.1rem + 0.8vw, 1.8rem);">' + escapeHtml(trip.nights || 0) + ' ' + escapeHtml(p.summaryMetaNights) + ' · ' + escapeHtml((trip.stops || []).join(' → ') || 'Sri Lanka Journey') + '</h3>' +
+      '<div class="confirmed-meta-grid">' +
+      '<div><span>' + escapeHtml(p.dateLabel) + '</span><strong>' + escapeHtml(dateRange) + '</strong></div>' +
+      '<div><span>' + escapeHtml(p.summaryMetaTravelers) + '</span><strong>' + escapeHtml(trip.travelers || 2) + '</strong></div>' +
+      '<div><span>' + escapeHtml(p.summaryMetaStay) + '</span><strong>' + escapeHtml(stayText) + '</strong></div>' +
+      '<div><span>' + escapeHtml(p.transportHeading) + '</span><strong>' + escapeHtml(transportText) + '</strong></div>' +
+      (Array.isArray(trip.foodPrefs) && trip.foodPrefs.length ? '<div><span>' + escapeHtml(p.foodHeading) + '</span><strong>' + escapeHtml(trip.foodPrefs.join(', ')) + '</strong></div>' : '') +
+      (Array.isArray(trip.interests) && trip.interests.length ? '<div><span>' + escapeHtml(p.interestsHeading) + '</span><strong>' + escapeHtml(trip.interests.join(', ')) + '</strong></div>' : '') +
+      (trip.notes ? '<div style="grid-column:1 / -1;"><span>' + escapeHtml(p.notesLabel) + '</span><strong>' + escapeHtml(trip.notes) + '</strong></div>' : '') +
+      '</div>' +
+      '<div style="display:flex; flex-wrap:wrap; gap:0.55rem;">' +
+      '<button type="button" class="btn btn--primary" id="acc-detail-edit">' + escapeHtml(acc.loadPlannerBtn || 'Edit in Planner') + '</button>' +
+      '<button type="button" class="btn btn--outline" id="acc-detail-copy">' + escapeHtml(p.copySummaryBtn) + '</button>' +
+      '<button type="button" class="btn btn--outline" id="acc-detail-print">' + escapeHtml(p.printBtn) + '</button>' +
+      '<button type="button" class="btn btn--outline" id="acc-detail-delete">' + escapeHtml(acc.deleteTripBtn || 'Delete') + '</button>' +
+      '</div></div>' +
+      '<div class="trip-detail-days">' + daysHtml + '</div>';
+
+    document.getElementById('acc-detail-back').addEventListener('click', function () {
+      state.account.activeTripRef = null;
+      renderAccountModal();
+    });
+    document.getElementById('acc-detail-edit').addEventListener('click', function () {
+      loadTripIntoPlanner(trip);
+    });
+    document.getElementById('acc-detail-copy').addEventListener('click', function () {
+      var text = formatSavedTripPlainText(trip);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { showToast(state.locale.ui.toasts.copied); });
+      }
+    });
+    document.getElementById('acc-detail-print').addEventListener('click', function () { window.print(); });
+
+    var delBtn = document.getElementById('acc-detail-delete');
+    var armed = false;
+    delBtn.addEventListener('click', function () {
+      if (!armed) {
+        armed = true;
+        delBtn.textContent = 'Confirm ' + (acc.deleteTripBtn || 'Delete') + '?';
+        return;
+      }
+      var fb = window.SERENDIB_FIREBASE;
+      if (fb && typeof fb.deleteUserTrip === 'function') {
+        delBtn.disabled = true;
+        fb.deleteUserTrip(trip.refCode).then(function () {
+          state.account.activeTripRef = null;
+          loadAccountTrips();
+          showToast('Deleted ' + trip.refCode);
+        }).catch(function (err) {
+          showToast(err && err.message ? err.message : 'Delete failed');
+        }).finally(function () {
+          delBtn.disabled = false;
+        });
+      }
+    });
+  }
+
+  function renderAccountModal() {
+    if (!dom.accountModal) return;
+    var acc = getAccStrings();
+    var p = state.locale.ui.planner;
+    var user = state.account.user;
+
+    if (dom.accountAuthView) dom.accountAuthView.hidden = Boolean(user);
+    if (dom.accountTripsView) dom.accountTripsView.hidden = !user;
+
+    if (!user) {
+      if (dom.accountModalTitle) dom.accountModalTitle.textContent = acc.authTitle || 'Sign in to view your trips';
+      renderAccountAuthMode();
+      return;
+    }
+
+    if (dom.accountModalTitle) dom.accountModalTitle.textContent = acc.dashboardTitle || 'Your Saved Sri Lanka Trips';
+    var nameStr = user.displayName || (user.email ? user.email.split('@')[0] : 'Traveler');
+    if (dom.accountDisplayName) dom.accountDisplayName.textContent = nameStr;
+    if (dom.accountDisplayEmail) dom.accountDisplayEmail.textContent = user.email || '';
+    if (dom.accountAvatar) dom.accountAvatar.textContent = String(nameStr).charAt(0).toUpperCase() || 'S';
+
+    var activeTrip = null;
+    if (state.account.activeTripRef) {
+      for (var i = 0; i < state.account.trips.length; i++) {
+        if (state.account.trips[i].refCode === state.account.activeTripRef) {
+          activeTrip = state.account.trips[i];
+          break;
+        }
+      }
+    }
+
+    if (activeTrip && dom.accountDetailPane && dom.accountListPane) {
+      dom.accountListPane.hidden = true;
+      dom.accountDetailPane.hidden = false;
+      renderAccountTripDetail(activeTrip);
+      return;
+    }
+
+    if (dom.accountListPane) dom.accountListPane.hidden = false;
+    if (dom.accountDetailPane) dom.accountDetailPane.hidden = true;
+
+    var trips = state.account.trips || [];
+    if (dom.accountTripsEmpty) dom.accountTripsEmpty.hidden = trips.length > 0;
+    if (dom.accountTripsGrid) {
+      dom.accountTripsGrid.hidden = trips.length === 0;
+      dom.accountTripsGrid.innerHTML = trips.map(function (trip) {
+        var routeStr = Array.isArray(trip.stops) && trip.stops.length ? trip.stops.join(' → ') : 'Custom Sri Lanka Route';
+        var stayStr = trip.stayDisplay || trip.stayTier || '';
+        return (
+          '<article class="saved-trip-card">' +
+          '<div class="saved-trip-card__top">' +
+          '<span class="saved-trip-card__ref">' + escapeHtml(trip.refCode) + '</span>' +
+          '<span class="mono-label" style="color:var(--ink-muted);">' + escapeHtml(trip.month) + (trip.nights != null ? ' · ' + escapeHtml(trip.nights) + 'N' : '') + '</span>' +
+          '</div>' +
+          '<h3 class="saved-trip-card__title">' + escapeHtml(routeStr) + '</h3>' +
+          '<p class="saved-trip-card__route">' + escapeHtml(stayStr) + (trip.transportDisplay ? ' · ' + escapeHtml(trip.transportDisplay) : '') + '</p>' +
+          '<div class="saved-trip-card__meta">' +
+          '<span>' + escapeHtml(trip.travelers || 2) + ' ' + escapeHtml(p.summaryMetaTravelers) + '</span>' +
+          (trip.arrivalDate ? '<span>' + escapeHtml(trip.arrivalDate) + '</span>' : '') +
+          '</div>' +
+          '<div class="saved-trip-card__actions">' +
+          '<button type="button" class="btn btn--primary" data-acc-view="' + escapeHtml(trip.refCode) + '">' + escapeHtml(acc.viewTripBtn || 'View Full Plan') + '</button>' +
+          '<button type="button" class="btn btn--outline" data-acc-edit="' + escapeHtml(trip.refCode) + '">' + escapeHtml(acc.loadPlannerBtn || 'Edit in Planner') + '</button>' +
+          '</div></article>'
+        );
+      }).join('');
+
+      dom.accountTripsGrid.querySelectorAll('[data-acc-view]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.account.activeTripRef = btn.dataset.accView;
+          renderAccountModal();
+        });
+      });
+      dom.accountTripsGrid.querySelectorAll('[data-acc-edit]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetRef = btn.dataset.accEdit;
+          var match = trips.filter(function (t) { return t.refCode === targetRef; })[0];
+          if (match) loadTripIntoPlanner(match);
+        });
+      });
+    }
+  }
+
+  function initAccount() {
+    var fb = window.SERENDIB_FIREBASE;
+
+    if (dom.accountTrigger) {
+      dom.accountTrigger.addEventListener('click', function () {
+        openAccountModal(null);
+      });
+    }
+    if (dom.mobileAccountTrigger) {
+      dom.mobileAccountTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openAccountModal(null);
+      });
+    }
+    if (dom.closeAccountBtn) dom.closeAccountBtn.addEventListener('click', closeAccountModal);
+    if (dom.accountBackdrop) dom.accountBackdrop.addEventListener('click', closeAccountModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && state.account.open) closeAccountModal();
+    });
+
+    if (dom.accTabSignIn) {
+      dom.accTabSignIn.addEventListener('click', function () {
+        state.account.authMode = 'signin';
+        setAccMsg(dom.accountError, '');
+        setAccMsg(dom.accountNotice, '');
+        renderAccountAuthMode();
+      });
+    }
+    if (dom.accTabSignUp) {
+      dom.accTabSignUp.addEventListener('click', function () {
+        state.account.authMode = 'signup';
+        setAccMsg(dom.accountError, '');
+        setAccMsg(dom.accountNotice, '');
+        renderAccountAuthMode();
+      });
+    }
+
+    if (dom.accPwToggle && dom.accPassword) {
+      dom.accPwToggle.addEventListener('click', function () {
+        var showing = dom.accPassword.type === 'text';
+        dom.accPassword.type = showing ? 'password' : 'text';
+        dom.accPwToggle.textContent = showing ? 'Show' : 'Hide';
+      });
+    }
+
+    if (dom.accForgotBtn && fb && typeof fb.sendPasswordReset === 'function') {
+      dom.accForgotBtn.addEventListener('click', function () {
+        var email = (dom.accEmail.value || '').trim();
+        setAccMsg(dom.accountError, '');
+        setAccMsg(dom.accountNotice, '');
+        if (!email) {
+          setAccMsg(dom.accountError, 'Enter your email address above first.');
+          return;
+        }
+        fb.sendPasswordReset(email).then(function () {
+          setAccMsg(dom.accountNotice, 'Password reset link sent to ' + email + '.');
+        }).catch(function (err) {
+          setAccMsg(dom.accountError, friendlyCustomerAuthError(err));
+        });
+      });
+    }
+
+    if (dom.accountForm && fb) {
+      dom.accountForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        setAccMsg(dom.accountError, '');
+        setAccMsg(dom.accountNotice, '');
+
+        var email = (dom.accEmail.value || '').trim();
+        var password = dom.accPassword.value || '';
+        var name = (dom.accName.value || '').trim();
+        if (!email || !password) {
+          setAccMsg(dom.accountError, 'Please enter both email and password.');
+          return;
+        }
+        if (state.account.authMode === 'signup' && password.length < 6) {
+          setAccMsg(dom.accountError, 'Password must be at least 6 characters.');
+          return;
+        }
+
+        dom.accSubmitBtn.disabled = true;
+        var promise = state.account.authMode === 'signup'
+          ? fb.registerCustomer(name, email, password)
+          : fb.signInCustomer(email, password);
+
+        promise.catch(function (err) {
+          setAccMsg(dom.accountError, friendlyCustomerAuthError(err));
+        }).finally(function () {
+          dom.accSubmitBtn.disabled = false;
+        });
+      });
+    }
+
+    if (dom.accountPlanNewBtn) {
+      dom.accountPlanNewBtn.addEventListener('click', function () {
+        closeAccountModal();
+        setTimeout(function () { openPlannerModal(1); }, 280);
+      });
+    }
+    if (dom.accountSignoutBtn && fb && typeof fb.signOutCustomer === 'function') {
+      dom.accountSignoutBtn.addEventListener('click', function () {
+        fb.signOutCustomer();
+      });
+    }
+
+    if (fb && typeof fb.onAuthChange === 'function') {
+      fb.onAuthChange(function (user) {
+        state.account.user = user || null;
+        syncAccountHeaderUI();
+        if (!user) {
+          state.account.trips = [];
+          state.account.activeTripRef = null;
+          syncAccountHeaderUI();
+          if (state.account.open) renderAccountModal();
+          if (state.planner.open) renderPlannerModal();
+          return;
+        }
+
+        if (state.account.pendingTripToSave && typeof fb.saveUserTrip === 'function') {
+          var pending = state.account.pendingTripToSave;
+          state.account.pendingTripToSave = null;
+          fb.saveUserTrip(pending).then(function (saved) {
+            state.account.activeTripRef = saved.refCode;
+            showToast(getAccStrings().saveSuccessToast || 'Trip saved to My Trips!');
+            return loadAccountTrips();
+          }).catch(function () {
+            return loadAccountTrips();
+          });
+        } else {
+          loadAccountTrips();
+        }
+
+        if (state.planner.open) renderPlannerModal();
+      });
+    }
+  }
+
+  /* ------------------------------------------------------------------------
      Boot
      ------------------------------------------------------------------------ */
   function init() {
@@ -1997,6 +2837,7 @@
     initAtlasControls();
     initSheets();
     initForms();
+    initAccount();
     initReveals();
     switchLanguage(state.lang, false);
 

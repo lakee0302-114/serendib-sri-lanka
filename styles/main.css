@@ -2740,7 +2740,7 @@
 
   @media (min-width: 600px) {
     .stay-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -3559,5 +3559,486 @@
   body.drawer-open .floating-trip-bar {
     opacity: 0;
     pointer-events: none;
+  }
+
+  /* Header Account Trigger */
+  .account-trigger__label {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .account-trigger__label {
+      display: inline;
+      max-width: 90px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .account-trip-count[hidden] {
+    display: none;
+  }
+
+  /* Planner "Other" Custom Option Inputs */
+  .planner-other-wrap {
+    margin-top: 0.6rem;
+  }
+
+  .planner-other-wrap[hidden] {
+    display: none;
+  }
+
+  .planner-other-input {
+    width: 100%;
+    min-height: 40px;
+    padding: 0.5rem 0.82rem;
+    border-radius: var(--radius-sharp);
+    border: 1.5px solid var(--accent-terracotta);
+    background-color: var(--bg-input);
+    color: var(--ink-primary);
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    transition: box-shadow var(--transition-fast);
+  }
+
+  .planner-other-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-soft-amber);
+  }
+
+  .planner-auth-hint {
+    margin-bottom: 0.9rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-sharp);
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-inline-start: 3px solid var(--accent-tea);
+    font-size: 0.82rem;
+    color: var(--ink-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .planner-auth-hint[hidden] {
+    display: none;
+  }
+
+  .confirmed-save-cta {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-cream);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .confirmed-save-cta p {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--ink-secondary);
+    flex: 1 1 220px;
+  }
+
+  /* Customer Account & My Trips Modal */
+  .account-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms var(--ease-editorial);
+  }
+
+  @media (min-width: 768px) {
+    .account-overlay {
+      padding: 1.5rem;
+    }
+  }
+
+  .account-overlay[hidden] {
+    display: none;
+  }
+
+  .account-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .account-dialog {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--bg-cream);
+    color: var(--ink-primary);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(18px) scale(0.985);
+    transition: transform 300ms var(--ease-editorial);
+  }
+
+  @media (min-width: 768px) {
+    .account-dialog {
+      width: min(880px, 100%);
+      height: auto;
+      max-height: min(760px, 90dvh);
+      border-radius: 18px;
+      border: 1px solid var(--hairline);
+      box-shadow: var(--shadow-drawer);
+    }
+  }
+
+  .account-overlay.is-open .account-dialog {
+    transform: translateY(0) scale(1);
+  }
+
+  .account-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .account-body {
+      padding: 1.5rem 1.75rem 2rem;
+    }
+  }
+
+  .account-intro {
+    margin: 0 0 1rem;
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+  }
+
+  .account-tabs {
+    display: inline-flex;
+    gap: 0.35rem;
+    padding: 0.25rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    margin-bottom: 1.15rem;
+  }
+
+  .account-tab {
+    min-height: 36px;
+    padding: 0.35rem 1rem;
+    border: none;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--ink-secondary);
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease;
+  }
+
+  .account-tab.is-active {
+    background-color: var(--accent-terracotta);
+    color: #FFFFFF;
+  }
+
+  .account-form {
+    display: grid;
+    gap: 0.95rem;
+    max-width: 440px;
+  }
+
+  .account-form input {
+    width: 100%;
+    min-height: 42px;
+    padding: 0.55rem 0.85rem;
+    border-radius: var(--radius-sharp);
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-input);
+    color: var(--ink-primary);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+  }
+
+  .account-pw-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .account-pw-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .account-pw-wrap input {
+    padding-right: 4rem;
+  }
+
+  .account-pw-toggle,
+  .account-text-link {
+    border: none;
+    background: transparent;
+    color: var(--accent-terracotta);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .account-pw-toggle {
+    position: absolute;
+    right: 0.45rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+  }
+
+  .account-pending-banner,
+  .account-alert,
+  .account-notice {
+    padding: 0.72rem 0.9rem;
+    border-radius: var(--radius-sharp);
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .account-pending-banner {
+    margin-bottom: 0.9rem;
+    background-color: var(--accent-soft-amber);
+    color: var(--accent-terracotta);
+    border: 1px solid color-mix(in srgb, var(--accent-terracotta) 28%, transparent);
+  }
+
+  .account-alert {
+    background-color: var(--status-caution-soft);
+    color: var(--status-caution);
+    border: 1px solid color-mix(in srgb, var(--status-caution) 28%, transparent);
+  }
+
+  .account-notice {
+    background-color: var(--status-optimal-soft);
+    color: var(--status-optimal);
+    border: 1px solid color-mix(in srgb, var(--status-optimal) 28%, transparent);
+  }
+
+  .account-pending-banner[hidden],
+  .account-alert[hidden],
+  .account-notice[hidden],
+  #account-auth-view[hidden],
+  #account-trips-view[hidden],
+  #account-list-pane[hidden],
+  #account-detail-pane[hidden],
+  .account-empty[hidden],
+  #acc-name-group[hidden] {
+    display: none;
+  }
+
+  .account-profile-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    margin-bottom: 1.25rem;
+  }
+
+  .account-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .account-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-terracotta);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .account-profile-name {
+    display: block;
+    font-size: 0.95rem;
+  }
+
+  .account-profile-email {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+
+  .account-profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .account-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-radius: 14px;
+    border: 1px dashed var(--hairline-strong);
+    background-color: var(--bg-sandstone);
+  }
+
+  .account-empty h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.35rem;
+  }
+
+  .account-empty p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+  }
+
+  .account-trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 0.95rem;
+  }
+
+  .saved-trip-card {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 1rem 1.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .saved-trip-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-terracotta);
+    box-shadow: var(--shadow-card);
+  }
+
+  .saved-trip-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .saved-trip-card__ref {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--accent-tea);
+    padding: 0.16rem 0.52rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg-cream);
+    border: 1px solid var(--hairline);
+  }
+
+  .saved-trip-card__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .saved-trip-card__route {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--ink-secondary);
+    line-height: 1.45;
+    flex: 1;
+  }
+
+  .saved-trip-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .saved-trip-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.15rem;
+  }
+
+  .saved-trip-card__actions .btn {
+    min-height: 36px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .trip-detail-hero {
+    background-color: var(--bg-sandstone);
+    border: 1px solid var(--hairline);
+    border-inline-start: 4px solid var(--accent-terracotta);
+    border-radius: 14px;
+    padding: 1.15rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .trip-detail-days {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .trip-day-card {
+    display: flex;
+    gap: 0.85rem;
+    padding: 0.85rem;
+    border-radius: 12px;
+    border: 1px solid var(--hairline);
+    background-color: var(--bg-sandstone);
+    align-items: flex-start;
+  }
+
+  .trip-day-card__img {
+    width: 78px;
+    height: 62px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: var(--bg-limestone);
+  }
+
+  .trip-day-card__body {
+    min-width: 0;
+    flex: 1;
+    font-size: 0.84rem;
+  }
+
+  .trip-day-card__body h4 {
+    margin: 0.15rem 0 0.3rem;
+    font-size: 0.96rem;
+  }
+
+  .trip-day-card__lines {
+    display: grid;
+    gap: 0.2rem;
+    color: var(--ink-secondary);
   }
 }

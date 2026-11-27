@@ -92,6 +92,23 @@
           <span class="route-count" id="route-count">0</span>
         </button>
 
+        <!-- Traveler Sign In / My Trips -->
+        <button
+          type="button"
+          class="icon-pill-btn account-trigger"
+          id="account-trigger"
+          aria-haspopup="dialog"
+          aria-controls="account-modal"
+          aria-label="Sign In or View My Trips"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="account-trigger__label" id="account-trigger-label" data-i18n="account.navSignIn">Sign In</span>
+          <span class="route-count account-trip-count" id="account-trip-count" hidden>0</span>
+        </button>
+
         <button type="button" class="btn btn--primary header-cta" id="header-plan-btn" data-open-planner data-i18n="nav.planJourney">
           Plan Trip
         </button>
@@ -129,6 +146,7 @@
       <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">When to Go</em> <span>02</span></a>
       <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Sample Trips</em> <span>03</span></a>
       <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>04</span></a>
+      <a href="#account" id="mobile-account-trigger"><em style="font-style:normal;" data-i18n="account.navAccountMobile">My Trips &amp; Sign In</em> <span>05</span></a>
     </nav>
 
     <div class="mobile-nav__footer">
@@ -582,21 +600,33 @@
             <div class="planner-block">
               <h3 class="planner-label" data-i18n="planner.stayHeading">Stay Collection</h3>
               <div class="stay-grid" id="planner-stay-grid"></div>
+              <div class="planner-other-wrap" id="planner-stay-other-wrap" hidden>
+                <input type="text" id="pln-stay-other-input" class="planner-other-input" maxlength="80" data-i18n-placeholder="planner.otherStayPlaceholder" placeholder="e.g. Homestead, Airbnb, Ayurveda retreat..." aria-label="Custom stay preference" />
+              </div>
             </div>
 
             <div class="planner-block">
               <h3 class="planner-label" data-i18n="planner.transportHeading">How would you like to travel?</h3>
               <div class="transport-pills" id="planner-transport-pills"></div>
+              <div class="planner-other-wrap" id="planner-transport-other-wrap" hidden>
+                <input type="text" id="pln-transport-other-input" class="planner-other-input" maxlength="80" data-i18n-placeholder="planner.otherTransportPlaceholder" placeholder="e.g. Private van, tuk-tuk, domestic flight..." aria-label="Custom transport preference" />
+              </div>
             </div>
 
             <div class="planner-block">
               <h3 class="planner-label" data-i18n="planner.foodHeading">Where &amp; What to Eat</h3>
               <div class="quick-tags" id="planner-food-tags"></div>
+              <div class="planner-other-wrap" id="planner-food-other-wrap" hidden>
+                <input type="text" id="pln-food-other-input" class="planner-other-input" maxlength="80" data-i18n-placeholder="planner.otherFoodPlaceholder" placeholder="e.g. Halal, gluten-free, vegan, fine dining..." aria-label="Custom dining preference" />
+              </div>
             </div>
 
             <div class="planner-block">
               <h3 class="planner-label" data-i18n="planner.interestsHeading">What do you love most?</h3>
               <div class="quick-tags" id="planner-interest-tags"></div>
+              <div class="planner-other-wrap" id="planner-interest-other-wrap" hidden>
+                <input type="text" id="pln-interest-other-input" class="planner-other-input" maxlength="80" data-i18n-placeholder="planner.otherInterestPlaceholder" placeholder="e.g. Surfing, wellness, photography..." aria-label="Custom trip interests" />
+              </div>
             </div>
           </div>
 
@@ -624,6 +654,7 @@
             <div class="planner-day-review" id="planner-mobile-review"></div>
 
             <h3 class="planner-label" data-i18n="planner.saveConciergeHeading" style="margin:1.25rem 0 0.75rem;">Save Cloud Copy &amp; Request Local Support (Optional)</h3>
+            <div class="planner-auth-hint" id="planner-auth-hint" hidden></div>
             <form id="planner-form" class="planner-form">
               <div class="form-group">
                 <label for="pln-name" data-i18n="planner.nameLabel">Full Name</label>
@@ -683,6 +714,92 @@
     </div>
   </div>
 
+  <!-- Customer Sign In & Saved Trips Modal -->
+  <div class="account-overlay" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-modal-title" hidden>
+    <div class="planner-backdrop" id="account-backdrop"></div>
+    <div class="account-dialog">
+      <header class="planner-head">
+        <div>
+          <span class="mono-label" style="color:var(--accent-terracotta); display:block;" data-i18n="account.kicker">SERENDIB TRAVELER PASS</span>
+          <h2 class="display-serif planner-title" id="account-modal-title" data-i18n="account.authTitle">Sign in to view your trips</h2>
+        </div>
+        <button type="button" class="sheet-close" id="close-account" aria-label="Close">
+          &times;
+        </button>
+      </header>
+
+      <div class="account-body" id="account-body">
+        <!-- Auth Gate (Sign In / Create Account) -->
+        <div id="account-auth-view">
+          <div class="account-pending-banner" id="account-pending-banner" hidden></div>
+          <p class="account-intro" data-i18n="account.authSub">
+            Save custom Sri Lanka journeys, log back in anytime, and view your full day-by-day route.
+          </p>
+
+          <div class="account-tabs" role="tablist">
+            <button type="button" class="account-tab is-active" id="acc-tab-signin" data-acc-mode="signin" role="tab" aria-selected="true" data-i18n="account.tabSignIn">Sign In</button>
+            <button type="button" class="account-tab" id="acc-tab-signup" data-acc-mode="signup" role="tab" aria-selected="false" data-i18n="account.tabSignUp">Create Account</button>
+          </div>
+
+          <form id="account-auth-form" class="account-form" novalidate>
+            <div class="form-group" id="acc-name-group" hidden>
+              <label for="acc-name" data-i18n="account.nameLabel">Full Name</label>
+              <input id="acc-name" type="text" maxlength="120" autocomplete="name" placeholder="Kavinda Perera" />
+            </div>
+
+            <div class="form-group">
+              <label for="acc-email" data-i18n="account.emailLabel">Email Address</label>
+              <input id="acc-email" type="email" maxlength="160" autocomplete="email" placeholder="you@domain.com" required />
+            </div>
+
+            <div class="form-group">
+              <div class="account-pw-label-row">
+                <label for="acc-password" data-i18n="account.passwordLabel">Password (min 6 chars)</label>
+                <button type="button" class="account-text-link" id="acc-forgot-btn" data-i18n="account.forgotBtn">Forgot password?</button>
+              </div>
+              <div class="account-pw-wrap">
+                <input id="acc-password" type="password" minlength="6" maxlength="128" autocomplete="current-password" placeholder="••••••" required />
+                <button type="button" class="account-pw-toggle" id="acc-pw-toggle" aria-label="Show password">Show</button>
+              </div>
+            </div>
+
+            <div class="account-alert" id="account-error" role="alert" hidden></div>
+            <div class="account-notice" id="account-notice" role="status" hidden></div>
+
+            <button type="submit" class="btn btn--primary account-submit-btn" id="acc-submit-btn" data-i18n="account.signInBtn">Sign In</button>
+          </form>
+        </div>
+
+        <!-- Signed-in My Trips Workspace -->
+        <div id="account-trips-view" hidden>
+          <div class="account-profile-bar">
+            <div class="account-profile-info">
+              <div class="account-avatar" id="account-avatar" aria-hidden="true">S</div>
+              <div>
+                <strong id="account-display-name" class="account-profile-name">Traveler</strong>
+                <span id="account-display-email" class="account-profile-email"></span>
+              </div>
+            </div>
+            <div class="account-profile-actions">
+              <button type="button" class="btn btn--primary" id="account-plan-new-btn" data-i18n="account.planNewBtn">+ Plan New Trip</button>
+              <button type="button" class="btn btn--outline" id="account-signout-btn" data-i18n="account.signOutBtn">Sign Out</button>
+            </div>
+          </div>
+
+          <div id="account-list-pane">
+            <div class="account-empty" id="account-trips-empty" hidden>
+              <h3 class="display-serif" data-i18n="account.emptyTitle">No saved trips yet</h3>
+              <p data-i18n="account.emptySub">Plan a route in Trip Studio and save it to view your complete day-by-day itinerary here anytime.</p>
+            </div>
+            <div class="account-trips-grid" id="account-trips-grid"></div>
+          </div>
+
+          <div id="account-detail-pane" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- Simple Floating Trip Action Bar -->
@@ -710,6 +827,7 @@
   <script defer src="./scripts/locales/zh.js"></script>
   <script defer src="./scripts/locales/ar.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js" integrity="sha384-ZaR6mWzmJtrRibZ1Vm7SoHFr8OXjyAuGAXalGDKqbxFT18oi/z+oZLIRFkpeNor1" crossorigin="anonymous"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js" integrity="sha384-I1LYojsZ5RM1cOda44Z2h42Qa6YfsQ1XkXxREnhp4ueYBR/4d1pG1K+NZM537Vsj" crossorigin="anonymous"></script>
   <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js" integrity="sha384-g5H2aNdtgRBYOBLsuOAuHvUXWnw4bswmU+tYjmGc1G3JfKxl79uWwV4sQarJsLwu" crossorigin="anonymous"></script>
   <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js" integrity="sha384-6Jot2RmoS66/9faJyjQ3J3Oe7wiJuUr+Hgs6+3Yzpi8q532pPlLSgu96BpQTKL6t" crossorigin="anonymous"></script>
   <script defer src="./scripts/firebase.js"></script>
