@@ -2297,6 +2297,9 @@
     if (!target) return;
     target.textContent = msg || '';
     target.hidden = !msg;
+    if (msg && typeof target.scrollIntoView === 'function') {
+      target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function friendlyCustomerAuthError(err) {
@@ -2305,7 +2308,8 @@
       return 'Google or Email sign-in is not enabled yet in Firebase Console (Authentication -> Sign-in method).';
     }
     if (code === 'auth/unauthorized-domain') {
-      return 'This website domain needs to be added under Firebase Console (Authentication -> Settings -> Authorized domains).';
+      var host = (window.location && window.location.hostname) || 'this domain';
+      return 'Add "' + host + '" under Firebase Console -> Authentication -> Settings -> Authorized domains (or sign in at serendib-sri-lanka.web.app).';
     }
     if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request') {
       return 'Google sign-in popup was closed before completing.';
@@ -2712,9 +2716,12 @@
     if (dom.accGoogleBtn && fb && typeof fb.signInWithGoogle === 'function') {
       dom.accGoogleBtn.addEventListener('click', function () {
         setAccMsg(dom.accountError, '');
-        setAccMsg(dom.accountNotice, '');
+        setAccMsg(dom.accountNotice, 'Connecting to Google Sign-In...');
         dom.accGoogleBtn.disabled = true;
-        fb.signInWithGoogle().catch(function (err) {
+        fb.signInWithGoogle().then(function () {
+          setAccMsg(dom.accountNotice, '');
+        }).catch(function (err) {
+          setAccMsg(dom.accountNotice, '');
           setAccMsg(dom.accountError, friendlyCustomerAuthError(err));
         }).finally(function () {
           dom.accGoogleBtn.disabled = false;

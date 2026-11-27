@@ -3,9 +3,13 @@
 (function () {
   'use strict';
 
+  var RUNTIME_AUTH_DOMAIN = (typeof window !== 'undefined' && window.location && window.location.hostname === 'serendib-sri-lanka.web.app')
+    ? 'serendib-sri-lanka.web.app'
+    : 'serendib-sri-lanka.firebaseapp.com';
+
   var FIREBASE_CONFIG = Object.freeze({
     apiKey: 'AIzaSyDJlBSmevNyHz-ZZJkpEr8QvHmN1C_z02w',
-    authDomain: 'serendib-sri-lanka.firebaseapp.com',
+    authDomain: RUNTIME_AUTH_DOMAIN,
     databaseURL: 'https://serendib-sri-lanka-default-rtdb.asia-southeast1.firebasedatabase.app',
     projectId: 'serendib-sri-lanka',
     storageBucket: 'serendib-sri-lanka.firebasestorage.app',

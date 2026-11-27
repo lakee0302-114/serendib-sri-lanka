@@ -790,6 +790,9 @@
             <span data-i18n="account.googleBtn">Continue with Google</span>
           </button>
 
+          <div class="account-alert" id="account-error" role="alert" hidden style="margin-top:0.75rem;max-width:440px;"></div>
+          <div class="account-notice" id="account-notice" role="status" hidden style="margin-top:0.75rem;max-width:440px;"></div>
+
           <div class="account-auth-divider">
             <span data-i18n="account.orEmailDivider">or continue with email</span>
           </div>
@@ -820,9 +823,6 @@
                 <button type="button" class="account-pw-toggle" id="acc-pw-toggle" aria-label="Show password">Show</button>
               </div>
             </div>
-
-            <div class="account-alert" id="account-error" role="alert" hidden></div>
-            <div class="account-notice" id="account-notice" role="status" hidden></div>
 
             <button type="submit" class="btn btn--primary account-submit-btn" id="acc-submit-btn" data-i18n="account.signInBtn">Sign In</button>
           </form>
