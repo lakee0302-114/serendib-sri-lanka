@@ -293,7 +293,7 @@
         '<td><span>' + escapeHtml(schedule) + '</span>' + (item.arrivalDate ? '<span class="meta-sub">' + escapeHtml(item.arrivalDate) + '</span>' : '') + '</td>' +
         '<td><div class="stops-summary">' + escapeHtml(stopsText) + '</div></td>' +
         '<td><span class="status-pill status-pill--' + escapeHtml(status) + '">' + escapeHtml(status) + '</span>' + (quoteHtml ? '<br>' + quoteHtml : '') + '</td>' +
-        '<td class="td-actions"><button type="button" class="admin-ghost-btn" data-inspect-ref="' + escapeHtml(ref) + '">Manage</button></td>' +
+        '<td class="td-actions"><button type="button" class="admin-ghost-btn" data-inspect-ref="' + escapeHtml(ref) + '">Manage</button><button type="button" class="admin-danger-btn" data-quick-delete="' + escapeHtml(item._key || ref) + '">Delete</button></td>' +
         '</tr>'
       );
     }).join('');
@@ -303,6 +303,12 @@
         openInquiryModal(btn.dataset.inspectRef);
       });
     });
+
+    dom.inqTableBody.querySelectorAll('[data-quick-delete]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        requestDeleteInquiry(btn.dataset.quickDelete);
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -310,7 +316,7 @@
      ------------------------------------------------------------------------ */
   function findInquiry(ref) {
     for (var i = 0; i < state.inquiries.length; i++) {
-      if ((state.inquiries[i].refCode || state.inquiries[i]._key) === ref) {
+      if (state.inquiries[i].refCode === ref || state.inquiries[i]._key === ref) {
         return state.inquiries[i];
       }
     }
@@ -370,6 +376,8 @@
     var ref = state.activeInquiryRef;
     var db = getFirebaseDb();
     if (!ref || !db) return;
+    var item = findInquiry(ref);
+    var dbKey = (item && item._key) ? item._key : ref;
 
     var status = dom.editStatus.value;
     if (STATUS_LIST.indexOf(status) === -1) status = 'new';
@@ -391,7 +399,7 @@
     }
 
     dom.modalSaveBtn.disabled = true;
-    db.ref('inquiries/' + ref).update(patch).then(function () {
+    db.ref('inquiries/' + dbKey).update(patch).then(function () {
       showToast('Updated ' + ref);
       closeInquiryModal();
     }).catch(function (err) {
@@ -441,13 +449,17 @@
     var ref = state.pendingDeleteRef;
     var db = getFirebaseDb();
     if (!ref || !db) return;
+    var item = findInquiry(ref);
+    var dbKey = (item && item._key) ? item._key : ref;
 
     dom.acceptConfirmBtn.disabled = true;
-    db.ref('inquiries/' + ref).remove().then(function () {
+    db.ref('inquiries/' + dbKey).remove().then(function () {
       showToast('Deleted ' + ref);
       dom.confirmModal.hidden = true;
       state.pendingDeleteRef = null;
-      if (state.activeInquiryRef === ref) closeInquiryModal();
+      if (state.activeInquiryRef === ref || (item && item.refCode === state.activeInquiryRef)) {
+        closeInquiryModal();
+      }
     }).catch(function (err) {
       showToast(err && err.message ? err.message : 'Delete failed.');
     }).finally(function () {
