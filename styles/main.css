@@ -1294,6 +1294,24 @@
     transition: transform var(--transition-slow);
   }
 
+  .dest-card__badge {
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    z-index: 2;
+    padding: 0.22rem 0.6rem;
+    border-radius: var(--radius-pill);
+    background-color: rgba(7, 21, 29, 0.78);
+    backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
   .dest-card:hover .dest-card__media img {
     transform: scale(1.045);
   }

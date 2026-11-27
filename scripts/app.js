@@ -36,6 +36,7 @@
     activeItineraryId: 'classic-arc',
     savedStopIds: loadSavedStops(),
     activeDossierId: null,
+    catalogOverrides: {},
     planner: {
       open: false,
       step: 1,
@@ -237,11 +238,23 @@
     return cur;
   }
 
-  function getMergedDestinations() {
+  function getMergedDestinations(includeHidden) {
     var locDest = state.locale.destinations;
-    return DESTINATIONS_META.map(function (meta) {
-      return Object.assign({}, meta, locDest[meta.id]);
-    });
+    var overrides = state.catalogOverrides || {};
+    var out = [];
+    for (var i = 0; i < DESTINATIONS_META.length; i++) {
+      var meta = DESTINATIONS_META[i];
+      var ov = overrides[meta.id];
+      if (ov && ov.hidden && !includeHidden) continue;
+      var merged = Object.assign({}, meta, locDest[meta.id]);
+      if (ov) {
+        if (ov.idealNights) merged.idealNights = ov.idealNights;
+        if (ov.pricePerNightUsd > 0) merged.pricePerNightUsd = ov.pricePerNightUsd;
+        if (ov.badge) merged.badge = ov.badge;
+      }
+      out.push(merged);
+    }
+    return out;
   }
 
   /* ------------------------------------------------------------------------
@@ -488,13 +501,17 @@
   function renderAtlasFilterRail() {
     var filters = state.locale.ui.atlas.filters;
     var order = ['all', 'cultural', 'highlands', 'south', 'wildlife', 'northeast'];
+    var activeTotal = getMergedDestinations().length;
 
     dom.atlasFilterRail.innerHTML = order.map(function (key) {
       var active = state.activeRegion === key;
+      var label = key === 'all' && activeTotal !== DESTINATIONS_META.length
+        ? filters.all.replace(/\(\d+\)/, '(' + activeTotal + ')')
+        : filters[key];
       return (
         '<button type="button" class="filter-chip ' + (active ? 'is-active' : '') + '" ' +
         'data-region="' + key + '" role="tab" aria-selected="' + active + '">' +
-        filters[key] + '</button>'
+        label + '</button>'
       );
     }).join('');
 
@@ -537,13 +554,15 @@
 
     dom.atlasGrid.innerHTML = filtered.map(function (dest) {
       var saved = state.savedStopIds.indexOf(dest.id) !== -1;
+      var badgeHtml = dest.badge ? '<span class="dest-card__badge">' + escapeHtml(dest.badge) + '</span>' : '';
+      var priceLabel = dest.pricePerNightUsd ? ' · $' + escapeHtml(dest.pricePerNightUsd) + '/nt' : '';
       return (
         '<article class="dest-card" data-dest-id="' + dest.id + '">' +
-        '<div class="dest-card__media" data-open-dossier="' + dest.id + '" role="button" tabindex="0" aria-label="' + dest.name + '"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
+        '<div class="dest-card__media" data-open-dossier="' + dest.id + '" role="button" tabindex="0" aria-label="' + dest.name + '">' + badgeHtml + '<img src="' + dest.image + '" alt="' + dest.imageAlt + '" decoding="async" /></div>' +
         '<div class="dest-card__body">' +
         '<div class="dest-card__meta">' +
         '<span class="mono-label">' + dest.region + '</span>' +
-        '<span class="mono-label" style="opacity:0.75;">' + dest.idealNights + t.nightsUnit + '</span>' +
+        '<span class="mono-label" style="opacity:0.75;">' + dest.idealNights + t.nightsUnit + priceLabel + '</span>' +
         '</div>' +
         '<h3 class="dest-card__title" data-open-dossier="' + dest.id + '">' + dest.name + '</h3>' +
         '<div class="dest-card__footer">' +
@@ -859,7 +878,7 @@
   }
 
   function openDossierSheet(destId) {
-    var all = getMergedDestinations();
+    var all = getMergedDestinations(true);
     var dest = null;
     for (var i = 0; i < all.length; i++) {
       if (all[i].id === destId) { dest = all[i]; break; }
@@ -868,7 +887,7 @@
     state.activeDossierId = destId;
     var d = state.locale.ui.dossier;
 
-    dom.dossierKicker.textContent = dest.number + ' · ' + dest.region.toUpperCase() + ' · ' + dest.sinhala;
+    dom.dossierKicker.textContent = dest.number + ' · ' + dest.region.toUpperCase() + ' · ' + dest.sinhala + (dest.badge ? ' · ' + dest.badge : '');
     dom.dossierBody.innerHTML =
       '<div class="dossier-hero"><img src="' + dest.image + '" alt="' + dest.imageAlt + '" /></div>' +
       '<p class="mono-label" style="color:var(--ink-muted); margin:0 0 0.35rem;">' + dest.coords + '</p>' +
@@ -879,6 +898,7 @@
       '<div><span class="mono-label">' + d.fromColombo + '</span><strong>' + dest.driveFromColombo + '</strong></div>' +
       '<div><span class="mono-label">' + d.primeWindow + '</span><strong>' + dest.bestTime + '</strong></div>' +
       '<div><span class="mono-label">' + d.bestDaylight + '</span><strong>' + dest.daylightWindow + '</strong></div>' +
+      (dest.pricePerNightUsd ? '<div><span class="mono-label">GUIDE RATE</span><strong>$' + escapeHtml(dest.pricePerNightUsd) + ' / night</strong></div>' : '') +
       '</div>' +
       '<h3 class="mono-label" style="color:var(--accent-terracotta); margin:0 0 0.5rem;">' + d.highlightsHeading + '</h3>' +
       '<ul class="dossier-list">' + dest.highlights.map(function (item) { return '<li>' + item + '</li>'; }).join('') + '</ul>' +
@@ -1440,7 +1460,7 @@
         '<span class="planner-dest-card__check" aria-hidden="true">' + (selected ? '&#10003;' : '+') + '</span>' +
         '</div>' +
         '<div class="planner-dest-card__info">' +
-        '<div class="planner-dest-card__meta"><span>' + dest.number + ' · ' + dest.region + '</span><span>' + getStopNights(dest) + nightsUnit + '</span></div>' +
+        '<div class="planner-dest-card__meta"><span>' + dest.number + ' · ' + dest.region + '</span><span>' + getStopNights(dest) + nightsUnit + (dest.pricePerNightUsd ? ' · $' + escapeHtml(dest.pricePerNightUsd) + '/nt' : '') + '</span></div>' +
         '<span class="planner-dest-card__name">' + dest.name + '</span>' +
         '</div></button>'
       );
@@ -1979,6 +1999,17 @@
     initForms();
     initReveals();
     switchLanguage(state.lang, false);
+
+    if (window.SERENDIB_FIREBASE && typeof window.SERENDIB_FIREBASE.loadCatalogOverrides === 'function') {
+      window.SERENDIB_FIREBASE.loadCatalogOverrides().then(function (overrides) {
+        if (overrides && Object.keys(overrides).length > 0) {
+          state.catalogOverrides = overrides;
+          renderAtlasFilterRail();
+          renderDestinations();
+          if (state.planner.open) renderPlannerModal();
+        }
+      });
+    }
   }
 
   if (document.readyState === 'loading') {

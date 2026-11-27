@@ -146,6 +146,39 @@
     });
   }
 
+  function cleanCatalogOverrides(raw) {
+    var out = {};
+    if (!raw || typeof raw !== 'object') return out;
+    var keys = Object.keys(raw);
+    for (var i = 0; i < keys.length && i < 40; i++) {
+      var id = keys[i];
+      if (!/^[a-z0-9-]{2,40}$/.test(id) || !Object.prototype.hasOwnProperty.call(raw, id)) continue;
+      var entry = raw[id];
+      if (!entry || typeof entry !== 'object') continue;
+      var nightsNum = Number(entry.idealNights);
+      var priceNum = Number(entry.pricePerNightUsd);
+      out[id] = {
+        hidden: Boolean(entry.hidden),
+        idealNights: Number.isFinite(nightsNum) && nightsNum >= 1 ? Math.min(14, Math.round(nightsNum)) : null,
+        pricePerNightUsd: Number.isFinite(priceNum) && priceNum >= 0 ? Math.min(20000, Math.round(priceNum)) : 0,
+        badge: cleanText(entry.badge || '', 36, false)
+      };
+    }
+    return out;
+  }
+
+  function loadCatalogOverrides() {
+    return fetch(FIREBASE_CONFIG.databaseURL + '/catalogOverrides.json', { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) return {};
+        return res.json();
+      })
+      .then(cleanCatalogOverrides)
+      .catch(function () {
+        return {};
+      });
+  }
+
   function logEvent(eventName, params) {
     if (!analyticsInstance) return;
     try {
@@ -156,7 +189,9 @@
   initFirebase();
 
   window.SERENDIB_FIREBASE = Object.freeze({
+    ensureInitialized: initFirebase,
     saveInquiry: saveInquiry,
+    loadCatalogOverrides: loadCatalogOverrides,
     logEvent: logEvent
   });
 })();

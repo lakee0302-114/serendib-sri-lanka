@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" id="meta-theme-color" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <title>SERENDIB — Admin Studio</title>
+
+  <script src="./scripts/boot.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/admin.css" />
+</head>
+<body class="admin-body">
+  <!-- Minimal Private Header -->
+  <header class="admin-topbar">
+    <div class="admin-topbar__inner">
+      <div class="admin-brand">
+        <span class="admin-brand__word">SERENDIB</span>
+        <span class="admin-brand__badge mono-label">ADMIN STUDIO</span>
+      </div>
+
+      <div class="admin-topbar__actions">
+        <span class="admin-user-pill" id="admin-user-pill" hidden>
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="admin-user-email"></span>
+        </span>
+
+        <button
+          type="button"
+          class="admin-icon-btn"
+          id="admin-theme-toggle"
+          aria-label="Switch theme"
+          aria-pressed="false"
+        >
+          <span id="admin-theme-icon" aria-hidden="true"></span>
+          <span class="admin-btn-label" id="admin-theme-label">Dark</span>
+        </button>
+
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="admin-ghost-btn"
+          id="admin-public-link"
+          hidden
+        >
+          Public Site &nearr;
+        </a>
+
+        <button type="button" class="admin-ghost-btn" id="admin-logout-btn" hidden>
+          Sign Out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <!-- Loading Boot Gate -->
+    <section class="auth-stage" id="auth-loading">
+      <div class="auth-card auth-card--compact">
+        <p class="mono-label auth-kicker">AUTHENTICATION CHECK</p>
+        <h1 class="auth-title">Verifying session&hellip;</h1>
+        <p class="auth-sub">Connecting securely to Firebase Authentication.</p>
+      </div>
+    </section>
+
+    <!-- Login Gate -->
+    <section class="auth-stage" id="login-gate" hidden>
+      <div class="auth-card">
+        <div class="auth-card__head">
+          <p class="mono-label auth-kicker">PRIVATE DESK &middot; RESTRICTED ACCESS</p>
+          <h1 class="auth-title">Admin Sign In</h1>
+          <p class="auth-sub">
+            Sign in with your authorized Serendib administrator account to view client inquiries and manage destination pricing.
+          </p>
+        </div>
+
+        <form id="admin-login-form" class="auth-form" autocomplete="on" novalidate>
+          <div class="field-group">
+            <label class="field-label" for="login-email">Administrator Email</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              class="field-input"
+              placeholder="lakditha2008@gmail.com"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <div class="field-label-row">
+              <label class="field-label" for="login-password">Password</label>
+              <button type="button" class="text-action-btn" id="forgot-password-btn">
+                Forgot password?
+              </button>
+            </div>
+            <div class="password-wrap">
+              <input
+                type="password"
+                id="login-password"
+                name="password"
+                class="field-input field-input--password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle-btn"
+                id="toggle-password-btn"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                Show
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-alert" id="login-error" role="alert" hidden></div>
+          <div class="auth-notice" id="login-notice" role="status" hidden></div>
+
+          <button type="submit" class="btn-primary-admin" id="login-submit-btn">
+            Sign In to Studio
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Email Verification Gate -->
+    <section class="auth-stage" id="verify-gate" hidden>
+      <div class="auth-card">
+        <div class="auth-card__head">
+          <p class="mono-label auth-kicker">SECURITY REQUIREMENT</p>
+          <h1 class="auth-title">Verify Admin Email</h1>
+          <p class="auth-sub">
+            Database security rules require <strong id="verify-email-label">lakditha2008@gmail.com</strong> to verify its mailbox once before reading customer inquiries or editing prices.
+          </p>
+        </div>
+
+        <div class="auth-alert" id="verify-error" role="alert" hidden></div>
+        <div class="auth-notice" id="verify-notice" role="status" hidden></div>
+
+        <div class="verify-actions">
+          <button type="button" class="btn-primary-admin" id="send-verify-btn">
+            Send Verification Link
+          </button>
+          <button type="button" class="admin-ghost-btn admin-ghost-btn--lg" id="reload-verify-btn">
+            I&rsquo;ve Verified &mdash; Refresh Session
+          </button>
+          <button type="button" class="text-action-btn" id="verify-signout-btn">
+            Sign out and use another account
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authenticated Studio Workspace -->
+    <section class="dashboard-shell" id="admin-dashboard" hidden>
+      <!-- KPI Strip -->
+      <section class="kpi-grid" aria-label="Studio Summary Metrics">
+        <article class="kpi-card">
+          <span class="mono-label kpi-label">Total Inquiries</span>
+          <div class="kpi-value-row">
+            <strong class="kpi-value" id="kpi-total-inquiries">0</strong>
+            <span class="kpi-chip kpi-chip--accent" id="kpi-new-count">0 new</span>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <span class="mono-label kpi-label">Confirmed Bookings</span>
+          <div class="kpi-value-row">
+            <strong class="kpi-value" id="kpi-confirmed-count">0</strong>
+            <span class="kpi-chip" id="kpi-quoted-total">$0 quoted</span>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <span class="mono-label kpi-label">Top Travel Month</span>
+          <div class="kpi-value-row">
+            <strong class="kpi-value" id="kpi-top-month">&mdash;</strong>
+            <span class="kpi-chip" id="kpi-top-month-count">0 requests</span>
+          </div>
+        </article>
+
+        <article class="kpi-card">
+          <span class="mono-label kpi-label">Live Atlas Stops</span>
+          <div class="kpi-value-row">
+            <strong class="kpi-value" id="kpi-active-dest">20 / 20</strong>
+            <span class="kpi-chip" id="kpi-priced-dest">0 priced</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Workspace Tabs & Quick Refresh -->
+      <div class="workspace-bar">
+        <div class="workspace-tabs" role="tablist" aria-label="Admin Sections">
+          <button
+            type="button"
+            class="workspace-tab is-active"
+            role="tab"
+            id="tab-btn-inquiries"
+            data-tab="inquiries"
+            aria-selected="true"
+            aria-controls="panel-inquiries"
+          >
+            Customer Inquiries
+            <span class="tab-count" id="tab-badge-inquiries">0</span>
+          </button>
+          <button
+            type="button"
+            class="workspace-tab"
+            role="tab"
+            id="tab-btn-catalog"
+            data-tab="catalog"
+            aria-selected="false"
+            aria-controls="panel-catalog"
+          >
+            Destinations &amp; Pricing
+            <span class="tab-count" id="tab-badge-catalog">20</span>
+          </button>
+        </div>
+
+        <div class="workspace-meta">
+          <span class="mono-label sync-label" id="sync-status-label">LIVE SYNC</span>
+          <button type="button" class="admin-ghost-btn" id="refresh-data-btn">
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: Inquiries Panel -->
+      <section id="panel-inquiries" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-inquiries">
+        <div class="toolbar-card">
+          <div class="toolbar-search">
+            <input
+              type="search"
+              id="inq-search-input"
+              class="field-input"
+              placeholder="Search reference code, guest name, email, city, or stops..."
+              aria-label="Search inquiries"
+            />
+          </div>
+
+          <div class="toolbar-filters">
+            <select id="inq-status-filter" class="field-select" aria-label="Filter by status">
+              <option value="all">All Statuses</option>
+              <option value="new">New</option>
+              <option value="contacted">Contacted</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="archived">Archived</option>
+            </select>
+
+            <select id="inq-month-filter" class="field-select" aria-label="Filter by travel month">
+              <option value="ALL">All Months</option>
+              <option value="JAN">JAN</option>
+              <option value="FEB">FEB</option>
+              <option value="MAR">MAR</option>
+              <option value="APR">APR</option>
+              <option value="MAY">MAY</option>
+              <option value="JUN">JUN</option>
+              <option value="JUL">JUL</option>
+              <option value="AUG">AUG</option>
+              <option value="SEP">SEP</option>
+              <option value="OCT">OCT</option>
+              <option value="NOV">NOV</option>
+              <option value="DEC">DEC</option>
+            </select>
+
+            <button type="button" class="admin-ghost-btn" id="export-csv-btn">
+              Export CSV
+            </button>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="empty-state" id="inq-empty-state" hidden>
+            <p class="empty-state__title">No inquiries found</p>
+            <p class="empty-state__sub">New trip plans submitted on serendib-sri-lanka.web.app will appear here in real time.</p>
+          </div>
+
+          <div class="table-scroll" id="inq-table-wrap">
+            <table class="inq-table">
+              <thead>
+                <tr>
+                  <th>Reference</th>
+                  <th>Guest</th>
+                  <th>Schedule</th>
+                  <th>Selected Stops</th>
+                  <th>Status &amp; Quote</th>
+                  <th class="th-actions">Manage</th>
+                </tr>
+              </thead>
+              <tbody id="inq-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: Destinations & Pricing CMS -->
+      <section id="panel-catalog" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-catalog" hidden>
+        <div class="toolbar-card">
+          <div class="toolbar-search">
+            <input
+              type="search"
+              id="cat-search-input"
+              class="field-input"
+              placeholder="Filter destinations by name, ID, or badge..."
+              aria-label="Filter destinations"
+            />
+          </div>
+
+          <div class="toolbar-filters">
+            <select id="cat-region-filter" class="field-select" aria-label="Filter destinations by region">
+              <option value="all">All Regions</option>
+              <option value="cultural">Cultural Triangle</option>
+              <option value="highlands">Tea &amp; Highlands</option>
+              <option value="south">South &amp; West Coast</option>
+              <option value="wildlife">Wildlife &amp; Safari</option>
+              <option value="northeast">East &amp; North</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Inquiry Inspection & Edit Modal -->
+  <div class="modal-backdrop" id="inquiry-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-ref-title">
+    <div class="modal-dialog modal-dialog--wide">
+      <header class="modal-head">
+        <div>
+          <span class="mono-label modal-kicker" id="modal-created-label">SUBMITTED</span>
+          <h2 class="modal-title" id="modal-ref-title">SRD-000000</h2>
+        </div>
+        <button type="button" class="admin-icon-btn" id="close-inquiry-modal-btn" aria-label="Close modal">
+          &times;
+        </button>
+      </header>
+
+      <div class="modal-body">
+        <div class="dossier-columns">
+          <div class="dossier-pane">
+            <h3 class="pane-heading">Trip Brief</h3>
+            <dl class="spec-list" id="modal-spec-list"></dl>
+
+            <h3 class="pane-heading pane-heading--spaced">Route Stops</h3>
+            <ul class="stop-pill-list" id="modal-stops-list"></ul>
+
+            <h3 class="pane-heading pane-heading--spaced">Guest Notes</h3>
+            <div class="guest-notes-box" id="modal-guest-notes"></div>
+          </div>
+
+          <form class="dossier-form" id="modal-edit-form" novalidate>
+            <h3 class="pane-heading">Desk Management</h3>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-status">Inquiry Status</label>
+              <select id="edit-status" class="field-select field-select--full">
+                <option value="new">New</option>
+                <option value="contacted">Contacted</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-quote">Estimated / Quoted Price (USD)</label>
+              <input
+                type="number"
+                id="edit-quote"
+                class="field-input"
+                min="0"
+                max="100000"
+                step="10"
+                placeholder="e.g. 2450"
+              />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-admin-note">Private Desk Note (Admin Only)</label>
+              <textarea
+                id="edit-admin-note"
+                class="field-textarea"
+                rows="4"
+                maxlength="1000"
+                placeholder="Driver assigned, villa hold, follow-up reminder..."
+              ></textarea>
+            </div>
+
+            <div class="modal-actions-stack">
+              <button type="submit" class="btn-primary-admin" id="modal-save-btn">
+                Save Desk Changes
+              </button>
+              <div class="modal-secondary-row">
+                <button type="button" class="admin-ghost-btn" id="modal-copy-reply-btn">
+                  Copy Reply Draft
+                </button>
+                <button type="button" class="admin-danger-btn" id="modal-delete-btn">
+                  Delete Inquiry
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Safe Delete Confirmation Modal -->
+  <div class="modal-backdrop" id="confirm-modal" hidden role="alertdialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-dialog modal-dialog--sm">
+      <header class="modal-head">
+        <h2 class="modal-title" id="confirm-title">Delete Inquiry?</h2>
+        <button type="button" class="admin-icon-btn" id="close-confirm-btn" aria-label="Cancel delete">&times;</button>
+      </header>
+      <div class="modal-body">
+        <p class="confirm-copy" id="confirm-copy">This permanently removes the booking record from Firebase Realtime Database.</p>
+        <div class="confirm-actions">
+          <button type="button" class="admin-ghost-btn" id="cancel-confirm-btn">Cancel</button>
+          <button type="button" class="admin-danger-btn admin-danger-btn--solid" id="accept-confirm-btn">Delete Permanently</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-toast" id="admin-toast" role="status" aria-live="polite"></div>
+
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js" integrity="sha384-ZaR6mWzmJtrRibZ1Vm7SoHFr8OXjyAuGAXalGDKqbxFT18oi/z+oZLIRFkpeNor1" crossorigin="anonymous"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js" integrity="sha384-I1LYojsZ5RM1cOda44Z2h42Qa6YfsQ1XkXxREnhp4ueYBR/4d1pG1K+NZM537Vsj" crossorigin="anonymous"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js" integrity="sha384-g5H2aNdtgRBYOBLsuOAuHvUXWnw4bswmU+tYjmGc1G3JfKxl79uWwV4sQarJsLwu" crossorigin="anonymous"></script>
+  <script defer src="./scripts/data.js"></script>
+  <script defer src="./scripts/firebase.js"></script>
+  <script defer src="./scripts/admin.js"></script>
+</body>
+</html>
