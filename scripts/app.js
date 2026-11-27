@@ -495,7 +495,8 @@
     var onScroll = function () {
       dom.header.classList.toggle('is-scrolled', window.scrollY > 40);
       if (dom.floatingBar) {
-        dom.floatingBar.classList.toggle('is-visible', state.savedStopIds.length > 0 && window.scrollY > 360);
+        var nearBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 160);
+        dom.floatingBar.classList.toggle('is-visible', state.savedStopIds.length > 0 && window.scrollY > 360 && !nearBottom);
       }
       if (!supportsScrollTimeline && dom.scrollProgress) {
         var max = document.documentElement.scrollHeight - window.innerHeight;

@@ -3520,12 +3520,7 @@
 
   @media (min-width: 920px) {
     .floating-trip-bar {
-      left: auto;
-      right: 1.5rem;
-      transform: translateY(16px);
-    }
-    .floating-trip-bar.is-visible {
-      transform: translateY(0);
+      display: none;
     }
   }
 
