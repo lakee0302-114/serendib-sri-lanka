@@ -56,6 +56,10 @@
           Public Site &nearr;
         </a>
 
+        <button type="button" class="admin-ghost-btn" id="admin-change-pw-btn" hidden>
+          Change Password
+        </button>
+
         <button type="button" class="admin-ghost-btn" id="admin-logout-btn" hidden>
           Sign Out
         </button>
@@ -80,20 +84,22 @@
           <p class="mono-label auth-kicker">STAFF SIGN IN &middot; RESTRICTED</p>
           <h1 class="auth-title">Admin Sign In</h1>
           <p class="auth-sub">
-            Sign in with your authorized Serendib administrator account to view client inquiries and manage destination pricing.
+            Sign in with your administrator username and password to view client inquiries and manage destination pricing.
           </p>
         </div>
 
         <form id="admin-login-form" class="auth-form" autocomplete="on" novalidate>
           <div class="field-group">
-            <label class="field-label" for="login-email">Administrator Email</label>
+            <label class="field-label" for="login-username">Username</label>
             <input
-              type="email"
-              id="login-email"
-              name="email"
+              type="text"
+              id="login-username"
+              name="username"
               class="field-input"
-              placeholder="lakditha2008@gmail.com"
+              placeholder="Enter your username"
               autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
               required
             />
           </div>
@@ -144,7 +150,7 @@
           <p class="mono-label auth-kicker">SECURITY REQUIREMENT</p>
           <h1 class="auth-title">Verify Admin Email</h1>
           <p class="auth-sub">
-            Database security rules require <strong id="verify-email-label">lakditha2008@gmail.com</strong> to verify its mailbox once before reading customer inquiries or editing prices.
+            Database security rules require <strong id="verify-email-label">the administrator account</strong> to verify its mailbox once before reading customer inquiries or editing prices.
           </p>
         </div>
 
@@ -415,6 +421,40 @@
             </div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Admin Password Modal -->
+  <div class="modal-backdrop" id="password-modal" hidden role="dialog" aria-modal="true" aria-labelledby="pw-modal-title">
+    <div class="modal-dialog modal-dialog--sm">
+      <header class="modal-head">
+        <div>
+          <span class="mono-label modal-kicker">ACCOUNT SECURITY</span>
+          <h2 class="modal-title" id="pw-modal-title">Change Admin Password</h2>
+        </div>
+        <button type="button" class="admin-icon-btn" id="close-pw-modal-btn" aria-label="Close password modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <form id="change-pw-form" class="auth-form" novalidate>
+          <div class="field-group">
+            <label class="field-label" for="pw-current">Current Password</label>
+            <input type="password" id="pw-current" class="field-input" autocomplete="current-password" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="pw-new">New Password (min 8 characters)</label>
+            <input type="password" id="pw-new" class="field-input" autocomplete="new-password" minlength="8" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="pw-confirm">Confirm New Password</label>
+            <input type="password" id="pw-confirm" class="field-input" autocomplete="new-password" minlength="8" required />
+          </div>
+          <div class="auth-alert" id="pw-error" role="alert" hidden></div>
+          <div class="confirm-actions">
+            <button type="button" class="admin-ghost-btn" id="cancel-pw-modal-btn">Cancel</button>
+            <button type="submit" class="btn-primary-admin" id="save-pw-btn">Update Password</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

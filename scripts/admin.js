@@ -3,6 +3,7 @@
 (function () {
   'use strict';
 
+  var ALLOWED_ADMIN_USERNAME = 'lakee1121';
   var ALLOWED_ADMIN_EMAIL = 'lakditha2008@gmail.com';
   var STATUS_LIST = ['new', 'contacted', 'confirmed', 'archived'];
   var META_LIST = (window.SERENDIB_DATA && window.SERENDIB_DATA.DESTINATIONS_META) || [];
@@ -100,6 +101,7 @@
     var signedInDash = mode === 'dashboard';
     dom.userPill.hidden = !signedInDash;
     dom.publicLink.hidden = !signedInDash;
+    if (dom.changePwBtn) dom.changePwBtn.hidden = !signedInDash;
     dom.logoutBtn.hidden = !signedInDash;
   }
 
@@ -126,13 +128,13 @@
       return 'Email/Password sign-in is not enabled yet in Firebase Console (Authentication -> Sign-in method -> Email/Password).';
     }
     if (code === 'auth/invalid-credential' || code === 'auth/wrong-password' || code === 'auth/user-not-found') {
-      return 'Incorrect email or password. Please check your credentials.';
+      return 'Incorrect username or password. Please check your credentials.';
     }
     if (code === 'auth/too-many-requests') {
       return 'Too many attempts. Please wait a few minutes or reset your password.';
     }
-    if (code === 'auth/invalid-email') {
-      return 'Please enter a valid administrator email address.';
+    if (code === 'auth/weak-password') {
+      return 'Password must be at least 8 characters long.';
     }
     return (err && err.message) || 'Sign-in failed. Please try again.';
   }
@@ -643,13 +645,17 @@
       return;
     }
 
-    var email = dom.loginEmail.value.trim().toLowerCase();
+    var username = dom.loginUsername.value.trim().toLowerCase();
     var password = dom.loginPassword.value;
     showAlert(dom.loginError, '');
     showAlert(dom.loginNotice, '');
 
-    if (email !== ALLOWED_ADMIN_EMAIL) {
-      showAlert(dom.loginError, 'Only the authorized Serendib administrator email can sign in here.');
+    if (!username) {
+      showAlert(dom.loginError, 'Please enter your username.');
+      return;
+    }
+    if (username !== ALLOWED_ADMIN_USERNAME) {
+      showAlert(dom.loginError, 'Invalid administrator username. Access denied.');
       return;
     }
     if (!password) {
@@ -658,7 +664,7 @@
     }
 
     dom.loginSubmit.disabled = true;
-    auth.signInWithEmailAndPassword(email, password).catch(function (err) {
+    auth.signInWithEmailAndPassword(ALLOWED_ADMIN_EMAIL, password).catch(function (err) {
       showAlert(dom.loginError, friendlyAuthError(err));
     }).finally(function () {
       dom.loginSubmit.disabled = false;
@@ -668,14 +674,63 @@
   function handleForgotPassword() {
     var auth = getFirebaseAuth();
     if (!auth) return;
-    var email = dom.loginEmail.value.trim().toLowerCase() || ALLOWED_ADMIN_EMAIL;
     showAlert(dom.loginError, '');
     showAlert(dom.loginNotice, '');
 
-    auth.sendPasswordResetEmail(email).then(function () {
-      showAlert(dom.loginNotice, 'Password reset email sent to ' + email + '. Check Inbox & Spam.');
+    auth.sendPasswordResetEmail(ALLOWED_ADMIN_EMAIL).then(function () {
+      showAlert(dom.loginNotice, 'Password reset link sent to your registered admin recovery mailbox. Check Inbox & Spam.');
     }).catch(function (err) {
       showAlert(dom.loginError, friendlyAuthError(err));
+    });
+  }
+
+  function openPasswordModal() {
+    if (!dom.passwordModal) return;
+    dom.changePwForm.reset();
+    showAlert(dom.pwError, '');
+    dom.passwordModal.hidden = false;
+    if (dom.pwCurrent) dom.pwCurrent.focus();
+  }
+
+  function closePasswordModal() {
+    if (dom.passwordModal) dom.passwordModal.hidden = true;
+  }
+
+  function handleChangePasswordSubmit(e) {
+    e.preventDefault();
+    var auth = getFirebaseAuth();
+    var user = auth && auth.currentUser;
+    if (!user) return;
+
+    var cur = dom.pwCurrent.value;
+    var next = dom.pwNew.value;
+    var conf = dom.pwConfirm.value;
+    showAlert(dom.pwError, '');
+
+    if (!cur) {
+      showAlert(dom.pwError, 'Please enter your current password.');
+      return;
+    }
+    if (next.length < 8) {
+      showAlert(dom.pwError, 'New password must be at least 8 characters.');
+      return;
+    }
+    if (next !== conf) {
+      showAlert(dom.pwError, 'New passwords do not match.');
+      return;
+    }
+
+    dom.savePwBtn.disabled = true;
+    var cred = window.firebase.auth.EmailAuthProvider.credential(user.email, cur);
+    user.reauthenticateWithCredential(cred).then(function () {
+      return user.updatePassword(next);
+    }).then(function () {
+      closePasswordModal();
+      showToast('Admin password updated successfully.');
+    }).catch(function (err) {
+      showAlert(dom.pwError, friendlyAuthError(err));
+    }).finally(function () {
+      dom.savePwBtn.disabled = false;
     });
   }
 
@@ -688,11 +743,12 @@
       userPill: el('admin-user-pill'),
       userEmail: el('admin-user-email'),
       publicLink: el('admin-public-link'),
+      changePwBtn: el('admin-change-pw-btn'),
       logoutBtn: el('admin-logout-btn'),
       authLoading: el('auth-loading'),
       loginGate: el('login-gate'),
       loginForm: el('admin-login-form'),
-      loginEmail: el('login-email'),
+      loginUsername: el('login-username'),
       loginPassword: el('login-password'),
       togglePwBtn: el('toggle-password-btn'),
       forgotPwBtn: el('forgot-password-btn'),
@@ -752,6 +808,15 @@
       closeConfirmBtn: el('close-confirm-btn'),
       cancelConfirmBtn: el('cancel-confirm-btn'),
       acceptConfirmBtn: el('accept-confirm-btn'),
+      passwordModal: el('password-modal'),
+      closePwModalBtn: el('close-pw-modal-btn'),
+      cancelPwModalBtn: el('cancel-pw-modal-btn'),
+      changePwForm: el('change-pw-form'),
+      pwCurrent: el('pw-current'),
+      pwNew: el('pw-new'),
+      pwConfirm: el('pw-confirm'),
+      pwError: el('pw-error'),
+      savePwBtn: el('save-pw-btn'),
       toast: el('admin-toast')
     };
 
@@ -791,6 +856,16 @@
     dom.cancelConfirmBtn.addEventListener('click', function () { dom.confirmModal.hidden = true; });
     dom.acceptConfirmBtn.addEventListener('click', executeDeleteInquiry);
 
+    if (dom.changePwBtn) dom.changePwBtn.addEventListener('click', openPasswordModal);
+    if (dom.closePwModalBtn) dom.closePwModalBtn.addEventListener('click', closePasswordModal);
+    if (dom.cancelPwModalBtn) dom.cancelPwModalBtn.addEventListener('click', closePasswordModal);
+    if (dom.changePwForm) dom.changePwForm.addEventListener('submit', handleChangePasswordSubmit);
+    if (dom.passwordModal) {
+      dom.passwordModal.addEventListener('click', function (e) {
+        if (e.target === dom.passwordModal) closePasswordModal();
+      });
+    }
+
     dom.inquiryModal.addEventListener('click', function (e) {
       if (e.target === dom.inquiryModal) closeInquiryModal();
     });
@@ -799,7 +874,8 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
-        if (!dom.confirmModal.hidden) dom.confirmModal.hidden = true;
+        if (dom.passwordModal && !dom.passwordModal.hidden) closePasswordModal();
+        else if (!dom.confirmModal.hidden) dom.confirmModal.hidden = true;
         else if (!dom.inquiryModal.hidden) closeInquiryModal();
       }
     });
@@ -836,7 +912,7 @@
         return auth.currentUser.getIdToken(true);
       }).then(function () {
         if (auth.currentUser.emailVerified) {
-          dom.userEmail.textContent = auth.currentUser.email;
+          dom.userEmail.textContent = ALLOWED_ADMIN_USERNAME;
           setViewGate('dashboard');
           loadStudioData();
         } else {
@@ -864,12 +940,12 @@
       }
 
       if (!user.emailVerified) {
-        dom.verifyEmailLabel.textContent = user.email;
+        dom.verifyEmailLabel.textContent = 'the administrator account';
         setViewGate('verify');
         return;
       }
 
-      dom.userEmail.textContent = user.email;
+      dom.userEmail.textContent = ALLOWED_ADMIN_USERNAME;
       setViewGate('dashboard');
       loadStudioData();
     });
