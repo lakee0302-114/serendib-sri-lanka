@@ -30,7 +30,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Red train crossing Nine Arch Bridge near Ella'
+      imageAlt: 'Blue train crossing Nine Arch Bridge near Ella'
     },
     {
       id: 'trinco-jaffna',
@@ -70,7 +70,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'View over Haputale hills and tea valleys from Lipton Seat'
+      imageAlt: 'Tea plantation terraces across highland hills'
     },
     {
       id: 'yala',
@@ -90,7 +90,7 @@
       coords: "06°33'30\"N · 81°40'50\"E",
       idealNights: 1,
       image: './assets/images/kumana-birds.jpg',
-      imageAlt: 'Black-necked stork wading in Kumana lagoon'
+      imageAlt: 'Painted stork wading in Kumana wetlands'
     },
     {
       id: 'udawalawe',
@@ -130,7 +130,7 @@
       coords: "06°48'09\"N · 80°48'09\"E",
       idealNights: 1,
       image: './assets/images/horton-plains.jpg',
-      imageAlt: 'Mist rolling up the escarpment at Horton Plains'
+      imageAlt: 'Highland waterfall over mossy rocks at Horton Plains'
     },
     {
       id: 'bentota',
@@ -140,7 +140,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Open wooden veranda at Geoffrey Bawa Lunuganga estate near Bentota'
+      imageAlt: 'Bentota beach sand and palms at sunset'
     },
     {
       id: 'arugam-bay',
@@ -160,7 +160,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Fishing boats on the beach looking toward Colombo city buildings'
+      imageAlt: 'Lotus Tower and Colombo skyline at night'
     },
     {
       id: 'sri-pada',
@@ -200,7 +200,7 @@
       coords: "07°16'16\"N · 80°35'48\"E",
       idealNights: 1,
       image: './assets/images/peradeniya-garden.jpg',
-      imageAlt: 'Lawns and tall royal palms at Peradeniya botanical garden'
+      imageAlt: 'Glasshouse and lily pond at Peradeniya Botanical Gardens'
     }
   ];
 
