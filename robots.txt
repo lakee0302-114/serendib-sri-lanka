@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin.html
+
+Sitemap: https://serendib-sri-lanka-three.vercel.app/sitemap.xml

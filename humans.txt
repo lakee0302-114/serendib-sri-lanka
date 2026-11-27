@@ -1,0 +1,7 @@
+﻿/* TEAM */
+Developer: Serendib Travels Team
+Location: Colombo, Sri Lanka
+
+/* SITE */
+Language: English, Sinhala, Tamil and 11 more
+Technology: Vanilla JS, Firebase, Vercel

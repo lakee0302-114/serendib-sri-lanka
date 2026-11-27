@@ -10,7 +10,7 @@
       coords: "07°57'25\"N · 80°45'35\"E",
       idealNights: 2,
       image: './assets/images/sigiriya-pidurangala.jpg',
-      imageAlt: 'Golden sunlight illuminating Sigiriya Lion Rock rising above endless rainforest canopy and misty ridges'
+      imageAlt: 'Sigiriya rock fortress seen from Pidurangala'
     },
     {
       id: 'kandy',
@@ -20,7 +20,7 @@
       coords: "07°17'37\"N · 80°38'29\"E",
       idealNights: 2,
       image: './assets/images/kandy-temple.jpg',
-      imageAlt: 'Sunlit octagonal Paththirippuwa pavilion of the Sacred Temple of the Tooth in Kandy framed by Buddhist flags'
+      imageAlt: 'Temple of the Tooth buildings beside Kandy lake'
     },
     {
       id: 'ella',
@@ -30,7 +30,7 @@
       coords: "06°52'35\"N · 81°03'39\"E",
       idealNights: 2,
       image: './assets/images/ella-train.jpg',
-      imageAlt: 'Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest'
+      imageAlt: 'Blue train crossing Nine Arch Bridge near Ella'
     },
     {
       id: 'trinco-jaffna',
@@ -40,7 +40,7 @@
       coords: "08°34'16\"N · 81°14'00\"E",
       idealNights: 3,
       image: './assets/images/east-coast-trinco.jpg',
-      imageAlt: 'Transparent turquoise Pigeon Island reef lagoon and warm coastal rocks near Trincomalee'
+      imageAlt: 'Clear shallow reef bay at Pigeon Island'
     },
     {
       id: 'galle',
@@ -50,7 +50,7 @@
       coords: "06°01'50\"N · 80°13'02\"E",
       idealNights: 2,
       image: './assets/images/galle-fort.jpg',
-      imageAlt: 'Galle Fort coral-stone sea ramparts, white lighthouse, and palms overlooking the Indian Ocean'
+      imageAlt: 'Galle Fort lighthouse and outer sea walls'
     },
     {
       id: 'mirissa',
@@ -60,7 +60,7 @@
       coords: "05°56'54\"N · 80°27'31\"E",
       idealNights: 2,
       image: './assets/images/mirissa-bay.jpg',
-      imageAlt: 'Sun-warmed curving sandy Mirissa bay lined with palms and gentle turquoise surf waves'
+      imageAlt: 'Mirissa sandy beach curve with palms'
     },
     {
       id: 'nuwara-eliya',
@@ -70,7 +70,7 @@
       coords: "06°56'57\"N · 80°46'58\"E",
       idealNights: 2,
       image: './assets/images/tea-highlands.jpg',
-      imageAlt: 'Sculpted emerald terraced Ceylon tea waves and highland wildflowers across misty Sri Lankan slopes'
+      imageAlt: 'Tea terraces in the Sri Lankan highlands'
     },
     {
       id: 'yala',
@@ -80,7 +80,7 @@
       coords: "06°22'20\"N · 81°31'05\"E",
       idealNights: 2,
       image: './assets/images/yala-leopard.jpg',
-      imageAlt: 'Wild Sri Lankan leopard drinking at a sunlit mirror waterhole inside Yala National Park'
+      imageAlt: 'Wild Sri Lankan leopard beside waterhole in Yala'
     },
     {
       id: 'kumana',
@@ -90,7 +90,7 @@
       coords: "06°33'30\"N · 81°40'50\"E",
       idealNights: 1,
       image: './assets/images/kumana-birds.jpg',
-      imageAlt: 'Painted stork wading across sunlit mirror wetlands in Kumana National Park bird sanctuary'
+      imageAlt: 'Painted stork in Kumana lagoon wetlands'
     },
     {
       id: 'udawalawe',
@@ -100,7 +100,7 @@
       coords: "06°26'18\"N · 80°53'18\"E",
       idealNights: 1,
       image: './assets/images/udawalawe-stride.jpg',
-      imageAlt: 'Wild Sri Lankan elephants striding forward across sunlit Udawalawe savannah grass'
+      imageAlt: 'Elephants walking through Udawalawe grasslands'
     },
     {
       id: 'anuradhapura',
@@ -110,7 +110,7 @@
       coords: "08°21'00\"N · 80°23'47\"E",
       idealNights: 2,
       image: './assets/images/anuradhapura-stupa.jpg',
-      imageAlt: 'Illuminated snow-white Ruwanwelisaya Great Stupa reflecting across tranquil water at night'
+      imageAlt: 'Ruwanwelisaya white stupa in Anuradhapura'
     },
     {
       id: 'dambulla',
@@ -120,7 +120,7 @@
       coords: "07°51'24\"N · 80°38'57\"E",
       idealNights: 1,
       image: './assets/images/dambulla-cave.jpg',
-      imageAlt: 'Ancient carved reclining Buddha and painted floral murals inside Dambulla Royal Cave Temple'
+      imageAlt: 'Buddha statues inside Dambulla cave temple'
     },
     {
       id: 'horton-plains',
@@ -130,7 +130,7 @@
       coords: "06°48'09\"N · 80°48'09\"E",
       idealNights: 1,
       image: './assets/images/horton-plains.jpg',
-      imageAlt: 'Wide tiered highland waterfall cascading across dark mossy granite cliffs in Sri Lanka rainforest'
+      imageAlt: 'Waterfall at Horton Plains'
     },
     {
       id: 'bentota',
@@ -140,7 +140,7 @@
       coords: "06°25'16\"N · 79°59'45\"E",
       idealNights: 3,
       image: './assets/images/bawa-villa-coast.jpg',
-      imageAlt: 'Golden sunset light across Bentota curving sandy beach framed by swaying coconut palms'
+      imageAlt: 'Sunset over Bentota beach palms'
     },
     {
       id: 'arugam-bay',
@@ -150,7 +150,7 @@
       coords: "06°50'25\"N · 81°49'50\"E",
       idealNights: 3,
       image: './assets/images/arugam-passikudah.jpg',
-      imageAlt: 'Aerial turquoise coral bay and shallow calm reef lagoon along Sri Lanka sunny eastern shore'
+      imageAlt: 'Blue lagoon bay along the eastern coast'
     },
     {
       id: 'colombo',
@@ -160,7 +160,7 @@
       coords: "06°55'37\"N · 79°51'40\"E",
       idealNights: 1,
       image: './assets/images/colombo-city.jpg',
-      imageAlt: 'Glowing Nelum Kuluna Lotus Tower and illuminated Colombo downtown skyscrapers reflected at night'
+      imageAlt: 'Lotus Tower and Colombo skyline'
     },
     {
       id: 'sri-pada',
@@ -170,7 +170,7 @@
       coords: "06°48'34\"N · 80°29'59\"E",
       idealNights: 1,
       image: './assets/images/sri-pada.jpg',
-      imageAlt: 'Iconic conical Sri Pada summit rising sharply into deep blue mountain skies with lit pilgrimage trail'
+      imageAlt: 'Sri Pada mountain peak'
     },
     {
       id: 'riverston',
@@ -180,7 +180,7 @@
       coords: "07°31'42\"N · 80°44'19\"E",
       idealNights: 2,
       image: './assets/images/riverston-ridge.jpg',
-      imageAlt: 'Sunlit emerald valley and terraced mountain ridges seen from Mini Worlds End cliff at Riverston, Sri Lanka'
+      imageAlt: 'Valley view from Riverston hills'
     },
     {
       id: 'pinnawala',
@@ -190,7 +190,7 @@
       coords: "07°18'04\"N · 80°23'13\"E",
       idealNights: 1,
       image: './assets/images/pinnawala-elephants.jpg',
-      imageAlt: 'Sri Lankan elephant family with baby reaching trunk onto its mother while bathing in golden Maha Oya river at Pinnawala'
+      imageAlt: 'Elephants bathing in the river at Pinnawala'
     },
     {
       id: 'peradeniya',
@@ -200,7 +200,7 @@
       coords: "07°16'16\"N · 80°35'48\"E",
       idealNights: 1,
       image: './assets/images/peradeniya-garden.jpg',
-      imageAlt: 'Botanical glasshouse conservatory reflected in a serene water-lily pool surrounded by giant canopy trees at Peradeniya Royal Botanical Gardens'
+      imageAlt: 'Garden glasshouse and lily pond at Peradeniya'
     }
   ];
 

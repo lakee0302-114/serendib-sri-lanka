@@ -7,8 +7,33 @@
   <title>Serendib Travels | Sri Lanka Tours &amp; Route Planner</title>
   <meta
     name="description"
-    content="Handpicked Sri Lanka destinations, seasonal weather guide, and custom itinerary builder."
+    content="Local guide to Sri Lanka destinations, monsoon weather by month, and custom trip planning."
   />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://serendib-sri-lanka-three.vercel.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Serendib Travels" />
+  <meta property="og:title" content="Serendib Travels | Sri Lanka Tours &amp; Route Planner" />
+  <meta property="og:description" content="Local guide to Sri Lanka destinations, monsoon weather by month, and custom trip planning." />
+  <meta property="og:url" content="https://serendib-sri-lanka-three.vercel.app/" />
+  <meta property="og:image" content="https://serendib-sri-lanka-three.vercel.app/assets/images/hero-sigiriya.jpg" />
+  <meta property="og:image:width" content="2592" />
+  <meta property="og:image:height" content="1944" />
+  <meta property="og:image:alt" content="Sigiriya Rock Fortress seen from the water gardens, Sri Lanka" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Serendib Travels | Sri Lanka Tours &amp; Route Planner" />
+  <meta name="twitter:description" content="Local guide to Sri Lanka destinations, monsoon weather by month, and custom trip planning." />
+  <meta name="twitter:image" content="https://serendib-sri-lanka-three.vercel.app/assets/images/hero-sigiriya.jpg" />
 
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -162,11 +187,11 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero" aria-label="Welcome to Sri Lanka">
-      <div class="hero__slider" id="hero-slider" role="region" aria-label="Featured Sri Lanka photographs">
+      <div class="hero__slider" id="hero-slider" role="region" aria-label="Sri Lanka photographs">
         <figure class="hero__slide is-active">
           <img
             src="./assets/images/hero-sigiriya.jpg"
-            alt="Sunlit pathway through royal water gardens toward Sigiriya Lion Rock under bright blue sky"
+            alt="Sigiriya Rock Fortress seen from the water gardens"
             style="object-position: 50% 42%;"
             fetchpriority="high"
           />
@@ -174,7 +199,7 @@
         <figure class="hero__slide">
           <img
             src="./assets/images/ella-train.jpg"
-            alt="Iconic blue Sri Lankan highland train crossing stone Nine Arch Bridge surrounded by lush forest"
+            alt="Blue train crossing Nine Arch Bridge in Ella"
             style="object-position: 48% 50%;"
             loading="eager"
             decoding="async"
@@ -183,7 +208,7 @@
         <figure class="hero__slide">
           <img
             src="./assets/images/hero-tea-estate.jpg"
-            alt="Sunlit rolling Ceylon tea plantation hills and highland ridges in Nuwara Eliya, Sri Lanka"
+            alt="Tea fields in the hills around Nuwara Eliya"
             style="object-position: 50% 52%;"
             loading="eager"
             decoding="async"
@@ -192,8 +217,8 @@
         <figure class="hero__slide">
           <img
             src="./assets/images/hero-beach.jpg"
-            alt="Vibrant Sri Lankan tropical palm beach with crystal turquoise waves and sunlit coastal boulders"
-            style="object-position: 45% 58%;"
+            alt="Boats anchored along Unawatuna beach bay"
+            style="object-position: 48% 54%;"
             loading="eager"
             decoding="async"
           />
@@ -201,17 +226,17 @@
         <figure class="hero__slide">
           <img
             src="./assets/images/udawalawe-elephants.jpg"
-            alt="Close-up portrait of a wild Sri Lankan elephant curling its trunk in sunlit savannah grasslands"
-            style="object-position: 42% 38%;"
+            alt="Wild elephant walking past a lagoon in Yala"
+            style="object-position: 48% 44%;"
             loading="eager"
             decoding="async"
           />
         </figure>
         <figure class="hero__slide">
           <img
-            src="./assets/images/colombo-city.jpg"
-            alt="Glowing Nelum Kuluna Lotus Tower and Colombo harbour skyline at dusk"
-            style="object-position: 62% 36%;"
+            src="./assets/images/kandy-temple.jpg"
+            alt="Temple of the Tooth buildings beside Kandy lake"
+            style="object-position: 50% 42%;"
             loading="eager"
             decoding="async"
           />
@@ -219,7 +244,7 @@
         <figure class="hero__slide">
           <img
             src="./assets/images/stilt-fishermen.jpg"
-            alt="Traditional Sri Lankan stilt fishermen balancing on wooden poles casting rods over turquoise surf waves in Ahangama"
+            alt="Fishermen on wooden stilts in shallow water at Ahangama"
             style="object-position: 50% 46%;"
             loading="eager"
             decoding="async"
@@ -235,7 +260,7 @@
             <em data-i18n="hero.titleEm">Sri Lanka</em>
           </h1>
           <p class="hero__subtitle" data-i18n="hero.subtitle">
-            Private driver tours, hill-country trains, and stays tailored to the season.
+            Plan your Sri Lanka car tour, hill train ride, and coastal stays.
           </p>
           <div class="hero__bottom-row">
             <div class="hero__actions">
@@ -493,9 +518,21 @@
       <div class="footer-bottom">
         <span data-i18n="footer.copyright">&copy; 2026 Serendib Travels (Pvt) Ltd</span>
         <span class="mono-label" style="opacity:0.75;">COLOMBO &middot; KANDY &middot; GALLE</span>
+        <span style="opacity:0.75; font-size:0.82rem;">
+          <a href="./privacy.html" style="color:var(--ink-on-dark-muted);">Privacy Policy</a>
+          &nbsp;&middot;&nbsp;
+          <a href="./terms.html" style="color:var(--ink-on-dark-muted);">Terms of Service</a>
+        </span>
       </div>
     </div>
   </footer>
+
+  <!-- Cookie Notice -->
+  <div id="cookie-banner" role="alertdialog" aria-label="Cookie notice" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;color:#f5f5f5;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;">
+    <span style="flex:1;min-width:220px;">This site uses a session cookie for Firebase login only. No advertising or tracking cookies are used. <a href="./privacy.html" style="color:#f4d03f;">Privacy Policy</a></span>
+    <button id="cookie-accept" onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_ok','1');" style="background:#f4d03f;color:#1a1a1a;border:none;border-radius:6px;padding:8px 18px;font-weight:600;cursor:pointer;white-space:nowrap;">OK, got it</button>
+  </div>
+  <script>if(!localStorage.getItem('cookie_ok')){document.getElementById('cookie-banner').style.display='flex';}</script>
 
   <!-- Shared Backdrop -->
   <div class="backdrop" id="sheet-backdrop" hidden></div>

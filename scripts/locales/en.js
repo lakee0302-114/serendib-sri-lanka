@@ -30,7 +30,7 @@ window.SERENDIB_LOCALES['en'] = {
       "coord": "SERENDIB",
       "titleStart": "Explore",
       "titleEm": "Sri Lanka",
-      "subtitle": "Private driver tours, hill-country trains, and stays tailored to the season.",
+      "subtitle": "Plan your Sri Lanka car tour, hill train ride, and coastal stays.",
       "ctaPrimary": "Browse Places",
       "ctaSecondary": "When to Go",
       "plate": "SIGIRIYA",
@@ -60,7 +60,7 @@ window.SERENDIB_LOCALES['en'] = {
       "eyebrow": "01 / Contrast",
       "titleStart": "Cross climates",
       "titleEm": "before dusk.",
-      "lead": "Leave cool 1,800m tea clouds at dawn and reach Indian Ocean ramparts by sunset.",
+      "lead": "Leave cool 1,800m hill country mist in the morning and reach the south coast by late afternoon.",
       "datums": [
         {
           "key": "CLIMATE",
@@ -100,7 +100,7 @@ window.SERENDIB_LOCALES['en'] = {
       "eyebrow": "SEASONS",
       "titleStart": "Best months",
       "titleEm": "by region",
-      "subcopy": "Pick a month.",
+      "subcopy": "Select a month to check dry and rainy regions.",
       "seasonKey": "WEATHER",
       "legendOptimal": "Sunny & Great",
       "legendGood": "Nice Weather",
@@ -134,7 +134,7 @@ window.SERENDIB_LOCALES['en'] = {
       "sub1Copy": "Cool valley mist gives highland Ceylon Pekoe its bright citrus aroma.",
       "sub2Tag": "HYDRAULIC KINGS",
       "sub2Title": "Stone moonstones & tanks",
-      "sub2Copy": "Ancient reservoirs still feed emerald paddy plains across the dry zone."
+      "sub2Copy": "Ancient man-made tanks still water rice fields across the dry zone."
     },
     "fieldNotes": {
       "eyebrow": "TIPS",
@@ -146,9 +146,9 @@ window.SERENDIB_LOCALES['en'] = {
       "eyebrow": "PLAN",
       "titleStart": "Build your",
       "titleEm": "custom route",
-      "subcopy": "Finish your plan in under a minute.",
+      "subcopy": "Put together your route in under a minute.",
       "shortlistLabel": "YOUR PLACES",
-      "emptyShortlist": "No places picked yet — tap + Add above.",
+      "emptyShortlist": "No places picked yet. Tap + Add above.",
       "nightsSuggested": "nights",
       "nameLabel": "Name",
       "namePlaceholder": "Kavinda Perera",
@@ -284,7 +284,7 @@ window.SERENDIB_LOCALES['en'] = {
       "dashboardTitle": "Your Saved Sri Lanka Trips",
       "planNewBtn": "+ Plan New Trip",
       "emptyTitle": "No saved trips yet",
-      "emptySub": "Plan a route in Trip Studio and save it to view your complete day-by-day itinerary here anytime.",
+      "emptySub": "Save a trip from the planner to view your stops and schedule here whenever you log back in.",
       "viewTripBtn": "View Full Plan",
       "loadPlannerBtn": "Edit in Planner",
       "deleteTripBtn": "Delete",
@@ -292,11 +292,11 @@ window.SERENDIB_LOCALES['en'] = {
       "saveSuccessToast": "Trip saved to your My Trips library!",
       "savePendingBanner": "Sign in or create a free account to save this trip and open it anytime.",
       "savePendingBtn": "Sign In / Save to My Trips",
-      "signedInAutoSave": "Signed in as {email} — saves automatically to My Trips.",
+      "signedInAutoSave": "Signed in as {email}. Saves automatically to My Trips.",
       "viewInMyTripsBtn": "View in My Trips"
     },
     "footer": {
-      "blurb": "Private chauffeur tours, hill-country rail journeys, and handpicked stays across Sri Lanka.",
+      "blurb": "Local driver tours, train tickets, and family-run stays around Sri Lanka.",
       "greeting": "ආයුබෝවන් · வணக்கம் · WELCOME",
       "colExplore": "Explore",
       "colRegions": "Regions",
@@ -347,12 +347,12 @@ window.SERENDIB_LOCALES['en'] = {
     "sigiriya": {
       "name": "Sigiriya & Pidurangala",
       "region": "Cultural",
-      "tagline": "Fifth-century rock citadel above ancient lotus gardens",
+      "tagline": "Ancient rock fortress and water gardens",
       "elevation": "349m",
       "driveFromColombo": "4h 15m",
       "bestTime": "Jan–Apr · Jul–Sep",
       "daylightWindow": "06:00 – 08:30",
-      "summary": "King Kashyapa’s sky palace crowns a volcanic granite spire surrounded by royal water gardens.",
+      "summary": "King Kashyapa's 5th-century rock fortress rises straight above surrounding jungle lakes.",
       "highlights": [
         "Climb Pidurangala at 05:45 for sunrise over Lion Rock.",
         "Explore Mirror Wall frescoes and water pools before 09:00.",
@@ -364,12 +364,12 @@ window.SERENDIB_LOCALES['en'] = {
     "ella": {
       "name": "Ella & Demodara",
       "region": "Highlands",
-      "tagline": "Nine-arch viaducts, tea ridges & misty cloud passes",
+      "tagline": "Mountain village, tea hills & Nine Arch Bridge",
       "elevation": "1,041m",
       "driveFromColombo": "5h Road / 6h Rail",
       "bestTime": "Jan–May · Aug–Sep",
       "daylightWindow": "06:30 – 10:00",
-      "summary": "Southern highland gap overlooking endless plains, blue trains, and steep tea slopes.",
+      "summary": "Popular hill town known for short ridge hikes and the blue train viaduct.",
       "highlights": [
         "Ride just the dramatic Nanu Oya to Ella rail stretch (~3h).",
         "Walk through Demodara tea paths to Nine Arches Bridge.",
@@ -381,31 +381,31 @@ window.SERENDIB_LOCALES['en'] = {
     "galle": {
       "name": "Galle Fort & Unawatuna",
       "region": "South Coast",
-      "tagline": "Coral-stone ramparts warmed by salt-gold evenings",
+      "tagline": "Dutch fort walls & calm coastal beaches",
       "elevation": "Sea Level",
       "driveFromColombo": "2h Expressway",
       "bestTime": "Dec–Apr",
       "daylightWindow": "16:45 – 18:30",
-      "summary": "Living fortified peninsula blending Dutch-era townhouses, mosques, and ocean bastions.",
+      "summary": "Walkable walled town from the 1600s filled with old courtyards, cafes, and rampart paths.",
       "highlights": [
         "Walk ramparts clockwise from Flag Rock past the Lighthouse.",
         "Browse Pedlar Street courtyards for ceramics and Ceylon maps.",
-        "Head east to Habaraduwa or Ahangama reefs at dawn."
+        "Head east to Habaraduwa or Ahangama reefs before 8 AM."
       ],
       "culinaryNote": "Black pepper ambul thiyal tuna with crisp egg hoppers.",
-      "etiquette": "Galle Fort is a residential enclave — dress modestly off beaches."
+      "etiquette": "People live inside Galle Fort, so cover up when walking away from the beach."
     },
     "yala": {
       "name": "Yala National Park",
       "region": "Wildlife",
-      "tagline": "Granite boulders, coastal dunes & wild Ceylon leopards",
+      "tagline": "Leopards, sloth bears & coastal scrubland",
       "elevation": "45m Scrub",
       "driveFromColombo": "4h 45m",
       "bestTime": "Feb–Jul",
       "daylightWindow": "05:45–09:30 & 15:30",
-      "summary": "Where monsoon scrub meets coastal lagoons — home to wild leopards, sloth bears, and elephants.",
+      "summary": "Best-known southern national park where morning jeeps track leopards along sandy roads.",
       "highlights": [
-        "Choose quieter Block V or dawn entry for uncrowded leopard sightings.",
+        "Choose quieter Block V or enter at 6 AM for fewer jeeps on the track.",
         "Book early-gate naturalist drives when cats patrol tracks.",
         "Sleep in quiet canvas camps behind Patanangala dunes."
       ],
@@ -415,16 +415,16 @@ window.SERENDIB_LOCALES['en'] = {
     "kumana": {
       "name": "Kumana Bird Sanctuary",
       "region": "Wildlife",
-      "tagline": "Coastal mangroves, serene villus & nesting painted storks",
+      "tagline": "Lagoon wetlands & seasonal waterbirds",
       "elevation": "10m Lagoons",
       "driveFromColombo": "6h 15m",
       "bestTime": "Apr–Aug",
       "daylightWindow": "06:00–09:30 & 15:30",
-      "summary": "Sri Lanka’s premier coastal birding sanctuary — calm mangrove lagoons teeming with painted storks, black-necked storks, spoonbills, and pelicans.",
+      "summary": "Quieter park east of Yala known for painted storks, pelicans, and bird nesting between April and July.",
       "highlights": [
         "Glide beside Kumana Villu swamp during April–July nesting peaks.",
         "Spot rare black-necked storks, lesser adjutants, and openbills.",
-        "Pair quiet dawn birding drives with nearby Panama beaches."
+        "Combine an early morning birding drive with nearby Panama beaches."
       ],
       "culinaryNote": "Traditional Panama village red rice wrapped in lotus leaves.",
       "etiquette": "Keep binoculars steady from silent jeeps; never disturb waterside nests."
@@ -432,15 +432,15 @@ window.SERENDIB_LOCALES['en'] = {
     "nuwara-eliya": {
       "name": "Hatton & Tea Hills",
       "region": "Highlands",
-      "tagline": "Emerald tea slopes, planters’ bungalows & clear reservoir air",
+      "tagline": "Cool tea estates & old colonial bungalows",
       "elevation": "1,868m",
       "driveFromColombo": "4h 30m",
       "bestTime": "Jan–Apr · Aug",
       "daylightWindow": "06:15 – 09:30",
-      "summary": "Cool high-altitude valleys around Castlereagh producing floral single-estate Ceylon Pekoe.",
+      "summary": "High-altitude town surrounded by working tea factories and cool morning mist.",
       "highlights": [
         "Walk estate trails with a planter to learn orthodox tea craft.",
-        "Catch dawn views over Horton Plains and World’s End cliff.",
+        "Head out early to see Horton Plains and World’s End before the clouds move in.",
         "Unwind by wood fires in restored heritage tea bungalows."
       ],
       "culinaryNote": "Golden Dimbula Orange Pekoe with crisp cardamom shortbread.",
@@ -449,12 +449,12 @@ window.SERENDIB_LOCALES['en'] = {
     "bentota": {
       "name": "Bentota & Tangalle",
       "region": "South Coast",
-      "tagline": "Bawa modernism, lagoon rivers & quiet crescent coves",
+      "tagline": "Wide sandy beach & calm lagoon rivers",
       "elevation": "Sea Level",
       "driveFromColombo": "1h 30m",
       "bestTime": "Nov–Apr",
       "daylightWindow": "07:00 & 17:15 Sunset",
-      "summary": "Tropical Modernist garden retreats opening directly onto palm bays and calm rivers.",
+      "summary": "Closest beach resort south of Colombo along the expressway, good for quiet villa stays.",
       "highlights": [
         "Book a morning garden walk through Bawa’s Lunuganga estate.",
         "Watch blue whales off Dondra Head or Mirissa (Dec–Mar).",
@@ -466,12 +466,12 @@ window.SERENDIB_LOCALES['en'] = {
     "trinco-jaffna": {
       "name": "Trincomalee & Jaffna",
       "region": "North & East",
-      "tagline": "Glassy eastern beaches, coral islands & Tamil heritage",
+      "tagline": "Dry summer beaches & northern temples",
       "elevation": "Sea Level",
       "driveFromColombo": "5h 30m",
       "bestTime": "May–Oct",
       "daylightWindow": "06:00 Sunrise & 17:30",
-      "summary": "Sri Lanka’s dry-summer north and east shine brightest while southwest rains arrive.",
+      "summary": "Sunny eastern bays and Tamil cultural towns when the southwest coast gets monsoon rain.",
       "highlights": [
         "Snorkel Pigeon Island reefs and walk wide Nilaveli sands.",
         "Explore Nallur Kovil and wild horses on Delft Island.",
@@ -483,12 +483,12 @@ window.SERENDIB_LOCALES['en'] = {
     "kandy": {
       "name": "Kandy & Temple of the Tooth",
       "region": "Cultural",
-      "tagline": "Sacred hillside lake city & Perahera drums",
+      "tagline": "Hill capital & Temple of the Tooth",
       "elevation": "500m",
       "driveFromColombo": "3h 30m",
       "bestTime": "Jan–Apr · Jul–Sep",
       "daylightWindow": "06:30 & 18:30",
-      "summary": "Sri Lanka’s last royal kingdom guarding the Sacred Tooth Relic beside misty hills.",
+      "summary": "Busy hillside city built around a lake and the Sacred Tooth Relic shrine.",
       "highlights": [
         "Attend evening drumming & offerings at Sri Dalada Maligawa.",
         "Stroll beneath giant bamboo alleys inside Peradeniya Royal Gardens.",
@@ -500,12 +500,12 @@ window.SERENDIB_LOCALES['en'] = {
     "anuradhapura": {
       "name": "Anuradhapura Sacred City",
       "region": "Cultural",
-      "tagline": "Towering white stupas & 2,300-year Bodhi tree",
+      "tagline": "Ancient white dagobas & Sri Maha Bodhi",
       "elevation": "81m",
       "driveFromColombo": "4h 15m",
       "bestTime": "Jan–Sep",
       "daylightWindow": "06:30–09:30 & Dusk",
-      "summary": "First ancient Sinhalese capital filled with monumental brick dagobas and stone ponds.",
+      "summary": "Sri Lanka's earliest capital city, spread out across large brick stupas and stone ruins.",
       "highlights": [
         "Offer jasmine at Jaya Sri Maha Bodhi, the oldest living tree.",
         "Circle white Ruwanwelisaya Stupa lined with carved elephants.",
@@ -517,12 +517,12 @@ window.SERENDIB_LOCALES['en'] = {
     "dambulla": {
       "name": "Dambulla Cave Temple",
       "region": "Cultural",
-      "tagline": "Five painted cliff grottoes & golden statues",
+      "tagline": "Rock cave shrine with 153 Buddha statues",
       "elevation": "341m",
       "driveFromColombo": "3h 50m",
       "bestTime": "Jan–Sep",
       "daylightWindow": "07:30 – 10:00",
-      "summary": "Cliffside monastery housing 153 gilded Buddhas beneath sweeping rock ceiling murals.",
+      "summary": "Large painted cave monastery set high on a granite outcrop south of Sigiriya.",
       "highlights": [
         "Explore the five main rock caves led by the Maharaja Viharaya.",
         "Watch morning mist lift toward distant Sigiriya from the ridge.",
@@ -534,29 +534,29 @@ window.SERENDIB_LOCALES['en'] = {
     "horton-plains": {
       "name": "Horton Plains & World’s End",
       "region": "Highlands",
-      "tagline": "Mossy cloud forest ending at an 880m sheer cliff",
+      "tagline": "Cloud forest walk out to World's End drop",
       "elevation": "2,100m",
       "driveFromColombo": "5h 30m",
       "bestTime": "Jan–Apr · Aug",
       "daylightWindow": "06:00 – 09:00",
-      "summary": "Highest grassland plateau in Sri Lanka dropping abruptly toward southern tea plains.",
+      "summary": "Morning plateau trail ending at a 880m cliff overlooking southern valleys.",
       "highlights": [
         "Reach World’s End viewpoint before 09:00 before clouds rise.",
         "Loop past Baker’s Falls framed by rhododendron groves.",
         "Spot grazing Sambar deer through golden morning frost."
       ],
       "culinaryNote": "Hot ginger tea and wood-fired toast at park gates.",
-      "etiquette": "Zero single-use plastics allowed — bags checked at entry."
+      "etiquette": "No single-use plastics allowed; rangers check bags at the gate."
     },
     "mirissa": {
       "name": "Mirissa & Weligama Bay",
       "region": "South & West",
-      "tagline": "Coconut headlands, surf bays & ocean giants",
+      "tagline": "Whale watching boats & beginner surf bay",
       "elevation": "Sea Level",
       "driveFromColombo": "2h 15m",
       "bestTime": "Nov–Apr",
       "daylightWindow": "06:30 & 17:30",
-      "summary": "Twin southern bays prized for whale boats, reef breaks, and golden palm coves.",
+      "summary": "Lively coastal stretch known for blue whale trips in winter and Weligama surf boards.",
       "highlights": [
         "Spot blue whales and spinner dolphins offshore Dec–Mar.",
         "Walk Coconut Tree Hill at sunrise before midday crowds.",
@@ -568,12 +568,12 @@ window.SERENDIB_LOCALES['en'] = {
     "udawalawe": {
       "name": "Udawalawe National Park",
       "region": "Wildlife",
-      "tagline": "Wide savannah plains full of wild elephant herds",
+      "tagline": "Open grasslands with wild elephant herds",
       "elevation": "118m",
       "driveFromColombo": "3h 45m",
       "bestTime": "Year-round (May–Sep)",
       "daylightWindow": "06:00 & 15:30",
-      "summary": "Open dry grasslands beside Udawalawe Reservoir guaranteeing year-round wild elephants.",
+      "summary": "Reliable park for watching Asian elephants year-round along the reservoir bund.",
       "highlights": [
         "See playful baby elephants beside family herds all year.",
         "Watch feeding hour at the Udawalawe Elephant Transit Home.",
@@ -585,15 +585,15 @@ window.SERENDIB_LOCALES['en'] = {
     "arugam-bay": {
       "name": "Arugam Bay & Passikudah",
       "region": "North & East",
-      "tagline": "Indian Ocean point breaks & glassy shallow lagoons",
+      "tagline": "Surfing point breaks & Passikudah shallows",
       "elevation": "Sea Level",
       "driveFromColombo": "6h 30m",
       "bestTime": "May–Sep",
-      "daylightWindow": "06:00 Dawn Patrol",
-      "summary": "Laid-back eastern surf coast offering clean swells while the southwest rains.",
+      "daylightWindow": "06:00 Morning Surf",
+      "summary": "East coast surf village with relaxed guesthouses and calm reef bays nearby.",
       "highlights": [
-        "Surf iconic right-hand point breaks at Main Point and Whiskey Point.",
-        "Swim effortlessly across Passikudah’s waist-deep reef lagoon.",
+        "Surf long right-hand waves at Main Point and Whiskey Point.",
+        "Wade or swim easily across Passikudah’s waist-deep bay.",
         "Kayak quiet Pottuvil mangroves among kingfishers at sunrise."
       ],
       "culinaryNote": "East-coast fish rice & curry simmered with roasted coriander.",
@@ -602,12 +602,12 @@ window.SERENDIB_LOCALES['en'] = {
     "colombo": {
       "name": "Colombo & Galle Face",
       "region": "South & West",
-      "tagline": "Heritage arches, Pettah spice alleys & ocean sunsets",
+      "tagline": "Capital city markets, museums & Galle Face",
       "elevation": "Sea Level",
       "driveFromColombo": "Gateway",
       "bestTime": "Dec–Apr",
       "daylightWindow": "17:00 – 19:00",
-      "summary": "Warm gateway metropolis mixing colonial galleries, red mosques, and sea promenades.",
+      "summary": "Commercial gateway with Dutch hospital courtyards, Pettah spice streets, and oceanfront snacks.",
       "highlights": [
         "Explore the red-brick Pettah market and Jami Ul-Alfar Mosque.",
         "Admire historic galleries inside Colombo National Museum.",
@@ -619,12 +619,12 @@ window.SERENDIB_LOCALES['en'] = {
     "sri-pada": {
       "name": "Sri Pada (Adam’s Peak)",
       "region": "Highlands",
-      "tagline": "Sacred lantern ascent & sunrise shadow triangle",
+      "tagline": "Night pilgrimage climb to mountain summit",
       "elevation": "2,243m",
       "driveFromColombo": "4h 15m",
       "bestTime": "Dec–May (Pilgrimage)",
       "daylightWindow": "05:30 – 07:30 Summit",
-      "summary": "Sri Lanka’s sacred conical mountain climbed before dawn beneath glowing ridge staircases.",
+      "summary": "Conical mountain climbed overnight between December and May for sunrise views.",
       "highlights": [
         "Begin climbing Nallathanniya steps at 02:00 with sweet ginger tea stops.",
         "Watch the famous pyramid mountain shadow cast across morning mist.",
@@ -636,12 +636,12 @@ window.SERENDIB_LOCALES['en'] = {
     "pinnawala": {
       "name": "Pinnawala Elephant Orphanage",
       "region": "Wildlife",
-      "tagline": "Rescued Asian elephant herds bathing across Maha Oya river boulders",
+      "tagline": "River bathing sanctuary for rescued elephants",
       "elevation": "125m",
       "driveFromColombo": "2h 30m",
       "bestTime": "Year-round",
       "daylightWindow": "10:00 & 14:00 River Bath",
-      "summary": "Iconic hillside river sanctuary along the Maha Oya where elephant families and calves cool off and drink twice daily.",
+      "summary": "Well-known elephant orphanage between Colombo and Kandy where herds walk down to the Maha Oya river twice daily.",
       "highlights": [
         "Watch dozens of rescued Asian elephants bathe and play in river rapids at 10:00 and 14:00.",
         "See playful baby elephants beside herd matriarchs from shaded riverside decks.",
@@ -653,14 +653,14 @@ window.SERENDIB_LOCALES['en'] = {
     "riverston": {
       "name": "Riverston",
       "region": "Highlands",
-      "tagline": "Wind-swept cloud passes, Pitawala Plains & Mini World’s End",
+      "tagline": "Windy mountain pass, Mini World's End & Sera Ella",
       "elevation": "1,420m",
       "driveFromColombo": "4h 15m",
       "bestTime": "Feb–May · Jul–Sep",
       "daylightWindow": "06:30 – 11:00",
-      "summary": "Misty highland saddle in Matale famous for cliff-top Pitawala Pathana meadows, waterfall caves, and emerald valleys.",
+      "summary": "Unspoiled Matale hills with short walks to viewpoints, waterfalls, and village rice terraces.",
       "highlights": [
-        "Walk to Mini World’s End cliff overlooking dramatic emerald valleys.",
+        "Walk to Mini World’s End viewpoint above deep green valleys.",
         "Wander behind cascading Sera Ella waterfalls and suspension bridges.",
         "Feel cool monsoon gusts along the scenic Riverston Peak ridge."
       ],
@@ -670,15 +670,15 @@ window.SERENDIB_LOCALES['en'] = {
     "peradeniya": {
       "name": "Peradeniya Botanical Garden",
       "region": "Cultural",
-      "tagline": "Royal palm avenues, orchid conservatory & giant bamboo",
+      "tagline": "Botanical garden with palm avenues & orchid house",
       "elevation": "460m",
       "driveFromColombo": "3h 20m",
       "bestTime": "Jan–Apr · Jul–Sep",
       "daylightWindow": "07:30 – 10:30 & 16:00",
-      "summary": "Sri Lanka’s lush 147-acre botanical sanctuary beside a horseshoe bend of the Mahaweli River, famed for towering royal palms, orchids, and century-old Javan fig trees.",
+      "summary": "Large landscaped garden bordered by the Mahaweli River just outside Kandy town.",
       "highlights": [
-        "Walk beneath soaring twin rows along the iconic Royal Palm Avenue.",
-        "Explore the vibrant tropical orchid glasshouse and lily reflection pools.",
+        "Walk down the twin rows of towering royal palms.",
+        "Visit the tropical orchid house and water-lily ponds.",
         "Rest beneath the immense umbrella canopy of the Giant Javan Fig tree."
       ],
       "culinaryNote": "Chilled Ceylon iced tea and tropical fruit platters beside the Mahaweli river.",
@@ -689,300 +689,300 @@ window.SERENDIB_LOCALES['en'] = {
     "JAN": {
       "short": "JAN",
       "fullName": "January",
-      "headline": "Peak Dry Season — West, South & Hills",
-      "summary": "Crisp highland mornings, calm southern water, and clear safaris.",
+      "headline": "Dry on the West Coast & Hills",
+      "summary": "Good beach weather down south and clear mountain views.",
       "festival": "Duruthu Perahera · Thai Pongal harvest.",
       "verdicts": {
         "south": {
           "status": "Prime Sun",
-          "note": "Calm seas and blue whales off Mirissa."
+          "note": "Calm sea along Bentota, Galle, and Mirissa."
         },
         "highlands": {
           "status": "Clear & Cool",
-          "note": "Bright mountain passes and chilly evenings."
+          "note": "Cool nights and dry walking weather."
         },
         "cultural": {
           "status": "Dry & Pleasant",
-          "note": "Mild mornings around ancient cities."
+          "note": "Warm mornings around Sigiriya and Polonnaruwa."
         },
         "northeast": {
           "status": "Showers",
-          "note": "East waves rough; Jaffna stays mostly dry."
+          "note": "Trinco is quiet with occasional showers. Jaffna stays mostly dry."
         }
       }
     },
     "FEB": {
       "short": "FEB",
       "fullName": "February",
-      "headline": "Clear Weather Island-Wide",
-      "summary": "Driest full-island month — effortless loops from north to south.",
+      "headline": "Good Weather Across Most Regions",
+      "summary": "Easy month for travelling north to south without heavy rain.",
       "festival": "Navam Perahera, Colombo · Independence Day.",
       "verdicts": {
         "south": {
           "status": "Prime Sun",
-          "note": "Flat turquoise water for swimming and diving."
+          "note": "Calm water for swimming down south."
         },
         "highlands": {
           "status": "Crisp Skies",
-          "note": "Best views along Pekoe Trails and Adam’s Peak."
+          "note": "Clear views on the Nuwara Eliya and Ella trails."
         },
         "cultural": {
           "status": "Dry & Bright",
-          "note": "Ideal morning bike rides around ancient tank ruins."
+          "note": "Dry heat in the ancient cities. Morning walks are comfortable."
         },
         "northeast": {
           "status": "Clearing",
-          "note": "Jaffna sunny; Trinco seas start calming."
+          "note": "Jaffna stays dry and Trincomalee seas begin to settle."
         }
       }
     },
     "MAR": {
       "short": "MAR",
       "fullName": "March",
-      "headline": "Golden Coasts & Dry Wildlife Sightings",
-      "summary": "Long southern sun days and concentrated wildlife at waterholes.",
+      "headline": "Warm Coasts & Active Parks",
+      "summary": "Hot afternoon sun down south and animals gathered near tanks.",
       "festival": "Maha Shivaratri vigil at Koneswaram cliff.",
       "verdicts": {
         "south": {
           "status": "Prime Sun",
-          "note": "Warm water from Bentota to Tangalle."
+          "note": "Warm swimming from Bentota to Tangalle."
         },
         "highlands": {
           "status": "Sunny",
-          "note": "Warm days and green morning tea slopes."
+          "note": "Sunny mornings around tea plantations."
         },
         "cultural": {
           "status": "Warm",
-          "note": "Start climbs early before hot afternoons."
+          "note": "Climb Sigiriya early before noon heat."
         },
         "northeast": {
           "status": "Calm & Sunny",
-          "note": "East beaches enter long dry stretch."
+          "note": "East coast beaches turn dry and sunny."
         }
       }
     },
     "APR": {
       "short": "APR",
       "fullName": "April",
-      "headline": "New Year Festivities & Blooming Hills",
-      "summary": "Village New Year festivities before May monsoon winds.",
+      "headline": "New Year Holiday & Transitional Weather",
+      "summary": "Avurudu mid-month festivities before May rains start south.",
       "festival": "Sinhala & Tamil New Year (Apr 13–14).",
       "verdicts": {
         "south": {
           "status": "Warm & Calm",
-          "note": "Good seas early month; swells build late April."
+          "note": "Calm early in the month; larger waves build later."
         },
         "highlands": {
-          "status": "Spring Lush",
-          "note": "Blooming Nuwara Eliya with late rain bursts."
+          "status": "Green & Mild",
+          "note": "Green hills with short afternoon showers."
         },
         "cultural": {
           "status": "Festive",
-          "note": "Warm clear mornings and village celebrations."
+          "note": "Hot afternoons; start outdoor visits around 7 AM."
         },
         "northeast": {
           "status": "Prime Window",
-          "note": "Pigeon Island and east shores turn glassy."
+          "note": "Trincomalee seas flatten out for snorkelling."
         }
       }
     },
     "MAY": {
       "short": "MAY",
       "fullName": "May",
-      "headline": "East Coast Opens as South Gets Rains",
-      "summary": "Southwest monsoon begins while Trincomalee and Arugam Bay turn crystal clear.",
+      "headline": "East Coast Opens, Southwest Monsoon Starts",
+      "summary": "South coast turns rough while Trincomalee and Arugam Bay stay sunny.",
       "festival": "Vesak Full Moon lantern festival.",
       "verdicts": {
         "south": {
           "status": "Monsoon",
-          "note": "Rough seas and squalls; quiet hotel rates."
+          "note": "Rough waves along Galle and Bentota. Quiet hotel rates."
         },
         "highlands": {
           "status": "Misty",
-          "note": "Clear mornings with afternoon rain."
+          "note": "Cloudy afternoons with fresh mountain rain."
         },
         "cultural": {
           "status": "Dry",
-          "note": "Sigiriya and Dambulla stay dry and sunny."
+          "note": "Usually dry across Sigiriya and Dambulla."
         },
         "northeast": {
           "status": "Prime Sun",
-          "note": "Flat eastern seas and Arugam surf starts."
+          "note": "Flat beaches in Trinco and early surf in Arugam Bay."
         }
       }
     },
     "JUN": {
       "short": "JUN",
       "fullName": "June",
-      "headline": "Peak Arugam Surf & Clear East Coast",
-      "summary": "Bright east skies and wildlife gathering around dry-zone tanks.",
+      "headline": "Arugam Bay Surf & East Coast Sun",
+      "summary": "Good swimming on the east coast while the southwest stays rainy.",
       "festival": "Poson Poya pilgrimage at Mihintale.",
       "verdicts": {
         "south": {
           "status": "Windy",
-          "note": "Avoid ocean swims; best for east coast trips."
+          "note": "Choppy surf and rain down south."
         },
         "highlands": {
           "status": "Breezy",
-          "note": "Ella slopes stay drier than western ridges."
+          "note": "Ella is mostly dry; Hatton sees afternoon showers."
         },
         "cultural": {
           "status": "Dry & Breezy",
-          "note": "Clear sun over ancient cities and parks."
+          "note": "Breezy and dry around old capitals and Minneriya."
         },
         "northeast": {
           "status": "Peak East",
-          "note": "Calm Nilaveli swims and top Arugam waves."
+          "note": "Calm bays in Nilaveli and steady waves at Arugam."
         }
       }
     },
     "JUL": {
       "short": "JUL",
       "fullName": "July",
-      "headline": "Dry-Zone Wildlife & East Sunshine",
-      "summary": "Wild elephants gather beside dry-zone tanks while east beaches enjoy bright sun.",
+      "headline": "Dry Zone Elephants & East Sunshine",
+      "summary": "Big elephant herds around Minneriya plus steady east coast weather.",
       "festival": "Esala pageant preparations in Kandy & Kataragama.",
       "verdicts": {
         "south": {
           "status": "Breezy Mix",
-          "note": "Bright breaks between quick sea squalls."
+          "note": "Mixed clouds and sunshine with rough southern swell."
         },
         "highlands": {
           "status": "Clear East",
-          "note": "Fine weather for Ella and Riverston hikes."
+          "note": "Comfortable walking weather in Ella and Riverston."
         },
         "cultural": {
           "status": "Peak Safari",
-          "note": "Wild elephant herds and sunny ancient ruins."
+          "note": "Dry roads and clear game drives in cultural parks."
         },
         "northeast": {
           "status": "Peak Sun",
-          "note": "Prime reef visibility and calm waters."
+          "note": "Clear water for diving off Pigeon Island."
         }
       }
     },
     "AUG": {
       "short": "AUG",
       "fullName": "August",
-      "headline": "Kandy Esala Perahera & Peak East",
-      "summary": "Sri Lanka’s grandest festivals unfold under sunny northern and central skies.",
+      "headline": "Kandy Esala Perahera & Peak East Season",
+      "summary": "Pageants in Kandy alongside clear summer days up north and east.",
       "festival": "Kandy Esala Perahera · Jaffna Nallur Festival.",
       "verdicts": {
         "south": {
           "status": "Sunny Breaks",
-          "note": "Improving dry windows around Galle Fort."
+          "note": "Short sunny spells between southwest wind gusts."
         },
         "highlands": {
           "status": "Festive",
-          "note": "Cool nights and Esala pageantry in Kandy."
+          "note": "Cool nights and evening processions in Kandy."
         },
         "cultural": {
           "status": "Prime Dry",
-          "note": "Clear Sigiriya climbs and dry-zone safaris."
+          "note": "Good weather for climbing Sigiriya and visiting lakes."
         },
         "northeast": {
           "status": "Prime East",
-          "note": "Nallur chariot festival + calm Trinco bays."
+          "note": "Nallur Festival in Jaffna and flat seas in Trincomalee."
         }
       }
     },
     "SEP": {
       "short": "SEP",
       "fullName": "September",
-      "headline": "Shoulder Balance — East & Cultural North",
-      "summary": "Fewer crowds, late Arugam surf, and clear wildlife parks.",
+      "headline": "Late East Summer & Quiet Cultural Sites",
+      "summary": "Smaller crowds everywhere with good beach weather still holding east.",
       "festival": "Binara Poya temple observances.",
       "verdicts": {
         "south": {
           "status": "Variable",
-          "note": "Sunny mornings with light coastal winds."
+          "note": "Some rain showers, but mornings are often clear."
         },
         "highlands": {
           "status": "Clear",
-          "note": "Sharp scenic train views through tea ridges."
+          "note": "Clear train views between Nanu Oya and Ella."
         },
         "cultural": {
           "status": "Quiet & Dry",
-          "note": "Uncrowded heritage climbs in pleasant warmth."
+          "note": "Warm and dry in Anuradhapura and Dambulla."
         },
         "northeast": {
           "status": "Late Peak",
-          "note": "Final weeks of glassy eastern beaches."
+          "note": "Final good weeks on the east coast before October rain."
         }
       }
     },
     "OCT": {
       "short": "OCT",
       "fullName": "October",
-      "headline": "Green Inter-Monsoon Transitions",
-      "summary": "Golden mornings followed by dramatic tropical afternoon showers.",
+      "headline": "Changeover Month with Afternoon Rain",
+      "summary": "Sunny mornings across most towns, usually followed by rain after 2 PM.",
       "festival": "Deepavali oil-lamp celebrations.",
       "verdicts": {
         "south": {
           "status": "Showers",
-          "note": "Lull-season calm ideal for Ayurvedic stays."
+          "note": "Rainy breaks and quiet Ayurveda stays."
         },
         "highlands": {
           "status": "Waterfalls",
-          "note": "Emerald valleys between dramatic mist."
+          "note": "Full waterfalls across Nuwara Eliya and Hatton."
         },
         "cultural": {
           "status": "AM Sun",
-          "note": "Sightsee early before 14:00 rain showers."
+          "note": "Visit temples before lunch when skies stay clear."
         },
         "northeast": {
           "status": "Shifting",
-          "note": "East currents shift toward northeast rains."
+          "note": "East wind picks up ahead of the northeast monsoon."
         }
       }
     },
     "NOV": {
       "short": "NOV",
       "fullName": "November",
-      "headline": "South & West Shores Awaken",
-      "summary": "While rains move northeast, Galle and Bentota open into sunny winter seas.",
+      "headline": "Southwest Beaches Start Clearing",
+      "summary": "Rain moves toward Jaffna and Trinco while Galle starts to dry out.",
       "festival": "Il Poya & Bundala migratory birds arrive.",
       "verdicts": {
         "south": {
           "status": "Season Starts",
-          "note": "Beginner surf returns to Weligama & Galle."
+          "note": "Swimming returns gradually to Weligama and Unawatuna."
         },
         "highlands": {
-          "status": "Lush",
-          "note": "Fresh mountain mornings clearing through tea."
+          "status": "Green Hills",
+          "note": "Fresh green valleys after rain."
         },
         "cultural": {
           "status": "Green",
-          "note": "Full lotus-blooming lakes around old kings’ towns."
+          "note": "Lotus ponds fill up around Anuradhapura."
         },
         "northeast": {
           "status": "Monsoon",
-          "note": "Heavy east rains — choose southwest beaches."
+          "note": "Heavy northeast rain. Stick to the south or hills."
         }
       }
     },
     "DEC": {
       "short": "DEC",
       "fullName": "December",
-      "headline": "South, West & Hills Return to Peak Sun",
-      "summary": "Blue western skies, returning blue whales, and lively fort lanes.",
+      "headline": "South & West Beaches Open for Winter",
+      "summary": "Sunny south coast weather returns along with whale boats in Mirissa.",
       "festival": "Coastal Christmas · Unduvap Poya.",
       "verdicts": {
         "south": {
           "status": "Prime Sun",
-          "note": "Flat swimming bays and sunset rampart walks."
+          "note": "Flat bays and clear evening sunsets in Galle Fort."
         },
         "highlands": {
           "status": "Crisp Air",
-          "note": "Cool trail mornings and cozy tea fireplaces."
+          "note": "Chilly early mornings in Nuwara Eliya."
         },
         "cultural": {
           "status": "Mild",
-          "note": "Lush green scenery with pleasant mornings."
+          "note": "Mild mornings with green countryside."
         },
         "northeast": {
           "status": "Rains",
-          "note": "East stays rainy until mid-Jan; stick south."
+          "note": "East coast gets showers through January. Head south instead."
         }
       }
     }
@@ -990,118 +990,118 @@ window.SERENDIB_LOCALES['en'] = {
   "itineraries": {
     "classic-arc": {
       "number": "ROUTE 01",
-      "title": "Classic Serendib Arc",
+      "title": "The Classic 9-Day Loop",
       "duration": "09D / 08N",
       "season": "Dec–Apr · First Timer",
       "pace": "Rail + Private Driver",
       "routeLine": "Sigiriya → Kandy → Hatton → Ella → Galle Fort",
-      "summary": "Links royal stone citadels, emerald rail ridges, and southern sea ramparts cleanly.",
+      "summary": "Covers Sigiriya, Kandy, hill country trains, and Galle Fort without rushing.",
       "days": [
         {
-          "day": "Day 1–2",
+          "day": "Day 1-2",
           "stop": "Sigiriya & Dambulla",
-          "note": "Sunrise Pidurangala climb and painted Royal Cave Temple."
+          "note": "Morning climb up Pidurangala rock and Dambulla cave temple."
         },
         {
-          "day": "Day 3–4",
-          "stop": "Kandy Hills",
-          "note": "Temple of the Tooth evening rituals and Matale spice walks."
+          "day": "Day 3-4",
+          "stop": "Kandy",
+          "note": "Evening puja at the Temple of the Tooth and spice garden visit."
         },
         {
-          "day": "Day 5–6",
+          "day": "Day 5-6",
           "stop": "Hatton & Ella",
-          "note": "Estate tea stay plus the scenic 3h mountain train across Nine Arches."
+          "note": "Board the morning hill train from Nanu Oya to Ella."
         },
         {
-          "day": "Day 7–9",
+          "day": "Day 7-9",
           "stop": "Galle Fort",
-          "note": "Rampart sunsets, quiet Fort courtyards, and southern reef swims."
+          "note": "Two relaxed nights on the coast before flying home."
         }
       ]
     },
     "wild-south": {
       "number": "ROUTE 02",
-      "title": "Leopards, Tea & Coves",
+      "title": "Tea Hills, Safari & South Coast",
       "duration": "11D / 10N",
       "season": "Jan–Apr · Design & Wildlife",
       "pace": "Slow Luxury",
       "routeLine": "Colombo → Hatton → Yala → Tangalle → Galle",
-      "summary": "Pairs Bawa architecture with highland ridges, private leopard safaris, and quiet bays.",
+      "summary": "Combines Colombo, tea country walks, Yala jeep drives, and beach days.",
       "days": [
         {
           "day": "Day 1",
           "stop": "Colombo",
-          "note": "Geoffrey Bawa’s Number 11 and sunset cocktails along Galle Face."
+          "note": "Rest after arrival, visit Geoffrey Bawa's house or Pettah market."
         },
         {
-          "day": "Day 2–4",
-          "stop": "Hatton Ridges",
-          "note": "Trail walks between century-old planters’ tea bungalows."
+          "day": "Day 2-4",
+          "stop": "Hatton Tea Country",
+          "note": "Stay in an estate bungalow and walk along tea trails."
         },
         {
-          "day": "Day 5–7",
+          "day": "Day 5-7",
           "stop": "Yala National Park",
-          "note": "Dawn private 4x4 leopard tracking among scrub boulders."
+          "note": "Early morning 4x4 safari drives at gate opening."
         },
         {
-          "day": "Day 8–11",
+          "day": "Day 8-11",
           "stop": "Tangalle & Galle",
-          "note": "Lonely southern coves and restored boutique townhouses."
+          "note": "Beach towns and old Fort streets along the southern highway."
         }
       ]
     },
     "east-north-sun": {
       "number": "ROUTE 03",
-      "title": "Summer Escape: East & North",
+      "title": "May to September: North & East Coast",
       "duration": "10D / 09N",
       "season": "May–Sep · Dry Summer",
       "pace": "Reef & Culture",
       "routeLine": "Anuradhapura → Jaffna → Trinco → Sigiriya",
-      "summary": "Follows northern summer sun across Tamil kovils, calm eastern reefs, and ancient capitals.",
+      "summary": "Built for the dry northern summer across Jaffna, Trincomalee, and Sigiriya.",
       "days": [
         {
-          "day": "Day 1–2",
+          "day": "Day 1-2",
           "stop": "Anuradhapura & Mihintale",
-          "note": "Sacred white dagobas and sunlit ancient rock stairways."
+          "note": "Ancient stupas and sunset steps up Mihintale."
         },
         {
-          "day": "Day 3–5",
-          "stop": "Jaffna & Delft",
-          "note": "Palmyrah groves, Nallur kovils, and wild island ponies."
+          "day": "Day 3-5",
+          "stop": "Jaffna",
+          "note": "Drive north to Nallur Kovil, Jaffna market, and Delft island."
         },
         {
-          "day": "Day 6–8",
+          "day": "Day 6-8",
           "stop": "Trincomalee",
-          "note": "Pigeon Island reef snorkeling and sunrise beach boats."
+          "note": "Boat trip to Pigeon Island and calm Nilaveli beach."
         },
         {
-          "day": "Day 9–10",
-          "stop": "Dambulla & Sigiriya",
-          "note": "Morning cave murals before a golden Lion Rock climb."
+          "day": "Day 9-10",
+          "stop": "Sigiriya",
+          "note": "Climb Lion Rock early before returning toward the airport."
         }
       ]
     }
   },
   "fieldNotes": [
     {
-      "question": "How do Sri Lanka’s twin monsoons affect trip timing?",
-      "answer": "Dec–Apr brings sun to West, South, and Hills; May–Sep switches sun cleanly to the East Coast and North."
+      "question": "When is the best weather for Sri Lanka?",
+      "answer": "From December to April the south coast, west coast, and hill country are sunny. From May to September, the dry season shifts to Trincomalee, Passikudah, and Arugam Bay."
     },
     {
-      "question": "Best way to ride the scenic hill train without fatigue?",
-      "answer": "Skip Colombo–Kandy by car, then ride only the stunning 3-hour Nanu Oya to Ella mountain leg."
+      "question": "Should I take the train all the way from Colombo to Ella?",
+      "answer": "The whole ride takes 9+ hours and gets tiring. Most people have their driver drop them at Nanu Oya or Kandy so they only sit the best 3-hour mountain leg to Ella."
     },
     {
-      "question": "Do I need a Sri Lanka ETA visa before flying?",
-      "answer": "Apply online via official portal eta.gov.lk ahead of departure with a 6-month valid passport."
+      "question": "Do tourists need a visa before arrival?",
+      "answer": "Yes. Apply online at eta.gov.lk a few days before flying. Make sure your passport still has 6 months validity left."
     },
     {
-      "question": "Car with driver vs trains vs tuk-tuks?",
-      "answer": "Hill roads average 40 km/h — book a private chauffeur for multi-region loops and tuk-tuks for town hops."
+      "question": "Car with driver or public buses and tuk-tuks?",
+      "answer": "Mountain roads average around 35 to 40 km/h. Hiring a car with an English-speaking driver saves hours between cities, while tuk-tuks work well for short local rides."
     },
     {
-      "question": "Essential temple and wildlife safari etiquette?",
-      "answer": "Cover knees/shoulders and remove shoes at shrines; keep 30m away from leopards and elephants without flash."
+      "question": "What should I wear at temples and safaris?",
+      "answer": "Temples ask you to cover shoulders and knees and leave shoes at the gate. On safari, wear neutral clothes, keep quiet near animals, and avoid camera flash."
     }
   ]
 };

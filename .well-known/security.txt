@@ -1,0 +1,4 @@
+﻿Contact: mailto:info@serendibsrilanka.com
+Preferred-Languages: en, si
+Canonical: https://serendib-sri-lanka-three.vercel.app/.well-known/security.txt
+Policy: https://serendib-sri-lanka-three.vercel.app/privacy.html

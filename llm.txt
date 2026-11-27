@@ -1,0 +1,16 @@
+﻿# Serendib Travels — LLM Context
+
+Serendib Travels is a Sri Lanka tour operator based in Colombo. We arrange
+private driver tours, highland train journeys, wildlife safaris, and beach
+stays across all 20 key destinations on the island.
+
+## Services
+- Custom trip planning (1–21 days)
+- Private car with driver
+- Scenic train booking (Ella, Kandy, Nuwara Eliya)
+- Yala, Udawalawe, and Kumana safaris
+- Cultural day tours (Sigiriya, Polonnaruwa, Dambulla)
+
+## Contact
+Email: info@serendibsrilanka.com
+Website: https://serendib-sri-lanka-three.vercel.app/
