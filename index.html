@@ -116,14 +116,14 @@
           <span class="route-count" id="route-count">0</span>
         </button>
 
-        <!-- Traveler Sign In / My Trips -->
+        <!-- Traveler Sign In / My Profile -->
         <button
           type="button"
           class="icon-pill-btn account-trigger"
           id="account-trigger"
           aria-haspopup="dialog"
           aria-controls="account-modal"
-          aria-label="Sign In or View My Trips"
+          aria-label="Sign In or View My Profile"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -170,7 +170,7 @@
       <a href="#compass"><em style="font-style:normal;" data-i18n="nav.compass">When to Go</em> <span>02</span></a>
       <a href="#itineraries"><em style="font-style:normal;" data-i18n="nav.itineraries">Sample Trips</em> <span>03</span></a>
       <a href="#contact" data-open-planner><em style="font-style:normal;" data-i18n="nav.planJourney">Plan Trip</em> <span>04</span></a>
-      <a href="#account" id="mobile-account-trigger"><em style="font-style:normal;" data-i18n="account.navAccountMobile">My Trips &amp; Sign In</em> <span>05</span></a>
+      <a href="#account" id="mobile-account-trigger"><em style="font-style:normal;" data-i18n="account.navAccountMobile">My Profile &amp; Sign In</em> <span>05</span></a>
     </nav>
 
     <div class="mobile-nav__footer">
@@ -828,7 +828,7 @@
           </form>
         </div>
 
-        <!-- Signed-in My Trips Workspace -->
+        <!-- Signed-in My Profile Workspace -->
         <div id="account-trips-view" hidden>
           <div class="account-profile-bar">
             <div class="account-profile-info">
@@ -836,12 +836,44 @@
               <div>
                 <strong id="account-display-name" class="account-profile-name">Traveler</strong>
                 <span id="account-display-email" class="account-profile-email"></span>
+                <span id="account-profile-meta" class="account-profile-meta" hidden></span>
               </div>
             </div>
             <div class="account-profile-actions">
-              <button type="button" class="btn btn--primary" id="account-plan-new-btn" data-i18n="account.planNewBtn">+ Plan New Trip</button>
+              <button type="button" class="btn btn--outline" id="account-edit-profile-btn" data-i18n="account.editProfileBtn">Edit Profile</button>
               <button type="button" class="btn btn--outline" id="account-signout-btn" data-i18n="account.signOutBtn">Sign Out</button>
             </div>
+          </div>
+
+          <form id="account-profile-editor" class="account-profile-editor" hidden novalidate>
+            <div class="account-profile-editor__grid">
+              <div class="form-group">
+                <label for="acc-prof-name" data-i18n="account.nameLabel">Full Name</label>
+                <input id="acc-prof-name" type="text" maxlength="120" autocomplete="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="acc-prof-phone" data-i18n="account.phoneLabel">Phone / WhatsApp</label>
+                <input id="acc-prof-phone" type="tel" maxlength="40" autocomplete="tel" placeholder="+94 77 123 4567" />
+              </div>
+              <div class="form-group">
+                <label for="acc-prof-country" data-i18n="account.countryLabel">Country / City</label>
+                <input id="acc-prof-country" type="text" maxlength="80" autocomplete="country-name" placeholder="Colombo, Sri Lanka" />
+              </div>
+              <div class="form-group">
+                <label for="acc-prof-notes" data-i18n="account.preferencesLabel">Travel Style / Notes</label>
+                <input id="acc-prof-notes" type="text" maxlength="240" placeholder="Wildlife, tea estates, coastal villas..." />
+              </div>
+            </div>
+            <div class="account-alert" id="acc-prof-error" role="alert" hidden></div>
+            <div class="account-profile-editor__actions">
+              <button type="button" class="btn btn--outline" id="acc-prof-cancel-btn" data-i18n="account.cancelBtn">Cancel</button>
+              <button type="submit" class="btn btn--primary" id="acc-prof-save-btn" data-i18n="account.saveProfileBtn">Save Profile</button>
+            </div>
+          </form>
+
+          <div class="account-trips-head">
+            <h3 class="display-serif account-trips-head__title" data-i18n="account.tripsSectionTitle">Plan a Trip</h3>
+            <button type="button" class="btn btn--primary" id="account-plan-new-btn" data-i18n="account.planNewBtn">Plan a Trip</button>
           </div>
 
           <div id="account-list-pane">

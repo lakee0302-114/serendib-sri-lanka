@@ -23,6 +23,15 @@
         }
       }
     },
+    "userProfiles": {
+      ".read": false,
+      ".write": false,
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['name', 'updatedAt']) && newData.child('name').isString() && newData.child('name').val().length >= 1 && newData.child('name').val().length <= 120 && newData.child('updatedAt').isString() && newData.child('updatedAt').val().length <= 40 && (!newData.child('phone').exists() || (newData.child('phone').isString() && newData.child('phone').val().length <= 40)) && (!newData.child('country').exists() || (newData.child('country').isString() && newData.child('country').val().length <= 80)) && (!newData.child('notes').exists() || (newData.child('notes').isString() && newData.child('notes').val().length <= 240))"
+      }
+    },
     "catalogOverrides": {
       ".read": true,
       ".write": "auth != null && auth.uid == 'serendibAdminLakee1121' && auth.token.email == 'lakee1121@admin.serendib.lk' && auth.token.email_verified == true",

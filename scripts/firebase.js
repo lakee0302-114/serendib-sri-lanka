@@ -367,6 +367,44 @@
     return window.firebase.database().ref('userTrips/' + user.uid + '/' + cleanRef).remove();
   }
 
+  function loadUserProfile() {
+    var user = getCurrentUser();
+    if (!user || !user.uid) return Promise.resolve(null);
+    if (typeof window.firebase === 'undefined' || typeof window.firebase.database !== 'function') {
+      return Promise.resolve(null);
+    }
+    initFirebase();
+    return window.firebase.database().ref('userProfiles/' + user.uid).once('value').then(function (snap) {
+      return snap.val() || null;
+    }).catch(function () {
+      return null;
+    });
+  }
+
+  function updateCustomerProfile(payload) {
+    var user = getCurrentUser();
+    if (!user || !user.uid) return Promise.reject(new Error('Not signed in'));
+    var cleanName = cleanText(payload && payload.name, 120, false);
+    if (!cleanName) return Promise.reject(new Error('Name is required'));
+    var profileRecord = {
+      name: cleanName,
+      phone: cleanText(payload && payload.phone, 40, false),
+      country: cleanText(payload && payload.country, 80, false),
+      notes: cleanText(payload && payload.notes, 240, false),
+      updatedAt: new Date().toISOString()
+    };
+    var authPromise = (typeof user.updateProfile === 'function')
+      ? user.updateProfile({ displayName: cleanName })
+      : Promise.resolve();
+    initFirebase();
+    var dbPromise = (typeof window.firebase !== 'undefined' && typeof window.firebase.database === 'function')
+      ? window.firebase.database().ref('userProfiles/' + user.uid).set(profileRecord)
+      : Promise.resolve();
+    return Promise.all([authPromise, dbPromise]).then(function () {
+      return profileRecord;
+    });
+  }
+
   function logEvent(eventName, params) {
     if (!analyticsInstance) return;
     try {
@@ -391,6 +429,8 @@
     saveUserTrip: saveUserTrip,
     loadUserTrips: loadUserTrips,
     deleteUserTrip: deleteUserTrip,
+    loadUserProfile: loadUserProfile,
+    updateCustomerProfile: updateCustomerProfile,
     logEvent: logEvent
   });
 })();

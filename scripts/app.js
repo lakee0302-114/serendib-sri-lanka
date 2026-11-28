@@ -60,6 +60,8 @@
     account: {
       open: false,
       user: null,
+      profile: null,
+      editingProfile: false,
       authMode: 'signin',
       trips: [],
       loadingTrips: false,
@@ -247,6 +249,16 @@
     accountAvatar: document.getElementById('account-avatar'),
     accountDisplayName: document.getElementById('account-display-name'),
     accountDisplayEmail: document.getElementById('account-display-email'),
+    accountProfileMeta: document.getElementById('account-profile-meta'),
+    accountEditProfileBtn: document.getElementById('account-edit-profile-btn'),
+    accountProfileEditor: document.getElementById('account-profile-editor'),
+    accProfName: document.getElementById('acc-prof-name'),
+    accProfPhone: document.getElementById('acc-prof-phone'),
+    accProfCountry: document.getElementById('acc-prof-country'),
+    accProfNotes: document.getElementById('acc-prof-notes'),
+    accProfError: document.getElementById('acc-prof-error'),
+    accProfCancelBtn: document.getElementById('acc-prof-cancel-btn'),
+    accProfSaveBtn: document.getElementById('acc-prof-save-btn'),
     accountPlanNewBtn: document.getElementById('account-plan-new-btn'),
     accountSignoutBtn: document.getElementById('account-signout-btn'),
     accountListPane: document.getElementById('account-list-pane'),
@@ -2283,7 +2295,7 @@
     var acc = getAccStrings();
     if (dom.accountTriggerLabel) {
       dom.accountTriggerLabel.textContent = state.account.user
-        ? (acc.navMyTrips || 'My Trips')
+        ? (acc.navMyTrips || 'My Profile')
         : (acc.navSignIn || 'Sign In');
     }
     if (dom.accountTripCount) {
@@ -2335,6 +2347,21 @@
     return (err && err.message) || 'Authentication error. Please try again.';
   }
 
+  function loadAccountProfile() {
+    var fb = window.SERENDIB_FIREBASE;
+    if (!fb || typeof fb.loadUserProfile !== 'function' || !state.account.user) {
+      state.account.profile = null;
+      return Promise.resolve(null);
+    }
+    return fb.loadUserProfile().then(function (prof) {
+      state.account.profile = prof || null;
+      if (state.account.open) renderAccountModal();
+      return state.account.profile;
+    }).catch(function () {
+      return null;
+    });
+  }
+
   function loadAccountTrips() {
     var fb = window.SERENDIB_FIREBASE;
     if (!fb || typeof fb.loadUserTrips !== 'function' || !state.account.user) {
@@ -2380,7 +2407,10 @@
         document.body.classList.add('drawer-open');
       });
     }
-    if (state.account.user) loadAccountTrips();
+    if (state.account.user) {
+      loadAccountProfile();
+      loadAccountTrips();
+    }
   }
 
   function closeAccountModal() {
@@ -2625,11 +2655,44 @@
       return;
     }
 
-    if (dom.accountModalTitle) dom.accountModalTitle.textContent = acc.dashboardTitle || 'Your Saved Sri Lanka Trips';
-    var nameStr = user.displayName || (user.email ? user.email.split('@')[0] : 'Traveler');
+    if (dom.accountModalTitle) dom.accountModalTitle.textContent = acc.dashboardTitle || 'My Profile';
+    var prof = state.account.profile || {};
+    var nameStr = prof.name || user.displayName || (user.email ? user.email.split('@')[0] : 'Traveler');
     if (dom.accountDisplayName) dom.accountDisplayName.textContent = nameStr;
     if (dom.accountDisplayEmail) dom.accountDisplayEmail.textContent = user.email || '';
-    if (dom.accountAvatar) dom.accountAvatar.textContent = String(nameStr).charAt(0).toUpperCase() || 'S';
+    if (dom.accountProfileMeta) {
+      var metaParts = [prof.country, prof.phone, prof.notes].filter(Boolean);
+      dom.accountProfileMeta.textContent = metaParts.join(' · ');
+      dom.accountProfileMeta.hidden = metaParts.length === 0;
+    }
+    if (dom.accountAvatar) {
+      var initial = String(nameStr).charAt(0).toUpperCase() || 'S';
+      if (user.photoURL && /^https:\/\//i.test(user.photoURL)) {
+        dom.accountAvatar.textContent = '';
+        var avatarImg = document.createElement('img');
+        avatarImg.src = user.photoURL;
+        avatarImg.alt = '';
+        avatarImg.referrerPolicy = 'no-referrer';
+        avatarImg.onerror = function () {
+          if (dom.accountAvatar) dom.accountAvatar.textContent = initial;
+        };
+        dom.accountAvatar.appendChild(avatarImg);
+      } else {
+        dom.accountAvatar.textContent = initial;
+      }
+    }
+    if (dom.accountProfileEditor) {
+      dom.accountProfileEditor.hidden = !state.account.editingProfile;
+      if (dom.accountEditProfileBtn) {
+        dom.accountEditProfileBtn.hidden = state.account.editingProfile;
+      }
+      if (state.account.editingProfile) {
+        if (dom.accProfName && document.activeElement !== dom.accProfName) dom.accProfName.value = nameStr;
+        if (dom.accProfPhone && document.activeElement !== dom.accProfPhone) dom.accProfPhone.value = prof.phone || '';
+        if (dom.accProfCountry && document.activeElement !== dom.accProfCountry) dom.accProfCountry.value = prof.country || '';
+        if (dom.accProfNotes && document.activeElement !== dom.accProfNotes) dom.accProfNotes.value = prof.notes || '';
+      }
+    }
 
     var activeTrip = null;
     if (state.account.activeTripRef) {
@@ -2810,6 +2873,50 @@
       });
     }
 
+    if (dom.accountEditProfileBtn) {
+      dom.accountEditProfileBtn.addEventListener('click', function () {
+        state.account.editingProfile = true;
+        setAccMsg(dom.accProfError, '');
+        renderAccountModal();
+        if (dom.accProfName) dom.accProfName.focus();
+      });
+    }
+    if (dom.accProfCancelBtn) {
+      dom.accProfCancelBtn.addEventListener('click', function () {
+        state.account.editingProfile = false;
+        setAccMsg(dom.accProfError, '');
+        renderAccountModal();
+      });
+    }
+    if (dom.accountProfileEditor && fb && typeof fb.updateCustomerProfile === 'function') {
+      dom.accountProfileEditor.addEventListener('submit', function (e) {
+        e.preventDefault();
+        setAccMsg(dom.accProfError, '');
+        var newName = (dom.accProfName && dom.accProfName.value || '').trim();
+        if (!newName) {
+          setAccMsg(dom.accProfError, 'Please enter your name.');
+          return;
+        }
+        if (dom.accProfSaveBtn) dom.accProfSaveBtn.disabled = true;
+        fb.updateCustomerProfile({
+          name: newName,
+          phone: (dom.accProfPhone && dom.accProfPhone.value || '').trim(),
+          country: (dom.accProfCountry && dom.accProfCountry.value || '').trim(),
+          notes: (dom.accProfNotes && dom.accProfNotes.value || '').trim()
+        }).then(function (savedProfile) {
+          state.account.profile = savedProfile;
+          state.account.editingProfile = false;
+          if (dom.plannerName && !dom.plannerName.value.trim()) dom.plannerName.value = savedProfile.name;
+          renderAccountModal();
+          showToast(getAccStrings().profileSavedToast || 'Profile updated!');
+        }).catch(function (err) {
+          setAccMsg(dom.accProfError, (err && err.message) || 'Could not update profile.');
+        }).finally(function () {
+          if (dom.accProfSaveBtn) dom.accProfSaveBtn.disabled = false;
+        });
+      });
+    }
+
     if (dom.accountPlanNewBtn) {
       dom.accountPlanNewBtn.addEventListener('click', function () {
         closeAccountModal();
@@ -2818,6 +2925,7 @@
     }
     if (dom.accountSignoutBtn && fb && typeof fb.signOutCustomer === 'function') {
       dom.accountSignoutBtn.addEventListener('click', function () {
+        state.account.editingProfile = false;
         fb.signOutCustomer();
       });
     }
@@ -2827,6 +2935,8 @@
         state.account.user = user || null;
         syncAccountHeaderUI();
         if (!user) {
+          state.account.profile = null;
+          state.account.editingProfile = false;
           state.account.trips = [];
           state.account.activeTripRef = null;
           syncAccountHeaderUI();
@@ -2835,6 +2945,7 @@
           return;
         }
 
+        loadAccountProfile();
         if (state.account.pendingTripToSave && typeof fb.saveUserTrip === 'function') {
           var pending = state.account.pendingTripToSave;
           state.account.pendingTripToSave = null;
